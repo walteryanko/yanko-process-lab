@@ -1,0 +1,302 @@
+[
+  {
+    "case": "servo_up",
+    "seed": 9001,
+    "estimator": "ukf_tuned",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.000943132019282304,
+      0.03944037383244351,
+      0.016564688451673013,
+      0.004856672312934418,
+      0.5797065693747443
+    ],
+    "xEB_RMSE": 0.0033350637219168567,
+    "xEB_RMSE_after5": 0.00026562130011774116,
+    "T_RMSE_after5": 0.5345538083734769,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "servo_up",
+    "seed": 9002,
+    "estimator": "ukf_tuned",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.001014487048751671,
+      0.03963294837709732,
+      0.015900335231157282,
+      0.005128700661112359,
+      0.5724832894518732
+    ],
+    "xEB_RMSE": 0.003249438152173544,
+    "xEB_RMSE_after5": 0.00037381459449629343,
+    "T_RMSE_after5": 0.604558467094568,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "servo_up",
+    "seed": 9003,
+    "estimator": "ukf_tuned",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0009803667513208119,
+      0.03801668157293201,
+      0.016664621474311837,
+      0.004877101310096004,
+      0.597275916307517
+    ],
+    "xEB_RMSE": 0.0033261572960960957,
+    "xEB_RMSE_after5": 0.00042239619242490165,
+    "T_RMSE_after5": 0.5784942105052255,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "benzene_50",
+    "seed": 9001,
+    "estimator": "ukf_tuned",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0007913941336383883,
+      0.03944675160317687,
+      0.016296051682684522,
+      0.004901776842131056,
+      0.5871263914584327
+    ],
+    "xEB_RMSE": 0.0033109422730231257,
+    "xEB_RMSE_after5": 0.0004074016951205709,
+    "T_RMSE_after5": 0.6357176308286769,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "benzene_50",
+    "seed": 9002,
+    "estimator": "ukf_tuned",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0008380583549605855,
+      0.04056706048875072,
+      0.015865830142445653,
+      0.004994294944454288,
+      0.578540206714713
+    ],
+    "xEB_RMSE": 0.0032896621796540417,
+    "xEB_RMSE_after5": 0.0002646174559517224,
+    "T_RMSE_after5": 0.5903007606891632,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "benzene_50",
+    "seed": 9003,
+    "estimator": "ukf_tuned",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0007097084148550869,
+      0.038120753317738905,
+      0.016737333759418542,
+      0.00481250034291855,
+      0.5180568724596766
+    ],
+    "xEB_RMSE": 0.003328650317307861,
+    "xEB_RMSE_after5": 0.0003142541310847815,
+    "T_RMSE_after5": 0.5010344660433009,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "recycle_minus50",
+    "seed": 9001,
+    "estimator": "ukf_tuned",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0017663908283878493,
+      0.03891491597019754,
+      0.016349745447923583,
+      0.004810884826197849,
+      0.5949528711085051
+    ],
+    "xEB_RMSE": 0.0033201221031734173,
+    "xEB_RMSE_after5": 0.0004080172445233421,
+    "T_RMSE_after5": 0.5833626872662337,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "recycle_minus50",
+    "seed": 9002,
+    "estimator": "ukf_tuned",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.001881563420438536,
+      0.03943846017930926,
+      0.015472104088076215,
+      0.00491791037166017,
+      0.6408699087992835
+    ],
+    "xEB_RMSE": 0.0032163190135416895,
+    "xEB_RMSE_after5": 0.0003646245550473354,
+    "T_RMSE_after5": 0.597008324054638,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "recycle_minus50",
+    "seed": 9003,
+    "estimator": "ukf_tuned",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0016786025946227067,
+      0.03778197112742331,
+      0.01643531840722441,
+      0.004842881920848909,
+      0.5682267107870522
+    ],
+    "xEB_RMSE": 0.003285867375825955,
+    "xEB_RMSE_after5": 0.00039536746655020714,
+    "T_RMSE_after5": 0.5823423084232697,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "thermal_loss",
+    "seed": 9001,
+    "estimator": "ukf_tuned",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.00116657958423373,
+      0.041660436769876845,
+      0.018590841695565682,
+      0.008287062122499134,
+      1.6694603957305154
+    ],
+    "xEB_RMSE": 0.0035401833254801547,
+    "xEB_RMSE_after5": 0.0014595808173735168,
+    "T_RMSE_after5": 2.2963298983834006,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "thermal_loss",
+    "seed": 9002,
+    "estimator": "ukf_tuned",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.001100663921696181,
+      0.03877483726018064,
+      0.0176693166515741,
+      0.007938624952116485,
+      1.6372191939046552
+    ],
+    "xEB_RMSE": 0.003356490678142681,
+    "xEB_RMSE_after5": 0.0012061071654006585,
+    "T_RMSE_after5": 2.2458884554990988,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "thermal_loss",
+    "seed": 9003,
+    "estimator": "ukf_tuned",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0011488175094107698,
+      0.038402533285241104,
+      0.017665618852203042,
+      0.008298267215311756,
+      1.7417011754665213
+    ],
+    "xEB_RMSE": 0.003346723869526466,
+    "xEB_RMSE_after5": 0.0012876151294263995,
+    "T_RMSE_after5": 2.385749078445244,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "kinetics_noise",
+    "seed": 9001,
+    "estimator": "ukf_tuned",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0038596659983261257,
+      0.06298046483265038,
+      0.09947620017551996,
+      0.04803484024732561,
+      0.5986748943141862
+    ],
+    "xEB_RMSE": 0.014517292431563035,
+    "xEB_RMSE_after5": 0.020059654910166754,
+    "T_RMSE_after5": 0.5850244708474335,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "kinetics_noise",
+    "seed": 9002,
+    "estimator": "ukf_tuned",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.004126558121849431,
+      0.06608006052544954,
+      0.10080240538362353,
+      0.04792279690365502,
+      0.6441280242038557
+    ],
+    "xEB_RMSE": 0.014775997319277614,
+    "xEB_RMSE_after5": 0.020369025078477418,
+    "T_RMSE_after5": 0.7475609553903827,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "kinetics_noise",
+    "seed": 9003,
+    "estimator": "ukf_tuned",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.003895035973782031,
+      0.07293277673817958,
+      0.10164663287216502,
+      0.04651206647536493,
+      0.6352522478694761
+    ],
+    "xEB_RMSE": 0.015134120364985362,
+    "xEB_RMSE_after5": 0.020911794603703734,
+    "T_RMSE_after5": 0.6270532979430418,
+    "repairs": 0,
+    "projections": 0
+  }
+]

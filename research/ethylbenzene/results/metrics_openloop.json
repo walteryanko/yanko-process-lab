@@ -1,0 +1,1202 @@
+[
+  {
+    "case": "servo_up",
+    "seed": 9001,
+    "estimator": "ukf",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0004995068095983332,
+      0.03988011355843121,
+      0.016583645481850783,
+      0.004830593193083536,
+      0.22624337365645428
+    ],
+    "xEB_RMSE": 0.0033511284425726704,
+    "xEB_RMSE_after5": 0.0002983052337629245,
+    "T_RMSE_after5": 0.22000136208400253,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "servo_up",
+    "seed": 9001,
+    "estimator": "lstm_ukf",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.000603162991041273,
+      0.039655511566804615,
+      0.01655862308997975,
+      0.004850373524006748,
+      0.3032450441743333
+    ],
+    "xEB_RMSE": 0.0033415511272340014,
+    "xEB_RMSE_after5": 0.0002504529126571036,
+    "T_RMSE_after5": 0.2716864485672912,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "servo_up",
+    "seed": 9001,
+    "estimator": "nake",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0005147802219200178,
+      0.04079494906465346,
+      0.016244461379119758,
+      0.004832014949778769,
+      0.23123847885171644
+    ],
+    "xEB_RMSE": 0.0033448856718196027,
+    "xEB_RMSE_after5": 0.0002920350153225103,
+    "T_RMSE_after5": 0.21893526552302098,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "servo_up",
+    "seed": 9001,
+    "estimator": "lstm_nake",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0005964757779437842,
+      0.040313301505049824,
+      0.016262501105979328,
+      0.004855576583296285,
+      0.29271742353094066
+    ],
+    "xEB_RMSE": 0.003329502827435635,
+    "xEB_RMSE_after5": 0.0002509139162639555,
+    "T_RMSE_after5": 0.26059128240462825,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "servo_up",
+    "seed": 9002,
+    "estimator": "ukf",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0006076647088186438,
+      0.039896658690524146,
+      0.01595026756408392,
+      0.005108479494216407,
+      0.2422658836551018
+    ],
+    "xEB_RMSE": 0.0032663119226605556,
+    "xEB_RMSE_after5": 0.00037617081715598285,
+    "T_RMSE_after5": 0.2238746405056878,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "servo_up",
+    "seed": 9002,
+    "estimator": "lstm_ukf",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0006878672892829052,
+      0.03956151215792372,
+      0.015905747072320026,
+      0.0050887211606446955,
+      0.29434960254916076
+    ],
+    "xEB_RMSE": 0.0032489873814174003,
+    "xEB_RMSE_after5": 0.00034028616034557284,
+    "T_RMSE_after5": 0.2886107247806369,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "servo_up",
+    "seed": 9002,
+    "estimator": "nake",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0006227440447848118,
+      0.04149323392261952,
+      0.015777349219496202,
+      0.005126338146657952,
+      0.2412980178580862
+    ],
+    "xEB_RMSE": 0.003257894958625399,
+    "xEB_RMSE_after5": 0.00037358532123663485,
+    "T_RMSE_after5": 0.2190869479780905,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "servo_up",
+    "seed": 9002,
+    "estimator": "lstm_nake",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0006830740865737677,
+      0.04042241197928451,
+      0.015768823827081627,
+      0.005096187909837485,
+      0.284151015695043
+    ],
+    "xEB_RMSE": 0.0032435584314412904,
+    "xEB_RMSE_after5": 0.0003459629546171983,
+    "T_RMSE_after5": 0.27397903886892905,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "servo_up",
+    "seed": 9003,
+    "estimator": "ukf",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0004537837644702739,
+      0.03755269051094602,
+      0.016566066817633302,
+      0.00486961057685778,
+      0.239773674199645
+    ],
+    "xEB_RMSE": 0.003300494500186593,
+    "xEB_RMSE_after5": 0.00044322604161911355,
+    "T_RMSE_after5": 0.21865934401598894,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "servo_up",
+    "seed": 9003,
+    "estimator": "lstm_ukf",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0005819584944317107,
+      0.03788095482424971,
+      0.016646789979061084,
+      0.0048566402155672045,
+      0.31665342077882697
+    ],
+    "xEB_RMSE": 0.003319072731416959,
+    "xEB_RMSE_after5": 0.0003945808310245105,
+    "T_RMSE_after5": 0.2915097342786366,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "servo_up",
+    "seed": 9003,
+    "estimator": "nake",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.00046021778535676195,
+      0.03606319430216743,
+      0.01693326726442521,
+      0.004864755240987362,
+      0.23957739160842756
+    ],
+    "xEB_RMSE": 0.00329798161878264,
+    "xEB_RMSE_after5": 0.00043866085470192496,
+    "T_RMSE_after5": 0.21260984412896902,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "servo_up",
+    "seed": 9003,
+    "estimator": "lstm_nake",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0005673457221698145,
+      0.03692543280600686,
+      0.016840718198670022,
+      0.00485667692153064,
+      0.30354228132762745
+    ],
+    "xEB_RMSE": 0.003314093914395482,
+    "xEB_RMSE_after5": 0.00040036284397581943,
+    "T_RMSE_after5": 0.27603995586030705,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "benzene_50",
+    "seed": 9001,
+    "estimator": "ukf",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.00047678458170893244,
+      0.03907825093160572,
+      0.016225279092258363,
+      0.00488718201413023,
+      0.23327912483054963
+    ],
+    "xEB_RMSE": 0.0032931045296322385,
+    "xEB_RMSE_after5": 0.00038618040264757735,
+    "T_RMSE_after5": 0.22791268192207298,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "benzene_50",
+    "seed": 9001,
+    "estimator": "lstm_ukf",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0005282362490001173,
+      0.03932259863689865,
+      0.01628480425907387,
+      0.004885481346519672,
+      0.3231443982113194
+    ],
+    "xEB_RMSE": 0.003306106311696788,
+    "xEB_RMSE_after5": 0.0003974087968344905,
+    "T_RMSE_after5": 0.3690198155753777,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "benzene_50",
+    "seed": 9001,
+    "estimator": "nake",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0004926658660178448,
+      0.03785335204913651,
+      0.016973572048672652,
+      0.004915150344899996,
+      0.2841172348849176
+    ],
+    "xEB_RMSE": 0.003311297566277208,
+    "xEB_RMSE_after5": 0.0006651450127155211,
+    "T_RMSE_after5": 0.3229611207277185,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "benzene_50",
+    "seed": 9001,
+    "estimator": "lstm_nake",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0005275415863436654,
+      0.038608528753455364,
+      0.01684780372742668,
+      0.004916070502201065,
+      0.3405624889721606
+    ],
+    "xEB_RMSE": 0.003320197876741485,
+    "xEB_RMSE_after5": 0.0006306746835197938,
+    "T_RMSE_after5": 0.4035621569952287,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "benzene_50",
+    "seed": 9002,
+    "estimator": "ukf",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0005129133255870598,
+      0.04066442514948191,
+      0.015864144309259594,
+      0.004988190097384732,
+      0.22956006367377277
+    ],
+    "xEB_RMSE": 0.003293537600545514,
+    "xEB_RMSE_after5": 0.0002460136543345581,
+    "T_RMSE_after5": 0.16845412357643028,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "benzene_50",
+    "seed": 9002,
+    "estimator": "lstm_ukf",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0006005620945288768,
+      0.040512530012929676,
+      0.01586413638624346,
+      0.004988899580256888,
+      0.33206740599866563
+    ],
+    "xEB_RMSE": 0.003288834099814265,
+    "xEB_RMSE_after5": 0.000258792479621738,
+    "T_RMSE_after5": 0.31736692197057115,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "benzene_50",
+    "seed": 9002,
+    "estimator": "nake",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0005305023635084472,
+      0.04156824426502445,
+      0.01614012726211038,
+      0.005021796844344015,
+      0.24857667702147365
+    ],
+    "xEB_RMSE": 0.003292233957905126,
+    "xEB_RMSE_after5": 0.00045031319880568647,
+    "T_RMSE_after5": 0.20562861696792922,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "benzene_50",
+    "seed": 9002,
+    "estimator": "lstm_nake",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0005993947610108538,
+      0.040962516120709905,
+      0.016097989208020386,
+      0.005017828287020574,
+      0.332931825363038
+    ],
+    "xEB_RMSE": 0.0032883827739880163,
+    "xEB_RMSE_after5": 0.000409038583030932,
+    "T_RMSE_after5": 0.32859981610066596,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "benzene_50",
+    "seed": 9003,
+    "estimator": "ukf",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.00040781852244343243,
+      0.03802567159349527,
+      0.01684185500329184,
+      0.004801788266157521,
+      0.24326537989393035
+    ],
+    "xEB_RMSE": 0.003338337384774266,
+    "xEB_RMSE_after5": 0.00027562009044247097,
+    "T_RMSE_after5": 0.18769342308976114,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "benzene_50",
+    "seed": 9003,
+    "estimator": "lstm_ukf",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0004567530285986056,
+      0.03784881388776074,
+      0.01681494302613993,
+      0.004795699932586665,
+      0.2857734219458532
+    ],
+    "xEB_RMSE": 0.0033287675795891703,
+    "xEB_RMSE_after5": 0.0003081710895556246,
+    "T_RMSE_after5": 0.2647685198281661,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "benzene_50",
+    "seed": 9003,
+    "estimator": "nake",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0004143588580492549,
+      0.03884271208512324,
+      0.017014849460994644,
+      0.004811477115788887,
+      0.2603283294845334
+    ],
+    "xEB_RMSE": 0.0033375639295588244,
+    "xEB_RMSE_after5": 0.00044659879172049074,
+    "T_RMSE_after5": 0.23211218814346116,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "benzene_50",
+    "seed": 9003,
+    "estimator": "lstm_nake",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.00044963887828716135,
+      0.03831003569810922,
+      0.01698451861817252,
+      0.0047994616111951514,
+      0.285943657689601
+    ],
+    "xEB_RMSE": 0.0033292635057700546,
+    "xEB_RMSE_after5": 0.0004223510546614418,
+    "T_RMSE_after5": 0.2719090891683867,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "recycle_minus50",
+    "seed": 9001,
+    "estimator": "ukf",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0009808571016213462,
+      0.037997149002939996,
+      0.016403437747669804,
+      0.004779793199552797,
+      0.2705186076739916
+    ],
+    "xEB_RMSE": 0.003290088451639509,
+    "xEB_RMSE_after5": 0.00025304373154026955,
+    "T_RMSE_after5": 0.26658615858068924,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "recycle_minus50",
+    "seed": 9001,
+    "estimator": "lstm_ukf",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0012484621945809315,
+      0.03844785742412765,
+      0.016464935607296168,
+      0.004842328202336261,
+      0.3416342639606003
+    ],
+    "xEB_RMSE": 0.0033139068185751965,
+    "xEB_RMSE_after5": 0.00038290525142737513,
+    "T_RMSE_after5": 0.3699703266844742,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "recycle_minus50",
+    "seed": 9001,
+    "estimator": "nake",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.00139444340310972,
+      0.036876485261303577,
+      0.01669358669524065,
+      0.005062142765163427,
+      0.373946343709291
+    ],
+    "xEB_RMSE": 0.0032956188108908533,
+    "xEB_RMSE_after5": 0.0004395804415858696,
+    "T_RMSE_after5": 0.4530967377923483,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "recycle_minus50",
+    "seed": 9001,
+    "estimator": "lstm_nake",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0011388251665013405,
+      0.03763091536278,
+      0.01679387216704299,
+      0.00583664014573502,
+      0.3200049079952784
+    ],
+    "xEB_RMSE": 0.003310214469882595,
+    "xEB_RMSE_after5": 0.0003451644903901541,
+    "T_RMSE_after5": 0.34171695441644756,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "recycle_minus50",
+    "seed": 9002,
+    "estimator": "ukf",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0009808474177568545,
+      0.03895931863711005,
+      0.015365985198554871,
+      0.00490970820172334,
+      0.3247527812041706
+    ],
+    "xEB_RMSE": 0.003191008388751419,
+    "xEB_RMSE_after5": 0.00031011562090510996,
+    "T_RMSE_after5": 0.2286819046197146,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "recycle_minus50",
+    "seed": 9002,
+    "estimator": "lstm_ukf",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0014530624696793885,
+      0.03921566151787813,
+      0.015471769980705354,
+      0.004907921919950045,
+      0.43326833384999774
+    ],
+    "xEB_RMSE": 0.0032096816041859537,
+    "xEB_RMSE_after5": 0.0003660298718938015,
+    "T_RMSE_after5": 0.4076879693784254,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "recycle_minus50",
+    "seed": 9002,
+    "estimator": "nake",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.001550483491783059,
+      0.03750598156319406,
+      0.015803239938544277,
+      0.005158503695576981,
+      0.4444900339452702
+    ],
+    "xEB_RMSE": 0.003202317038365943,
+    "xEB_RMSE_after5": 0.0005428655079744373,
+    "T_RMSE_after5": 0.48001519742546506,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "recycle_minus50",
+    "seed": 9002,
+    "estimator": "lstm_nake",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0014422590527901054,
+      0.03819016908115041,
+      0.01579266099047998,
+      0.005529037820359531,
+      0.44015579390195597
+    ],
+    "xEB_RMSE": 0.003210807373288618,
+    "xEB_RMSE_after5": 0.0004317676002768395,
+    "T_RMSE_after5": 0.42914907439156214,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "recycle_minus50",
+    "seed": 9003,
+    "estimator": "ukf",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0011516208959763668,
+      0.037590108753112486,
+      0.01641950830111327,
+      0.004848219806579655,
+      0.29361945697748876
+    ],
+    "xEB_RMSE": 0.0032769970517174804,
+    "xEB_RMSE_after5": 0.0003572313101245986,
+    "T_RMSE_after5": 0.3070682625530886,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "recycle_minus50",
+    "seed": 9003,
+    "estimator": "lstm_ukf",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0011907865167307533,
+      0.0376574379169608,
+      0.016431402227393945,
+      0.004833282130526015,
+      0.3299714551243928
+    ],
+    "xEB_RMSE": 0.0032798571731655467,
+    "xEB_RMSE_after5": 0.00034624752936711833,
+    "T_RMSE_after5": 0.36476776374020514,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "recycle_minus50",
+    "seed": 9003,
+    "estimator": "nake",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0019475971684526454,
+      0.037682363065364675,
+      0.016426832984092886,
+      0.004963827836928816,
+      0.47513871159878024
+    ],
+    "xEB_RMSE": 0.003301157570394821,
+    "xEB_RMSE_after5": 0.0007235496977842645,
+    "T_RMSE_after5": 0.6117445965491906,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "recycle_minus50",
+    "seed": 9003,
+    "estimator": "lstm_nake",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0012001122590888024,
+      0.03755237748812487,
+      0.01651336388378617,
+      0.0055414431718066245,
+      0.3532884968741989
+    ],
+    "xEB_RMSE": 0.003279761515778807,
+    "xEB_RMSE_after5": 0.0004403463671170419,
+    "T_RMSE_after5": 0.41057089244159134,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "thermal_loss",
+    "seed": 9001,
+    "estimator": "ukf",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.007552902112926923,
+      0.04706332345138586,
+      0.05614195044095049,
+      0.028756642691662348,
+      11.72165370874142
+    ],
+    "xEB_RMSE": 0.008657298863784796,
+    "xEB_RMSE_after5": 0.011255236275536295,
+    "T_RMSE_after5": 16.573778747166504,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "thermal_loss",
+    "seed": 9001,
+    "estimator": "lstm_ukf",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0025018711973522536,
+      0.039846648800143485,
+      0.01783682659055205,
+      0.012149678725981224,
+      4.196896537655766
+    ],
+    "xEB_RMSE": 0.0034873156040756007,
+    "xEB_RMSE_after5": 0.0011549327979117514,
+    "T_RMSE_after5": 5.9279842900551785,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "thermal_loss",
+    "seed": 9001,
+    "estimator": "nake",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.002411137991165696,
+      0.04203174323557588,
+      0.018527034907773632,
+      0.010503153778761782,
+      3.616615543939482
+    ],
+    "xEB_RMSE": 0.003504618201840966,
+    "xEB_RMSE_after5": 0.0012381192091113124,
+    "T_RMSE_after5": 5.1049495284913995,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "thermal_loss",
+    "seed": 9001,
+    "estimator": "lstm_nake",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.002244028535512868,
+      0.040426557257242944,
+      0.020396262966915237,
+      0.008681084860025633,
+      3.744856335730939
+    ],
+    "xEB_RMSE": 0.0037526908405750995,
+    "xEB_RMSE_after5": 0.0023107369227528267,
+    "T_RMSE_after5": 5.288163589280324,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "thermal_loss",
+    "seed": 9002,
+    "estimator": "ukf",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.007516939749115022,
+      0.047444957282657914,
+      0.056830114041799794,
+      0.0284603341680899,
+      11.748306610896885
+    ],
+    "xEB_RMSE": 0.008820682056071944,
+    "xEB_RMSE_after5": 0.011591743749557069,
+    "T_RMSE_after5": 16.613225650904845,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "thermal_loss",
+    "seed": 9002,
+    "estimator": "lstm_ukf",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0024009106171051305,
+      0.03748373944457501,
+      0.017380989308405564,
+      0.011809337927563616,
+      4.182865700114955
+    ],
+    "xEB_RMSE": 0.0034070439539456376,
+    "xEB_RMSE_after5": 0.0014611686662942326,
+    "T_RMSE_after5": 5.90873899946769,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "thermal_loss",
+    "seed": 9002,
+    "estimator": "nake",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0022804216803338686,
+      0.03918634916849642,
+      0.018002827452737864,
+      0.010238026347817349,
+      3.582583883502599
+    ],
+    "xEB_RMSE": 0.0033883706910732623,
+    "xEB_RMSE_after5": 0.0013579684667716408,
+    "T_RMSE_after5": 5.062235078059112,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "thermal_loss",
+    "seed": 9002,
+    "estimator": "lstm_nake",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.002143805011966815,
+      0.038680416519592746,
+      0.020143188350015686,
+      0.008464081897457364,
+      3.726406852441063
+    ],
+    "xEB_RMSE": 0.0037040489181454895,
+    "xEB_RMSE_after5": 0.00254123887960044,
+    "T_RMSE_after5": 5.263100948772132,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "thermal_loss",
+    "seed": 9003,
+    "estimator": "ukf",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.007538483362485574,
+      0.046122218528156865,
+      0.056374102443727966,
+      0.02860369382949767,
+      11.760869105001365
+    ],
+    "xEB_RMSE": 0.00870260626415737,
+    "xEB_RMSE_after5": 0.01141215365803293,
+    "T_RMSE_after5": 16.630498404790572,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "thermal_loss",
+    "seed": 9003,
+    "estimator": "lstm_ukf",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0024272740382707244,
+      0.037214621200146514,
+      0.017499347420677724,
+      0.012166219706979094,
+      4.2674918292850474
+    ],
+    "xEB_RMSE": 0.0033937837600357375,
+    "xEB_RMSE_after5": 0.0014700062268853276,
+    "T_RMSE_after5": 6.024470824024309,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "thermal_loss",
+    "seed": 9003,
+    "estimator": "nake",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0022645061528831227,
+      0.04105066690177352,
+      0.01751773042967292,
+      0.010739155754744201,
+      3.6508592534569466
+    ],
+    "xEB_RMSE": 0.0033520615492216976,
+    "xEB_RMSE_after5": 0.001188411232854828,
+    "T_RMSE_after5": 5.156554603233822,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "thermal_loss",
+    "seed": 9003,
+    "estimator": "lstm_nake",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.002141810643575759,
+      0.03895622572772608,
+      0.019736582023927456,
+      0.00882769723359643,
+      3.7850155604785316
+    ],
+    "xEB_RMSE": 0.0036373962888918312,
+    "xEB_RMSE_after5": 0.0024113662525260546,
+    "T_RMSE_after5": 5.341558060612307,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "kinetics_noise",
+    "seed": 9001,
+    "estimator": "ukf",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.004184296395342337,
+      0.06330135667600183,
+      0.1003905901571748,
+      0.04816498528351716,
+      0.4366637460634945
+    ],
+    "xEB_RMSE": 0.014654447989350951,
+    "xEB_RMSE_after5": 0.020263681940687756,
+    "T_RMSE_after5": 0.45283960689970754,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "kinetics_noise",
+    "seed": 9001,
+    "estimator": "lstm_ukf",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0039372453197247075,
+      0.06259949397487859,
+      0.0994295214687363,
+      0.04830170018446798,
+      0.3728912563102099
+    ],
+    "xEB_RMSE": 0.014511137952199512,
+    "xEB_RMSE_after5": 0.020052316572718103,
+    "T_RMSE_after5": 0.3456801430229948,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "kinetics_noise",
+    "seed": 9001,
+    "estimator": "nake",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.00412781693822301,
+      0.06264924028868428,
+      0.1002855372883699,
+      0.048126327685058604,
+      0.41607921121328695
+    ],
+    "xEB_RMSE": 0.014640072300685503,
+    "xEB_RMSE_after5": 0.02024316810904544,
+    "T_RMSE_after5": 0.4177705195195006,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "kinetics_noise",
+    "seed": 9001,
+    "estimator": "lstm_nake",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.003947331591208933,
+      0.06233839856365235,
+      0.09941835784894272,
+      0.048311301243057575,
+      0.37094966796667483
+    ],
+    "xEB_RMSE": 0.014517757349993724,
+    "xEB_RMSE_after5": 0.020063430936660954,
+    "T_RMSE_after5": 0.34503686694472563,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "kinetics_noise",
+    "seed": 9002,
+    "estimator": "ukf",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.004120443291247941,
+      0.06579399641649551,
+      0.10124486248875145,
+      0.04802734053052729,
+      0.4929019007345171
+    ],
+    "xEB_RMSE": 0.014835562645933142,
+    "xEB_RMSE_after5": 0.020461854256482122,
+    "T_RMSE_after5": 0.6669285622706124,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "kinetics_noise",
+    "seed": 9002,
+    "estimator": "lstm_ukf",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0040364000998852866,
+      0.06545621606337022,
+      0.10079249216462305,
+      0.048066405300749654,
+      0.4584345005156309
+    ],
+    "xEB_RMSE": 0.014766783957540231,
+    "xEB_RMSE_after5": 0.020357885774917817,
+    "T_RMSE_after5": 0.5917721443929834,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "kinetics_noise",
+    "seed": 9002,
+    "estimator": "nake",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.004104206981369064,
+      0.06501560459443974,
+      0.10127002971271472,
+      0.04801494238607084,
+      0.48491273360153064
+    ],
+    "xEB_RMSE": 0.014829536404388482,
+    "xEB_RMSE_after5": 0.02045508510254728,
+    "T_RMSE_after5": 0.6557192174152913,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "kinetics_noise",
+    "seed": 9002,
+    "estimator": "lstm_nake",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.004018924503360524,
+      0.06468789930098359,
+      0.10063794013359459,
+      0.04816430561198011,
+      0.45108909284623033
+    ],
+    "xEB_RMSE": 0.014740466679945484,
+    "xEB_RMSE_after5": 0.020319332393320823,
+    "T_RMSE_after5": 0.5857594596661283,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "kinetics_noise",
+    "seed": 9003,
+    "estimator": "ukf",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.003942536261161676,
+      0.07301258134970329,
+      0.102187348276589,
+      0.046650868163111724,
+      0.5244370271687432
+    ],
+    "xEB_RMSE": 0.015213213570140252,
+    "xEB_RMSE_after5": 0.021036476041175946,
+    "T_RMSE_after5": 0.6430932054514309,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "kinetics_noise",
+    "seed": 9003,
+    "estimator": "lstm_ukf",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0038613548511512094,
+      0.0724755820488626,
+      0.10165298241205568,
+      0.04670064971155724,
+      0.4651967072954738
+    ],
+    "xEB_RMSE": 0.015131044975310183,
+    "xEB_RMSE_after5": 0.02091005405257378,
+    "T_RMSE_after5": 0.5045044946545072,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "kinetics_noise",
+    "seed": 9003,
+    "estimator": "nake",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.003937681078999227,
+      0.07213671126891352,
+      0.10224525210510904,
+      0.04661711345331555,
+      0.51294714518436
+    ],
+    "xEB_RMSE": 0.015215117805124415,
+    "xEB_RMSE_after5": 0.021040193079924368,
+    "T_RMSE_after5": 0.6203695189551993,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "kinetics_noise",
+    "seed": 9003,
+    "estimator": "lstm_nake",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.003849190591001064,
+      0.0718781407398855,
+      0.10158396138965396,
+      0.04673692675676156,
+      0.45925660415213043
+    ],
+    "xEB_RMSE": 0.015122786813842803,
+    "xEB_RMSE_after5": 0.0208989579511268,
+    "T_RMSE_after5": 0.5014620230384391,
+    "repairs": 0,
+    "projections": 0
+  }
+]

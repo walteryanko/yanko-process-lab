@@ -1,0 +1,328 @@
+{
+  "calibration": {
+    "source": "TFC_WALTER_FINAL_imprimir.pdf, UFPB 2016, pp. 42-47 and Table 4.1 p.52",
+    "scope": "first reactor only; downstream columns and second reactor are not dynamic models here",
+    "kinetic_time_factor": 3600.0,
+    "kinetic_unit_status": "confirmed kmol/(s m3) in supplied Luyben 2011 p.656; printed TCC min label corrected",
+    "gas_constant": "1.987 cal/mol/K; printed kcal is inconsistent with activation energies in cal/mol",
+    "nominal_state": [
+      0.03589446366246779,
+      4.630172111897089,
+      1.9699103395677695,
+      0.37169013251985855,
+      160.876133752246
+    ],
+    "nominal_fractions": [
+      0.005122170248445138,
+      0.6607294667990345,
+      0.28110786745057537,
+      0.05304049550194498
+    ],
+    "target_matlab_fractions": [
+      0.0051,
+      0.6607,
+      0.2811,
+      0.0531
+    ],
+    "literal_minutes_fractions": [
+      0.1424621359676031,
+      0.6834303876241472,
+      0.1525234466688098,
+      0.021584029739439792
+    ],
+    "nominal_duty_kcal_h": 21718243.889684107,
+    "nominal_duty_MW": 25.241425676232865,
+    "heat_capacity_status": "printed constant energy-balance coefficients retained; effective Q inferred, not identified plant duty",
+    "steady_rhs": [
+      -4.440892098500626e-16,
+      -8.881784197001252e-16,
+      4.440892098500626e-16,
+      5.551115123125783e-17,
+      0.0
+    ],
+    "temperature_limit_C": 165.0,
+    "temperature_limit_status": "new imposed research limit; no hard limit stated in TCC",
+    "manipulated_variables": {
+      "siso": [
+        "fE"
+      ],
+      "mimo": [
+        "fE",
+        "Q"
+      ]
+    },
+    "added_actuator": "heat-removal duty supported by ASPEN/aspeneb.dynf R1_TC.OP -> R1.QR; ideal input and 0.6-1.4 bounds are new study assumptions",
+    "aspen_duty_warning": "effective 25.24 MW of printed-ODE reconstruction differs from paper 10.3 MW and archive snapshots; not an Aspen thermodynamic reproduction",
+    "density_warning": "printed constant reactor molar density and sum of computed concentrations differ; inherited reduced-model approximation retained",
+    "valve_flow_bounds": "0.04-2.0 fE0, equal-percentage rangeability 50 and capacity factor 2 from TCC",
+    "sample_period_h": 0.025,
+    "original_Q_sample_period_Qcov_Rcov_PI_gains": "not specified sufficiently to recover exactly"
+  },
+  "cases": [
+    "servo_up",
+    "servo_down",
+    "benzene_50",
+    "recycle_minus50",
+    "thermal_loss",
+    "kinetics_noise"
+  ],
+  "seeds": [
+    9001,
+    9002,
+    9003
+  ],
+  "configurations": [
+    {
+      "estimator": "ukf",
+      "prediction": "physical",
+      "mode": "siso"
+    },
+    {
+      "estimator": "ukf",
+      "prediction": "physical",
+      "mode": "mimo"
+    },
+    {
+      "estimator": "ukf",
+      "prediction": "neural",
+      "mode": "siso"
+    },
+    {
+      "estimator": "ukf",
+      "prediction": "neural",
+      "mode": "mimo"
+    },
+    {
+      "estimator": "lstm_ukf",
+      "prediction": "physical",
+      "mode": "siso"
+    },
+    {
+      "estimator": "lstm_ukf",
+      "prediction": "physical",
+      "mode": "mimo"
+    },
+    {
+      "estimator": "lstm_ukf",
+      "prediction": "neural",
+      "mode": "siso"
+    },
+    {
+      "estimator": "lstm_ukf",
+      "prediction": "neural",
+      "mode": "mimo"
+    },
+    {
+      "estimator": "nake",
+      "prediction": "physical",
+      "mode": "siso"
+    },
+    {
+      "estimator": "nake",
+      "prediction": "physical",
+      "mode": "mimo"
+    },
+    {
+      "estimator": "nake",
+      "prediction": "neural",
+      "mode": "siso"
+    },
+    {
+      "estimator": "nake",
+      "prediction": "neural",
+      "mode": "mimo"
+    },
+    {
+      "estimator": "lstm_nake",
+      "prediction": "physical",
+      "mode": "siso"
+    },
+    {
+      "estimator": "lstm_nake",
+      "prediction": "physical",
+      "mode": "mimo"
+    },
+    {
+      "estimator": "lstm_nake",
+      "prediction": "neural",
+      "mode": "siso"
+    },
+    {
+      "estimator": "lstm_nake",
+      "prediction": "neural",
+      "mode": "mimo"
+    },
+    {
+      "estimator": "ukf_tuned",
+      "prediction": "physical",
+      "mode": "siso"
+    },
+    {
+      "estimator": "ukf_tuned",
+      "prediction": "physical",
+      "mode": "mimo"
+    },
+    {
+      "estimator": "ukf_tuned",
+      "prediction": "neural",
+      "mode": "siso"
+    },
+    {
+      "estimator": "ukf_tuned",
+      "prediction": "neural",
+      "mode": "mimo"
+    }
+  ],
+  "runs": 720,
+  "duration_h": 10.0,
+  "sample_h": 0.025,
+  "tcc_cases": {
+    "benzene_50": "+50% pure benzene at 5 h",
+    "recycle_minus50": "-50% recycle at 5 h"
+  },
+  "new_cases": {
+    "servo_up": "+10% xEB at 3 h, nominal at 7 h",
+    "servo_down": "-10% xEB at 3 h, nominal at 7 h",
+    "thermal_loss": "20% unobserved heat-removal efficiency loss at 5 h",
+    "kinetics_noise": "k1 +25%, k2 -10%, k3 +10%, input noise 3x at 5 h; T sensor missing 5.5-6 h"
+  },
+  "initial_condition": "nominal steady state, common biased estimate; no unrecoverable historical startup included in control score",
+  "initial_estimate_offset": [
+    0.006,
+    0.22,
+    -0.12,
+    0.04,
+    1.5
+  ],
+  "noise": {
+    "input_relative_std": 0.01,
+    "feed_temperature_std_C": 0.2,
+    "temperature_measurement_std_C": 1.5,
+    "actuator_clipping": true,
+    "pairing": "same independent innovations by case/seed/time across every configuration"
+  },
+  "information": "commanded inputs only; future disturbances not previewed; true concentrations are scoring labels only",
+  "state_prediction": {
+    "physical": "printed balances with documented unit correction/effective Q",
+    "neural": "12-48-48-5 MLP, fully learned substeps"
+  },
+  "estimators": {
+    "ukf": "physical prediction, constant diagonal Q",
+    "lstm_ukf": "physical prediction, genuine LSTM predicts positive Q factors from past",
+    "nake": "learned dynamics, UKF/Joseph correction, previous NIS EWMA scales positive Q",
+    "lstm_nake": "learned dynamics, UKF/Joseph correction, separately trained genuine LSTM adapts Q",
+    "ukf_tuned": "physical prediction; constant Q selected on independent validation seed 4601"
+  },
+  "nake_status": "research working name; no KalmanNet reproduction or neural Kalman-gain training",
+  "controllers": {
+    "siso": "xEB tracking via ethylene flow; Q command fixed",
+    "mimo": "xEB and T tracking via ethylene flow and Q"
+  },
+  "cost": "0.8*((xEB-ref)/0.02)^2 + MIMO-only 0.2*((T-Tnom)/5)^2 + 0.03*sum(normalized move changes squared)",
+  "comparison": "MIMO adds a thermal objective and actuator; direct xEB ranking is accompanied by temperature/effort metrics",
+  "horizon": {
+    "prediction_steps": 40,
+    "prediction_h": 1.0,
+    "control_moves": 4,
+    "first_blocks_steps": 5,
+    "last_move_held": true
+  },
+  "bounds": {
+    "fE_factor": [
+      0.04,
+      2.0
+    ],
+    "Q_factor": [
+      0.6,
+      1.4
+    ],
+    "move_rate": [
+      0.12,
+      0.08
+    ]
+  },
+  "constraints": {
+    "temperature_modes": [
+      "off",
+      "on: predicted T<=165 C"
+    ],
+    "actual_monitoring": "DOP853 dense output at 21 points/sample",
+    "note": "prediction feasibility does not guarantee actual noisy plant temperature"
+  },
+  "solver": {
+    "name": "SciPy SLSQP; physical CasADi C derivatives, neural exact C chain rule checked against CasADi",
+    "maxiter": 45,
+    "ftol": 1e-07
+  },
+  "fallback": "constrained infeasible: fE minimum and Q maximum in MIMO; may override normal move-rate bound; unconstrained: previous command",
+  "stopped_runs": "guard at T>220 C, T<0 C, negative concentration or numerical failure; flagged and excluded from full-duration matched rankings",
+  "training_test_separation": "training seeds 4101/4401; validation 4201/4251/4501; test seeds 9001-9003",
+  "synthetic": true,
+  "scope": "first reactor; not a full Aspen plantwide study; no experimental plant data",
+  "observer_runs": 75,
+  "ukf_tuning": {
+    "validation_seed": 4601,
+    "validation_trajectories": 16,
+    "steps": 160,
+    "scored_after_step": 40,
+    "objective": "(xEB_RMSE/0.001)^2 + (T_RMSE/1.5 K)^2; independent validation only",
+    "candidate_factors": [
+      0.25,
+      1.0,
+      4.0,
+      16.0,
+      64.0,
+      100.0
+    ],
+    "scores": [
+      {
+        "factor": 0.25,
+        "score": 35.56116306453037,
+        "xEB_RMSE": 0.005444037296471321,
+        "T_RMSE_C": 3.6507735075061967
+      },
+      {
+        "factor": 1.0,
+        "score": 30.957867256116536,
+        "xEB_RMSE": 0.005244570121901137,
+        "T_RMSE_C": 2.787075682198364
+      },
+      {
+        "factor": 4.0,
+        "score": 27.334184927262193,
+        "xEB_RMSE": 0.005096538964513517,
+        "T_RMSE_C": 1.7489482263720055
+      },
+      {
+        "factor": 16.0,
+        "score": 25.98587104066644,
+        "xEB_RMSE": 0.005053884945957529,
+        "T_RMSE_C": 0.9996326754379242
+      },
+      {
+        "factor": 64.0,
+        "score": 25.781509083343444,
+        "xEB_RMSE": 0.005054340611226368,
+        "T_RMSE_C": 0.7273841181696535
+      },
+      {
+        "factor": 100.0,
+        "score": 25.810337198292878,
+        "xEB_RMSE": 0.005056557195289355,
+        "T_RMSE_C": 0.7372412701319416
+      }
+    ],
+    "chosen_factor": 64.0,
+    "constant_Q": [
+      6.4e-06,
+      0.000128,
+      0.000128,
+      6.4e-06,
+      0.2304
+    ],
+    "extra_configs": 4,
+    "extra_control_runs": 144,
+    "extra_observer_runs": 15,
+    "note": "selected Q is identical in every control/test regime; control results never select it"
+  }
+}

@@ -1,0 +1,9 @@
+__pycache__/
+native_cache/
+*.log
+results/runs/
+results/traces/
+results/errors/
+results/openloop_traces/
+results/ukf_tuned/
+results/metrics_smoke.*

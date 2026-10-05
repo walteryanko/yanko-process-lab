@@ -1,0 +1,59 @@
+{
+  "source": "TFC_WALTER_FINAL_imprimir.pdf, UFPB 2016, pp. 42-47 and Table 4.1 p.52",
+  "scope": "first reactor only; downstream columns and second reactor are not dynamic models here",
+  "kinetic_time_factor": 3600.0,
+  "kinetic_unit_status": "confirmed kmol/(s m3) in supplied Luyben 2011 p.656; printed TCC min label corrected",
+  "gas_constant": "1.987 cal/mol/K; printed kcal is inconsistent with activation energies in cal/mol",
+  "nominal_state": [
+    0.03589446366246779,
+    4.630172111897089,
+    1.9699103395677695,
+    0.37169013251985855,
+    160.876133752246
+  ],
+  "nominal_fractions": [
+    0.005122170248445138,
+    0.6607294667990345,
+    0.28110786745057537,
+    0.05304049550194498
+  ],
+  "target_matlab_fractions": [
+    0.0051,
+    0.6607,
+    0.2811,
+    0.0531
+  ],
+  "literal_minutes_fractions": [
+    0.1424621359676031,
+    0.6834303876241472,
+    0.1525234466688098,
+    0.021584029739439792
+  ],
+  "nominal_duty_kcal_h": 21718243.889684107,
+  "nominal_duty_MW": 25.241425676232865,
+  "heat_capacity_status": "printed constant energy-balance coefficients retained; effective Q inferred, not identified plant duty",
+  "steady_rhs": [
+    -4.440892098500626e-16,
+    -8.881784197001252e-16,
+    4.440892098500626e-16,
+    5.551115123125783e-17,
+    0.0
+  ],
+  "temperature_limit_C": 165.0,
+  "temperature_limit_status": "new imposed research limit; no hard limit stated in TCC",
+  "manipulated_variables": {
+    "siso": [
+      "fE"
+    ],
+    "mimo": [
+      "fE",
+      "Q"
+    ]
+  },
+  "added_actuator": "heat-removal duty supported by ASPEN/aspeneb.dynf R1_TC.OP -> R1.QR; ideal input and 0.6-1.4 bounds are new study assumptions",
+  "aspen_duty_warning": "effective 25.24 MW of printed-ODE reconstruction differs from paper 10.3 MW and archive snapshots; not an Aspen thermodynamic reproduction",
+  "density_warning": "printed constant reactor molar density and sum of computed concentrations differ; inherited reduced-model approximation retained",
+  "valve_flow_bounds": "0.04-2.0 fE0, equal-percentage rangeability 50 and capacity factor 2 from TCC",
+  "sample_period_h": 0.025,
+  "original_Q_sample_period_Qcov_Rcov_PI_gains": "not specified sufficiently to recover exactly"
+}
