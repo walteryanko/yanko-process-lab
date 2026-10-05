@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import {BASE, NOMINAL, P, DT, LIMITS, derivative, integrate, flow, fromPercent} from '../lib/simulation/model.ts';
+import {BASE, TABLED_BASE, TABLED_P, NOMINAL, P, DT, LIMITS, derivative, integrate, flow, fromPercent} from '../lib/simulation/model.ts';
 import {SimulationEngine, DEFAULT_CONFIG} from '../lib/simulation/engine.ts';
 
 const config = patch => ({...DEFAULT_CONFIG, percent:{...DEFAULT_CONFIG.percent}, ...patch});
@@ -19,9 +19,10 @@ test('equilibrium satisfies all six balances and remains stationary without nois
   assert.equal(result.error,null);
   assert.equal(result.sample.t,12);
   result.sample.x.forEach((x,i)=>assert.ok(Math.abs(x-BASE[i])<1e-9));
-  // The documented source discrepancy is preserved, never calibrated away.
-  assert.ok(Math.abs(BASE[4]-340.3034893843503)<1e-8);
-  assert.ok(Math.abs(BASE[4]-332.3)>7);
+  assert.ok(Math.abs(BASE[4]-332.3)<1e-8);
+  assert.ok(Math.abs(TABLED_BASE[4]-340.3034893843503)<1e-8);
+  assert.ok(derivative(TABLED_BASE,NOMINAL,TABLED_P).every(x=>Math.abs(x)<1e-8));
+  assert.ok(Math.abs(P.heat-84138.65353748415)<1e-6);
 });
 
 test('stoichiometric balances and the inert analytic response are conserved', () => {

@@ -1,0 +1,13 @@
+{
+  "tabled": {
+    "RMSE_K": 8.247267179864926,
+    "max_absolute_error_K": 28.623941663561993,
+    "non_nominal_points": 24
+  },
+  "calibrated": {
+    "RMSE_K": 0.5267507249186572,
+    "max_absolute_error_K": 1.9780063205603824,
+    "non_nominal_points": 24
+  },
+  "branch_selection": "Nearest reported root; best-case diagnostic, not a continuation forecast"
+}

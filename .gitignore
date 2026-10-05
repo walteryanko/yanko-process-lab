@@ -8,3 +8,8 @@ out/
 *.mp4
 *.zip
 .DS_Store
+
+__pycache__/
+*.pyc
+research/nake/results/trace_*.npz
+research/nake/results/report/
