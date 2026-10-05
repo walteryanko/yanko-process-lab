@@ -150,10 +150,16 @@ def pdf(rows,obs,summary,observer,out):
                               ('LEFTPADDING',(0,0),(-1,-1),5),('RIGHTPADDING',(0,0),(-1,-1),4),('TOPPADDING',(0,0),(-1,-1),5),('BOTTOMPADDING',(0,0),(-1,-1),5)]));story.append(t);story.append(Spacer(1,9))
     audit=json.loads((RESULTS/'audit.json').read_text());tuning=json.loads((RESULTS/'tuning_ukf.json').read_text())
     training=json.loads((RESULTS/'training_transition.json').read_text());lstm=json.loads((RESULTS/'training_lstm.json').read_text())
+    historical=json.loads((RESULTS/'tfc_published.json').read_text())
+    pi_tuning=json.loads((RESULTS/'baseline_tuning.json').read_text())
+    pi_gains=json.loads((RESULTS/'improvement_vs_pi.json').read_text())
+    pi_comparison=json.loads((RESULTS/'tfc_control_comparison.json').read_text())
+    obs_comparison=json.loads((RESULTS/'tfc_observer_comparison.json').read_text())
+    pi_audit=json.loads((RESULTS/'historical_audit.json').read_text())
     complete=sum(r['status']=='complete' for r in rows)
     p('Etilbenzeno<br/>LSTM, UKF, NAKE e NMPC','TitleEB')
     p('Walter Yanko de Aragão Brandão | Estudo do primeiro reator do TFC | Outubro de 2026','SmallEB')
-    p(f'<b>20 configurações, 720 ensaios de controle e 75 ensaios de estimação.</b> Foram concluídos {complete} dos 720 ensaios de controle. A base é o modelo reduzido de cinco estados do TFC da UFPB (2016), reconstruído com as unidades cinéticas confirmadas no artigo original de Luyben incluído em TFC.zip.')
+    p(f'<b>20 configurações NMPC: {complete}/720 ensaios; 75 ensaios de estimação.</b> A comparação com o TFC acrescenta 18 ensaios PI + FKE e 15 de estimação FKE, todos completos. A base é o modelo reduzido de cinco estados, com unidades cinéticas confirmadas no artigo original de Luyben fornecido pelo autor.')
     p('A comparação cruza cinco estimadores, predição física ou blackbox e controle SISO ou MIMO, com e sem restrição térmica. UKF Q0 é a referência nominal; UKF validado usa uma matriz Q constante escolhida em dados de validação independentes. LSTM-UKF e LSTM-NAKE usam redes recorrentes treinadas de fato.')
     chart('Etilbenzeno_Comparacao.png',200)
     baseline=next(r for r in summary if (r['estimator'],r['prediction'],r['mode'],r['constrained'])==('ukf_tuned','physical','mimo',True))
@@ -162,16 +168,16 @@ def pdf(rows,obs,summary,observer,out):
     p(f'<b>Resultado agregado:</b> LSTM-UKF + NMPC físico MIMO reduziu a média de IAE após evento em {decrease:.1f}% frente ao UKF validado + NMPC físico MIMO, com restrição. O ganho médio das razões pareadas foi {learned["macro_gain_vs_tuned_pct"]:.1f}%. Ambos ultrapassaram 165 °C nos três ensaios de perda térmica; os máximos foram {learned["Tmax_C"]:.2f} °C e {baseline["Tmax_C"]:.2f} °C, respectivamente.')
     conrows=[r for r in rows if r['constrained']]
     p(f'<b>Temperatura real da simulação:</b> a restrição T ≤ 165 °C foi imposta nas previsões. Houve ultrapassagem desse valor em {sum(r["violation_h"]>0 for r in conrows)} dos {len(conrows)} ensaios com restrição; máximo observado {max(r["Tmax_C"] for r in conrows):.3f} °C. A factibilidade prevista não equivale a cumprir o limite na planta com ruído e erro de modelo.')
-    p('<b>Escopo:</b> os resultados valem para o primeiro reator reconstruído. Não são uma execução da planta Aspen completa, nem validação experimental. A energia usa uma remoção de calor efetiva calibrada, diferente da carga térmica física do flowsheet. As colunas e seus reciclos dinâmicos não estão simulados neste benchmark.','SmallEB')
+    p('<b>Frente ao TFC:</b> há ganhos nos dois regulatórios contra o PI + FKE reconstruído, mas perdas nos servos. As tabelas e curvas históricas são confrontadas nas seções 5-7. Ainda não se demonstra superioridade sobre a execução original, cuja sintonia e partida não foram recuperadas. Os resultados abrangem o primeiro reator com calor efetivo calibrado; a planta Aspen completa e as colunas não foram executadas.','SmallEB')
     story.append(PageBreak())
     title('1. Originais, unidades e equilíbrio')
     p('Foram conferidos TFC.zip, o PDF final do TFC, o documento “Modelagem e equações” e o artigo de Luyben (2011). O Aspen exportado conecta R1_TC.OP a R1.QR, confirmando a possibilidade de atuação térmica. O arquivo FiltroKalman.slx contém um exemplo escalar de filtro; o reator não linear de cinco estados não foi localizado como modelo Simulink executável no ZIP.')
     p('Luyben, p. 656, informa taxas em kmol/(s·m³). Por isso o fator correto é 3600 para trabalhar em horas. O rótulo “min” do TFC é corrigido. R = 1,987 cal/(mol·K), compatível com E em cal/mol; a palavra “kcal” impressa para R também é corrigida. Com a unidade de minutos, xEB seria aproximadamente 0,1525 no ponto ajustado, em vez de 0,2811.')
-    table([['Componente','Luyben / TFC','Aspen / TFC','MATLAB / TFC','Reconstrução'],
-           ['xE','0,0039','0,0039','0,0051',f'{BASE[0]/BASE[:4].sum():.6f}'],
-           ['xB','0,6568','0,6572','0,6607',f'{BASE[1]/BASE[:4].sum():.6f}'],
-           ['xEB','0,2891','0,2888','0,2811',f'{fraction(BASE):.6f}'],
-           ['xDEB','0,0501','0,0500','0,0531',f'{BASE[3]/BASE[:4].sum():.6f}']], [82,104,104,112,113])
+    table([['Componente','Luyben / TFC','Aspen / TFC','MATLAB / TFC','FKE / TFC','Reconstrução'],
+           ['xE','0,0039','0,0039','0,0051','0,0050',f'{BASE[0]/BASE[:4].sum():.6f}'],
+           ['xB','0,6568','0,6572','0,6607','0,6631',f'{BASE[1]/BASE[:4].sum():.6f}'],
+           ['xEB','0,2891','0,2888','0,2811','0,2795',f'{fraction(BASE):.6f}'],
+           ['xDEB','0,0501','0,0500','0,0531','0,0523',f'{BASE[3]/BASE[:4].sum():.6f}']], [75,85,85,90,85,95])
     p(f'Temperatura reconstruída: <b>{TNOM:.6f} °C</b>. Remoção de calor efetiva: <b>{Q0*4184/3.6e9:.6f} MW</b>. Ela fecha o balanço com os coeficientes de capacidade calorífica e densidade impressos no TFC. O TFC afirma que Q foi ajustado, mas não publica o valor usado. A carga de 10,3 MW de Luyben e as revisões Aspen não são reproduzidas por essa calibração.')
     p('A densidade molar constante impressa também difere da soma das concentrações calculadas. Essas aproximações do modelo reduzido foram mantidas e declaradas. A calibração de um ponto não identifica propriedades termodinâmicas nem valida a dinâmica industrial.')
     table([['Item','Valor / hipótese'],['Estados','CE, CB, CEB, CDEB [kmol/m³] e T [°C]'],['Medição','Somente T, desvio padrão sintético de 1,5 °C'],['Entradas conhecidas','Vazões comandadas e temperaturas de alimentação; sem estados reais'],['SISO','xEB por vazão de etileno; Q comandado fixo'],['MIMO','xEB e T por etileno e remoção de calor ideal'],['Restrição térmica','165 °C, hipótese de estudo ausente no TFC'],['Atuação','fE: 0,04-2,0 do nominal; Q MIMO: 0,6-1,4 do efetivo']],[115,400])
@@ -199,22 +205,64 @@ def pdf(rows,obs,summary,observer,out):
         p('As tabelas completas por cenário e semente, incluindo ISE, ITAE, erro dos estados, esforço e tempos do solver, acompanham o código. A média não implica ganho em todos os regimes.','SmallEB')
         p('A versão blackbox SISO apresentou pior desempenho agregado em várias combinações, apesar do pequeno erro de predição em validação. A qualidade de previsão em dados separados não certifica o desempenho da otimização em malha fechada.','SmallEB')
         story.append(PageBreak())
-    title('5. Controle servo: mudanças de composição')
+    title('5. Controle original: evidências recuperadas')
+    p('As Tabelas 4.1-4.4 e as Figuras 4.4, 4.7 e 4.8 foram recuperadas do PDF original. A tabela abaixo transcreve os valores publicados, mantendo a ordem das colunas: malha fechada e malha aberta. Os dois degraus ocorrem em 5 h, em simulações de 10 h. As integrais históricas incluem a partida mostrada nas figuras; a janela exata de cálculo não é detalhada.')
+    tab=[['Perturbação','Malha / TFC','IAE','ITAE','ISE']]
+    for case in ['benzene_50','recycle_minus50']:
+        for loop,label in [('closed','Fechada: PI + FKE'),('open','Aberta')]:
+            r=historical['control'][case][loop]
+            tab.append([CL[case],label]+[f'{r[k]:.4f}' for k in ['IAE','ITAE','ISE']])
+    table(tab,[115,145,85,85,85])
+    p('<b>Inconsistência preservada:</b> no caso benzeno +50%, a Tabela 4.3 publica IAE 62,9% maior e ISE 537,5% maior na malha fechada, embora o texto afirme melhoria. Somente ITAE é menor. No caso reciclo -50%, as três métricas publicadas são menores em malha fechada. Não foram trocadas colunas para favorecer a conclusão.')
+    title('Observador original e observadores novos')
+    p('A Tabela 4.2 publica MAE = 1,626 × 10⁻⁵ e RMSE = 0,000514 para xEB. A Figura 4.5 adjacente cobre 0-5 h; a janela, P, Q, R e amostragem usados no cálculo não são especificados. Estes valores são referências históricas descritivas, sem cálculo de ganho percentual contra os testes novos.')
+    tab=[['Observador','MAE novo 0-5 h','RMSE novo 0-5 h','RMSE novo 5-10 h']]
+    for e,label in [('ekf_reconstructed','FKE reconstruído'),('ukf_tuned','UKF validado'),('lstm_ukf','LSTM-UKF')]:
+        r=next(x for x in obs_comparison['new'] if x['estimator']==e)
+        tab.append([label,f'{r["MAE_first5"]:.7f}',f'{r["RMSE_first5"]:.7f}',f'{r["RMSE_after5"]:.7f}'])
+    table(tab,[125,130,130,130])
+    p('Médias de três sementes no ensaio nominal em malha aberta, com estados e medições idênticos para todos os observadores novos. O erro inicial enviesado domina 0-5 h. O RMSE novo nessa janela é maior que o RMSE publicado; a comparação não comprova melhoria do observador em relação ao TFC. A avaliação causal entre métodos novos usa o protocolo pareado.','SmallEB')
+    p('As planilhas de sensibilidade do ZIP contêm varreduras estáticas, não trajetórias temporais do PI + FKE. Não foram encontrados o modelo executável deste reator e os vetores brutos dos ensaios históricos. Os arquivos e os valores originais permanecem preservados.','SmallEB')
+    story.append(PageBreak())
+    title('6. Houve melhoria? Referência PI + FKE comum')
+    relay=pi_tuning['relay']
+    p(f'Foi implementado FKE com o mesmo modelo físico e Jacobiana exata. Q constante = {pi_tuning["EKF_Q_factor"]:g} × Q0 foi escolhido em validação independente. O PI segue a receita de relé do TFC: Kc = Kcu/2,2; Ti = Tu/1,2. Um ensaio nominal separado produziu Kcu = {relay["Kcu"]:.4f}, Tu = {relay["period_h"]:.3f} h, Kc = {relay["Kp"]:.4f} e Ti = {relay["Ti_h"]:.3f} h. São ganhos reconstruídos, pois os ganhos numéricos originais não são publicados.')
+    p('Válvula equipercentual 50, limites comuns 0,04-2 vezes o nominal, variação máxima 0,12 por amostra e anti-windup declarado. Os 18 testes PI + FKE usam o mesmo equilíbrio, viés inicial, planta DOP853, ruído, sementes e degraus dos 720 testes NMPC. Q de calor permanece fixo. O PI não recebe a nova restrição de 165 °C.')
+    chart('Etilbenzeno_Melhoria_PI_FKE.png',223)
+    tab=[['Cenário','UKF validado + físico SISO','LSTM-UKF + físico SISO']]
+    for case in ['benzene_50','recycle_minus50','servo_up','servo_down','thermal_loss','kinetics_noise']:
+        tab.append([CL[case]]+[f'{next(r["paired_gain_mean_pct"] for r in pi_gains if (r["case"],r["estimator"],r["prediction"],r["mode"],r["constrained"])==(case,e,"physical","siso",False)):+.2f}%' for e in ['ukf_tuned','lstm_ukf']])
+    table(tab,[175,170,170])
+    p('<b>Ganho = 100 × (1 − IAE_evento novo / IAE_evento PI + FKE)</b>, média de três razões pareadas. Positivo melhora; negativo piora. Janela 3-10 h nos servos e 5-10 h nos demais casos. SISO sem restrição é a comparação de mesmo atuador e objetivo. MIMO acrescenta atuador e objetivo térmico; a restrição acrescenta uma exigência ausente no PI original.','SmallEB')
+    p('O ganho de aproximadamente 98% no reciclo reflete também a resposta oscilatória deste PI reconstruído à perturbação. Depende da nova sintonia e do modelo efetivo; não pode ser apresentado como ganho comprovado sobre o PI executado no TFC. Há perdas nos servos, no caso cinético e em várias combinações neurais.','SmallEB')
+    story.append(PageBreak())
+    title('7. Curvas e integrais: confronto com o TFC')
+    chart('Etilbenzeno_TFC_Original.png',380)
+    p('Digitalização aproximada das figuras originais: duas linhas de pixel equivalem a cerca de ±0,0040 na partida, ±0,0021 no benzeno e ±0,0018 no reciclo. Sobreposições longas e áreas de legenda permanecem sem dados. A Figura 4.8 tem identificação de malha ambígua; as cores e rótulos originais são preservados. Trajetórias novas: semente 9002.','SmallEB')
+    tab=[['Método novo, sem restrição','IAE 0-10 h B+50%','IAE 0-10 h R−50%','Tmax B / R (°C)']]
+    for method,label,e,m in [('PI + EKF reconstructed','PI + FKE reconstruído','ekf_reconstructed','siso'),('ukf_tuned physical siso','UKF validado / físico SISO','ukf_tuned','siso'),('lstm_ukf physical siso','LSTM-UKF / físico SISO','lstm_ukf','siso'),('lstm_ukf physical mimo','LSTM-UKF / físico MIMO','lstm_ukf','mimo')]:
+        vals=[next(r['IAE'] for r in pi_comparison if r['case']==case and r['method']==method) for case in ['benzene_50','recycle_minus50']]
+        temps=[next(r['Tmax_C'] if e!='ekf_reconstructed' else r['PI_EKF_Tmax_C'] for r in pi_gains if (r['case'],r['estimator'],r['prediction'],r['mode'],r['constrained'])==(case,e if e!='ekf_reconstructed' else 'ukf_tuned','physical',m,False)) for case in ['benzene_50','recycle_minus50']]
+        tab.append([label]+[f'{v:.6f}' for v in vals]+[f'{temps[0]:.2f} / {temps[1]:.2f}'])
+    table(tab,[188,108,108,111])
+    p('IAE é a média de três sementes; Tmax é o máximo entre as três. Reduzir erro de composição não garante operar abaixo de 165 °C. As integrais novas de 0-10 h não incluem a partida do TFC: sua diferença em relação às Tabelas 4.3-4.4 não pode ser atribuída somente ao controlador. O ganho causal informado usa exclusivamente a referência reconstruída nas mesmas condições.','SmallEB')
+    story.append(PageBreak())
+    title('8. Controle servo: mudanças de composição')
     chart('Etilbenzeno_Servo.png',415)
     p('A referência de xEB aumenta ou diminui 10% em 3 h, retornando ao nominal em 7 h. São novos ensaios servo, com a mesma definição usada nas 20 configurações. O controlador recebe somente a referência atual e não prevê o retorno futuro.')
     p('O limite térmico compete com uma referência de maior produção. Os gráficos mostram esse compromisso para uma semente comum; os erros integrados incluem a permanência na nova referência e o retorno ao ponto nominal. As três sementes e as duas condições de restrição permanecem disponíveis nas métricas e trajetórias.','SmallEB')
     story.append(PageBreak())
-    title('6. Regulatórios originais do TFC')
+    title('9. Regulatórios nas magnitudes do TFC')
     chart('Etilbenzeno_Regulatorio.png',415)
     p('São preservadas as magnitudes e o instante de perturbação do TFC. O estado inicial aqui é o equilíbrio reconstruído: não se atribuem estes resultados à partida histórica do Simulink. A planta recebe ruído nas entradas e no sensor. As trajetórias mostram a composição simulada, não a estimativa apresentada ao controlador.')
     p('A segunda atuação térmica permite ajustar a remoção de calor enquanto o etileno busca a referência de composição. No SISO, a temperatura depende da mesma vazão usada para xEB; o limite térmico pode exigir sacrificar a referência de composição. A carga térmica efetiva pertence ao modelo reduzido, e não deve ser transposta diretamente ao equipamento real.','SmallEB')
     story.append(PageBreak())
-    title('7. Perda térmica e cinética desconhecida')
+    title('10. Perda térmica e cinética desconhecida')
     chart('Etilbenzeno_Robustez.png',415)
     p('Na perda térmica, a planta remove somente 80% do calor comandado, sem informar essa eficiência ao observador ou ao NMPC. No teste cinético, os fatores são k1 × 1,25; k2 × 0,90; k3 × 1,10. O ruído nas entradas triplica e o sensor fica indisponível durante meia hora.')
     p('O ajuste de Q pode acelerar a correção quando a dinâmica prevista deixa de representar a planta. Ele não identifica automaticamente os novos parâmetros cinéticos. Uma medição de temperatura oferece informação limitada sobre quatro concentrações e reações concorrentes; os resultados de estimação mostram essa limitação.','SmallEB')
     story.append(PageBreak())
-    title('8. Estimação isolada do efeito do controlador')
+    title('11. Estimação isolada do efeito do controlador')
     chart('Etilbenzeno_Estimadores.png',218)
     table([['Caso','UKF Q0','UKF val.','LSTM-UKF','NAKE-BB','LSTM-NAKE']]+[
       [('Nominal' if c=='servo_up' else CL[c])]+[f'{next(r["xEB_RMSE_mean"] for r in observer if r["case"]==c and r["estimator"]==e):.6f}' for e in ESTIMATORS]
@@ -222,13 +270,14 @@ def pdf(rows,obs,summary,observer,out):
     p('RMSE de xEB após 5 h, média de três sementes. Cada observador recebe a mesma trajetória e as mesmas medições. O caso “nominal” corresponde à trajetória sem alteração de atuação; uma referência servo não produz movimento em malha aberta.')
     p('A adaptação neural deve ser comparada também com o UKF ressintonizado. Quando a alteração principal é térmica, um Q maior pode melhorar muito a correção mesmo sem rede neural. Quando a cinética muda, os cinco estimadores continuam sujeitos à falta de informação sobre as concentrações. Os gráficos não sustentam uma superioridade universal de LSTM ou NAKE.')
     story.append(PageBreak())
-    title('9. Verificação, reexecução e limites')
+    title('12. Verificação, reexecução e limites')
     p(f'<b>Verificação dos dados:</b> {audit["unique_runs"]} combinações de caso/configuração/restrição/semente únicas; {audit["samples"]:,} amostras registradas. Foi conferido cada arquivo de trajetória e reintegrado um ensaio por combinação de estimador, preditor, modo e restrição ({audit["reintegration_count"]} ensaios), reproduzindo os estados e as integrais registradas.')
     p(f'<b>Solver:</b> {audit["solver_failed_statuses"]} retornos com status de falha; {audit["fallbacks"]} ações de emergência; {audit["normal_move_rate_overrides"]} alterações acima da taxa normal. A maior ultrapassagem prevista em candidatos aceitos foi {audit["maximum_accepted_predicted_temperature_excess_C"]:.6g} °C, dentro da tolerância numérica da otimização. Foram registradas {audit["covariance_repairs"]} correções de covariância e {audit["positivity_projections"]} projeções de positividade.')
-    p('Sete testes próprios verificam unidades e equilíbrio, conservação estequiométrica, DOP853 independente, igualdade de inferência neural exportada, gradientes por diferenças finitas, BPTT das LSTMs, concordância entre kernels C/CasADi/NumPy, uso causal de Q, ausência de medição e factibilidade prevista. O núcleo CSTR anterior também permanece testado separadamente.')
+    p(f'<b>Referência histórica reconstruída:</b> {pi_audit["control_runs"]} ensaios de controle e {pi_audit["observer_runs"]} de estimação; {pi_audit["reintegrated_samples"]} amostras PI reintegradas. Erro máximo nos estados e integrais: {pi_audit["state_max_abs_error"]:.1g} e {pi_audit["metric_max_abs_error"]:.1g}; erro entre trajetórias comuns de estimação: {pi_audit["paired_truth_max_abs_error"]:.1g}. Limites de atuação, taxa, covariâncias e Q positivo foram conferidos.')
+    p('Nove testes próprios verificam unidades e equilíbrio, conservação estequiométrica, DOP853 independente, inferência exportada, derivadas por diferenças finitas, BPTT, concordância C/CasADi/NumPy, Q causal, ausência de medição, factibilidade prevista, Jacobiana do FKE e reversão do PI saturado. O núcleo CSTR anterior permanece testado separadamente.')
     p('A integração da planta usa DOP853; a predição física usa RK4. O NMPC usa SLSQP com derivadas exatas. A compilação neural apenas aplica pesos aprendidos e a regra da cadeia. Horizonte: 40 amostras (1 h), quatro movimentos, blocos iniciais de cinco amostras. Amostragem: 90 s. O solver não conhece eventos futuros nem estados reais.')
     p('Os tempos registrados foram medidos com execuções concorrentes em ambiente computacional compartilhado. Eles não são uma certificação de execução em tempo real no hardware industrial. A política de emergência e o monitor de domínio pertencem à simulação e não substituem um sistema de proteção de planta.')
-    p('<b>Reprodução:</b> requirements.txt; train.py; experiment.py; tuning.py; audit.py e report.py. Pesos JSON, matriz do protocolo, métricas individuais, resumos por configuração e por regime e manifesto dos originais são fornecidos no repositório. As trajetórias são fornecidas como arquivos NPZ compactados. Os números são sintéticos e se referem a esta versão do modelo e do protocolo.')
+    p('<b>Reprodução:</b> requirements.txt; train.py; experiment.py; tuning.py; baseline.py; historical.py; audit.py e report.py. Pesos JSON, protocolo, métricas, tabelas históricas, curvas digitalizadas e manifesto estão no repositório. Trajetórias NPZ são fornecidas separadamente. Q e covariâncias registrados têm unidades físicas dos estados ao quadrado.')
     p('Três sementes permitem uma comparação preliminar. O estudo não identifica propriedades, não executa Aspen/MATLAB, não modela pressões ou fases e não reproduz as colunas e os reciclos completos. O limite de 165 °C e as capacidades de atuação são hipóteses declaradas. A implantação na planta completa exige reproduzir e validar a dinâmica original no simulador industrial.')
     title('Referências')
     p('Brandão, W. Y. A. (2016). Uso de sensores virtuais como observadores de estado aplicados na dinâmica e controle de processos químicos lineares e não lineares. TFC, UFPB. Arquivo original e TFC.zip fornecidos pelo autor.','SmallEB')
@@ -254,6 +303,7 @@ def markdown(summary,observer,rows):
     for c in ['servo_up','benzene_50','recycle_minus50','thermal_loss','kinetics_noise']:
         lines.append('| '+('Nominal' if c=='servo_up' else CL[c])+' | '+' | '.join(f'{next(r["xEB_RMSE_mean"] for r in observer if r["case"]==c and r["estimator"]==e):.7f}' for e in ESTIMATORS)+' |')
     lines+=['','RMSE de xEB após 5 h. Mesmas trajetórias por caso/semente. Redes e Q fixo selecionados em validação independente. Não há ganho universal de aprendizagem.','',
+            'A comparação com as tabelas e curvas originais e com 18 ensaios PI + FKE reconstruídos está em [COMPARACAO_TFC.md](COMPARACAO_TFC.md). Os ganhos nesta página usam o UKF novo, não o controle original do TFC.','',
             'Originais conferidos: TFC.zip, PDF do TFC, Luyben 2011 e exportação Aspen. Não executado no Aspen/MATLAB. Capacidade/densidade constantes e Q efetivo são aproximações do reator reduzido; a planta completa não está reproduzida. Ver README, manifesto, protocolo e auditoria.']
     (RESULTS/'RESULTADOS.md').write_text('\n'.join(lines)+'\n')
 

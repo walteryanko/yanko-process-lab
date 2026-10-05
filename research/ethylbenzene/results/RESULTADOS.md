@@ -68,4 +68,6 @@ Ganho de IAE após evento: média das razões pareadas vs UKF validado + NMPC f�
 
 RMSE de xEB após 5 h. Mesmas trajetórias por caso/semente. Redes e Q fixo selecionados em validação independente. Não há ganho universal de aprendizagem.
 
+A comparação com as tabelas e curvas originais e com 18 ensaios PI + FKE reconstruídos está em [COMPARACAO_TFC.md](COMPARACAO_TFC.md). Os ganhos nesta página usam o UKF novo, não o controle original do TFC.
+
 Originais conferidos: TFC.zip, PDF do TFC, Luyben 2011 e exportação Aspen. Não executado no Aspen/MATLAB. Capacidade/densidade constantes e Q efetivo são aproximações do reator reduzido; a planta completa não está reproduzida. Ver README, manifesto, protocolo e auditoria.

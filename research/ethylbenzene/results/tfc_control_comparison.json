@@ -1,0 +1,128 @@
+[
+  {
+    "case": "benzene_50",
+    "method": "TFC published closed",
+    "IAE": 0.1476,
+    "ISE": 0.0102,
+    "ITAE": 0.3368,
+    "IAE_event": "",
+    "comparability": "historical startup/noise/tuning differ; no causal gain computed"
+  },
+  {
+    "case": "benzene_50",
+    "method": "TFC published open",
+    "IAE": 0.0906,
+    "ISE": 0.0016,
+    "ITAE": 0.5625,
+    "IAE_event": "",
+    "comparability": "historical startup/noise/tuning differ; no causal gain computed"
+  },
+  {
+    "case": "benzene_50",
+    "method": "PI + EKF reconstructed",
+    "IAE": 0.009956266021163639,
+    "ISE": 4.497770040490026e-05,
+    "ITAE": 0.02120839793070207,
+    "IAE_event": 0.0018015854100416288,
+    "comparability": "common new protocol"
+  },
+  {
+    "case": "benzene_50",
+    "method": "ukf_tuned physical siso",
+    "IAE": 0.009566393243181438,
+    "ISE": 4.3060386865586974e-05,
+    "ITAE": 0.019377039776021007,
+    "IAE_event": 0.0015189534388094764,
+    "comparability": "common new protocol"
+  },
+  {
+    "case": "benzene_50",
+    "method": "lstm_ukf physical siso",
+    "IAE": 0.009541142916250371,
+    "ISE": 4.3132124383557876e-05,
+    "ITAE": 0.01896777495630013,
+    "IAE_event": 0.0014599340774297386,
+    "comparability": "common new protocol"
+  },
+  {
+    "case": "benzene_50",
+    "method": "lstm_nake neural siso",
+    "IAE": 0.011813120922853679,
+    "ISE": 4.6795454409780774e-05,
+    "ITAE": 0.037714941266225425,
+    "IAE_event": 0.0035857843470469435,
+    "comparability": "common new protocol"
+  },
+  {
+    "case": "benzene_50",
+    "method": "lstm_ukf physical mimo",
+    "IAE": 0.009527052810405279,
+    "ISE": 4.317482269979657e-05,
+    "ITAE": 0.01867396539351734,
+    "IAE_event": 0.0014336430011200503,
+    "comparability": "common new protocol; MIMO adds actuator/objective"
+  },
+  {
+    "case": "recycle_minus50",
+    "method": "TFC published closed",
+    "IAE": 0.1467,
+    "ISE": 0.0102,
+    "ITAE": 0.3291,
+    "IAE_event": "",
+    "comparability": "historical startup/noise/tuning differ; no causal gain computed"
+  },
+  {
+    "case": "recycle_minus50",
+    "method": "TFC published open",
+    "IAE": 0.3678,
+    "ISE": 0.0267,
+    "ITAE": 2.123,
+    "IAE_event": "",
+    "comparability": "historical startup/noise/tuning differ; no causal gain computed"
+  },
+  {
+    "case": "recycle_minus50",
+    "method": "PI + EKF reconstructed",
+    "IAE": 0.2439544690771762,
+    "ISE": 0.020908486304159618,
+    "ITAE": 1.9800506150820532,
+    "IAE_event": 0.23634939284314674,
+    "comparability": "common new protocol"
+  },
+  {
+    "case": "recycle_minus50",
+    "method": "ukf_tuned physical siso",
+    "IAE": 0.012312897940344755,
+    "ISE": 4.885848820162619e-05,
+    "ITAE": 0.044713954202700766,
+    "IAE_event": 0.004921105911968604,
+    "comparability": "common new protocol"
+  },
+  {
+    "case": "recycle_minus50",
+    "method": "lstm_ukf physical siso",
+    "IAE": 0.012099701430097011,
+    "ISE": 4.7846980587573985e-05,
+    "ITAE": 0.04319507947411416,
+    "IAE_event": 0.004723511187190114,
+    "comparability": "common new protocol"
+  },
+  {
+    "case": "recycle_minus50",
+    "method": "lstm_nake neural siso",
+    "IAE": 0.03463843999643412,
+    "ISE": 0.0003040358240853105,
+    "ITAE": 0.23550363105380678,
+    "IAE_event": 0.027179804982349395,
+    "comparability": "common new protocol"
+  },
+  {
+    "case": "recycle_minus50",
+    "method": "lstm_ukf physical mimo",
+    "IAE": 0.009215033352259552,
+    "ISE": 4.225555610054061e-05,
+    "ITAE": 0.018985187970153885,
+    "IAE_event": 0.0018270479170318023,
+    "comparability": "common new protocol; MIMO adds actuator/objective"
+  }
+]

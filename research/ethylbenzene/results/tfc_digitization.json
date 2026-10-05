@@ -1,0 +1,207 @@
+[
+  {
+    "case": "startup",
+    "color": "black",
+    "axis": {
+      "page": 53,
+      "index": 1,
+      "x0": 216,
+      "x1": 1503,
+      "y0": 416,
+      "y1": 17,
+      "tmax": 5.0,
+      "ymax": 0.8,
+      "legend": [
+        1312,
+        107,
+        1556,
+        266
+      ],
+      "series": {
+        "black": [
+          0,
+          0,
+          0
+        ]
+      },
+      "grid_rows": [
+        17,
+        117,
+        216,
+        316,
+        416
+      ],
+      "grid_cols": [
+        216,
+        344,
+        474,
+        602,
+        730,
+        859,
+        988,
+        1117,
+        1246,
+        1375,
+        1503
+      ]
+    },
+    "png_sha256": "891c6401afce3db5180b009fcf5cc077f95f33a8cc8ce8d225f742e30ebc73d3",
+    "detected_columns": 1034,
+    "retained_grid_points": 425,
+    "grid_points": 501,
+    "nominal_vertical_uncertainty": 0.0040100250626566416,
+    "meaning": "palette trace, with original color and legend preserved; not a raw simulation time series"
+  },
+  {
+    "case": "benzene_50",
+    "color": "gray",
+    "axis": {
+      "page": 55,
+      "index": 1,
+      "x0": 199,
+      "x1": 1386,
+      "y0": 443,
+      "y1": 60,
+      "tmax": 10.0,
+      "ymax": 0.4,
+      "legend": [
+        1054,
+        278,
+        1438,
+        423
+      ],
+      "series": {
+        "gray": [
+          128,
+          128,
+          128
+        ],
+        "olive": [
+          96,
+          96,
+          64
+        ]
+      }
+    },
+    "png_sha256": "fe56c3c6c236a32dd8e90034918f5ca2233b3c4995d80d3023942675fb222255",
+    "detected_columns": 637,
+    "retained_grid_points": 429,
+    "grid_points": 501,
+    "nominal_vertical_uncertainty": 0.0020887728459530026,
+    "meaning": "palette trace, with original color and legend preserved; not a raw simulation time series"
+  },
+  {
+    "case": "benzene_50",
+    "color": "olive",
+    "axis": {
+      "page": 55,
+      "index": 1,
+      "x0": 199,
+      "x1": 1386,
+      "y0": 443,
+      "y1": 60,
+      "tmax": 10.0,
+      "ymax": 0.4,
+      "legend": [
+        1054,
+        278,
+        1438,
+        423
+      ],
+      "series": {
+        "gray": [
+          128,
+          128,
+          128
+        ],
+        "olive": [
+          96,
+          96,
+          64
+        ]
+      }
+    },
+    "png_sha256": "fe56c3c6c236a32dd8e90034918f5ca2233b3c4995d80d3023942675fb222255",
+    "detected_columns": 578,
+    "retained_grid_points": 469,
+    "grid_points": 501,
+    "nominal_vertical_uncertainty": 0.0020887728459530026,
+    "meaning": "palette trace, with original color and legend preserved; not a raw simulation time series"
+  },
+  {
+    "case": "recycle_minus50",
+    "color": "gray",
+    "axis": {
+      "page": 56,
+      "index": 0,
+      "x0": 132,
+      "x1": 1319,
+      "y0": 453,
+      "y1": 56,
+      "tmax": 10.0,
+      "ymax": 0.35,
+      "legend": [
+        941,
+        73,
+        1315,
+        210
+      ],
+      "series": {
+        "gray": [
+          128,
+          128,
+          128
+        ],
+        "olive": [
+          96,
+          96,
+          64
+        ]
+      }
+    },
+    "png_sha256": "d987eca547c4f953dd56cfdf11cbfd56c64b7cb6ac0d9b504f505b7d64dc5676",
+    "detected_columns": 463,
+    "retained_grid_points": 334,
+    "grid_points": 501,
+    "nominal_vertical_uncertainty": 0.0017632241813602015,
+    "meaning": "palette trace, with original color and legend preserved; not a raw simulation time series"
+  },
+  {
+    "case": "recycle_minus50",
+    "color": "olive",
+    "axis": {
+      "page": 56,
+      "index": 0,
+      "x0": 132,
+      "x1": 1319,
+      "y0": 453,
+      "y1": 56,
+      "tmax": 10.0,
+      "ymax": 0.35,
+      "legend": [
+        941,
+        73,
+        1315,
+        210
+      ],
+      "series": {
+        "gray": [
+          128,
+          128,
+          128
+        ],
+        "olive": [
+          96,
+          96,
+          64
+        ]
+      }
+    },
+    "png_sha256": "d987eca547c4f953dd56cfdf11cbfd56c64b7cb6ac0d9b504f505b7d64dc5676",
+    "detected_columns": 450,
+    "retained_grid_points": 309,
+    "grid_points": 501,
+    "nominal_vertical_uncertainty": 0.0017632241813602015,
+    "meaning": "palette trace, with original color and legend preserved; not a raw simulation time series"
+  }
+]

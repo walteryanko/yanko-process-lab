@@ -1,0 +1,74 @@
+{
+  "source": "TFC_WALTER_FINAL_imprimir.pdf, pp. 52,54,57; visual transcription checked",
+  "equilibrium": {
+    "luyben": [
+      0.0039,
+      0.6568,
+      0.2891,
+      0.0501
+    ],
+    "aspen": [
+      0.0039,
+      0.6572,
+      0.2888,
+      0.05
+    ],
+    "matlab": [
+      0.0051,
+      0.6607,
+      0.2811,
+      0.0531
+    ],
+    "fke": [
+      0.005,
+      0.6631,
+      0.2795,
+      0.0523
+    ]
+  },
+  "estimator": {
+    "MAE": 1.626e-05,
+    "RMSE": 0.000514,
+    "table": "4.2",
+    "window": "not explicitly specified; adjacent Figure 4.5 spans 0-5 h",
+    "noise_covariance": "not recovered"
+  },
+  "control": {
+    "benzene_50": {
+      "closed": {
+        "IAE": 0.1476,
+        "ITAE": 0.3368,
+        "ISE": 0.0102
+      },
+      "open": {
+        "IAE": 0.0906,
+        "ITAE": 0.5625,
+        "ISE": 0.0016
+      }
+    },
+    "recycle_minus50": {
+      "closed": {
+        "IAE": 0.1467,
+        "ITAE": 0.3291,
+        "ISE": 0.0102
+      },
+      "open": {
+        "IAE": 0.3678,
+        "ITAE": 2.123,
+        "ISE": 0.0267
+      }
+    }
+  },
+  "conditions": {
+    "duration_h": 10.0,
+    "step_h": 5.0,
+    "initial_condition": "historical startup shown in figures; full state vector not specified",
+    "PI_recipe": "relay, Kc=Kcu/2.2; Ti=Tu/1.2; numeric Kcu/Tu not given",
+    "temperature_limit": "not stated"
+  },
+  "inconsistencies": [
+    "Table 4.3 closed-loop IAE and ISE exceed open-loop values, although discussion states improvement.",
+    "Figure 4.8 legend identifies olive as open loop and gray as real process; their responses differ from that labeling expected from Figure 4.7. Colors/labels are preserved, not silently swapped."
+  ],
+  "comparability": "Published values are contextual historical evidence. Percent improvement is calculated only against the reconstructed PI/EKF under the common new protocol."
+}

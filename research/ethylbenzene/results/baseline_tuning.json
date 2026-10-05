@@ -1,0 +1,75 @@
+{
+  "status": "reconstructed, not recovered historical gains",
+  "validation_seed": 4601,
+  "validation_trajectories": 16,
+  "EKF_Q_factor": 64.0,
+  "constant_Q": [
+    6.4e-06,
+    0.000128,
+    0.000128,
+    6.4e-06,
+    0.2304
+  ],
+  "candidates": [
+    {
+      "factor": 0.25,
+      "xEB_RMSE": 0.005445515983754081,
+      "T_RMSE_C": 3.650638787348673,
+      "score": 35.57682813185211
+    },
+    {
+      "factor": 1.0,
+      "xEB_RMSE": 0.0052456826682060155,
+      "T_RMSE_C": 2.7870124685758095,
+      "score": 30.96938154440455
+    },
+    {
+      "factor": 4.0,
+      "xEB_RMSE": 0.005097095200266299,
+      "T_RMSE_C": 1.748951626288183,
+      "score": 27.33986027662044
+    },
+    {
+      "factor": 16.0,
+      "xEB_RMSE": 0.005054051274133379,
+      "T_RMSE_C": 0.9996605050110637,
+      "score": 25.987577003915437
+    },
+    {
+      "factor": 64.0,
+      "xEB_RMSE": 0.005054275339402981,
+      "T_RMSE_C": 0.7273964263651002,
+      "score": 25.780857233647662
+    },
+    {
+      "factor": 100.0,
+      "xEB_RMSE": 0.005056402924876583,
+      "T_RMSE_C": 0.7372473830891761,
+      "score": 25.808781073754613
+    }
+  ],
+  "relay": {
+    "duration_h": 15.0,
+    "measurement_noise": false,
+    "nominal_only": true,
+    "signal_amplitude": 0.02,
+    "hysteresis_xEB": 0.00015,
+    "switches": 223,
+    "period_h": 0.14999999999999947,
+    "xEB_amplitude": 0.0005550516426882923,
+    "Kcu": 45.87823715171645,
+    "Kp": 20.853744159871113,
+    "Ti_h": 0.12499999999999956,
+    "recipe": "TFC Table 3.5: Kc=Kcu/2.2; Ti=Tu/1.2"
+  },
+  "common_bounds": {
+    "fE_factor": [
+      0.04,
+      2.0
+    ],
+    "maximum_move": 0.12,
+    "Q_fixed": 1.0
+  },
+  "caveat": "Same new plant/noise/initial conditions; original unknown Q/P/R/dt/PI gains and startup not reproduced. New antiwindup/slew limits declared.",
+  "no_test_tuning": true
+}

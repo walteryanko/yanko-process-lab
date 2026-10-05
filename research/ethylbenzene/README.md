@@ -112,6 +112,53 @@ The open-loop observer benchmark uses common truth trajectories to separate
 estimation performance from controller-induced trajectory changes. Three
 seeds support a preliminary comparison, not an experimental plant claim.
 
+## Comparison with the original TFC control
+
+The original Tables 4.1–4.4 are transcribed in `results/tfc_published.json`;
+the original FKE equilibrium and published observer MAE/RMSE are included.
+Figures 4.4, 4.7 and 4.8 are approximately digitized with recorded masks,
+axis calibration, pixel uncertainty and embedded-image hashes. Occluded
+segments remain missing. These are contextual historical results, not
+recovered raw time series. The supplied sensitivity spreadsheets are
+static parameter sweeps, not dynamic PI/EKF recordings.
+
+The original Table 4.3 gives **larger closed-loop IAE and ISE** for the
+benzene step, although its discussion claims improvement. These values
+are preserved. Figure 4.8 has an ambiguous loop legend; colors and source
+labels are preserved instead of silently swapping traces.
+
+`baseline.py` adds a reconstructed PI + EKF architecture to the **identical
+new plant, initial bias, measurement noise, seeds, sampling and actuator
+bounds**: 18 closed-loop and 15 paired observer runs, all complete. EKF Q
+is selected using the independent validation protocol (factor 64). PI
+gains follow the TFC relay/Ziegler–Nichols recipe on a separate nominal
+noise-free run: Kcu=45.878237, Tu=0.15 h, Kc=20.853744 and Ti=0.125 h.
+The equal-percentage valve, new slew limit and anti-windup are explicit.
+The chosen valve bounds imply nominal signal 82.28%, rather than the
+78.5175% printed in the TFC; its inconsistent flow/signal specifications
+are not claimed exactly reproduced.
+
+Improvement is scored only against this reconstructed PI/EKF reference.
+Physical SISO NMPC with validation-tuned UKF reduces paired post-event IAE
+by 16.4% (benzene) and 97.9% (recycle), but increases servo error by 7–11%.
+The large recycle gain includes oscillation of the reconstructed PI and
+depends on its new tuning. Neural prediction and neural estimation are
+not uniformly better. MIMO introduces a second actuator/objective; the
+165 C restriction is absent from the original PI. These design changes
+are flagged in every comparison. Temperature is reported separately.
+
+Historical startup, numerical PI gains, initial covariance, Q/R and
+sampling were not recovered, so **no causal percentage improvement over
+the native TFC execution is claimed**. Descriptive full-window IAE/ISE/ITAE
+and observer errors are retained side by side. All 7,200 PI samples were
+reintegrated; state/metric errors and paired observer-truth error were zero.
+See [the Portuguese comparison](results/COMPARACAO_TFC.md),
+`improvement_vs_pi.csv/json` and `historical_audit.json`.
+
+Recorded `q` and `cov_diagonal` arrays have physical state units squared
+(concentration squared for the first four states, temperature squared
+for the fifth). Normalization by XS is internal to covariance propagation.
+
 ## Reproduction
 
 Requires Python 3.11+ and a C compiler such as `cc`.
@@ -120,11 +167,13 @@ Requires Python 3.11+ and a C compiler such as `cc`.
 python -m pip install -r research/ethylbenzene/requirements.txt
 cd research/ethylbenzene
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python train.py
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -m unittest -v test_study
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -m unittest discover -p 'test_*.py' -v
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python experiment.py --workers 6
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python experiment.py --openloop --workers 6
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python tuning.py --workers 6
 python audit.py
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python baseline.py --workers 3
+python historical.py --output /absolute/path/for/reports
 python report.py --output /absolute/path/for/reports
 ```
 
@@ -133,6 +182,10 @@ kernels are cached by model and source signature. Run checkpoints are
 signature-checked before reuse. `experiment.py --smoke` runs all 16 combinations
 on the original benzene test. Full results and weights are versioned; raw
 traces are supplied separately to avoid inflating the Git repository.
+Pass `--source-pdf /path/to/TFC_WALTER_FINAL_imprimir.pdf` to `historical.py`
+to redo digitization; otherwise it uses the versioned digitized CSV.
+Historical source PDFs remain private. Nine numerical tests cover this
+module, including EKF derivative/prediction and PI anti-windup reversal.
 
 ## References
 

@@ -1,0 +1,12 @@
+{
+  "control_runs": 18,
+  "observer_runs": 15,
+  "reintegrated_samples": 7200,
+  "state_max_abs_error": 0.0,
+  "metric_max_abs_error": 0.0,
+  "paired_truth_max_abs_error": 0.0,
+  "published_benzene_IAE_increase_pct": 62.91390728476822,
+  "published_benzene_ISE_increase_pct": 537.5,
+  "no_original_raw_time_series": true,
+  "original_parameter_recovery": false
+}
