@@ -1,0 +1,264 @@
+{
+  "expected_runs": 720,
+  "unique_runs": 720,
+  "samples": 288000,
+  "statuses": {
+    "complete": 720
+  },
+  "native_gradient_tests": "7 test_study tests passed separately; C chain rule checked against independent CasADi and NumPy rollout",
+  "maximum_trace_Tmax_difference": 0.0,
+  "minimum_true_concentration": 0.0009942316700400616,
+  "observer_runs": 75,
+  "maximum_paired_observer_truth_difference": 0.0,
+  "maximum_accepted_predicted_temperature_excess_C": 4.9286048124486115e-05,
+  "normal_move_rate_overrides": 546,
+  "reintegration_count": 40,
+  "reintegration": [
+    {
+      "name": "servo_up__lstm_nake__neural__mimo__0__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "servo_down__lstm_nake__neural__mimo__1__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "benzene_50__lstm_nake__neural__siso__0__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "recycle_minus50__lstm_nake__neural__siso__1__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "thermal_loss__lstm_nake__physical__mimo__0__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "kinetics_noise__lstm_nake__physical__mimo__1__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "servo_up__lstm_nake__physical__siso__0__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "servo_down__lstm_nake__physical__siso__1__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "benzene_50__lstm_ukf__neural__mimo__0__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "recycle_minus50__lstm_ukf__neural__mimo__1__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "thermal_loss__lstm_ukf__neural__siso__0__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "kinetics_noise__lstm_ukf__neural__siso__1__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "servo_up__lstm_ukf__physical__mimo__0__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "servo_down__lstm_ukf__physical__mimo__1__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "benzene_50__lstm_ukf__physical__siso__0__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "recycle_minus50__lstm_ukf__physical__siso__1__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "thermal_loss__nake__neural__mimo__0__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "kinetics_noise__nake__neural__mimo__1__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "servo_up__nake__neural__siso__0__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "servo_down__nake__neural__siso__1__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "benzene_50__nake__physical__mimo__0__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "recycle_minus50__nake__physical__mimo__1__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "thermal_loss__nake__physical__siso__0__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "kinetics_noise__nake__physical__siso__1__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "servo_up__ukf__neural__mimo__0__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "servo_down__ukf__neural__mimo__1__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "benzene_50__ukf__neural__siso__0__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "recycle_minus50__ukf__neural__siso__1__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "thermal_loss__ukf__physical__mimo__0__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "kinetics_noise__ukf__physical__mimo__1__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "servo_up__ukf__physical__siso__0__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "servo_down__ukf__physical__siso__1__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "benzene_50__ukf_tuned__neural__mimo__0__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "recycle_minus50__ukf_tuned__neural__mimo__1__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "thermal_loss__ukf_tuned__neural__siso__0__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "kinetics_noise__ukf_tuned__neural__siso__1__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "servo_up__ukf_tuned__physical__mimo__0__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "servo_down__ukf_tuned__physical__mimo__1__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "benzene_50__ukf_tuned__physical__siso__0__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    },
+    {
+      "name": "recycle_minus50__ukf_tuned__physical__siso__1__9002",
+      "metric_max_abs_error": 0.0,
+      "state_max_abs_error": 0.0,
+      "Tmax_max_abs_error": 0.0
+    }
+  ],
+  "complete_runs_with_actual_limit_violation": 128,
+  "covariance_repairs": 0,
+  "positivity_projections": 6,
+  "solver_failed_statuses": 651,
+  "fallbacks": 554,
+  "duration_s": 54.729560353000124
+}

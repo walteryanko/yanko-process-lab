@@ -1,0 +1,65 @@
+{
+  "validation_seed": 4601,
+  "validation_trajectories": 16,
+  "steps": 160,
+  "scored_after_step": 40,
+  "objective": "(xEB_RMSE/0.001)^2 + (T_RMSE/1.5 K)^2; independent validation only",
+  "candidate_factors": [
+    0.25,
+    1.0,
+    4.0,
+    16.0,
+    64.0,
+    100.0
+  ],
+  "scores": [
+    {
+      "factor": 0.25,
+      "score": 35.56116306453037,
+      "xEB_RMSE": 0.005444037296471321,
+      "T_RMSE_C": 3.6507735075061967
+    },
+    {
+      "factor": 1.0,
+      "score": 30.957867256116536,
+      "xEB_RMSE": 0.005244570121901137,
+      "T_RMSE_C": 2.787075682198364
+    },
+    {
+      "factor": 4.0,
+      "score": 27.334184927262193,
+      "xEB_RMSE": 0.005096538964513517,
+      "T_RMSE_C": 1.7489482263720055
+    },
+    {
+      "factor": 16.0,
+      "score": 25.98587104066644,
+      "xEB_RMSE": 0.005053884945957529,
+      "T_RMSE_C": 0.9996326754379242
+    },
+    {
+      "factor": 64.0,
+      "score": 25.781509083343444,
+      "xEB_RMSE": 0.005054340611226368,
+      "T_RMSE_C": 0.7273841181696535
+    },
+    {
+      "factor": 100.0,
+      "score": 25.810337198292878,
+      "xEB_RMSE": 0.005056557195289355,
+      "T_RMSE_C": 0.7372412701319416
+    }
+  ],
+  "chosen_factor": 64.0,
+  "constant_Q": [
+    6.4e-06,
+    0.000128,
+    0.000128,
+    6.4e-06,
+    0.2304
+  ],
+  "extra_configs": 4,
+  "extra_control_runs": 144,
+  "extra_observer_runs": 15,
+  "note": "selected Q is identical in every control/test regime; control results never select it"
+}

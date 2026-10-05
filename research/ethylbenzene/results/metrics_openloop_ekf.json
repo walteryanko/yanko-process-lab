@@ -1,0 +1,302 @@
+[
+  {
+    "case": "servo_up",
+    "seed": 9001,
+    "estimator": "ekf_reconstructed",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0009508780964902324,
+      0.039372709997805885,
+      0.016480896284591692,
+      0.004838390516498419,
+      0.5796917497691961
+    ],
+    "xEB_RMSE": 0.0033207739187000487,
+    "xEB_RMSE_after5": 0.00026682098713663927,
+    "T_RMSE_after5": 0.5345466695422808,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "servo_up",
+    "seed": 9002,
+    "estimator": "ekf_reconstructed",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0010256488237041974,
+      0.03956066777070106,
+      0.015817689840461197,
+      0.005113483915631963,
+      0.5724799897209123
+    ],
+    "xEB_RMSE": 0.0032349020314464162,
+    "xEB_RMSE_after5": 0.00037427097461504834,
+    "T_RMSE_after5": 0.6045482394916443,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "servo_up",
+    "seed": 9003,
+    "estimator": "ekf_reconstructed",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0009747252947292498,
+      0.037939956246023435,
+      0.0165814388117079,
+      0.004858942376413748,
+      0.5972402979088235
+    ],
+    "xEB_RMSE": 0.0033116278199370637,
+    "xEB_RMSE_after5": 0.0004207068551564444,
+    "T_RMSE_after5": 0.578475384567816,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "benzene_50",
+    "seed": 9001,
+    "estimator": "ekf_reconstructed",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.000799876542651132,
+      0.03937214094772193,
+      0.016211621742580704,
+      0.004882806228462805,
+      0.5871224395462054
+    ],
+    "xEB_RMSE": 0.0032963022983931796,
+    "xEB_RMSE_after5": 0.0004071651376805019,
+    "T_RMSE_after5": 0.6357228688274882,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "benzene_50",
+    "seed": 9002,
+    "estimator": "ekf_reconstructed",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0008464165724484932,
+      0.04048667677634579,
+      0.01578622779298383,
+      0.004977869568132925,
+      0.5785217858950937
+    ],
+    "xEB_RMSE": 0.0032751370634348533,
+    "xEB_RMSE_after5": 0.0002659387304477156,
+    "T_RMSE_after5": 0.5902938901070832,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "benzene_50",
+    "seed": 9003,
+    "estimator": "ekf_reconstructed",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.000710758041249293,
+      0.03804977159265073,
+      0.016654185416778725,
+      0.004794040201495856,
+      0.5180463699262109
+    ],
+    "xEB_RMSE": 0.003314321949144081,
+    "xEB_RMSE_after5": 0.00031592670608405327,
+    "T_RMSE_after5": 0.5010209843365034,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "recycle_minus50",
+    "seed": 9001,
+    "estimator": "ekf_reconstructed",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0017595748015441924,
+      0.03884375678725252,
+      0.016264608212767963,
+      0.004793772902262562,
+      0.5949519423129906
+    ],
+    "xEB_RMSE": 0.00330546928749788,
+    "xEB_RMSE_after5": 0.00040578705749123867,
+    "T_RMSE_after5": 0.583328529371031,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "recycle_minus50",
+    "seed": 9002,
+    "estimator": "ekf_reconstructed",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0018952139249966994,
+      0.03936630913944302,
+      0.015392807128323825,
+      0.004899497515064828,
+      0.6408940777925365
+    ],
+    "xEB_RMSE": 0.00320220990964551,
+    "xEB_RMSE_after5": 0.0003657532855211177,
+    "T_RMSE_after5": 0.5970346153649955,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "recycle_minus50",
+    "seed": 9003,
+    "estimator": "ekf_reconstructed",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.001688261355882553,
+      0.03770717897375926,
+      0.016355544425110856,
+      0.004825397406974966,
+      0.5682202204916261
+    ],
+    "xEB_RMSE": 0.0032718381300295544,
+    "xEB_RMSE_after5": 0.0003975613100061739,
+    "T_RMSE_after5": 0.5823693799753453,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "thermal_loss",
+    "seed": 9001,
+    "estimator": "ekf_reconstructed",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0011630929795739032,
+      0.04159119211559725,
+      0.01849669671580772,
+      0.008293923313013003,
+      1.669445638749569
+    ],
+    "xEB_RMSE": 0.00352461642880756,
+    "xEB_RMSE_after5": 0.0014533736649271257,
+    "T_RMSE_after5": 2.29631294102218,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "thermal_loss",
+    "seed": 9002,
+    "estimator": "ekf_reconstructed",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0010991539921222644,
+      0.03870059090458323,
+      0.017581098797067245,
+      0.00794315699277739,
+      1.637201272748165
+    ],
+    "xEB_RMSE": 0.0033415095331520805,
+    "xEB_RMSE_after5": 0.001200128598566464,
+    "T_RMSE_after5": 2.2458713281656624,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "thermal_loss",
+    "seed": 9003,
+    "estimator": "ekf_reconstructed",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0011460205671633191,
+      0.03832931272951601,
+      0.017580229993546748,
+      0.008302639139291627,
+      1.7416767620269746
+    ],
+    "xEB_RMSE": 0.0033321180982344902,
+    "xEB_RMSE_after5": 0.0012817958683647409,
+    "T_RMSE_after5": 2.385731583845997,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "kinetics_noise",
+    "seed": 9001,
+    "estimator": "ekf_reconstructed",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.0038420703022258237,
+      0.06294149698621788,
+      0.09949606878373697,
+      0.04805773011998706,
+      0.5987069755698673
+    ],
+    "xEB_RMSE": 0.014518004457627492,
+    "xEB_RMSE_after5": 0.02006501623748576,
+    "T_RMSE_after5": 0.5851073836984174,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "kinetics_noise",
+    "seed": 9002,
+    "estimator": "ekf_reconstructed",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.004105853321815778,
+      0.06604257765750211,
+      0.10081874099300896,
+      0.047946134344786014,
+      0.6436346842367228
+    ],
+    "xEB_RMSE": 0.014776166154030681,
+    "xEB_RMSE_after5": 0.020374029370325532,
+    "T_RMSE_after5": 0.7466757263068156,
+    "repairs": 0,
+    "projections": 0
+  },
+  {
+    "case": "kinetics_noise",
+    "seed": 9003,
+    "estimator": "ekf_reconstructed",
+    "status": "complete",
+    "error": null,
+    "samples": 400,
+    "state_RMSE": [
+      0.00387719088493742,
+      0.07289917895599743,
+      0.10166553351823243,
+      0.046534920473591125,
+      0.6350770138898882
+    ],
+    "xEB_RMSE": 0.015134754082153803,
+    "xEB_RMSE_after5": 0.02091703255353491,
+    "T_RMSE_after5": 0.6266808046888733,
+    "repairs": 0,
+    "projections": 0
+  }
+]

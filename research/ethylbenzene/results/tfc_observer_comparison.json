@@ -1,0 +1,78 @@
+{
+  "published": {
+    "MAE": 1.626e-05,
+    "RMSE": 0.000514,
+    "table": "4.2",
+    "window": "not explicitly specified; adjacent Figure 4.5 spans 0-5 h",
+    "noise_covariance": "not recovered"
+  },
+  "new": [
+    {
+      "estimator": "ukf",
+      "runs": 3,
+      "source": "common new nominal open-loop plant, noise and biased estimate",
+      "MAE_full": 0.0012798658548717082,
+      "RMSE_full": 0.003305978288473273,
+      "MAE_first5": 0.0022358899706942863,
+      "RMSE_first5": 0.004660082192752051,
+      "MAE_after5": 0.00032384173904912984,
+      "RMSE_after5": 0.00037256736417934036
+    },
+    {
+      "estimator": "ukf_tuned",
+      "runs": 3,
+      "source": "common new nominal open-loop plant, noise and biased estimate",
+      "MAE_full": 0.001268971309994413,
+      "RMSE_full": 0.003303553056728832,
+      "MAE_first5": 0.002243382424248671,
+      "RMSE_first5": 0.004658023486066765,
+      "MAE_after5": 0.0002945601957401552,
+      "RMSE_after5": 0.0003539440290129788
+    },
+    {
+      "estimator": "lstm_ukf",
+      "runs": 3,
+      "source": "common new nominal open-loop plant, noise and biased estimate",
+      "MAE_full": 0.001259013292964319,
+      "RMSE_full": 0.003303203746689454,
+      "MAE_first5": 0.002243281575896625,
+      "RMSE_first5": 0.0046594776293366275,
+      "MAE_after5": 0.0002747450100320135,
+      "RMSE_after5": 0.0003284399680090623
+    },
+    {
+      "estimator": "nake",
+      "runs": 3,
+      "source": "common new nominal open-loop plant, noise and biased estimate",
+      "MAE_full": 0.001274129384374992,
+      "RMSE_full": 0.0033002540830758807,
+      "MAE_first5": 0.002228338227069759,
+      "RMSE_first5": 0.004652307989654029,
+      "MAE_after5": 0.0003199205416802249,
+      "RMSE_after5": 0.0003680937304203567
+    },
+    {
+      "estimator": "lstm_nake",
+      "runs": 3,
+      "source": "common new nominal open-loop plant, noise and biased estimate",
+      "MAE_full": 0.0012551375046343431,
+      "RMSE_full": 0.003295718391090802,
+      "MAE_first5": 0.0022306190455307824,
+      "RMSE_first5": 0.004648554129639191,
+      "MAE_after5": 0.0002796559637379042,
+      "RMSE_after5": 0.0003324132382856577
+    },
+    {
+      "estimator": "ekf_reconstructed",
+      "runs": 3,
+      "source": "common new nominal open-loop plant, noise and biased estimate",
+      "MAE_full": 0.0012619254682413416,
+      "RMSE_full": 0.00328910125669451,
+      "MAE_first5": 0.0022293777069135948,
+      "RMSE_first5": 0.004637539714710391,
+      "MAE_after5": 0.00029447322956908847,
+      "RMSE_after5": 0.0003539329389693773
+    }
+  ],
+  "comparison": "Different startup/noise/window; side-by-side descriptive values, no superiority claim against Table 4.2"
+}

@@ -1,0 +1,15 @@
+case,method,IAE,ISE,ITAE,IAE_event,comparability
+benzene_50,TFC published closed,0.1476,0.0102,0.3368,,historical startup/noise/tuning differ; no causal gain computed
+benzene_50,TFC published open,0.0906,0.0016,0.5625,,historical startup/noise/tuning differ; no causal gain computed
+benzene_50,PI + EKF reconstructed,0.009956266021163639,4.497770040490026e-05,0.02120839793070207,0.0018015854100416288,common new protocol
+benzene_50,ukf_tuned physical siso,0.009566393243181438,4.3060386865586974e-05,0.019377039776021007,0.0015189534388094764,common new protocol
+benzene_50,lstm_ukf physical siso,0.009541142916250371,4.3132124383557876e-05,0.01896777495630013,0.0014599340774297386,common new protocol
+benzene_50,lstm_nake neural siso,0.011813120922853679,4.6795454409780774e-05,0.037714941266225425,0.0035857843470469435,common new protocol
+benzene_50,lstm_ukf physical mimo,0.009527052810405279,4.317482269979657e-05,0.01867396539351734,0.0014336430011200503,common new protocol; MIMO adds actuator/objective
+recycle_minus50,TFC published closed,0.1467,0.0102,0.3291,,historical startup/noise/tuning differ; no causal gain computed
+recycle_minus50,TFC published open,0.3678,0.0267,2.123,,historical startup/noise/tuning differ; no causal gain computed
+recycle_minus50,PI + EKF reconstructed,0.2439544690771762,0.020908486304159618,1.9800506150820532,0.23634939284314674,common new protocol
+recycle_minus50,ukf_tuned physical siso,0.012312897940344755,4.885848820162619e-05,0.044713954202700766,0.004921105911968604,common new protocol
+recycle_minus50,lstm_ukf physical siso,0.012099701430097011,4.7846980587573985e-05,0.04319507947411416,0.004723511187190114,common new protocol
+recycle_minus50,lstm_nake neural siso,0.03463843999643412,0.0003040358240853105,0.23550363105380678,0.027179804982349395,common new protocol
+recycle_minus50,lstm_ukf physical mimo,0.009215033352259552,4.225555610054061e-05,0.018985187970153885,0.0018270479170318023,common new protocol; MIMO adds actuator/objective

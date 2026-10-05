@@ -1,0 +1,1098 @@
+{
+  "archive": "TFC.zip",
+  "archive_sha256": "56b46894db48c34a684c67de6b0441fd1e4428a9cdb3fa612ed044a827e3bf1c",
+  "files": [
+    {
+      "path": "MESTRADO.pdf",
+      "bytes": 1763882,
+      "sha256": "cf3e06a982259de0af268775c00d600910f819917e067036284513d05b34422f"
+    },
+    {
+      "path": "ASPEN/fort.34",
+      "bytes": 41246,
+      "sha256": "b2b85ede6693730b86ce279f41ed883d5151db9ae493f8c60d8cb5d0869032ad"
+    },
+    {
+      "path": "Alquilacao.pdf",
+      "bytes": 697515,
+      "sha256": "4a31518bbf525153d707906db8b7dfd59d7086921cc269b88e148c286a62036d"
+    },
+    {
+      "path": "ASPEN/aspeneb.ads",
+      "bytes": 32144,
+      "sha256": "af1c5c477df53dec734025f53696f5ec09d33b11ce768c404566269cb210220c"
+    },
+    {
+      "path": "ASPEN/aspeneb.apw",
+      "bytes": 1263616,
+      "sha256": "7ac70555b601a38ad0b7e526bbdf1ac9a456f59f41c78f2b4dac8c8b5ee9d16a"
+    },
+    {
+      "path": "ASPEN/aspeneb.bkp",
+      "bytes": 270860,
+      "sha256": "65a111848caf67ce510de9f4983900af16a344683014bcc1955c60fddf1707a4"
+    },
+    {
+      "path": "ASPEN/aspeneb.def",
+      "bytes": 231,
+      "sha256": "6bc5027fb6d80481c05f563d4e17b6d6368f6f4dba7e551f57af6d5a7a2d45b6"
+    },
+    {
+      "path": "ASPEN/aspeneb.for",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "ASPEN/aspeneb.his",
+      "bytes": 92382,
+      "sha256": "be2cc1e9ec27244571323670f7bc357896f99fe7f48f5d13a7f1770140881ef8"
+    },
+    {
+      "path": "ASPEN/lsprst7.dll",
+      "bytes": 205,
+      "sha256": "356e472fdd6a671290b600002e46d8d10594d9e2690100317079a3613c3b8911"
+    },
+    {
+      "path": "ASPEN/lsprst7.tgz",
+      "bytes": 219,
+      "sha256": "f3f0c24e3e63be85da8750b907836e968ac2b58a0dd17c5fc1a1292018b73faf"
+    },
+    {
+      "path": "ASPEN/servdat.slm",
+      "bytes": 16,
+      "sha256": "4397184bfae18d1080459e715e669d1cc965ac2767cf12e76d5538dd237a1148"
+    },
+    {
+      "path": "ASPEN/sysprs7.dll",
+      "bytes": 1025,
+      "sha256": "06e4ee3787aac01830e06a5f452c311217d23a22b2162cc49c56f5720fc5303e"
+    },
+    {
+      "path": "ASPEN/sysprs7.tgz",
+      "bytes": 1025,
+      "sha256": "06e4ee3787aac01830e06a5f452c311217d23a22b2162cc49c56f5720fc5303e"
+    },
+    {
+      "path": "ASPEN/aspeneb.dynf",
+      "bytes": 390986,
+      "sha256": "583a2982ed82974996ada6fe03304d36e88fea19fcdc06874badc5f1d8860a10"
+    },
+    {
+      "path": "10.1.1.677.4275.pdf",
+      "bytes": 937040,
+      "sha256": "94fe8551ee4de8f9f6c861aadb538a7cad22c687a8821a7aaf4a851816264844"
+    },
+    {
+      "path": "ASPEN/aspeneb.appdf",
+      "bytes": 286773,
+      "sha256": "7203f0fe2b8319bf09b46b38d733997435ae0dfc5786f22534bbd775076fd56c"
+    },
+    {
+      "path": "Release Planta EB.pdf",
+      "bytes": 15186,
+      "sha256": "de35ac52c741b4688963b27cf82f2b7a3f34acef74703706b849c38d8f3b9db8"
+    },
+    {
+      "path": "ASPEN/aspenebdyn.appdf",
+      "bytes": 287436,
+      "sha256": "ab81bf32cb6a0f93622e4c2c19cc7f50f0a1458398b742972acddaf5955843b5"
+    },
+    {
+      "path": "TFC_WALTER_arioston.docx",
+      "bytes": 2256450,
+      "sha256": "be6c46f26655792f5333a2f4d6c0ea3bf7165808f0bd1acc2c99a5ea62630101"
+    },
+    {
+      "path": "Matlab/FK_temp_exemplo.m",
+      "bytes": 927,
+      "sha256": "085a8175d72721835749094360793b77923a48d018b935436a9db126e0699f50"
+    },
+    {
+      "path": "Modelagem e equações.docx",
+      "bytes": 27063,
+      "sha256": "b6badf3f4857c57d509259b45d0f502c7057b1301e6b38a62a8eb5850323bf11"
+    },
+    {
+      "path": "AspenSimFiles/servdat.slm",
+      "bytes": 16,
+      "sha256": "1f1dea9e60b0aa989e51f2baaa87a0dfab6d4171b8ce2ed4c42701f9cf7ce40a"
+    },
+    {
+      "path": "Simulink/FiltroKalman.slx",
+      "bytes": 15262,
+      "sha256": "e60f3ae09e399705b461d428871dcc7b79d90e150dd5e8d315a1ca1bf263a0ea"
+    },
+    {
+      "path": "FK/Prof_CHSANTOS/AULA09.pdf",
+      "bytes": 4530097,
+      "sha256": "d0cebccdfd9fed7149565d73da3e92b64bf128b4c70c7070bd5ed44f06d92639"
+    },
+    {
+      "path": "FK/Prof_CHSANTOS/AULA01.pdf",
+      "bytes": 85858,
+      "sha256": "697a99d60b26e57d769ce84c41bae9d0f13bf57f9142d9be9bd65b4300074712"
+    },
+    {
+      "path": "FK/Prof_CHSANTOS/AULA02.pdf",
+      "bytes": 4508378,
+      "sha256": "e3630be91ab443033a2ad0e349dff3e49bcb1a8f581ad089dc574166f1521130"
+    },
+    {
+      "path": "FK/Prof_CHSANTOS/Aula04.pdf",
+      "bytes": 3754932,
+      "sha256": "4e10243106599d79e18bac429764ebcf9e2755938c17b026a45e86e6dd5f4ce0"
+    },
+    {
+      "path": "FK/Prof_CHSANTOS/Aula05.pdf",
+      "bytes": 3602541,
+      "sha256": "2d76351394f5f0ae6d0b85fa01e0629da7560f63c44b2439affb2a41a7377b6f"
+    },
+    {
+      "path": "FK/Prof_CHSANTOS/Aula06.pdf",
+      "bytes": 3604459,
+      "sha256": "8ff7043bb72da24b369dfeb9a32a1dc4cb1cb0e65084de92b13c867367ef5fc0"
+    },
+    {
+      "path": "FK/Prof_CHSANTOS/Aula07.pdf",
+      "bytes": 2274302,
+      "sha256": "f8d352db510293a751357b0c57f62ca3ae883cd5f13059b6664f6f54410f62f4"
+    },
+    {
+      "path": "FK/Prof_CHSANTOS/Aula08.pdf",
+      "bytes": 3090684,
+      "sha256": "0dc66044f6efbc0328ceb48950be24a8761dc04743877c11a8ed99e34703fc99"
+    },
+    {
+      "path": "AIChE57p655_EthylBenzene.png",
+      "bytes": 51701,
+      "sha256": "f8ee0e49246386d897fe7fc8b14bbac067278aa6e09818c6193f530cd33bb54f"
+    },
+    {
+      "path": "FK/Prof_CHSANTOS/AULAP01.pdf",
+      "bytes": 2327620,
+      "sha256": "750bb26bfeb3f680dce0d1a619322c58ab6ebee138c9044bc9cd03b553e637b2"
+    },
+    {
+      "path": "FK/final_accepted_version.pdf",
+      "bytes": 847141,
+      "sha256": "2b442623fa497020dc64bb957a416b0b08ac02dbd6408e816bf521841125d105"
+    },
+    {
+      "path": "ASPEN/AM_aspeneb/PlotData.bak",
+      "bytes": 171264,
+      "sha256": "67c38c288edbe3805bfc554e8a012d997984b7012bd312415eeb608779703679"
+    },
+    {
+      "path": "ASPEN/AM_aspeneb/snapshot.bak",
+      "bytes": 2755872,
+      "sha256": "18dc788ab9396a8f14fd7a0843799edd29fcc75ffab56dc19cb8f51efddc5dce"
+    },
+    {
+      "path": "Gráficos/Coluna 2/Coluna2.docx",
+      "bytes": 38732,
+      "sha256": "843da491dee4ca9579bcb5ad763ec9230aa51203113ec8e4235dbc41bf1db493"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene.apwz",
+      "bytes": 776522,
+      "sha256": "ff71d751176acf2742b7e25f7583e4ae745072e4c1e63528c9ed972dcef979d4"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene.dynf",
+      "bytes": 22021,
+      "sha256": "b786ffcdcc29104a54ecfe18796789292ccb08ad3c99f93a5c452b8e3114d5da"
+    },
+    {
+      "path": "AspenSimFiles/TutorialFerm.apwz",
+      "bytes": 431295,
+      "sha256": "504e23813dbe935bec7353be6cd71428d45a1494cf0a80977e0eec4de3d8fe88"
+    },
+    {
+      "path": "ASPEN/AM_aspeneb/aspenebdyn.his",
+      "bytes": 2682,
+      "sha256": "b5eb628e99cf22972c7a4a13ecca7b70e7457e64b1bc41f6e4690468fdb3be64"
+    },
+    {
+      "path": "ASPEN/AM_aspeneb/aspenebdyn.rep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "FK/UnderstandingKalmanFilter.pdf",
+      "bytes": 274077,
+      "sha256": "3d7c277fb750d8626de419092d3d1fcc0730dd625229546cc22f83a8fee46f27"
+    },
+    {
+      "path": "Luyben-2011-AIChE_Journal (1).pdf",
+      "bytes": 7095529,
+      "sha256": "155d57012d453b5d58cbce10941a8619a56c075fb023bbaaa9b8af1d9088b9bf"
+    },
+    {
+      "path": "FK/Prof_CHSANTOS/anexo-AULA02.pdf",
+      "bytes": 468502,
+      "sha256": "4774530911b24e76cfb0962cb7ca18d1c347535b96fb871bc9f6cdf13ded0f3e"
+    },
+    {
+      "path": "Apresentações/i - grafico temp.png",
+      "bytes": 8481,
+      "sha256": "e19ef88c43e0a31fde5fcc6a921db641d2d6da33a07d210b0a953ed2b7118881"
+    },
+    {
+      "path": "Apresentações/i - grafico temp2.png",
+      "bytes": 8702,
+      "sha256": "03ebd7babc371ab0b25d7cbdf06da8ff0a58780c0ba98b31d1e1bb697012682b"
+    },
+    {
+      "path": "Apresentações/i - grafico temp3.png",
+      "bytes": 8439,
+      "sha256": "901f03e9c86dfc7ee56f755c96c9d0f35f4cfb0c70eed10196550fdc29468f7f"
+    },
+    {
+      "path": "Apresentações/i - grafico temp4.png",
+      "bytes": 9251,
+      "sha256": "de9cfe4007b141981b46426fc85bd1ad2d0e8870006a6e16136569a3afd557ea"
+    },
+    {
+      "path": "Apresentações/i - grafico temp5.png",
+      "bytes": 9157,
+      "sha256": "dd55b6217e7f4b1e178de3f5745374e00e9a9f693a618f6f692aae8cf2a1d395"
+    },
+    {
+      "path": "Apresentações/i - grafico temp6.png",
+      "bytes": 9212,
+      "sha256": "9a32714467b64f7bf44895d417d651695d4e350f5d6ba37f7aafcbe26032bfd8"
+    },
+    {
+      "path": "Apresentações/i - grafico temp7.png",
+      "bytes": 9741,
+      "sha256": "3e779f01c48f8d10585a31db0a842f30bc72c514efc6eb787e7ca349ad8b71aa"
+    },
+    {
+      "path": "AspenSimFiles/SingleReatorEB/servdat.slm",
+      "bytes": 16,
+      "sha256": "632355291fab2436d7da834c445bad576236bb7a9de9d803aa8f4e0944dcae0a"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/fort.43",
+      "bytes": 3347,
+      "sha256": "ae7ea4ef366fc9c0d0879ae38be9555437e1e36d243ee0330ef1b003b8bf0efc"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/fort.44",
+      "bytes": 3396,
+      "sha256": "d46fc4f319c0afa781b608fb7526480470fe19d894e4b61bc5ddeafab3fa64d8"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/FULL.TFF",
+      "bytes": 3239,
+      "sha256": "95490e79152581f5957f5d6965feb4ccf5c81a00f65d5eac5a5d06e76f395f29"
+    },
+    {
+      "path": "TFC_NATÁLIA_estrutura rev 10_CORREÇÕES.docx",
+      "bytes": 2263177,
+      "sha256": "113aaad016276252801235bb06648917e074b081f519190d23cd05389b351203"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/servdat.slm",
+      "bytes": 16,
+      "sha256": "9d471bb8277f4a76258a9067989c3afeb7940877ffcbf59bf3496ab3aaec2079"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0107pou.ads",
+      "bytes": 20814,
+      "sha256": "91263ee411525042640fd771531efda1105131af657f5af753587940fc73bfa6"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0107pou.adv",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0107pou.bks",
+      "bytes": 2870,
+      "sha256": "d5762be28f463fb66ab2a938555df0fabb43a0701303dbb100361aadc939e8f9"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0107pou.co1",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0107pou.co2",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0107pou.cod",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0107pou.def",
+      "bytes": 331,
+      "sha256": "353cac6f922b700d5439aaf72b2ed11522e08c100d6b7395443d7c27ba7a8bca"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0107pou.dfm",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0107pou.dyl",
+      "bytes": 37,
+      "sha256": "c528e86cc50e47bf06a1571e69a606aa74340b93bb14a2ff0fa85fa6b701f3f2"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0107pou.edf",
+      "bytes": 583,
+      "sha256": "2cb1cd0197212da04b88f1ca50198e7025bebc1889bef61e01565497dbe22390"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0107pou.for",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0107pou.gen",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0107pou.his",
+      "bytes": 3319892,
+      "sha256": "a8977c9c5bb9a45efdb3313556f1825d694178a6d290866a322ee6344c28ba6a"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0107pou.ia2",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0107pou.ikc",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0107pou.inm",
+      "bytes": 848,
+      "sha256": "19cce1f1d1b2bbe232af6451842f7eb91ca6eecb0d0592b3e9b656a632e3207b"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0107pou.itd",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0107pou.jnl",
+      "bytes": 2695,
+      "sha256": "6ab6edfb7d00516e041b87aa4399ebf5ca1df278ae2be4e297af03ddf4ada4e8"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0107pou.nin",
+      "bytes": 3686,
+      "sha256": "2342558bb9b80e857267ecd5e743826aedfde27c70d9278ac039335ee369941e"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0107pou.nis",
+      "bytes": 3341,
+      "sha256": "cde4defa6c5638ad93dc102dd79984bdeb4157876b87dc0e44a91bf596232196"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0107pou.plf",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0107pou.prd",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0107pou.rp1",
+      "bytes": 290,
+      "sha256": "fb1f8022597db3b14459e6337f73b4d63d42d2bc309d994cbe0441bb6d55c0e6"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0107pou.rp2",
+      "bytes": 6824,
+      "sha256": "abb960aa77fea7c8188f04338b3a6bc0ebcf2c9846f49b024d7dbe0ee0779393"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0107pou.scr",
+      "bytes": 6328,
+      "sha256": "abd8c2dc566983090e318996aa7619e0d108f33ee00457c30cd8cd6bca123ef6"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0107pou.sin",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0107pou.sor",
+      "bytes": 4641,
+      "sha256": "a31caf79ce896ea90a43a62a2fd0959d83c7d81ac0e8c90b1d929d50768a9179"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0549bce.adv",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0549bce.bks",
+      "bytes": 656,
+      "sha256": "e37712f5fbe7720d6fa837a43495c8c73427b6f6d579e7a1af82793bf8620001"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0549bce.co1",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0549bce.co2",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0549bce.cod",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0549bce.def",
+      "bytes": 331,
+      "sha256": "f6878ab38a3d8b189dfa2ac16a60366fd70edb5fa1e02d70754f7edea675a93e"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0549bce.dfm",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0549bce.dyl",
+      "bytes": 37,
+      "sha256": "c528e86cc50e47bf06a1571e69a606aa74340b93bb14a2ff0fa85fa6b701f3f2"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0549bce.edf",
+      "bytes": 24,
+      "sha256": "13739b69eca82c9d876c09aa3ec44a2d75a00b28dd5241fe5241e75cd609cfd8"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0549bce.for",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0549bce.his",
+      "bytes": 3324140,
+      "sha256": "68826794aec8899a55b3ff7ab6af02513cf06ba38c5e09f6055fcdbbd77feaf8"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0549bce.ia2",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0549bce.ikc",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0549bce.itd",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0549bce.jnl",
+      "bytes": 809,
+      "sha256": "cb3a53f7ec43f457c7fec5d4cf623c98ffb4d50048a2154dd577908031c1d4fa"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0549bce.nin",
+      "bytes": 3665,
+      "sha256": "1ef16d68a481b580fe9b60f0f53dbc48d3a552415914205f95ab582c1921fa3c"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0549bce.nis",
+      "bytes": 3665,
+      "sha256": "1ef16d68a481b580fe9b60f0f53dbc48d3a552415914205f95ab582c1921fa3c"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0549bce.plf",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0549bce.prd",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0549bce.rp1",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0549bce.rp2",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0549bce.scr",
+      "bytes": 568,
+      "sha256": "659250417c68284755b7c7c7bd6fa1faffed5bcb17b8a316792141072a6bed98"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0549bce.sin",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0549bce.sor",
+      "bytes": 273,
+      "sha256": "43300646bf01af3bdce28f40f4172acabf462bed2083a59eacf7cf12f7a2e91d"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0549bce.sum",
+      "bytes": 10332,
+      "sha256": "338b46a5f3843f18241826528860f63c3d6005f2e6d401ad836d9a2822fdea72"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0914qoy.ads",
+      "bytes": 19551,
+      "sha256": "e6433e83816367003cf26f1e6da8bf9acda4f4d3f19e7214b2eb556528b7b089"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0914qoy.adv",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0914qoy.bks",
+      "bytes": 1230,
+      "sha256": "e7b4fe85364eaa6ecd09e73de9103c6b92ffe896823c2d282746e9048f67b7bf"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0914qoy.co1",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0914qoy.co2",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0914qoy.cod",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0914qoy.def",
+      "bytes": 331,
+      "sha256": "54bf85eab064cc073c44a9af7b41250705d50ba8fa71c9af23f04f86d0cf8978"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0914qoy.dfm",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0914qoy.dyl",
+      "bytes": 37,
+      "sha256": "c528e86cc50e47bf06a1571e69a606aa74340b93bb14a2ff0fa85fa6b701f3f2"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0914qoy.edf",
+      "bytes": 88,
+      "sha256": "f88d827e3114719741530920417c73844eaecfe1e1344d197247d6caecb44c38"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0914qoy.for",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0914qoy.gen",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0914qoy.his",
+      "bytes": 3339105,
+      "sha256": "4d463272ab350c5d46cd81de067834508daf5794e282a228b53102a9c3393e4f"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0914qoy.ia2",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0914qoy.ikc",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0914qoy.inm",
+      "bytes": 336,
+      "sha256": "fe3aff032e31df95ec86d7826548ea127e9b4a084e905a0a7530547b34f694b5"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0914qoy.itd",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0914qoy.jnl",
+      "bytes": 722,
+      "sha256": "85bc35eab78409048f96b7c15602019c6672ac2542c8b123194229ba27e0e17f"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0914qoy.nin",
+      "bytes": 3666,
+      "sha256": "0e38070200096cb36afb448d25427652f3ebab6369fc3b43727211b469102c56"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0914qoy.nis",
+      "bytes": 3654,
+      "sha256": "0e50b63c44c759546ffe4167824747b6fd2b8f6eb46ba6889d066d8a51197ace"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0914qoy.plf",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0914qoy.prd",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0914qoy.rp1",
+      "bytes": 216,
+      "sha256": "7b4f3190c4e4c840814129ef5e60a06af6c5accfcaf0d406fd80e2e412fa023c"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0914qoy.rp2",
+      "bytes": 6544,
+      "sha256": "8197f3095324aca2df42a90dfdd2f9f6c0b0e8c229d215744c4485f881d72f37"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0914qoy.scr",
+      "bytes": 3128,
+      "sha256": "33bcacaf16354eebdb551b3a27c4fff9c344d47117a2d950d12baf44a8c81432"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0914qoy.sin",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0914qoy.sor",
+      "bytes": 819,
+      "sha256": "02b28220cb92a5c70a61255570b2ea521d6c29d0d89021cffc4aba2def9e01a3"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_1641yml.def",
+      "bytes": 249,
+      "sha256": "9bd5f92afc0e624e908b8c403a9c82887c5c3223bf9a5c797a9fba73e6efb098"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_3003mnx.adv",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_3003mnx.bks",
+      "bytes": 656,
+      "sha256": "e37712f5fbe7720d6fa837a43495c8c73427b6f6d579e7a1af82793bf8620001"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_3003mnx.co1",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_3003mnx.co2",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_3003mnx.cod",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_3003mnx.def",
+      "bytes": 331,
+      "sha256": "a41832adc69908701cc6f0b1df80830821cda1784b5df1770e2f25c705d868c1"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_3003mnx.dfm",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_3003mnx.dyl",
+      "bytes": 37,
+      "sha256": "c528e86cc50e47bf06a1571e69a606aa74340b93bb14a2ff0fa85fa6b701f3f2"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_3003mnx.edf",
+      "bytes": 24,
+      "sha256": "13739b69eca82c9d876c09aa3ec44a2d75a00b28dd5241fe5241e75cd609cfd8"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_3003mnx.for",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_3003mnx.his",
+      "bytes": 3305105,
+      "sha256": "67b13bb479b4a7041e363aa5311938b5487ff2bddf4248ae1399b7aa51c6cef5"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_3003mnx.ia2",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_3003mnx.ikc",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_3003mnx.inm",
+      "bytes": 600,
+      "sha256": "1e2a6d393725d82544d0af313794003039fdadab926c6aa753037ccb348ed412"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_3003mnx.itd",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_3003mnx.jnl",
+      "bytes": 481,
+      "sha256": "d63b4152c71e4d520533da0c463a7ae3b520726dec92b2b69175ddeabdcf5ed8"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_3003mnx.nin",
+      "bytes": 3427,
+      "sha256": "2abacd4ec22372e827d5d799a898ed2fc926e0e69a9cc2752ceff6bd9c0eb70b"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_3003mnx.nis",
+      "bytes": 3427,
+      "sha256": "2abacd4ec22372e827d5d799a898ed2fc926e0e69a9cc2752ceff6bd9c0eb70b"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_3003mnx.plf",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_3003mnx.prd",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_3003mnx.rp1",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_3003mnx.rp2",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_3003mnx.scr",
+      "bytes": 568,
+      "sha256": "6136c6d9e67c9e256d6b83557379b5de79ec37f2bee1341704cc38c882eb4dcd"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_3003mnx.sin",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_3003mnx.sor",
+      "bytes": 273,
+      "sha256": "43300646bf01af3bdce28f40f4172acabf462bed2083a59eacf7cf12f7a2e91d"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_3003mnx.sum",
+      "bytes": 10332,
+      "sha256": "ae6d3d502809bc63f7d9306a5dd86502f5b6a3b750ad3f839ab88a680298855e"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_4458ajd.adv",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_4458ajd.cod",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_4458ajd.def",
+      "bytes": 331,
+      "sha256": "9b5f0a23fdd7e7a7ae7441e9132438c1fa01e1690a8a4bd06428453d5edc683b"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_4458ajd.dfm",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_4458ajd.for",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_4458ajd.his",
+      "bytes": 3304150,
+      "sha256": "84bbd5c8c0b27bf82fe21e3714065892766ef795cf04618ade9c8c8c0009aa97"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_4458ajd.ia1",
+      "bytes": 6062,
+      "sha256": "0b21b307a1ec314392eec63f8f6d7f1a72b9b88972c6e5a1035927f74632baf1"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_4458ajd.ikc",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_4458ajd.itd",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_4458ajd.jnl",
+      "bytes": 110,
+      "sha256": "bb1cbb4007400c9d529140a5864d0e601a8229f48fb7483dda37cc54db021f2f"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_4458ajd.nin",
+      "bytes": 3436,
+      "sha256": "bd674e7c13e7ebd403b468fc43c1ea7ec703a2253827f0285f9cf1deb9ee7495"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_4458ajd.plf",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_4458ajd.prd",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_4458ajd.rp1",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_4458ajd.rp2",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_4458ajd.scr",
+      "bytes": 568,
+      "sha256": "af11ae1c49a77ab1c624f17416af01e8f390febd5ad3d4153202a71382563a5b"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_4458ajd.sin",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_4458ajd.sum",
+      "bytes": 25092,
+      "sha256": "a9cb98085227a895d62c84973f53a559a31609a344ec50fad972e6166e915d6c"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_1853poc.def",
+      "bytes": 260,
+      "sha256": "119ef5a222f38bb5bd6bd5f336acd9f3d6637fbf05e6bbc89908f7e59c52fefb"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0107pou.appdf",
+      "bytes": 371052,
+      "sha256": "075d341255afd14f0ef2628b01560c5048a6ea966f83cfb9675a77a15b1cebf3"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0107pou.apprj",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0549bce.appdf",
+      "bytes": 350506,
+      "sha256": "f37924f0535467c2bdef644d56f68c841378292e579d4918ddf2daadf9ea2482"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0549bce.apprj",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0914qoy.appdf",
+      "bytes": 371512,
+      "sha256": "26149ff64a15b9933a0472b436091e13e3bee308fef2103ac5969b1ffe7571d2"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_0914qoy.apprj",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_3003mnx.appdf",
+      "bytes": 389426,
+      "sha256": "99270fc5f3c8487ad760b38a978d30c3b19a3414289632588b9397e57baa406c"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_3003mnx.apprj",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_4458ajd.appdf",
+      "bytes": 349333,
+      "sha256": "22431a98e2b94f252e50c18095f6dfb6f20dcdc4f6fdd8184f114eb0e5908901"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/_4458ajd.apprj",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/SingleReatorEB/SingleReatorEB.apwz",
+      "bytes": 4396,
+      "sha256": "4ad5b00607f32cd61395a6468e8d906a753a100a420451245b3a1dbb42dc835a"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/Ethylbenzene.ads",
+      "bytes": 19551,
+      "sha256": "e6433e83816367003cf26f1e6da8bf9acda4f4d3f19e7214b2eb556528b7b089"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/Ethylbenzene.apw",
+      "bytes": 9928704,
+      "sha256": "820d3a27d1539ede24a29359c77c3a3c0e46ba80725d8a8afa3e39aa8b0e89db"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/Ethylbenzene.bkp",
+      "bytes": 173692,
+      "sha256": "c89b7008cce1c646fdf63722990755e0bd292e83449d9e063c829eb19cc6e524"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/Ethylbenzene.def",
+      "bytes": 261,
+      "sha256": "f7271e169837fbd944adcea850c155c208fadb5d57daa27eaf7523045fcd7db7"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/Ethylbenzene.for",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/Ethylbenzene.his",
+      "bytes": 3324104,
+      "sha256": "7acd86fcda15107145e687ad11b77e55779857c29ba870b204004b2230672159"
+    },
+    {
+      "path": "Apresentações/i - INTRODUCAO AO FILTRO DE KALMAN.pdf",
+      "bytes": 611081,
+      "sha256": "f905f35dc18dbfb4eecc2b5f0e52be1f39d8b99931377a905f6d7e3854e59421"
+    },
+    {
+      "path": "Apresentações/i - INTRODUCAO AO FILTRO DE KALMAN.ppt",
+      "bytes": 374784,
+      "sha256": "abc79a232d5090fbbc56d73c0028c5ed099309a79bcbdc30762189dc56ace34f"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/Ethylbenzene.appdf",
+      "bytes": 350947,
+      "sha256": "c69a38cdc8b5c056bb77125fab8f5b27daf99c557f86fc6798c36d2be0a1f99d"
+    },
+    {
+      "path": "Apresentações/i - INTRODUCAO AO FILTRO DE KALMAN.pptx",
+      "bytes": 168187,
+      "sha256": "e4f66d00c66a0e50b83e6f808faebbca2e282a2f9d8a65dd273501d2ef2bb32b"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/Ethylbenzene$backup.ads",
+      "bytes": 21605,
+      "sha256": "1c3bc7a32454bb5b951e01f5b73519fbf84d2f05a986603f0b9f935fc74101ad"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/Ethylbenzene$backup.apw",
+      "bytes": 1101824,
+      "sha256": "3c8c626958ee4b30e745eb74eb333cd7e3044982702435114dfa102f1ec6469c"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/Ethylbenzene$backup.bkp",
+      "bytes": 171758,
+      "sha256": "46997741e27009dd94a198f9f6439e9b5078752bdc539ef18a3a33a6e836e691"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/Ethylbenzene$backup.def",
+      "bytes": 296,
+      "sha256": "907dd6b010ee23035f8fcfb744b76f7991042ebd5651290d17b2fe17c3ee636e"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/Ethylbenzene$backup.for",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/Ethylbenzene$backup.his",
+      "bytes": 92789,
+      "sha256": "1ac997310929ad6ecc39ff7aa636de350886d7d33e98f76c107ee525f703552d"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/Ethylbenzene$backup.appdf",
+      "bytes": 267316,
+      "sha256": "2e1db2ccfde6f3ca0fb484b6aa3fab11c92097b6e77223d1c8970b71c08ad294"
+    },
+    {
+      "path": "Análise de Sensibilidade/Analise_de_sensibilidade_ETBEN_saida.xlsx",
+      "bytes": 142028,
+      "sha256": "c00a27d266dfcfa349890433bd4c18de18ed701ea373b5b21ba3540b404af399"
+    },
+    {
+      "path": "Análise de Sensibilidade/Analide_de_sensibilidade_DETBEN_saida.xlsx",
+      "bytes": 8370,
+      "sha256": "dd46ca44527b5a6e38317c91c07b2ee62055091b96509f00fb3b85878612a46f"
+    },
+    {
+      "path": "Matlab/FK_temp_exemplo (Cópia em conflito de LABMC-PC 2016-09-16).m",
+      "bytes": 993,
+      "sha256": "8a22655fc872b4545f59a3ba26ea95351df5782d8d5ad5998543e350b7f935e8"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/aspenplus_ExceptionDump_Mon_Oct_10_18_08_25_2016.dmp",
+      "bytes": 300430,
+      "sha256": "e8b3947eafc15c10b8060294a5ced247d79bfa130247de10f125ddaeaa0d4221"
+    },
+    {
+      "path": "AspenSimFiles/Ethylbenzene_walter/AspenPlus_ExceptionDump_Wed_Nov_09_23_00_40_2016.dmp",
+      "bytes": 349374,
+      "sha256": "dbd5e157af2c1bb75d47bc4c9783d7b1616fef7ec620a8fc03e0d58c2b1dfd7b"
+    }
+  ],
+  "verified": {
+    "kinetics": "Luyben 2011 p.656 explicitly kmol/(s m3)",
+    "aspen_controls": "ASPEN/aspeneb.dynf: R1_TC.OP connects to R1.QR",
+    "slx": "Simulink/FiltroKalman.slx is a scalar illustrative Kalman filter; no five-state ethylbenzene Simulink model found",
+    "model_docx": "Modelagem e equações.docx contains reaction and two-reactor/column balance expressions"
+  },
+  "license_runtime": "Aspen and MATLAB runtimes unavailable here; archive read without executing those simulators"
+}

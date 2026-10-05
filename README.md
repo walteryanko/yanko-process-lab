@@ -44,7 +44,7 @@ The demo executes 100 simulation steps and prints measured and estimated state v
 
 ## Tested
 
-Eleven core tests cover equilibrium stationarity, species conservation, RK4 step-halving consistency, disturbance units, seeded replay, pause semantics, all controller/observer combinations, actuation freeze with observer off, thermal-stop reset, invalid settings and extreme tuning/noise cases. Eight estimator research tests verify calibration, independent integration, Python/TypeScript parity, covariance positivity, masking, causal inference and determinism. Seven control research tests check integration, neural export, derivatives, the compiled/reference evaluator agreement, causal adaptation, event schedules and predicted feasibility. These are numerical invariants and behavior checks, not plant validation.
+Eleven core tests cover equilibrium stationarity, species conservation, RK4 step-halving consistency, disturbance units, seeded replay, pause semantics, all controller/observer combinations, actuation freeze with observer off, thermal-stop reset, invalid settings and extreme tuning/noise cases. Eight estimator research tests verify calibration, independent integration, Python/TypeScript parity, covariance positivity, masking, causal inference and determinism. Seven control research tests check integration, neural export, derivatives, the compiled/reference evaluator agreement, causal adaptation, event schedules and predicted feasibility. Nine additional ethylbenzene tests verify source units, the reconstructed equilibrium, genuine LSTM backpropagation, portable neural dynamics, native derivatives, causal uncertainty, SISO/MIMO constraints, the historical-architecture EKF Jacobian and PI anti-windup reversal. These 35 tests are numerical invariants and behavior checks, not plant validation.
 
 ## Scientific limitations
 
@@ -53,6 +53,10 @@ The default now uses an explicitly calibrated effective reaction enthalpy, match
 The [NAKE research module](research/nake/README.md) implements and trains a real CPU MLP, compares five estimator variants in nine regimes over 360 simulation runs, and provides raw metrics and weights. It uses independent DOP853 truth integration, RK4 filtering, and explicitly specified synthetic sensor noise. It is separate from the web observer and controller. [Results](research/nake/results/RESULTADOS.md).
 
 The [black-box control module](research/blackbox/README.md) replaces the state transition by learned dynamics inside the estimator, the NMPC, or both. Four combinations are evaluated on the historical servo/regulatory schedules, plus explicitly reconstructed thermal illustrations, with and without predicted temperature constraints. The actual simulated plant temperature, optimizer failures and censored trajectories are reported separately. The controller uses SLSQP with exact sensitivities, using CasADi or a compiled neural chain rule; it is a research implementation separate from the website. [Closed-loop results](research/blackbox/results/RESULTADOS.md).
+
+The [ethylbenzene study](research/ethylbenzene/README.md) reconstructs the first reactor of the author's UFPB TFC using the supplied original files. It compares five estimators (nominal UKF, validation-tuned UKF, LSTM-UKF, NAKE-BB and LSTM-NAKE), physical/learned NMPC prediction and SISO/MIMO actuation in 720 closed-loop runs and 75 paired observer runs. It corrects kinetic-unit labels and fits an explicitly effective heat duty; the full Aspen plant is not executed. The 165 C temperature restriction is a declared study assumption. [Ethylbenzene results](research/ethylbenzene/results/RESULTADOS.md).
+
+The [comparison with original TFC control](research/ethylbenzene/results/COMPARACAO_TFC.md) preserves its published tables and approximate digitized curves, then adds 18 matched PI/EKF control runs and 15 observer runs. Some new methods improve the reconstructed PI/EKF reference and others worsen it; the native original gains/startup are unavailable, so causal improvement over the historical execution is not claimed.
 
 Typical configuration uses a 0.015 h sampling interval and 800 steps (12 h). The 355.4 K stop is an educational simulation guard, not a certified safety system. The model, observability assumptions, noise process and search-based controller simplify reality. No plant data or closed-loop hardware test is included.
 
@@ -68,4 +72,4 @@ See [LICENSE](LICENSE) for the unmodified MIT text and [LICENSE_SCOPE.md](LICENS
 
 ## Continuous verification
 
-The [Verify workflow](.github/workflows/verify.yml) runs the real tests and CLI demo on Node 24. See [GitHub Actions](https://github.com/walteryanko/yanko-process-lab/actions) for current run results. No separate lint or static typecheck is configured. Historical local test results describe this excerpt only.
+The [Verify workflow](.github/workflows/verify.yml) runs the real tests and CLI demo on Node 24 and Python 3.11. See [GitHub Actions](https://github.com/walteryanko/yanko-process-lab/actions) for current run results. No separate lint or static typecheck is configured. Historical local test results describe this excerpt only.
