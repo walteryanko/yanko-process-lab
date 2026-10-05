@@ -1,0 +1,14 @@
+{
+  "runs": 240,
+  "samples": 166031,
+  "max_IAE_audit_error": 0,
+  "max_feasible_prediction_excess_K": 6.690836471534567e-06,
+  "checks": [
+    "unique factorial runs",
+    "finite raw traces",
+    "actuator bounds",
+    "temperature peaks",
+    "IAE raw recomputation",
+    "complete horizon length"
+  ]
+}

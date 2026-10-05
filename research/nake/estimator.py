@@ -72,10 +72,11 @@ class DenseNetwork:
 
 
 class UKF:
-    def __init__(self,x0,q=Q_PUBLISHED,network=None,kind='ukf',r=R_BASE):
+    def __init__(self,x0,q=Q_PUBLISHED,network=None,kind='ukf',r=R_BASE,transition_model=None):
         self.x=np.array(x0,copy=True);self.p=P0/XS[:,None]/XS[None,:]
         self.q0=np.array(q,copy=True);self.r=np.array(r,copy=True)
         self.kind=kind;self.network=network;self.history=[];self.last_u=U_BASE.copy()
+        self.transition_model=transition_model
         self.ema=np.zeros(2);self.repairs=0;self.last_q=self.q0.copy();self.last_scales=np.ones(2)
         n=6;alpha=.2;scale=alpha**2*n
         self.wm=np.r_[1-n/scale,np.full(12,1/(2*scale))];self.wc=self.wm.copy();self.wc[0]+=1-alpha**2+2
@@ -106,7 +107,7 @@ class UKF:
         L=np.linalg.cholesky(self.p)
         centre=(self.x-BASE)/XS
         sig=np.vstack([centre,centre+self.sigma_scale*L.T,centre-self.sigma_scale*L.T])
-        propagated=transition(BASE+sig*XS,u,p_model)
+        propagated=(transition if self.transition_model is None else self.transition_model)(BASE+sig*XS,u,p_model)
         pts=(propagated-BASE)/XS
         mean=self.wm@pts;delta=pts-mean
         pp=delta.T@(delta*self.wc[:,None])+np.diag(q/XS**2)

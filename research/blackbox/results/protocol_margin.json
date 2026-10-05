@@ -1,0 +1,220 @@
+{
+  "cases": {
+    "servo_plus10": {
+      "label": "Servo +10%",
+      "group": "servo",
+      "duration": 12.0,
+      "on": 4.0,
+      "off": 8.0,
+      "sp": 1.1,
+      "source": "section 5.3.1, Fig33, printed p65"
+    },
+    "fa_minus10": {
+      "label": "FA -10%",
+      "group": "regulatory",
+      "duration": 12.0,
+      "on": 4.0,
+      "off": 8.0,
+      "index": 0,
+      "factor": 0.9,
+      "source": "section 5.3.1, Fig29, p63"
+    },
+    "fb_plus10": {
+      "label": "FB +10%",
+      "group": "regulatory",
+      "duration": 12.0,
+      "on": 4.0,
+      "off": 8.0,
+      "index": 1,
+      "factor": 1.1,
+      "source": "section 5.3.1, Fig30, p64"
+    },
+    "t0_minus10F": {
+      "label": "T0 -10% °F",
+      "group": "regulatory",
+      "duration": 12.0,
+      "on": 4.0,
+      "off": 8.0,
+      "index": 4,
+      "factor": 0.9,
+      "fahrenheit": true,
+      "source": "section 5.3.1, Fig31, p64"
+    },
+    "ta_minus20F": {
+      "label": "Ta -20% °F",
+      "group": "regulatory",
+      "duration": 12.0,
+      "on": 4.0,
+      "off": 8.0,
+      "index": 5,
+      "factor": 0.8,
+      "fahrenheit": true,
+      "source": "section 5.3.1, Fig32, p65"
+    },
+    "fa_minus15": {
+      "label": "FA -15%",
+      "group": "severe regulatory",
+      "duration": 12.0,
+      "on": 4.0,
+      "off": 8.0,
+      "index": 0,
+      "factor": 0.85,
+      "source": "section 5.3.2.2, Fig34, p68-69"
+    },
+    "t0_minus30F": {
+      "label": "T0 -30% °F",
+      "group": "severe regulatory",
+      "duration": 12.0,
+      "on": 4.0,
+      "off": 8.0,
+      "index": 4,
+      "factor": 0.7,
+      "fahrenheit": true,
+      "source": "section 5.3.2.2, Fig35, p69"
+    },
+    "servo_minus20": {
+      "label": "Servo -20%",
+      "group": "severe servo",
+      "duration": 12.0,
+      "on": 4.0,
+      "off": null,
+      "sp": 0.8,
+      "source": "section 5.3.2.2, Fig36, p70; holds new target"
+    },
+    "thermal_servo": {
+      "label": "Servo +20% / limite",
+      "group": "thermal servo",
+      "duration": 6.0,
+      "on": 3.0,
+      "off": null,
+      "sp": 1.2,
+      "source": "Fig39, p72: amplitude +20% and t3h inferred approximately from axes, not specified in text"
+    },
+    "startup": {
+      "label": "Partida fria",
+      "group": "startup",
+      "duration": 3.0,
+      "on": null,
+      "off": null,
+      "source": "Figs37-38, p71-72; filled feed initial mixture reconstructed, source does not state six initial values"
+    }
+  },
+  "configurations": {
+    "physical_ukf": {
+      "label": "NMPC físico + UKF",
+      "controller": "physical",
+      "estimator": "ukf"
+    },
+    "physical_nake": {
+      "label": "NMPC físico + NAKE-BB",
+      "controller": "physical",
+      "estimator": "nake"
+    },
+    "neural_ukf": {
+      "label": "NMPC neural + UKF",
+      "controller": "neural",
+      "estimator": "ukf"
+    },
+    "neural_nake": {
+      "label": "NMPC neural + NAKE-BB",
+      "controller": "neural",
+      "estimator": "nake"
+    }
+  },
+  "test_seeds": [
+    8001,
+    8002,
+    8003
+  ],
+  "run_count": 24,
+  "actual_cases": [
+    "thermal_servo",
+    "startup"
+  ],
+  "actual_configurations": [
+    "physical_ukf",
+    "physical_nake",
+    "neural_ukf",
+    "neural_nake"
+  ],
+  "Ts_h": 0.015,
+  "p": 57,
+  "m": 6,
+  "Qe": 0.8,
+  "Rdu": 0.2,
+  "thermal_limit_K": 344.0,
+  "practical_stop_K": 355.4,
+  "temperature_margin_K": 4.0,
+  "constraints": "explicit hard prediction inequalities for T<=344-margin; all runs retain coolant bounds",
+  "bounds_mw_kmol_h": [
+    22.7,
+    1366.2
+  ],
+  "solver": "SciPy SLSQP with exact CasADi physical derivatives and analytic neural chain rule compiled in C, maxiter60 ftol1e-8",
+  "workers": 4,
+  "horizon_moves": "first six consecutive samples optimized, last move held through prediction step57",
+  "disturbance_preview": "none; future exogenous inputs and reference held at current commanded value",
+  "process_noise": "independent unobserved multiplicative Gaussian 1% on all six inputs at each sample; actual mw clipped to bounds",
+  "measurement_noise": "independent additive Gaussian std=1% nominal T and Tt, in kelvin",
+  "measurement_std_K": [
+    3.3230000000000004,
+    3.1449067482509583
+  ],
+  "Q_common": [
+    5.616e-08,
+    5.616e-05,
+    5.616e-08,
+    2.4246e-13,
+    0.1385424,
+    0.02664492
+  ],
+  "R": [
+    [
+      11.042329000000002,
+      0.0
+    ],
+    [
+      0.0,
+      9.890438455194417
+    ]
+  ],
+  "Q_nake": "Q_common + independent-validation one-step neural residual MSE, multiplied by EMA of previous NIS/dof bounded [1,25]",
+  "initial_state_nominal": [
+    0.6246448243276402,
+    34.02657223082452,
+    2.2809146409391614,
+    3.633950405595394,
+    332.3,
+    314.4906748250958
+  ],
+  "initial_state_startup": [
+    2.9055594652668018,
+    36.30748687176368,
+    0.0,
+    3.633950405595394,
+    297.0,
+    289.0
+  ],
+  "initial_estimate_sd": [
+    0.03,
+    0.12,
+    0.03,
+    0.06,
+    0.2,
+    0.2
+  ],
+  "plant_integrator": "DOP853 rtol2e-10 atol1e-11, independent of predictors; 21 dense temperature samples per interval",
+  "physical_predictor_integrator": "RK4 five substeps per sample",
+  "temperature_stop_censoring": "Stop at355.4K; incomplete trajectories not compared by smaller truncated IAE",
+  "metrics": "sampled rectangle integral using CC_true minus active current reference, time in h; ITAE global time",
+  "reconstructing_historical": true,
+  "source": "Brandao dissertation2019 sections5.3.1 and5.3.2; REV05 manuscript",
+  "calibration": "effective enthalpy calibrated at one nominal point, not recovered physical enthalpy or Simulink source",
+  "effective_dH": -84138.65353748415,
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "sklearn": "1.8.0",
+  "casadi": "3.7.2",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39"
+}

@@ -13,3 +13,8 @@ __pycache__/
 *.pyc
 research/nake/results/trace_*.npz
 research/nake/results/report/
+research/blackbox/results/traces/
+research/blackbox/results/runs/
+research/blackbox/results/report/
+jit_tmp*
+tmp_casadi_compiler_shell*
