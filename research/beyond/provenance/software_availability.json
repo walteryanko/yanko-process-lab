@@ -1,0 +1,10 @@
+{
+  "python3": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "matlab": null,
+  "octave": null,
+  "aspen": null,
+  "pdflatex": "/usr/bin/pdflatex",
+  "xelatex": "/usr/bin/xelatex",
+  "pandoc": "/usr/bin/pandoc",
+  "libreoffice": null
+}

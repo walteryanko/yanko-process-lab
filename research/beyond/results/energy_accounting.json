@@ -1,0 +1,5 @@
+{
+  "recomputed_rows": 3204,
+  "change": "Heat evaluated using stored true plant parameters, including the documented supervisor parameter schedule. Early nominal-parameter heat summaries excluded.",
+  "invariant": "All X/U/control/quality/production/violations unchanged; no true parameters exposed to any controller."
+}

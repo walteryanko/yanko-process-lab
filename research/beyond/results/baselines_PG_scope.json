@@ -1,0 +1,9 @@
+{
+  "recovered": true,
+  "common_dt": 0.015,
+  "common_temperature_limit": 344.26111111111106,
+  "wrapper": "All receive the same external amplitude/slew limits and measured-temperature guard; this changes historical unrestricted actions.",
+  "historical_reproduction": false,
+  "tuning": "Recovered gains for previous baselines; frozen gain=1 for new simple policies; no superiority claim from unequal tuning.",
+  "limitation": "C0 original soft thermal penalty; C3 known-inventory premise tested separately; EB B0R is a reconstruction."
+}

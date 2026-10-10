@@ -1,0 +1,15 @@
+{
+  "Hess_cycle_residual_kcal_kmol": 5.5,
+  "nominal_reference_shift_Q_MW": 141.29762290503947,
+  "temperature_input_jacobian_artifact": [
+    2.7713135942979092,
+    5.265711333884692,
+    5.471051973878005
+  ],
+  "historical_dTdfE": 1.514969024940141,
+  "invalid_reference_shift_dTdfE": 4.138456450996299,
+  "warning": "Counterfactual bad unit/reference handling, not a physical alternative plant; refitting nominal Q does not cure dynamic slope error",
+  "historical_Q_MW": 25.369790958399832,
+  "archived_Aspen_Q_MW": 9.087923,
+  "confounding": "A heat-loss offset, duty bias, feed-enthalpy error and kinetic heat mismatch can share a scalar residual."
+}

@@ -1,0 +1,16 @@
+{
+  "cutoff": "2026-10-10",
+  "search_types": [
+    "nonlinear frequency response chemical reactors",
+    "propylene glycol periodic operation PI control",
+    "phase shifted chemical reactor inputs",
+    "operating point observability self optimizing control",
+    "reaction invariants observability enthalpy observers",
+    "safe active dynamics learning",
+    "decision focused experimental design 2026",
+    "robust sparse sampling biochemical systems",
+    "viability kernel chemical reactors",
+    "thermodynamic consistency observability Hess reaction networks"
+  ],
+  "limitations": "Search themes are a reconstructed audit index, not a verbatim timestamped query log or systematic-review flow diagram. Some editor pages returned 403 and were assessed from primary indexed abstracts. No assertion of novelty from absence in search."
+}

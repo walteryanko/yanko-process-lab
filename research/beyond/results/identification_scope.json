@@ -1,0 +1,8 @@
+{
+  "n": 24,
+  "seeds": "65000..65023",
+  "selection": "frequency chosen using nominal local design only",
+  "decision": "17 common prospective stationary cooling decisions; current true composition never used for fit or selection",
+  "uncertainty": "Laplace posterior, approximate; sensor-bias cases deliberately outside fitted family",
+  "warning": "Prospective steady regret does not certify transient feasibility or closed-loop economic value"
+}

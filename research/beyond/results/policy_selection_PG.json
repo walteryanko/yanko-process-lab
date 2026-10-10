@@ -1,0 +1,45 @@
+{
+  "gains": {
+    "direct": 1.0,
+    "inferential": 0.5
+  },
+  "tuning": [
+    {
+      "kind": "PG",
+      "gain": 0.5,
+      "mode": "direct",
+      "score": 0.04149829401820481
+    },
+    {
+      "kind": "PG",
+      "gain": 0.5,
+      "mode": "inferential",
+      "score": 0.08477348734225292
+    },
+    {
+      "kind": "PG",
+      "gain": 1.0,
+      "mode": "direct",
+      "score": 0.0391142856080895
+    },
+    {
+      "kind": "PG",
+      "gain": 1.0,
+      "mode": "inferential",
+      "score": 0.10498652155395381
+    },
+    {
+      "kind": "PG",
+      "gain": 2.0,
+      "mode": "direct",
+      "score": 0.041678406170771565
+    },
+    {
+      "kind": "PG",
+      "gain": 2.0,
+      "mode": "inferential",
+      "score": 0.5728572417204886
+    }
+  ],
+  "validation_selected": "fixed_feed_340K"
+}

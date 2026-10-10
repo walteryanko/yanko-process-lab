@@ -1,0 +1,10 @@
+{
+  "PG_quality_width_initial": 0.5,
+  "PG_halfband": 0.045915292101587644,
+  "PG_impossible_common_guarantee_before_h": 0.23997260236300905,
+  "PG_maximum_invariant_feed": 3.666796215120195,
+  "PG_infeasible_reference_example": 3.8667962151201953,
+  "assumptions": "Fixed FB/FM and stated FA bounds, initial CA+CC <= maximum feed invariant, nonnegative CA; then CC <= CA+CC <= max(FA/v) for every admissible input. These exact inequalities are distinct from numerical C-candidate classifications.",
+  "EB_element_invariant_bound": "For fixed feeds, B+EB+DEB and E+EB+2DEB each obey dilution balances. For nonnegative states, EB <= min(I_benzene,I_ethyl); this bounds concentration, not directly mole fraction.",
+  "decision_principle": "An observation-equivalence class is controllable for a specification only if its admissible successful policy sets have nonempty intersection. This is a necessary condition, not a newly established universal sufficient theorem."
+}

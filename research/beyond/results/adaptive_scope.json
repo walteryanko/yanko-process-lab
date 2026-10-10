@@ -1,0 +1,5 @@
+{
+  "policy": "fixed thermal PI; innovation-threshold supervisor with 4 residence-time ramps and hysteresis",
+  "tuning": "Thresholds fixed before running these 12 paired scenarios; no tuning on test outcome",
+  "caveat": "Costed, constrained transition evidence is local. Nominal and alternative references differ; resource and production tradeoffs must be reported."
+}

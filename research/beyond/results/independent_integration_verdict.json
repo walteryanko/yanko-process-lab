@@ -1,0 +1,6 @@
+{
+  "files": 10,
+  "maximum_temperature_discrepancy": 0.00021365376653648127,
+  "maximum_scaled_state_error": 7.123559819993686e-06,
+  "scope": "Selected worst-case saved input trajectories and best periodic candidates; no online controller rerun and no proof for unsampled time extrema"
+}

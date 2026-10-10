@@ -1,0 +1,16 @@
+{
+  "EB": {
+    "nominal": -1,
+    "O1_economic": 72,
+    "O2_robust": 72,
+    "O3_information": 72,
+    "O4_joint": 72
+  },
+  "PG": {
+    "nominal": -1,
+    "O1_economic": 152,
+    "O2_robust": 55,
+    "O3_information": 55,
+    "O4_joint": 147
+  }
+}

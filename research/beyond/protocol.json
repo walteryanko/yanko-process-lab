@@ -1,0 +1,14 @@
+{
+  "study": "Beyond conventional control PG EB 2026-10-10",
+  "status_at_creation": "before new simulation outputs",
+  "base_commit": "16aaafb63572d62e0e3341e26d8317b0651bdde0",
+  "models": {"PG":"faithful SI transform of cooling-manipulated modeloCT, including T+460 convention and asymmetric exchanger", "EB":"five-state TFC R1 reconstruction at 160 C, not reconciled Aspen plant", "EB_hess":"deltaH3=-200 ablation only, not full thermodynamic reconciliation"},
+  "primary_temperature_limits": {"PG_F":160,"PG_later_limit_F_separate":180,"EB_C":165,"EB_lower_C":140.85},
+  "new_design_actuators": "PG FA and coolant; EB ethylene flow and ideal effective heat duty. Added degrees of freedom explicitly distinguished from historical loops.",
+  "initial_hypotheses": ["small thermal/flow probes separate decision-relevant kinetic and thermal parameters", "periodic operation beats a resource-matched best stationary solution", "low sensitivity regions exist without necessarily being observable", "operating regime selection improves output feedback with a fixed algorithm"],
+  "falsification": ["PG exact invisible modes must remain invisible", "no periodic gain accepted solely from larger mean feed or utility consumption", "no use of chemical truth online except labelled oracles", "EB results invalid for whole flowsheet and not industrial safety claims"],
+  "seeds": {"training":61000,"validation":62000,"test_start":63000,"bootstrap":55441},
+  "statistical_unit": "independent paired scenario, not time samples",
+  "stage1": "spectra, periodic screening, operating landscape, operating-region output feedback",
+  "selection": "three strongest candidates chosen after stage1, including negative results; no guarantee of a positive winner"
+}

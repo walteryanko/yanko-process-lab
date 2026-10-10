@@ -1,0 +1,5 @@
+amplitude,initial_quality_gap,final_quality_gap,max_temperature_gap,record_discrimination_squared,plausible,scope,equal_prior_gaussian_testing_error
+0.1,0.0122303527151533,0.0020002812819743,0.0027251471985323,0.009478057227161,True,"numerical nearly-indistinguishable pair; whitened whole-record distance, not only peak temperature",0.4805880908824472
+0.25,0.0305763970499464,0.0050005056519397,0.0068070549486378,0.0592128433512734,True,"numerical nearly-indistinguishable pair; whitened whole-record distance, not only peak temperature",0.4515808018513326
+0.5,0.061156474826749,0.0099995999699039,0.0135725734331231,0.2364969272938711,True,"numerical nearly-indistinguishable pair; whitened whole-record distance, not only peak temperature",0.4039427601211815
+1.0,0.1223424043320552,0.0199879017259634,0.0268123957715999,0.9404987155031418,True,"numerical nearly-indistinguishable pair; whitened whole-record distance, not only peak temperature",0.31387485952612726
