@@ -85,6 +85,7 @@ function Screen() {
     [name, setName] = useState(""),
     [tutorial, setTutorial] = useState(-1),
     [showChart, setShowChart] = useState(true),
+    [bodyHeight, setBodyHeight] = useState(260),
     [qa, setQa] = useState("");
   const root = useRef<View>(null),
     e = session.engine,
@@ -339,7 +340,7 @@ function Screen() {
           alignItems: "center",
         }}
       >
-        <Text style={T.section}>{session.selected || "Planta"}</Text>
+        <Text testID="selected-node" style={T.section}>{session.selected || "Planta"}</Text>
         <Action
           compact
           icon="tune"
@@ -407,7 +408,7 @@ function Screen() {
     </View>
   );
   const transport = () => (
-    <View style={styles.transport}>
+    <View style={[styles.transport, landscape && { height: 56 }]}>
       <View style={{ minWidth: 68 }}>
         <Text
           style={{
@@ -555,7 +556,7 @@ function Screen() {
       </View>
       <Pressable
         onPress={() => {
-          setTutorial(0);
+          setTutorial(1);
           void create("pg-original");
         }}
         style={[T.card, T.row]}
@@ -668,9 +669,11 @@ function Screen() {
               : number(s.estimate[m.qi], 4)}{" "}
             <Text style={{ fontSize: 12 }}>{m.units[m.qi]}</Text>
           </Text>
-          <Text style={T.body}>
-            ±2σ: {number(2 * s.sigma[m.qi], 4)} · covariância do filtro
-          </Text>
+          {p.science.settings.observer !== "off" && (
+            <Text style={T.body}>
+              ±2σ: {number(2 * s.sigma[m.qi], 4)} {m.units[m.qi]} · covariância do filtro
+            </Text>
+          )}
         </View>
       )}
       <Action
@@ -734,10 +737,10 @@ function Screen() {
                     {
                       (
                         {
-                          rmse: "RMSE estimador",
-                          iae: "IAE térmico",
-                          itae: "ITAE térmico",
-                          overshoot: "Sobressinal",
+                          rmse: `RMSE (${m?.units[m.qi] ?? ""})`,
+                          iae: `IAE (${m?.units[m.ti] ?? ""}·s)`,
+                          itae: `ITAE (${m?.units[m.ti] ?? ""}·s²)`,
+                          overshoot: `Sobressinal (${m?.units[m.ti] ?? ""})`,
                           settling: "Acomodação (s)",
                           violations: "Violações",
                           computeMs: "Cálculo (ms)",
@@ -858,7 +861,7 @@ function Screen() {
       </View>
       <FlowCanvas
         project={p}
-        height={landscape ? Math.max(210, height - 165) : 140}
+        height={landscape ? Math.max(125, bodyHeight - 84) : 140}
         onDetails={() => open("properties")}
       />
       {metricCards()}
@@ -924,7 +927,7 @@ function Screen() {
     >
       <StatusBar style="light" />
       <View ref={root} collapsable={false} style={{ flex: 1 }}>
-        <View style={styles.header}>
+        <View style={[styles.header, landscape && { height: 48 }]}>
           <Pressable
             onPress={() => {
               session.tab = "home";
@@ -932,7 +935,7 @@ function Screen() {
             }}
             accessibilityRole="button"
             accessibilityLabel="Início"
-            style={T.row}
+            style={[T.row, { minHeight: 48 }]}
           >
             <View style={styles.brand}>
               <Icon name="flask-outline" color={C.cyan} size={24} />
@@ -948,7 +951,7 @@ function Screen() {
               >
                 YCS <Text style={{ fontWeight: "400" }}>PROCESSLAB</Text>
               </Text>
-              <Text
+              {!landscape && <Text
                 style={{
                   color: C.muted,
                   fontSize: 9,
@@ -957,7 +960,7 @@ function Screen() {
                 }}
               >
                 LABORATÓRIO DE BOLSO
-              </Text>
+              </Text>}
             </View>
           </Pressable>
           <View style={T.row}>
@@ -989,13 +992,15 @@ function Screen() {
           </View>
         ) : (
           <View
+            onLayout={(event) => setBodyHeight(event.nativeEvent.layout.height)}
             style={{ flex: 1, flexDirection: landscape ? "row" : "column" }}
           >
             {landscape && session.tab !== "home" && (
-              <View style={styles.rail}>
+              <ScrollView style={styles.rail} contentContainerStyle={{ flexGrow: 1, justifyContent: "space-evenly" }}>
                 {tabs.map(([id, icon, label]) => (
                   <Action
                     key={id}
+                    compact
                     icon={icon}
                     label={label}
                     active={session.tab === id}
@@ -1005,7 +1010,7 @@ function Screen() {
                     }}
                   />
                 ))}
-              </View>
+              </ScrollView>
             )}
             <View style={{ flex: 1 }}>{renderTab()}</View>
             {landscape && ["plant", "simulate"].includes(session.tab) && (
@@ -1048,7 +1053,7 @@ function Screen() {
                   ? "1 · Toque em ▶ para calcular."
                   : tutorial === 2
                     ? "2 · Toque em ⚡ e aplique +2 K."
-                    : "3 · Abra Sensores para ver a concentração estimada."}
+                    : "3 · Toque em ▶ e abra Sensores."}
             </Text>
             <Action
               compact
@@ -1651,10 +1656,10 @@ const styles = StyleSheet.create({
     borderColor: C.line,
   },
   rail: {
-    width: 72,
+    width: 60,
+    flexGrow: 0,
     borderRightWidth: 1,
     borderColor: C.line,
-    justifyContent: "space-evenly",
   },
   sheet: {
     backgroundColor: C.panel,

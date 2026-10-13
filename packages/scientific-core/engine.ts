@@ -276,13 +276,28 @@ export function metrics(e: Engine) {
   let iae = 0,
     itae = 0,
     sse = 0,
+    estimatedSamples = 0,
     overshoot = 0,
-    violations = 0;
+    violations = 0,
+    previousTime = e.history[0].t,
+    eventIndex = 0,
+    observer = e.initialProject.science.settings.observer;
+  const cascade = e.initialProject.science.settings.controller === "cascade" ||
+    e.events.some((event) => event.patch.controller === "cascade");
   for (const s of samples) {
+    while (eventIndex < e.events.length && e.events[eventIndex].t < s.t) {
+      observer = e.events[eventIndex].patch.observer ?? observer;
+      eventIndex++;
+    }
+    const dt = s.t - previousTime;
+    previousTime = s.t;
     const err = s.sp - s.x[ti];
-    iae += Math.abs(err) * e.settings.dt;
-    itae += s.t * Math.abs(err) * e.settings.dt;
-    sse += (s.x[qi] - s.estimate[qi]) ** 2;
+    iae += Math.abs(err) * dt;
+    itae += s.t * Math.abs(err) * dt;
+    if (observer !== "off") {
+      sse += (s.x[qi] - s.estimate[qi]) ** 2;
+      estimatedSamples++;
+    }
     overshoot = Math.max(overshoot, s.x[ti] - s.sp);
     if (s.x[ti] > m.limit) violations++;
   }
@@ -299,20 +314,19 @@ export function metrics(e: Engine) {
     stableTarget && samples.length - lastOutside >= 6
       ? (samples[lastOutside + 1]?.t ?? null)
       : null;
-  const cascade = e.settings.controller === "cascade";
   return {
-    rmse: Math.sqrt(sse / Math.max(1, samples.length)),
+    rmse: estimatedSamples ? Math.sqrt(sse / estimatedSamples) : null,
     iae: cascade ? null : iae,
     itae: cascade ? null : itae,
     overshoot: cascade ? null : overshoot,
     settling: cascade ? null : settling,
-    settlingBand: band,
+    settlingBand: cascade ? null : band,
     violations,
     samples: samples.length,
     computeMs: samples.reduce((a, s) => a + s.computeMs, 0),
     peakStepMs: samples.reduce((a, s) => Math.max(a, s.computeMs), 0),
     note: cascade
-      ? "Métricas térmicas indisponíveis para cascata de concentração"
+      ? "Métricas térmicas indisponíveis em execuções que incluem cascata de concentração"
       : null,
   };
 }

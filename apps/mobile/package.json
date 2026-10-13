@@ -1,6 +1,6 @@
 {
   "name": "ycs-processlab-mobile",
-  "description": "The Blank project template includes the minimum dependencies to run and an empty root component.",
+  "description": "Offline native industrial process simulation, control and virtual sensors.",
   "license": "MIT",
   "version": "0.1.0-beta.1",
   "main": "index.js",

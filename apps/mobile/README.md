@@ -1,7 +1,7 @@
 # YCS ProcessLab Mobile — 0.1.0-beta.1
 
 Native Android application, React Native 0.86.3 / Expo SDK 57 / Hermes / Skia.
-This is an evaluation build until the Android installation/interaction evidence is obtained.
+This beta uses an evaluation signing identity; device evidence and remaining limits are described below.
 No WebView, Metro or external API is used for the core functionality.
 
 ## Development and build

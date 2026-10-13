@@ -41,6 +41,27 @@ export async function runDeviceVerification() {
       metrics: metrics(e),
     });
   }
+  const controllers = [];
+  for (const controller of ["pid", "cascade", "nmpc"] as const) {
+    const p = newProject("pg-original");
+    p.science.settings.controller = controller;
+    p.science.settings.setpoint = controller === "cascade" ? 2.4 : 333.3;
+    const engine = new Engine(p);
+    for (let i = 0; i < 24 && !engine.done; i++) {
+      const task = engine.advance();
+      while (!task.next().done) await yieldFrame();
+      if (i % 5 === 0) await yieldFrame();
+    }
+    controllers.push({
+      controller,
+      error: engine.error,
+      steps: engine.history.length - 1,
+      inputUnit: engine.model.inputUnit,
+      maxInputChange: Math.max(...engine.history.map(s => Math.abs(s.u - engine.model.u0))),
+      solver: engine.last.solver,
+      metrics: metrics(engine),
+    });
+  }
   const p = newProject();
   p.id = "device-qa-persistence";
   p.science.settings.controller = "pid";
@@ -72,6 +93,7 @@ export async function runDeviceVerification() {
       fingerprintError < 1e-6 &&
       persistence &&
       nativeFiles &&
+      controllers.every(c => !c.error && c.steps === 24 && c.maxInputChange > 1e-6) &&
       cases.every((c) => !c.error && c.steps === 60),
     hermes,
     references,
@@ -79,6 +101,7 @@ export async function runDeviceVerification() {
     persistence,
     nativeFiles,
     cases,
+    controllers,
     elapsedMs: performance.now() - started,
     measuredOn: "Android runtime; performance.now; no desktop substitution",
   };

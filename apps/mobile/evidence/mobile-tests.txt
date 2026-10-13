@@ -1,26 +1,27 @@
-✔ recovered PG and EB agree with independent archived DOP853 trajectories (9.626298ms)
-✔ original TypeScript trajectories retain substep equivalence in SI seconds (5.865076ms)
-✔ every supported model and observer runs with finite PSD covariance (454.319791ms)
-✔ checkpoint recovery preserves RNG, PID and observer state exactly (32.500958ms)
-✔ observer cannot read hidden truth; initialization independent of plant override (3.466958ms)
-✔ PID, cascade and bounded NMPC change applied inputs, retain causal history (101.867667ms)
-✔ predictive work can be cancelled before any scientific state changes (1.110913ms)
-✔ NMPC estimator-off fallback holds without hidden-state feedback (0.515743ms)
-✔ flowsheet preserves material and thermal balances during real dynamics (1.179344ms)
-✔ tank mixing follows independent analytic response (1.134368ms)
-✔ invalid graph, settings and occupied ports are rejected (1.030474ms)
-✔ unknown desktop payload survives exact roundtrip and remains unexecutable (0.481442ms)
-✔ mobile extension fields and separation of layout survive roundtrip (2.202188ms)
-✔ CSV exports every numerical sample without chart decimation (9.653709ms)
-✔ seed changes sensor data and identical seeds replay deterministically (19.437831ms)
-✔ RK4 refinement agrees after nonlinear disturbance (1.870547ms)
-✔ manifest initial configuration and causal event log reproduce a complete run (36.464547ms)
-✔ mixer, splitter and pressure/thermal units conserve the connected network (0.557816ms)
-ℹ tests 18
+✔ metrics respect elapsed sample intervals, disabled observers and cascade units (5.689165ms)
+✔ recovered PG and EB agree with independent archived DOP853 trajectories (3.773302ms)
+✔ original TypeScript trajectories retain substep equivalence in SI seconds (3.200725ms)
+✔ every supported model and observer runs with finite PSD covariance (319.32981ms)
+✔ checkpoint recovery preserves RNG, PID and observer state exactly (20.046554ms)
+✔ observer cannot read hidden truth; initialization independent of plant override (2.769307ms)
+✔ PID, cascade and bounded NMPC change applied inputs, retain causal history (72.886137ms)
+✔ predictive work can be cancelled before any scientific state changes (0.72335ms)
+✔ NMPC estimator-off fallback holds without hidden-state feedback (0.386371ms)
+✔ flowsheet preserves material and thermal balances during real dynamics (1.157662ms)
+✔ tank mixing follows independent analytic response (0.925409ms)
+✔ invalid graph, settings and occupied ports are rejected (1.045687ms)
+✔ unknown desktop payload survives exact roundtrip and remains unexecutable (0.375696ms)
+✔ mobile extension fields and separation of layout survive roundtrip (1.578785ms)
+✔ CSV exports every numerical sample without chart decimation (5.582948ms)
+✔ seed changes sensor data and identical seeds replay deterministically (11.829368ms)
+✔ RK4 refinement agrees after nonlinear disturbance (1.109712ms)
+✔ manifest initial configuration and causal event log reproduce a complete run (24.20854ms)
+✔ mixer, splitter and pressure/thermal units conserve the connected network (1.090983ms)
+ℹ tests 19
 ℹ suites 0
-ℹ pass 18
+ℹ pass 19
 ℹ fail 0
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 867.70185
+ℹ duration_ms 631.78396

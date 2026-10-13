@@ -23,6 +23,29 @@ import {
   NOMINAL,
 } from "../../../lib/simulation/model.ts";
 const science = (e) => e.history.map(({ computeMs, ...s }) => s);
+test("metrics respect elapsed sample intervals, disabled observers and cascade units", () => {
+  const p = newProject("pg-original");
+  p.science.settings.setpoint += 1;
+  p.science.settings.observer = "off";
+  const e = new Engine(p);
+  e.step();
+  const first = e.last;
+  e.configure({ dt: 27 });
+  e.step();
+  const second = e.last, ti = e.model.ti;
+  const firstError = Math.abs(first.sp - first.x[ti]);
+  const secondError = Math.abs(second.sp - second.x[ti]);
+  const result = metrics(e);
+  assert.ok(Math.abs(result.iae - (firstError * 54 + secondError * 27)) < 1e-9);
+  assert.ok(Math.abs(result.itae - (firstError * 54 * 54 + secondError * 27 * 81)) < 1e-8);
+  assert.equal(result.rmse, null);
+  e.configure({ observer: "ukf", controller: "cascade", setpoint: 2.4 });
+  e.step();
+  e.configure({ controller: "pid", setpoint: 333.3 });
+  e.step();
+  assert.equal(metrics(e).iae, null);
+  assert.ok(Number.isFinite(metrics(e).rmse));
+});
 test("recovered PG and EB agree with independent archived DOP853 trajectories", () => {
   for (const r of referenceChecks()) assert.ok(r.ok, JSON.stringify(r));
 });

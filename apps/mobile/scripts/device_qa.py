@@ -32,8 +32,15 @@ try:
  adb('shell','settings','put','system','accelerometer_rotation','0');adb('shell','settings','put','system','user_rotation','0')
  launch=adb('shell','am','start','-W','-n',PKG+'/.MainActivity');(OUT/'launch.txt').write_text(launch)
  find('CSTR');screen('home.png');tap('CSTR');portrait_play=tap('Iniciar simulação');time.sleep(2);tap_at(portrait_play);before=clock();check('real dynamic simulation advances',float(before.replace(',','.'))>0,before)
+ rb=bounds('R-101');tap_at(((rb[0]+rb[2])//2,rb[1]-45))
  screen('portrait.png');(OUT/'memory-portrait.txt').write_text(adb('shell','dumpsys','meminfo',PKG));(OUT/'gfx-portrait.txt').write_text(adb('shell','dumpsys','gfxinfo',PKG))
- adb('shell','settings','put','system','user_rotation','1');time.sleep(2);check('rotation preserves paused time',clock()==before);screen('landscape.png');(OUT/'memory-landscape.txt').write_text(adb('shell','dumpsys','meminfo',PKG));(OUT/'gfx-landscape.txt').write_text(adb('shell','dumpsys','gfxinfo',PKG))
+ adb('shell','settings','put','system','user_rotation','1');time.sleep(2);check('rotation preserves paused time',clock()==before)
+ check('rotation preserves selected equipment',find('selected-node').get('text')=='R-101')
+ nav=bounds('Ensaios');density=int(re.findall(r'\d+',adb('shell','wm','density'))[-1])/160
+ check('landscape final navigation target fully visible',nav[3]-nav[1]>=48*density-2,nav)
+ tap('Ensaios');find('Experiment Lab');tap('Planta');rb=bounds('R-101');cb=bounds('flow-canvas')
+ check('landscape equipment label remains in canvas',rb[1]>=cb[1] and rb[3]<=cb[3],{'equipment':rb,'canvas':cb})
+ screen('landscape.png');(OUT/'memory-landscape.txt').write_text(adb('shell','dumpsys','meminfo',PKG));(OUT/'gfx-landscape.txt').write_text(adb('shell','dumpsys','gfxinfo',PKG))
  for rotation in [0,1,0,1]:
   adb('shell','settings','put','system','user_rotation',rotation);time.sleep(.3)
  check('rapid rotations preserve state',clock()==before)

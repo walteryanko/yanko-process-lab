@@ -286,7 +286,7 @@ export function FlowCanvas({
   }
   React.useEffect(() => {
     fit();
-  }, [width, project.id]);
+  }, [width, height, project.id]);
   return (
     <View
       onLayout={(e) => setWidth(e.nativeEvent.layout.width)}
