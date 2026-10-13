@@ -8,7 +8,17 @@ def check(name,condition,detail=None):
  report['checks'].append({'name':name,'ok':bool(condition),'detail':detail});print(name,condition,flush=True)
  if not condition:raise AssertionError(name+': '+str(detail))
 def xml():
- adb('shell','uiautomator','dump','/sdcard/window.xml');return ET.fromstring(adb('shell','cat','/sdcard/window.xml'))
+ adb('shell','uiautomator','dump','/sdcard/window.xml');root=ET.fromstring(adb('shell','cat','/sdcard/window.xml'))
+ # CI image may show an unrelated Pixel Launcher boot ANR. Never dismiss ProcessLab failures.
+ if any(n.get('text')=="Pixel Launcher isn't responding" for n in root.iter('node')):
+  report['emulator_launcher_recoveries']=report.get('emulator_launcher_recoveries',0)+1
+  close=next(n for n in root.iter('node') if n.get('resource-id')=='android:id/aerr_close')
+  b=list(map(int,re.findall(r'\d+',close.attrib['bounds'])))
+  adb('shell','input','tap',(b[0]+b[2])//2,(b[1]+b[3])//2)
+  adb('shell','am','force-stop','com.google.android.apps.nexuslauncher')
+  adb('shell','am','start','-W','-n',PKG+'/.MainActivity');time.sleep(1)
+  adb('shell','uiautomator','dump','/sdcard/window.xml');root=ET.fromstring(adb('shell','cat','/sdcard/window.xml'))
+ return root
 def find(label,wait=30):
  stop=time.monotonic()+wait
  while time.monotonic()<stop:
@@ -23,6 +33,16 @@ def tap(label):
  n=find(label);nums=list(map(int,re.findall(r'\d+',n.attrib['bounds'])));point=((nums[0]+nums[2])//2,(nums[1]+nums[3])//2);tap_at(point);return point
 def bounds(label):return list(map(int,re.findall(r'\d+',find(label).attrib['bounds'])))
 def clock():return find('simulation-time').get('text')
+def tap_scrolled(label):
+ for _ in range(8):
+  root=xml()
+  for n in root.iter('node'):
+   if n.get('content-desc')==label or n.get('text')==label:
+    b=list(map(int,re.findall(r'\d+',n.attrib['bounds'])))
+    if b[3]-b[1]>60 and b[2]>b[0]:return tap(label)
+  b=bounds('properties-scroll');x=(b[0]+b[2])//2
+  adb('shell','input','swipe',x,b[3]-30,x,b[1]+30,500);time.sleep(.4)
+ raise AssertionError('Cannot scroll to '+label)
 def screen(name):
  (OUT/name).write_bytes(subprocess.check_output(['adb','exec-out','screencap','-p']))
 try:
@@ -30,6 +50,7 @@ try:
  adb('install','-r',apk,timeout=120);check('release APK installed',True)
  adb('logcat','-c');adb('shell','svc','wifi','disable');adb('shell','svc','data','disable')
  adb('shell','settings','put','system','accelerometer_rotation','0');adb('shell','settings','put','system','user_rotation','0')
+ adb('shell','am','force-stop','com.google.android.apps.nexuslauncher');time.sleep(3)
  launch=adb('shell','am','start','-W','-n',PKG+'/.MainActivity');(OUT/'launch.txt').write_text(launch)
  find('CSTR');screen('home.png');tap('CSTR');portrait_play=tap('Iniciar simulação');time.sleep(2);tap_at(portrait_play);before=clock();check('real dynamic simulation advances',float(before.replace(',','.'))>0,before)
  rb=bounds('R-101');tap_at(((rb[0]+rb[2])//2,rb[1]-45))
@@ -49,6 +70,14 @@ try:
  adb('shell','am','start','-W','-n',PKG+'/.MainActivity')
  # Recovered project is behind the home screen; use saved project picker without creating a new one.
  tap('Abrir projetos');tap('Abrir CSTR · Propilenoglicol');check('SQLite survives process termination',clock()==after,{'before':after,'after':clock()})
+ tap('Controle');tap('Ajustar parâmetros');adb('shell','settings','put','secure','show_ime_with_hard_keyboard','1');tap('Setpoint K');adb('shell','input','text','333.456');time.sleep(.5)
+ check('exact numeric entry retains decimals',find('Setpoint K').get('text')=='333.456');screen('numeric-keyboard.png')
+ tap_scrolled('Aplicar');tap('Ajustar parâmetros');check('apply commits currently focused numeric value',find('Setpoint K').get('text')=='333.456');tap('Setpoint K')
+ adb('shell','settings','put','system','user_rotation','1');time.sleep(.8)
+ check('rotation preserves numeric edit',find('Setpoint K').get('text')=='333.456')
+ adb('shell','settings','put','system','user_rotation','0');time.sleep(.8)
+ tap('Fechar')
+ check('numeric configuration preserves simulation time',clock()==after)
  tap('Sensores');screen('sensors.png')
  tap('Início');tap('Nova planta');tap('Mover equipamento')
  before_bounds=bounds('R-101');x=(before_bounds[0]+before_bounds[2])//2;y=before_bounds[1]-45

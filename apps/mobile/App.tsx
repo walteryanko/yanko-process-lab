@@ -916,6 +916,7 @@ function Screen() {
       label={label}
       value={form[key] as number}
       unit={unit}
+      commitWhileEditing
       onChange={(v) => setForm((x) => ({ ...x, [key]: v }))}
     />
   );
@@ -1142,6 +1143,7 @@ function Screen() {
               />
             </View>
             <ScrollView
+              testID="properties-scroll"
               keyboardShouldPersistTaps="handled"
               contentContainerStyle={{
                 padding: 18,

@@ -146,14 +146,22 @@ export function NumberField({
   value,
   unit,
   onChange,
+  commitWhileEditing = false,
 }: {
   label: string;
   value: number;
   unit?: string;
   onChange: (v: number) => void;
+  commitWhileEditing?: boolean;
 }) {
   const [text, setText] = React.useState(String(value));
-  React.useEffect(() => setText(String(value)), [value]);
+  const focused = React.useRef(false), lastValid = React.useRef(value);
+  React.useEffect(() => {
+    if (!focused.current) {
+      setText(String(value));
+      if (Number.isFinite(value)) lastValid.current = value;
+    }
+  }, [value]);
   return (
     <View style={{ gap: 6, flex: 1, minWidth: 130 }}>
       <Text style={T.label}>
@@ -164,12 +172,26 @@ export function NumberField({
         keyboardType="numeric"
         selectTextOnFocus
         value={text}
-        onChangeText={setText}
+        onFocus={() => { focused.current = true; }}
+        onChangeText={(next) => {
+          setText(next);
+          if (commitWhileEditing) {
+            const n = Number(next.replace(",", "."));
+            const valid = !!next.trim() && Number.isFinite(n);
+            if (valid) lastValid.current = n;
+            onChange(valid ? n : Number.NaN);
+          }
+        }}
         onEndEditing={() => {
+          focused.current = false;
           const n = Number(text.replace(",", "."));
           if (text.trim() && Number.isFinite(n)) {
+            lastValid.current = n;
             onChange(n);
-          } else setText(String(value));
+          } else {
+            setText(String(lastValid.current));
+            onChange(lastValid.current);
+          }
         }}
         style={T.input}
       />
