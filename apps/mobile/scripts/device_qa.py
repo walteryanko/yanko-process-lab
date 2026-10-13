@@ -1,5 +1,5 @@
 """Real adb/UIAutomator release-APK verification, no screenshots from mockups."""
-import subprocess,time,json,pathlib,re,xml.etree.ElementTree as ET,traceback
+import subprocess,time,json,pathlib,re,xml.etree.ElementTree as ET,traceback,os,hashlib
 ROOT=pathlib.Path(__file__).resolve().parents[1];OUT=ROOT/'release';OUT.mkdir(exist_ok=True)
 PKG='com.ycs.processlab';report={'checks':[],'ok':False}
 def adb(*args,timeout=40):
@@ -23,8 +23,10 @@ def find(label,wait=30):
  stop=time.monotonic()+wait
  while time.monotonic()<stop:
   root=xml()
-  for n in root.iter('node'):
-   if n.get('content-desc')==label or n.get('text')==label or n.get('resource-id','').endswith(label):return n
+  nodes=list(root.iter('node'))
+  for attribute in ['content-desc','resource-id','text']:
+   for n in nodes:
+    if (n.get(attribute,'').endswith(label) if attribute=='resource-id' else n.get(attribute)==label):return n
   time.sleep(.5)
  raise AssertionError('UI element missing: '+label)
 def tap_at(point):
@@ -46,7 +48,10 @@ def tap_scrolled(label):
 def screen(name):
  (OUT/name).write_bytes(subprocess.check_output(['adb','exec-out','screencap','-p']))
 try:
- apk=next((ROOT/'android/app/build/outputs/apk/release').glob('*x86_64*.apk'))
+ apk=pathlib.Path(os.environ['PROCESSLAB_APK']) if os.environ.get('PROCESSLAB_APK') else next((ROOT/'android/app/build/outputs/apk/release').glob('*x86_64*.apk'))
+ report['tested_apk_sha256']=hashlib.sha256(apk.read_bytes()).hexdigest()
+ report['device_abis']=adb('shell','getprop','ro.product.cpu.abilist').strip()
+ report['native_bridge']=adb('shell','getprop','ro.dalvik.vm.native.bridge').strip()
  adb('install','-r',apk,timeout=120);check('release APK installed',True)
  adb('logcat','-c');adb('shell','svc','wifi','disable');adb('shell','svc','data','disable')
  adb('shell','settings','put','system','accelerometer_rotation','0');adb('shell','settings','put','system','user_rotation','0')
