@@ -70,7 +70,7 @@ jobs:
       - name: Verify release metadata and signature
         working-directory: apps/mobile
         run: |
-          UNIVERSAL_APK=$(find android/app/build/outputs/apk/release -name '*universal*.apk' -print -quit)
+          UNIVERSAL_APK=android/app/build/outputs/apk/release/app-release.apk
           test -s "$UNIVERSAL_APK"
           cp "$UNIVERSAL_APK" "$PROCESSLAB_APK"
           BUILD_TOOLS=$(find "$ANDROID_HOME/build-tools" -maxdepth 1 -mindepth 1 -type d | sort -V | tail -1)

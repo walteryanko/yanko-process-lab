@@ -50,7 +50,7 @@ def tap_scrolled(label):
 def screen(name):
  (OUT/name).write_bytes(subprocess.check_output(['adb','exec-out','screencap','-p']))
 try:
- apk=pathlib.Path(os.environ['PROCESSLAB_APK']) if os.environ.get('PROCESSLAB_APK') else next((ROOT/'android/app/build/outputs/apk/release').glob('*x86_64*.apk'))
+ apk=pathlib.Path(os.environ['PROCESSLAB_APK']) if os.environ.get('PROCESSLAB_APK') else ROOT/'android/app/build/outputs/apk/release/app-release.apk'
  report['tested_apk_sha256']=hashlib.sha256(apk.read_bytes()).hexdigest()
  report['device_abis']=adb('shell','getprop','ro.product.cpu.abilist').strip()
  report['native_bridge']=adb('shell','getprop','ro.dalvik.vm.native.bridge').strip()
