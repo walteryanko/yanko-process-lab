@@ -37,6 +37,13 @@ module.exports = (config) =>
     buildTypes {`,
       );
     }
+    s = s.replace(/universalApk false/g, "universalApk true");
+    if (!s.includes("PROCESSLAB_SUPPORTED_ABIS")) {
+      if (!s.includes("jniLibs {")) throw new Error("Android template lacks JNI packaging configuration");
+      s = s.replace("jniLibs {", `jniLibs {
+            // PROCESSLAB_SUPPORTED_ABIS: AAR dependencies also contain incomplete 32-bit variants.
+            excludes += ['lib/armeabi-v7a/**', 'lib/x86/**']`);
+    }
     c.modResults.contents = s;
     return c;
   });

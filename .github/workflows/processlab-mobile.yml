@@ -76,6 +76,7 @@ jobs:
           BUILD_TOOLS=$(find "$ANDROID_HOME/build-tools" -maxdepth 1 -mindepth 1 -type d | sort -V | tail -1)
           "$BUILD_TOOLS/apksigner" verify --verbose --print-certs "$PROCESSLAB_APK" > release/signature.txt
           "$BUILD_TOOLS/aapt" dump badging "$PROCESSLAB_APK" > release/apk-metadata.txt
+          python3 scripts/verify_apk.py "$PROCESSLAB_APK" > release/native-packaging.json
           sha256sum release/*.apk > release/SHA256SUMS.txt
           printf '{"commit":"%s","run_id":"%s","run_url":"https://github.com/%s/actions/runs/%s","version":"0.1.0-beta.1"}\n' "$GITHUB_SHA" "$GITHUB_RUN_ID" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID" > release/build-info.json
       - name: Enable KVM
