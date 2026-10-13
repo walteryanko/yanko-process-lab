@@ -16,11 +16,13 @@ $bundleArgs = @(
   '--workpath', (Join-Path $repo 'studio/build'), '--specpath', (Join-Path $repo 'studio/build'),
   '--paths', (Join-Path $repo 'studio'), '--collect-all', 'webview',
   '--additional-hooks-dir', (Join-Path $repo 'studio/hooks'),
-  '--hidden-import', 'scipy.special._cdflib'
+  '--hidden-import', 'scipy.special._cdflib', '--hidden-import', 'casadi',
+  '--copy-metadata', 'numpy', '--copy-metadata', 'scipy', '--copy-metadata', 'pint'
 )
 $dataFiles = @(
   @('studio/ui/dist', 'studio/ui/dist'),
   @('studio/build-info.json', 'studio'),
+  @('studio/processlab/*.py', 'studio/processlab'),
   @('research/beyond/vendor/pg_reference.py', 'research/beyond/vendor'),
   @('research/beyond/vendor/eb_reference.py', 'research/beyond/vendor'),
   @('LICENSE', '.'),

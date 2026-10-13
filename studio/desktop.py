@@ -22,11 +22,17 @@ def main():
     logging.basicConfig(filename=api.storage.root/"processlab.log",level=logging.INFO,format="%(asctime)s %(levelname)s %(message)s")
     if args.smoke:
         boot=api.request("bootstrap");assert boot["ok"],boot
-        p=boot["data"]["scenarios"][1]
-        for method,payload in [("save",p),("open",{"id":p["id"]}),("reset",p),("advance",{"count":3})]:
-            response=api.request(method,payload);assert response["ok"],response
-        assert response["data"]["status"]!="failed",response
-        out={"ok":True,"frozen":bool(getattr(sys,"frozen",False)),"time":response["data"]["time"],"platform":sys.platform,"ui_exists":(ROOT/"studio/ui/dist/index.html").is_file()}
+        cases=[]
+        for p in boot["data"]["scenarios"]:
+            for method,payload in [("save",p),("open",{"id":p["id"]}),("reset",p),("advance",{"count":3})]:
+                response=api.request(method,payload);assert response["ok"],response
+            result=response["data"]
+            assert result["status"] not in ("failed","constraint_stop"),response
+            if getattr(sys,"frozen",False):
+                assert result["manifest"]["engine_source_sha256"],"Bundled engine source provenance missing"
+                assert "not installed" not in result["manifest"]["dependencies"].values(),"Dependency metadata missing"
+            cases.append({"id":p["id"],"model":p["model"],"time":result["time"],"status":result["status"],"manifest":result["manifest"]})
+        out={"ok":True,"frozen":bool(getattr(sys,"frozen",False)),"time":result["time"],"platform":sys.platform,"ui_exists":(ROOT/"studio/ui/dist/index.html").is_file(),"cases":cases}
         if args.smoke_output:atomic_json(args.smoke_output,out)
         print(json.dumps(out));return
     if args.run or args.replay:

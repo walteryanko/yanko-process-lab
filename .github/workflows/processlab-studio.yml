@@ -52,7 +52,7 @@ jobs:
           $proc = Start-Process $exe -ArgumentList '--smoke --data-dir studio/build/frozen-data --smoke-output studio/release/frozen-smoke.json' -Wait -PassThru
           if ($proc.ExitCode -ne 0 -or !(Test-Path studio/release/frozen-smoke.json)) { throw 'Frozen engine smoke failed' }
           $smoke = Get-Content studio/release/frozen-smoke.json | ConvertFrom-Json
-          if (!$smoke.ok -or !$smoke.frozen -or !$smoke.ui_exists) { throw 'Frozen smoke evidence invalid' }
+          if (!$smoke.ok -or !$smoke.frozen -or !$smoke.ui_exists -or $smoke.cases.Count -ne 5) { throw 'Frozen smoke evidence invalid' }
           $installer = Resolve-Path studio/release/YCS-ProcessLab-Studio-0.1.0-Setup.exe
           $install = Start-Process $installer -ArgumentList '/S' -Wait -PassThru
           if ($install.ExitCode -ne 0) { throw 'Silent install failed' }
