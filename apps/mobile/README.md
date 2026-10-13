@@ -85,9 +85,11 @@ converted. Saving a desktop document does not claim trajectory compatibility.
 ## Verification
 
 `evidence/` contains actual local results. The Android Actions workflow installs the
-release x86_64 APK into an Android emulator, disables Wi-Fi/data, verifies numerical
+same universal release APK delivered to users into an Android emulator, disables Wi-Fi/data, verifies numerical
 fixtures on Hermes, tests SQLite, checks rotation and process recovery, and captures
-real portrait/landscape PNGs. The installable phone artifact is arm64-v8a. No physical
+real portrait/landscape PNGs. The installable artifact contains arm64-v8a and x86_64;
+the emulator executes its native x86_64 libraries. The larger APK avoids relying on
+ARM translation for release verification. No physical
 phone memory/battery/thermal measurements are claimed by emulator evidence.
 
 ## Current limits
@@ -100,7 +102,7 @@ every multi-touch, keyboard, split-screen, reboot, accessibility or Android vers
 
 ## Quick use (pt-BR)
 
-1. Instale o APK arm64, permitindo a instalação para o aplicativo que abre o arquivo.
+1. Instale o APK universal (arm64/x86_64), permitindo a instalação para o aplicativo que abre o arquivo.
 2. Abra **CSTR** e toque em **▶**. O relógio mostra minutos simulados.
 3. **⚡** altera a temperatura de alimentação; **Controle** ajusta PID/cascata/NMPC.
 4. **Sensores** mostra concentração estimada, medições e covariância.

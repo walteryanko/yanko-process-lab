@@ -1,7 +1,7 @@
 name: ProcessLab Mobile Android
 on:
   push:
-    branches: ['work/processlab-mobile-*']
+    branches: ['work/processlab-mobile-*', 'work/mobile-release-verification-*']
     paths: ['apps/mobile/**', 'packages/scientific-core/**', 'lib/simulation/**', '.github/workflows/processlab-mobile.yml']
   workflow_dispatch:
 permissions:
@@ -19,6 +19,7 @@ jobs:
     env:
       CI: '1'
       GRADLE_OPTS: '-Dorg.gradle.jvmargs=-Xmx4096m -Dorg.gradle.daemon=false'
+      PROCESSLAB_APK: ${{ github.workspace }}/apps/mobile/release/YCS-ProcessLab-Mobile-0.1.0-beta.1-universal-evaluation.apk
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -69,12 +70,12 @@ jobs:
       - name: Verify release metadata and signature
         working-directory: apps/mobile
         run: |
-          ARM_APK=$(find android/app/build/outputs/apk/release -name '*arm64-v8a*.apk' -print -quit)
-          test -s "$ARM_APK"
-          cp "$ARM_APK" release/YCS-ProcessLab-Mobile-0.1.0-beta.1-arm64-evaluation.apk
+          UNIVERSAL_APK=$(find android/app/build/outputs/apk/release -name '*universal*.apk' -print -quit)
+          test -s "$UNIVERSAL_APK"
+          cp "$UNIVERSAL_APK" "$PROCESSLAB_APK"
           BUILD_TOOLS=$(find "$ANDROID_HOME/build-tools" -maxdepth 1 -mindepth 1 -type d | sort -V | tail -1)
-          "$BUILD_TOOLS/apksigner" verify --verbose --print-certs "$ARM_APK" > release/signature.txt
-          "$BUILD_TOOLS/aapt" dump badging "$ARM_APK" > release/apk-metadata.txt
+          "$BUILD_TOOLS/apksigner" verify --verbose --print-certs "$PROCESSLAB_APK" > release/signature.txt
+          "$BUILD_TOOLS/aapt" dump badging "$PROCESSLAB_APK" > release/apk-metadata.txt
           sha256sum release/*.apk > release/SHA256SUMS.txt
           printf '{"commit":"%s","run_id":"%s","run_url":"https://github.com/%s/actions/runs/%s","version":"0.1.0-beta.1"}\n' "$GITHUB_SHA" "$GITHUB_RUN_ID" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID" > release/build-info.json
       - name: Enable KVM

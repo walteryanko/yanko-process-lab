@@ -30,7 +30,7 @@ module.exports = (config) =>
         abi {
             reset()
             enable true
-            universalApk false
+            universalApk true
             include 'arm64-v8a', 'x86_64'
         }
     }
