@@ -48,7 +48,7 @@ estimada. Os sinais químicos não são acessíveis ao controlador sem um observ
 Uma nova referência pode ser aplicada durante a execução e é registrada no manifesto.
 
 Em **Sensores virtuais**, selecione EKF, UKF ou MHE. Configure ruído, atraso, perdas,
-viés e frequência. Amostra química com período zero desliga o laboratório. Um período
+viés e frequência. Amostra química com período zero desativa a coleta química emulada. Um período
 10 e atraso 3 significa coleta a cada 10 passos e disponibilidade três passos depois.
 Compare estados simulados e estimados na tabela; as incertezas são aproximações.
 

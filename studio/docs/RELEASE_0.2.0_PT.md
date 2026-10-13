@@ -28,3 +28,6 @@ O Windows CI executa os testes, empacota o programa, roda o laboratório no exec
 congelado, instala o Setup e abre a interface nativa, o laboratório e a ajuda.
 A execução no runner Windows Server 2022 não substitui um teste de desempenho no
 Windows 10 / i5-7200U / 8 GB. O programa segue sem assinatura comercial de código.
+
+Instalador aprovado no Windows: consulte `WINDOWS_VALIDATION_0.2.0.md` e os registros
+em `studio/evidence/windows-ci-0.2.0`. O binário corresponde ao commit `3acc74b`.

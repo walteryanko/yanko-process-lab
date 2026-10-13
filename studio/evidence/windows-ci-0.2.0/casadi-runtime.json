@@ -1,0 +1,22 @@
+[
+  {
+    "bytes": 12859276,
+    "sha256": "de690f47d7ac85e5daf58f6905e374030c8765f626ee7c33c708cd747372853f",
+    "name": "libcasadi.dll"
+  },
+  {
+    "bytes": 657651,
+    "sha256": "c55dcb8de1216463fb637c64981bfb5a47bc683090fc670d7e718e715cdeafc9",
+    "name": "libgcc_s_seh-1.dll"
+  },
+  {
+    "bytes": 1909454,
+    "sha256": "b107fe0af7b88f9d095ddbea85ff0013ad87a8effd8f2eb34af1f3d3e8abcda5",
+    "name": "libstdc++-6.dll"
+  },
+  {
+    "bytes": 84862,
+    "sha256": "00bb38eddc3b166f2e79ca887714f4722c8aa34175fa6c440123ca5d250d4f36",
+    "name": "libwinpthread-1.dll"
+  }
+]

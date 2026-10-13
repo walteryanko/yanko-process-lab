@@ -1,0 +1,27 @@
+{
+  "workflow_run": 38439420645,
+  "job_id": 115441801188,
+  "url": "https://github.com/walteryanko/yanko-process-lab/actions/runs/38439420645",
+  "conclusion": "success",
+  "code_commit": "3acc74b525cfd9e8bcfd00ce860e2478bea8a451",
+  "general_verification_run": 38439420728,
+  "general_verification_conclusion": "success",
+  "installer": "YCS-ProcessLab-Studio-0.2.0-Setup.exe",
+  "installer_bytes": 41146924,
+  "installer_sha256": "33720fcde46ef9018e7a5452896760a75dcb6b1684d79438ba38236ae0c4ed28",
+  "artifact_id": 11835020881,
+  "archive_sha256": "0e1913a0da8171a33f120a49789dca6cd777ae53362d6b2d3a0622829a6fcd79",
+  "frozen_engine_source_sha256": "c31eeb9be20e55f5b16414bc7ea43c7407b5c818eb3b285b6692d4670ad123b3",
+  "python_tests": 35,
+  "typescript_tests": 11,
+  "local_browser_checks": 18,
+  "installed_gui": {
+    "ok": true,
+    "renderer": "edgechromium",
+    "frozen": true,
+    "ui_rendered": true,
+    "laboratory_rendered": true,
+    "help_rendered": true
+  },
+  "scope": "Windows Server 2022 CI; Windows 10 / i5-7200U / 8 GB performance remains unmeasured."
+}
