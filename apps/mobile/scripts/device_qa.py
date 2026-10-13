@@ -17,8 +17,10 @@ def find(label,wait=30):
    if n.get('content-desc')==label or n.get('text')==label or n.get('resource-id','').endswith(label):return n
   time.sleep(.5)
  raise AssertionError('UI element missing: '+label)
+def tap_at(point):
+ adb('shell','input','tap',*point);time.sleep(.4)
 def tap(label):
- n=find(label);nums=list(map(int,re.findall(r'\d+',n.attrib['bounds'])));adb('shell','input','tap',(nums[0]+nums[2])//2,(nums[1]+nums[3])//2);time.sleep(.4)
+ n=find(label);nums=list(map(int,re.findall(r'\d+',n.attrib['bounds'])));point=((nums[0]+nums[2])//2,(nums[1]+nums[3])//2);tap_at(point);return point
 def bounds(label):return list(map(int,re.findall(r'\d+',find(label).attrib['bounds'])))
 def clock():return find('simulation-time').get('text')
 def screen(name):
@@ -29,13 +31,13 @@ try:
  adb('logcat','-c');adb('shell','svc','wifi','disable');adb('shell','svc','data','disable')
  adb('shell','settings','put','system','accelerometer_rotation','0');adb('shell','settings','put','system','user_rotation','0')
  launch=adb('shell','am','start','-W','-n',PKG+'/.MainActivity');(OUT/'launch.txt').write_text(launch)
- screen('home.png');tap('CSTR');tap('Iniciar simulação');time.sleep(2);tap('Pausar simulação');before=clock();check('real dynamic simulation advances',float(before.replace(',','.'))>0,before)
+ find('CSTR');screen('home.png');tap('CSTR');portrait_play=tap('Iniciar simulação');time.sleep(2);tap_at(portrait_play);before=clock();check('real dynamic simulation advances',float(before.replace(',','.'))>0,before)
  screen('portrait.png');(OUT/'memory-portrait.txt').write_text(adb('shell','dumpsys','meminfo',PKG));(OUT/'gfx-portrait.txt').write_text(adb('shell','dumpsys','gfxinfo',PKG))
  adb('shell','settings','put','system','user_rotation','1');time.sleep(2);check('rotation preserves paused time',clock()==before);screen('landscape.png');(OUT/'memory-landscape.txt').write_text(adb('shell','dumpsys','meminfo',PKG));(OUT/'gfx-landscape.txt').write_text(adb('shell','dumpsys','gfxinfo',PKG))
  for rotation in [0,1,0,1]:
   adb('shell','settings','put','system','user_rotation',rotation);time.sleep(.3)
  check('rapid rotations preserve state',clock()==before)
- tap('Iniciar simulação');time.sleep(1);adb('shell','settings','put','system','user_rotation','0');time.sleep(1);tap('Pausar simulação');after=clock();check('rotation while running preserves progress',float(after.replace(',','.'))>=float(before.replace(',','.')),after)
+ tap('Iniciar simulação');time.sleep(1);adb('shell','settings','put','system','user_rotation','0');time.sleep(1);tap_at(portrait_play);after=clock();check('rotation while running preserves progress',float(after.replace(',','.'))>=float(before.replace(',','.')),after)
  tap('Parar e salvar');time.sleep(1);adb('shell','input','keyevent','KEYCODE_HOME');time.sleep(1);adb('shell','am','force-stop',PKG)
  adb('shell','am','start','-W','-n',PKG+'/.MainActivity')
  # Recovered project is behind the home screen; use saved project picker without creating a new one.
@@ -48,7 +50,7 @@ try:
  tap('Desfazer');time.sleep(.5);check('layout undo restores equipment',bounds('R-101')==before_bounds)
  tap('Mover planta');before_bounds=bounds('R-101');cb=bounds('flow-canvas');x=(cb[0]+cb[2])//2;y=(cb[1]+cb[3])//2
  adb('shell','input','swipe',x,y,x-55,y+25,600);time.sleep(.5);check('actual canvas pan changes view',bounds('R-101')!=before_bounds)
- tap('Centralizar planta');tap('Iniciar simulação');time.sleep(1);tap('Pausar simulação');check('connected equipment network executes on phone',float(clock().replace(',','.'))>0);screen('flow-editor.png')
+ tap('Centralizar planta');flow_play=tap('Iniciar simulação');time.sleep(1);tap_at(flow_play);check('connected equipment network executes on phone',float(clock().replace(',','.'))>0);screen('flow-editor.png')
  adb('shell','am','start','-W','-a','android.intent.action.VIEW','-d','processlab://verify','-p',PKG)
  find('VERIFIED_DEVICE_OK',wait=150);logs=adb('logcat','-d','-v','brief');(OUT/'android-logcat.txt').write_text(logs)
  matches=re.findall(r'PROCESSLAB_QA_RESULT (\{[^\n]+\})',logs)
