@@ -17,6 +17,7 @@ jobs:
       OPENBLAS_NUM_THREADS: '1'
       OMP_NUM_THREADS: '1'
       PYTHONPATH: studio
+      PYTHONUTF8: '1'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -46,22 +47,34 @@ jobs:
           if (!(Test-Path "${env:ProgramFiles(x86)}\NSIS\makensis.exe")) { choco install nsis --yes --no-progress }
       - name: Build native executable and installer
         run: ./studio/build_windows.ps1
-      - name: Verify frozen executable and actual installer
+      - name: Verify all scenarios in frozen executable
+        timeout-minutes: 3
         run: |
           $exe = Resolve-Path studio/dist/YCSProcessLab/YCSProcessLab.exe
-          $proc = Start-Process $exe -ArgumentList '--smoke --data-dir studio/build/frozen-data --smoke-output studio/release/frozen-smoke.json' -Wait -PassThru
+          $proc = Start-Process $exe -ArgumentList '--smoke --data-dir studio/build/frozen-data --smoke-output studio/release/frozen-smoke.json' -PassThru
+          if (!$proc.WaitForExit(90000)) { Stop-Process $proc; throw 'Frozen engine smoke timeout' }
+          if (Test-Path studio/release/frozen-smoke.json) { Get-Content studio/release/frozen-smoke.json }
           if ($proc.ExitCode -ne 0 -or !(Test-Path studio/release/frozen-smoke.json)) { throw 'Frozen engine smoke failed' }
           $smoke = Get-Content studio/release/frozen-smoke.json | ConvertFrom-Json
           if (!$smoke.ok -or !$smoke.frozen -or !$smoke.ui_exists -or $smoke.cases.Count -ne 5) { throw 'Frozen smoke evidence invalid' }
+      - name: Verify actual installation
+        timeout-minutes: 3
+        run: |
           $installer = Resolve-Path studio/release/YCS-ProcessLab-Studio-0.1.0-Setup.exe
-          $install = Start-Process $installer -ArgumentList '/S' -Wait -PassThru
+          $install = Start-Process $installer -ArgumentList '/S' -PassThru
+          if (!$install.WaitForExit(90000)) { Stop-Process $install; throw 'Silent installation timeout' }
           if ($install.ExitCode -ne 0) { throw 'Silent install failed' }
           $installed = "$env:LOCALAPPDATA\Programs\YCS ProcessLab Studio\YCSProcessLab.exe"
           if (!(Test-Path $installed)) { throw 'Installed application missing' }
+      - name: Verify installed native interface
+        timeout-minutes: 3
+        run: |
+          $installed = "$env:LOCALAPPDATA\Programs\YCS ProcessLab Studio\YCSProcessLab.exe"
           $guiOut = Join-Path $PWD 'studio/release/windows-gui-smoke.json'
           $app = Start-Process $installed -ArgumentList "--gui-smoke-output `"$guiOut`"" -PassThru
           if (!$app.WaitForExit(90000)) { Stop-Process $app; throw 'GUI smoke timeout' }
           if (!(Test-Path $guiOut)) { throw 'GUI smoke evidence missing' }
+          Get-Content $guiOut
           $gui = Get-Content $guiOut | ConvertFrom-Json
           if (!$gui.ok -or !$gui.ui_rendered) { throw 'Native Windows interface failed to render' }
       - name: Record environment and dependency provenance

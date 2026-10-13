@@ -7,9 +7,6 @@ import json
 import logging
 import sys
 from pathlib import Path
-from processlab.api import API
-from processlab.models import ROOT
-from processlab.storage import atomic_json
 
 
 def main():
@@ -18,7 +15,11 @@ def main():
     parser.add_argument("--data-dir");parser.add_argument("--smoke",action="store_true")
     parser.add_argument("--smoke-output");parser.add_argument("--run");parser.add_argument("--replay");parser.add_argument("--output")
     parser.add_argument("--gui-smoke-output")
-    args=parser.parse_args();api=API(args.data_dir)
+    args=parser.parse_args()
+    from processlab.api import API
+    from processlab.models import ROOT
+    from processlab.storage import atomic_json
+    api=API(args.data_dir)
     logging.basicConfig(filename=api.storage.root/"processlab.log",level=logging.INFO,format="%(asctime)s %(levelname)s %(message)s")
     if args.smoke:
         boot=api.request("bootstrap");assert boot["ok"],boot
@@ -73,4 +74,23 @@ def main():
     else:webview.start(gui="edgechromium" if sys.platform=="win32" else None)
 
 
-if __name__=="__main__":main()
+if __name__=="__main__":
+    try:main()
+    except Exception as error:
+        import traceback
+        diagnostic={"ok":False,"error":str(error),"type":type(error).__name__,"traceback":traceback.format_exc()}
+        folder=Path(os.environ.get("APPDATA",Path.home()))/"YCS ProcessLab Studio"
+        outputs=[folder/"startup-error.json"]
+        for flag in ("--smoke-output","--gui-smoke-output"):
+            if flag in sys.argv and sys.argv.index(flag)+1<len(sys.argv):
+                outputs.append(Path(sys.argv[sys.argv.index(flag)+1]))
+        for target in outputs:
+            try:
+                target.parent.mkdir(parents=True,exist_ok=True)
+                target.write_text(json.dumps(diagnostic,indent=2),encoding="utf-8")
+            except OSError:pass
+        if sys.stderr is not None:traceback.print_exc()
+        if sys.platform=="win32" and not any(flag in sys.argv for flag in ("--smoke","--gui-smoke-output","--run","--replay")):
+            import ctypes
+            ctypes.windll.user32.MessageBoxW(None,f"Não foi possível iniciar o ProcessLab Studio.\n\n{error}\n\nDetalhes: {outputs[0]}","YCS ProcessLab Studio",16)
+        raise SystemExit(1)
