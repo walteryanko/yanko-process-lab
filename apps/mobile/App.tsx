@@ -254,7 +254,7 @@ function Screen() {
                 size={18}
               />
               <Text style={T.label}>{m.names[j]}</Text>
-              <Text style={{ marginLeft: "auto", color: C.muted }}>↗</Text>
+              <Text style={{ marginLeft: "auto", color: C.muted }}>{s.x[j] - (e!.history[Math.max(0, e!.history.length - 2)]?.x[j] ?? s.x[j]) > 1e-6 ? '↗' : s.x[j] - (e!.history[Math.max(0, e!.history.length - 2)]?.x[j] ?? s.x[j]) < -1e-6 ? '↘' : '→'}</Text>
             </View>
             <View style={[T.row, { alignItems: "baseline", marginTop: 6 }]}>
               <Text style={T.value}>{number(s.x[j], k ? 3 : 1)}</Text>
@@ -322,7 +322,7 @@ function Screen() {
           samples={e.history}
           model={m}
           index={i}
-          height={landscape ? 135 : 170}
+          height={landscape ? 135 : 120}
           showSetpoint={e.settings.controller !== "cascade"}
           showEstimate={e.settings.observer !== "off"}
           measurementIndices={e.settings.measurementIndices}
@@ -858,7 +858,7 @@ function Screen() {
       </View>
       <FlowCanvas
         project={p}
-        height={landscape ? Math.max(210, height - 165) : 235}
+        height={landscape ? Math.max(210, height - 165) : 140}
         onDetails={() => open("properties")}
       />
       {metricCards()}
@@ -869,7 +869,7 @@ function Screen() {
           onPress={() => open("simulation")}
         />
       )}
-      <View
+      {landscape && <View
         style={{
           flexDirection: "row",
           justifyContent: "space-between",
@@ -883,8 +883,8 @@ function Screen() {
           label="Mostrar ou recolher gráfico"
           onPress={() => setShowChart(!showChart)}
         />
-      </View>
-      {showChart && chart()}
+      </View>}
+      {(!landscape || showChart) && chart()}
     </ScrollView>
   );
   const renderTab = () =>

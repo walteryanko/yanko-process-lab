@@ -1,5 +1,5 @@
-import { Engine, metrics } from "../../../packages/scientific-core/engine";
-import { newProject } from "../../../packages/scientific-core/project";
+import { Engine, metrics, csv } from "../../../packages/scientific-core/engine";
+import { newProject, importProject, exportProject } from "../../../packages/scientific-core/project";
 import {
   referenceChecks,
   scientificFingerprint,
@@ -58,6 +58,12 @@ export async function runDeviceVerification() {
     JSON.stringify(a.last.estimate) === JSON.stringify(b.last.estimate);
   await removeProject(p.id);
   await session.save();
+  const projectFile = new File(Paths.cache, 'qa-project.processlab.json');
+  projectFile.write(exportProject(p));
+  const imported = importProject(await projectFile.text());
+  const csvFile = new File(Paths.cache, 'qa-results.csv');
+  csvFile.write(csv(a));
+  const nativeFiles = imported.id === p.id && (await csvFile.text()).split('\n').length === a.history.length + 1;
   const hermes = !!(globalThis as any).HermesInternal;
   const result = {
     ok:
@@ -65,11 +71,13 @@ export async function runDeviceVerification() {
       references.every((r) => r.ok) &&
       fingerprintError < 1e-6 &&
       persistence &&
+      nativeFiles &&
       cases.every((c) => !c.error && c.steps === 60),
     hermes,
     references,
     fingerprintError,
     persistence,
+    nativeFiles,
     cases,
     elapsedMs: performance.now() - started,
     measuredOn: "Android runtime; performance.now; no desktop substitution",
