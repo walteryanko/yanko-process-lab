@@ -15,7 +15,6 @@ import {
   View,
   useWindowDimensions,
   KeyboardAvoidingView,
-  Platform,
   Linking,
 } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
@@ -1092,7 +1091,7 @@ function Screen() {
         supportedOrientations={["portrait", "landscape"]}
       >
         <KeyboardAvoidingView
-          behavior={Platform.OS === "ios" ? "padding" : undefined}
+          behavior="padding"
           style={{
             flex: 1,
             justifyContent: "flex-end",
@@ -1108,7 +1107,8 @@ function Screen() {
             style={[
               styles.sheet,
               {
-                maxHeight: height * 0.9,
+                maxHeight: "90%",
+                flexShrink: 1,
                 width: landscape ? Math.min(640, width * 0.85) : "100%",
                 alignSelf: "center",
               },

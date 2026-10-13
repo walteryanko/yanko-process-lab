@@ -170,6 +170,7 @@ export function NumberField({
       <TextInput
         accessibilityLabel={`${label} ${unit ?? ""}`}
         keyboardType="numeric"
+        disableFullscreenUI
         selectTextOnFocus
         value={text}
         onFocus={() => { focused.current = true; }}

@@ -41,7 +41,9 @@ def tap_scrolled(label):
   for n in root.iter('node'):
    if n.get('content-desc')==label or n.get('text')==label:
     b=list(map(int,re.findall(r'\d+',n.attrib['bounds'])))
-    if b[3]-b[1]>60 and b[2]>b[0]:return tap(label)
+    if b[3]-b[1]>60 and b[2]>b[0]:
+     screen('numeric-apply-visible.png')
+     return tap(label)
   b=bounds('properties-scroll');x=(b[0]+b[2])//2
   adb('shell','input','swipe',x,b[3]-30,x,b[1]+30,500);time.sleep(.4)
  raise AssertionError('Cannot scroll to '+label)
