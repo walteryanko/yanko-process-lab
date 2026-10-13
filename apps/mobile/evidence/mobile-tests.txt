@@ -1,0 +1,24 @@
+✔ recovered PG and EB agree with independent archived DOP853 trajectories (7.443471ms)
+✔ original TypeScript trajectories retain substep equivalence in SI seconds (5.499035ms)
+✔ every supported model and observer runs with finite PSD covariance (367.396282ms)
+✔ checkpoint recovery preserves RNG, PID and observer state exactly (25.258393ms)
+✔ observer cannot read hidden truth; initialization independent of plant override (5.728354ms)
+✔ PID, cascade and bounded NMPC change applied inputs, retain causal history (96.087388ms)
+✔ predictive work can be cancelled before any scientific state changes (0.85168ms)
+✔ NMPC estimator-off fallback holds without hidden-state feedback (0.361294ms)
+✔ flowsheet preserves material and thermal balances during real dynamics (1.052858ms)
+✔ tank mixing follows independent analytic response (1.198693ms)
+✔ invalid graph, settings and occupied ports are rejected (0.673446ms)
+✔ unknown desktop payload survives exact roundtrip and remains unexecutable (0.360774ms)
+✔ mobile extension fields and separation of layout survive roundtrip (1.664503ms)
+✔ CSV exports every numerical sample without chart decimation (6.150659ms)
+✔ seed changes sensor data and identical seeds replay deterministically (15.335625ms)
+✔ RK4 refinement agrees after nonlinear disturbance (1.529643ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 706.789002

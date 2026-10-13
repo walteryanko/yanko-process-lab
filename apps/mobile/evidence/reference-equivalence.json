@@ -1,0 +1,19 @@
+{
+  "runtime": "v24.19.0",
+  "cases": [
+    {
+      "model": "pg-original",
+      "maxError": 1.0743406164692715e-10,
+      "derivativeError": 4.934324553889585e-19,
+      "tolerance": 0.000002,
+      "ok": true
+    },
+    {
+      "model": "eb-reduced",
+      "maxError": 1.1647216524579562e-10,
+      "derivativeError": 4.625929269271486e-20,
+      "tolerance": 0.000002,
+      "ok": true
+    }
+  ]
+}

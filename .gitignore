@@ -24,3 +24,11 @@ studio/dist/
 studio/release/
 studio/build-info.json
 *.spec
+apps/mobile/android/
+apps/mobile/ios/
+apps/mobile/.expo/
+apps/mobile/dist/
+apps/mobile/release/
+*.keystore
+*.jks
+*.apk

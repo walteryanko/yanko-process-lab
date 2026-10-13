@@ -1,0 +1,23 @@
+
+> yanko-process-lab@0.2.0 test
+> node --test tests/*.test.mjs
+
+✔ equilibrium satisfies all six balances and remains stationary without noise (61.001998ms)
+✔ stoichiometric balances and the inert analytic response are conserved (2.807752ms)
+✔ RK4 agrees after step halving for a nonlinear feed disturbance (3.217097ms)
+✔ published event windows use the first sample after 4 h and 8 h; temperature percentages use Fahrenheit (36.238298ms)
+✔ seed, observer/controller changes and consecutive disturbances replay exactly (121.727677ms)
+✔ pausing is passive: reading the state never advances time or changes it (15.791181ms)
+✔ all controller/observer combinations finish or stop at the documented thermal boundary with finite bounded output (7435.174468ms)
+✔ disabling the virtual sensor freezes the feedback actuator without reading the hidden state (99.343906ms)
+✔ thermal event halts safely, retains a valid trace and permits a clean reset (1.599445ms)
+✔ invalid values are rejected before they can corrupt a simulation (0.820093ms)
+✔ extreme permitted disturbance/noise settings and observer tunings never expose NaN or Infinity (422.783908ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8338.761664

@@ -1,0 +1,14 @@
+{
+  "expo": {
+    "name": "YCS ProcessLab",
+    "slug": "ycs-processlab-mobile",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "dark",
+    "scheme": "processlab",
+    "jsEngine": "hermes",
+    "android": {"package": "com.ycs.processlab", "versionCode": 1, "softwareKeyboardLayoutMode":"resize", "permissions":[], "blockedPermissions":["android.permission.RECORD_AUDIO","android.permission.SYSTEM_ALERT_WINDOW"], "adaptiveIcon":{"foregroundImage":"./assets/android-icon-foreground.png","backgroundColor":"#091218"}},
+    "plugins": ["expo-sqlite","expo-document-picker","./plugins/release.cjs"],
+    "extra":{"releaseChannel":"evaluation","coreVersion":"mobile-core-0.1.0"}
+  }
+}

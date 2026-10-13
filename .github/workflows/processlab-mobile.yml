@@ -1,0 +1,100 @@
+name: ProcessLab Mobile Android
+on:
+  push:
+    branches: ['work/processlab-mobile-*']
+    paths: ['apps/mobile/**', 'packages/scientific-core/**', 'lib/simulation/**', '.github/workflows/processlab-mobile.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: processlab-mobile-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    env:
+      CI: '1'
+      GRADLE_OPTS: '-Dorg.gradle.jvmargs=-Xmx4096m -Dorg.gradle.daemon=false'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: apps/mobile/package-lock.json
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Install locked native dependencies
+        run: npm ci --prefix apps/mobile --no-audit --no-fund
+      - name: Scientific and TypeScript gates
+        run: |
+          mkdir -p apps/mobile/release
+          npm test 2>&1 | tee apps/mobile/release/original-science-tests.txt
+          node --test packages/scientific-core/tests/*.test.mjs 2>&1 | tee apps/mobile/release/mobile-science-tests.txt
+          npm run typecheck --prefix apps/mobile 2>&1 | tee apps/mobile/release/typescript.txt
+      - name: Generate native Android project
+        working-directory: apps/mobile
+        run: npx expo prebuild --platform android --no-install
+      - name: Configure release or explicitly ephemeral evaluation signing
+        working-directory: apps/mobile
+        env:
+          RELEASE_KEY: ${{ secrets.PROCESSLAB_KEYSTORE_BASE64 }}
+          RELEASE_STORE_PASSWORD: ${{ secrets.PROCESSLAB_STORE_PASSWORD }}
+          RELEASE_KEY_ALIAS: ${{ secrets.PROCESSLAB_KEY_ALIAS }}
+          RELEASE_KEY_PASSWORD: ${{ secrets.PROCESSLAB_KEY_PASSWORD }}
+        run: |
+          if [ -n "$RELEASE_KEY" ]; then
+            printf '%s' "$RELEASE_KEY" | base64 -d > "$RUNNER_TEMP/processlab.keystore"
+            printf 'PROCESSLAB_STORE_PASSWORD=%s\nPROCESSLAB_KEY_ALIAS=%s\nPROCESSLAB_KEY_PASSWORD=%s\n' "$RELEASE_STORE_PASSWORD" "$RELEASE_KEY_ALIAS" "$RELEASE_KEY_PASSWORD" >> "$GITHUB_ENV"
+            echo 'distribution key supplied through repository secrets' > release/signing-status.txt
+          else
+            keytool -genkeypair -keystore "$RUNNER_TEMP/processlab.keystore" -storepass evaluation-only -keypass evaluation-only -alias processlab-evaluation -keyalg RSA -keysize 2048 -validity 3650 -dname 'CN=YCS ProcessLab Evaluation,O=YCS,C=BR'
+            printf 'PROCESSLAB_STORE_PASSWORD=evaluation-only\nPROCESSLAB_KEY_ALIAS=processlab-evaluation\nPROCESSLAB_KEY_PASSWORD=evaluation-only\n' >> "$GITHUB_ENV"
+            echo 'RELEASE BUILD, EPHEMERAL EVALUATION SIGNATURE. Not a stable distribution identity. Uninstall required before a build signed by another key; export projects first.' > release/signing-status.txt
+          fi
+          echo "PROCESSLAB_KEYSTORE=$RUNNER_TEMP/processlab.keystore" >> "$GITHUB_ENV"
+      - name: Assemble offline Hermes release APKs
+        working-directory: apps/mobile/android
+        run: ./gradlew :app:assembleRelease --no-daemon --max-workers=2 -PreactNativeArchitectures=arm64-v8a,x86_64 -Pandroid.enableMinifyInReleaseBuilds=true -Pandroid.enableShrinkResourcesInReleaseBuilds=true 2>&1 | tee ../release/android-build.txt
+      - name: Verify release metadata and signature
+        working-directory: apps/mobile
+        run: |
+          ARM_APK=$(find android/app/build/outputs/apk/release -name '*arm64-v8a*.apk' -print -quit)
+          test -s "$ARM_APK"
+          cp "$ARM_APK" release/YCS-ProcessLab-Mobile-0.1.0-beta.1-arm64-evaluation.apk
+          BUILD_TOOLS=$(find "$ANDROID_HOME/build-tools" -maxdepth 1 -mindepth 1 -type d | sort -V | tail -1)
+          "$BUILD_TOOLS/apksigner" verify --verbose --print-certs "$ARM_APK" > release/signature.txt
+          "$BUILD_TOOLS/aapt" dump badging "$ARM_APK" > release/apk-metadata.txt
+          sha256sum release/*.apk > release/SHA256SUMS.txt
+          printf '{"commit":"%s","run_id":"%s","run_url":"https://github.com/%s/actions/runs/%s","version":"0.1.0-beta.1"}\n' "$GITHUB_SHA" "$GITHUB_RUN_ID" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID" > release/build-info.json
+      - name: Enable KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+      - name: Install and verify actual release on Android offline
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 35
+          arch: x86_64
+          target: google_apis
+          profile: pixel_5
+          ram-size: 4096M
+          heap-size: 512M
+          disable-animations: true
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          script: python3 apps/mobile/scripts/device_qa.py
+      - name: Upload installable APK and actual evidence
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: YCS-ProcessLab-Mobile-${{ github.sha }}
+          path: apps/mobile/release/
+          if-no-files-found: error
+          retention-days: 3
+      - name: Remove temporary signing material
+        if: always()
+        run: rm -f "$RUNNER_TEMP/processlab.keystore"

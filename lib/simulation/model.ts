@@ -4,7 +4,8 @@
 export type State = [number, number, number, number, number, number];
 export type Inputs = { fa: number; fb: number; fm: number; mw: number; t0: number; ta: number };
 export const TABLED_P = Object.freeze({ cp: [146.5,75.4,192.6,81.6], rho: [14.8,55.3,24.7], E:75362.4, R:8.314, k0:16.96e12, heat:91556.9, V:1.89, Vt:1.1, UA:30385.6 });
-export type Parameters = typeof TABLED_P;
+// Numeric parameters must permit the documented calibrated enthalpy, not only literal table values.
+export type Parameters = {readonly [K in keyof typeof TABLED_P]: (typeof TABLED_P)[K] extends number ? number : (typeof TABLED_P)[K]};
 export const NOMINAL: Inputs = Object.freeze({fa:36.3,fb:453.6,fm:45.4,mw:453.6,t0:297,ta:289});
 export const CALIBRATION_T=332.3;
 /** Inverse energy balance, holding all other table values fixed. */
