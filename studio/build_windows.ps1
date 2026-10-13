@@ -16,7 +16,7 @@ $bundleArgs = @(
   '--workpath', (Join-Path $repo 'studio/build'), '--specpath', (Join-Path $repo 'studio/build'),
   '--paths', (Join-Path $repo 'studio'), '--collect-all', 'webview',
   '--additional-hooks-dir', (Join-Path $repo 'studio/hooks'),
-  '--hidden-import', 'scipy.special._cdflib', '--hidden-import', 'casadi',
+  '--hidden-import', 'casadi',
   '--copy-metadata', 'numpy', '--copy-metadata', 'scipy', '--copy-metadata', 'pint'
 )
 $dataFiles = @(
@@ -35,6 +35,13 @@ foreach ($item in $dataFiles) {
 $bundleArgs += (Join-Path $repo 'studio/desktop.py')
 & python @bundleArgs
 if ($LASTEXITCODE -ne 0) { throw 'PyInstaller failed' }
+$coreNames = @('libcasadi.dll', 'libgcc_s_seh-1.dll', 'libstdc++-6.dll', 'libwinpthread-1.dll')
+$nativeInventory = foreach ($name in $coreNames) {
+  $path = Join-Path $repo "studio/dist/YCSProcessLab/_internal/$name"
+  if (!(Test-Path $path)) { throw "Missing CasADi runtime dependency: $name" }
+  @{name=$name; sha256=(Get-FileHash $path -Algorithm SHA256).Hash.ToLower(); bytes=(Get-Item $path).Length}
+}
+$nativeInventory | ConvertTo-Json | Set-Content -Encoding utf8 studio/release/casadi-runtime.json
 $nsis = "${env:ProgramFiles(x86)}\NSIS\makensis.exe"
 if (!(Test-Path $nsis)) { throw 'NSIS is required for the installer' }
 & $nsis /V3 studio/installer.nsi
