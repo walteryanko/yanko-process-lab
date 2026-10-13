@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "id": "tank-nmpc",
+  "name": "E · Tanque NMPC + UKF (experimental)",
+  "model": "flowsheet",
+  "nodes": [
+    {
+      "id": "F-101",
+      "kind": "source",
+      "label": "F-101",
+      "parameters": {
+        "flow": 1.0,
+        "temperature": 298.15,
+        "fraction": 0.1,
+        "pressure": 101325.0
+      },
+      "layout": {
+        "x": 20,
+        "y": 80
+      }
+    },
+    {
+      "id": "T-101",
+      "kind": "tank",
+      "label": "T-101",
+      "parameters": {
+        "volume": 0.1,
+        "temperature": 298.15,
+        "fraction": 0.1,
+        "duty": 20000.0
+      },
+      "layout": {
+        "x": 300,
+        "y": 80
+      }
+    },
+    {
+      "id": "P-101",
+      "kind": "sink",
+      "label": "P-101",
+      "parameters": {},
+      "layout": {
+        "x": 580,
+        "y": 80
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "S-1",
+      "source": "F-101",
+      "target": "T-101",
+      "source_port": "out",
+      "target_port": "in",
+      "kind": "material"
+    },
+    {
+      "id": "S-2",
+      "source": "T-101",
+      "target": "P-101",
+      "source_port": "out",
+      "target_port": "in",
+      "kind": "material"
+    }
+  ],
+  "control_equipment": "T-101",
+  "experiment": {
+    "dt": 10.0,
+    "duration": 300.0,
+    "controller": "nmpc",
+    "observer": "ukf",
+    "setpoint": 310.0,
+    "manual": 20000.0,
+    "kp": 7000.0,
+    "ki": 100.0,
+    "disturbance_time": 120.0,
+    "disturbance_value": -8.0,
+    "horizon": 5,
+    "seed": 42,
+    "solver": "RK45",
+    "rtol": 1e-07,
+    "atol": 1e-09,
+    "kd": 0.0,
+    "sensor_sigma": 0.1,
+    "sensor_period": 1,
+    "sensor_delay": 0,
+    "sensor_dropout": 0.0,
+    "sensor_bias": 0.0,
+    "sensor_drift": 0.0,
+    "sensor_lag": 0.0,
+    "sensor_quantization": 0.0,
+    "sensor_min": -1000.0,
+    "sensor_max": 2000.0,
+    "chemical_period": 0,
+    "chemical_delay": 0,
+    "chemical_sigma": 0.02,
+    "q_scale": 1.0,
+    "r_scale": 1.0,
+    "initial_estimate_offset": 0.1,
+    "control_target": "temperature"
+  }
+}

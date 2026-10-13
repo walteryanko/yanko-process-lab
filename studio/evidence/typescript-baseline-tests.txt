@@ -1,0 +1,24 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> yanko-process-lab@0.2.0 test
+> node --test tests/*.test.mjs
+
+✔ equilibrium satisfies all six balances and remains stationary without noise (71.026519ms)
+✔ stoichiometric balances and the inert analytic response are conserved (4.910092ms)
+✔ RK4 agrees after step halving for a nonlinear feed disturbance (3.573596ms)
+✔ published event windows use the first sample after 4 h and 8 h; temperature percentages use Fahrenheit (53.182136ms)
+✔ seed, observer/controller changes and consecutive disturbances replay exactly (159.545609ms)
+✔ pausing is passive: reading the state never advances time or changes it (23.817296ms)
+✔ all controller/observer combinations finish or stop at the documented thermal boundary with finite bounded output (8632.721438ms)
+✔ disabling the virtual sensor freezes the feedback actuator without reading the hidden state (88.008565ms)
+✔ thermal event halts safely, retains a valid trace and permits a clean reset (1.494019ms)
+✔ invalid values are rejected before they can corrupt a simulation (0.718262ms)
+✔ extreme permitted disturbance/noise settings and observer tunings never expose NaN or Infinity (488.143642ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9704.302847

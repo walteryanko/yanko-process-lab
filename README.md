@@ -1,3 +1,12 @@
+# YCS ProcessLab Studio checkpoint
+
+The new desktop research application is in [`studio/`](studio/docs/QUICKSTART_PT.md).
+See [delivery status](studio/docs/DELIVERY_PT.md), [scientific recovery](studio/docs/RECOVERY.md)
+and [capability matrix](studio/docs/CAPABILITIES.md). The interface and numerical engine
+are implemented and locally tested. A verified Windows installer is not yet available:
+publication of the implementation branch was blocked by automatic permission review.
+The original numerical library and research history below are preserved.
+
 # Yanko Process Lab — Numerical Core
 
 An educational nonlinear process simulator connecting chemical engineering, control systems, software and interactive learning.

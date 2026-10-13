@@ -1,0 +1,816 @@
+{
+  "protocol": "Matched definitions, same seeds across methods; 23 short validation trajectories. No training, tuning, or superiority claim. Runtime host != target laptop.",
+  "source_manifest": {
+    "application_version": "0.1.0",
+    "git_commit": "1862eb055a0bf39a42966f3a593c53f7fb2d0c51",
+    "working_tree_dirty": true,
+    "engine_source_sha256": "745f1f177a2994697ed42140fb7e186f852aa4315de7d4449986ddfda6c76b38",
+    "project_sha256": "a8f2b3e71a923369431c2f0a7dcc88cc81eccc7dedd07ca241ecabde687c4722",
+    "created_utc": "2026-10-13T15:27:50.000637+00:00",
+    "python": "3.12.14",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "dependencies": {
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "pint": "0.25",
+      "casadi": "3.7.2",
+      "pywebview": "not installed"
+    },
+    "project": {
+      "schema_version": 1,
+      "id": "tank-nmpc",
+      "name": "E · Tanque NMPC + UKF (experimental)",
+      "model": "flowsheet",
+      "nodes": [
+        {
+          "id": "F-101",
+          "kind": "source",
+          "label": "F-101",
+          "parameters": {
+            "flow": 1.0,
+            "temperature": 298.15,
+            "fraction": 0.1,
+            "pressure": 101325.0
+          },
+          "layout": {
+            "x": 20,
+            "y": 80
+          }
+        },
+        {
+          "id": "T-101",
+          "kind": "tank",
+          "label": "T-101",
+          "parameters": {
+            "volume": 0.1,
+            "temperature": 298.15,
+            "fraction": 0.1,
+            "duty": 20000.0
+          },
+          "layout": {
+            "x": 300,
+            "y": 80
+          }
+        },
+        {
+          "id": "P-101",
+          "kind": "sink",
+          "label": "P-101",
+          "parameters": {},
+          "layout": {
+            "x": 580,
+            "y": 80
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "S-1",
+          "source": "F-101",
+          "target": "T-101",
+          "source_port": "out",
+          "target_port": "in",
+          "kind": "material"
+        },
+        {
+          "id": "S-2",
+          "source": "T-101",
+          "target": "P-101",
+          "source_port": "out",
+          "target_port": "in",
+          "kind": "material"
+        }
+      ],
+      "control_equipment": "T-101",
+      "experiment": {
+        "dt": 10.0,
+        "duration": 200.0,
+        "controller": "nmpc",
+        "observer": "ukf",
+        "setpoint": 310.0,
+        "manual": 20000.0,
+        "kp": 7000.0,
+        "ki": 100.0,
+        "disturbance_time": 120.0,
+        "disturbance_value": -8.0,
+        "horizon": 5,
+        "seed": 42,
+        "solver": "RK45",
+        "rtol": 1e-07,
+        "atol": 1e-09,
+        "kd": 0.0,
+        "sensor_sigma": 0.1,
+        "sensor_period": 1,
+        "sensor_delay": 0,
+        "sensor_dropout": 0.0,
+        "sensor_bias": 0.0,
+        "sensor_drift": 0.0,
+        "sensor_lag": 0.0,
+        "sensor_quantization": 0.0,
+        "sensor_min": -1000.0,
+        "sensor_max": 2000.0,
+        "chemical_period": 0,
+        "chemical_delay": 0,
+        "chemical_sigma": 0.02,
+        "q_scale": 1.0,
+        "r_scale": 1.0,
+        "initial_estimate_offset": 0.1,
+        "control_target": "temperature"
+      }
+    },
+    "truth_used_for": "physical simulation, emulated sensors and retrospective scoring only",
+    "uncertainty": "Uncalibrated approximate covariance; MHE uses EKF companion covariance",
+    "hardware_validation": "Runtime host only; not a measurement on the user's laptop"
+  },
+  "samples": [
+    {
+      "scenario": "tank",
+      "controller": "manual",
+      "seed": 101,
+      "status": "completed",
+      "wall_seconds": 1.1191833180032518,
+      "samples": 121,
+      "sensor_samples": 121,
+      "sensor_drops": 0,
+      "iae": 7131.05783022715,
+      "itae": 2369004.193021489,
+      "max_temperature_violation": 0.0,
+      "control_effort": 0.0,
+      "state_rmse": [
+        0.0029469515692365,
+        0.024879597499774076
+      ],
+      "quality_rmse": 0.002946951569236501,
+      "empirical_2sd_coverage": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "scenario": "tank",
+      "controller": "manual",
+      "seed": 102,
+      "status": "completed",
+      "wall_seconds": 1.1226997210001173,
+      "samples": 121,
+      "sensor_samples": 121,
+      "sensor_drops": 0,
+      "iae": 7131.05783022715,
+      "itae": 2369004.193021489,
+      "max_temperature_violation": 0.0,
+      "control_effort": 0.0,
+      "state_rmse": [
+        0.002946951570893868,
+        0.030654866557328932
+      ],
+      "quality_rmse": 0.002946951570893869,
+      "empirical_2sd_coverage": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "scenario": "tank",
+      "controller": "manual",
+      "seed": 103,
+      "status": "completed",
+      "wall_seconds": 0.9609342520016071,
+      "samples": 121,
+      "sensor_samples": 121,
+      "sensor_drops": 0,
+      "iae": 7131.05783022715,
+      "itae": 2369004.193021489,
+      "max_temperature_violation": 0.0,
+      "control_effort": 0.0,
+      "state_rmse": [
+        0.0029469515707242423,
+        0.02555090189227515
+      ],
+      "quality_rmse": 0.002946951570724242,
+      "empirical_2sd_coverage": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "scenario": "tank",
+      "controller": "manual",
+      "seed": 104,
+      "status": "completed",
+      "wall_seconds": 1.0692532959997152,
+      "samples": 121,
+      "sensor_samples": 121,
+      "sensor_drops": 0,
+      "iae": 7131.05783022715,
+      "itae": 2369004.193021489,
+      "max_temperature_violation": 0.0,
+      "control_effort": 0.0,
+      "state_rmse": [
+        0.0029469515804764757,
+        0.026224498892323887
+      ],
+      "quality_rmse": 0.002946951580476476,
+      "empirical_2sd_coverage": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "scenario": "tank",
+      "controller": "manual",
+      "seed": 105,
+      "status": "completed",
+      "wall_seconds": 1.040301896996425,
+      "samples": 121,
+      "sensor_samples": 121,
+      "sensor_drops": 0,
+      "iae": 7131.05783022715,
+      "itae": 2369004.193021489,
+      "max_temperature_violation": 0.0,
+      "control_effort": 0.0,
+      "state_rmse": [
+        0.0029469515639005467,
+        0.025548299918518043
+      ],
+      "quality_rmse": 0.0029469515639005475,
+      "empirical_2sd_coverage": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "scenario": "tank",
+      "controller": "pid",
+      "seed": 101,
+      "status": "completed",
+      "wall_seconds": 1.0021807790017192,
+      "samples": 121,
+      "sensor_samples": 121,
+      "sensor_drops": 0,
+      "iae": 757.7021787212423,
+      "itae": 107973.86039781153,
+      "max_temperature_violation": 0.0,
+      "control_effort": 6686461066.841738,
+      "state_rmse": [
+        0.0029469515780435485,
+        0.024879597499963307
+      ],
+      "quality_rmse": 0.0029469515780435485,
+      "empirical_2sd_coverage": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "scenario": "tank",
+      "controller": "pid",
+      "seed": 102,
+      "status": "completed",
+      "wall_seconds": 0.9812132359966199,
+      "samples": 121,
+      "sensor_samples": 121,
+      "sensor_drops": 0,
+      "iae": 756.4262431828897,
+      "itae": 107643.19798998057,
+      "max_temperature_violation": 0.0,
+      "control_effort": 6718354544.2066965,
+      "state_rmse": [
+        0.00294695157151235,
+        0.030654866557538685
+      ],
+      "quality_rmse": 0.0029469515715123515,
+      "empirical_2sd_coverage": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "scenario": "tank",
+      "controller": "pid",
+      "seed": 103,
+      "status": "completed",
+      "wall_seconds": 1.2539004879995446,
+      "samples": 121,
+      "sensor_samples": 121,
+      "sensor_drops": 0,
+      "iae": 760.035716639796,
+      "itae": 109912.47724640825,
+      "max_temperature_violation": 0.0,
+      "control_effort": 6656959144.503453,
+      "state_rmse": [
+        0.0029469515672021344,
+        0.025550901892423247
+      ],
+      "quality_rmse": 0.002946951567202133,
+      "empirical_2sd_coverage": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "scenario": "tank",
+      "controller": "pid",
+      "seed": 104,
+      "status": "completed",
+      "wall_seconds": 1.1326807789982922,
+      "samples": 121,
+      "sensor_samples": 121,
+      "sensor_drops": 0,
+      "iae": 779.4998557081113,
+      "itae": 110241.37781125934,
+      "max_temperature_violation": 0.0,
+      "control_effort": 6696154520.94775,
+      "state_rmse": [
+        0.002946951579352928,
+        0.026224498892491822
+      ],
+      "quality_rmse": 0.002946951579352929,
+      "empirical_2sd_coverage": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "scenario": "tank",
+      "controller": "pid",
+      "seed": 105,
+      "status": "completed",
+      "wall_seconds": 1.127490506997674,
+      "samples": 121,
+      "sensor_samples": 121,
+      "sensor_drops": 0,
+      "iae": 761.4488619532232,
+      "itae": 109972.81562152808,
+      "max_temperature_violation": 0.0,
+      "control_effort": 6693828989.332263,
+      "state_rmse": [
+        0.0029469515706007474,
+        0.02554829991867364
+      ],
+      "quality_rmse": 0.0029469515706007482,
+      "empirical_2sd_coverage": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "scenario": "pg-original",
+      "observer": "ekf",
+      "seed": 201,
+      "status": "completed",
+      "wall_seconds": 2.074626915999488,
+      "samples": 41,
+      "sensor_samples": 46,
+      "sensor_drops": 0,
+      "iae": 2730.002885848922,
+      "itae": 3785432.25311349,
+      "max_temperature_violation": 0.0,
+      "control_effort": 977.1935772407928,
+      "state_rmse": [
+        0.004283379592512873,
+        0.19195029630604155,
+        0.01329815447516589,
+        0.03706551327752267,
+        0.06270250964695838,
+        0.019921990087900993
+      ],
+      "quality_rmse": 0.01329815447516589,
+      "empirical_2sd_coverage": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "scenario": "pg-original",
+      "observer": "ekf",
+      "seed": 202,
+      "status": "completed",
+      "wall_seconds": 1.8719454660026713,
+      "samples": 41,
+      "sensor_samples": 46,
+      "sensor_drops": 0,
+      "iae": 2796.601815538379,
+      "itae": 3882081.6675524004,
+      "max_temperature_violation": 0.0,
+      "control_effort": 1482.9468603930868,
+      "state_rmse": [
+        0.004204981857925463,
+        0.18952277245570565,
+        0.013304075427389917,
+        0.03699250725948799,
+        0.0808898470234798,
+        0.02292566572515042
+      ],
+      "quality_rmse": 0.013304075427389914,
+      "empirical_2sd_coverage": [
+        0.9024390243902439,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "scenario": "pg-original",
+      "observer": "ekf",
+      "seed": 203,
+      "status": "completed",
+      "wall_seconds": 2.0316381389993694,
+      "samples": 41,
+      "sensor_samples": 46,
+      "sensor_drops": 0,
+      "iae": 2752.0774060458116,
+      "itae": 3837100.2378591793,
+      "max_temperature_violation": 0.0,
+      "control_effort": 1243.52642433413,
+      "state_rmse": [
+        0.004971818688261993,
+        0.19997504873427857,
+        0.016541987052263774,
+        0.037504979373730984,
+        0.07648675638149433,
+        0.01964718403292596
+      ],
+      "quality_rmse": 0.01654198705226377,
+      "empirical_2sd_coverage": [
+        1.0,
+        1.0,
+        0.8780487804878049,
+        1.0,
+        0.975609756097561,
+        1.0
+      ]
+    },
+    {
+      "scenario": "pg-original",
+      "observer": "ukf",
+      "seed": 201,
+      "status": "completed",
+      "wall_seconds": 2.3780030759999136,
+      "samples": 41,
+      "sensor_samples": 46,
+      "sensor_drops": 0,
+      "iae": 2730.002885848922,
+      "itae": 3785432.25311349,
+      "max_temperature_violation": 0.0,
+      "control_effort": 977.1935772407928,
+      "state_rmse": [
+        0.0043310241740316165,
+        0.19211608566988986,
+        0.013302420249792094,
+        0.03707278794682411,
+        0.06285910317679672,
+        0.019931405995630244
+      ],
+      "quality_rmse": 0.013302420249792096,
+      "empirical_2sd_coverage": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "scenario": "pg-original",
+      "observer": "ukf",
+      "seed": 202,
+      "status": "completed",
+      "wall_seconds": 2.6022165860017594,
+      "samples": 41,
+      "sensor_samples": 46,
+      "sensor_drops": 0,
+      "iae": 2796.601815538379,
+      "itae": 3882081.6675524004,
+      "max_temperature_violation": 0.0,
+      "control_effort": 1482.9468603930868,
+      "state_rmse": [
+        0.004243831608128761,
+        0.18960138147261926,
+        0.013310560779766901,
+        0.036996271715835784,
+        0.08088971160003296,
+        0.022910975570534564
+      ],
+      "quality_rmse": 0.0133105607797669,
+      "empirical_2sd_coverage": [
+        0.9024390243902439,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "scenario": "pg-original",
+      "observer": "ukf",
+      "seed": 203,
+      "status": "completed",
+      "wall_seconds": 1.9760558430002675,
+      "samples": 41,
+      "sensor_samples": 46,
+      "sensor_drops": 0,
+      "iae": 2752.0774060458116,
+      "itae": 3837100.2378591793,
+      "max_temperature_violation": 0.0,
+      "control_effort": 1243.52642433413,
+      "state_rmse": [
+        0.004930900450204887,
+        0.19994995149503486,
+        0.016551535987019524,
+        0.037503920735308824,
+        0.07644969284576891,
+        0.019621892546120963
+      ],
+      "quality_rmse": 0.016551535987019524,
+      "empirical_2sd_coverage": [
+        1.0,
+        1.0,
+        0.8780487804878049,
+        1.0,
+        0.975609756097561,
+        1.0
+      ]
+    },
+    {
+      "scenario": "eb-reduced",
+      "observer": "ekf",
+      "seed": 201,
+      "status": "completed",
+      "wall_seconds": 1.6191631040019274,
+      "samples": 31,
+      "sensor_samples": 31,
+      "sensor_drops": 0,
+      "iae": 1309.1176455764821,
+      "itae": 2178693.402258508,
+      "max_temperature_violation": 0.0,
+      "control_effort": 0.0,
+      "state_rmse": [
+        0.00011020902141154444,
+        0.005202237556145961,
+        0.006588599252738466,
+        0.0018863940231132333,
+        0.03854063657886198
+      ],
+      "quality_rmse": 0.0005908046983104074,
+      "empirical_2sd_coverage": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "scenario": "eb-reduced",
+      "observer": "ekf",
+      "seed": 202,
+      "status": "completed",
+      "wall_seconds": 1.6749191160010923,
+      "samples": 31,
+      "sensor_samples": 31,
+      "sensor_drops": 0,
+      "iae": 1309.1176455764821,
+      "itae": 2178693.402258508,
+      "max_temperature_violation": 0.0,
+      "control_effort": 0.0,
+      "state_rmse": [
+        0.00010892931863913802,
+        0.005043350503385297,
+        0.006564664430012478,
+        0.0018666751173014846,
+        0.0360657483397357
+      ],
+      "quality_rmse": 0.0005781850531433948,
+      "empirical_2sd_coverage": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "scenario": "eb-reduced",
+      "observer": "ekf",
+      "seed": 203,
+      "status": "completed",
+      "wall_seconds": 1.7456107609987157,
+      "samples": 31,
+      "sensor_samples": 31,
+      "sensor_drops": 0,
+      "iae": 1309.1176455764821,
+      "itae": 2178693.402258508,
+      "max_temperature_violation": 0.0,
+      "control_effort": 0.0,
+      "state_rmse": [
+        0.00017371793074378455,
+        0.018627188659930523,
+        0.01167432435225518,
+        0.0018076706119664787,
+        0.020252119163335976
+      ],
+      "quality_rmse": 0.000392688318567194,
+      "empirical_2sd_coverage": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "scenario": "eb-reduced",
+      "observer": "ukf",
+      "seed": 201,
+      "status": "completed",
+      "wall_seconds": 1.5596061750011359,
+      "samples": 31,
+      "sensor_samples": 31,
+      "sensor_drops": 0,
+      "iae": 1309.1176455764821,
+      "itae": 2178693.402258508,
+      "max_temperature_violation": 0.0,
+      "control_effort": 0.0,
+      "state_rmse": [
+        0.0001081925752568005,
+        0.00519396569456136,
+        0.006577728503073027,
+        0.0018956931986818834,
+        0.0385333095624194
+      ],
+      "quality_rmse": 0.0005867513739802913,
+      "empirical_2sd_coverage": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "scenario": "eb-reduced",
+      "observer": "ukf",
+      "seed": 202,
+      "status": "completed",
+      "wall_seconds": 1.4981877280015397,
+      "samples": 31,
+      "sensor_samples": 31,
+      "sensor_drops": 0,
+      "iae": 1309.1176455764821,
+      "itae": 2178693.402258508,
+      "max_temperature_violation": 0.0,
+      "control_effort": 0.0,
+      "state_rmse": [
+        0.00010736753409614665,
+        0.005039208365922864,
+        0.006553746731582386,
+        0.0018759043376448603,
+        0.03607055709964102
+      ],
+      "quality_rmse": 0.0005741276983053302,
+      "empirical_2sd_coverage": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "scenario": "eb-reduced",
+      "observer": "ukf",
+      "seed": 203,
+      "status": "completed",
+      "wall_seconds": 1.6940065690000665,
+      "samples": 31,
+      "sensor_samples": 31,
+      "sensor_drops": 0,
+      "iae": 1309.1176455764821,
+      "itae": 2178693.402258508,
+      "max_temperature_violation": 0.0,
+      "control_effort": 0.0,
+      "state_rmse": [
+        0.00016880821276593917,
+        0.018679747270109678,
+        0.011661127201551161,
+        0.0018162101340170307,
+        0.020252582934841383
+      ],
+      "quality_rmse": 0.00038850650998914,
+      "empirical_2sd_coverage": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "scenario": "tank-nmpc",
+      "seed": 42,
+      "status": "completed",
+      "wall_seconds": 5.442437353999594,
+      "samples": 21,
+      "sensor_samples": 21,
+      "sensor_drops": 0,
+      "iae": 366.6355983893112,
+      "itae": 8230.702179571306,
+      "max_temperature_violation": 0.0,
+      "control_effort": 8362283843.001056,
+      "state_rmse": [
+        0.005086831801810285,
+        0.023532629175724327
+      ],
+      "quality_rmse": 0.005086831801810285,
+      "empirical_2sd_coverage": [
+        1.0,
+        1.0
+      ],
+      "optimizer": {
+        "optimizer_failures": 0,
+        "last_status": "Optimization terminated successfully",
+        "iterations": 2
+      }
+    }
+  ],
+  "summary": [
+    {
+      "scenario": "eb-reduced",
+      "method": "ekf",
+      "n": 3,
+      "failures": 0,
+      "iae_mean": 1309.1176455764821,
+      "quality_rmse_mean": 0.0005205593566736654,
+      "wall_seconds_mean": 1.6798976603339117,
+      "temperature_violation_max": 0.0
+    },
+    {
+      "scenario": "eb-reduced",
+      "method": "ukf",
+      "n": 3,
+      "failures": 0,
+      "iae_mean": 1309.1176455764821,
+      "quality_rmse_mean": 0.0005164618607582539,
+      "wall_seconds_mean": 1.5839334906675806,
+      "temperature_violation_max": 0.0
+    },
+    {
+      "scenario": "pg-original",
+      "method": "ekf",
+      "n": 3,
+      "failures": 0,
+      "iae_mean": 2759.560702477704,
+      "quality_rmse_mean": 0.014381405651606526,
+      "wall_seconds_mean": 1.992736840333843,
+      "temperature_violation_max": 0.0
+    },
+    {
+      "scenario": "pg-original",
+      "method": "ukf",
+      "n": 3,
+      "failures": 0,
+      "iae_mean": 2759.560702477704,
+      "quality_rmse_mean": 0.014388172338859506,
+      "wall_seconds_mean": 2.3187585016673133,
+      "temperature_violation_max": 0.0
+    },
+    {
+      "scenario": "tank",
+      "method": "manual",
+      "n": 5,
+      "failures": 0,
+      "iae_mean": 7131.05783022715,
+      "quality_rmse_mean": 0.002946951571046327,
+      "wall_seconds_mean": 1.0624744968002233,
+      "temperature_violation_max": 0.0
+    },
+    {
+      "scenario": "tank",
+      "method": "pid",
+      "n": 5,
+      "failures": 0,
+      "iae_mean": 763.0225712410524,
+      "quality_rmse_mean": 0.002946951573342342,
+      "wall_seconds_mean": 1.0994931577987699,
+      "temperature_violation_max": 0.0
+    },
+    {
+      "scenario": "tank-nmpc",
+      "method": "nmpc",
+      "n": 1,
+      "failures": 0,
+      "iae_mean": 366.6355983893112,
+      "quality_rmse_mean": 0.005086831801810285,
+      "wall_seconds_mean": 5.442437353999594,
+      "temperature_violation_max": 0.0
+    }
+  ]
+}

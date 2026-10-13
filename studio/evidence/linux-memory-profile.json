@@ -1,0 +1,7 @@
+{
+  "scenario": "pg-original",
+  "status": "completed",
+  "wall_seconds_including_imports": 2.82257395500028,
+  "max_process_rss_KiB": 75768,
+  "scope": "Linux shared host; engine process only. Excludes browser; not target laptop."
+}

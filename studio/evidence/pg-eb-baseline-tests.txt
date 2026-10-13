@@ -1,0 +1,20 @@
+test_actuator_slew_and_amplitude (test_science.ScientificTests.test_actuator_slew_and_amplitude) ... ok
+test_asymmetric_pg_exchanger (test_science.ScientificTests.test_asymmetric_pg_exchanger) ... ok
+test_direct_policy_cannot_read_chemical_estimate (test_science.ScientificTests.test_direct_policy_cannot_read_chemical_estimate) ... ok
+test_e2e_simulate_infer_export (test_science.ScientificTests.test_e2e_simulate_infer_export) ... ok
+test_eb_source_fidelity_random_states (test_science.ScientificTests.test_eb_source_fidelity_random_states) ... ok
+test_element_conservation (test_science.ScientificTests.test_element_conservation) ... ok
+test_equal_resource_forgetting_startup_slew (test_science.ScientificTests.test_equal_resource_forgetting_startup_slew) ... ok
+test_fisher_does_not_invent_invisible_information (test_science.ScientificTests.test_fisher_does_not_invent_invisible_information) ... ok
+test_hess_closure_variant (test_science.ScientificTests.test_hess_closure_variant) ... ok
+test_hess_cycle_does_not_create_linear_thermal_information (test_science.ScientificTests.test_hess_cycle_does_not_create_linear_thermal_information) ... ok
+test_independent_integrator (test_science.ScientificTests.test_independent_integrator) ... ok
+test_nominal_equilibria_and_units (test_science.ScientificTests.test_nominal_equilibria_and_units) ... ok
+test_pg_exact_unobservable_direction (test_science.ScientificTests.test_pg_exact_unobservable_direction) ... ok
+test_pg_source_fidelity_random_states (test_science.ScientificTests.test_pg_source_fidelity_random_states) ... ok
+test_reported_heat_uses_simulated_plant_parameters (test_science.ScientificTests.test_reported_heat_uses_simulated_plant_parameters) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.180s
+
+OK

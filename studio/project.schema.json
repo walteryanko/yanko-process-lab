@@ -1,0 +1,157 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ycs:processlab:project:1",
+  "title": "ProcessLab Studio project v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "id",
+    "name",
+    "model",
+    "experiment"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_-]{1,80}$"
+    },
+    "name": {
+      "type": "string"
+    },
+    "model": {
+      "enum": [
+        "flowsheet",
+        "pg-original",
+        "eb-reduced"
+      ]
+    },
+    "nodes": {
+      "type": "array",
+      "maxItems": 40,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "parameters",
+          "layout"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "source",
+              "sink",
+              "mixer",
+              "splitter",
+              "tank",
+              "pump",
+              "valve",
+              "heater",
+              "cooler",
+              "exchanger",
+              "cstr",
+              "energy"
+            ]
+          },
+          "label": {
+            "type": "string"
+          },
+          "parameters": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/$defs/quantity"
+            }
+          },
+          "layout": {
+            "type": "object",
+            "required": [
+              "x",
+              "y"
+            ],
+            "properties": {
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "maxItems": 100,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "source",
+          "target",
+          "source_port",
+          "target_port",
+          "kind"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "target": {
+            "type": "string"
+          },
+          "source_port": {
+            "type": "string"
+          },
+          "target_port": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "experiment": {
+      "type": "object"
+    },
+    "control_equipment": {
+      "type": "string"
+    }
+  },
+  "$defs": {
+    "quantity": {
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "object",
+          "required": [
+            "value",
+            "unit"
+          ],
+          "properties": {
+            "value": {
+              "type": "number"
+            },
+            "unit": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    }
+  },
+  "$comment": "Structural contract. schema.canonical and Flowsheet compiler additionally enforce dimensions, numerical limits and topology."
+}

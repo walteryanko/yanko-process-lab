@@ -1,0 +1,47 @@
+{
+  "provenance": "Fresh independent re-execution after workspace reset; not recovered lost JSON or campaign trajectories",
+  "seed": 20261011,
+  "random_rhs_points": 1000,
+  "max_rhs_concentration_error": 3.126388037344441e-12,
+  "max_rhs_thermal_error": 8.185452315956354e-11,
+  "independent_DOP853_max_T_difference_K": 9.890754881780595e-11,
+  "independent_DOP853_max_C_difference": 3.561151373787652e-12,
+  "steady_state": [
+    0.6070247319036959,
+    33.98910210720909,
+    2.2957646050793823,
+    3.6284866712288473,
+    332.333618020444,
+    314.3975853301131
+  ],
+  "steady_rhs_residual": 2.1790103765286888e-13,
+  "residence_time_h": 0.15133553104124847,
+  "rk4_vs_DOP853_startup_6h": [
+    {
+      "substeps": 1,
+      "max_T_error_K": 0.0003074448682127695,
+      "max_CC_error_kmol_m3": 1.2252167950421722e-05,
+      "minimum_concentration": 0.0
+    },
+    {
+      "substeps": 2,
+      "max_T_error_K": 1.83028365086102e-05,
+      "max_CC_error_kmol_m3": 7.411405174018171e-07,
+      "minimum_concentration": 0.0
+    },
+    {
+      "substeps": 4,
+      "max_T_error_K": 1.1188053008481802e-06,
+      "max_CC_error_kmol_m3": 4.5574245266521984e-08,
+      "minimum_concentration": 0.0
+    }
+  ],
+  "source_enthalpy_kJ_kmol": -83736.0,
+  "dissertation_table_enthalpy_kJ_kmol": -91556.9,
+  "integration_tolerances": {
+    "method": "DOP853",
+    "rtol": 2e-12,
+    "atol": 2e-13,
+    "max_step_h": 0.015
+  }
+}

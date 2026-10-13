@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "checks": [
+    "real backend startup",
+    "equipment insertion and undo",
+    "equipment drag",
+    "dynamic temperature/clock",
+    "pause stability",
+    "native project persistence",
+    "steady solve",
+    "controller configuration",
+    "observer configuration",
+    "PG adapter execution",
+    "saved project round trip",
+    "1100px layout"
+  ],
+  "page_errors": [],
+  "browser": "141.0.7390.37",
+  "platform": "linux"
+}

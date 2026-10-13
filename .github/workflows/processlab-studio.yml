@@ -1,0 +1,78 @@
+name: ProcessLab Studio Windows
+on:
+  push:
+    branches: ['work/ycs-processlab-studio-*']
+    paths: ['studio/**', '.github/workflows/processlab-studio.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: processlab-studio-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  windows:
+    runs-on: windows-2022
+    timeout-minutes: 35
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      PYTHONPATH: studio
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Preserve TypeScript regression baseline
+        run: npm test
+      - name: Build actual interface
+        run: |
+          npm ci --prefix studio/ui --no-audit --no-fund
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          npm run build --prefix studio/ui
+      - name: Install locked scientific and desktop dependencies
+        run: python -m pip install -r studio/requirements-windows.lock
+      - name: Verify numerical engine and Windows file handling
+        run: |
+          New-Item -ItemType Directory -Force studio/release | Out-Null
+          python -m unittest discover -s studio/tests -v 2>&1 | Tee-Object studio/release/windows-tests.txt
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python studio/desktop.py --smoke --data-dir studio/build/smoke-data --smoke-output studio/release/python-smoke.json
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Install NSIS when absent
+        run: |
+          if (!(Test-Path "${env:ProgramFiles(x86)}\NSIS\makensis.exe")) { choco install nsis --yes --no-progress }
+      - name: Build native executable and installer
+        run: ./studio/build_windows.ps1
+      - name: Verify frozen executable and actual installer
+        run: |
+          $exe = Resolve-Path studio/dist/YCSProcessLab/YCSProcessLab.exe
+          $proc = Start-Process $exe -ArgumentList '--smoke --data-dir studio/build/frozen-data --smoke-output studio/release/frozen-smoke.json' -Wait -PassThru
+          if ($proc.ExitCode -ne 0 -or !(Test-Path studio/release/frozen-smoke.json)) { throw 'Frozen engine smoke failed' }
+          $smoke = Get-Content studio/release/frozen-smoke.json | ConvertFrom-Json
+          if (!$smoke.ok -or !$smoke.frozen -or !$smoke.ui_exists) { throw 'Frozen smoke evidence invalid' }
+          $installer = Resolve-Path studio/release/YCS-ProcessLab-Studio-0.1.0-Setup.exe
+          $install = Start-Process $installer -ArgumentList '/S' -Wait -PassThru
+          if ($install.ExitCode -ne 0) { throw 'Silent install failed' }
+          $installed = "$env:LOCALAPPDATA\Programs\YCS ProcessLab Studio\YCSProcessLab.exe"
+          if (!(Test-Path $installed)) { throw 'Installed application missing' }
+          $guiOut = Join-Path $PWD 'studio/release/windows-gui-smoke.json'
+          $app = Start-Process $installed -ArgumentList "--gui-smoke-output `"$guiOut`"" -PassThru
+          if (!$app.WaitForExit(90000)) { Stop-Process $app; throw 'GUI smoke timeout' }
+          if (!(Test-Path $guiOut)) { throw 'GUI smoke evidence missing' }
+          $gui = Get-Content $guiOut | ConvertFrom-Json
+          if (!$gui.ok -or !$gui.ui_rendered) { throw 'Native Windows interface failed to render' }
+      - name: Record environment and dependency provenance
+        if: always()
+        run: |
+          python -m pip freeze > studio/release/windows-dependencies.txt
+          Get-ComputerInfo -Property WindowsProductName,WindowsVersion,OsArchitecture,CsTotalPhysicalMemory | ConvertTo-Json | Set-Content studio/release/windows-host.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: YCS-ProcessLab-Studio-Windows-${{ github.sha }}
+          path: studio/release/
+          if-no-files-found: error
+          retention-days: 3

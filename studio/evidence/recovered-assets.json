@@ -1,0 +1,34 @@
+[
+  {
+    "path": "research/beyond/provenance/pg_modeloCT.m",
+    "sha256": "d7b785681794850a4b78c2b8cfab2151f71b35b4d389efbf77383ecd8c10d086",
+    "source_commit": "88c40e65204fa6aa5bed02cc64fb15be79a53bb1"
+  },
+  {
+    "path": "research/beyond/vendor/pg_reference.py",
+    "sha256": "0bd4c320d2ef6d164b6348a1e7f5ccaafe55ee4bfefda53c136d75053add9aae",
+    "source_commit": "88c40e65204fa6aa5bed02cc64fb15be79a53bb1"
+  },
+  {
+    "path": "research/beyond/vendor/eb_reference.py",
+    "sha256": "ba86e84f31ba10a41c76a1237a0f545aed7e7d74acb9534f2613c36189b7c30c",
+    "source_commit": "88c40e65204fa6aa5bed02cc64fb15be79a53bb1"
+  },
+  {
+    "path": "lib/simulation/model.ts",
+    "sha256": "04ed5990915019094cb1725c23e130a36bc4458c9443e37044813b837b46ea74",
+    "source_commit": "88c40e65204fa6aa5bed02cc64fb15be79a53bb1"
+  },
+  {
+    "path": "tests/simulation.test.mjs",
+    "sha256": "51a2ddfcb75ac4da2eed2af13263768ca7c4ddba801085dafc7706973349ef1f",
+    "source_commit": "88c40e65204fa6aa5bed02cc64fb15be79a53bb1"
+  },
+  {
+    "archive": "AIRE_NMPC_Reproducivel.zip",
+    "bytes": 213580036,
+    "sha256": "fc4907fd9af3b8d04b8c9b5270c5fc52201ecbdc0b363627a6f4a2b60cd82320",
+    "classification": "PARTIALLY VERIFIED",
+    "published_source": false
+  }
+]

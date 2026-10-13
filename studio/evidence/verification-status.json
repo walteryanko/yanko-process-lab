@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-13",
+  "typescript_baseline": {
+    "tests": 11,
+    "passed": 11
+  },
+  "historical_pg_eb": {
+    "tests": 15,
+    "passed": 15
+  },
+  "studio": {
+    "tests": 26,
+    "passed": 26
+  },
+  "aire_recovered": {
+    "tests": 18,
+    "passed": 18
+  },
+  "windows_build_executed": false,
+  "windows_installer_exists": false,
+  "remote_push": "BLOCKED_BY_AUTO_REVIEW",
+  "branch": "work/ycs-processlab-studio-20261013",
+  "scientific_claim": "Functional validation only; not industrial or statistical safety certification."
+}

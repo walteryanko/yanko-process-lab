@@ -1,0 +1,8 @@
+numpy==2.3.5
+scipy==1.17.0
+pint==0.25
+flexcache==0.3
+flexparser==0.4
+platformdirs==4.13.0
+typing_extensions==4.16.0
+casadi==3.7.2

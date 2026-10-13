@@ -18,3 +18,9 @@ research/blackbox/results/runs/
 research/blackbox/results/report/
 jit_tmp*
 tmp_casadi_compiler_shell*
+studio/ui/dist/
+studio/build/
+studio/dist/
+studio/release/
+studio/build-info.json
+*.spec
