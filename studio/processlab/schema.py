@@ -34,6 +34,9 @@ def canonical(project):
     defaults = {"dt": 5., "duration": 600., "seed": 42, "solver": "RK45", "rtol": 1e-7, "atol": 1e-9, "controller": "manual", "observer": "ekf", "setpoint": 310., "manual": 20000., "kp": 7000., "ki": 100., "kd": 0., "horizon": 8, "sensor_sigma": .1, "sensor_period": 1, "sensor_delay": 0, "sensor_dropout": 0., "sensor_bias": 0., "sensor_drift": 0., "sensor_lag": 0., "sensor_quantization": 0., "sensor_min": -1000., "sensor_max": 2000., "chemical_period": 0, "chemical_delay": 0, "chemical_sigma": .02, "q_scale": 1., "r_scale": 1., "disturbance_time": 200., "disturbance_value": -8., "initial_estimate_offset": .1, "control_target": "temperature"}
     for k, v in defaults.items():
         cfg.setdefault(k, v)
+    cfg["move_weight"] = quantity(cfg.get("move_weight", .05), "dimensionless")
+    if not 0 <= cfg["move_weight"] <= 100:
+        raise ValueError("NMPC move weight must be between 0 and 100")
     for k in defaults:
         if isinstance(defaults[k], (int, float)):
             cfg[k] = quantity(cfg[k], "s" if k in ("dt", "duration", "disturbance_time", "sensor_lag") else "dimensionless")

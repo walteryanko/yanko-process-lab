@@ -1,6 +1,6 @@
 # YCS ProcessLab Studio — guia rápido
 
-Versão 0.1.0: base científica funcional, com limites documentados. Não é um
+Versão 0.2.0: laboratório interno, autotuning e tutoriais offline. Não é um
 substituto completo do Aspen e não controla instalações físicas.
 
 ## Instalação Windows
@@ -51,6 +51,44 @@ Em **Sensores virtuais**, selecione EKF, UKF ou MHE. Configure ruído, atraso, p
 viés e frequência. Amostra química com período zero desliga o laboratório. Um período
 10 e atraso 3 significa coleta a cada 10 passos e disponibilidade três passos depois.
 Compare estados simulados e estimados na tabela; as incertezas são aproximações.
+
+## Laboratório interno e autotuning
+
+Abra **Laboratório**. Em **Comparar cenários**, ajuste até seis ensaios. Use a mesma
+semente para comparar configurações sob o mesmo ruído. O campo **Passos por ensaio**
+define uma duração independente da execução principal. Inclua o instante do distúrbio
+na janela estudada. O gráfico compara temperatura, qualidade, erro do sensor e entrada.
+Os ensaios concluídos são salvos automaticamente no histórico do projeto.
+
+Em **Autotuning**, escolha controlador, sensor virtual ou ambos. Para começar no tanque,
+use 60 passos, 8 candidatos e 90 s de limite de cálculo. PID ajusta Kp/Ki/Kd; NMPC ajusta
+horizonte e penalidade de movimento; os observadores ajustam Q/R. A busca usa uma semente
+de treino e duas de validação, nunca consultadas para escolher o vencedor. Uma recomendação
+exige pelo menos 1% de melhoria média e nenhuma piora acima de 5% por semente. Ambos os
+casos de referência e candidato precisam completar a validação.
+
+**Aplicar parâmetros validados** modifica a configuração, mas não a salva como projeto.
+Clique em **Salvar** para conservá-la. Se o projeto mudou desde a busca, reabra a
+configuração do estudo ou faça outra busca. Sem ganho suficiente, nada é aplicado.
+Não há promessa de ótimo global ou generalização a condições não testadas. O orçamento
+e o cancelamento são verificados entre passos; uma integração/otimização em andamento
+precisa terminar. A interface continua disponível durante o trabalho do laboratório.
+
+**Exportar estudo JSON** conserva configurações, sementes, manifesto, critérios e trajetórias.
+**Exportar trajetórias CSV** grava as séries dos ensaios concluídos com unidades.
+Histórico: `laboratory`; CSV: `exports`, ambos na pasta de dados do aplicativo.
+
+## Ajuda, tutoriais e representação dos equipamentos
+
+Pressione **F1** ou clique em **Ajuda e tutoriais**. O manual pesquisável e três roteiros
+estão disponíveis sem internet: primeira malha (5 min), sintonia (8 min) e concentração
+com propilenoglicol (10 min). Cada etapa leva à aba correspondente. O progresso marcado
+pelo aluno fica neste dispositivo; ele não é uma avaliação automática de aprendizagem.
+
+Vasos, camisas, agitadores, bombas, válvulas e trocadores possuem desenhos técnicos.
+Valores de temperatura e vazão vêm do mecanismo numérico. Níveis desenhados são fixos
+e ilustrativos: os modelos de tanque mantêm volume constante. Animações seguem a execução
+e respeitam a preferência de redução de movimento.
 
 ## Projetos científicos
 

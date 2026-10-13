@@ -37,9 +37,39 @@ async function main(){
     await page.getByLabel('Abrir projeto salvo').selectOption('heated-tank');await page.waitForFunction(()=>document.querySelector('.project-name').value.includes('Tanque'));
     await page.getByRole('button',{name:'Controle',exact:true}).last().click();assert.equal(await page.getByLabel('Controlador',{exact:true}).inputValue(),'manual');
     await page.getByRole('button',{name:'Fluxograma',exact:true}).click();await page.screenshot({path:process.env.PROCESSLAB_SCREENSHOT||'/tmp/processlab-tested.png',fullPage:true});
+    // Teaching flow, offline help, real comparisons, cancellation and validated application.
+    await page.keyboard.press('F1');await page.getByRole('dialog',{name:'Ajuda e tutoriais'}).waitFor();
+    await page.getByRole('button',{name:'Manual e conceitos'}).click();await page.getByLabel('Buscar na ajuda').fill('observabilidade');
+    assert.ok(await page.locator('.help-articles details').count()>0);await page.keyboard.press('Escape');
+    assert.equal(await page.getByRole('dialog').count(),0);
+    await page.keyboard.press('F1');await page.getByRole('button',{name:'Tutoriais com exemplos'}).click();
+    await page.getByRole('button',{name:'Marcar como praticada'}).click();assert.match(await page.locator('.lesson-progress').innerText(),/1\/4/);
+    await page.getByRole('button',{name:'Carregar exemplo e abrir bancada'}).click();
+    await page.getByRole('button',{name:'Laboratório',exact:true}).click();await page.getByLabel('Passos por ensaio').fill('12');
+    await page.getByRole('button',{name:'Executar comparação',exact:true}).click();
+    await page.locator('[data-testid="lab-result"]').waitFor({timeout:30000});await page.getByText('Registro dos ensaios',{exact:true}).waitFor();
+    assert.equal(await page.locator('.comparison-legend span').count(),3);
+    await page.getByLabel('Variável da comparação').selectOption('error');
+    await page.getByRole('button',{name:'Exportar trajetórias CSV',exact:true}).click();
+    await page.waitForFunction(()=>document.querySelector('.statusbar').textContent.includes('Experimento salvo'));
+    await page.screenshot({path:'/tmp/processlab-laboratory.png',fullPage:true});
+    await page.getByRole('button',{name:'Autotuning',exact:true}).click();await page.getByLabel('Passos por ensaio').fill('200');await page.getByLabel('Candidatos de treino').fill('24');
+    await page.getByRole('button',{name:'Buscar sintonia',exact:true}).click();await page.getByRole('button',{name:'Cancelar cálculo'}).click();
+    await page.locator('[data-testid="lab-result"]').waitFor({timeout:30000});await page.locator('.lab-result .state-pill').filter({hasText:'Cancelado'}).waitFor();
+    await page.getByLabel('Passos por ensaio').fill('60');await page.getByLabel('Candidatos de treino').fill('8');
+    await page.getByRole('button',{name:'Buscar sintonia',exact:true}).click();
+    await page.getByRole('button',{name:'Aplicar parâmetros validados'}).waitFor({timeout:60000});
+    await page.locator('.lab-result').scrollIntoViewIfNeeded();await page.screenshot({path:'/tmp/processlab-autotuning.png',fullPage:true});
+    await page.getByRole('button',{name:'Aplicar parâmetros validados'}).click();
+    await page.getByRole('button',{name:'Controle',exact:true}).last().click();
+    assert.ok(Number(await page.getByLabel('Ganho proporcional Kp',{exact:true}).inputValue())>7000);
+    await page.getByRole('button',{name:'Sensores virtuais',exact:true}).click();await page.getByRole('button',{name:'Autotuning do sensor →'}).click();
+    assert.equal(await page.getByLabel('Alvo do autotuning').inputValue(),'observer');
+    await page.keyboard.press('F1');await page.screenshot({path:'/tmp/processlab-help.png',fullPage:true});await page.keyboard.press('Escape');
+    await page.getByRole('button',{name:'Fluxograma',exact:true}).click();
     await page.setViewportSize({width:1100,height:768});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
     assert.deepEqual(errors,[]);
-    const evidence={ok:true,checks:['real backend startup','equipment insertion and undo','equipment drag','dynamic temperature/clock','pause stability','native project persistence','steady solve','controller configuration','observer configuration','PG adapter execution','saved project round trip','1100px layout'],page_errors:errors,browser:await browser.version(),platform:process.platform};
+    const evidence={ok:true,checks:['real backend startup','equipment insertion and undo','equipment drag','dynamic temperature/clock','pause stability','native project persistence','steady solve','controller configuration','observer configuration','PG adapter execution','saved project round trip','1100px layout','offline searchable help and F1','guided example and saved progress','real three-case comparison and CSV','background cancellation','validated PID tuning and application','sensor tuning navigation'],page_errors:errors,browser:await browser.version(),platform:process.platform};
     fs.mkdirSync(path.join(repo,'studio/evidence'),{recursive:true});fs.writeFileSync(path.join(repo,'studio/evidence/browser-e2e.json'),JSON.stringify(evidence,null,2)+'\n');console.log(JSON.stringify(evidence));
   }finally{if(browser)await browser.close();proc.kill();fs.rmSync(data,{recursive:true,force:true});}
 }

@@ -33,7 +33,15 @@ def main():
                 assert result["manifest"]["engine_source_sha256"],"Bundled engine source provenance missing"
                 assert "not installed" not in result["manifest"]["dependencies"].values(),"Dependency metadata missing"
             cases.append({"id":p["id"],"model":p["model"],"time":result["time"],"status":result["status"],"manifest":result["manifest"]})
-        out={"ok":True,"frozen":bool(getattr(sys,"frozen",False)),"time":result["time"],"platform":sys.platform,"ui_exists":(ROOT/"studio/ui/dist/index.html").is_file(),"cases":cases}
+        lab_evidence={}
+        for kind in ("comparison","tuning"):
+            payload={"project":boot["data"]["scenarios"][1],"kind":kind,"options":{"steps":4,"budget":3,"time_budget_s":30},"variants":[{"label":"PID","experiment":{}},{"label":"Manual","experiment":{"controller":"manual"}}]}
+            job=api.request("lab_start",payload);assert job["ok"],job
+            api.laboratory.worker.join(40)
+            status=api.request("lab_status");assert status["data"]["status"]=="completed",status
+            record=api.request("lab_read",{"id":job["data"]["id"]});assert record["ok"],record
+            lab_evidence[kind]={"runs":len(record["data"]["runs"]),"candidates":len(record["data"]["candidates"]),"status":record["data"]["status"]}
+        out={"ok":True,"frozen":bool(getattr(sys,"frozen",False)),"time":result["time"],"platform":sys.platform,"ui_exists":(ROOT/"studio/ui/dist/index.html").is_file(),"cases":cases,"laboratory":lab_evidence}
         if args.smoke_output:atomic_json(args.smoke_output,out)
         print(json.dumps(out));return
     if args.run or args.replay:
@@ -65,7 +73,13 @@ def main():
                 try:
                     ready=window.evaluate_js("document.querySelector('[data-testid=\"studio-ready\"]') !== null")
                     if ready:
-                        atomic_json(args.gui_smoke_output,{"ok":True,"renderer":"edgechromium","frozen":bool(getattr(sys,"frozen",False)),"ui_rendered":True})
+                        window.evaluate_js("Array.from(document.querySelectorAll('.tabs button')).find(b => b.textContent === 'Laboratório').click()")
+                        time.sleep(.2)
+                        lab_ready=window.evaluate_js("document.querySelector('.laboratory-page').getBoundingClientRect().height > 0")
+                        window.evaluate_js("window.dispatchEvent(new KeyboardEvent('keydown', {key:'F1',bubbles:true}))")
+                        time.sleep(.2)
+                        help_ready=window.evaluate_js("document.querySelector('[role=dialog]') !== null")
+                        atomic_json(args.gui_smoke_output,{"ok":bool(lab_ready and help_ready),"renderer":"edgechromium","frozen":bool(getattr(sys,"frozen",False)),"ui_rendered":True,"laboratory_rendered":bool(lab_ready),"help_rendered":bool(help_ready)})
                         window.destroy();return
                 except Exception:pass
                 time.sleep(.25)

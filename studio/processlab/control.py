@@ -40,7 +40,7 @@ class Controller:
                 try:
                     states=path(z);y=np.array([m.quality(x) for x in states]) if c["control_target"]=="quality" else states[:,m.tidx]
                     norm=max(.05,abs(c["setpoint"])*.05) if c["control_target"]=="quality" else 5.
-                    return float(np.sum(((y-c["setpoint"])/norm)**2)+.05*np.sum(np.diff(np.r_[(last-low)/span,z])**2))
+                    return float(np.sum(((y-c["setpoint"])/norm)**2)+c["move_weight"]*np.sum(np.diff(np.r_[(last-low)/span,z])**2))
                 except (ValueError,FloatingPointError):return 1e20
             def constraints(z):
                 U=unpack(z);rate=m.slew*dt-np.abs(np.diff(np.r_[last,U]))

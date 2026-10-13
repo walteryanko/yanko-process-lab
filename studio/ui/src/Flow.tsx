@@ -2,23 +2,24 @@ import {useCallback,useState} from 'react';
 import {ReactFlow,Background,Controls,Handle,Position,ReactFlowProvider,useReactFlow,applyNodeChanges,MarkerType,type NodeProps,type Node,type Connection as RFConnection,type Edge} from '@xyflow/react';
 import {Droplets,FlaskConical,GitMerge,Split,Container,ArrowUpRight,SlidersHorizontal,Flame,Snowflake,RefreshCw,Zap,PackageCheck} from 'lucide-react';
 import '@xyflow/react/dist/style.css';
+import {EquipmentGraphic} from './EquipmentGraphic';
 import type {Project,Catalog,Result,Equipment} from './types';
 export const icons:Record<string,typeof Droplets>={source:Droplets,sink:PackageCheck,mixer:GitMerge,splitter:Split,tank:Container,pump:ArrowUpRight,valve:SlidersHorizontal,heater:Flame,cooler:Snowflake,exchanger:RefreshCw,cstr:FlaskConical,energy:Zap};
-type UnitData={equipment:Equipment;catalog:Catalog;result?:Record<string,number>};
+type UnitData={equipment:Equipment;catalog:Catalog;result?:Record<string,number>;running?:boolean};
 function Unit({data,selected}:NodeProps<Node<UnitData>>){
   const n=data.equipment,c=data.catalog[n.kind],Icon=icons[n.kind]||FlaskConical;
   return <div className={`equipment ${selected?'selected':''} ${n.kind}`}>
     {c.inputs.map((p,i)=><Handle key={p} id={p} type="target" position={Position.Left} style={{top:`${(i+1)/(c.inputs.length+1)*100}%`}} title={p}/>)}
     {c.energy&&<Handle id="heat" type="target" position={Position.Bottom} className="energy-handle" title="Entrada de energia"/>}
-    <div className="equipment-head"><span>{c.label}</span><i className={data.result?'active':''}/></div><div className="equipment-body"><Icon size={29} strokeWidth={1.5}/><strong>{n.label||n.id}</strong></div>
+    <div className="equipment-head"><span>{c.label}</span><i className={data.result?'active':''}/></div><div className="equipment-body"><EquipmentGraphic kind={n.kind} active={data.running}/><strong>{n.label||n.id}</strong></div>
     <div className="equipment-value">{data.result?.temperature!=null?<><b>{data.result.temperature.toFixed(2)}</b> K <span>· {data.result.flow.toFixed(2)} kg/s</span></>:n.kind==='energy'?`${n.parameters.duty} W`:'Pronto para cálculo'}</div>
     {c.outputs.map((p,i)=><Handle key={p} id={p} type="source" position={n.kind==='energy'?Position.Top:Position.Right} className={n.kind==='energy'?'energy-handle':''} style={{top:n.kind==='energy'?undefined:`${(i+1)/(c.outputs.length+1)*100}%`}} title={p}/>)}
   </div>;
 }
 const nodeTypes={unit:Unit};
-function Canvas({project,catalog,result,selected,onSelect,onChange,onError}:{project:Project;catalog:Catalog;result:Result|null;selected:string;onSelect:(s:string)=>void;onChange:(p:Project)=>void;onError:(s:string)=>void}){
+function Canvas({project,catalog,result,running,selected,onSelect,onChange,onError}:{project:Project;catalog:Catalog;result:Result|null;running?:boolean;selected:string;onSelect:(s:string)=>void;onChange:(p:Project)=>void;onError:(s:string)=>void}){
   const flow=useReactFlow();const [dragPositions,setDragPositions]=useState<Record<string,{x:number;y:number}>>({});
-  const nodes=(project.nodes||[]).map(n=>({id:n.id,type:'unit',position:dragPositions[n.id]||n.layout,selected:n.id===selected,data:{equipment:n,catalog,result:result?.streams?.units[n.id]}}));
+  const nodes=(project.nodes||[]).map(n=>({id:n.id,type:'unit',position:dragPositions[n.id]||n.layout,selected:n.id===selected,data:{equipment:n,catalog,running,result:result?.streams?.units[n.id]}}));
   const edges:Edge[]=(project.edges||[]).map(e=>({id:e.id,source:e.source,target:e.target,sourceHandle:e.source_port,targetHandle:e.target_port,label:e.id,type:'smoothstep',style:{stroke:e.kind==='energy'?'#d6ae70':'#6dd5bd',strokeWidth:1.7},labelStyle:{fill:'#9cabbc',fontSize:10},labelBgStyle:{fill:'#141c28'},markerEnd:{type:MarkerType.ArrowClosed,color:e.kind==='energy'?'#d6ae70':'#6dd5bd'}}));
   const isValid=useCallback((c:RFConnection|Edge)=>{
     const a=project.nodes?.find(n=>n.id===c.source),b=project.nodes?.find(n=>n.id===c.target);if(!a||!b||a.id===b.id)return false;

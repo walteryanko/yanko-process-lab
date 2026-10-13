@@ -1,7 +1,7 @@
 Unicode True
 !include "MUI2.nsh"
-Name "YCS ProcessLab Studio 0.1.0"
-OutFile "release\YCS-ProcessLab-Studio-0.1.0-Setup.exe"
+Name "YCS ProcessLab Studio 0.2.0"
+OutFile "release\YCS-ProcessLab-Studio-0.2.0-Setup.exe"
 InstallDir "$LOCALAPPDATA\Programs\YCS ProcessLab Studio"
 RequestExecutionLevel user
 SetCompressor /SOLID lzma
@@ -23,7 +23,7 @@ Section "YCS ProcessLab Studio" SEC01
   CreateShortcut "$DESKTOP\YCS ProcessLab Studio.lnk" "$INSTDIR\YCSProcessLab.exe"
   WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\YCSProcessLab" "DisplayName" "YCS ProcessLab Studio"
   WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\YCSProcessLab" "UninstallString" '"$INSTDIR\Uninstall.exe"'
-  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\YCSProcessLab" "DisplayVersion" "0.1.0"
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\YCSProcessLab" "DisplayVersion" "0.2.0"
   WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\YCSProcessLab" "Publisher" "Yanko Creative Studio"
 SectionEnd
 Section "Uninstall"

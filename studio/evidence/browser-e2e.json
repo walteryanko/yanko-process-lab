@@ -12,7 +12,13 @@
     "observer configuration",
     "PG adapter execution",
     "saved project round trip",
-    "1100px layout"
+    "1100px layout",
+    "offline searchable help and F1",
+    "guided example and saved progress",
+    "real three-case comparison and CSV",
+    "background cancellation",
+    "validated PID tuning and application",
+    "sensor tuning navigation"
   ],
   "page_errors": [],
   "browser": "141.0.7390.37",

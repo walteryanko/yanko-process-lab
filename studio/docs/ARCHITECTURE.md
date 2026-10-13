@@ -1,4 +1,4 @@
-# ProcessLab Studio 0.1.0 — architecture and scope
+# ProcessLab Studio 0.2.0 — architecture and scope
 
 This is an executable research baseline, not the complete target industrial simulator.
 It evolves the same repository from `88c40e65204fa6aa5bed02cc64fb15be79a53bb1`.
@@ -37,6 +37,7 @@ user code execution are implemented.
 | estimation | EKF, UKF, deterministic-window MHE; delayed replay |
 | control | Measured-temperature PID; estimated-state NMPC |
 | simulation | Physical clock and orchestration, immutable output rows |
+| laboratory | Budgeted worker, paired studies, offline tuning and guarded application |
 | storage / api | Atomic local files and serialized requests |
 | desktop / server | Native host and authenticated development host |
 
@@ -106,3 +107,37 @@ measurements, truth, estimates, controls, metrics, solver settings and environme
 
 Documentation consulted: https://reactflow.dev/api-reference/react-flow and
 https://pywebview.flowrl.com/guide/freezing.html (13 October 2026).
+
+
+## Offline laboratory (0.2)
+
+`lab_start`, `lab_status`, `lab_cancel`, `lab_read`, `lab_history`, `lab_export`
+and `tuning_apply` expose one background worker per application. The worker owns
+independent Simulation objects and never modifies the active simulation. Reports
+are written atomically before status becomes terminal. Only completed, accepted
+studies can be applied, and canonical source-project equality guards stale results.
+
+Autotuning explores bounded logarithmic coordinates, then makes shrinking coordinate
+moves around the best training candidate. PID derivative gain and integer NMPC
+horizon use linear coordinates. The baseline is always candidate zero. Training uses
+the configured seed; validation uses (seed+104729) and (seed+209759), modulo 2^32.
+The training winner is frozen before validation. No further selection uses holdout.
+
+Truth is available exclusively to retrospective scoring, physical simulation and sensor
+emulation. Online controllers/observers retain their original information boundaries.
+The report discloses score formulas, state/quality/input scales, bounds, candidates,
+validation scores and manifests. Acceptance requires >=1% mean score improvement,
+no seed >5% worse, and complete baseline/candidate validation runs. This is not a
+global optimum or general robustness certificate. Validation changes noise seeds,
+not plant-model structure. Observability defects remain defects.
+
+Budgets: 3–24 training candidates + 4 validation runs, 4–200 steps each, 5–600 s wall
+budget. Checking/cancellation is cooperative between steps; one numerical step may
+exceed the requested time. Incomplete jobs cannot supply applicable recommendations.
+Comparisons use 1–6 individually labeled cases with project snapshots. History is
+filtered by project ID; JSON preserves full trajectories, CSV includes explicit units.
+
+The frontend has code-native equipment SVGs, a case-comparison plot, and searchable
+Portuguese help with three guided examples. Tutorial progress is versioned localStorage;
+it is self-reported practice, not a test score. F1/Esc and a modal focus trap support
+keyboard use; reduced-motion preference disables equipment animation.

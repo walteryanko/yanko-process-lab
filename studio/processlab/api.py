@@ -6,11 +6,13 @@ from .models import build_model
 from .scenarios import scenarios
 from .simulation import Simulation
 from .storage import Storage,atomic_json,atomic_bytes
+from .laboratory import Laboratory
 
 
 class API:
     def __init__(self,directory=None):
         self.storage=Storage(directory);self.sim=None;self.lock=threading.RLock()
+        self.laboratory=Laboratory(self.storage)
 
     def request(self,method,payload=None):
         payload={} if payload is None else payload
@@ -22,6 +24,13 @@ class API:
                 return {"ok":False,"error":str(e),"type":type(e).__name__}
 
     def _request(self,method,p):
+        if method=="lab_start":return self.laboratory.start(p)
+        if method=="lab_status":return self.laboratory.status()
+        if method=="lab_cancel":return self.laboratory.cancel()
+        if method=="lab_history":return self.laboratory.history(p["project_id"])
+        if method=="lab_read":return self.laboratory.read(p["id"])
+        if method=="lab_export":return self.laboratory.export(p["id"],p.get("format","json"))
+        if method=="tuning_apply":return self.laboratory.apply(p["id"],p["project"])
         if method=="bootstrap":return {"scenarios":scenarios(),"catalog":CATALOG,"saved":self.storage.list(),"storage":str(self.storage.root)}
         if method=="save":return self.storage.save(p)
         if method=="open":return self.storage.load(p["id"])

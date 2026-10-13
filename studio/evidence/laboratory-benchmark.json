@@ -1,0 +1,918 @@
+{
+  "version": "0.2.0",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "scope": "Runtime host only, not target-laptop performance. PG/EB short execution demonstrations, not accuracy validation.",
+  "cases": [
+    {
+      "case": "tank-pid",
+      "options": {
+        "steps": 60,
+        "time_budget_s": 90,
+        "budget": 8,
+        "target": "controller"
+      },
+      "source_project": {
+        "schema_version": 1,
+        "id": "heated-tank",
+        "name": "B · Tanque com controle PID",
+        "model": "flowsheet",
+        "nodes": [
+          {
+            "id": "F-101",
+            "kind": "source",
+            "label": "F-101",
+            "parameters": {
+              "flow": 1.0,
+              "temperature": 298.15,
+              "fraction": 0.1,
+              "pressure": 101325.0
+            },
+            "layout": {
+              "x": 20,
+              "y": 80
+            }
+          },
+          {
+            "id": "T-101",
+            "kind": "tank",
+            "label": "T-101",
+            "parameters": {
+              "volume": 0.1,
+              "temperature": 298.15,
+              "fraction": 0.1,
+              "duty": 20000.0
+            },
+            "layout": {
+              "x": 300,
+              "y": 80
+            }
+          },
+          {
+            "id": "P-101",
+            "kind": "sink",
+            "label": "P-101",
+            "parameters": {},
+            "layout": {
+              "x": 580,
+              "y": 80
+            }
+          }
+        ],
+        "edges": [
+          {
+            "id": "S-1",
+            "source": "F-101",
+            "target": "T-101",
+            "source_port": "out",
+            "target_port": "in",
+            "kind": "material"
+          },
+          {
+            "id": "S-2",
+            "source": "T-101",
+            "target": "P-101",
+            "source_port": "out",
+            "target_port": "in",
+            "kind": "material"
+          }
+        ],
+        "control_equipment": "T-101",
+        "experiment": {
+          "dt": 5.0,
+          "duration": 600.0,
+          "controller": "pid",
+          "observer": "ekf",
+          "setpoint": 310.0,
+          "manual": 20000.0,
+          "kp": 7000.0,
+          "ki": 100.0,
+          "disturbance_time": 200.0,
+          "disturbance_value": -8.0,
+          "seed": 42,
+          "solver": "RK45",
+          "rtol": 1e-07,
+          "atol": 1e-09,
+          "kd": 0.0,
+          "horizon": 8,
+          "sensor_sigma": 0.1,
+          "sensor_period": 1,
+          "sensor_delay": 0,
+          "sensor_dropout": 0.0,
+          "sensor_bias": 0.0,
+          "sensor_drift": 0.0,
+          "sensor_lag": 0.0,
+          "sensor_quantization": 0.0,
+          "sensor_min": -1000.0,
+          "sensor_max": 2000.0,
+          "chemical_period": 0,
+          "chemical_delay": 0,
+          "chemical_sigma": 0.02,
+          "q_scale": 1.0,
+          "r_scale": 1.0,
+          "initial_estimate_offset": 0.1,
+          "control_target": "temperature",
+          "move_weight": 0.05
+        }
+      },
+      "validation": {
+        "pairs": [
+          {
+            "seed": 104771,
+            "baseline": {
+              "score": 0.41593256408895873,
+              "feasible": true,
+              "tracking": 0.415711037180857,
+              "normalized_move_energy": 0.011076345405085728,
+              "optimizer_failure_fraction": 0.0,
+              "control_score": 0.41593256408895873,
+              "observer_score": 0.06353820266989074
+            },
+            "candidate": {
+              "score": 0.34764984841703883,
+              "feasible": true,
+              "tracking": 0.347403049968654,
+              "normalized_move_energy": 0.012339922419241851,
+              "optimizer_failure_fraction": 0.0,
+              "control_score": 0.34764984841703883,
+              "observer_score": 0.0635382027852484
+            }
+          },
+          {
+            "seed": 209801,
+            "baseline": {
+              "score": 0.40628765961783236,
+              "feasible": true,
+              "tracking": 0.40606681625339647,
+              "normalized_move_energy": 0.011042168221793687,
+              "optimizer_failure_fraction": 0.0,
+              "control_score": 0.40628765961783236,
+              "observer_score": 0.06390985041225498
+            },
+            "candidate": {
+              "score": 0.3516309734551239,
+              "feasible": true,
+              "tracking": 0.3513781340123019,
+              "normalized_move_energy": 0.012641972141100435,
+              "optimizer_failure_fraction": 0.0,
+              "control_score": 0.3516309734551239,
+              "observer_score": 0.06390985052586792
+            }
+          }
+        ],
+        "baseline_score": 0.4111101118533955,
+        "candidate_score": 0.34964041093608134,
+        "improvement_fraction": 0.14952125755358378,
+        "accepted": true
+      },
+      "recommendation": {
+        "kp": 19029.803522107137,
+        "ki": 244.43027544169857,
+        "kd": 0.0
+      },
+      "elapsed_s": 9.003173750001224,
+      "engine_manifest": {
+        "application_version": "0.2.0",
+        "git_commit": "dfddd53f0b9a77405aed6bdddaa830a795069c6a",
+        "working_tree_dirty": true,
+        "engine_source_sha256": "020917e1ba1db2e3812d106990543f55e2364dbdc47feb4d5b323894c72a40f5",
+        "project_sha256": "74b84645653376b20b46d25d1ddfa41fc485d1ec9bb55ae4eb49808195c8d654",
+        "created_utc": "2026-10-13T17:28:55.039790+00:00",
+        "python": "3.12.14",
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+        "dependencies": {
+          "numpy": "2.3.5",
+          "scipy": "1.17.0",
+          "pint": "0.25",
+          "casadi": "3.7.2",
+          "pywebview": "not installed"
+        },
+        "project": {
+          "schema_version": 1,
+          "id": "heated-tank",
+          "name": "B · Tanque com controle PID",
+          "model": "flowsheet",
+          "nodes": [
+            {
+              "id": "F-101",
+              "kind": "source",
+              "label": "F-101",
+              "parameters": {
+                "flow": 1.0,
+                "temperature": 298.15,
+                "fraction": 0.1,
+                "pressure": 101325.0
+              },
+              "layout": {
+                "x": 20,
+                "y": 80
+              }
+            },
+            {
+              "id": "T-101",
+              "kind": "tank",
+              "label": "T-101",
+              "parameters": {
+                "volume": 0.1,
+                "temperature": 298.15,
+                "fraction": 0.1,
+                "duty": 20000.0
+              },
+              "layout": {
+                "x": 300,
+                "y": 80
+              }
+            },
+            {
+              "id": "P-101",
+              "kind": "sink",
+              "label": "P-101",
+              "parameters": {},
+              "layout": {
+                "x": 580,
+                "y": 80
+              }
+            }
+          ],
+          "edges": [
+            {
+              "id": "S-1",
+              "source": "F-101",
+              "target": "T-101",
+              "source_port": "out",
+              "target_port": "in",
+              "kind": "material"
+            },
+            {
+              "id": "S-2",
+              "source": "T-101",
+              "target": "P-101",
+              "source_port": "out",
+              "target_port": "in",
+              "kind": "material"
+            }
+          ],
+          "control_equipment": "T-101",
+          "experiment": {
+            "dt": 5.0,
+            "duration": 300.0,
+            "controller": "pid",
+            "observer": "ekf",
+            "setpoint": 310.0,
+            "manual": 20000.0,
+            "kp": 7000.0,
+            "ki": 100.0,
+            "disturbance_time": 200.0,
+            "disturbance_value": -8.0,
+            "seed": 42,
+            "solver": "RK45",
+            "rtol": 1e-07,
+            "atol": 1e-09,
+            "kd": 0.0,
+            "horizon": 8,
+            "sensor_sigma": 0.1,
+            "sensor_period": 1,
+            "sensor_delay": 0,
+            "sensor_dropout": 0.0,
+            "sensor_bias": 0.0,
+            "sensor_drift": 0.0,
+            "sensor_lag": 0.0,
+            "sensor_quantization": 0.0,
+            "sensor_min": -1000.0,
+            "sensor_max": 2000.0,
+            "chemical_period": 0,
+            "chemical_delay": 0,
+            "chemical_sigma": 0.02,
+            "q_scale": 1.0,
+            "r_scale": 1.0,
+            "initial_estimate_offset": 0.1,
+            "control_target": "temperature",
+            "move_weight": 0.05
+          }
+        },
+        "truth_used_for": "physical simulation, emulated sensors and retrospective scoring only",
+        "uncertainty": "Uncalibrated approximate covariance; MHE uses EKF companion covariance",
+        "hardware_validation": "Runtime host only; not a measurement on the user's laptop"
+      }
+    },
+    {
+      "case": "tank-ekf-noisy",
+      "options": {
+        "steps": 60,
+        "time_budget_s": 90,
+        "budget": 8,
+        "target": "observer"
+      },
+      "source_project": {
+        "schema_version": 1,
+        "id": "heated-tank",
+        "name": "B · Tanque com controle PID",
+        "model": "flowsheet",
+        "nodes": [
+          {
+            "id": "F-101",
+            "kind": "source",
+            "label": "F-101",
+            "parameters": {
+              "flow": 1.0,
+              "temperature": 298.15,
+              "fraction": 0.1,
+              "pressure": 101325.0
+            },
+            "layout": {
+              "x": 20,
+              "y": 80
+            }
+          },
+          {
+            "id": "T-101",
+            "kind": "tank",
+            "label": "T-101",
+            "parameters": {
+              "volume": 0.1,
+              "temperature": 298.15,
+              "fraction": 0.1,
+              "duty": 20000.0
+            },
+            "layout": {
+              "x": 300,
+              "y": 80
+            }
+          },
+          {
+            "id": "P-101",
+            "kind": "sink",
+            "label": "P-101",
+            "parameters": {},
+            "layout": {
+              "x": 580,
+              "y": 80
+            }
+          }
+        ],
+        "edges": [
+          {
+            "id": "S-1",
+            "source": "F-101",
+            "target": "T-101",
+            "source_port": "out",
+            "target_port": "in",
+            "kind": "material"
+          },
+          {
+            "id": "S-2",
+            "source": "T-101",
+            "target": "P-101",
+            "source_port": "out",
+            "target_port": "in",
+            "kind": "material"
+          }
+        ],
+        "control_equipment": "T-101",
+        "experiment": {
+          "dt": 5.0,
+          "duration": 600.0,
+          "controller": "pid",
+          "observer": "ekf",
+          "setpoint": 310.0,
+          "manual": 20000.0,
+          "kp": 7000.0,
+          "ki": 100.0,
+          "disturbance_time": 200.0,
+          "disturbance_value": -8.0,
+          "seed": 42,
+          "solver": "RK45",
+          "rtol": 1e-07,
+          "atol": 1e-09,
+          "kd": 0.0,
+          "horizon": 8,
+          "sensor_sigma": 0.8,
+          "sensor_period": 1,
+          "sensor_delay": 0,
+          "sensor_dropout": 0.0,
+          "sensor_bias": 0.0,
+          "sensor_drift": 0.0,
+          "sensor_lag": 0.0,
+          "sensor_quantization": 0.0,
+          "sensor_min": -1000.0,
+          "sensor_max": 2000.0,
+          "chemical_period": 0,
+          "chemical_delay": 0,
+          "chemical_sigma": 0.02,
+          "q_scale": 1.0,
+          "r_scale": 1.0,
+          "initial_estimate_offset": 0.1,
+          "control_target": "temperature",
+          "move_weight": 0.05
+        }
+      },
+      "validation": {
+        "pairs": [
+          {
+            "seed": 104771,
+            "baseline": {
+              "score": 0.06562941416931184,
+              "feasible": true,
+              "tracking": 0.4042586395386547,
+              "normalized_move_energy": 0.018556774274581207,
+              "optimizer_failure_fraction": 0.0,
+              "control_score": 0.4046297750241463,
+              "observer_score": 0.06562941416931184
+            },
+            "candidate": {
+              "score": 0.06574134882792601,
+              "feasible": true,
+              "tracking": 0.4042586395386547,
+              "normalized_move_energy": 0.018556774274581207,
+              "optimizer_failure_fraction": 0.0,
+              "control_score": 0.4046297750241463,
+              "observer_score": 0.06574134882792601
+            }
+          },
+          {
+            "seed": 209801,
+            "baseline": {
+              "score": 0.07139566716251358,
+              "feasible": true,
+              "tracking": 0.42078016533548546,
+              "normalized_move_energy": 0.020083287125201167,
+              "optimizer_failure_fraction": 0.0,
+              "control_score": 0.42118183107798945,
+              "observer_score": 0.07139566716251358
+            },
+            "candidate": {
+              "score": 0.08397817157806886,
+              "feasible": true,
+              "tracking": 0.42078016533548546,
+              "normalized_move_energy": 0.020083287125201167,
+              "optimizer_failure_fraction": 0.0,
+              "control_score": 0.42118183107798945,
+              "observer_score": 0.08397817157806886
+            }
+          }
+        ],
+        "baseline_score": 0.06851254066591271,
+        "candidate_score": 0.07485976020299744,
+        "improvement_fraction": -0.09264317853917625,
+        "accepted": false
+      },
+      "recommendation": null,
+      "elapsed_s": 9.642963095999221,
+      "engine_manifest": {
+        "application_version": "0.2.0",
+        "git_commit": "dfddd53f0b9a77405aed6bdddaa830a795069c6a",
+        "working_tree_dirty": true,
+        "engine_source_sha256": "020917e1ba1db2e3812d106990543f55e2364dbdc47feb4d5b323894c72a40f5",
+        "project_sha256": "814955f05a3210889bc6d61ba9703a239b6f101faac5e2170bfacd2953928029",
+        "created_utc": "2026-10-13T17:29:04.065765+00:00",
+        "python": "3.12.14",
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+        "dependencies": {
+          "numpy": "2.3.5",
+          "scipy": "1.17.0",
+          "pint": "0.25",
+          "casadi": "3.7.2",
+          "pywebview": "not installed"
+        },
+        "project": {
+          "schema_version": 1,
+          "id": "heated-tank",
+          "name": "B · Tanque com controle PID",
+          "model": "flowsheet",
+          "nodes": [
+            {
+              "id": "F-101",
+              "kind": "source",
+              "label": "F-101",
+              "parameters": {
+                "flow": 1.0,
+                "temperature": 298.15,
+                "fraction": 0.1,
+                "pressure": 101325.0
+              },
+              "layout": {
+                "x": 20,
+                "y": 80
+              }
+            },
+            {
+              "id": "T-101",
+              "kind": "tank",
+              "label": "T-101",
+              "parameters": {
+                "volume": 0.1,
+                "temperature": 298.15,
+                "fraction": 0.1,
+                "duty": 20000.0
+              },
+              "layout": {
+                "x": 300,
+                "y": 80
+              }
+            },
+            {
+              "id": "P-101",
+              "kind": "sink",
+              "label": "P-101",
+              "parameters": {},
+              "layout": {
+                "x": 580,
+                "y": 80
+              }
+            }
+          ],
+          "edges": [
+            {
+              "id": "S-1",
+              "source": "F-101",
+              "target": "T-101",
+              "source_port": "out",
+              "target_port": "in",
+              "kind": "material"
+            },
+            {
+              "id": "S-2",
+              "source": "T-101",
+              "target": "P-101",
+              "source_port": "out",
+              "target_port": "in",
+              "kind": "material"
+            }
+          ],
+          "control_equipment": "T-101",
+          "experiment": {
+            "dt": 5.0,
+            "duration": 300.0,
+            "controller": "pid",
+            "observer": "ekf",
+            "setpoint": 310.0,
+            "manual": 20000.0,
+            "kp": 7000.0,
+            "ki": 100.0,
+            "disturbance_time": 200.0,
+            "disturbance_value": -8.0,
+            "seed": 42,
+            "solver": "RK45",
+            "rtol": 1e-07,
+            "atol": 1e-09,
+            "kd": 0.0,
+            "horizon": 8,
+            "sensor_sigma": 0.8,
+            "sensor_period": 1,
+            "sensor_delay": 0,
+            "sensor_dropout": 0.0,
+            "sensor_bias": 0.0,
+            "sensor_drift": 0.0,
+            "sensor_lag": 0.0,
+            "sensor_quantization": 0.0,
+            "sensor_min": -1000.0,
+            "sensor_max": 2000.0,
+            "chemical_period": 0,
+            "chemical_delay": 0,
+            "chemical_sigma": 0.02,
+            "q_scale": 1.0,
+            "r_scale": 1.0,
+            "initial_estimate_offset": 0.1,
+            "control_target": "temperature",
+            "move_weight": 0.05
+          }
+        },
+        "truth_used_for": "physical simulation, emulated sensors and retrospective scoring only",
+        "uncertainty": "Uncalibrated approximate covariance; MHE uses EKF companion covariance",
+        "hardware_validation": "Runtime host only; not a measurement on the user's laptop"
+      }
+    },
+    {
+      "case": "pg-ukf",
+      "options": {
+        "steps": 12,
+        "time_budget_s": 90,
+        "budget": 4,
+        "target": "observer"
+      },
+      "source_project": {
+        "schema_version": 1,
+        "id": "pg-original",
+        "name": "C · Propilenoglicol — modelo original",
+        "model": "pg-original",
+        "experiment": {
+          "dt": 54.0,
+          "duration": 2160.0,
+          "controller": "pid",
+          "observer": "ukf",
+          "manual": 453.59237,
+          "setpoint": 332.333618,
+          "kp": 20.0,
+          "ki": 0.02,
+          "disturbance_time": 540.0,
+          "disturbance_value": 2.0,
+          "chemical_period": 10,
+          "chemical_delay": 3,
+          "sensor_sigma": 0.15,
+          "initial_estimate_offset": 0.1,
+          "seed": 42,
+          "solver": "RK45",
+          "rtol": 1e-07,
+          "atol": 1e-09,
+          "kd": 0.0,
+          "horizon": 8,
+          "sensor_period": 1,
+          "sensor_delay": 0,
+          "sensor_dropout": 0.0,
+          "sensor_bias": 0.0,
+          "sensor_drift": 0.0,
+          "sensor_lag": 0.0,
+          "sensor_quantization": 0.0,
+          "sensor_min": -1000.0,
+          "sensor_max": 2000.0,
+          "chemical_sigma": 0.02,
+          "q_scale": 1.0,
+          "r_scale": 1.0,
+          "control_target": "temperature",
+          "move_weight": 0.05
+        }
+      },
+      "validation": {
+        "pairs": [
+          {
+            "seed": 104771,
+            "baseline": {
+              "score": 0.08230546901504704,
+              "feasible": true,
+              "tracking": 0.00920483994810392,
+              "normalized_move_energy": 1.0742920724476626e-05,
+              "optimizer_failure_fraction": 0.0,
+              "control_score": 0.009205054806518408,
+              "observer_score": 0.08230546901504704
+            },
+            "candidate": {
+              "score": 0.08242222164559412,
+              "feasible": true,
+              "tracking": 0.00920483994810392,
+              "normalized_move_energy": 1.0742920724476626e-05,
+              "optimizer_failure_fraction": 0.0,
+              "control_score": 0.009205054806518408,
+              "observer_score": 0.08242222164559412
+            }
+          },
+          {
+            "seed": 209801,
+            "baseline": {
+              "score": 0.09013401945375235,
+              "feasible": true,
+              "tracking": 0.011982436265369737,
+              "normalized_move_energy": 1.229430984100429e-05,
+              "optimizer_failure_fraction": 0.0,
+              "control_score": 0.011982682151566558,
+              "observer_score": 0.09013401945375235
+            },
+            "candidate": {
+              "score": 0.09015680390444722,
+              "feasible": true,
+              "tracking": 0.011982436265369737,
+              "normalized_move_energy": 1.229430984100429e-05,
+              "optimizer_failure_fraction": 0.0,
+              "control_score": 0.011982682151566558,
+              "observer_score": 0.09015680390444722
+            }
+          }
+        ],
+        "baseline_score": 0.0862197442343997,
+        "candidate_score": 0.08628951277502067,
+        "improvement_fraction": -0.000809194474426895,
+        "accepted": false
+      },
+      "recommendation": null,
+      "elapsed_s": 5.069265283000277,
+      "engine_manifest": {
+        "application_version": "0.2.0",
+        "git_commit": "dfddd53f0b9a77405aed6bdddaa830a795069c6a",
+        "working_tree_dirty": true,
+        "engine_source_sha256": "020917e1ba1db2e3812d106990543f55e2364dbdc47feb4d5b323894c72a40f5",
+        "project_sha256": "d0ca9de64d28a2adafdbcf585c4ae9fcba48b7040e6a003634d579266a0b9840",
+        "created_utc": "2026-10-13T17:29:13.790255+00:00",
+        "python": "3.12.14",
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+        "dependencies": {
+          "numpy": "2.3.5",
+          "scipy": "1.17.0",
+          "pint": "0.25",
+          "casadi": "3.7.2",
+          "pywebview": "not installed"
+        },
+        "project": {
+          "schema_version": 1,
+          "id": "pg-original",
+          "name": "C · Propilenoglicol — modelo original",
+          "model": "pg-original",
+          "experiment": {
+            "dt": 54.0,
+            "duration": 648.0,
+            "controller": "pid",
+            "observer": "ukf",
+            "manual": 453.59237,
+            "setpoint": 332.333618,
+            "kp": 20.0,
+            "ki": 0.02,
+            "disturbance_time": 540.0,
+            "disturbance_value": 2.0,
+            "chemical_period": 10,
+            "chemical_delay": 3,
+            "sensor_sigma": 0.15,
+            "initial_estimate_offset": 0.1,
+            "seed": 42,
+            "solver": "RK45",
+            "rtol": 1e-07,
+            "atol": 1e-09,
+            "kd": 0.0,
+            "horizon": 8,
+            "sensor_period": 1,
+            "sensor_delay": 0,
+            "sensor_dropout": 0.0,
+            "sensor_bias": 0.0,
+            "sensor_drift": 0.0,
+            "sensor_lag": 0.0,
+            "sensor_quantization": 0.0,
+            "sensor_min": -1000.0,
+            "sensor_max": 2000.0,
+            "chemical_sigma": 0.02,
+            "q_scale": 1.0,
+            "r_scale": 1.0,
+            "control_target": "temperature",
+            "move_weight": 0.05
+          }
+        },
+        "truth_used_for": "physical simulation, emulated sensors and retrospective scoring only",
+        "uncertainty": "Uncalibrated approximate covariance; MHE uses EKF companion covariance",
+        "hardware_validation": "Runtime host only; not a measurement on the user's laptop"
+      }
+    },
+    {
+      "case": "eb-ekf",
+      "options": {
+        "steps": 8,
+        "time_budget_s": 90,
+        "budget": 4,
+        "target": "observer"
+      },
+      "source_project": {
+        "schema_version": 1,
+        "id": "eb-reduced",
+        "name": "D · Etilbenzeno — R1 reduzido",
+        "model": "eb-reduced",
+        "experiment": {
+          "dt": 72.0,
+          "duration": 2160.0,
+          "controller": "manual",
+          "observer": "ekf",
+          "setpoint": 160.0,
+          "manual": 21828692.029215917,
+          "disturbance_time": 720.0,
+          "disturbance_value": 1.0,
+          "sensor_sigma": 0.1,
+          "initial_estimate_offset": 0.05,
+          "seed": 42,
+          "solver": "RK45",
+          "rtol": 1e-07,
+          "atol": 1e-09,
+          "kp": 7000.0,
+          "ki": 100.0,
+          "kd": 0.0,
+          "horizon": 8,
+          "sensor_period": 1,
+          "sensor_delay": 0,
+          "sensor_dropout": 0.0,
+          "sensor_bias": 0.0,
+          "sensor_drift": 0.0,
+          "sensor_lag": 0.0,
+          "sensor_quantization": 0.0,
+          "sensor_min": -1000.0,
+          "sensor_max": 2000.0,
+          "chemical_period": 0,
+          "chemical_delay": 0,
+          "chemical_sigma": 0.02,
+          "q_scale": 1.0,
+          "r_scale": 1.0,
+          "control_target": "temperature",
+          "move_weight": 0.05
+        }
+      },
+      "validation": {
+        "pairs": [
+          {
+            "seed": 104771,
+            "baseline": {
+              "score": 0.03939266876429277,
+              "feasible": true,
+              "tracking": 0.0,
+              "normalized_move_energy": 0.0,
+              "optimizer_failure_fraction": 0.0,
+              "control_score": 0.0,
+              "observer_score": 0.03939266876429277
+            },
+            "candidate": {
+              "score": 0.038132103930071534,
+              "feasible": true,
+              "tracking": 0.0,
+              "normalized_move_energy": 0.0,
+              "optimizer_failure_fraction": 0.0,
+              "control_score": 0.0,
+              "observer_score": 0.038132103930071534
+            }
+          },
+          {
+            "seed": 209801,
+            "baseline": {
+              "score": 0.042119075836183094,
+              "feasible": true,
+              "tracking": 0.0,
+              "normalized_move_energy": 0.0,
+              "optimizer_failure_fraction": 0.0,
+              "control_score": 0.0,
+              "observer_score": 0.042119075836183094
+            },
+            "candidate": {
+              "score": 0.04039327607965692,
+              "feasible": true,
+              "tracking": 0.0,
+              "normalized_move_energy": 0.0,
+              "optimizer_failure_fraction": 0.0,
+              "control_score": 0.0,
+              "observer_score": 0.04039327607965692
+            }
+          }
+        ],
+        "baseline_score": 0.04075587230023793,
+        "candidate_score": 0.03926269000486422,
+        "improvement_fraction": 0.03663723068847161,
+        "accepted": true
+      },
+      "recommendation": {
+        "q_scale": 0.31622776601683794,
+        "r_scale": 0.30170881682725814
+      },
+      "elapsed_s": 3.9328308280000783,
+      "engine_manifest": {
+        "application_version": "0.2.0",
+        "git_commit": "dfddd53f0b9a77405aed6bdddaa830a795069c6a",
+        "working_tree_dirty": true,
+        "engine_source_sha256": "020917e1ba1db2e3812d106990543f55e2364dbdc47feb4d5b323894c72a40f5",
+        "project_sha256": "6997bf06caa02a038fe93efba11076a440e8030774dfb7fed9dd44d1f23365b9",
+        "created_utc": "2026-10-13T17:29:18.866078+00:00",
+        "python": "3.12.14",
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+        "dependencies": {
+          "numpy": "2.3.5",
+          "scipy": "1.17.0",
+          "pint": "0.25",
+          "casadi": "3.7.2",
+          "pywebview": "not installed"
+        },
+        "project": {
+          "schema_version": 1,
+          "id": "eb-reduced",
+          "name": "D · Etilbenzeno — R1 reduzido",
+          "model": "eb-reduced",
+          "experiment": {
+            "dt": 72.0,
+            "duration": 576.0,
+            "controller": "manual",
+            "observer": "ekf",
+            "setpoint": 160.0,
+            "manual": 21828692.029215917,
+            "disturbance_time": 720.0,
+            "disturbance_value": 1.0,
+            "sensor_sigma": 0.1,
+            "initial_estimate_offset": 0.05,
+            "seed": 42,
+            "solver": "RK45",
+            "rtol": 1e-07,
+            "atol": 1e-09,
+            "kp": 7000.0,
+            "ki": 100.0,
+            "kd": 0.0,
+            "horizon": 8,
+            "sensor_period": 1,
+            "sensor_delay": 0,
+            "sensor_dropout": 0.0,
+            "sensor_bias": 0.0,
+            "sensor_drift": 0.0,
+            "sensor_lag": 0.0,
+            "sensor_quantization": 0.0,
+            "sensor_min": -1000.0,
+            "sensor_max": 2000.0,
+            "chemical_period": 0,
+            "chemical_delay": 0,
+            "chemical_sigma": 0.02,
+            "q_scale": 1.0,
+            "r_scale": 1.0,
+            "control_target": "temperature",
+            "move_weight": 0.05
+          }
+        },
+        "truth_used_for": "physical simulation, emulated sensors and retrospective scoring only",
+        "uncertainty": "Uncalibrated approximate covariance; MHE uses EKF companion covariance",
+        "hardware_validation": "Runtime host only; not a measurement on the user's laptop"
+      }
+    }
+  ]
+}
