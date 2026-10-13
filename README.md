@@ -3,8 +3,10 @@
 The new desktop research application is in [`studio/`](studio/docs/QUICKSTART_PT.md).
 See [delivery status](studio/docs/DELIVERY_PT.md), [scientific recovery](studio/docs/RECOVERY.md)
 and [capability matrix](studio/docs/CAPABILITIES.md). The interface and numerical engine
-are implemented and locally tested. A verified Windows installer is not yet available:
-publication of the implementation branch was blocked by automatic permission review.
+are implemented and tested. A Windows x64 installer was built, installed, and opened
+successfully on Windows Server 2022 CI. All five bundled scenarios passed.
+See [Windows verification](studio/docs/WINDOWS_VALIDATION.md) for the exact build,
+checksums and evidence. Windows 10 and the target laptop still require local validation.
 The original numerical library and research history below are preserved.
 
 # Yanko Process Lab — Numerical Core

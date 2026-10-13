@@ -27,13 +27,14 @@
 | Unit conversion | Yes | Pint at boundaries; declared native units retained in PG/EB adapters |
 | Undo / redo | Yes | Editor changes; not a scientific trajectory rollback |
 | Autosave | No | Explicit save with previous version backup; no background recovery journal |
-| Windows installer | Prepared, NOT built | Workflow and NSIS ready; remote push rejected by automatic permission review |
-| Windows application startup | NOT verified | Native smoke/GUI tests defined, no run obtained |
+| Windows installer | Yes | NSIS build and actual per-user installation passed on Windows Server 2022 CI |
+| Windows application startup | Yes, CI host | All five frozen scenarios and installed WebView2 interface passed; target Windows 10 untested |
 | Low-end laptop performance | NOT measured | CPU-only design; shared Linux host timings only |
 | Distillation / recycle / phase equilibrium | No | Explicit unsupported scope |
 | FMI / DWSIM / MATLAB / Aspen import | No | No universal compatibility claim |
 | Cascade / linear / robust / economic control | No | Historical source preserved where present, not product modes |
 | Industrial safety certification | No | Simulation and research only |
 
-Because a verified Windows binary does not yet exist, this checkpoint does NOT meet
-the full Windows baseline acceptance gate. Do not relabel it a final production release.
+The exact verified installer build and evidence are recorded in `WINDOWS_VALIDATION.md`.
+Windows 10 and the target i5 laptop have not been tested. This remains a research
+checkpoint; the full product scope and target-hardware acceptance are not complete.

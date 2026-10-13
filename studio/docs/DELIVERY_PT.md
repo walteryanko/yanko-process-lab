@@ -6,12 +6,14 @@
 
 Foi implementado um aplicativo com interface React/React Flow e mecanismo Python
 real, integrado ao repositório existente, preservando o núcleo TypeScript e as
-pesquisas históricas. O código foi executado e verificado em Linux. A construção e
-a instalação Windows estão preparadas, mas **não foram executadas**: a revisão
-automática de permissões rejeitou o push da nova branch para o repositório público.
+pesquisas históricas. O código foi executado e verificado em Linux e na CI Windows.
+Após autorização explícita do usuário, a branch foi publicada. O instalador x64 foi
+gerado, instalado e aberto com sucesso no Windows Server 2022 da CI.
 
-Não existe um instalador Windows verificado nesta entrega. A versão não cumpre
-ainda o critério de aceitação Windows e não é apresentada como release final.
+Os cinco cenários passaram dentro do executável empacotado. O commit exato do
+binário é `42a85b820740774729f3c28c4e402a3ddeeea52a`; consulte `WINDOWS_VALIDATION.md`.
+O Windows 10 e o notebook do usuário ainda não foram testados. A versão continua
+sendo um checkpoint de pesquisa, sem alegação de conclusão de todo o MASTER.
 
 ## Recuperação
 
@@ -36,7 +38,7 @@ ainda o critério de aceitação Windows e não é apresentada como release fina
 - Persistência atômica, backup anterior, CSV/JSON, semente e manifesto de execução.
 - Replay das mudanças de referência, observabilidade local e benchmark por CLI.
 - Shell desktop pywebview, dependências fixadas, NSIS e workflow Windows com testes
-  do executável congelado, instalação e renderização nativa preparados.
+  do executável congelado, instalação e renderização nativa aprovados na CI.
 
 ## Verificado
 
@@ -50,7 +52,10 @@ ainda o critério de aceitação Windows e não é apresentada como release fina
 | Benchmark funcional | 23 trajetórias concluídas, sem falhas numéricas |
 | Build TypeScript/Vite | Concluído |
 | Smoke do programa por CLI | Concluído em Linux, sem congelamento |
-| Compilação/instalação Windows | NÃO executada |
+| Testes no Windows Server 2022 | 26/26 Studio e 11/11 TypeScript passaram |
+| Executável Windows empacotado | Cinco cenários salvaram, reabriram e simularam |
+| Compilação/instalação Windows | Instalador gerado e instalação por usuário aprovada |
+| Interface nativa instalada | Renderização e inicialização da ponte Python aprovadas |
 
 Os testes novos incluem uma solução analítica do tanque, fechamento de balanços,
 conversão dimensional, paridade PG com equações imperiais independentes, manutenção
@@ -66,26 +71,22 @@ Tempos medidos pertencem ao host Linux compartilhado, não ao i5-7200U do usuár
 
 ## Pendências reais
 
-1. Autorizar o envio da branch pública e executar a CI Windows; corrigir quaisquer
-   falhas antes de fornecer um instalador ou alegar aprovação Windows.
-2. Verificar no Windows 10 e no notebook do usuário a instalação, WebView2, partida,
+1. Verificar no Windows 10 e no notebook do usuário a instalação, WebView2, partida,
    consumo de memória e experiência de edição.
-3. AIRE permanece em auditoria e RSI sem código recuperado na branch indicada.
-4. Sem colunas de destilação, equilíbrio de fases, reciclos, DAE geral, importação FMU,
+2. AIRE permanece em auditoria e RSI sem código recuperado na branch indicada.
+3. Sem colunas de destilação, equilíbrio de fases, reciclos, DAE geral, importação FMU,
    controle robusto/econômico/cascata ou integração com hardware.
-5. A termodinâmica EB e a planta Aspen completa continuam não reconciliadas.
-6. Sem autosave em segundo plano, editor geral de matrizes Q/R, ou garantias estatísticas
+4. A termodinâmica EB e a planta Aspen completa continuam não reconciliadas.
+5. Sem autosave em segundo plano, editor geral de matrizes Q/R, ou garantias estatísticas
    para a covariância. O MHE é determinístico e usa covariância auxiliar EKF.
 
 ## Como continuar
 
-Branch local: `work/ycs-processlab-studio-20261013`.
+Branch publicada: `work/ycs-processlab-studio-20261013`.
 Base: `88c40e65204fa6aa5bed02cc64fb15be79a53bb1`.
-O pacote de checkpoint inclui somente alterações ainda não publicadas, patches,
-bundle Git incremental, interface compilada e evidências. O manifesto externo informa
-o SHA exato do commit e checksums; ele não inventa URLs de instaladores.
+O checkpoint anterior preserva o trabalho anterior à autorização de publicação.
+A entrega atual inclui o instalador verificado; os registros Windows estão em
+`studio/evidence/windows-ci/` e identificam o commit efetivamente compilado.
 
 Leia `QUICKSTART_PT.md`, `ARCHITECTURE.md`, `RECOVERY.md` e `CAPABILITIES.md`.
-O Git bundle exige o repositório original com o commit-base. A revisão automática
-considerou a publicação um envio externo de trabalho potencialmente não público e
-exigiu autorização explícita, mesmo com a implementação da branch solicitada.
+As alterações posteriores à compilação atualizam somente documentação e evidências.

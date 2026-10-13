@@ -1,0 +1,587 @@
+{
+  "ok": true,
+  "frozen": false,
+  "time": 30.0,
+  "platform": "win32",
+  "ui_exists": true,
+  "cases": [
+    {
+      "id": "basic-flowsheet",
+      "model": "flowsheet",
+      "time": 15.0,
+      "status": "paused",
+      "manifest": {
+        "application_version": "0.1.0",
+        "git_commit": "42a85b820740774729f3c28c4e402a3ddeeea52a",
+        "working_tree_dirty": false,
+        "engine_source_sha256": "9d3da2a1aaea44f512e4cdb4564bf7c1adc7ce9f87b5894c9dcb3504b57a8357",
+        "project_sha256": "be40a71771832eaac4d514a7260820fdfef971d4d2dae2a770363a6794395152",
+        "created_utc": "2026-10-13T16:02:28.579283+00:00",
+        "python": "3.12.10",
+        "platform": "Windows-2022Server-10.0.20348-SP0",
+        "dependencies": {
+          "numpy": "2.3.5",
+          "scipy": "1.17.0",
+          "pint": "0.25",
+          "casadi": "3.7.2",
+          "pywebview": "6.1"
+        },
+        "project": {
+          "schema_version": 1,
+          "id": "basic-flowsheet",
+          "name": "A · Mistura e aquecimento",
+          "model": "flowsheet",
+          "nodes": [
+            {
+              "id": "F-101",
+              "kind": "source",
+              "label": "F-101",
+              "parameters": {
+                "flow": 1.0,
+                "temperature": 295.15,
+                "fraction": 0.1,
+                "pressure": 101325.0
+              },
+              "layout": {
+                "x": 10,
+                "y": 30
+              }
+            },
+            {
+              "id": "F-102",
+              "kind": "source",
+              "label": "F-102",
+              "parameters": {
+                "flow": 0.5,
+                "temperature": 315.15,
+                "fraction": 0.3,
+                "pressure": 101325.0
+              },
+              "layout": {
+                "x": 10,
+                "y": 210
+              }
+            },
+            {
+              "id": "M-101",
+              "kind": "mixer",
+              "label": "M-101",
+              "parameters": {},
+              "layout": {
+                "x": 230,
+                "y": 100
+              }
+            },
+            {
+              "id": "H-101",
+              "kind": "heater",
+              "label": "H-101",
+              "parameters": {
+                "duty": 15000.0
+              },
+              "layout": {
+                "x": 430,
+                "y": 100
+              }
+            },
+            {
+              "id": "T-101",
+              "kind": "tank",
+              "label": "T-101",
+              "parameters": {
+                "volume": 0.1,
+                "temperature": 300.0,
+                "fraction": 0.15,
+                "duty": 0.0
+              },
+              "layout": {
+                "x": 630,
+                "y": 100
+              }
+            },
+            {
+              "id": "P-101",
+              "kind": "sink",
+              "label": "P-101",
+              "parameters": {},
+              "layout": {
+                "x": 830,
+                "y": 100
+              }
+            }
+          ],
+          "edges": [
+            {
+              "id": "S-1",
+              "source": "F-101",
+              "target": "M-101",
+              "source_port": "out",
+              "target_port": "in1",
+              "kind": "material"
+            },
+            {
+              "id": "S-2",
+              "source": "F-102",
+              "target": "M-101",
+              "source_port": "out",
+              "target_port": "in2",
+              "kind": "material"
+            },
+            {
+              "id": "S-3",
+              "source": "M-101",
+              "target": "H-101",
+              "source_port": "out",
+              "target_port": "in",
+              "kind": "material"
+            },
+            {
+              "id": "S-4",
+              "source": "H-101",
+              "target": "T-101",
+              "source_port": "out",
+              "target_port": "in",
+              "kind": "material"
+            },
+            {
+              "id": "S-5",
+              "source": "T-101",
+              "target": "P-101",
+              "source_port": "out",
+              "target_port": "in",
+              "kind": "material"
+            }
+          ],
+          "experiment": {
+            "manual": 0.0,
+            "controller": "manual",
+            "setpoint": 304.2082145,
+            "disturbance_value": 0.0,
+            "dt": 5.0,
+            "duration": 600.0,
+            "seed": 42,
+            "solver": "RK45",
+            "rtol": 1e-07,
+            "atol": 1e-09,
+            "observer": "ekf",
+            "kp": 7000.0,
+            "ki": 100.0,
+            "kd": 0.0,
+            "horizon": 8,
+            "sensor_sigma": 0.1,
+            "sensor_period": 1,
+            "sensor_delay": 0,
+            "sensor_dropout": 0.0,
+            "sensor_bias": 0.0,
+            "sensor_drift": 0.0,
+            "sensor_lag": 0.0,
+            "sensor_quantization": 0.0,
+            "sensor_min": -1000.0,
+            "sensor_max": 2000.0,
+            "chemical_period": 0,
+            "chemical_delay": 0,
+            "chemical_sigma": 0.02,
+            "q_scale": 1.0,
+            "r_scale": 1.0,
+            "disturbance_time": 200.0,
+            "initial_estimate_offset": 0.1,
+            "control_target": "temperature"
+          }
+        },
+        "truth_used_for": "physical simulation, emulated sensors and retrospective scoring only",
+        "uncertainty": "Uncalibrated approximate covariance; MHE uses EKF companion covariance",
+        "hardware_validation": "Runtime host only; not a measurement on the user's laptop"
+      }
+    },
+    {
+      "id": "heated-tank",
+      "model": "flowsheet",
+      "time": 15.0,
+      "status": "paused",
+      "manifest": {
+        "application_version": "0.1.0",
+        "git_commit": "42a85b820740774729f3c28c4e402a3ddeeea52a",
+        "working_tree_dirty": false,
+        "engine_source_sha256": "9d3da2a1aaea44f512e4cdb4564bf7c1adc7ce9f87b5894c9dcb3504b57a8357",
+        "project_sha256": "824270128a35a3ab9b704f9ca8640970b4782c5a117d612d7f6dcbd1238be576",
+        "created_utc": "2026-10-13T16:02:28.751158+00:00",
+        "python": "3.12.10",
+        "platform": "Windows-2022Server-10.0.20348-SP0",
+        "dependencies": {
+          "numpy": "2.3.5",
+          "scipy": "1.17.0",
+          "pint": "0.25",
+          "casadi": "3.7.2",
+          "pywebview": "6.1"
+        },
+        "project": {
+          "schema_version": 1,
+          "id": "heated-tank",
+          "name": "B · Tanque com controle PID",
+          "model": "flowsheet",
+          "nodes": [
+            {
+              "id": "F-101",
+              "kind": "source",
+              "label": "F-101",
+              "parameters": {
+                "flow": 1.0,
+                "temperature": 298.15,
+                "fraction": 0.1,
+                "pressure": 101325.0
+              },
+              "layout": {
+                "x": 20,
+                "y": 80
+              }
+            },
+            {
+              "id": "T-101",
+              "kind": "tank",
+              "label": "T-101",
+              "parameters": {
+                "volume": 0.1,
+                "temperature": 298.15,
+                "fraction": 0.1,
+                "duty": 20000.0
+              },
+              "layout": {
+                "x": 300,
+                "y": 80
+              }
+            },
+            {
+              "id": "P-101",
+              "kind": "sink",
+              "label": "P-101",
+              "parameters": {},
+              "layout": {
+                "x": 580,
+                "y": 80
+              }
+            }
+          ],
+          "edges": [
+            {
+              "id": "S-1",
+              "source": "F-101",
+              "target": "T-101",
+              "source_port": "out",
+              "target_port": "in",
+              "kind": "material"
+            },
+            {
+              "id": "S-2",
+              "source": "T-101",
+              "target": "P-101",
+              "source_port": "out",
+              "target_port": "in",
+              "kind": "material"
+            }
+          ],
+          "control_equipment": "T-101",
+          "experiment": {
+            "dt": 5.0,
+            "duration": 600.0,
+            "controller": "pid",
+            "observer": "ekf",
+            "setpoint": 310.0,
+            "manual": 20000.0,
+            "kp": 7000.0,
+            "ki": 100.0,
+            "disturbance_time": 200.0,
+            "disturbance_value": -8.0,
+            "seed": 42,
+            "solver": "RK45",
+            "rtol": 1e-07,
+            "atol": 1e-09,
+            "kd": 0.0,
+            "horizon": 8,
+            "sensor_sigma": 0.1,
+            "sensor_period": 1,
+            "sensor_delay": 0,
+            "sensor_dropout": 0.0,
+            "sensor_bias": 0.0,
+            "sensor_drift": 0.0,
+            "sensor_lag": 0.0,
+            "sensor_quantization": 0.0,
+            "sensor_min": -1000.0,
+            "sensor_max": 2000.0,
+            "chemical_period": 0,
+            "chemical_delay": 0,
+            "chemical_sigma": 0.02,
+            "q_scale": 1.0,
+            "r_scale": 1.0,
+            "initial_estimate_offset": 0.1,
+            "control_target": "temperature"
+          }
+        },
+        "truth_used_for": "physical simulation, emulated sensors and retrospective scoring only",
+        "uncertainty": "Uncalibrated approximate covariance; MHE uses EKF companion covariance",
+        "hardware_validation": "Runtime host only; not a measurement on the user's laptop"
+      }
+    },
+    {
+      "id": "pg-original",
+      "model": "pg-original",
+      "time": 162.0,
+      "status": "paused",
+      "manifest": {
+        "application_version": "0.1.0",
+        "git_commit": "42a85b820740774729f3c28c4e402a3ddeeea52a",
+        "working_tree_dirty": false,
+        "engine_source_sha256": "9d3da2a1aaea44f512e4cdb4564bf7c1adc7ce9f87b5894c9dcb3504b57a8357",
+        "project_sha256": "c0875fb4c3f1bcf3fe14d879eec6a318f680afa98bca6a5ba5ff062e52ae1872",
+        "created_utc": "2026-10-13T16:02:28.938640+00:00",
+        "python": "3.12.10",
+        "platform": "Windows-2022Server-10.0.20348-SP0",
+        "dependencies": {
+          "numpy": "2.3.5",
+          "scipy": "1.17.0",
+          "pint": "0.25",
+          "casadi": "3.7.2",
+          "pywebview": "6.1"
+        },
+        "project": {
+          "schema_version": 1,
+          "id": "pg-original",
+          "name": "C · Propilenoglicol — modelo original",
+          "model": "pg-original",
+          "experiment": {
+            "dt": 54.0,
+            "duration": 2160.0,
+            "controller": "pid",
+            "observer": "ukf",
+            "manual": 453.59237,
+            "setpoint": 332.333618,
+            "kp": 20.0,
+            "ki": 0.02,
+            "disturbance_time": 540.0,
+            "disturbance_value": 2.0,
+            "chemical_period": 10,
+            "chemical_delay": 3,
+            "sensor_sigma": 0.15,
+            "initial_estimate_offset": 0.1,
+            "seed": 42,
+            "solver": "RK45",
+            "rtol": 1e-07,
+            "atol": 1e-09,
+            "kd": 0.0,
+            "horizon": 8,
+            "sensor_period": 1,
+            "sensor_delay": 0,
+            "sensor_dropout": 0.0,
+            "sensor_bias": 0.0,
+            "sensor_drift": 0.0,
+            "sensor_lag": 0.0,
+            "sensor_quantization": 0.0,
+            "sensor_min": -1000.0,
+            "sensor_max": 2000.0,
+            "chemical_sigma": 0.02,
+            "q_scale": 1.0,
+            "r_scale": 1.0,
+            "control_target": "temperature"
+          }
+        },
+        "truth_used_for": "physical simulation, emulated sensors and retrospective scoring only",
+        "uncertainty": "Uncalibrated approximate covariance; MHE uses EKF companion covariance",
+        "hardware_validation": "Runtime host only; not a measurement on the user's laptop"
+      }
+    },
+    {
+      "id": "eb-reduced",
+      "model": "eb-reduced",
+      "time": 216.0,
+      "status": "paused",
+      "manifest": {
+        "application_version": "0.1.0",
+        "git_commit": "42a85b820740774729f3c28c4e402a3ddeeea52a",
+        "working_tree_dirty": false,
+        "engine_source_sha256": "9d3da2a1aaea44f512e4cdb4564bf7c1adc7ce9f87b5894c9dcb3504b57a8357",
+        "project_sha256": "22044ee5846653e4f1da2c3dc4480cd9384e620c309fe31ef2d59e955c4eab89",
+        "created_utc": "2026-10-13T16:02:29.314959+00:00",
+        "python": "3.12.10",
+        "platform": "Windows-2022Server-10.0.20348-SP0",
+        "dependencies": {
+          "numpy": "2.3.5",
+          "scipy": "1.17.0",
+          "pint": "0.25",
+          "casadi": "3.7.2",
+          "pywebview": "6.1"
+        },
+        "project": {
+          "schema_version": 1,
+          "id": "eb-reduced",
+          "name": "D · Etilbenzeno — R1 reduzido",
+          "model": "eb-reduced",
+          "experiment": {
+            "dt": 72.0,
+            "duration": 2160.0,
+            "controller": "manual",
+            "observer": "ekf",
+            "setpoint": 160.0,
+            "manual": 21828692.029215917,
+            "disturbance_time": 720.0,
+            "disturbance_value": 1.0,
+            "sensor_sigma": 0.1,
+            "initial_estimate_offset": 0.05,
+            "seed": 42,
+            "solver": "RK45",
+            "rtol": 1e-07,
+            "atol": 1e-09,
+            "kp": 7000.0,
+            "ki": 100.0,
+            "kd": 0.0,
+            "horizon": 8,
+            "sensor_period": 1,
+            "sensor_delay": 0,
+            "sensor_dropout": 0.0,
+            "sensor_bias": 0.0,
+            "sensor_drift": 0.0,
+            "sensor_lag": 0.0,
+            "sensor_quantization": 0.0,
+            "sensor_min": -1000.0,
+            "sensor_max": 2000.0,
+            "chemical_period": 0,
+            "chemical_delay": 0,
+            "chemical_sigma": 0.02,
+            "q_scale": 1.0,
+            "r_scale": 1.0,
+            "control_target": "temperature"
+          }
+        },
+        "truth_used_for": "physical simulation, emulated sensors and retrospective scoring only",
+        "uncertainty": "Uncalibrated approximate covariance; MHE uses EKF companion covariance",
+        "hardware_validation": "Runtime host only; not a measurement on the user's laptop"
+      }
+    },
+    {
+      "id": "tank-nmpc",
+      "model": "flowsheet",
+      "time": 30.0,
+      "status": "paused",
+      "manifest": {
+        "application_version": "0.1.0",
+        "git_commit": "42a85b820740774729f3c28c4e402a3ddeeea52a",
+        "working_tree_dirty": false,
+        "engine_source_sha256": "9d3da2a1aaea44f512e4cdb4564bf7c1adc7ce9f87b5894c9dcb3504b57a8357",
+        "project_sha256": "0cc81c4aa30e6c31e2e8a7a0574afad97fde354648e644e90fb042420dc4ffdf",
+        "created_utc": "2026-10-13T16:02:29.628252+00:00",
+        "python": "3.12.10",
+        "platform": "Windows-2022Server-10.0.20348-SP0",
+        "dependencies": {
+          "numpy": "2.3.5",
+          "scipy": "1.17.0",
+          "pint": "0.25",
+          "casadi": "3.7.2",
+          "pywebview": "6.1"
+        },
+        "project": {
+          "schema_version": 1,
+          "id": "tank-nmpc",
+          "name": "E · Tanque NMPC + UKF (experimental)",
+          "model": "flowsheet",
+          "nodes": [
+            {
+              "id": "F-101",
+              "kind": "source",
+              "label": "F-101",
+              "parameters": {
+                "flow": 1.0,
+                "temperature": 298.15,
+                "fraction": 0.1,
+                "pressure": 101325.0
+              },
+              "layout": {
+                "x": 20,
+                "y": 80
+              }
+            },
+            {
+              "id": "T-101",
+              "kind": "tank",
+              "label": "T-101",
+              "parameters": {
+                "volume": 0.1,
+                "temperature": 298.15,
+                "fraction": 0.1,
+                "duty": 20000.0
+              },
+              "layout": {
+                "x": 300,
+                "y": 80
+              }
+            },
+            {
+              "id": "P-101",
+              "kind": "sink",
+              "label": "P-101",
+              "parameters": {},
+              "layout": {
+                "x": 580,
+                "y": 80
+              }
+            }
+          ],
+          "edges": [
+            {
+              "id": "S-1",
+              "source": "F-101",
+              "target": "T-101",
+              "source_port": "out",
+              "target_port": "in",
+              "kind": "material"
+            },
+            {
+              "id": "S-2",
+              "source": "T-101",
+              "target": "P-101",
+              "source_port": "out",
+              "target_port": "in",
+              "kind": "material"
+            }
+          ],
+          "control_equipment": "T-101",
+          "experiment": {
+            "dt": 10.0,
+            "duration": 300.0,
+            "controller": "nmpc",
+            "observer": "ukf",
+            "setpoint": 310.0,
+            "manual": 20000.0,
+            "kp": 7000.0,
+            "ki": 100.0,
+            "disturbance_time": 120.0,
+            "disturbance_value": -8.0,
+            "horizon": 5,
+            "seed": 42,
+            "solver": "RK45",
+            "rtol": 1e-07,
+            "atol": 1e-09,
+            "kd": 0.0,
+            "sensor_sigma": 0.1,
+            "sensor_period": 1,
+            "sensor_delay": 0,
+            "sensor_dropout": 0.0,
+            "sensor_bias": 0.0,
+            "sensor_drift": 0.0,
+            "sensor_lag": 0.0,
+            "sensor_quantization": 0.0,
+            "sensor_min": -1000.0,
+            "sensor_max": 2000.0,
+            "chemical_period": 0,
+            "chemical_delay": 0,
+            "chemical_sigma": 0.02,
+            "q_scale": 1.0,
+            "r_scale": 1.0,
+            "initial_estimate_offset": 0.1,
+            "control_target": "temperature"
+          }
+        },
+        "truth_used_for": "physical simulation, emulated sensors and retrospective scoring only",
+        "uncertainty": "Uncalibrated approximate covariance; MHE uses EKF companion covariance",
+        "hardware_validation": "Runtime host only; not a measurement on the user's laptop"
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+test_all_scenarios_execute_and_save (test_processlab.ScientificStudio.test_all_scenarios_execute_and_save) ... ok
+test_cstr_material_conversion_balance (test_processlab.ScientificStudio.test_cstr_material_conversion_balance) ... ok
+test_delayed_replay_equals_chronological_filter (test_processlab.ScientificStudio.test_delayed_replay_equals_chronological_filter) ... ok
+test_dimensional_conversion_and_rejection (test_processlab.ScientificStudio.test_dimensional_conversion_and_rejection) ... ok
+test_disconnected_and_recycles_rejected (test_processlab.ScientificStudio.test_disconnected_and_recycles_rejected) ... ok
+test_duplicate_measurement_does_not_double_update (test_processlab.ScientificStudio.test_duplicate_measurement_does_not_double_update) ... ok
+test_eb_reduced_adapter_and_hess_defect_preserved (test_processlab.ScientificStudio.test_eb_reduced_adapter_and_hess_defect_preserved) ... ok
+test_estimators_are_finite_and_report_uncertainty (test_processlab.ScientificStudio.test_estimators_are_finite_and_report_uncertainty) ... ok
+test_inspection_does_not_advance_and_invalid_reset_preserves (test_processlab.ScientificStudio.test_inspection_does_not_advance_and_invalid_reset_preserves) ... Request failed: reset
+Traceback (most recent call last):
+  File "D:\a\yanko-process-lab\yanko-process-lab\studio\processlab\api.py", line 18, in request
+    try:return {"ok":True,"data":self._request(method,payload)}
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\yanko-process-lab\yanko-process-lab\studio\processlab\api.py", line 44, in _request
+    candidate=Simulation(p);self.sim=candidate;return candidate.snapshot()
+              ^^^^^^^^^^^^^
+  File "D:\a\yanko-process-lab\yanko-process-lab\studio\processlab\simulation.py", line 40, in __init__
+    self.project=canonical(project);self.c=self.project["experiment"];self.model=build_model(self.project)
+                 ^^^^^^^^^^^^^^^^^^
+  File "D:\a\yanko-process-lab\yanko-process-lab\studio\processlab\schema.py", line 41, in canonical
+    raise ValueError("Use 0.05–300 s per sample and at most 4000 samples / 24 h")
+ValueError: Use 0.05–300 s per sample and at most 4000 samples / 24 h
+ok
+test_invalid_values_and_covariance_rejected (test_processlab.ScientificStudio.test_invalid_values_and_covariance_rejected) ... ok
+test_live_setpoint_replays_and_exports_actual_rows (test_processlab.ScientificStudio.test_live_setpoint_replays_and_exports_actual_rows) ... ok
+test_local_http_auth_origin_and_static_serving (test_processlab.ScientificStudio.test_local_http_auth_origin_and_static_serving) ... ok
+test_nmpc_bounds_rates_and_fallback_reporting (test_processlab.ScientificStudio.test_nmpc_bounds_rates_and_fallback_reporting) ... ok
+test_no_future_events (test_processlab.ScientificStudio.test_no_future_events) ... ok
+test_pg_independent_imperial_equations (test_processlab.ScientificStudio.test_pg_independent_imperial_equations) ... ok
+test_pg_nominal_and_source_derivative_parity (test_processlab.ScientificStudio.test_pg_nominal_and_source_derivative_parity) ... ok
+test_pg_thermal_ambiguity_preserved (test_processlab.ScientificStudio.test_pg_thermal_ambiguity_preserved) ... ok
+test_pid_changes_process_and_reduces_error (test_processlab.ScientificStudio.test_pid_changes_process_and_reduces_error) ... ok
+test_ports_reject_duplicate_connections (test_processlab.ScientificStudio.test_ports_reject_duplicate_connections) ... ok
+test_pump_valve_exchanger_equipment_executes (test_processlab.ScientificStudio.test_pump_valve_exchanger_equipment_executes) ... ok
+test_repeat_seed_and_save_reopen (test_processlab.ScientificStudio.test_repeat_seed_and_save_reopen) ... ok
+test_rk4_converges_to_adaptive_solver (test_processlab.ScientificStudio.test_rk4_converges_to_adaptive_solver) ... ok
+test_sensor_delay_dropout_and_determinism (test_processlab.ScientificStudio.test_sensor_delay_dropout_and_determinism) ... ok
+test_splitter_mixer_and_energy_connections (test_processlab.ScientificStudio.test_splitter_mixer_and_energy_connections) ... ok
+test_steady_mass_and_energy_analytic (test_processlab.ScientificStudio.test_steady_mass_and_energy_analytic) ... ok
+test_tank_transient_matches_analytic_solution (test_processlab.ScientificStudio.test_tank_transient_matches_analytic_solution) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 7.607s
+
+OK

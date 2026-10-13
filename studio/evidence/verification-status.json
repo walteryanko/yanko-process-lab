@@ -16,9 +16,19 @@
     "tests": 18,
     "passed": 18
   },
-  "windows_build_executed": false,
-  "windows_installer_exists": false,
-  "remote_push": "BLOCKED_BY_AUTO_REVIEW",
+  "windows_build_executed": true,
+  "windows_installer_exists": true,
+  "remote_push": "PUBLISHED_WITH_USER_AUTHORIZATION",
   "branch": "work/ycs-processlab-studio-20261013",
-  "scientific_claim": "Functional validation only; not industrial or statistical safety certification."
+  "scientific_claim": "Functional validation only; not industrial or statistical safety certification.",
+  "windows_build_commit": "42a85b820740774729f3c28c4e402a3ddeeea52a",
+  "windows_ci_run": 38426966563,
+  "windows_ci_conclusion": "success",
+  "windows_frozen_scenarios": 5,
+  "windows_installation_verified": true,
+  "windows_native_gui_verified": true,
+  "windows_host": "Windows Server 2022 Datacenter x64",
+  "windows_10_verified": false,
+  "target_laptop_verified": false,
+  "windows_installer_sha256": "6febf721f91419c6c2a9ac36c25dccb50de430d5505cb8cf9c2096ce2bd0acf1"
 }
