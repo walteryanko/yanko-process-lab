@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.nbc
+*.nbi
+.pytest_cache/
+.venv/
+artifacts/main/datasets/
+artifacts/main/blind_decisions/
+artifacts/main/control_traces/
+*.zip

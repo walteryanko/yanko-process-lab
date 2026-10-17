@@ -1,0 +1,17 @@
+{
+  "primary_repository": "https://github.com/walteryanko/yanko-process-lab",
+  "primary_commit": "f4444d4c238291b8633743930249ee387ad94541",
+  "oracle_source": "YCS_OracleKF_Checkpoint_v0.1.zip",
+  "historical_source": "Codigo_CSTR_Reproduzivel.zip/CSTR_Pesquisa/experiment/src/plant/model.py",
+  "dissertation": "Brandao (2019), UFCG, equations 33-55, Table 1",
+  "files_sha256": {
+    "vendor/legacy_nmpc.py": "2da2fb31cdbf8eab4ffeb3256886c50dc9a2df74be527f180e1a596a92a1ef8b",
+    "vendor/processlab_controller.ts": "18115fe9db43a6b81a178bf7de74465c931a6b2fa2a50e9023cbd231010f8f71",
+    "vendor/modeloCT.m": "d7b785681794850a4b78c2b8cfab2151f71b35b4d389efbf77383ecd8c10d086",
+    "vendor/oracle_kf_v01.py": "b34d91eda056748aa51313eb4f84d326150b3510b8af3888b8e5bec164f1036a",
+    "vendor/PROCESSLAB_LICENSE": "3f3cc677a5d5ce4b0949cdc618f3383697a30c245efb93c3e289ceda8dacf526",
+    "vendor/processlab_model.ts": "6f65850a7fa2387fd3b1c22440f5a10af07f4cf048c152137fde96d1a767c50f",
+    "vendor/NMPC_Fmincon.m": "ace19e2fa9bada31fe6c810a113438b41b7c76f667c16d3474d10148d57e6780",
+    "vendor/legacy_model.py": "0bd4c320d2ef6d164b6348a1e7f5ccaafe55ee4bfefda53c136d75053add9aae"
+  }
+}
