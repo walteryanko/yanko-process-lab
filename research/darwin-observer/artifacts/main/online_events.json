@@ -1,0 +1,371 @@
+[
+  {
+    "scenario": "A_rich",
+    "seed": 450000,
+    "method": "online_guarded",
+    "events": [
+      {
+        "step": 20,
+        "state": "ACCEPT",
+        "id": "b6f89f3da96f8568"
+      },
+      {
+        "step": 102,
+        "state": "REVERT",
+        "reason": "outside validated envelope"
+      }
+    ]
+  },
+  {
+    "scenario": "A_rich",
+    "seed": 450000,
+    "method": "frozen_guarded",
+    "events": [
+      {
+        "step": 0,
+        "state": "ACCEPT",
+        "id": "b6f89f3da96f8568"
+      },
+      {
+        "step": 10,
+        "state": "REVERT",
+        "reason": "outside validated envelope"
+      }
+    ]
+  },
+  {
+    "scenario": "A_rich",
+    "seed": 450000,
+    "method": "no_loss_fallback",
+    "events": [
+      {
+        "step": 0,
+        "state": "ACCEPT",
+        "id": "b6f89f3da96f8568"
+      },
+      {
+        "step": 10,
+        "state": "REVERT",
+        "reason": "outside validated envelope"
+      }
+    ]
+  },
+  {
+    "scenario": "A_rich",
+    "seed": 450001,
+    "method": "online_guarded",
+    "events": [
+      {
+        "step": 20,
+        "state": "ACCEPT",
+        "id": "b6f89f3da96f8568"
+      }
+    ]
+  },
+  {
+    "scenario": "A_rich",
+    "seed": 450001,
+    "method": "frozen_guarded",
+    "events": [
+      {
+        "step": 0,
+        "state": "ACCEPT",
+        "id": "b6f89f3da96f8568"
+      }
+    ]
+  },
+  {
+    "scenario": "A_rich",
+    "seed": 450001,
+    "method": "no_loss_fallback",
+    "events": [
+      {
+        "step": 0,
+        "state": "ACCEPT",
+        "id": "b6f89f3da96f8568"
+      }
+    ]
+  },
+  {
+    "scenario": "A_rich",
+    "seed": 450002,
+    "method": "online_guarded",
+    "events": [
+      {
+        "step": 20,
+        "state": "ACCEPT",
+        "id": "b6f89f3da96f8568"
+      }
+    ]
+  },
+  {
+    "scenario": "A_rich",
+    "seed": 450002,
+    "method": "frozen_guarded",
+    "events": [
+      {
+        "step": 0,
+        "state": "ACCEPT",
+        "id": "b6f89f3da96f8568"
+      }
+    ]
+  },
+  {
+    "scenario": "A_rich",
+    "seed": 450002,
+    "method": "no_loss_fallback",
+    "events": [
+      {
+        "step": 0,
+        "state": "ACCEPT",
+        "id": "b6f89f3da96f8568"
+      }
+    ]
+  },
+  {
+    "scenario": "D_feed",
+    "seed": 451000,
+    "method": "online_guarded",
+    "events": [
+      {
+        "step": 20,
+        "state": "ACCEPT",
+        "id": "b6f89f3da96f8568"
+      }
+    ]
+  },
+  {
+    "scenario": "D_feed",
+    "seed": 451000,
+    "method": "frozen_guarded",
+    "events": [
+      {
+        "step": 0,
+        "state": "ACCEPT",
+        "id": "b6f89f3da96f8568"
+      }
+    ]
+  },
+  {
+    "scenario": "D_feed",
+    "seed": 451000,
+    "method": "no_loss_fallback",
+    "events": [
+      {
+        "step": 0,
+        "state": "ACCEPT",
+        "id": "b6f89f3da96f8568"
+      }
+    ]
+  },
+  {
+    "scenario": "D_feed",
+    "seed": 451001,
+    "method": "online_guarded",
+    "events": [
+      {
+        "step": 20,
+        "state": "ACCEPT",
+        "id": "b6f89f3da96f8568"
+      }
+    ]
+  },
+  {
+    "scenario": "D_feed",
+    "seed": 451001,
+    "method": "frozen_guarded",
+    "events": [
+      {
+        "step": 0,
+        "state": "ACCEPT",
+        "id": "b6f89f3da96f8568"
+      }
+    ]
+  },
+  {
+    "scenario": "D_feed",
+    "seed": 451001,
+    "method": "no_loss_fallback",
+    "events": [
+      {
+        "step": 0,
+        "state": "ACCEPT",
+        "id": "b6f89f3da96f8568"
+      }
+    ]
+  },
+  {
+    "scenario": "D_feed",
+    "seed": 451002,
+    "method": "online_guarded",
+    "events": [
+      {
+        "step": 20,
+        "state": "ACCEPT",
+        "id": "b6f89f3da96f8568"
+      },
+      {
+        "step": 53,
+        "state": "REVERT",
+        "reason": "outside validated envelope"
+      }
+    ]
+  },
+  {
+    "scenario": "D_feed",
+    "seed": 451002,
+    "method": "frozen_guarded",
+    "events": [
+      {
+        "step": 0,
+        "state": "ACCEPT",
+        "id": "b6f89f3da96f8568"
+      },
+      {
+        "step": 53,
+        "state": "REVERT",
+        "reason": "outside validated envelope"
+      }
+    ]
+  },
+  {
+    "scenario": "D_feed",
+    "seed": 451002,
+    "method": "no_loss_fallback",
+    "events": [
+      {
+        "step": 0,
+        "state": "ACCEPT",
+        "id": "b6f89f3da96f8568"
+      },
+      {
+        "step": 53,
+        "state": "REVERT",
+        "reason": "outside validated envelope"
+      }
+    ]
+  },
+  {
+    "scenario": "X_saturation",
+    "seed": 452000,
+    "method": "online_guarded",
+    "events": [
+      {
+        "step": 20,
+        "state": "ACCEPT",
+        "id": "b6f89f3da96f8568"
+      }
+    ]
+  },
+  {
+    "scenario": "X_saturation",
+    "seed": 452000,
+    "method": "frozen_guarded",
+    "events": [
+      {
+        "step": 0,
+        "state": "ACCEPT",
+        "id": "b6f89f3da96f8568"
+      }
+    ]
+  },
+  {
+    "scenario": "X_saturation",
+    "seed": 452000,
+    "method": "no_loss_fallback",
+    "events": [
+      {
+        "step": 0,
+        "state": "ACCEPT",
+        "id": "b6f89f3da96f8568"
+      }
+    ]
+  },
+  {
+    "scenario": "X_saturation",
+    "seed": 452001,
+    "method": "online_guarded",
+    "events": [
+      {
+        "step": 20,
+        "state": "ACCEPT",
+        "id": "b6f89f3da96f8568"
+      }
+    ]
+  },
+  {
+    "scenario": "X_saturation",
+    "seed": 452001,
+    "method": "frozen_guarded",
+    "events": [
+      {
+        "step": 0,
+        "state": "ACCEPT",
+        "id": "b6f89f3da96f8568"
+      }
+    ]
+  },
+  {
+    "scenario": "X_saturation",
+    "seed": 452001,
+    "method": "no_loss_fallback",
+    "events": [
+      {
+        "step": 0,
+        "state": "ACCEPT",
+        "id": "b6f89f3da96f8568"
+      }
+    ]
+  },
+  {
+    "scenario": "X_saturation",
+    "seed": 452002,
+    "method": "online_guarded",
+    "events": [
+      {
+        "step": 20,
+        "state": "ACCEPT",
+        "id": "b6f89f3da96f8568"
+      },
+      {
+        "step": 30,
+        "state": "REVERT",
+        "reason": "outside validated envelope"
+      }
+    ]
+  },
+  {
+    "scenario": "X_saturation",
+    "seed": 452002,
+    "method": "frozen_guarded",
+    "events": [
+      {
+        "step": 0,
+        "state": "ACCEPT",
+        "id": "b6f89f3da96f8568"
+      },
+      {
+        "step": 30,
+        "state": "REVERT",
+        "reason": "outside validated envelope"
+      }
+    ]
+  },
+  {
+    "scenario": "X_saturation",
+    "seed": 452002,
+    "method": "no_loss_fallback",
+    "events": [
+      {
+        "step": 0,
+        "state": "ACCEPT",
+        "id": "b6f89f3da96f8568"
+      },
+      {
+        "step": 30,
+        "state": "REVERT",
+        "reason": "outside validated envelope"
+      }
+    ]
+  }
+]

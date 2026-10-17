@@ -1,0 +1,4 @@
+scenario,selected,relative_UA_function_error,term_precision,recovered_exponent,hidden_exponent,plausible
+A_mild,UA_power,0.0005246702896310728,1.0,0.1493985978936596,0.15,['UA_power']
+A_rich,UA_power,0.0006223688410919357,1.0,0.3983975428030394,0.4,"['UA_power', 'UA_sqrt']"
+A_weak,UA_sqrt,0.04784253731107948,0.0,,0.4,"['UA_sqrt', 'UA_linear', 'UA_power', 'UA_reciprocal', 'UA_quadratic']"

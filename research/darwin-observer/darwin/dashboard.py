@@ -1,5 +1,5 @@
 """Local scientific dashboard. Works offline after installation; loopback only."""
-import argparse,json,threading,webbrowser,time
+import argparse,json,threading,webbrowser,time,gzip
 from pathlib import Path
 import numpy as np
 from flask import Flask,request,jsonify,send_from_directory,Response
@@ -24,6 +24,9 @@ def bundle():
             if r.get('equation_export_version')!=2:r['equations']=equations(Model.from_dict(r['model']))
         data['discoveries'][p.stem]=d
     for p in (ART/'traces').glob('*.json'):data['traces'][p.stem]=json.loads(p.read_text(encoding='utf-8'))
+    for p in (ART/'traces').glob('*.json.gz'):
+        key=p.name[:-8]
+        if key not in data['traces']:data['traces'][key]=json.loads(gzip.decompress(p.read_bytes()))
     for name in ['protocol','identifiability','adversarial','scientific_summary']:
         p=ART/f'{name}.json'
         if p.exists():data[name]=json.loads(p.read_text(encoding='utf-8'))
@@ -49,7 +52,10 @@ def health():return jsonify(ok=True,version='1.0.0',synthetic=True)
 def export(name):
     allowed={'estimation.csv','control.csv','blind.csv','ablations.csv','scientific_summary.json'}
     if name not in allowed:return jsonify(error='Exportação desconhecida'),404
-    if not (ART/name).exists():return jsonify(error='Campanha ainda não executada'),404
+    if not (ART/name).exists():
+        compressed=ART/(name+'.gz')
+        if compressed.exists():return Response(gzip.decompress(compressed.read_bytes()),mimetype='text/csv',headers={'Content-Disposition':f'attachment; filename="{name}"'})
+        return jsonify(error='Campanha ainda não executada'),404
     return send_from_directory(ART,name,as_attachment=True)
 
 @app.post('/api/run')

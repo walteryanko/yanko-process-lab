@@ -1,0 +1,84 @@
+{
+  "version": "1.0.0-predeclared-after-pilot",
+  "date": "2026-10-17",
+  "plant": "ProcessLab tabulated f4444d4c238291b8633743930249ee387ad94541",
+  "dt_hours": 0.015,
+  "open_loop_steps": 120,
+  "control_steps": 60,
+  "train_episodes_per_scenario": 12,
+  "validation_episodes_per_scenario": 8,
+  "test_episodes_per_scenario": 100,
+  "calibration_episodes": 50,
+  "calibration_seed_start": 900000,
+  "train_seed_rule": "10000 + scenario_index*1000 + i",
+  "validation_seed_rule": "50000 + scenario_index*1000 + i",
+  "test_seed_rule": "100000 + scenario_index*1000 + i",
+  "control_seed_start": 700000,
+  "primary_metric": "episode RMSE of CC, all samples including startup",
+  "secondary_metric": "CC RMSE after 0.30 h",
+  "measurement_std_K": 0.2,
+  "noisy_measurement_std_K": 0.8,
+  "truth_RK4_substeps": 6,
+  "observer_RK4_substeps": 3,
+  "physical_domain": {
+    "concentrations": "nonnegative",
+    "temperature_K": [
+      250,
+      400
+    ]
+  },
+  "deployment_envelope": {
+    "mw_kmol_h": [
+      150,
+      1250
+    ],
+    "T_K": [
+      295,
+      350
+    ]
+  },
+  "NMPC": {
+    "p": 57,
+    "m": 6,
+    "Qe": 0.8,
+    "Rdu": 0.2,
+    "T_limit_K": 344,
+    "mw_bounds_kmol_h": [
+      22.7,
+      1366.2
+    ],
+    "solver": "ported deterministic coordinate search"
+  },
+  "acceptance": {
+    "minimum_holdout_relative_improvement": 0.1,
+    "paired_bootstrap_lower_bound": 0,
+    "physical_checks": true,
+    "local_rank_required": true,
+    "max_condition_number": 100000
+  },
+  "ranking_penalty": "0.025*d + log(N)*d/N on noise-normalized output MSE",
+  "sensor_blind": {
+    "fit_prefix_steps": 60,
+    "validate_through_step": 90,
+    "evaluation_steps": [
+      91,
+      120
+    ],
+    "holdout_selection_penalty": true
+  },
+  "bootstrap": {
+    "seed": 61017,
+    "draws": 2000,
+    "level": 0.95,
+    "unit": "independent episode"
+  },
+  "multiplicity": "Holm for Darwin vs UKF across estimation scenarios; other contrasts exploratory",
+  "budget": {
+    "CPU_workers": 4,
+    "GPU": false,
+    "target_minutes": 35,
+    "exclusion": "no silent exclusion; failed runs saved and counted"
+  },
+  "unavailable_baseline": "MHE omitted from primary campaign to keep fair CPU budget; constrained output-error identification is not called MHE",
+  "scope": "synthetic virtual plants only; no assertion of novel universal chemical laws"
+}

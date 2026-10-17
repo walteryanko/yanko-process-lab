@@ -88,3 +88,5 @@ Use `Model.from_dict(...)` para uma correção salva. Para comissionamento e rev
 Esta versão usa gramática restrita, STLSQ e SymPy; não executa PySR/Julia nem MHE. Não garante identificabilidade de todos os estados nem unicidade de mecanismos. A cobertura de incerteza é inadequada em alguns regimes. O NMPC é uma portabilidade do controlador público com busca por coordenadas, não reprodução exata de MATLAB/SQP. Não há validação industrial ou autorização de uso em equipamento real.
 
 Todos os resultados são rastreáveis ao protocolo, às seeds e aos arquivos brutos. `scripts/verify_manifest.py` verifica os hashes do pacote. Reproduções podem diferir ligeiramente com BLAS, compilador, versão de Python e sistema operacional; as bibliotecas numéricas principais estão fixadas em `requirements.txt`.
+
+Na branch GitHub, os maiores CSVs e os recortes de trajetórias estão compactados em gzip; o aplicativo os lê automaticamente. O pacote ZIP entregue contém todos os datasets NPZ. A branch preserva código, modelos, relatórios em Markdown e evidências tabulares; o PDF e as figuras podem ser reconstruídos com `python -m darwin.reporting`.

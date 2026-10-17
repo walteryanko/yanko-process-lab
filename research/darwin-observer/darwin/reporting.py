@@ -1,7 +1,7 @@
 """Build five scientific reports, figures and a self-contained offline explorer.
 Every numerical result below is calculated from saved campaign data.
 """
-import csv,json,hashlib,platform,sys,re,html
+import csv,json,hashlib,platform,sys,re,html,gzip,io
 from pathlib import Path
 import numpy as np
 import matplotlib
@@ -14,7 +14,13 @@ from .identification import local_observability
 from .experiments import savejson,savecsv,clean
 ROOT=Path(__file__).resolve().parents[1];ART=ROOT/'artifacts'/'main';REPORT=ROOT/'reports';FIG=REPORT/'figures'
 
-def rows(name):return list(csv.DictReader((ART/f'{name}.csv').open()))
+def rows(name):
+    p=ART/f'{name}.csv'
+    if p.exists():return list(csv.DictReader(p.open(encoding='utf-8')))
+    return list(csv.DictReader(io.StringIO(gzip.decompress((ART/f'{name}.csv.gz').read_bytes()).decode('utf-8'))))
+
+def read_json_file(p):
+    return json.loads(p.read_text(encoding='utf-8')) if p.exists() else json.loads(gzip.decompress(Path(str(p)+'.gz').read_bytes()))
 def val(r,k):return float(r[k])
 def wilson(k,n):
     z=1.95996398454;p=k/n;den=1+z*z/n;center=(p+z*z/(2*n))/den;half=z*np.sqrt(p*(1-p)/n+z*z/(4*n*n))/den
@@ -73,7 +79,7 @@ def figures(s,d):
         u=U0.copy();u[3]=w;learned.append(correction(BASE,u,pa)[0])
     axs[0].plot(grid,np.ones(len(grid)),label='Nominal',color='#8871b4');axs[0].plot(grid,(grid/453.6)**.4,label='Planta escondida',color='#26364a',linestyle='--');axs[0].plot(grid,learned,label='Descoberta',color='#247a65');axs[0].set(xlabel='mw (kmol/h)',ylabel='UA / UA0',title='A: forma recuperada');axs[0].legend(fontsize=7)
     names=list(s['control']);v=[s['control'][m]['iae'] for m in names];axs[1].bar(range(4),v,color=['#6aa8ce','#247a65','#d0a253','#8871b4']);axs[1].set_xticks(range(4),['Adapt.\nnominal','Darwin\ncorrigido','Darwin\nnominal','UKF\nnominal'],fontsize=8);axs[1].set(ylabel='IAE de CC (kmol h/m³)',title='E: corrigir a previsão muda o controle');fig.tight_layout();fig.savefig(FIG/'02_structure_control.png',dpi=180);plt.close(fig)
-    t=json.loads((ART/'traces'/'A_rich.json').read_text(encoding='utf-8'))[0];tt=np.arange(len(t['truth']))*.015;truth=np.array(t['truth']);fig,axs=plt.subplots(2,1,figsize=(8.6,4.8),sharex=True)
+    t=read_json_file(ART/'traces'/'A_rich.json')[0];tt=np.arange(len(t['truth']))*.015;truth=np.array(t['truth']);fig,axs=plt.subplots(2,1,figsize=(8.6,4.8),sharex=True)
     for k,ax in enumerate(axs):
         j=2 if k==0 else 4;ax.plot(tt,truth[:,j],color='#25364b',label='Verdade sintética',lw=1.5)
         for m,c in [('UKF','#9876ba'),('Adaptive','#63a1ca'),('Darwin','#239776')]:ax.plot(tt,np.array(t['methods'][m]['x'])[:,j],color=c,label=m,lw=1.)
