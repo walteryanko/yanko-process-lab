@@ -38,7 +38,19 @@ class NMPC:
     def action(self,x,u,sp,model=None):
         self.steps+=1;p=np.zeros(NP) if model is None else model.params
         seq,score=optimize(x,u,self.sequence,self.previous,sp,p);reverted=False
-        if model is not None and (score[1]>1e-6 or not model.supports(x,u)):
+        # Validate every planned move, not just the current cooling flow.
+        supported=True
+        if model is not None:
+            lo,hi,tlo,thi=model.envelope
+            supported=bool(model.supports(x,u) and np.all((seq>=lo)&(seq<=hi)))
+            if supported:
+                predicted=x.copy()
+                for k in range(57):
+                    proposed=u.copy();proposed[3]=seq[min(k,5)]
+                    predicted=transition(predicted,proposed,p)
+                    if not np.all(np.isfinite(predicted)) or np.any(predicted[:4]<0) or not tlo<=predicted[4]<=thi:
+                        supported=False;break
+        if model is not None and (score[1]>1e-6 or not supported):
             seq0,score0=optimize(x,u,self.sequence,self.previous,sp,np.zeros(NP))
             # Conservative model-update policy: reversion on unvalidated feasibility.
             seq,score=seq0,score0;reverted=True;self.events.append(dict(step=self.steps,state='MODEL_FALLBACK'))

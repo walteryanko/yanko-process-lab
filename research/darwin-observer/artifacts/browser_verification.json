@@ -1,0 +1,19 @@
+{
+  "checks": [
+    "initial data and canvas",
+    "playhead updates twin",
+    "panel arena",
+    "panel engine",
+    "panel timeline",
+    "panel benchmark",
+    "panel equation",
+    "LaTeX export",
+    "hypothesis inspection",
+    "new real simulation",
+    "scenario change",
+    "mobile no horizontal overflow",
+    "offline honest backend state"
+  ],
+  "page_errors": [],
+  "passed": true
+}

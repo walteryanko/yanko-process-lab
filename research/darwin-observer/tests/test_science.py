@@ -141,3 +141,17 @@ def test_control_constraints_and_infeasibility():
 
 def test_equations_export():
     p=np.zeros(NP);p[2]=.4;e=equations(Model(p));assert 'latex' in e[0] and 'sympy' in e[0] and e[0]['unit']=='kJ/(h K)'
+
+def test_controller_rejects_future_moves_outside_discovery_envelope(monkeypatch):
+    import darwin.control as ctl
+    calls=[]
+    def proposed(x,u,sequence,previous,sp,p):
+        calls.append(p.copy())
+        seq=np.full(6,453.6)
+        if p[0]!=0:seq[5]=1300.  # First move is valid; a future move is not.
+        return seq,(1.,0.,342.)
+    monkeypatch.setattr(ctl,'optimize',proposed)
+    p=np.zeros(NP);p[0]=-.1
+    c=NMPC();_,diagnostic=c.action(BASE,U0,2.47,Model(p))
+    assert diagnostic['model_fallback'] and len(calls)==2
+    assert np.all(calls[-1]==0) and np.all(c.sequence==453.6)

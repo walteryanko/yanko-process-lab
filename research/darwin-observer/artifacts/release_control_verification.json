@@ -1,0 +1,7 @@
+{
+  "episodes": 100,
+  "changed_trajectories": [],
+  "passed": true,
+  "seconds": 45.04660142900002,
+  "note": "Replayed all corrected NMPC seeds after adding full predicted-horizon domain checks; excludes timings from equality. Scientific metrics and applied moves are identical."
+}

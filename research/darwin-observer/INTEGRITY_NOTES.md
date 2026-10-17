@@ -15,3 +15,4 @@
 - Removing individual gates in the ablation runner relaxes the acceptance policy as well as ranking. Those results are exploratory, not clean causal estimates of one mechanism in isolation.
 - The Windows launchers are prepared; the executed validation platform was Linux/Python 3.12.14.
 - Browser screenshots were used only for internal visual inspection and are not part of the deliverable package.
+- Release hardening adds an explicit domain check for every planned NMPC move and predicted reactor temperature. All 100 corrected-control episodes were replayed to compare trajectories and decisions exactly; the release verification JSON records the result. Original campaign timing columns predate this added check and are not a benchmark of the final release on Windows.
