@@ -1,0 +1,39 @@
+test_infeasible_controller_has_fallback (test_control_server.ControlAndInterface.test_infeasible_controller_has_fallback) ... ok
+test_nominal_control_is_bounded_and_replayable (test_control_server.ControlAndInterface.test_nominal_control_is_bounded_and_replayable) ... ok
+test_scenarios_are_existing_particles (test_control_server.ControlAndInterface.test_scenarios_are_existing_particles) ... ok
+test_server_bounds (test_control_server.ControlAndInterface.test_server_bounds) ... ok
+test_causality_prefix (test_science.FilterTests.test_causality_prefix) ... ok
+test_enkf_linear_moments (test_science.FilterTests.test_enkf_linear_moments) ... ok
+test_export_roundtrip (test_science.FilterTests.test_export_roundtrip) ... ok
+test_fallback (test_science.FilterTests.test_fallback) ... ok
+test_joint_parameters_separate (test_science.FilterTests.test_joint_parameters_separate) ... ok
+test_linear_gaussian_ukf (test_science.FilterTests.test_linear_gaussian_ukf) ... ok
+test_missing_data_prediction (test_science.FilterTests.test_missing_data_prediction) ... ok
+test_no_future_or_truth_input (test_science.FilterTests.test_no_future_or_truth_input) ... ok
+test_paired_data_and_statistics (test_science.FilterTests.test_paired_data_and_statistics) ... ok
+test_reproducibility (test_science.FilterTests.test_reproducibility) ... ok
+test_asymmetry (test_science.PhysicsTests.test_asymmetry) ... ok
+test_conservation (test_science.PhysicsTests.test_conservation) ... ok
+test_domain (test_science.PhysicsTests.test_domain) ... ok
+test_equilibrium (test_science.PhysicsTests.test_equilibrium) ... ok
+test_exact_unobservable_direction (test_science.PhysicsTests.test_exact_unobservable_direction) ... ok
+test_inert_analytic (test_science.PhysicsTests.test_inert_analytic) ... ok
+test_rk4_independent_integrator (test_science.PhysicsTests.test_rk4_independent_integrator) ... ok
+test_bimodal_known_posterior (test_science.ProbabilityTests.test_bimodal_known_posterior) ... ok
+test_ess (test_science.ProbabilityTests.test_ess) ... ok
+test_gaussian_bridge_exact_drift (test_science.ProbabilityTests.test_gaussian_bridge_exact_drift) ... ok
+test_log_normalization_extreme (test_science.ProbabilityTests.test_log_normalization_extreme) ... ok
+test_partial_missing_likelihood (test_science.ProbabilityTests.test_partial_missing_likelihood) ... ok
+test_published_empirical_drift (test_science.ProbabilityTests.test_published_empirical_drift) ... ok
+test_resampling_unbiased (test_science.ProbabilityTests.test_resampling_unbiased) ... ok
+test_score_identities (test_science.ProbabilityTests.test_score_identities) ... ok
+test_sinkhorn_invalid (test_science.ProbabilityTests.test_sinkhorn_invalid) ... ok
+test_transport_marginals (test_science.ProbabilityTests.test_transport_marginals) ... ok
+test_transport_mean_and_variance_bias (test_science.ProbabilityTests.test_transport_mean_and_variance_bias) ... ok
+test_transport_zero_weights (test_science.ProbabilityTests.test_transport_zero_weights) ... ok
+test_typescript_physics_and_original_ukf (test_upstream.UpstreamParity.test_typescript_physics_and_original_ukf) ... ok
+
+----------------------------------------------------------------------
+Ran 34 tests in 2.816s
+
+OK

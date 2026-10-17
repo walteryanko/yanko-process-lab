@@ -1,0 +1,32 @@
+{
+  "filter_runs": 2016,
+  "main_unique_episodes": 200,
+  "hostile_unique_episodes": 60,
+  "physics_unique_episodes": 20,
+  "control_runs": 100,
+  "failed_runs": 0,
+  "fallbacks": 76,
+  "rejected_candidates": 0,
+  "update_count": 83712,
+  "runtime_seconds": {
+    "main": 679.4537596079999,
+    "hostile": 173.64082425800007,
+    "hostile_naive": 75.60285598999963,
+    "physics_fixed": 54.19392963400014,
+    "physics_joint": 168.8217284299999
+  },
+  "physical_residual": [
+    {
+      "scenario": "gaussian",
+      "seed": 2000,
+      "max_balance_residual_after_process_noise": 2.836619827917275e-14
+    },
+    {
+      "scenario": "ambiguous",
+      "seed": 2000,
+      "max_balance_residual_after_process_noise": 2.836619827917275e-14
+    }
+  ],
+  "conclusion": "D: no superiority in primary CSTR experiments. Auxiliary bimodal representation works; no established CSTR multimodal superiority.",
+  "scope": "Synthetic simulation, TABLED variant; Windows scripts supplied but not executed on Windows."
+}

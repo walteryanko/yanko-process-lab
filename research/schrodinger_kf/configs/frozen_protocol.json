@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "physical_variant": "TABLED",
+  "source_commit": "f4444d4c238291b8633743930249ee387ad94541",
+  "main": {
+    "seeds": [
+      2000,
+      2099
+    ],
+    "scenarios": [
+      "gaussian",
+      "ambiguous"
+    ],
+    "steps": 48,
+    "particles": 128
+  },
+  "epsilon": 0.02,
+  "bridge_steps": 64,
+  "bandwidth": 0.05,
+  "gate_enabled": false,
+  "development_seeds": [
+    1000,
+    1005
+  ],
+  "robust_trials": 12,
+  "physics_trials": 20,
+  "control_trials": 20
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "folder": "main",
+    "expected": 1200,
+    "present": 1200,
+    "failures": 0,
+    "jsonl_sha256": "b651ca10efc52d5b438203dc2040dedeb9349b172991519469913b242d9ad92b"
+  },
+  {
+    "folder": "hostile",
+    "expected": 360,
+    "present": 360,
+    "failures": 0,
+    "jsonl_sha256": "51469b81ac688e1ea88e045d6d905bf3163ab5f2eb18a5104abe9012733d96b9"
+  },
+  {
+    "folder": "hostile_naive",
+    "expected": 216,
+    "present": 216,
+    "failures": 0,
+    "jsonl_sha256": "cc2295c99d8ce4c6d59ca44e9a7b71fb3b2ba9b625e8cb6441ba9c53ab4e255e"
+  },
+  {
+    "folder": "physics_fixed",
+    "expected": 120,
+    "present": 120,
+    "failures": 0,
+    "jsonl_sha256": "fdc0ba0a871ff400dc5e0dc6dd6c29b442e49644a76d45603dc6e2a0f4e56185"
+  },
+  {
+    "folder": "physics_joint",
+    "expected": 120,
+    "present": 120,
+    "failures": 0,
+    "jsonl_sha256": "47a8e51dbf60fb50fbb51dbed81a14625630b266a46e3719aa43252dc1caf2a0"
+  }
+]

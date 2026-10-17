@@ -1,0 +1,135 @@
+{
+  "config": {
+    "out": "results/hostile_naive",
+    "trials": 12,
+    "start_seed": 2000,
+    "steps": 32,
+    "particles": 128,
+    "epsilon": 0.02,
+    "bridge_steps": 64,
+    "threshold": null,
+    "scenarios": [
+      "student",
+      "outliers",
+      "correlated"
+    ],
+    "methods": [
+      "M0",
+      "M1",
+      "M2",
+      "M3",
+      "M4",
+      "M5"
+    ],
+    "joint": false,
+    "naive": true
+  },
+  "model": {
+    "variant": "ProcessLab main / literal TABLED",
+    "commit": "f4444d4c238291b8633743930249ee387ad94541",
+    "parameters": {
+      "E": 75362.4,
+      "R": 8.314,
+      "k0": 16960000000000.0,
+      "heat": 91556.9,
+      "V": 1.89,
+      "Vt": 1.1,
+      "UA": 30385.6
+    },
+    "cp": [
+      146.5,
+      75.4,
+      192.6,
+      81.6
+    ],
+    "rho": [
+      14.8,
+      55.3,
+      24.7
+    ],
+    "input": [
+      36.3,
+      453.6,
+      45.4,
+      453.6,
+      297.0,
+      289.0
+    ],
+    "equilibria": [
+      [
+        0.36613395414512834,
+        33.76806136064201,
+        2.539425511121673,
+        3.633950405595394,
+        340.3034893843502,
+        319.2023225240006
+      ]
+    ],
+    "dt_h": 0.015,
+    "dt_s": 54.0,
+    "scales": [
+      1.0,
+      40.0,
+      3.0,
+      4.0,
+      10.0,
+      10.0
+    ],
+    "residual": [
+      0.0,
+      -2.4868995751603507e-14,
+      0.0,
+      0.0,
+      2.911130315762968e-13,
+      5.0763432040214176e-14
+    ],
+    "historical_equilibrium_K": 332.3336,
+    "historical_heat_kJ_per_kmol": 83736.0,
+    "historical_source_commit": "88c40e65204fa6aa5bed02cc64fb15be79a53bb1"
+  },
+  "seconds": 75.60285598999963,
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "numpy": "2.3.5",
+  "experiment": "Synthetic CSTR; no plant data",
+  "split": "test",
+  "failed": [],
+  "dataset_hashes": {
+    "student_2009.npz": "d7a7357c7bfcfdf83711a1dcfc1cf24a49e050a3ff64f1761dc06279ca963267",
+    "outliers_2004.npz": "53faa0d7323c2e7acf4fb9d0d39e0de359e0dc2ac0408fb682f19e5a0006c4a0",
+    "correlated_2000.npz": "aeb4c87a838363fd91a2fd2ff864cc68644d714992fea03cdd190be1209d7d3d",
+    "correlated_2009.npz": "f1a308c7ed6593deb7f1d28372c5f2125169feb087e25442caf38d141996e2d5",
+    "student_2008.npz": "962595c827f511fa11e60f46fe41c2cf7d1c9309589d6f488ad6924603ea6436",
+    "outliers_2002.npz": "517f4c3cee282a2e37199894e282f09b2aaa47dd437f9f750655bc68c6f8ac7d",
+    "student_2005.npz": "75a24b3bb21694a48e469448bf5e185f2ee4e4b263088ecd5cc06aea73b3653b",
+    "student_2002.npz": "1f3e660dcba7c3f3cc99a6a990ef2628722d8f8c00040524bedc4f45defef8e0",
+    "correlated_2005.npz": "a00e6cbe5394cf39ff352f7b5a37eb6747bf5208fca1d24d2f74bc9f1f2eae39",
+    "student_2004.npz": "3fd5a3e33a891552703cdf600ec1a06a8b68363e790fe40bfa088aaa0915d207",
+    "student_2001.npz": "20a0b6b82e0623fe1a512fa3ffa433241dd1b2c09db83da4f964ec65400044f5",
+    "outliers_2001.npz": "a496ee4d058f4b6ac66deb4900b403fd97c9837657d70d1cf643d7369b90b004",
+    "outliers_2007.npz": "e0c0890acb816edec8c7d62edb9e91626d6b02f2cb87e8a862853fdc80e817bc",
+    "outliers_2008.npz": "58f9554a5480c2a60d9222d632b39bd7789293be37ef5d4f628fa39ec5eaf33c",
+    "correlated_2002.npz": "79a47a346dcb79778fcb1f02c8e1a113a6694d12827f452c356462c2f6d7834c",
+    "student_2006.npz": "2d8df1203ce02d5ab3b852ee60a7d67f97514b39962f58bf0d477224942af294",
+    "correlated_2006.npz": "cd39eb0c23d505945101db80483900554bb8cc1e87a885b6d7cce11fda7dcbef",
+    "student_2010.npz": "cfa138bfd86ea999c768a72e6ddca52e4e061825046ab45f942f50621149cc73",
+    "correlated_2010.npz": "bdf4bfb50aab9612343590f8008805614b6647711c983d8629ae68a7c5678bbc",
+    "correlated_2008.npz": "3c8fa6313ab589e769e18027f760acebcd4485c7959eb565910b50e48a2d185a",
+    "outliers_2011.npz": "21e22797a61630492bc84497fb18515c0f2ee03f07c71f5d9d8bffeaf28e8b60",
+    "correlated_2001.npz": "20560d86d9d351c4d60973c1b563ed6251379cca11e4130a256c47584897e21f",
+    "outliers_2003.npz": "8cd3f37f0e73e0a966ced17d62e1c2a930d9bbc0c4d2281d910492d13ab11548",
+    "outliers_2000.npz": "551735b85bf672dff7ab71b93843d3ac5f3fa3f914a0b2cee92c701040739517",
+    "correlated_2004.npz": "febe2351464146d3df11e1818e1118201a517f2b5058a2101f09b1ffc2e9edb5",
+    "outliers_2009.npz": "ed19fced46931164340572dbe94c025e96f2f9fd6eb6fec27d33c2e5032fc4b9",
+    "correlated_2003.npz": "b3a7dd6ca7c65114274e8f70085d7ddf3d908c6123a7a93a973ae632fb3093eb",
+    "student_2011.npz": "900b384bb005afa5542e703e1610dfc27ed69cd95b16394de03602ee32b11ae5",
+    "correlated_2011.npz": "c0b0b2fa5eeb839e49dbaa8ebefa291a81111631c4d60c135627e8d5ea0078e0",
+    "outliers_2006.npz": "d7cd08d9d018a0b1468df5b1ddaf7b285cfe2e1f0475e1e9b68faad202a3f3da",
+    "student_2000.npz": "606eb462345ea173d701303691f62e30ffd28795e9563af52e80a0713807b03b",
+    "student_2003.npz": "8ed6fd88fbf7c97742fadf63dcb4cd467357c42eebcbe059ca38ca9f0261bac3",
+    "student_2007.npz": "deef6ce343b1c684c2b7b0eaad1e71e30c399d0d59b93f8d23a6b28c584433e2",
+    "outliers_2005.npz": "223817705951914db3922000d0ef03f2ee430afda0750a1d7da8c8a0447abc3e",
+    "outliers_2010.npz": "c6abe5642feee2f9fb52d75c8de3ce2ce1c2836c57c118b47cd26a882ada7589",
+    "correlated_2007.npz": "7c25aad12babc167c3e5ecb227f9dcacfbcac71c81b60a0b998cab3cfe5584ce"
+  }
+}

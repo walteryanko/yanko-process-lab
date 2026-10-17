@@ -1,0 +1,6689 @@
+{
+  "rows": [
+    {
+      "seed": 3000,
+      "method": "M0",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 10.055385783396302,
+      "peak": 339.7548830710859,
+      "rmse_cc": 0.07796882112878349,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 412.02,
+      "control_ms": 19.157873031261374
+    },
+    {
+      "seed": 3000,
+      "method": "M1",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 11.59427929215771,
+      "peak": 339.88444516216146,
+      "rmse_cc": 0.13775173221757775,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 414.324,
+      "control_ms": 21.805149781229716
+    },
+    {
+      "seed": 3000,
+      "method": "M4",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 7.394312852308212,
+      "peak": 339.7548830710859,
+      "rmse_cc": 0.13295825224812172,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 407.52,
+      "control_ms": 19.911644999979217
+    },
+    {
+      "seed": 3000,
+      "method": "M4",
+      "policy": "risk",
+      "failure": null,
+      "steps": 32,
+      "loss": 10.74462902424013,
+      "peak": 339.8174708793817,
+      "rmse_cc": 0.13213166354951272,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 421.128,
+      "control_ms": 46.482404343677786
+    },
+    {
+      "seed": 3000,
+      "method": "M4",
+      "policy": "regret",
+      "failure": null,
+      "steps": 32,
+      "loss": 9.335898104556604,
+      "peak": 339.94765782862356,
+      "rmse_cc": 0.12353631739930374,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 412.128,
+      "control_ms": 45.23097165626666
+    },
+    {
+      "seed": 3001,
+      "method": "M0",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 13.20183199538203,
+      "peak": 339.55235650934947,
+      "rmse_cc": 0.03463068566921973,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 379.878,
+      "control_ms": 19.747021718785618
+    },
+    {
+      "seed": 3001,
+      "method": "M1",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 14.336575940466512,
+      "peak": 339.55235650934947,
+      "rmse_cc": 0.03593141873529028,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 386.574,
+      "control_ms": 23.359069093771723
+    },
+    {
+      "seed": 3001,
+      "method": "M4",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 11.264104471005618,
+      "peak": 339.75740438006943,
+      "rmse_cc": 0.08226984169853152,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 382.182,
+      "control_ms": 22.141964062512898
+    },
+    {
+      "seed": 3001,
+      "method": "M4",
+      "policy": "risk",
+      "failure": null,
+      "steps": 32,
+      "loss": 14.80425485460578,
+      "peak": 340.2428314564584,
+      "rmse_cc": 0.08291675968720856,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 377.682,
+      "control_ms": 36.36977799999386
+    },
+    {
+      "seed": 3001,
+      "method": "M4",
+      "policy": "regret",
+      "failure": null,
+      "steps": 32,
+      "loss": 12.309392409506778,
+      "peak": 339.61894283258954,
+      "rmse_cc": 0.082342053977118,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 393.486,
+      "control_ms": 34.82712637499219
+    },
+    {
+      "seed": 3002,
+      "method": "M0",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 6.810251969641307,
+      "peak": 339.9219817394755,
+      "rmse_cc": 0.008530457294339955,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 400.824,
+      "control_ms": 18.720388718762138
+    },
+    {
+      "seed": 3002,
+      "method": "M1",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 6.810251969641307,
+      "peak": 339.9219817394755,
+      "rmse_cc": 0.021804491334648922,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 400.824,
+      "control_ms": 18.475285281240872
+    },
+    {
+      "seed": 3002,
+      "method": "M4",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 6.141559572228033,
+      "peak": 339.9219817394755,
+      "rmse_cc": 0.07920929763445593,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 405.324,
+      "control_ms": 19.942943749981623
+    },
+    {
+      "seed": 3002,
+      "method": "M4",
+      "policy": "risk",
+      "failure": null,
+      "steps": 32,
+      "loss": 6.790057564619939,
+      "peak": 339.9219817394755,
+      "rmse_cc": 0.0789839933391151,
+      "violations": 0,
+      "fallbacks": 1,
+      "coolant_kmol": 414.324,
+      "control_ms": 35.257353406208836
+    },
+    {
+      "seed": 3002,
+      "method": "M4",
+      "policy": "regret",
+      "failure": null,
+      "steps": 32,
+      "loss": 8.248024103469891,
+      "peak": 339.9219817394755,
+      "rmse_cc": 0.07972361705426019,
+      "violations": 0,
+      "fallbacks": 1,
+      "coolant_kmol": 423.432,
+      "control_ms": 37.753938374976315
+    },
+    {
+      "seed": 3003,
+      "method": "M0",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 17.92355895878295,
+      "peak": 340.17528210622737,
+      "rmse_cc": 0.17413418260104774,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 378.54,
+      "control_ms": 18.608808437477364
+    },
+    {
+      "seed": 3003,
+      "method": "M1",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 17.92355895878295,
+      "peak": 340.17528210622737,
+      "rmse_cc": 0.1918231468653842,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 378.54,
+      "control_ms": 21.927115468770353
+    },
+    {
+      "seed": 3003,
+      "method": "M4",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 16.987649273854313,
+      "peak": 340.17528210622737,
+      "rmse_cc": 0.1519208957482363,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 374.04,
+      "control_ms": 19.81612993748172
+    },
+    {
+      "seed": 3003,
+      "method": "M4",
+      "policy": "risk",
+      "failure": null,
+      "steps": 32,
+      "loss": 16.838526582033982,
+      "peak": 339.66003160408087,
+      "rmse_cc": 0.16193604841575038,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 376.236,
+      "control_ms": 35.12731987495954
+    },
+    {
+      "seed": 3003,
+      "method": "M4",
+      "policy": "regret",
+      "failure": null,
+      "steps": 32,
+      "loss": 15.855228299007099,
+      "peak": 339.9366116542512,
+      "rmse_cc": 0.16156441898575635,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 392.148,
+      "control_ms": 36.508100062462745
+    },
+    {
+      "seed": 3004,
+      "method": "M0",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 55.55305598137249,
+      "peak": 342.7634843511468,
+      "rmse_cc": 0.12952868877204854,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 421.128,
+      "control_ms": 21.097747406244594
+    },
+    {
+      "seed": 3004,
+      "method": "M1",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 55.8927670848619,
+      "peak": 342.7634843511468,
+      "rmse_cc": 0.13581701354494552,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 423.324,
+      "control_ms": 20.410580343749984
+    },
+    {
+      "seed": 3004,
+      "method": "M4",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 54.544140092960056,
+      "peak": 342.7634843511468,
+      "rmse_cc": 0.18680582254479974,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 421.128,
+      "control_ms": 19.252411937529246
+    },
+    {
+      "seed": 3004,
+      "method": "M4",
+      "policy": "risk",
+      "failure": null,
+      "steps": 32,
+      "loss": 56.66328338821462,
+      "peak": 342.7634843511468,
+      "rmse_cc": 0.1868095881796249,
+      "violations": 0,
+      "fallbacks": 1,
+      "coolant_kmol": 430.128,
+      "control_ms": 35.63004771869771
+    },
+    {
+      "seed": 3004,
+      "method": "M4",
+      "policy": "regret",
+      "failure": null,
+      "steps": 32,
+      "loss": 62.46654533967902,
+      "peak": 342.9894769298474,
+      "rmse_cc": 0.19583599750240488,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 430.128,
+      "control_ms": 34.62091284369251
+    },
+    {
+      "seed": 3005,
+      "method": "M0",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 18.03091224613,
+      "peak": 340.58473803163935,
+      "rmse_cc": 0.24717376784519526,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 412.128,
+      "control_ms": 18.694422187437
+    },
+    {
+      "seed": 3005,
+      "method": "M1",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 17.675052994410063,
+      "peak": 340.58473803163935,
+      "rmse_cc": 0.268182630123529,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 409.824,
+      "control_ms": 19.67846778126159
+    },
+    {
+      "seed": 3005,
+      "method": "M4",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 18.314818814038734,
+      "peak": 340.58473803163935,
+      "rmse_cc": 0.270308892138787,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 409.824,
+      "control_ms": 18.49356199996066
+    },
+    {
+      "seed": 3005,
+      "method": "M4",
+      "policy": "risk",
+      "failure": null,
+      "steps": 32,
+      "loss": 18.24207351751756,
+      "peak": 340.58473803163935,
+      "rmse_cc": 0.2684466849210169,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 412.128,
+      "control_ms": 37.162300562499695
+    },
+    {
+      "seed": 3005,
+      "method": "M4",
+      "policy": "regret",
+      "failure": null,
+      "steps": 32,
+      "loss": 20.645774723742726,
+      "peak": 340.7712894478763,
+      "rmse_cc": 0.2563973165614272,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 416.628,
+      "control_ms": 41.111717375002854
+    },
+    {
+      "seed": 3006,
+      "method": "M0",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 20.25880912836586,
+      "peak": 340.9364390374429,
+      "rmse_cc": 0.23316716907605692,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 403.128,
+      "control_ms": 33.896553656177275
+    },
+    {
+      "seed": 3006,
+      "method": "M1",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 20.25880912836586,
+      "peak": 340.9364390374429,
+      "rmse_cc": 0.24606265506168706,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 403.128,
+      "control_ms": 37.005693593741285
+    },
+    {
+      "seed": 3006,
+      "method": "M4",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 19.2306153973783,
+      "peak": 340.9364390374429,
+      "rmse_cc": 0.36288442845872226,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 396.432,
+      "control_ms": 19.413204593774935
+    },
+    {
+      "seed": 3006,
+      "method": "M4",
+      "policy": "risk",
+      "failure": null,
+      "steps": 32,
+      "loss": 22.765948643947283,
+      "peak": 340.9364390374429,
+      "rmse_cc": 0.35580446476342487,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 407.628,
+      "control_ms": 45.58093862506496
+    },
+    {
+      "seed": 3006,
+      "method": "M4",
+      "policy": "regret",
+      "failure": null,
+      "steps": 32,
+      "loss": 25.707649504803257,
+      "peak": 341.1207381827933,
+      "rmse_cc": 0.37819359923589124,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 405.432,
+      "control_ms": 58.49075496873013
+    },
+    {
+      "seed": 3007,
+      "method": "M0",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 23.939891833400356,
+      "peak": 341.27797146688516,
+      "rmse_cc": 0.2592370954081093,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 436.716,
+      "control_ms": 19.623967218734606
+    },
+    {
+      "seed": 3007,
+      "method": "M1",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 24.06570869150183,
+      "peak": 341.27797146688516,
+      "rmse_cc": 0.2601853967079888,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 432.216,
+      "control_ms": 18.97814415625021
+    },
+    {
+      "seed": 3007,
+      "method": "M4",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 23.79455251900233,
+      "peak": 341.27797146688516,
+      "rmse_cc": 0.2591679315367956,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 434.52,
+      "control_ms": 19.824020062543468
+    },
+    {
+      "seed": 3007,
+      "method": "M4",
+      "policy": "risk",
+      "failure": null,
+      "steps": 32,
+      "loss": 24.02697889199413,
+      "peak": 341.27797146688516,
+      "rmse_cc": 0.2591513741328554,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 439.02,
+      "control_ms": 35.702066062540894
+    },
+    {
+      "seed": 3007,
+      "method": "M4",
+      "policy": "regret",
+      "failure": null,
+      "steps": 32,
+      "loss": 25.920470586683066,
+      "peak": 341.27797146688516,
+      "rmse_cc": 0.257805934092558,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 452.628,
+      "control_ms": 35.80988534370988
+    },
+    {
+      "seed": 3008,
+      "method": "M0",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 36.20275361233621,
+      "peak": 339.47754631313006,
+      "rmse_cc": 0.2920086775122488,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 353.682,
+      "control_ms": 18.228026968728273
+    },
+    {
+      "seed": 3008,
+      "method": "M1",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 36.528225450676075,
+      "peak": 339.4068019022026,
+      "rmse_cc": 0.2119535819853785,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 360.378,
+      "control_ms": 18.43964599996184
+    },
+    {
+      "seed": 3008,
+      "method": "M4",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 36.20275361233621,
+      "peak": 339.47754631313006,
+      "rmse_cc": 0.11982965465576739,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 353.682,
+      "control_ms": 19.430061687472744
+    },
+    {
+      "seed": 3008,
+      "method": "M4",
+      "policy": "risk",
+      "failure": null,
+      "steps": 32,
+      "loss": 39.23987775511259,
+      "peak": 339.6020277873243,
+      "rmse_cc": 0.1204032322021307,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 360.378,
+      "control_ms": 38.19905199999596
+    },
+    {
+      "seed": 3008,
+      "method": "M4",
+      "policy": "regret",
+      "failure": null,
+      "steps": 32,
+      "loss": 36.10554687895479,
+      "peak": 339.5222091587699,
+      "rmse_cc": 0.12033693170935739,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 367.182,
+      "control_ms": 34.07617915624428
+    },
+    {
+      "seed": 3009,
+      "method": "M0",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 16.296194382929823,
+      "peak": 340.72763793804694,
+      "rmse_cc": 0.241198433239901,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 425.52,
+      "control_ms": 18.281817687480384
+    },
+    {
+      "seed": 3009,
+      "method": "M1",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 16.296194382929823,
+      "peak": 340.72763793804694,
+      "rmse_cc": 0.2651280250633485,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 425.52,
+      "control_ms": 20.841120499966337
+    },
+    {
+      "seed": 3009,
+      "method": "M4",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 16.713847832225873,
+      "peak": 340.72763793804694,
+      "rmse_cc": 0.2644968379689772,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 423.324,
+      "control_ms": 18.752353375020903
+    },
+    {
+      "seed": 3009,
+      "method": "M4",
+      "policy": "risk",
+      "failure": null,
+      "steps": 32,
+      "loss": 19.041578011756368,
+      "peak": 340.9466931384299,
+      "rmse_cc": 0.29113108326367565,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 421.02,
+      "control_ms": 41.24156921872668
+    },
+    {
+      "seed": 3009,
+      "method": "M4",
+      "policy": "regret",
+      "failure": null,
+      "steps": 32,
+      "loss": 19.87264867500477,
+      "peak": 340.9466931384299,
+      "rmse_cc": 0.2804710878367103,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 432.324,
+      "control_ms": 39.70029315627244
+    },
+    {
+      "seed": 3010,
+      "method": "M0",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 45.87483798782593,
+      "peak": 342.09540384466504,
+      "rmse_cc": 0.15738596766880658,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 421.128,
+      "control_ms": 21.485488249993523
+    },
+    {
+      "seed": 3010,
+      "method": "M1",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 45.87483798782593,
+      "peak": 342.09540384466504,
+      "rmse_cc": 0.1365989796733377,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 421.128,
+      "control_ms": 18.620478249985695
+    },
+    {
+      "seed": 3010,
+      "method": "M4",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 45.01199558163663,
+      "peak": 342.09540384466504,
+      "rmse_cc": 0.2222435614008496,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 421.128,
+      "control_ms": 18.410922093721638
+    },
+    {
+      "seed": 3010,
+      "method": "M4",
+      "policy": "risk",
+      "failure": null,
+      "steps": 32,
+      "loss": 43.624454135021566,
+      "peak": 342.09540384466504,
+      "rmse_cc": 0.22103632749937968,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 421.128,
+      "control_ms": 33.76270124999792
+    },
+    {
+      "seed": 3010,
+      "method": "M4",
+      "policy": "regret",
+      "failure": null,
+      "steps": 32,
+      "loss": 54.6539359206302,
+      "peak": 342.3162538840533,
+      "rmse_cc": 0.22765775581171288,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 421.128,
+      "control_ms": 40.121247406275984
+    },
+    {
+      "seed": 3011,
+      "method": "M0",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 17.42978805991006,
+      "peak": 340.74665506050326,
+      "rmse_cc": 0.10594256983612109,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 391.932,
+      "control_ms": 37.11622003127957
+    },
+    {
+      "seed": 3011,
+      "method": "M1",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 17.42978805991006,
+      "peak": 340.74665506050326,
+      "rmse_cc": 0.09398929820554949,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 391.932,
+      "control_ms": 18.77398334370639
+    },
+    {
+      "seed": 3011,
+      "method": "M4",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 18.889490745835626,
+      "peak": 340.74665506050326,
+      "rmse_cc": 0.06085223237219469,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 400.932,
+      "control_ms": 18.60874231249454
+    },
+    {
+      "seed": 3011,
+      "method": "M4",
+      "policy": "risk",
+      "failure": null,
+      "steps": 32,
+      "loss": 27.877097526549953,
+      "peak": 341.5727964243566,
+      "rmse_cc": 0.06139251026179164,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 403.236,
+      "control_ms": 40.58416284372868
+    },
+    {
+      "seed": 3011,
+      "method": "M4",
+      "policy": "regret",
+      "failure": null,
+      "steps": 32,
+      "loss": 21.375265264164987,
+      "peak": 341.5727964243566,
+      "rmse_cc": 0.06046381284809223,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 396.54,
+      "control_ms": 42.2700676249832
+    },
+    {
+      "seed": 3012,
+      "method": "M0",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 16.742958559703133,
+      "peak": 340.1710160362577,
+      "rmse_cc": 0.28667700358502546,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 405.324,
+      "control_ms": 18.66095568747994
+    },
+    {
+      "seed": 3012,
+      "method": "M1",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 16.742958559703133,
+      "peak": 340.1710160362577,
+      "rmse_cc": 0.28888840692420537,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 405.324,
+      "control_ms": 18.333663999968053
+    },
+    {
+      "seed": 3012,
+      "method": "M4",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 16.452288323483874,
+      "peak": 340.1710160362577,
+      "rmse_cc": 0.32281352644732375,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 405.324,
+      "control_ms": 19.703987749991825
+    },
+    {
+      "seed": 3012,
+      "method": "M4",
+      "policy": "risk",
+      "failure": null,
+      "steps": 32,
+      "loss": 19.29906038990186,
+      "peak": 340.3532603174083,
+      "rmse_cc": 0.31179581027154535,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 405.324,
+      "control_ms": 35.3287729687537
+    },
+    {
+      "seed": 3012,
+      "method": "M4",
+      "policy": "regret",
+      "failure": null,
+      "steps": 32,
+      "loss": 18.238387133209862,
+      "peak": 340.3532603174083,
+      "rmse_cc": 0.31085556793625896,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 414.432,
+      "control_ms": 34.088619968713374
+    },
+    {
+      "seed": 3013,
+      "method": "M0",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 15.747116632755322,
+      "peak": 339.83927994060275,
+      "rmse_cc": 0.3117616376742189,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 416.52,
+      "control_ms": 17.798407468688993
+    },
+    {
+      "seed": 3013,
+      "method": "M1",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 14.740670040619063,
+      "peak": 339.80255994918014,
+      "rmse_cc": 0.28156965561026975,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 414.324,
+      "control_ms": 18.116875718746428
+    },
+    {
+      "seed": 3013,
+      "method": "M4",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 15.77321393944967,
+      "peak": 339.73079530495755,
+      "rmse_cc": 0.2519354577790829,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 418.716,
+      "control_ms": 18.097942968665848
+    },
+    {
+      "seed": 3013,
+      "method": "M4",
+      "policy": "risk",
+      "failure": null,
+      "steps": 32,
+      "loss": 14.445430622713083,
+      "peak": 339.8711737025074,
+      "rmse_cc": 0.2656180161624787,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 414.216,
+      "control_ms": 34.944790343701015
+    },
+    {
+      "seed": 3013,
+      "method": "M4",
+      "policy": "regret",
+      "failure": null,
+      "steps": 32,
+      "loss": 19.238954363073876,
+      "peak": 340.2194691121968,
+      "rmse_cc": 0.25414959039659274,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 409.824,
+      "control_ms": 35.5665610312883
+    },
+    {
+      "seed": 3014,
+      "method": "M0",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 33.74417990010825,
+      "peak": 341.8450987638014,
+      "rmse_cc": 0.11061123609820656,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 407.628,
+      "control_ms": 19.60817265627668
+    },
+    {
+      "seed": 3014,
+      "method": "M1",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 33.74417990010825,
+      "peak": 341.8450987638014,
+      "rmse_cc": 0.08114341686831009,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 407.628,
+      "control_ms": 19.21254399999839
+    },
+    {
+      "seed": 3014,
+      "method": "M4",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 32.9297215137431,
+      "peak": 341.8450987638014,
+      "rmse_cc": 0.05271010893388126,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 407.628,
+      "control_ms": 19.975178281228523
+    },
+    {
+      "seed": 3014,
+      "method": "M4",
+      "policy": "risk",
+      "failure": null,
+      "steps": 32,
+      "loss": 39.010087565685645,
+      "peak": 342.06669667469754,
+      "rmse_cc": 0.05704901453459666,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 405.432,
+      "control_ms": 36.30401587497545
+    },
+    {
+      "seed": 3014,
+      "method": "M4",
+      "policy": "regret",
+      "failure": null,
+      "steps": 32,
+      "loss": 29.243454412133282,
+      "peak": 341.8450987638014,
+      "rmse_cc": 0.05259467306080419,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 405.432,
+      "control_ms": 40.526072250031575
+    },
+    {
+      "seed": 3015,
+      "method": "M0",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 13.74199414878722,
+      "peak": 339.64295240091366,
+      "rmse_cc": 0.21717264644117817,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 387.432,
+      "control_ms": 23.159173906222463
+    },
+    {
+      "seed": 3015,
+      "method": "M1",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 13.74199414878722,
+      "peak": 339.64295240091366,
+      "rmse_cc": 0.2264893946124618,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 387.432,
+      "control_ms": 20.145795062461502
+    },
+    {
+      "seed": 3015,
+      "method": "M4",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 16.604498028940014,
+      "peak": 339.8049663842054,
+      "rmse_cc": 0.17059628126483864,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 387.432,
+      "control_ms": 22.350691937504052
+    },
+    {
+      "seed": 3015,
+      "method": "M4",
+      "policy": "risk",
+      "failure": null,
+      "steps": 32,
+      "loss": 15.94425920604698,
+      "peak": 339.51385312567635,
+      "rmse_cc": 0.18611779529958547,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 382.932,
+      "control_ms": 36.453248906298086
+    },
+    {
+      "seed": 3015,
+      "method": "M4",
+      "policy": "regret",
+      "failure": null,
+      "steps": 32,
+      "loss": 17.21267556200185,
+      "peak": 340.03890187536825,
+      "rmse_cc": 0.19485524743946747,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 392.04,
+      "control_ms": 34.17326712506963
+    },
+    {
+      "seed": 3016,
+      "method": "M0",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 12.718590977826032,
+      "peak": 340.7058689643495,
+      "rmse_cc": 0.15812037816233926,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 414.324,
+      "control_ms": 18.19343493748704
+    },
+    {
+      "seed": 3016,
+      "method": "M1",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 13.591076807105877,
+      "peak": 340.7058689643495,
+      "rmse_cc": 0.14406995906705422,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 414.324,
+      "control_ms": 18.224731406263572
+    },
+    {
+      "seed": 3016,
+      "method": "M4",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 12.718590977826032,
+      "peak": 340.7058689643495,
+      "rmse_cc": 0.10982002875874436,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 414.324,
+      "control_ms": 19.267705312500993
+    },
+    {
+      "seed": 3016,
+      "method": "M4",
+      "policy": "risk",
+      "failure": null,
+      "steps": 32,
+      "loss": 14.140750305450235,
+      "peak": 340.8926222137457,
+      "rmse_cc": 0.09234340429361004,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 409.824,
+      "control_ms": 34.342955124941454
+    },
+    {
+      "seed": 3016,
+      "method": "M4",
+      "policy": "regret",
+      "failure": null,
+      "steps": 32,
+      "loss": 15.533313885152877,
+      "peak": 340.7058689643495,
+      "rmse_cc": 0.10793282770432759,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 430.128,
+      "control_ms": 33.79575793753986
+    },
+    {
+      "seed": 3017,
+      "method": "M0",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 27.939842834105967,
+      "peak": 341.7644798864289,
+      "rmse_cc": 0.13440901834245253,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 407.628,
+      "control_ms": 18.02940068745329
+    },
+    {
+      "seed": 3017,
+      "method": "M1",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 27.578123986556346,
+      "peak": 341.7644798864289,
+      "rmse_cc": 0.046507723953812245,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 407.628,
+      "control_ms": 17.917190812468675
+    },
+    {
+      "seed": 3017,
+      "method": "M4",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 27.939842834105967,
+      "peak": 341.7644798864289,
+      "rmse_cc": 0.18927382178422625,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 407.628,
+      "control_ms": 19.155291937508423
+    },
+    {
+      "seed": 3017,
+      "method": "M4",
+      "policy": "risk",
+      "failure": null,
+      "steps": 32,
+      "loss": 29.25189540864604,
+      "peak": 341.7644798864289,
+      "rmse_cc": 0.1885859890645086,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 409.932,
+      "control_ms": 33.8018323125624
+    },
+    {
+      "seed": 3017,
+      "method": "M4",
+      "policy": "regret",
+      "failure": null,
+      "steps": 32,
+      "loss": 33.410975472858674,
+      "peak": 341.9915858067373,
+      "rmse_cc": 0.18305084952491654,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 409.932,
+      "control_ms": 34.24939771878144
+    },
+    {
+      "seed": 3018,
+      "method": "M0",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 16.320871537870218,
+      "peak": 340.195490840695,
+      "rmse_cc": 0.28072143704574776,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 405.324,
+      "control_ms": 19.150946343756914
+    },
+    {
+      "seed": 3018,
+      "method": "M1",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 16.106693735314977,
+      "peak": 340.195490840695,
+      "rmse_cc": 0.2655352178989307,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 405.324,
+      "control_ms": 19.176668000014274
+    },
+    {
+      "seed": 3018,
+      "method": "M4",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 13.955272844294848,
+      "peak": 339.917985206955,
+      "rmse_cc": 0.21715966913361526,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 412.02,
+      "control_ms": 18.295704187508477
+    },
+    {
+      "seed": 3018,
+      "method": "M4",
+      "policy": "risk",
+      "failure": null,
+      "steps": 32,
+      "loss": 14.620612094840352,
+      "peak": 339.917985206955,
+      "rmse_cc": 0.21432879204887154,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 418.824,
+      "control_ms": 34.76889365624913
+    },
+    {
+      "seed": 3018,
+      "method": "M4",
+      "policy": "regret",
+      "failure": null,
+      "steps": 32,
+      "loss": 17.129533471278364,
+      "peak": 340.1425500525224,
+      "rmse_cc": 0.19021555781662774,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 412.128,
+      "control_ms": 33.93316090630094
+    },
+    {
+      "seed": 3019,
+      "method": "M0",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 17.501469825063687,
+      "peak": 340.6810022889897,
+      "rmse_cc": 0.19106252542660254,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 432.216,
+      "control_ms": 18.644319125002085
+    },
+    {
+      "seed": 3019,
+      "method": "M1",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 17.501469825063687,
+      "peak": 340.6810022889897,
+      "rmse_cc": 0.17960790290611725,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 432.216,
+      "control_ms": 18.265636781208627
+    },
+    {
+      "seed": 3019,
+      "method": "M4",
+      "policy": "nominal",
+      "failure": null,
+      "steps": 32,
+      "loss": 17.920853386072213,
+      "peak": 340.6810022889897,
+      "rmse_cc": 0.1804846112713703,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 432.216,
+      "control_ms": 21.51125868743975
+    },
+    {
+      "seed": 3019,
+      "method": "M4",
+      "policy": "risk",
+      "failure": null,
+      "steps": 32,
+      "loss": 19.35085338270092,
+      "peak": 340.90389129473294,
+      "rmse_cc": 0.1798282945209004,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 427.824,
+      "control_ms": 35.57690700003491
+    },
+    {
+      "seed": 3019,
+      "method": "M4",
+      "policy": "regret",
+      "failure": null,
+      "steps": 32,
+      "loss": 20.132534052917578,
+      "peak": 340.8074931519858,
+      "rmse_cc": 0.1844481455152698,
+      "violations": 0,
+      "fallbacks": 0,
+      "coolant_kmol": 432.324,
+      "control_ms": 35.22763534374462
+    }
+  ],
+  "summary": {
+    "M0_nominal": {
+      "loss": 21.801714817784656,
+      "peak": 340.64297842958183,
+      "rmse_cc": 0.1825721199413825,
+      "violations": 0.0,
+      "fallbacks": 0.0,
+      "coolant_kmol": 405.65099999999995,
+      "control_ms": 20.895157306236456,
+      "n": 20,
+      "vs_UKF_nominal": {
+        "mean_delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "vs_M4_nominal": {
+        "mean_delta": 0.3625086871483745,
+        "ci95": [
+          -0.17391390218361136,
+          0.8646712124381054
+        ]
+      }
+    },
+    "M1_nominal": {
+      "loss": 21.92166084723943,
+      "peak": 340.6440833140181,
+      "rmse_cc": 0.17595200236799133,
+      "violations": 0.0,
+      "fallbacks": 0.0,
+      "coolant_kmol": 406.0956,
+      "control_ms": 20.385391968738276,
+      "n": 20,
+      "vs_UKF_nominal": {
+        "mean_delta": 0.11994602945477136,
+        "ci95": [
+          -0.09783051635835537,
+          0.3818373812528918
+        ]
+      },
+      "vs_M4_nominal": {
+        "mean_delta": 0.48245471660314576,
+        "ci95": [
+          -0.16546754477107964,
+          1.1452274965741995
+        ]
+      }
+    },
+    "M4_nominal": {
+      "loss": 21.43920613063628,
+      "peak": 340.6420320088131,
+      "rmse_cc": 0.1843870576889661,
+      "violations": 0.0,
+      "fallbacks": 0.0,
+      "coolant_kmol": 405.7662,
+      "control_ms": 19.617786093741074,
+      "n": 20,
+      "vs_UKF_nominal": {
+        "mean_delta": -0.3625086871483745,
+        "ci95": [
+          -0.8694553345716108,
+          0.18904936848761789
+        ]
+      },
+      "vs_M4_nominal": {
+        "mean_delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "M4_risk": {
+      "loss": 23.33608544357995,
+      "peak": 340.7352916091719,
+      "rmse_cc": 0.18579054232057918,
+      "violations": 0.0,
+      "fallbacks": 0.1,
+      "coolant_kmol": 407.9172,
+      "control_ms": 37.13105550468043,
+      "n": 20,
+      "vs_UKF_nominal": {
+        "mean_delta": 1.5343706257952932,
+        "ci95": [
+          0.5014431717252682,
+          2.8607482742271246
+        ]
+      },
+      "vs_M4_nominal": {
+        "mean_delta": 1.8968793129436676,
+        "ci95": [
+          0.8914297511364627,
+          3.1082353168133383
+        ]
+      }
+    },
+    "M4_regret": {
+      "loss": 24.13181040814148,
+      "peak": 340.80234253661604,
+      "rmse_cc": 0.18512156512044287,
+      "violations": 0.0,
+      "fallbacks": 0.05,
+      "coolant_kmol": 412.47119999999995,
+      "control_ms": 38.104083331253946,
+      "n": 20,
+      "vs_UKF_nominal": {
+        "mean_delta": 2.3300955903568203,
+        "ci95": [
+          0.9837297360696639,
+          3.7253709755721927
+        ]
+      },
+      "vs_M4_nominal": {
+        "mean_delta": 2.6926042775051946,
+        "ci95": [
+          1.4326670811961604,
+          3.998216247834575
+        ]
+      }
+    }
+  },
+  "traces": [
+    {
+      "method": "M0",
+      "policy": "nominal",
+      "seed": 3000,
+      "history": [
+        {
+          "k": 0,
+          "x": [
+            0.3820010080810696,
+            33.26984031282343,
+            2.7277543731639446,
+            3.3858772873839116,
+            339.7548830710859,
+            314.9143500909075
+          ],
+          "estimate": [
+            0.3647038814928468,
+            33.779453065994836,
+            2.527682057381864,
+            3.6339112735152135,
+            339.5737679282405,
+            315.03856443383785
+          ],
+          "y": [
+            339.5469571894039,
+            314.88838618968
+          ],
+          "mw": 1200.0,
+          "cost": 0.5327072090929368,
+          "thermal_violation": 0,
+          "control_ms": 28.902113999720314,
+          "index": 55,
+          "fallback": 0,
+          "predicted_peak": 340.3034893843502
+        },
+        {
+          "k": 1,
+          "x": [
+            0.38219439093459884,
+            33.33007659902645,
+            2.708346824809267,
+            3.4092947531291795,
+            339.7336324509657,
+            313.44784334670265
+          ],
+          "estimate": [
+            0.37855832858351834,
+            33.77121292942122,
+            2.5377446115399818,
+            3.6341138938994315,
+            339.66474627172244,
+            313.4302976689281
+          ],
+          "y": [
+            339.88788176964135,
+            313.23377590723493
+          ],
+          "mw": 900.0,
+          "cost": 0.339096072851354,
+          "thermal_violation": 0,
+          "control_ms": 19.848181999805092,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 339.805814585589
+        },
+        {
+          "k": 2,
+          "x": [
+            0.38362171380229865,
+            33.366128962799785,
+            2.6886355369801818,
+            3.4305007795124154,
+            339.5905846756539,
+            310.78621556992886
+          ],
+          "estimate": [
+            0.3833341343281095,
+            33.77591812228154,
+            2.533023344000544,
+            3.634112101578682,
+            339.27678528163324,
+            310.9177023710396
+          ],
+          "y": [
+            339.28049085895447,
+            311.19183894578214
+          ],
+          "mw": 1200.0,
+          "cost": 0.2432216077777497,
+          "thermal_violation": 0,
+          "control_ms": 16.900270999940403,
+          "index": 54,
+          "fallback": 0,
+          "predicted_peak": 339.7327484455343
+        },
+        {
+          "k": 3,
+          "x": [
+            0.3856296167148704,
+            33.40509206665812,
+            2.671182607683759,
+            3.4497049085327833,
+            339.6731569797364,
+            310.1673765385009
+          ],
+          "estimate": [
+            0.3853735314293299,
+            33.77103561784264,
+            2.5402805138991416,
+            3.6343757982211646,
+            339.44207535682176,
+            310.2020975786888
+          ],
+          "y": [
+            339.8373619862193,
+            310.2775337588329
+          ],
+          "mw": 900.0,
+          "cost": 0.2460292352787237,
+          "thermal_violation": 0,
+          "control_ms": 18.44722300029389,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.02400799830394
+        },
+        {
+          "k": 4,
+          "x": [
+            0.3845977586071466,
+            33.45294574928274,
+            2.6576950041123966,
+            3.467097321658629,
+            339.2468039531421,
+            309.72286881444234
+          ],
+          "estimate": [
+            0.389866635963789,
+            33.77798620919185,
+            2.532197958853765,
+            3.6342501397620643,
+            339.0871511722819,
+            309.6716839842839
+          ],
+          "y": [
+            338.8915566925304,
+            310.2347602447374
+          ],
+          "mw": 900.0,
+          "cost": 0.07687708200038047,
+          "thermal_violation": 0,
+          "control_ms": 19.641102999685245,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.2760103627486
+        },
+        {
+          "k": 5,
+          "x": [
+            0.39139740966376974,
+            33.48452142857242,
+            2.6382370840684133,
+            3.4828483676838893,
+            338.777678452408,
+            309.3631425114607
+          ],
+          "estimate": [
+            0.3973372541462758,
+            33.78702806373431,
+            2.5222157455526175,
+            3.6341458090096874,
+            338.70650956383236,
+            309.16418330971044
+          ],
+          "y": [
+            338.5372202426333,
+            309.35909551837943
+          ],
+          "mw": 900.0,
+          "cost": 0.33324519594276425,
+          "thermal_violation": 0,
+          "control_ms": 17.385627000294335,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 339.9999704839069
+        },
+        {
+          "k": 6,
+          "x": [
+            0.39722103614414184,
+            33.52279177781739,
+            2.620541306719398,
+            3.4971104476299666,
+            339.18180396098967,
+            310.4377566929368
+          ],
+          "estimate": [
+            0.39772382199373507,
+            33.787841965046326,
+            2.5211777772289867,
+            3.634121012624447,
+            339.263801341069,
+            310.19276626280623
+          ],
+          "y": [
+            339.481279294682,
+            310.4629726979235
+          ],
+          "mw": 453.6,
+          "cost": 0.09032963144023952,
+          "thermal_violation": 0,
+          "control_ms": 17.248300000119343,
+          "index": 26,
+          "fallback": 0,
+          "predicted_peak": 340.1164089757433
+        },
+        {
+          "k": 7,
+          "x": [
+            0.3977388522402985,
+            33.5597462270307,
+            2.6096136842046564,
+            3.5100266686485675,
+            339.22653250749124,
+            309.77304341563723
+          ],
+          "estimate": [
+            0.39356749820935194,
+            33.78458305230032,
+            2.5242623989018402,
+            3.6341016382998106,
+            339.36837260611566,
+            309.6222012951243
+          ],
+          "y": [
+            339.56363753234797,
+            309.81057301099077
+          ],
+          "mw": 900.0,
+          "cost": 0.09254423145879216,
+          "thermal_violation": 0,
+          "control_ms": 17.14601899993795,
+          "index": 41,
+          "fallback": 0,
+          "predicted_peak": 340.0480845965981
+        },
+        {
+          "k": 8,
+          "x": [
+            0.39660814159338376,
+            33.58823877959896,
+            2.6017269012716957,
+            3.5217249955551106,
+            339.21081802071853,
+            309.3610856553232
+          ],
+          "estimate": [
+            0.3965654336539028,
+            33.788396204691864,
+            2.520240221927285,
+            3.634078552798075,
+            338.9024356812291,
+            309.1547382673812
+          ],
+          "y": [
+            338.4799227727498,
+            309.48702684463933
+          ],
+          "mw": 900.0,
+          "cost": 0.04182698649585388,
+          "thermal_violation": 0,
+          "control_ms": 21.62443799988978,
+          "index": 41,
+          "fallback": 0,
+          "predicted_peak": 340.032393809145
+        },
+        {
+          "k": 9,
+          "x": [
+            0.3960706940233945,
+            33.58784874852382,
+            2.5930123803029765,
+            3.532318509775845,
+            339.2022064207211,
+            308.750401148009
+          ],
+          "estimate": [
+            0.3990053427687995,
+            33.791855675463744,
+            2.5168647683594454,
+            3.6340876387045844,
+            338.87424545814474,
+            308.80085867748085
+          ],
+          "y": [
+            339.0328128105226,
+            309.31055655328726
+          ],
+          "mw": 900.0,
+          "cost": 0.03945760091611075,
+          "thermal_violation": 0,
+          "control_ms": 16.82175699988875,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 339.9860775721915
+        },
+        {
+          "k": 10,
+          "x": [
+            0.3960851727473881,
+            33.59648009496629,
+            2.5848910654114268,
+            3.541911514319056,
+            339.2173795006363,
+            308.50224965435336
+          ],
+          "estimate": [
+            0.3995294636581511,
+            33.79351137016473,
+            2.5154338983849054,
+            3.634112151503898,
+            338.96808333082976,
+            308.46861244687835
+          ],
+          "y": [
+            339.26156202482804,
+            308.576851195756
+          ],
+          "mw": 900.0,
+          "cost": 0.03339653058071999,
+          "thermal_violation": 0,
+          "control_ms": 19.425374000093143,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.0272945152749
+        },
+        {
+          "k": 11,
+          "x": [
+            0.3964188679276895,
+            33.61257520855364,
+            2.5780763577686447,
+            3.5505996796928145,
+            339.2028628153749,
+            308.2688213034094
+          ],
+          "estimate": [
+            0.39759049261242907,
+            33.79260452840916,
+            2.5165668205452776,
+            3.634136745444414,
+            339.1496655338678,
+            308.20884451572675
+          ],
+          "y": [
+            339.5063871961578,
+            308.27703274708557
+          ],
+          "mw": 900.0,
+          "cost": 0.03381441016985472,
+          "thermal_violation": 0,
+          "control_ms": 19.377031000203715,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.15410614159214
+        },
+        {
+          "k": 12,
+          "x": [
+            0.3966104966507294,
+            33.63148865945496,
+            2.5714492277645546,
+            3.5584677203550905,
+            338.98250338609006,
+            307.9349795891219
+          ],
+          "estimate": [
+            0.3999007866575946,
+            33.79545995673235,
+            2.513390623099508,
+            3.634101466216481,
+            338.85827427940603,
+            307.94067759354243
+          ],
+          "y": [
+            338.67577094977105,
+            307.6990849794877
+          ],
+          "mw": 900.0,
+          "cost": 0.12484723678955385,
+          "thermal_violation": 0,
+          "control_ms": 19.541080000180955,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.30687084063953
+        },
+        {
+          "k": 13,
+          "x": [
+            0.4003105029862235,
+            33.648248052170075,
+            2.5620906797774525,
+            3.565592439580841,
+            339.2271565192106,
+            307.679869565711
+          ],
+          "estimate": [
+            0.3985655497361625,
+            33.79493863342983,
+            2.5140988715330352,
+            3.6341215487022525,
+            339.0949784578509,
+            307.7836673039392
+          ],
+          "y": [
+            339.54221870224535,
+            307.86124553913436
+          ],
+          "mw": 900.0,
+          "cost": 0.02559469778119869,
+          "thermal_violation": 0,
+          "control_ms": 16.162978000011208,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.03580034601714
+        },
+        {
+          "k": 14,
+          "x": [
+            0.3972277949111919,
+            33.66786021392023,
+            2.5593059059034706,
+            3.572044761041142,
+            339.0600122793282,
+            307.435668565722
+          ],
+          "estimate": [
+            0.400703701751062,
+            33.797554353541955,
+            2.511249998917306,
+            3.6340959693391417,
+            338.85691884913115,
+            307.56248406239234
+          ],
+          "y": [
+            338.7553103852542,
+            307.03798145224147
+          ],
+          "mw": 900.0,
+          "cost": 0.07857517305661901,
+          "thermal_violation": 0,
+          "control_ms": 17.77759900005549,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.2730297893583
+        },
+        {
+          "k": 15,
+          "x": [
+            0.39899883161912286,
+            33.682191251651574,
+            2.552648772453153,
+            3.577887905168089,
+            339.1599696067146,
+            307.34120302484286
+          ],
+          "estimate": [
+            0.40239821125968467,
+            33.79976218663678,
+            2.508970291525036,
+            3.6340878545292075,
+            338.81946116218455,
+            307.42475260378814
+          ],
+          "y": [
+            338.96415471761225,
+            307.2199535409342
+          ],
+          "mw": 900.0,
+          "cost": 0.03901049713353959,
+          "thermal_violation": 0,
+          "control_ms": 21.91230700009328,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.0587987261094
+        },
+        {
+          "k": 16,
+          "x": [
+            0.39784804071008373,
+            33.68835221810342,
+            2.5489469113418313,
+            3.5831799713767003,
+            339.3312041760036,
+            307.2383268717881
+          ],
+          "estimate": [
+            0.40020065919084497,
+            33.798092557463946,
+            2.5106843458186052,
+            3.634092125282923,
+            339.09045802498565,
+            307.3305636004075
+          ],
+          "y": [
+            339.5683258220585,
+            307.1147995816874
+          ],
+          "mw": 900.0,
+          "cost": 0.018843889925001585,
+          "thermal_violation": 0,
+          "control_ms": 19.192638999811606,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.06619427082256
+        },
+        {
+          "k": 17,
+          "x": [
+            0.39460377714247086,
+            33.69306850248497,
+            2.5475388064699604,
+            3.5879727499737384,
+            339.32184260326244,
+            307.3363623228194
+          ],
+          "estimate": [
+            0.39540053728151536,
+            33.79373089246595,
+            2.5150282674456177,
+            3.634089763889802,
+            339.33288850037104,
+            307.3534633864769
+          ],
+          "y": [
+            339.6852554961774,
+            307.75897270601945
+          ],
+          "mw": 900.0,
+          "cost": 0.018313294890074727,
+          "thermal_violation": 0,
+          "control_ms": 16.9538680002006,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.3171321566808
+        },
+        {
+          "k": 18,
+          "x": [
+            0.3935299744375158,
+            33.685978483078536,
+            2.544649757692934,
+            3.59231278990871,
+            339.48168748368704,
+            307.10516435754755
+          ],
+          "estimate": [
+            0.3926474387209747,
+            33.791328713955146,
+            2.517331585052504,
+            3.634078819538617,
+            339.34822557097914,
+            307.3135025835693
+          ],
+          "y": [
+            339.4755363370727,
+            307.25956853619954
+          ],
+          "mw": 900.0,
+          "cost": 0.04957688561621136,
+          "thermal_violation": 0,
+          "control_ms": 17.951591999917582,
+          "index": 41,
+          "fallback": 0,
+          "predicted_peak": 340.0466656705708
+        },
+        {
+          "k": 19,
+          "x": [
+            0.3922754817905292,
+            33.686676598099446,
+            2.5429548552564167,
+            3.5962430487579837,
+            338.8225504465438,
+            306.17681211882376
+          ],
+          "estimate": [
+            0.39474197091853697,
+            33.79371646720459,
+            2.514811192281636,
+            3.6340644828762465,
+            338.9623655077994,
+            306.3117878391208
+          ],
+          "y": [
+            338.85931469903187,
+            306.53256000666596
+          ],
+          "mw": 1200.0,
+          "cost": 0.30309546120065606,
+          "thermal_violation": 0,
+          "control_ms": 16.811286000120162,
+          "index": 55,
+          "fallback": 0,
+          "predicted_peak": 339.7591218902939
+        },
+        {
+          "k": 20,
+          "x": [
+            0.4007649067752845,
+            33.7123846202538,
+            2.5313491108735207,
+            3.599801763671534,
+            338.3263870343995,
+            306.3583276943386
+          ],
+          "estimate": [
+            0.4061829415133934,
+            33.805344278132715,
+            2.5029279987955,
+            3.634037853668658,
+            338.21246253125884,
+            306.36155893546464
+          ],
+          "y": [
+            337.6224623082076,
+            305.96761686256605
+          ],
+          "mw": 900.0,
+          "cost": 0.9949252894653,
+          "thermal_violation": 0,
+          "control_ms": 17.926709999755985,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.0015947676122
+        },
+        {
+          "k": 21,
+          "x": [
+            0.40781146479106645,
+            33.731019206560866,
+            2.521331171373544,
+            3.603025437975612,
+            338.1876693461209,
+            307.6412297164114
+          ],
+          "estimate": [
+            0.4140466874994987,
+            33.81347712196129,
+            2.4947260458005314,
+            3.63403002015938,
+            338.3413141692003,
+            307.5976353295854
+          ],
+          "y": [
+            338.1210948551005,
+            307.6700855724286
+          ],
+          "mw": 453.6,
+          "cost": 1.2955671782376916,
+          "thermal_violation": 0,
+          "control_ms": 19.478136000088853,
+          "index": 26,
+          "fallback": 0,
+          "predicted_peak": 339.683739778854
+        },
+        {
+          "k": 22,
+          "x": [
+            0.41303933337629545,
+            33.751080261527235,
+            2.513963821149982,
+            3.6059444551872284,
+            338.3760839013871,
+            308.59719948755617
+          ],
+          "estimate": [
+            0.41403029046342044,
+            33.81371408322095,
+            2.4944434868060408,
+            3.6340245808521034,
+            338.70783422348563,
+            308.697545630309
+          ],
+          "y": [
+            338.6016161303986,
+            308.61166002247376
+          ],
+          "mw": 453.6,
+          "cost": 0.8626741204548442,
+          "thermal_violation": 0,
+          "control_ms": 16.965971999979956,
+          "index": 26,
+          "fallback": 0,
+          "predicted_peak": 340.11698389656453
+        },
+        {
+          "k": 23,
+          "x": [
+            0.41612490480142034,
+            33.750034875853004,
+            2.5090433745525442,
+            3.608587662858376,
+            338.39279911763714,
+            308.2594402872408
+          ],
+          "estimate": [
+            0.41583664501159445,
+            33.815780999108135,
+            2.492371186432776,
+            3.6340231163910586,
+            338.29876003079266,
+            308.333008712979
+          ],
+          "y": [
+            337.8558001284566,
+            308.4063178795659
+          ],
+          "mw": 900.0,
+          "cost": 0.8999654107759274,
+          "thermal_violation": 0,
+          "control_ms": 17.28487700029291,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.2893623329461
+        },
+        {
+          "k": 24,
+          "x": [
+            0.4126452188625315,
+            33.760334888952116,
+            2.510402044711617,
+            3.6109816331110003,
+            338.71490619931717,
+            309.3219419004117
+          ],
+          "estimate": [
+            0.4108606999016878,
+            33.810944081161516,
+            2.4970854975361947,
+            3.6340108063938223,
+            339.05069477766557,
+            309.39609707346705
+          ],
+          "y": [
+            339.344485426698,
+            309.4367274536868
+          ],
+          "mw": 453.6,
+          "cost": 0.39900281211344923,
+          "thermal_violation": 0,
+          "control_ms": 24.864309999884426,
+          "index": 26,
+          "fallback": 0,
+          "predicted_peak": 340.11271363812983
+        },
+        {
+          "k": 25,
+          "x": [
+            0.4101194733220253,
+            33.77151583498713,
+            2.5105154508989997,
+            3.6131500948102406,
+            338.78163830153653,
+            308.81769902004
+          ],
+          "estimate": [
+            0.40681805128187354,
+            33.80709793968493,
+            2.5009054931738275,
+            3.634007354301093,
+            338.90699772881726,
+            308.84225271228155
+          ],
+          "y": [
+            338.73578021954523,
+            308.2883915101305
+          ],
+          "mw": 900.0,
+          "cost": 0.34258807096211286,
+          "thermal_violation": 0,
+          "control_ms": 18.33889099998487,
+          "index": 41,
+          "fallback": 0,
+          "predicted_peak": 340.1781289946637
+        },
+        {
+          "k": 26,
+          "x": [
+            0.4086228983891278,
+            33.77288746272645,
+            2.5105914245388874,
+            3.615113662625604,
+            338.83815706730496,
+            308.47243575322204
+          ],
+          "estimate": [
+            0.40582838098575785,
+            33.80626734509842,
+            2.5016905461696224,
+            3.63400227016778,
+            338.80188535331314,
+            308.44619909390804
+          ],
+          "y": [
+            338.75858368154445,
+            308.25021083140336
+          ],
+          "mw": 900.0,
+          "cost": 0.23757293548294434,
+          "thermal_violation": 0,
+          "control_ms": 16.1713239999699,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.3039640595188
+        },
+        {
+          "k": 27,
+          "x": [
+            0.40708132744685543,
+            33.76453663135526,
+            2.5109819451087,
+            3.616890947919914,
+            338.9251614857235,
+            308.0597450340167
+          ],
+          "estimate": [
+            0.4041251646205524,
+            33.80470083069445,
+            2.5032132775398326,
+            3.6339973704535495,
+            338.9003141912442,
+            308.16509289092136
+          ],
+          "y": [
+            339.1198154753225,
+            308.17949489932226
+          ],
+          "mw": 900.0,
+          "cost": 0.16408129666943794,
+          "thermal_violation": 0,
+          "control_ms": 18.83767200024522,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.1503718650479
+        },
+        {
+          "k": 28,
+          "x": [
+            0.4048073846467538,
+            33.75560449205342,
+            2.512322734026248,
+            3.6185010494064507,
+            338.5566270426471,
+            307.7760947702018
+          ],
+          "estimate": [
+            0.4043993661482404,
+            33.80510205255816,
+            2.5027702362035424,
+            3.633992820612001,
+            338.77685765517356,
+            307.95890230366473
+          ],
+          "y": [
+            338.72961533293073,
+            308.1738534661707
+          ],
+          "mw": 900.0,
+          "cost": 0.5784547515593642,
+          "thermal_violation": 0,
+          "control_ms": 18.88396100002865,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.21448342126774
+        },
+        {
+          "k": 29,
+          "x": [
+            0.40988352593266714,
+            33.7646022318375,
+            2.5058297675779295,
+            3.6199596285732136,
+            338.60344082370875,
+            307.65926378973086
+          ],
+          "estimate": [
+            0.40217442430384887,
+            33.802995973878666,
+            2.5048549046159647,
+            3.6339898857290134,
+            339.0210581558969,
+            307.74512184922565
+          ],
+          "y": [
+            339.45405585727883,
+            307.47056186246584
+          ],
+          "mw": 900.0,
+          "cost": 0.5122958351931919,
+          "thermal_violation": 0,
+          "control_ms": 27.52230799978861,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.0769853572589
+        },
+        {
+          "k": 30,
+          "x": [
+            0.4113231717146738,
+            33.774447888139804,
+            2.5035442056051296,
+            3.6212804285372977,
+            338.42421447806487,
+            307.42908176437777
+          ],
+          "estimate": [
+            0.4055099093782275,
+            33.80643435191937,
+            2.501370120020299,
+            3.633985336127683,
+            338.5901741257132,
+            307.58380013209523
+          ],
+          "y": [
+            338.2034142186424,
+            307.5985278554191
+          ],
+          "mw": 900.0,
+          "cost": 0.7959873851653652,
+          "thermal_violation": 0,
+          "control_ms": 20.286559000396664,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.2963708795273
+        },
+        {
+          "k": 31,
+          "x": [
+            0.41070474915273925,
+            33.78191011608821,
+            2.5037643853179934,
+            3.622475650035769,
+            338.9065288027505,
+            308.77384946422103
+          ],
+          "estimate": [
+            0.40435941008968057,
+            33.80537572819638,
+            2.5023974170073893,
+            3.633981976824336,
+            339.0767729002205,
+            308.7863902897291
+          ],
+          "y": [
+            339.1180529740181,
+            309.20685287313745
+          ],
+          "mw": 453.6,
+          "cost": 0.21186776691833806,
+          "thermal_violation": 0,
+          "control_ms": 17.4204289996851,
+          "index": 26,
+          "fallback": 0,
+          "predicted_peak": 340.20145747717606
+        }
+      ]
+    },
+    {
+      "method": "M1",
+      "policy": "nominal",
+      "seed": 3000,
+      "history": [
+        {
+          "k": 0,
+          "x": [
+            0.3820010080810696,
+            33.26984031282343,
+            2.7277543731639446,
+            3.3858772873839116,
+            339.7548830710859,
+            314.9143500909075
+          ],
+          "estimate": [
+            0.36404612541627596,
+            34.06468058199996,
+            2.4068588231955674,
+            3.636601323782393,
+            339.617735928968,
+            315.0428292499022
+          ],
+          "y": [
+            339.5469571894039,
+            314.88838618968
+          ],
+          "mw": 1200.0,
+          "cost": 0.5327072090929368,
+          "thermal_violation": 0,
+          "control_ms": 17.547265000303014,
+          "index": 55,
+          "fallback": 0,
+          "predicted_peak": 340.3034893843502
+        },
+        {
+          "k": 1,
+          "x": [
+            0.38219439093459884,
+            33.33007659902645,
+            2.708346824809267,
+            3.4092947531291795,
+            339.7336324509657,
+            313.44784334670265
+          ],
+          "estimate": [
+            0.37695859193428766,
+            34.07602431273156,
+            2.400478564223585,
+            3.628911148952478,
+            339.6298633272914,
+            313.4112587935931
+          ],
+          "y": [
+            339.88788176964135,
+            313.23377590723493
+          ],
+          "mw": 900.0,
+          "cost": 0.339096072851354,
+          "thermal_violation": 0,
+          "control_ms": 24.514565000117727,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 339.8369994278271
+        },
+        {
+          "k": 2,
+          "x": [
+            0.3822735319494696,
+            33.364780780946965,
+            2.68998371883301,
+            3.4305007795124154,
+            339.77130692194737,
+            312.12716669908514
+          ],
+          "estimate": [
+            0.38154069498286436,
+            34.02248826991963,
+            2.4135948211558778,
+            3.628213722994337,
+            339.44161486635113,
+            312.2502687382045
+          ],
+          "y": [
+            339.46121310524796,
+            312.5327900749384
+          ],
+          "mw": 900.0,
+          "cost": 0.32723749612048014,
+          "thermal_violation": 0,
+          "control_ms": 39.76210499968147,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.23923349342454
+        },
+        {
+          "k": 3,
+          "x": [
+            0.38223612248547784,
+            33.40169857242874,
+            2.67457610191315,
+            3.4497049085327833,
+            339.88444516216146,
+            311.255712441621
+          ],
+          "estimate": [
+            0.38242332424301845,
+            33.98891077625854,
+            2.4251763390542367,
+            3.6177434912074538,
+            339.65005484993367,
+            311.2779481148658
+          ],
+          "y": [
+            340.0486501686444,
+            311.36586966195296
+          ],
+          "mw": 900.0,
+          "cost": 0.42828549653742115,
+          "thermal_violation": 0,
+          "control_ms": 20.4126010003165,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.16141323834205
+        },
+        {
+          "k": 4,
+          "x": [
+            0.38134226610429706,
+            33.44969025677989,
+            2.660950496615244,
+            3.467097321658629,
+            339.2861041894516,
+            309.3947006019128
+          ],
+          "estimate": [
+            0.3864548773067858,
+            33.94276814152447,
+            2.4417344022658884,
+            3.6141398152237834,
+            339.12841164161284,
+            309.3511730848459
+          ],
+          "y": [
+            338.9308569288399,
+            309.90659203220787
+          ],
+          "mw": 1200.0,
+          "cost": 0.13111890762073602,
+          "thermal_violation": 0,
+          "control_ms": 18.081623999933072,
+          "index": 55,
+          "fallback": 0,
+          "predicted_peak": 339.79987133539646
+        },
+        {
+          "k": 5,
+          "x": [
+            0.38957045543987096,
+            33.48269447434852,
+            2.640064038292311,
+            3.4828483676838893,
+            338.7816755347421,
+            309.10172223946336
+          ],
+          "estimate": [
+            0.3953764272154019,
+            33.943803975887725,
+            2.440164698986295,
+            3.6050006435008566,
+            338.7205213347775,
+            308.90196384862736
+          ],
+          "y": [
+            338.54121732496736,
+            309.0976752463821
+          ],
+          "mw": 900.0,
+          "cost": 0.3527375204693712,
+          "thermal_violation": 0,
+          "control_ms": 18.7742809998781,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 339.94557354106087
+        },
+        {
+          "k": 6,
+          "x": [
+            0.3964702520399774,
+            33.522040993713226,
+            2.621292090823561,
+            3.4971104476299666,
+            339.1613436402112,
+            310.20343085981267
+          ],
+          "estimate": [
+            0.3965862205890969,
+            33.89617602033299,
+            2.4569499504871293,
+            3.6095632450647837,
+            339.28268055528036,
+            309.957074586633
+          ],
+          "y": [
+            339.46081897390354,
+            310.2286468647994
+          ],
+          "mw": 453.6,
+          "cost": 0.09621716006516848,
+          "thermal_violation": 0,
+          "control_ms": 17.08096199990905,
+          "index": 26,
+          "fallback": 0,
+          "predicted_peak": 340.0826158607551
+        },
+        {
+          "k": 7,
+          "x": [
+            0.3977972811385986,
+            33.559804655929014,
+            2.6095552553063555,
+            3.5100266686485675,
+            339.18966455136257,
+            309.5832273834443
+          ],
+          "estimate": [
+            0.39289119221834456,
+            33.89571005386764,
+            2.461471886529739,
+            3.6080074750037294,
+            339.3642335450118,
+            309.4310408141305
+          ],
+          "y": [
+            339.5267695762193,
+            309.62075697879783
+          ],
+          "mw": 900.0,
+          "cost": 0.09954516868229829,
+          "thermal_violation": 0,
+          "control_ms": 26.666720999855897,
+          "index": 41,
+          "fallback": 0,
+          "predicted_peak": 340.0376248902396
+        },
+        {
+          "k": 8,
+          "x": [
+            0.3985786401410676,
+            33.59020927814665,
+            2.599756402724011,
+            3.5217249955551106,
+            338.9855465617348,
+            308.0852680508563
+          ],
+          "estimate": [
+            0.3972363391390709,
+            33.87401762964935,
+            2.4722663901714736,
+            3.605259950573422,
+            338.73079505485543,
+            307.88728862468065
+          ],
+          "y": [
+            338.25465131376603,
+            308.2112092401724
+          ],
+          "mw": 1200.0,
+          "cost": 0.18739027860100688,
+          "thermal_violation": 0,
+          "control_ms": 17.53026000005775,
+          "index": 55,
+          "fallback": 0,
+          "predicted_peak": 339.78526409854857
+        },
+        {
+          "k": 9,
+          "x": [
+            0.39599658418037825,
+            33.58777463868082,
+            2.593086490145992,
+            3.532318509775845,
+            339.53536817654555,
+            309.0316497527766
+          ],
+          "estimate": [
+            0.3975387512660349,
+            33.91216194643306,
+            2.4578245413165174,
+            3.6035724989486213,
+            339.2335681986265,
+            309.0997154564647
+          ],
+          "y": [
+            339.36597456634706,
+            309.59180515805485
+          ],
+          "mw": 453.6,
+          "cost": 0.2028445325049214,
+          "thermal_violation": 0,
+          "control_ms": 17.808656999932282,
+          "index": 26,
+          "fallback": 0,
+          "predicted_peak": 340.1520553233
+        },
+        {
+          "k": 10,
+          "x": [
+            0.3905778761719508,
+            33.59097279839087,
+            2.5903983619868636,
+            3.541911514319056,
+            339.6444993311822,
+            308.7553169808082
+          ],
+          "estimate": [
+            0.3931985776162948,
+            33.95003710489717,
+            2.446078727594275,
+            3.6092258157190216,
+            339.4212598992948,
+            308.7266454104753
+          ],
+          "y": [
+            339.68868185537394,
+            308.8299185222108
+          ],
+          "mw": 900.0,
+          "cost": 0.19359706193966514,
+          "thermal_violation": 0,
+          "control_ms": 17.065454000203317,
+          "index": 41,
+          "fallback": 0,
+          "predicted_peak": 340.0238679548618
+        },
+        {
+          "k": 11,
+          "x": [
+            0.3874474219601509,
+            33.60360376258612,
+            2.5870478037361817,
+            3.5505996796928145,
+            339.6718274243635,
+            308.50403903210537
+          ],
+          "estimate": [
+            0.38847250346566886,
+            33.93343064403885,
+            2.4555219835034605,
+            3.6134988811809774,
+            339.57699437779866,
+            308.4209482410488
+          ],
+          "y": [
+            339.97535180514643,
+            308.5122504757815
+          ],
+          "mw": 900.0,
+          "cost": 0.1624575947363071,
+          "thermal_violation": 0,
+          "control_ms": 17.438851999941107,
+          "index": 41,
+          "fallback": 0,
+          "predicted_peak": 340.0610629342152
+        },
+        {
+          "k": 12,
+          "x": [
+            0.3857336496689072,
+            33.62061181247315,
+            2.5823260747463754,
+            3.5584677203550905,
+            339.4547698487453,
+            308.15739181969906
+          ],
+          "estimate": [
+            0.3887351374798555,
+            33.911673344897096,
+            2.464154590669141,
+            3.617586306346728,
+            339.33054345895204,
+            308.1535728201809
+          ],
+          "y": [
+            339.1480374124263,
+            307.92149721006484
+          ],
+          "mw": 900.0,
+          "cost": 0.04796076434486138,
+          "thermal_violation": 0,
+          "control_ms": 19.085502000052657,
+          "index": 41,
+          "fallback": 0,
+          "predicted_peak": 340.06808083265724
+        },
+        {
+          "k": 13,
+          "x": [
+            0.38868755884001005,
+            33.63662510802387,
+            2.5737136239236658,
+            3.565592439580841,
+            339.6765060378965,
+            307.89120606182195
+          ],
+          "estimate": [
+            0.3873891807946789,
+            33.87331010766785,
+            2.487068564906921,
+            3.6160821054205203,
+            339.5070593634354,
+            307.9743961519078
+          ],
+          "y": [
+            339.99156822093124,
+            308.0725820352453
+          ],
+          "mw": 900.0,
+          "cost": 0.16155727454097008,
+          "thermal_violation": 0,
+          "control_ms": 29.465157000231557,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.24976564621824
+        },
+        {
+          "k": 14,
+          "x": [
+            0.3870484848253028,
+            33.65768090383435,
+            2.569485215989359,
+            3.572044761041142,
+            339.28937520893146,
+            306.61228965614805
+          ],
+          "estimate": [
+            0.3904228771417544,
+            33.890531614271026,
+            2.4790338717438445,
+            3.6174881910173666,
+            339.09347337912646,
+            306.7208922189455
+          ],
+          "y": [
+            338.98467331485745,
+            306.21460254266754
+          ],
+          "mw": 1200.0,
+          "cost": 0.07555692759690273,
+          "thermal_violation": 0,
+          "control_ms": 24.415728999883868,
+          "index": 55,
+          "fallback": 0,
+          "predicted_peak": 339.78474455277546
+        },
+        {
+          "k": 15,
+          "x": [
+            0.391535368059639,
+            33.674727788092106,
+            2.560112236012637,
+            3.577887905168089,
+            339.3094890005385,
+            306.6950933714355
+          ],
+          "estimate": [
+            0.3950919651670694,
+            33.884297917617644,
+            2.479711445139823,
+            3.618070138410575,
+            338.94686891021786,
+            306.7787692556042
+          ],
+          "y": [
+            339.1136741114362,
+            306.5738438875269
+          ],
+          "mw": 900.0,
+          "cost": 0.041683131963487094,
+          "thermal_violation": 0,
+          "control_ms": 30.47264700035157,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.0248656721048
+        },
+        {
+          "k": 16,
+          "x": [
+            0.3926802739503618,
+            33.68318445134371,
+            2.554114678101552,
+            3.5831799713767003,
+            339.4169368857524,
+            306.72908157769405
+          ],
+          "estimate": [
+            0.3958602079451772,
+            33.851148150765816,
+            2.4912703133713925,
+            3.618150615777524,
+            339.1533165981561,
+            306.8382554640582
+          ],
+          "y": [
+            339.6540585318073,
+            306.60555428759335
+          ],
+          "mw": 900.0,
+          "cost": 0.031446574080657784,
+          "thermal_violation": 0,
+          "control_ms": 31.64751399981469,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 339.99417287705324
+        },
+        {
+          "k": 17,
+          "x": [
+            0.3913365836014445,
+            33.689801308943956,
+            2.5508060000109856,
+            3.5879727499737384,
+            339.3578583946127,
+            306.9326935314705
+          ],
+          "estimate": [
+            0.393060345958479,
+            33.8330703138348,
+            2.498347991749351,
+            3.6171478010774814,
+            339.3482397330174,
+            306.96127678763906
+          ],
+          "y": [
+            339.72127128752766,
+            307.3553039146705
+          ],
+          "mw": 900.0,
+          "cost": 0.021187203386364976,
+          "thermal_violation": 0,
+          "control_ms": 28.02574299994376,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.2594664247889
+        },
+        {
+          "k": 18,
+          "x": [
+            0.393096833707511,
+            33.68554534234854,
+            2.5450828984229377,
+            3.59231278990871,
+            339.3023903126429,
+            305.813790770448
+          ],
+          "estimate": [
+            0.39296565812811796,
+            33.83545009632978,
+            2.497548514352239,
+            3.6174129803208914,
+            339.17074542604996,
+            306.02061275723156
+          ],
+          "y": [
+            339.29623916602856,
+            305.9681949491
+          ],
+          "mw": 1200.0,
+          "cost": 0.07187260630514604,
+          "thermal_violation": 0,
+          "control_ms": 21.157743999992817,
+          "index": 55,
+          "fallback": 0,
+          "predicted_peak": 339.7716988459436
+        },
+        {
+          "k": 19,
+          "x": [
+            0.39369448079733205,
+            33.68809559710623,
+            2.5415358562496118,
+            3.5962430487579837,
+            338.7662288503425,
+            306.106107052471
+          ],
+          "estimate": [
+            0.39636629011114105,
+            33.830323723349196,
+            2.4972388705578434,
+            3.620043311371793,
+            338.9004899296505,
+            306.2523369401276
+          ],
+          "y": [
+            338.80299310283056,
+            306.4618549403132
+          ],
+          "mw": 900.0,
+          "cost": 0.3286020698507126,
+          "thermal_violation": 0,
+          "control_ms": 17.649559999881603,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.1923889548574
+        },
+        {
+          "k": 20,
+          "x": [
+            0.4022049165648715,
+            33.71382463004337,
+            2.529909101083932,
+            3.599801763671534,
+            338.2742797725012,
+            306.2977982279273
+          ],
+          "estimate": [
+            0.407782954091441,
+            33.88452238186129,
+            2.473897347821988,
+            3.621648944653918,
+            338.164949505593,
+            306.3195448215307
+          ],
+          "y": [
+            337.5703550463093,
+            305.90708739615474
+          ],
+          "mw": 900.0,
+          "cost": 1.0773478253624198,
+          "thermal_violation": 0,
+          "control_ms": 25.838515000032203,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 339.97818825579867
+        },
+        {
+          "k": 21,
+          "x": [
+            0.40921470687393746,
+            33.73242244864371,
+            2.5199279292906716,
+            3.603025437975612,
+            338.14014222345793,
+            307.5840016167591
+          ],
+          "estimate": [
+            0.41602485800122546,
+            33.88317899356834,
+            2.468118260466952,
+            3.6240091352427832,
+            338.2875946813414,
+            307.55780332323815
+          ],
+          "y": [
+            338.07356773243754,
+            307.61285747277634
+          ],
+          "mw": 453.6,
+          "cost": 1.4041004395451357,
+          "thermal_violation": 0,
+          "control_ms": 20.86739900005341,
+          "index": 26,
+          "fallback": 0,
+          "predicted_peak": 339.66591182578384
+        },
+        {
+          "k": 22,
+          "x": [
+            0.41436582493069174,
+            33.7524067530816,
+            2.5126373295955844,
+            3.6059444551872284,
+            338.33365019562024,
+            308.54322624503686
+          ],
+          "estimate": [
+            0.4161726135196874,
+            33.8815190701684,
+            2.4678602802691385,
+            3.6248447137606026,
+            338.67763075837786,
+            308.65900878773954
+          ],
+          "y": [
+            338.55918242463173,
+            308.55768677995445
+          ],
+          "mw": 453.6,
+          "cost": 0.9434584786742926,
+          "thermal_violation": 0,
+          "control_ms": 19.624633999683283,
+          "index": 26,
+          "fallback": 0,
+          "predicted_peak": 340.1029161914314
+        },
+        {
+          "k": 23,
+          "x": [
+            0.4173404425865198,
+            33.75125041363806,
+            2.5078278367674427,
+            3.608587662858376,
+            338.3562284315752,
+            308.21337805425406
+          ],
+          "estimate": [
+            0.4168709977465734,
+            33.878751314945134,
+            2.4655274396986324,
+            3.6254804619201924,
+            338.3259357879947,
+            308.3152227468605
+          ],
+          "y": [
+            337.81922944239466,
+            308.36025564657916
+          ],
+          "mw": 900.0,
+          "cost": 0.9682133167506323,
+          "thermal_violation": 0,
+          "control_ms": 20.546037999793043,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.3192031275774
+        },
+        {
+          "k": 24,
+          "x": [
+            0.41372302034201014,
+            33.76141269043156,
+            2.5093242432321365,
+            3.6109816331110003,
+            338.68399230082827,
+            309.2786544287157
+          ],
+          "estimate": [
+            0.4114219461700966,
+            33.864615311895115,
+            2.4758013613901304,
+            3.625506073794282,
+            339.08946217089357,
+            309.3752692847946
+          ],
+          "y": [
+            339.3135715282091,
+            309.3934399819908
+          ],
+          "mw": 453.6,
+          "cost": 0.436604181806414,
+          "thermal_violation": 0,
+          "control_ms": 23.148933999891597,
+          "index": 30,
+          "fallback": 0,
+          "predicted_peak": 340.1230025427009
+        },
+        {
+          "k": 25,
+          "x": [
+            0.4110421158968368,
+            33.7724384775619,
+            2.5095928083241863,
+            3.6131500948102406,
+            338.75667083359576,
+            308.7810291098215
+          ],
+          "estimate": [
+            0.4070114049558555,
+            33.85506107212045,
+            2.4812006361304357,
+            3.626087579500871,
+            338.88657024865546,
+            308.80785283158775
+          ],
+          "y": [
+            338.71081275160446,
+            308.251721599912
+          ],
+          "mw": 900.0,
+          "cost": 0.3694868400739962,
+          "thermal_violation": 0,
+          "control_ms": 18.129724000118586,
+          "index": 41,
+          "fallback": 0,
+          "predicted_peak": 340.2158512095843
+        },
+        {
+          "k": 26,
+          "x": [
+            0.409385084806211,
+            33.77364964914347,
+            2.5098292381218026,
+            3.615113662625604,
+            338.8187844961104,
+            308.4414820173039
+          ],
+          "estimate": [
+            0.4063181072354049,
+            33.851663583963855,
+            2.4829929262438233,
+            3.627211813999288,
+            338.78714810714644,
+            308.41591956923156
+          ],
+          "y": [
+            338.7392111103499,
+            308.2192570954852
+          ],
+          "mw": 900.0,
+          "cost": 0.25615573818546494,
+          "thermal_violation": 0,
+          "control_ms": 16.90810199988846,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.2862255875369
+        },
+        {
+          "k": 27,
+          "x": [
+            0.4076885806088012,
+            33.765143884517165,
+            2.510374691946751,
+            3.616890947919914,
+            338.9108140398814,
+            308.03375137054763
+          ],
+          "estimate": [
+            0.40463944453058487,
+            33.85070737584031,
+            2.485291566718087,
+            3.627494046348177,
+            338.90289868461304,
+            308.13635666009407
+          ],
+          "y": [
+            339.10546802948045,
+            308.1535012358532
+          ],
+          "mw": 900.0,
+          "cost": 0.17528287853261476,
+          "thermal_violation": 0,
+          "control_ms": 17.156322000118962,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.14809512384693
+        },
+        {
+          "k": 28,
+          "x": [
+            0.40527149384872263,
+            33.75606860125534,
+            2.511858624824277,
+            3.6185010494064507,
+            338.5466413434887,
+            307.754410675847
+          ],
+          "estimate": [
+            0.404828036304789,
+            33.84659483672478,
+            2.4863911210428196,
+            3.627518448269918,
+            338.76928006312926,
+            307.93662892457496
+          ],
+          "y": [
+            338.71962963377234,
+            308.15216937181594
+          ],
+          "mw": 900.0,
+          "cost": 0.5935718418364018,
+          "thermal_violation": 0,
+          "control_ms": 18.40147299981254,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.23327288285367
+        },
+        {
+          "k": 29,
+          "x": [
+            0.41022554976724734,
+            33.764944255672056,
+            2.5054877437433474,
+            3.6199596285732136,
+            338.5969780796522,
+            307.64131401078475
+          ],
+          "estimate": [
+            0.4026312261199012,
+            33.84812308689337,
+            2.4886405681520363,
+            3.629578461832622,
+            338.98482861550093,
+            307.72763074804067
+          ],
+          "y": [
+            339.4475931132223,
+            307.45261208351974
+          ],
+          "mw": 900.0,
+          "cost": 0.5214784638845479,
+          "thermal_violation": 0,
+          "control_ms": 16.44898499989722,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.08125175335454
+        },
+        {
+          "k": 30,
+          "x": [
+            0.41156085094639844,
+            33.77468556737154,
+            2.503306526373403,
+            3.6212804285372977,
+            338.420593463001,
+            307.4143500989487
+          ],
+          "estimate": [
+            0.40603020969251413,
+            33.83915885671616,
+            2.4893635222103936,
+            3.6291445245973137,
+            338.5681457349653,
+            307.5627460249914
+          ],
+          "y": [
+            338.19979320357857,
+            307.58379618999004
+          ],
+          "mw": 900.0,
+          "cost": 0.8024366841720155,
+          "thermal_violation": 0,
+          "control_ms": 24.082760000055714,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.2680373066563
+        },
+        {
+          "k": 31,
+          "x": [
+            0.4108555749869555,
+            33.78206094192245,
+            2.503613559483775,
+            3.622475650035769,
+            338.9051071953375,
+            308.760523580586
+          ],
+          "estimate": [
+            0.4048339113140212,
+            33.83705116895991,
+            2.4902837034652854,
+            3.6293032643299403,
+            339.0463719044403,
+            308.7664448260596
+          ],
+          "y": [
+            339.11663136660513,
+            309.1935269895024
+          ],
+          "mw": 453.6,
+          "cost": 0.21304155204300587,
+          "thermal_violation": 0,
+          "control_ms": 22.008963999724074,
+          "index": 26,
+          "fallback": 0,
+          "predicted_peak": 340.1868243959953
+        }
+      ]
+    },
+    {
+      "method": "M4",
+      "policy": "nominal",
+      "seed": 3000,
+      "history": [
+        {
+          "k": 0,
+          "x": [
+            0.3820010080810696,
+            33.26984031282343,
+            2.7277543731639446,
+            3.3858772873839116,
+            339.7548830710859,
+            314.9143500909075
+          ],
+          "estimate": [
+            0.36799519909416806,
+            34.007677235457614,
+            2.465622598008244,
+            3.6099916963067784,
+            339.5550129162994,
+            315.0493629151602
+          ],
+          "y": [
+            339.5469571894039,
+            314.88838618968
+          ],
+          "mw": 1200.0,
+          "cost": 0.5327072090929368,
+          "thermal_violation": 0,
+          "control_ms": 19.683057999827724,
+          "index": 55,
+          "fallback": 0,
+          "predicted_peak": 340.3034893843502
+        },
+        {
+          "k": 1,
+          "x": [
+            0.38219439093459884,
+            33.33007659902645,
+            2.708346824809267,
+            3.4092947531291795,
+            339.7336324509657,
+            313.44784334670265
+          ],
+          "estimate": [
+            0.3814286607369285,
+            33.79419274721732,
+            2.4707242196101986,
+            3.59381809230082,
+            339.668849239656,
+            313.4718554884839
+          ],
+          "y": [
+            339.88788176964135,
+            313.23377590723493
+          ],
+          "mw": 900.0,
+          "cost": 0.339096072851354,
+          "thermal_violation": 0,
+          "control_ms": 19.483781999952043,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 339.8838192878918
+        },
+        {
+          "k": 2,
+          "x": [
+            0.38362171380229865,
+            33.366128962799785,
+            2.6886355369801818,
+            3.4305007795124154,
+            339.5905846756539,
+            310.78621556992886
+          ],
+          "estimate": [
+            0.38432186415132663,
+            33.822463632599394,
+            2.4194417872416487,
+            3.6108675146085067,
+            339.32253523334487,
+            310.94947231506245
+          ],
+          "y": [
+            339.28049085895447,
+            311.19183894578214
+          ],
+          "mw": 1200.0,
+          "cost": 0.2432216077777497,
+          "thermal_violation": 0,
+          "control_ms": 20.653042000049027,
+          "index": 55,
+          "fallback": 0,
+          "predicted_peak": 339.7907533592248
+        },
+        {
+          "k": 3,
+          "x": [
+            0.3856296167148704,
+            33.40509206665812,
+            2.671182607683759,
+            3.4497049085327833,
+            339.6731569797364,
+            310.1673765385009
+          ],
+          "estimate": [
+            0.3839028094049747,
+            33.72309608787588,
+            2.4328134929371252,
+            3.6014010013444815,
+            339.4893984042744,
+            310.2337287724112
+          ],
+          "y": [
+            339.8373619862193,
+            310.2775337588329
+          ],
+          "mw": 900.0,
+          "cost": 0.2460292352787237,
+          "thermal_violation": 0,
+          "control_ms": 28.98376899975119,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.109644545312
+        },
+        {
+          "k": 4,
+          "x": [
+            0.3845977586071466,
+            33.45294574928274,
+            2.6576950041123966,
+            3.467097321658629,
+            339.2468039531421,
+            309.72286881444234
+          ],
+          "estimate": [
+            0.38821287511518215,
+            33.70566253569509,
+            2.4350307755365486,
+            3.607620313617902,
+            339.1551080020935,
+            309.6775031125638
+          ],
+          "y": [
+            338.8915566925304,
+            310.2347602447374
+          ],
+          "mw": 900.0,
+          "cost": 0.07687708200038047,
+          "thermal_violation": 0,
+          "control_ms": 19.669683999836707,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.28982102767577
+        },
+        {
+          "k": 5,
+          "x": [
+            0.39139740966376974,
+            33.48452142857242,
+            2.6382370840684133,
+            3.4828483676838893,
+            338.777678452408,
+            309.3631425114607
+          ],
+          "estimate": [
+            0.39570219999678735,
+            33.668619739796334,
+            2.4181857048896607,
+            3.6445556973254005,
+            338.7645379740043,
+            309.17419638380693
+          ],
+          "y": [
+            338.5372202426333,
+            309.35909551837943
+          ],
+          "mw": 900.0,
+          "cost": 0.33324519594276425,
+          "thermal_violation": 0,
+          "control_ms": 21.0692549999294,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.0336018095507
+        },
+        {
+          "k": 6,
+          "x": [
+            0.39722103614414184,
+            33.52279177781739,
+            2.620541306719398,
+            3.4971104476299666,
+            339.18180396098967,
+            310.4377566929368
+          ],
+          "estimate": [
+            0.3969330749425939,
+            33.67349630739828,
+            2.433915037417932,
+            3.6365468355772137,
+            339.29072108158186,
+            310.1844133654301
+          ],
+          "y": [
+            339.481279294682,
+            310.4629726979235
+          ],
+          "mw": 453.6,
+          "cost": 0.09032963144023952,
+          "thermal_violation": 0,
+          "control_ms": 19.46811900006651,
+          "index": 26,
+          "fallback": 0,
+          "predicted_peak": 340.1676442682765
+        },
+        {
+          "k": 7,
+          "x": [
+            0.3977388522402985,
+            33.5597462270307,
+            2.6096136842046564,
+            3.5100266686485675,
+            339.22653250749124,
+            309.77304341563723
+          ],
+          "estimate": [
+            0.3931198052278253,
+            33.652418996695275,
+            2.446526032625442,
+            3.6439818028803397,
+            339.38495469706777,
+            309.6269012960289
+          ],
+          "y": [
+            339.56363753234797,
+            309.81057301099077
+          ],
+          "mw": 900.0,
+          "cost": 0.09254423145879216,
+          "thermal_violation": 0,
+          "control_ms": 19.94612899989079,
+          "index": 41,
+          "fallback": 0,
+          "predicted_peak": 340.05206638174786
+        },
+        {
+          "k": 8,
+          "x": [
+            0.39660814159338376,
+            33.58823877959896,
+            2.6017269012716957,
+            3.5217249955551106,
+            339.21081802071853,
+            309.3610856553232
+          ],
+          "estimate": [
+            0.39687431572265136,
+            33.66372525412771,
+            2.4475713011160027,
+            3.623154247436749,
+            338.8837760322485,
+            309.1576844998505
+          ],
+          "y": [
+            338.4799227727498,
+            309.48702684463933
+          ],
+          "mw": 900.0,
+          "cost": 0.04182698649585388,
+          "thermal_violation": 0,
+          "control_ms": 18.982326999775978,
+          "index": 41,
+          "fallback": 0,
+          "predicted_peak": 340.0357743116708
+        },
+        {
+          "k": 9,
+          "x": [
+            0.3960706940233945,
+            33.58784874852382,
+            2.5930123803029765,
+            3.532318509775845,
+            339.2022064207211,
+            308.750401148009
+          ],
+          "estimate": [
+            0.40114762685811917,
+            33.676628052871706,
+            2.4463801562719385,
+            3.625063485583099,
+            338.80913030947795,
+            308.79229066651766
+          ],
+          "y": [
+            339.0328128105226,
+            309.31055655328726
+          ],
+          "mw": 900.0,
+          "cost": 0.03945760091611075,
+          "thermal_violation": 0,
+          "control_ms": 19.867075000092882,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 339.97866369290375
+        },
+        {
+          "k": 10,
+          "x": [
+            0.3960851727473881,
+            33.59648009496629,
+            2.5848910654114268,
+            3.541911514319056,
+            339.2173795006363,
+            308.50224965435336
+          ],
+          "estimate": [
+            0.4026204765389583,
+            33.68484238512441,
+            2.443806744926195,
+            3.63727312782629,
+            338.9014742371087,
+            308.4703771579699
+          ],
+          "y": [
+            339.26156202482804,
+            308.576851195756
+          ],
+          "mw": 900.0,
+          "cost": 0.03339653058071999,
+          "thermal_violation": 0,
+          "control_ms": 19.861254999796074,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.0213352424123
+        },
+        {
+          "k": 11,
+          "x": [
+            0.3964188679276895,
+            33.61257520855364,
+            2.5780763577686447,
+            3.5505996796928145,
+            339.2028628153749,
+            308.2688213034094
+          ],
+          "estimate": [
+            0.400829102021212,
+            33.73356682866503,
+            2.4417199736502484,
+            3.6517035539085536,
+            339.1208884054639,
+            308.2058461711473
+          ],
+          "y": [
+            339.5063871961578,
+            308.27703274708557
+          ],
+          "mw": 900.0,
+          "cost": 0.03381441016985472,
+          "thermal_violation": 0,
+          "control_ms": 20.634494999740127,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.17588369973396
+        },
+        {
+          "k": 12,
+          "x": [
+            0.3966104966507294,
+            33.63148865945496,
+            2.5714492277645546,
+            3.5584677203550905,
+            338.98250338609006,
+            307.9349795891219
+          ],
+          "estimate": [
+            0.4010195268042551,
+            33.73408832166444,
+            2.4553509133723073,
+            3.6434695243540642,
+            338.8801906956255,
+            307.91833365482864
+          ],
+          "y": [
+            338.67577094977105,
+            307.6990849794877
+          ],
+          "mw": 900.0,
+          "cost": 0.12484723678955385,
+          "thermal_violation": 0,
+          "control_ms": 19.251850000273407,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.3758707939414
+        },
+        {
+          "k": 13,
+          "x": [
+            0.4003105029862235,
+            33.648248052170075,
+            2.5620906797774525,
+            3.565592439580841,
+            339.2271565192106,
+            307.679869565711
+          ],
+          "estimate": [
+            0.3987023951451605,
+            33.74924614392284,
+            2.455565614125864,
+            3.653523544555466,
+            339.1113846889675,
+            307.7774029165905
+          ],
+          "y": [
+            339.54221870224535,
+            307.86124553913436
+          ],
+          "mw": 900.0,
+          "cost": 0.02559469778119869,
+          "thermal_violation": 0,
+          "control_ms": 16.79019999983211,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.0999157525574
+        },
+        {
+          "k": 14,
+          "x": [
+            0.3972277949111919,
+            33.66786021392023,
+            2.5593059059034706,
+            3.572044761041142,
+            339.0600122793282,
+            307.435668565722
+          ],
+          "estimate": [
+            0.40043402658249944,
+            33.76488600414045,
+            2.465963115645715,
+            3.646469837837413,
+            338.8813708814291,
+            307.5793488433789
+          ],
+          "y": [
+            338.7553103852542,
+            307.03798145224147
+          ],
+          "mw": 900.0,
+          "cost": 0.07857517305661901,
+          "thermal_violation": 0,
+          "control_ms": 16.87173000027542,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.2995779053129
+        },
+        {
+          "k": 15,
+          "x": [
+            0.39899883161912286,
+            33.682191251651574,
+            2.552648772453153,
+            3.577887905168089,
+            339.1599696067146,
+            307.34120302484286
+          ],
+          "estimate": [
+            0.4012405042566598,
+            33.792290444220136,
+            2.4680116333001942,
+            3.642761410920015,
+            338.8421089039997,
+            307.4483590815131
+          ],
+          "y": [
+            338.96415471761225,
+            307.2199535409342
+          ],
+          "mw": 900.0,
+          "cost": 0.03901049713353959,
+          "thermal_violation": 0,
+          "control_ms": 21.035951000158093,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.08216677940084
+        },
+        {
+          "k": 16,
+          "x": [
+            0.39784804071008373,
+            33.68835221810342,
+            2.5489469113418313,
+            3.5831799713767003,
+            339.3312041760036,
+            307.2383268717881
+          ],
+          "estimate": [
+            0.39950281504284924,
+            33.77538521061008,
+            2.4706780123838428,
+            3.6424709588422655,
+            339.1234231837399,
+            307.32891737019867
+          ],
+          "y": [
+            339.5683258220585,
+            307.1147995816874
+          ],
+          "mw": 900.0,
+          "cost": 0.018843889925001585,
+          "thermal_violation": 0,
+          "control_ms": 18.29883799973686,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.05973126966643
+        },
+        {
+          "k": 17,
+          "x": [
+            0.39460377714247086,
+            33.69306850248497,
+            2.5475388064699604,
+            3.5879727499737384,
+            339.32184260326244,
+            307.3363623228194
+          ],
+          "estimate": [
+            0.39236221842228547,
+            33.828950814942715,
+            2.487282417627668,
+            3.6297334279223583,
+            339.4181100410129,
+            307.3825504451984
+          ],
+          "y": [
+            339.6852554961774,
+            307.75897270601945
+          ],
+          "mw": 900.0,
+          "cost": 0.018313294890074727,
+          "thermal_violation": 0,
+          "control_ms": 24.098048000269046,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.33659049251855
+        },
+        {
+          "k": 18,
+          "x": [
+            0.3935299744375158,
+            33.685978483078536,
+            2.544649757692934,
+            3.59231278990871,
+            339.48168748368704,
+            307.10516435754755
+          ],
+          "estimate": [
+            0.3904961329041355,
+            33.821551401228504,
+            2.489699198301325,
+            3.631130956294312,
+            339.3834677099045,
+            307.3260986580267
+          ],
+          "y": [
+            339.4755363370727,
+            307.25956853619954
+          ],
+          "mw": 900.0,
+          "cost": 0.04957688561621136,
+          "thermal_violation": 0,
+          "control_ms": 17.653719000009005,
+          "index": 41,
+          "fallback": 0,
+          "predicted_peak": 340.0413656930843
+        },
+        {
+          "k": 19,
+          "x": [
+            0.39091842204001503,
+            33.685319538348914,
+            2.54431191500693,
+            3.5962430487579837,
+            339.00237642211533,
+            307.15566836298854
+          ],
+          "estimate": [
+            0.3918475640708629,
+            33.82045431819026,
+            2.4904260286703526,
+            3.630015971398851,
+            339.13989411695553,
+            307.3078751499797
+          ],
+          "y": [
+            339.0391406746034,
+            307.51141625083073
+          ],
+          "mw": 900.0,
+          "cost": 0.10847767579757622,
+          "thermal_violation": 0,
+          "control_ms": 19.536729999799718,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.3631869522277
+        },
+        {
+          "k": 20,
+          "x": [
+            0.39738730234580016,
+            33.709007015824305,
+            2.534726715303004,
+            3.599801763671534,
+            338.53620757269664,
+            307.156529700432
+          ],
+          "estimate": [
+            0.40413146668658917,
+            33.82514482762943,
+            2.480351595905568,
+            3.628325235295548,
+            338.3473861930301,
+            307.1588230985296
+          ],
+          "y": [
+            337.83228284650477,
+            306.76581886865944
+          ],
+          "mw": 900.0,
+          "cost": 0.6065228452229527,
+          "thermal_violation": 0,
+          "control_ms": 18.133145999854605,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.12292805152816
+        },
+        {
+          "k": 21,
+          "x": [
+            0.4031188382407852,
+            33.72632658001058,
+            2.5260237979238247,
+            3.603025437975612,
+            338.41163885643795,
+            308.3685530927527
+          ],
+          "estimate": [
+            0.41097512131202585,
+            33.823710349481594,
+            2.474034179305509,
+            3.6289355069557865,
+            338.5092798555127,
+            308.3117816556094
+          ],
+          "y": [
+            338.34506436541756,
+            308.3974089487699
+          ],
+          "mw": 453.6,
+          "cost": 0.8453189878039159,
+          "thermal_violation": 0,
+          "control_ms": 19.435984999745415,
+          "index": 26,
+          "fallback": 0,
+          "predicted_peak": 339.8146774633699
+        },
+        {
+          "k": 22,
+          "x": [
+            0.4075646490290226,
+            33.745605577179965,
+            2.519438505497255,
+            3.6059444551872284,
+            338.6014556277467,
+            309.2616040834917
+          ],
+          "estimate": [
+            0.4100598161393619,
+            33.82883557925342,
+            2.477173020600452,
+            3.6290198858828204,
+            338.8710320677206,
+            309.3583795930468
+          ],
+          "y": [
+            338.8269878567582,
+            309.2760646184093
+          ],
+          "mw": 453.6,
+          "cost": 0.49444931698614186,
+          "thermal_violation": 0,
+          "control_ms": 19.327256999986275,
+          "index": 30,
+          "fallback": 0,
+          "predicted_peak": 340.2268660831264
+        },
+        {
+          "k": 23,
+          "x": [
+            0.41031383668709137,
+            33.74422380773867,
+            2.514854442666872,
+            3.608587662858376,
+            338.6074409436914,
+            308.80745162461585
+          ],
+          "estimate": [
+            0.41099081569159857,
+            33.83386427540726,
+            2.479576552538836,
+            3.62705899734609,
+            338.49905889685056,
+            308.88623955519637
+          ],
+          "y": [
+            338.0704419545109,
+            308.95432921694095
+          ],
+          "mw": 900.0,
+          "cost": 0.5538147333635685,
+          "thermal_violation": 0,
+          "control_ms": 18.219375999706244,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.36118554414094
+        },
+        {
+          "k": 24,
+          "x": [
+            0.40685216501261523,
+            33.754541835102195,
+            2.516195098561532,
+            3.6109816331110003,
+            338.9139085258738,
+            309.82486936283505
+          ],
+          "estimate": [
+            0.40619414029579565,
+            33.828120846275816,
+            2.486167477857488,
+            3.6279849817470105,
+            339.26165037067915,
+            309.88338048550264
+          ],
+          "y": [
+            339.5434877532546,
+            309.93965491611016
+          ],
+          "mw": 453.6,
+          "cost": 0.20313505356206052,
+          "thermal_violation": 0,
+          "control_ms": 18.028747999778716,
+          "index": 30,
+          "fallback": 0,
+          "predicted_peak": 340.2109802191909
+        },
+        {
+          "k": 25,
+          "x": [
+            0.40464203701762924,
+            33.76603839868273,
+            2.515992887203394,
+            3.6131500948102406,
+            338.95745732075784,
+            309.2339856577214
+          ],
+          "estimate": [
+            0.4017941589426413,
+            33.82193007538266,
+            2.491832296091423,
+            3.6296061914159052,
+            339.12623236892546,
+            309.2305465006662
+          ],
+          "y": [
+            338.91159923876654,
+            308.70467814781193
+          ],
+          "mw": 900.0,
+          "cost": 0.18885089248876963,
+          "thermal_violation": 0,
+          "control_ms": 16.332201000295754,
+          "index": 41,
+          "fallback": 0,
+          "predicted_peak": 340.2229579810453
+        },
+        {
+          "k": 26,
+          "x": [
+            0.4036640389954325,
+            33.767928603332734,
+            2.5155502839325816,
+            3.615113662625604,
+            338.9880952340291,
+            308.8175440369298
+          ],
+          "estimate": [
+            0.4015247926020498,
+            33.81984740901085,
+            2.4932282909988692,
+            3.629918701249444,
+            338.99341446248525,
+            308.80434902492874
+          ],
+          "y": [
+            338.9085218482686,
+            308.5953191151111
+          ],
+          "mw": 900.0,
+          "cost": 0.11946672795008087,
+          "thermal_violation": 0,
+          "control_ms": 17.5341520002803,
+          "index": 41,
+          "fallback": 0,
+          "predicted_peak": 340.03966088995355
+        },
+        {
+          "k": 27,
+          "x": [
+            0.4027529116481484,
+            33.760208215556545,
+            2.5153103609074057,
+            3.616890947919914,
+            339.0488021351874,
+            308.3459559038016
+          ],
+          "estimate": [
+            0.39951785186200955,
+            33.81290884312147,
+            2.4964974248569796,
+            3.6312083156529176,
+            339.04685475498155,
+            308.4596819631488
+          ],
+          "y": [
+            339.2434561247864,
+            308.46570576910716
+          ],
+          "mw": 900.0,
+          "cost": 0.08490490876555505,
+          "thermal_violation": 0,
+          "control_ms": 22.566050000023097,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.2449361980583
+        },
+        {
+          "k": 28,
+          "x": [
+            0.4011583376190393,
+            33.75195544502569,
+            2.5159717810539615,
+            3.6185010494064507,
+            338.65498490633917,
+            308.013271813115
+          ],
+          "estimate": [
+            0.40016867631918307,
+            33.81103624769936,
+            2.496358882496982,
+            3.6321782347603047,
+            338.8625458023468,
+            308.1911695113238
+          ],
+          "y": [
+            338.8279731966228,
+            308.41103050908396
+          ],
+          "mw": 900.0,
+          "cost": 0.4404715198167204,
+          "thermal_violation": 0,
+          "control_ms": 21.03135800007294,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.2464599160868
+        },
+        {
+          "k": 29,
+          "x": [
+            0.40688199803126845,
+            33.76160070393611,
+            2.5088312954793284,
+            3.6199596285732136,
+            338.67938312536273,
+            307.855447653918
+          ],
+          "estimate": [
+            0.39902875904043705,
+            33.81361725934715,
+            2.499748607282897,
+            3.6311182618215865,
+            339.08922165984086,
+            307.94670846779553
+          ],
+          "y": [
+            339.5299981589328,
+            307.666745726653
+          ],
+          "mw": 900.0,
+          "cost": 0.41096579863041277,
+          "thermal_violation": 0,
+          "control_ms": 25.772835000225314,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.0496333219264
+        },
+        {
+          "k": 30,
+          "x": [
+            0.40892718533985783,
+            33.77205190176501,
+            2.505940191979945,
+            3.6212804285372977,
+            338.4805346028615,
+            307.5909268894557
+          ],
+          "estimate": [
+            0.40310388015819815,
+            33.81778971346336,
+            2.4964705642353557,
+            3.6313968574503788,
+            338.65563746829827,
+            307.73702798884455
+          ],
+          "y": [
+            338.25973434343905,
+            307.76037298049704
+          ],
+          "mw": 900.0,
+          "cost": 0.6994527907672142,
+          "thermal_violation": 0,
+          "control_ms": 19.19779100035157,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.2807306588504
+        },
+        {
+          "k": 31,
+          "x": [
+            0.4088575718741725,
+            33.78006293880966,
+            2.5056115625965596,
+            3.622475650035769,
+            338.94656166127993,
+            308.9215473067625
+          ],
+          "estimate": [
+            0.40275218237650046,
+            33.82391394802635,
+            2.4972114543248796,
+            3.630590822864874,
+            339.1002945916921,
+            308.9731232934753
+          ],
+          "y": [
+            339.15808583254756,
+            309.3545507156789
+          ],
+          "mw": 453.6,
+          "cost": 0.18117413195556414,
+          "thermal_violation": 0,
+          "control_ms": 19.754684999952588,
+          "index": 26,
+          "fallback": 0,
+          "predicted_peak": 340.2183684021243
+        }
+      ]
+    },
+    {
+      "method": "M4",
+      "policy": "risk",
+      "seed": 3000,
+      "history": [
+        {
+          "k": 0,
+          "x": [
+            0.3820010080810696,
+            33.26984031282343,
+            2.7277543731639446,
+            3.3858772873839116,
+            339.7548830710859,
+            314.9143500909075
+          ],
+          "estimate": [
+            0.36799519909416806,
+            34.007677235457614,
+            2.465622598008244,
+            3.6099916963067784,
+            339.5550129162994,
+            315.0493629151602
+          ],
+          "y": [
+            339.5469571894039,
+            314.88838618968
+          ],
+          "mw": 1200.0,
+          "cost": 0.5327072090929368,
+          "thermal_violation": 0,
+          "control_ms": 37.9287029995794,
+          "index": 54,
+          "fallback": 0,
+          "predicted_peak": 341.7674251286291
+        },
+        {
+          "k": 1,
+          "x": [
+            0.38219439093459884,
+            33.33007659902645,
+            2.708346824809267,
+            3.4092947531291795,
+            339.7336324509657,
+            313.44784334670265
+          ],
+          "estimate": [
+            0.3814286607369285,
+            33.79419274721732,
+            2.4707242196101986,
+            3.59381809230082,
+            339.668849239656,
+            313.4718554884839
+          ],
+          "y": [
+            339.88788176964135,
+            313.23377590723493
+          ],
+          "mw": 900.0,
+          "cost": 0.339096072851354,
+          "thermal_violation": 0,
+          "control_ms": 87.07300300011411,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 341.4469593824695
+        },
+        {
+          "k": 2,
+          "x": [
+            0.38362171380229865,
+            33.366128962799785,
+            2.6886355369801818,
+            3.4305007795124154,
+            339.5905846756539,
+            310.78621556992886
+          ],
+          "estimate": [
+            0.38432186415132663,
+            33.822463632599394,
+            2.4194417872416487,
+            3.6108675146085067,
+            339.32253523334487,
+            310.94947231506245
+          ],
+          "y": [
+            339.28049085895447,
+            311.19183894578214
+          ],
+          "mw": 1200.0,
+          "cost": 0.2432216077777497,
+          "thermal_violation": 0,
+          "control_ms": 48.7689120000141,
+          "index": 54,
+          "fallback": 0,
+          "predicted_peak": 340.2317860840842
+        },
+        {
+          "k": 3,
+          "x": [
+            0.3856296167148704,
+            33.40509206665812,
+            2.671182607683759,
+            3.4497049085327833,
+            339.6731569797364,
+            310.1673765385009
+          ],
+          "estimate": [
+            0.3839028094049747,
+            33.72309608787588,
+            2.4328134929371252,
+            3.6014010013444815,
+            339.4893984042744,
+            310.2337287724112
+          ],
+          "y": [
+            339.8373619862193,
+            310.2775337588329
+          ],
+          "mw": 900.0,
+          "cost": 0.2460292352787237,
+          "thermal_violation": 0,
+          "control_ms": 39.426794999599224,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.53888984042356
+        },
+        {
+          "k": 4,
+          "x": [
+            0.3845977586071466,
+            33.45294574928274,
+            2.6576950041123966,
+            3.467097321658629,
+            339.2468039531421,
+            309.72286881444234
+          ],
+          "estimate": [
+            0.38821287511518215,
+            33.70566253569509,
+            2.4350307755365486,
+            3.607620313617902,
+            339.1551080020935,
+            309.6775031125638
+          ],
+          "y": [
+            338.8915566925304,
+            310.2347602447374
+          ],
+          "mw": 900.0,
+          "cost": 0.07687708200038047,
+          "thermal_violation": 0,
+          "control_ms": 46.66964600028223,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.4911780542761
+        },
+        {
+          "k": 5,
+          "x": [
+            0.39139740966376974,
+            33.48452142857242,
+            2.6382370840684133,
+            3.4828483676838893,
+            338.777678452408,
+            309.3631425114607
+          ],
+          "estimate": [
+            0.39570219999678735,
+            33.668619739796334,
+            2.4181857048896607,
+            3.6445556973254005,
+            338.7645379740043,
+            309.17419638380693
+          ],
+          "y": [
+            338.5372202426333,
+            309.35909551837943
+          ],
+          "mw": 900.0,
+          "cost": 0.33324519594276425,
+          "thermal_violation": 0,
+          "control_ms": 40.61118000026909,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.13756514793727
+        },
+        {
+          "k": 6,
+          "x": [
+            0.39722103614414184,
+            33.52279177781739,
+            2.620541306719398,
+            3.4971104476299666,
+            339.18180396098967,
+            310.4377566929368
+          ],
+          "estimate": [
+            0.3969330749425939,
+            33.67349630739828,
+            2.433915037417932,
+            3.6365468355772137,
+            339.29072108158186,
+            310.1844133654301
+          ],
+          "y": [
+            339.481279294682,
+            310.4629726979235
+          ],
+          "mw": 453.6,
+          "cost": 0.09032963144023952,
+          "thermal_violation": 0,
+          "control_ms": 40.149112999642966,
+          "index": 26,
+          "fallback": 0,
+          "predicted_peak": 340.27715194932404
+        },
+        {
+          "k": 7,
+          "x": [
+            0.3990815838547764,
+            33.56108895864517,
+            2.6082709525901784,
+            3.5100266686485675,
+            339.04776963457795,
+            308.6034797589054
+          ],
+          "estimate": [
+            0.39453640525449035,
+            33.65756949223542,
+            2.44556520819007,
+            3.642485928501843,
+            339.2007583247948,
+            308.4685935788587
+          ],
+          "y": [
+            339.3848746594347,
+            308.6410093542589
+          ],
+          "mw": 1200.0,
+          "cost": 0.27143127722311333,
+          "thermal_violation": 0,
+          "control_ms": 45.375595999757934,
+          "index": 54,
+          "fallback": 0,
+          "predicted_peak": 340.0617153409962
+        },
+        {
+          "k": 8,
+          "x": [
+            0.40002839112472033,
+            33.59165902913027,
+            2.5983066517403595,
+            3.5217249955551106,
+            339.00042209708863,
+            308.4101352649076
+          ],
+          "estimate": [
+            0.40065614254940507,
+            33.67609736895937,
+            2.4445179340826746,
+            3.619790609294268,
+            338.65144104633674,
+            308.2131985825578
+          ],
+          "y": [
+            338.26952684911987,
+            308.5360764542237
+          ],
+          "mw": 900.0,
+          "cost": 0.14565310971253906,
+          "thermal_violation": 0,
+          "control_ms": 44.766229999822826,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.6905081515417
+        },
+        {
+          "k": 9,
+          "x": [
+            0.39627541473953903,
+            33.58805346923996,
+            2.592807659586833,
+            3.532318509775845,
+            339.57550488406713,
+            309.3239148167838
+          ],
+          "estimate": [
+            0.401364868388726,
+            33.66582648287804,
+            2.447167253735237,
+            3.6247680765901547,
+            339.1628093346362,
+            309.3629199782492
+          ],
+          "y": [
+            339.40611127386865,
+            309.88407022206206
+          ],
+          "mw": 453.6,
+          "cost": 0.13459424718527596,
+          "thermal_violation": 0,
+          "control_ms": 38.189646000319044,
+          "index": 26,
+          "fallback": 0,
+          "predicted_peak": 340.5159145497569
+        },
+        {
+          "k": 10,
+          "x": [
+            0.3900096824600128,
+            33.59040460467892,
+            2.5909665556988037,
+            3.541911514319056,
+            339.70030022932104,
+            308.99293523298604
+          ],
+          "estimate": [
+            0.39651195834387265,
+            33.65758020704156,
+            2.44876286467361,
+            3.6361064949459694,
+            339.3867011454142,
+            308.9631756450433
+          ],
+          "y": [
+            339.7444827535128,
+            309.06753677438866
+          ],
+          "mw": 900.0,
+          "cost": 0.23500111579088218,
+          "thermal_violation": 0,
+          "control_ms": 39.378266999847256,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.57592966905304
+        },
+        {
+          "k": 11,
+          "x": [
+            0.3876985361224033,
+            33.603854876748365,
+            2.5867966895739323,
+            3.5505996796928145,
+            339.5543478676087,
+            307.6122668266001
+          ],
+          "estimate": [
+            0.39167603266309536,
+            33.69686977079539,
+            2.4519133743118795,
+            3.647811000220101,
+            339.4950147554117,
+            307.5484653883908
+          ],
+          "y": [
+            339.85787224839163,
+            307.62047827027624
+          ],
+          "mw": 1200.0,
+          "cost": 0.14364946703681336,
+          "thermal_violation": 0,
+          "control_ms": 41.55265000008512,
+          "index": 54,
+          "fallback": 0,
+          "predicted_peak": 340.3491838958538
+        },
+        {
+          "k": 12,
+          "x": [
+            0.38908093284086404,
+            33.6239590956451,
+            2.578978791574421,
+            3.5584677203550905,
+            339.1282127268957,
+            306.4256507966435
+          ],
+          "estimate": [
+            0.3929494747646527,
+            33.71028932751661,
+            2.4596500648674966,
+            3.638795759290648,
+            339.06956080963033,
+            306.4219390056175
+          ],
+          "y": [
+            338.8214802905767,
+            306.18975618700927
+          ],
+          "mw": 1200.0,
+          "cost": 0.08650090662671825,
+          "thermal_violation": 0,
+          "control_ms": 39.79942099977052,
+          "index": 55,
+          "fallback": 0,
+          "predicted_peak": 340.33869048367745
+        },
+        {
+          "k": 13,
+          "x": [
+            0.39515139541732236,
+            33.64308894460117,
+            2.5672497873463547,
+            3.565592439580841,
+            339.3078048948798,
+            306.47887912484794
+          ],
+          "estimate": [
+            0.39295404990613014,
+            33.73265141212641,
+            2.4653422666307394,
+            3.642388447168562,
+            339.1945568299876,
+            306.57241112289444
+          ],
+          "y": [
+            339.6228670779145,
+            306.6602550982713
+          ],
+          "mw": 900.0,
+          "cost": 0.04305075924306267,
+          "thermal_violation": 0,
+          "control_ms": 47.64936400033548,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.3403595890785
+        },
+        {
+          "k": 14,
+          "x": [
+            0.3940291346752308,
+            33.66466155368428,
+            2.562504566139433,
+            3.572044761041142,
+            339.09007633376075,
+            306.47753116043646
+          ],
+          "estimate": [
+            0.3965033642652121,
+            33.74918008932462,
+            2.473008168390833,
+            3.6373090138068935,
+            338.91113737922234,
+            306.6108450412817
+          ],
+          "y": [
+            338.78537443968673,
+            306.07984404695594
+          ],
+          "mw": 900.0,
+          "cost": 0.06538885328394703,
+          "thermal_violation": 0,
+          "control_ms": 35.586734999924374,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.8075091098527
+        },
+        {
+          "k": 15,
+          "x": [
+            0.39286442688713763,
+            33.6760568469196,
+            2.5587831771851395,
+            3.577887905168089,
+            339.74766794532184,
+            307.74466849400824
+          ],
+          "estimate": [
+            0.3957182042570884,
+            33.76401465564786,
+            2.475951099477738,
+            3.634289076097642,
+            339.39908609841814,
+            307.8581491667816
+          ],
+          "y": [
+            339.5518530562195,
+            307.6234190100996
+          ],
+          "mw": 453.6,
+          "cost": 0.24799667096853228,
+          "thermal_violation": 0,
+          "control_ms": 39.90445899989936,
+          "index": 30,
+          "fallback": 0,
+          "predicted_peak": 340.54369727730796
+        },
+        {
+          "k": 16,
+          "x": [
+            0.38734113916272417,
+            33.67784531655606,
+            2.5594538128891915,
+            3.5831799713767003,
+            339.8174708793817,
+            306.5920962955433
+          ],
+          "estimate": [
+            0.39009398452906197,
+            33.76878918208672,
+            2.489061342887957,
+            3.629968615768484,
+            339.577976512123,
+            306.71634960832915
+          ],
+          "y": [
+            340.0545925254366,
+            306.4685690054426
+          ],
+          "mw": 1200.0,
+          "cost": 0.4528614162771213,
+          "thermal_violation": 0,
+          "control_ms": 47.51155399981144,
+          "index": 55,
+          "fallback": 0,
+          "predicted_peak": 340.1730953454897
+        },
+        {
+          "k": 17,
+          "x": [
+            0.38426083872903444,
+            33.68272556407152,
+            2.557881744883397,
+            3.5879727499737384,
+            339.61318429775554,
+            305.90416041104737
+          ],
+          "estimate": [
+            0.3847583945963499,
+            33.788453124987164,
+            2.499880397861046,
+            3.627315057815591,
+            339.66003430077456,
+            305.9603388507839
+          ],
+          "y": [
+            339.9765971906705,
+            306.3267707942474
+          ],
+          "mw": 1200.0,
+          "cost": 0.14679462164780904,
+          "thermal_violation": 0,
+          "control_ms": 44.62147300000652,
+          "index": 54,
+          "fallback": 0,
+          "predicted_peak": 340.19404306612915
+        },
+        {
+          "k": 18,
+          "x": [
+            0.38642351440158434,
+            33.67887202304258,
+            2.5517562177288644,
+            3.59231278990871,
+            339.5264365011949,
+            305.066188112918
+          ],
+          "estimate": [
+            0.3852712570366022,
+            33.79155095966427,
+            2.5011173528354895,
+            3.628741866929672,
+            339.3973321225797,
+            305.2918810903203
+          ],
+          "y": [
+            339.52028535458055,
+            305.22059229157
+          ],
+          "mw": 1200.0,
+          "cost": 0.09983475421109192,
+          "thermal_violation": 0,
+          "control_ms": 36.47018099991328,
+          "index": 55,
+          "fallback": 0,
+          "predicted_peak": 340.1373555193062
+        },
+        {
+          "k": 19,
+          "x": [
+            0.3876520038562563,
+            33.682053120165136,
+            2.5475783331906876,
+            3.5962430487579837,
+            338.95728632334965,
+            305.522171128496
+          ],
+          "estimate": [
+            0.3898452095972006,
+            33.79113380657315,
+            2.499158212768968,
+            3.6281986183723873,
+            339.07890902176734,
+            305.68805287452943
+          ],
+          "y": [
+            338.9940505758377,
+            305.8779190163382
+          ],
+          "mw": 900.0,
+          "cost": 0.16005780769912972,
+          "thermal_violation": 0,
+          "control_ms": 40.40367899960984,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.3815436319133
+        },
+        {
+          "k": 20,
+          "x": [
+            0.3968650494343042,
+            33.70848476291278,
+            2.535248968214499,
+            3.599801763671534,
+            338.43375638649263,
+            305.842615267248
+          ],
+          "estimate": [
+            0.40367145296181534,
+            33.788771310924986,
+            2.4866639995316326,
+            3.622620140160322,
+            338.2607990145324,
+            305.87196011547223
+          ],
+          "y": [
+            337.72983166030076,
+            305.45190443547546
+          ],
+          "mw": 900.0,
+          "cost": 0.7742184136049344,
+          "thermal_violation": 0,
+          "control_ms": 34.78513199979716,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.23696288739404
+        },
+        {
+          "k": 21,
+          "x": [
+            0.40456835891039433,
+            33.727776100680146,
+            2.5245742772542146,
+            3.603025437975612,
+            338.27258637823144,
+            307.18605286024365
+          ],
+          "estimate": [
+            0.41246223193775,
+            33.790136832830996,
+            2.4792986532277164,
+            3.623470397357582,
+            338.3563094005156,
+            307.1438329135097
+          ],
+          "y": [
+            338.20601188721105,
+            307.2149087162609
+          ],
+          "mw": 453.6,
+          "cost": 1.1128464446142456,
+          "thermal_violation": 0,
+          "control_ms": 38.1650270001046,
+          "index": 26,
+          "fallback": 0,
+          "predicted_peak": 340.47162719470776
+        },
+        {
+          "k": 22,
+          "x": [
+            0.4103888139887966,
+            33.7484297421397,
+            2.51661434053748,
+            3.6059444551872284,
+            338.44171155851177,
+            308.19485612903884
+          ],
+          "estimate": [
+            0.412475774624456,
+            33.794632847724756,
+            2.480386982092699,
+            3.624937390157647,
+            338.73651448121956,
+            308.31028249997445
+          ],
+          "y": [
+            338.66724378752326,
+            308.20931666395643
+          ],
+          "mw": 453.6,
+          "cost": 0.7447424191204969,
+          "thermal_violation": 0,
+          "control_ms": 37.329595999835874,
+          "index": 30,
+          "fallback": 0,
+          "predicted_peak": 340.73049079198313
+        },
+        {
+          "k": 23,
+          "x": [
+            0.41401523326422063,
+            33.74792520431576,
+            2.5111530460897415,
+            3.608587662858376,
+            338.44114892980986,
+            307.9412296077854
+          ],
+          "estimate": [
+            0.41516235645686905,
+            33.78864601079676,
+            2.4793896961855095,
+            3.6239361176354192,
+            338.30450110348613,
+            308.01747577526623
+          ],
+          "y": [
+            337.90414994062934,
+            308.08810720011047
+          ],
+          "mw": 900.0,
+          "cost": 0.8137447406527752,
+          "thermal_violation": 0,
+          "control_ms": 46.32346099970164,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.94715821582724
+        },
+        {
+          "k": 24,
+          "x": [
+            0.4110327445194528,
+            33.75872241460899,
+            2.5120145190546928,
+            3.6109816331110003,
+            338.74871338917364,
+            309.03994619079305
+          ],
+          "estimate": [
+            0.4105861492745327,
+            33.793439029781034,
+            2.4855240482402867,
+            3.6263354275191753,
+            339.06999383850007,
+            309.0685435100431
+          ],
+          "y": [
+            339.37829261655446,
+            309.15473174406816
+          ],
+          "mw": 453.6,
+          "cost": 0.3599850547685219,
+          "thermal_violation": 0,
+          "control_ms": 40.13420100000076,
+          "index": 30,
+          "fallback": 0,
+          "predicted_peak": 340.42488893164983
+        },
+        {
+          "k": 25,
+          "x": [
+            0.408948056649254,
+            33.7703444183143,
+            2.511686867571768,
+            3.6131500948102406,
+            338.8028934742403,
+            308.5937746556477
+          ],
+          "estimate": [
+            0.4050856397454772,
+            33.78691845789201,
+            2.4925209846432677,
+            3.627844462412701,
+            338.9935685033805,
+            308.59509953599314
+          ],
+          "y": [
+            338.757035392249,
+            308.0644671457382
+          ],
+          "mw": 900.0,
+          "cost": 0.3205903466027077,
+          "thermal_violation": 0,
+          "control_ms": 134.75870000002033,
+          "index": 41,
+          "fallback": 0,
+          "predicted_peak": 340.26944581959697
+        },
+        {
+          "k": 26,
+          "x": [
+            0.40782933569515606,
+            33.77209390003242,
+            2.511384987232856,
+            3.615113662625604,
+            338.849273415445,
+            308.294213403086
+          ],
+          "estimate": [
+            0.4048402684669232,
+            33.789570293970336,
+            2.493256536793876,
+            3.627915845580885,
+            338.83676817448134,
+            308.3003746173183
+          ],
+          "y": [
+            338.7697000296845,
+            308.07198848126734
+          ],
+          "mw": 900.0,
+          "cost": 0.22717038232832942,
+          "thermal_violation": 0,
+          "control_ms": 62.492948999988585,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.6976031412194
+        },
+        {
+          "k": 27,
+          "x": [
+            0.406599385589871,
+            33.76405468949822,
+            2.5114638869656813,
+            3.616890947919914,
+            338.9284315096646,
+            307.9174869407569
+          ],
+          "estimate": [
+            0.4031489239980626,
+            33.79059449348154,
+            2.495713700320229,
+            3.6288464468586663,
+            338.9288288567411,
+            308.0343071663221
+          ],
+          "y": [
+            339.12308549926365,
+            308.0372368060624
+          ],
+          "mw": 900.0,
+          "cost": 0.1615089710654286,
+          "thermal_violation": 0,
+          "control_ms": 61.52689900000041,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.48852060076604
+        },
+        {
+          "k": 28,
+          "x": [
+            0.40457357152920415,
+            33.755370678935805,
+            2.512556547143795,
+            3.6185010494064507,
+            338.55409736452157,
+            307.6621571302727
+          ],
+          "estimate": [
+            0.4041404048846193,
+            33.792433000768234,
+            2.4953619272970036,
+            3.6296383648719743,
+            338.7535033971232,
+            307.838340206488
+          ],
+          "y": [
+            338.7270856548052,
+            308.05991582624165
+          ],
+          "mw": 900.0,
+          "cost": 0.5821893162838166,
+          "thermal_violation": 0,
+          "control_ms": 39.677043999745365,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.634577355745
+        },
+        {
+          "k": 29,
+          "x": [
+            0.4098334128509845,
+            33.76455211875577,
+            2.5058798806596103,
+            3.6199596285732136,
+            338.59703955559155,
+            307.56766751579784
+          ],
+          "estimate": [
+            0.4022218399778386,
+            33.788842788699384,
+            2.4977651259508353,
+            3.629897813861123,
+            339.01670471906317,
+            307.6701126604846
+          ],
+          "y": [
+            339.44765458916163,
+            307.3789655885328
+          ],
+          "mw": 900.0,
+          "cost": 0.5212857498455153,
+          "thermal_violation": 0,
+          "control_ms": 42.58655199964778,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.556394944408
+        },
+        {
+          "k": 30,
+          "x": [
+            0.4114088816571963,
+            33.7745335980823,
+            2.503458495662606,
+            3.6212804285372977,
+            338.4153126390928,
+            307.35515502190646
+          ],
+          "estimate": [
+            0.4057272768627689,
+            33.79352345630458,
+            2.494429061506047,
+            3.629790347600729,
+            338.5628278009613,
+            307.51335219780657
+          ],
+          "y": [
+            338.19451237967036,
+            307.5246011129478
+          ],
+          "mw": 900.0,
+          "cost": 0.8117455876201538,
+          "thermal_violation": 0,
+          "control_ms": 35.67854599987186,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.47948298561
+        },
+        {
+          "k": 31,
+          "x": [
+            0.41088555227081136,
+            33.78209091920625,
+            2.5035835821999206,
+            3.622475650035769,
+            338.89613354363144,
+            308.70713931434125
+          ],
+          "estimate": [
+            0.40597338360765534,
+            33.78901089422252,
+            2.493974076176093,
+            3.629080804947501,
+            339.0407863062832,
+            308.7585208571252
+          ],
+          "y": [
+            339.10765771489906,
+            309.14014272325767
+          ],
+          "mw": 453.6,
+          "cost": 0.22028055644301944,
+          "thermal_violation": 0,
+          "control_ms": 32.14222500037067,
+          "index": 30,
+          "fallback": 0,
+          "predicted_peak": 340.9893042065675
+        }
+      ]
+    },
+    {
+      "method": "M4",
+      "policy": "regret",
+      "seed": 3000,
+      "history": [
+        {
+          "k": 0,
+          "x": [
+            0.3806008830003002,
+            33.26844018774267,
+            2.7291544982447156,
+            3.3858772873839116,
+            339.9382895521497,
+            316.5683549054372
+          ],
+          "estimate": [
+            0.3665427564947084,
+            33.98834494211771,
+            2.4757773802109333,
+            3.6083599282638943,
+            339.7381594677211,
+            316.697984063913
+          ],
+          "y": [
+            339.7303636704677,
+            316.5423910042097
+          ],
+          "mw": 900.0,
+          "cost": 0.6138759592571943,
+          "thermal_violation": 0,
+          "control_ms": 35.868225999820424,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 342.3342655087432
+        },
+        {
+          "k": 1,
+          "x": [
+            0.37873779266983076,
+            33.326620000761686,
+            2.711803423074036,
+            3.4092947531291795,
+            339.94765782862356,
+            314.7871268941866
+          ],
+          "estimate": [
+            0.37801988835009054,
+            33.78135215823191,
+            2.488423423984126,
+            3.5862588240847217,
+            339.87045037293467,
+            314.8033371439749
+          ],
+          "y": [
+            340.10190714729924,
+            314.5730594547189
+          ],
+          "mw": 900.0,
+          "cost": 0.5515227147137896,
+          "thermal_violation": 0,
+          "control_ms": 35.03420900005949,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.8220158553269
+        },
+        {
+          "k": 2,
+          "x": [
+            0.37897081625610685,
+            33.36147806525361,
+            2.693286434526374,
+            3.4305007795124154,
+            339.81244914933563,
+            311.7985038641493
+          ],
+          "estimate": [
+            0.37964657909329846,
+            33.78309740143778,
+            2.4392666556520686,
+            3.5948892218981956,
+            339.55497821282177,
+            311.9669586381067
+          ],
+          "y": [
+            339.5023553326362,
+            312.2041272400026
+          ],
+          "mw": 1200.0,
+          "cost": 0.42547615160003954,
+          "thermal_violation": 0,
+          "control_ms": 31.995943999845622,
+          "index": 54,
+          "fallback": 0,
+          "predicted_peak": 340.3376020009562
+        },
+        {
+          "k": 3,
+          "x": [
+            0.3804187829429382,
+            33.39988123288621,
+            2.6763934414556902,
+            3.4497049085327833,
+            339.8885993014949,
+            310.99396202662876
+          ],
+          "estimate": [
+            0.3794055679306382,
+            33.66836783462936,
+            2.4484654570449553,
+            3.591299945538462,
+            339.6779897437855,
+            311.0539431545992
+          ],
+          "y": [
+            340.0528043079778,
+            311.10411924696075
+          ],
+          "mw": 900.0,
+          "cost": 0.45732984512321045,
+          "thermal_violation": 0,
+          "control_ms": 35.528701000203,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.6239080870816
+        },
+        {
+          "k": 4,
+          "x": [
+            0.3806421233993119,
+            33.4489901140749,
+            2.661650639320231,
+            3.467097321658629,
+            339.26477135332374,
+            309.1992545129237
+          ],
+          "estimate": [
+            0.3848474142149302,
+            33.64569271692062,
+            2.4529059076918776,
+            3.5922462114255187,
+            339.1533908776264,
+            309.1518584669831
+          ],
+          "y": [
+            338.90952409271205,
+            309.71114594321875
+          ],
+          "mw": 1200.0,
+          "cost": 0.13299838800140387,
+          "thermal_violation": 0,
+          "control_ms": 50.16940899986366,
+          "index": 54,
+          "fallback": 0,
+          "predicted_peak": 340.057379896305
+        },
+        {
+          "k": 5,
+          "x": [
+            0.3852692666259021,
+            33.47839328553456,
+            2.6443652271062805,
+            3.4828483676838893,
+            339.33887792578105,
+            310.366052186804
+          ],
+          "estimate": [
+            0.3908025211159765,
+            33.61187258880078,
+            2.430061963754581,
+            3.6401032845499186,
+            339.2970703257417,
+            310.166067667555
+          ],
+          "y": [
+            339.09841971600633,
+            310.3620051937227
+          ],
+          "mw": 453.6,
+          "cost": 0.1828604803838787,
+          "thermal_violation": 0,
+          "control_ms": 39.063286000327935,
+          "index": 30,
+          "fallback": 0,
+          "predicted_peak": 340.66272201844475
+        },
+        {
+          "k": 6,
+          "x": [
+            0.3903371681718356,
+            33.51590790984509,
+            2.6274251746917043,
+            3.4971104476299666,
+            339.2212563894072,
+            309.8415201455337
+          ],
+          "estimate": [
+            0.39050704388766194,
+            33.62630462553557,
+            2.4309656043034438,
+            3.6465969061214305,
+            339.2995181508314,
+            309.5975674858098
+          ],
+          "y": [
+            339.5207317230995,
+            309.8667361505204
+          ],
+          "mw": 900.0,
+          "cost": 0.10465438061105234,
+          "thermal_violation": 0,
+          "control_ms": 60.05608300029053,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.5679925235632
+        },
+        {
+          "k": 7,
+          "x": [
+            0.3945686307752839,
+            33.55657600556569,
+            2.6127839056696702,
+            3.5100266686485675,
+            339.1795793751047,
+            309.29489782150625
+          ],
+          "estimate": [
+            0.39104846620976214,
+            33.57815702456661,
+            2.4412016176734603,
+            3.652960527506595,
+            339.30230804208975,
+            309.15210710220714
+          ],
+          "y": [
+            339.51668439996143,
+            309.3324274168598
+          ],
+          "mw": 900.0,
+          "cost": 0.05459265859385638,
+          "thermal_violation": 0,
+          "control_ms": 38.16158400013592,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.6138219652562
+        },
+        {
+          "k": 8,
+          "x": [
+            0.39621329933605565,
+            33.58784393734164,
+            2.6021217435290236,
+            3.5217249955551106,
+            339.1056758515109,
+            308.9724075791287
+          ],
+          "estimate": [
+            0.3973259868458184,
+            33.595921747273835,
+            2.447186993123954,
+            3.6526052002177,
+            338.75180984666105,
+            308.7858225509613
+          ],
+          "y": [
+            338.37478060354215,
+            309.0983487684448
+          ],
+          "mw": 900.0,
+          "cost": 0.07256661600666728,
+          "thermal_violation": 0,
+          "control_ms": 41.86010900002657,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.63319952125676
+        },
+        {
+          "k": 9,
+          "x": [
+            0.3931505627319464,
+            33.58492861723238,
+            2.5959325115944236,
+            3.532318509775845,
+            339.6574854157081,
+            309.8324937774002
+          ],
+          "estimate": [
+            0.3980029337601163,
+            33.61935573999995,
+            2.446427374781228,
+            3.6529790968589158,
+            339.25733205605826,
+            309.8885394716235
+          ],
+          "y": [
+            339.4880918055096,
+            310.39264918267844
+          ],
+          "mw": 453.6,
+          "cost": 0.18728855462684915,
+          "thermal_violation": 0,
+          "control_ms": 32.62785700007953,
+          "index": 30,
+          "fallback": 0,
+          "predicted_peak": 340.78129576675207
+        },
+        {
+          "k": 10,
+          "x": [
+            0.388930609748934,
+            33.58932553196785,
+            2.5920456284098807,
+            3.541911514319056,
+            339.5793265719325,
+            308.27094658348375
+          ],
+          "estimate": [
+            0.3945061849419692,
+            33.63239871536639,
+            2.466113626176255,
+            3.6453466715491962,
+            339.2924627859099,
+            308.2235998071144
+          ],
+          "y": [
+            339.6235090961242,
+            308.34554812488636
+          ],
+          "mw": 1200.0,
+          "cost": 0.2742415685825581,
+          "thermal_violation": 0,
+          "control_ms": 31.577455999922677,
+          "index": 54,
+          "fallback": 0,
+          "predicted_peak": 340.1467121560413
+        },
+        {
+          "k": 11,
+          "x": [
+            0.38793387380574135,
+            33.604090214431714,
+            2.5865613518905928,
+            3.5505996796928145,
+            339.5642466418774,
+            308.10967793149456
+          ],
+          "estimate": [
+            0.391991154715275,
+            33.64674330777533,
+            2.482566216820958,
+            3.644255164363973,
+            339.4437521508127,
+            308.0508064715139
+          ],
+          "y": [
+            339.8677710226603,
+            308.1178893751707
+          ],
+          "mw": 900.0,
+          "cost": 0.11681687151529473,
+          "thermal_violation": 0,
+          "control_ms": 55.94322999968426,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.5682437359532
+        },
+        {
+          "k": 12,
+          "x": [
+            0.387658111986324,
+            33.62253627479057,
+            2.58040161242896,
+            3.5584677203550905,
+            339.324023691049,
+            307.8328261056023
+          ],
+          "estimate": [
+            0.3919772307422554,
+            33.6703831701841,
+            2.4949001538631816,
+            3.636908725063682,
+            339.2180489674511,
+            307.8121661195916
+          ],
+          "y": [
+            339.01729125472997,
+            307.5969314959681
+          ],
+          "mw": 900.0,
+          "cost": 0.024850973264979707,
+          "thermal_violation": 0,
+          "control_ms": 70.21794499996759,
+          "index": 41,
+          "fallback": 0,
+          "predicted_peak": 340.1524173626151
+        },
+        {
+          "k": 13,
+          "x": [
+            0.39148879247180174,
+            33.63942634165565,
+            2.5709123902918747,
+            3.565592439580841,
+            339.5371883368882,
+            307.62145605971256
+          ],
+          "estimate": [
+            0.3900710811980262,
+            33.68290613541649,
+            2.493040513323766,
+            3.6418698925296553,
+            339.4185854065829,
+            307.7182410604425
+          ],
+          "y": [
+            339.85225051992296,
+            307.8028320331359
+          ],
+          "mw": 900.0,
+          "cost": 0.07629404665688344,
+          "thermal_violation": 0,
+          "control_ms": 55.31051900015882,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.4465974322001
+        },
+        {
+          "k": 14,
+          "x": [
+            0.388958742987531,
+            33.659591161996566,
+            2.5675749578271314,
+            3.572044761041142,
+            339.3317767420025,
+            307.4097630371535
+          ],
+          "estimate": [
+            0.3925827436104942,
+            33.69408461193364,
+            2.5005674919151524,
+            3.6367437582463924,
+            339.15546089949424,
+            307.5329341670978
+          ],
+          "y": [
+            339.0270748479285,
+            307.01207592367297
+          ],
+          "mw": 900.0,
+          "cost": 0.021682892002242268,
+          "thermal_violation": 0,
+          "control_ms": 103.29743900001631,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.7424884357789
+        },
+        {
+          "k": 15,
+          "x": [
+            0.39155318596715694,
+            33.67474560599961,
+            2.560094418105119,
+            3.577887905168089,
+            339.3906281043987,
+            307.3384470199411
+          ],
+          "estimate": [
+            0.39453128678340577,
+            33.714958954086285,
+            2.4985136179543903,
+            3.6369563682531574,
+            339.0704863709367,
+            307.41981985104
+          ],
+          "y": [
+            339.19481321529634,
+            307.2171975360325
+          ],
+          "mw": 900.0,
+          "cost": 0.027015123395247295,
+          "thermal_violation": 0,
+          "control_ms": 99.41082400018786,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.5011162797313
+        },
+        {
+          "k": 16,
+          "x": [
+            0.39136852885399204,
+            33.68187270624733,
+            2.555426423197922,
+            3.5831799713767003,
+            339.5210172300199,
+            307.2511603381546
+          ],
+          "estimate": [
+            0.39349381056368704,
+            33.722632482971825,
+            2.5093801795354094,
+            3.6311659907521405,
+            339.29821154346155,
+            307.3408790718542
+          ],
+          "y": [
+            339.7581388760748,
+            307.1276330480539
+          ],
+          "mw": 900.0,
+          "cost": 0.06605563239077894,
+          "thermal_violation": 0,
+          "control_ms": 52.802309000071546,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.5464824823479
+        },
+        {
+          "k": 17,
+          "x": [
+            0.3891652018501734,
+            33.687629927192674,
+            2.5529773817622563,
+            3.5879727499737384,
+            339.4724577343395,
+            307.358800665612
+          ],
+          "estimate": [
+            0.3892356996409203,
+            33.7636338075748,
+            2.519302603212025,
+            3.62312832432222,
+            339.4630963113304,
+            307.40210139165146
+          ],
+          "y": [
+            339.83587062725445,
+            307.78141104881206
+          ],
+          "mw": 900.0,
+          "cost": 0.04699806808954756,
+          "thermal_violation": 0,
+          "control_ms": 37.657658999705745,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.5453842585458
+        },
+        {
+          "k": 18,
+          "x": [
+            0.38911464151082226,
+            33.68156315015185,
+            2.5490650906196253,
+            3.59231278990871,
+            339.5967559545756,
+            307.1326055590425
+          ],
+          "estimate": [
+            0.38794842607929103,
+            33.77124879114639,
+            2.517101253920286,
+            3.6245211002577857,
+            339.4324768849903,
+            307.34673607355984
+          ],
+          "y": [
+            339.59060480796126,
+            307.28700973769446
+          ],
+          "mw": 900.0,
+          "cost": 0.10409011918335793,
+          "thermal_violation": 0,
+          "control_ms": 39.66292399991289,
+          "index": 38,
+          "fallback": 0,
+          "predicted_peak": 340.6763197599729
+        },
+        {
+          "k": 19,
+          "x": [
+            0.3888199262849777,
+            33.6832210425939,
+            2.546410410761966,
+            3.5962430487579837,
+            338.90613816325776,
+            306.20439311388714
+          ],
+          "estimate": [
+            0.3909935255133544,
+            33.768345596346485,
+            2.5187399713181113,
+            3.622927315001203,
+            339.0063281356693,
+            306.3488540476239
+          ],
+          "y": [
+            338.94290241574583,
+            306.56014100172933
+          ],
+          "mw": 1200.0,
+          "cost": 0.22982652241781162,
+          "thermal_violation": 0,
+          "control_ms": 43.19391899980474,
+          "index": 54,
+          "fallback": 0,
+          "predicted_peak": 339.9341564559294
+        },
+        {
+          "k": 20,
+          "x": [
+            0.398118069105699,
+            33.70973778258421,
+            2.5339959485431036,
+            3.599801763671534,
+            338.38500073879095,
+            306.38546002210575
+          ],
+          "estimate": [
+            0.40320700532906556,
+            33.74639603876345,
+            2.519409129648095,
+            3.619643261390458,
+            338.28176941107364,
+            306.3911788937554
+          ],
+          "y": [
+            337.6810760125991,
+            305.9947491903332
+          ],
+          "mw": 900.0,
+          "cost": 0.883674686842667,
+          "thermal_violation": 0,
+          "control_ms": 36.951077000139776,
+          "index": 38,
+          "fallback": 0,
+          "predicted_peak": 340.22775186460433
+        },
+        {
+          "k": 21,
+          "x": [
+            0.40583764736703315,
+            33.729045389136836,
+            2.523304988797575,
+            3.603025437975612,
+            338.22701395828506,
+            307.6685104211636
+          ],
+          "estimate": [
+            0.41177816171795034,
+            33.751576956464895,
+            2.5127929649182907,
+            3.6198322422828246,
+            338.3969616547131,
+            307.6191971596361
+          ],
+          "y": [
+            338.16043946726467,
+            307.69736627718083
+          ],
+          "mw": 453.6,
+          "cost": 1.2090420278821412,
+          "thermal_violation": 0,
+          "control_ms": 39.824313999815786,
+          "index": 26,
+          "fallback": 0,
+          "predicted_peak": 340.06971324010095
+        },
+        {
+          "k": 22,
+          "x": [
+            0.411625387166817,
+            33.749666315317754,
+            2.5153777673594586,
+            3.6059444551872284,
+            338.4001342347551,
+            308.6235425259341
+          ],
+          "estimate": [
+            0.41226316832983073,
+            33.76027062777939,
+            2.511127211421491,
+            3.62073727528467,
+            338.7175529247385,
+            308.7250254696382
+          ],
+          "y": [
+            338.6256664637666,
+            308.6380030608517
+          ],
+          "mw": 453.6,
+          "cost": 0.8183637022201727,
+          "thermal_violation": 0,
+          "control_ms": 48.029707000296185,
+          "index": 26,
+          "fallback": 0,
+          "predicted_peak": 340.41950583536686
+        },
+        {
+          "k": 23,
+          "x": [
+            0.4151773487887023,
+            33.74908731984028,
+            2.5099909305652597,
+            3.608587662858376,
+            338.40457354192097,
+            308.2817919970538
+          ],
+          "estimate": [
+            0.41427601431914496,
+            33.76226195237718,
+            2.510962497997698,
+            3.6203498209958243,
+            338.3021265195991,
+            308.35345897545994
+          ],
+          "y": [
+            337.86757455274045,
+            308.4286695893789
+          ],
+          "mw": 900.0,
+          "cost": 0.8784316219003852,
+          "thermal_violation": 0,
+          "control_ms": 41.961510000419366,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.75920496798125
+        },
+        {
+          "k": 24,
+          "x": [
+            0.4120873775751021,
+            33.759777047664684,
+            2.510959885999044,
+            3.6109816331110003,
+            338.7171302261158,
+            309.342346869837
+          ],
+          "estimate": [
+            0.4115325890717745,
+            33.76570235241696,
+            2.511560759767098,
+            3.6219554318512395,
+            338.9795069261239,
+            309.3822356406185
+          ],
+          "y": [
+            339.3467094534966,
+            309.4571324231121
+          ],
+          "mw": 453.6,
+          "cost": 0.39626142969986067,
+          "thermal_violation": 0,
+          "control_ms": 39.19761599991034,
+          "index": 26,
+          "fallback": 0,
+          "predicted_peak": 340.3873770655341
+        },
+        {
+          "k": 25,
+          "x": [
+            0.4098711385043752,
+            33.771267500169465,
+            2.5107637857166476,
+            3.6131500948102406,
+            338.77679286427326,
+            308.8339245978214
+          ],
+          "estimate": [
+            0.40711312113836723,
+            33.76402383024185,
+            2.5154264806287956,
+            3.622635629074896,
+            338.88892475839396,
+            308.81721406653406
+          ],
+          "y": [
+            338.73093478228196,
+            308.30461708791194
+          ],
+          "mw": 900.0,
+          "cost": 0.34761155427392987,
+          "thermal_violation": 0,
+          "control_ms": 32.953629000076035,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.7112548753431
+        },
+        {
+          "k": 26,
+          "x": [
+            0.4086093670614852,
+            33.772873931398784,
+            2.5106049558665293,
+            3.615113662625604,
+            338.8284763535857,
+            308.4848912443237
+          ],
+          "estimate": [
+            0.40700196013577566,
+            33.76859812811522,
+            2.5143708643120837,
+            3.6234660272499895,
+            338.79538744572517,
+            308.46147061553427
+          ],
+          "y": [
+            338.7489029678252,
+            308.262666322505
+          ],
+          "mw": 900.0,
+          "cost": 0.24667302901693583,
+          "thermal_violation": 0,
+          "control_ms": 37.107447999915166,
+          "index": 39,
+          "fallback": 0,
+          "predicted_peak": 340.61831043454066
+        },
+        {
+          "k": 27,
+          "x": [
+            0.4027108566665824,
+            33.760166160574975,
+            2.5153524158889713,
+            3.616890947919914,
+            339.50601695704864,
+            309.42788644188664
+          ],
+          "estimate": [
+            0.3998706381029953,
+            33.764111019088745,
+            2.51858719330027,
+            3.625154725461791,
+            339.50595812481697,
+            309.54484706074726
+          ],
+          "y": [
+            339.7006709466477,
+            309.5476363071922
+          ],
+          "mw": 453.6,
+          "cost": 0.09253867335945412,
+          "thermal_violation": 0,
+          "control_ms": 31.749622999996063,
+          "index": 30,
+          "fallback": 0,
+          "predicted_peak": 340.6455103973733
+        },
+        {
+          "k": 28,
+          "x": [
+            0.39352820362116275,
+            33.7443253110278,
+            2.5236019150518376,
+            3.6185010494064507,
+            339.24426392686826,
+            308.9181323028953
+          ],
+          "estimate": [
+            0.39304575897551625,
+            33.76056345993039,
+            2.5239271504346465,
+            3.6260923487331467,
+            339.48231345882164,
+            309.09908521623544
+          ],
+          "y": [
+            339.4172522171519,
+            309.31589099886423
+          ],
+          "mw": 900.0,
+          "cost": 0.07142555158427075,
+          "thermal_violation": 0,
+          "control_ms": 36.50581100009731,
+          "index": 41,
+          "fallback": 0,
+          "predicted_peak": 340.4319372540384
+        },
+        {
+          "k": 29,
+          "x": [
+            0.3958137502391603,
+            33.750532456143986,
+            2.5198995432714364,
+            3.6199596285732136,
+            339.14791155350696,
+            307.54231523910414
+          ],
+          "estimate": [
+            0.3881857847214572,
+            33.7576476916497,
+            2.527899787533707,
+            3.6266238630688274,
+            339.5682728817381,
+            307.62703996448175
+          ],
+          "y": [
+            339.99852658707704,
+            307.3536133118391
+          ],
+          "mw": 1200.0,
+          "cost": 0.09747288935406462,
+          "thermal_violation": 0,
+          "control_ms": 39.9707890001082,
+          "index": 55,
+          "fallback": 0,
+          "predicted_peak": 340.327207635873
+        },
+        {
+          "k": 30,
+          "x": [
+            0.3984563422006474,
+            33.76158105862579,
+            2.516411035119156,
+            3.6212804285372977,
+            338.7489163959326,
+            306.36882756092973
+          ],
+          "estimate": [
+            0.3927006772490778,
+            33.76361596278641,
+            2.522283237941729,
+            3.6274814668371036,
+            338.9198891288034,
+            306.4829139580568
+          ],
+          "y": [
+            338.52811613651016,
+            306.53827365197105
+          ],
+          "mw": 1200.0,
+          "cost": 0.35919101590509794,
+          "thermal_violation": 0,
+          "control_ms": 32.251547999749164,
+          "index": 55,
+          "fallback": 0,
+          "predicted_peak": 340.0870024869648
+        },
+        {
+          "k": 31,
+          "x": [
+            0.4004895625354213,
+            33.77169492947091,
+            2.51397957193531,
+            3.622475650035769,
+            339.1484873931981,
+            307.84334294777693
+          ],
+          "estimate": [
+            0.3947750558578334,
+            33.769090384466736,
+            2.519441817412998,
+            3.6280074306530032,
+            339.3048396765007,
+            307.8227827275141
+          ],
+          "y": [
+            339.3600115644657,
+            308.27634635669335
+          ],
+          "mw": 453.6,
+          "cost": 0.1641743561009814,
+          "thermal_violation": 0,
+          "control_ms": 41.448388999924646,
+          "index": 30,
+          "fallback": 0,
+          "predicted_peak": 340.77920154431257
+        }
+      ]
+    }
+  ],
+  "horizon": 9,
+  "schedules": [
+    [
+      250.0,
+      250.0,
+      250.0
+    ],
+    [
+      250.0,
+      250.0,
+      453.6
+    ],
+    [
+      250.0,
+      250.0,
+      900.0
+    ],
+    [
+      250.0,
+      250.0,
+      1200.0
+    ],
+    [
+      250.0,
+      453.6,
+      250.0
+    ],
+    [
+      250.0,
+      453.6,
+      453.6
+    ],
+    [
+      250.0,
+      453.6,
+      900.0
+    ],
+    [
+      250.0,
+      453.6,
+      1200.0
+    ],
+    [
+      250.0,
+      900.0,
+      250.0
+    ],
+    [
+      250.0,
+      900.0,
+      453.6
+    ],
+    [
+      250.0,
+      900.0,
+      900.0
+    ],
+    [
+      250.0,
+      900.0,
+      1200.0
+    ],
+    [
+      250.0,
+      1200.0,
+      250.0
+    ],
+    [
+      250.0,
+      1200.0,
+      453.6
+    ],
+    [
+      250.0,
+      1200.0,
+      900.0
+    ],
+    [
+      250.0,
+      1200.0,
+      1200.0
+    ],
+    [
+      453.6,
+      250.0,
+      250.0
+    ],
+    [
+      453.6,
+      250.0,
+      453.6
+    ],
+    [
+      453.6,
+      250.0,
+      900.0
+    ],
+    [
+      453.6,
+      250.0,
+      1200.0
+    ],
+    [
+      453.6,
+      453.6,
+      250.0
+    ],
+    [
+      453.6,
+      453.6,
+      453.6
+    ],
+    [
+      453.6,
+      453.6,
+      900.0
+    ],
+    [
+      453.6,
+      453.6,
+      1200.0
+    ],
+    [
+      453.6,
+      900.0,
+      250.0
+    ],
+    [
+      453.6,
+      900.0,
+      453.6
+    ],
+    [
+      453.6,
+      900.0,
+      900.0
+    ],
+    [
+      453.6,
+      900.0,
+      1200.0
+    ],
+    [
+      453.6,
+      1200.0,
+      250.0
+    ],
+    [
+      453.6,
+      1200.0,
+      453.6
+    ],
+    [
+      453.6,
+      1200.0,
+      900.0
+    ],
+    [
+      453.6,
+      1200.0,
+      1200.0
+    ],
+    [
+      900.0,
+      250.0,
+      250.0
+    ],
+    [
+      900.0,
+      250.0,
+      453.6
+    ],
+    [
+      900.0,
+      250.0,
+      900.0
+    ],
+    [
+      900.0,
+      250.0,
+      1200.0
+    ],
+    [
+      900.0,
+      453.6,
+      250.0
+    ],
+    [
+      900.0,
+      453.6,
+      453.6
+    ],
+    [
+      900.0,
+      453.6,
+      900.0
+    ],
+    [
+      900.0,
+      453.6,
+      1200.0
+    ],
+    [
+      900.0,
+      900.0,
+      250.0
+    ],
+    [
+      900.0,
+      900.0,
+      453.6
+    ],
+    [
+      900.0,
+      900.0,
+      900.0
+    ],
+    [
+      900.0,
+      900.0,
+      1200.0
+    ],
+    [
+      900.0,
+      1200.0,
+      250.0
+    ],
+    [
+      900.0,
+      1200.0,
+      453.6
+    ],
+    [
+      900.0,
+      1200.0,
+      900.0
+    ],
+    [
+      900.0,
+      1200.0,
+      1200.0
+    ],
+    [
+      1200.0,
+      250.0,
+      250.0
+    ],
+    [
+      1200.0,
+      250.0,
+      453.6
+    ],
+    [
+      1200.0,
+      250.0,
+      900.0
+    ],
+    [
+      1200.0,
+      250.0,
+      1200.0
+    ],
+    [
+      1200.0,
+      453.6,
+      250.0
+    ],
+    [
+      1200.0,
+      453.6,
+      453.6
+    ],
+    [
+      1200.0,
+      453.6,
+      900.0
+    ],
+    [
+      1200.0,
+      453.6,
+      1200.0
+    ],
+    [
+      1200.0,
+      900.0,
+      250.0
+    ],
+    [
+      1200.0,
+      900.0,
+      453.6
+    ],
+    [
+      1200.0,
+      900.0,
+      900.0
+    ],
+    [
+      1200.0,
+      900.0,
+      1200.0
+    ],
+    [
+      1200.0,
+      1200.0,
+      250.0
+    ],
+    [
+      1200.0,
+      1200.0,
+      453.6
+    ],
+    [
+      1200.0,
+      1200.0,
+      900.0
+    ],
+    [
+      1200.0,
+      1200.0,
+      1200.0
+    ]
+  ],
+  "steps": 32,
+  "paired": "Identical initial state and sensor/process noise; policy-dependent closed-loop plant trajectories",
+  "limitation": "Finite candidate NMPC, 9-step horizon; no global optimum, no hardware; 9 CC-quantile scenarios."
+}

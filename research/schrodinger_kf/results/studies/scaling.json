@@ -1,0 +1,252 @@
+[
+  {
+    "n": 64,
+    "method": "M0",
+    "seconds": 0.18950308599960408,
+    "peak_traced_MiB": 0.06966686248779297,
+    "update_mean_ms": 17.74739399994966,
+    "p99_ms": 23.732081849584574,
+    "failure": null,
+    "headroom_vs_54s": 2275.400883169685
+  },
+  {
+    "n": 64,
+    "method": "M1",
+    "seconds": 0.23369898700002523,
+    "peak_traced_MiB": 0.066497802734375,
+    "update_mean_ms": 20.393949999970573,
+    "p99_ms": 38.49486229989907,
+    "failure": null,
+    "headroom_vs_54s": 1402.7845996514081
+  },
+  {
+    "n": 64,
+    "method": "M2",
+    "seconds": 0.23728938199974436,
+    "peak_traced_MiB": 0.062652587890625,
+    "update_mean_ms": 16.24673133331574,
+    "p99_ms": 24.39619700012372,
+    "failure": null,
+    "headroom_vs_54s": 2213.4597453745005
+  },
+  {
+    "n": 64,
+    "method": "M3",
+    "seconds": 0.17298210199987807,
+    "peak_traced_MiB": 0.3529529571533203,
+    "update_mean_ms": 18.88339216672345,
+    "p99_ms": 28.50324720000117,
+    "failure": null,
+    "headroom_vs_54s": 1894.5209863666967
+  },
+  {
+    "n": 64,
+    "method": "M4",
+    "seconds": 0.19992216599985113,
+    "peak_traced_MiB": 0.18352413177490234,
+    "update_mean_ms": 22.74233633329459,
+    "p99_ms": 25.973758250120227,
+    "failure": null,
+    "headroom_vs_54s": 2079.021429243881
+  },
+  {
+    "n": 128,
+    "method": "M0",
+    "seconds": 0.130227460000242,
+    "peak_traced_MiB": 0.1595172882080078,
+    "update_mean_ms": 11.377508500193775,
+    "p99_ms": 12.723682250066304,
+    "failure": null,
+    "headroom_vs_54s": 4244.054428482651
+  },
+  {
+    "n": 128,
+    "method": "M1",
+    "seconds": 0.1353384629996981,
+    "peak_traced_MiB": 0.1663379669189453,
+    "update_mean_ms": 12.087247666765203,
+    "p99_ms": 12.636301300085506,
+    "failure": null,
+    "headroom_vs_54s": 4273.402376028704
+  },
+  {
+    "n": 128,
+    "method": "M2",
+    "seconds": 0.14149731499992413,
+    "peak_traced_MiB": 0.1659832000732422,
+    "update_mean_ms": 13.29214666657208,
+    "p99_ms": 15.860320999831856,
+    "failure": null,
+    "headroom_vs_54s": 3404.7230191981917
+  },
+  {
+    "n": 128,
+    "method": "M3",
+    "seconds": 0.21040992600001118,
+    "peak_traced_MiB": 1.3238897323608398,
+    "update_mean_ms": 24.337814833415905,
+    "p99_ms": 40.99761340025907,
+    "failure": null,
+    "headroom_vs_54s": 1317.1498416944135
+  },
+  {
+    "n": 128,
+    "method": "M4",
+    "seconds": 0.26652711299993825,
+    "peak_traced_MiB": 0.5223379135131836,
+    "update_mean_ms": 33.82351550006509,
+    "p99_ms": 36.833171249963925,
+    "failure": null,
+    "headroom_vs_54s": 1466.0697997882246
+  },
+  {
+    "n": 256,
+    "method": "M0",
+    "seconds": 0.12754552800015517,
+    "peak_traced_MiB": 0.5479192733764648,
+    "update_mean_ms": 10.906898333284213,
+    "p99_ms": 11.171421549897786,
+    "failure": null,
+    "headroom_vs_54s": 4833.762628937235
+  },
+  {
+    "n": 256,
+    "method": "M1",
+    "seconds": 0.1442583339999146,
+    "peak_traced_MiB": 0.5630006790161133,
+    "update_mean_ms": 13.22869799999656,
+    "p99_ms": 16.438549549934578,
+    "failure": null,
+    "headroom_vs_54s": 3284.9613547695826
+  },
+  {
+    "n": 256,
+    "method": "M2",
+    "seconds": 0.14094688900013352,
+    "peak_traced_MiB": 0.5627317428588867,
+    "update_mean_ms": 12.59377466673565,
+    "p99_ms": 13.861195400158977,
+    "failure": null,
+    "headroom_vs_54s": 3895.767893105429
+  },
+  {
+    "n": 256,
+    "method": "M3",
+    "seconds": 0.33947680199980823,
+    "peak_traced_MiB": 5.165072441101074,
+    "update_mean_ms": 45.63403283327716,
+    "p99_ms": 103.21534830006841,
+    "failure": null,
+    "headroom_vs_54s": 523.1780049127074
+  },
+  {
+    "n": 256,
+    "method": "M4",
+    "seconds": 0.6234706929999447,
+    "peak_traced_MiB": 1.1851215362548828,
+    "update_mean_ms": 92.91863683332242,
+    "p99_ms": 95.20957329975772,
+    "failure": null,
+    "headroom_vs_54s": 567.1698562284956
+  },
+  {
+    "n": 512,
+    "method": "M0",
+    "seconds": 0.1393483980000383,
+    "peak_traced_MiB": 2.0768051147460938,
+    "update_mean_ms": 11.563075999977931,
+    "p99_ms": 12.415660949841367,
+    "failure": null,
+    "headroom_vs_54s": 4349.345573961566
+  },
+  {
+    "n": 512,
+    "method": "M1",
+    "seconds": 0.15166352500000357,
+    "peak_traced_MiB": 2.1053552627563477,
+    "update_mean_ms": 14.291248500057918,
+    "p99_ms": 15.477929550183944,
+    "failure": null,
+    "headroom_vs_54s": 3488.8387251612894
+  },
+  {
+    "n": 512,
+    "method": "M2",
+    "seconds": 0.15408720100003848,
+    "peak_traced_MiB": 2.105257034301758,
+    "update_mean_ms": 13.928950999873754,
+    "p99_ms": 14.84867839974413,
+    "failure": null,
+    "headroom_vs_54s": 3636.6872893503114
+  },
+  {
+    "n": 512,
+    "method": "M3",
+    "seconds": 1.2795071549999193,
+    "peak_traced_MiB": 20.4409122467041,
+    "update_mean_ms": 196.56772449987633,
+    "p99_ms": 457.61965139993214,
+    "failure": null,
+    "headroom_vs_54s": 118.00192547414717
+  },
+  {
+    "n": 512,
+    "method": "M4",
+    "seconds": 1.572708631000296,
+    "peak_traced_MiB": 2.2819223403930664,
+    "update_mean_ms": 250.43053666672677,
+    "p99_ms": 287.6756334502943,
+    "failure": null,
+    "headroom_vs_54s": 187.71141424923752
+  },
+  {
+    "n": 1024,
+    "method": "M0",
+    "seconds": 0.14691067900002963,
+    "peak_traced_MiB": 8.135778427124023,
+    "update_mean_ms": 11.69323350003045,
+    "p99_ms": 14.299988499988103,
+    "failure": null,
+    "headroom_vs_54s": 3776.2268130526763
+  },
+  {
+    "n": 1024,
+    "method": "M1",
+    "seconds": 0.18274494199977198,
+    "peak_traced_MiB": 8.191296577453613,
+    "update_mean_ms": 17.517421833417757,
+    "p99_ms": 20.33262930017372,
+    "failure": null,
+    "headroom_vs_54s": 2655.829661908931
+  },
+  {
+    "n": 1024,
+    "method": "M2",
+    "seconds": 0.16945022599975346,
+    "peak_traced_MiB": 8.19110107421875,
+    "update_mean_ms": 15.784730500172373,
+    "p99_ms": 17.033621450264036,
+    "failure": null,
+    "headroom_vs_54s": 3170.2007795390423
+  },
+  {
+    "n": 1024,
+    "method": "M3",
+    "seconds": 2.796819986999708,
+    "peak_traced_MiB": 81.36781215667725,
+    "update_mean_ms": 452.4980211665479,
+    "p99_ms": 1216.4047900999324,
+    "failure": null,
+    "headroom_vs_54s": 44.39311686331298
+  },
+  {
+    "n": 1024,
+    "method": "M4",
+    "seconds": 5.160376859999815,
+    "peak_traced_MiB": 8.194358825683594,
+    "update_mean_ms": 845.2719093332538,
+    "p99_ms": 870.2719115501623,
+    "failure": null,
+    "headroom_vs_54s": 62.0495724190536
+  }
+]

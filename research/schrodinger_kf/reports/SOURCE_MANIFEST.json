@@ -1,0 +1,42 @@
+{
+  "vendor/pg_historical_reference.py": {
+    "size": 4543,
+    "sha256": "a48fad06c9f2f59a336ea6c9f099f8f788f1696b965a432a70163052b6b340b4"
+  },
+  "vendor/nake_cstr.py": {
+    "size": 3858,
+    "sha256": "0250d6de3b5e5071d4c25dc11a08611701477da37317f14dbf84a301051fe71d"
+  },
+  "vendor/multiverse_original.py": {
+    "size": 10796,
+    "sha256": "ffd2b1474c9239d48c71de816fd61f27249fcdd57b33746336821fb775753edf"
+  },
+  "vendor/pg_modeloCT_2019.m": {
+    "size": 1142,
+    "sha256": "d7b785681794850a4b78c2b8cfab2151f71b35b4d389efbf77383ecd8c10d086"
+  },
+  "vendor/upstream_fixture.json": {
+    "size": 2569,
+    "sha256": "5ef1ca4bb7a5575a567bee94e233155338713fc7ba19a1dbb1e2afe152dd81e0"
+  },
+  "vendor/processlab/controller.ts": {
+    "size": 3275,
+    "sha256": "372c162ba5318488e596b21318c3e0f4ab7c90623b8edcdbca832da56be705bc"
+  },
+  "vendor/processlab/LICENSE": {
+    "size": 1093,
+    "sha256": "3f3cc677a5d5ce4b0949cdc618f3383697a30c245efb93c3e289ceda8dacf526"
+  },
+  "vendor/processlab/model.ts": {
+    "size": 3399,
+    "sha256": "0981dbcf9443e43d64d0b2412fa3163428459c553584749d4539d11bed27436a"
+  },
+  "vendor/processlab/observer.ts": {
+    "size": 2891,
+    "sha256": "b9b638f74eb6a45afb98da29f7685e53b9544c03d287c6bee129933f8f2fe4c8"
+  },
+  "vendor/processlab/matrix.ts": {
+    "size": 1241,
+    "sha256": "a5c7de0af500e044c52252f774f62bb704e8cb14ea7c0b218b844896b60f4c18"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "config": {
+    "out": "results/physics_fixed",
+    "trials": 20,
+    "start_seed": 2000,
+    "steps": 32,
+    "particles": 128,
+    "epsilon": 0.02,
+    "bridge_steps": 64,
+    "threshold": null,
+    "scenarios": [
+      "physics"
+    ],
+    "methods": [
+      "M0",
+      "M1",
+      "M2",
+      "M3",
+      "M4",
+      "M5"
+    ],
+    "joint": false,
+    "naive": false
+  },
+  "model": {
+    "variant": "ProcessLab main / literal TABLED",
+    "commit": "f4444d4c238291b8633743930249ee387ad94541",
+    "parameters": {
+      "E": 75362.4,
+      "R": 8.314,
+      "k0": 16960000000000.0,
+      "heat": 91556.9,
+      "V": 1.89,
+      "Vt": 1.1,
+      "UA": 30385.6
+    },
+    "cp": [
+      146.5,
+      75.4,
+      192.6,
+      81.6
+    ],
+    "rho": [
+      14.8,
+      55.3,
+      24.7
+    ],
+    "input": [
+      36.3,
+      453.6,
+      45.4,
+      453.6,
+      297.0,
+      289.0
+    ],
+    "equilibria": [
+      [
+        0.36613395414512834,
+        33.76806136064201,
+        2.539425511121673,
+        3.633950405595394,
+        340.3034893843502,
+        319.2023225240006
+      ]
+    ],
+    "dt_h": 0.015,
+    "dt_s": 54.0,
+    "scales": [
+      1.0,
+      40.0,
+      3.0,
+      4.0,
+      10.0,
+      10.0
+    ],
+    "residual": [
+      0.0,
+      -2.4868995751603507e-14,
+      0.0,
+      0.0,
+      2.911130315762968e-13,
+      5.0763432040214176e-14
+    ],
+    "historical_equilibrium_K": 332.3336,
+    "historical_heat_kJ_per_kmol": 83736.0,
+    "historical_source_commit": "88c40e65204fa6aa5bed02cc64fb15be79a53bb1"
+  },
+  "seconds": 54.19392963400014,
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "numpy": "2.3.5",
+  "experiment": "Synthetic CSTR; no plant data",
+  "split": "test",
+  "failed": [],
+  "dataset_hashes": {
+    "physics_2011.npz": "1f71afd385ec1dd9360fcf802f1ebc6bce11951b78f5973c9202d5d223a8cf82",
+    "physics_2009.npz": "f989e4705d434fe375a4b51ed824edf82c7de9cce7115813e1dd2f14318642ce",
+    "physics_2006.npz": "02def4a0a567e950ca1cdb2aaecd3899ac89bd80836d76d2a46b4a987b8d5f70",
+    "physics_2014.npz": "ac2bbe5b87a77afe5b72b62ee1ddbcfc31ebbf62c24fbbd7c65fa763415e43e7",
+    "physics_2018.npz": "4725e25335501b9d86fb9cb50ff3985c08d17f5f478f33b21ea9ad244770df67",
+    "physics_2019.npz": "36b1afae75ad8f34ed8cd1760118f17940ad874220f73d2067beb28712773332",
+    "physics_2012.npz": "1dc982dd02f5b57bf36d007d66dfbe73f2beb69dd654c0d6670d3415a60658b7",
+    "physics_2010.npz": "1918817d9b63dd67c48f2c8c95a83cac977b3b77765d158e8c843e24082aec2d",
+    "physics_2002.npz": "ac107da9df2874efb283298a9a3d6c19c250b6fc31ed5b3642041007a94472ef",
+    "physics_2005.npz": "b7faad8bdd765d870cbc3d45d6a44bd561d9dee289fe6cee36f4b65035e3339a",
+    "physics_2015.npz": "b43634c965dee3bc2fb27a5677e4585c2306ad1dc066f63acbb5f901b4b921a1",
+    "physics_2000.npz": "cd1a24bb9ace2a8b61e230b62145ac177912c57a122e8b1e75e916e7d4a1a3a9",
+    "physics_2003.npz": "e4560070743fc63c8d3f29f6d9122395c879a897498ddf128588b79cd11351df",
+    "physics_2008.npz": "0545cd0708a26e0d94f44ed0f1793ace6433e7f91e10a294ca39478ff13ec88e",
+    "physics_2016.npz": "0f7c96c883a8ceab00f30efc1d4aeefbd3c827af2abbe4fe3e56f279e9fe2617",
+    "physics_2007.npz": "eaf49c9ae278d9991298ab249eca35612b50ec136d396a75eb291d38397988f9",
+    "physics_2004.npz": "281a648430b7dac450c1d346f274de516d3e0b7fa6e72d3d810dcf9dea96f86d",
+    "physics_2017.npz": "2b114fcad835511a0b46deafce2b442b9e3312856edb13d2f40817f9ccb30d78",
+    "physics_2013.npz": "9147a4b264ff11e82a9d60e2f48fbc063d958ea721073900e3f40b9d1934e7b4",
+    "physics_2001.npz": "876b5ab70b8aa24f399b5cbe0905b5231273259c18ae1cc1b816f0b988fbc307"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "study": "synthetic",
+  "status": "interrupted",
+  "error": "Sinkhorn marginal tolerance not reached",
+  "particles": 512,
+  "epsilon": 0.01,
+  "max_iter": 4000,
+  "action": "Logged failure; revised study records fallback and uses explicit epsilon=.05; raw failure not treated as successful transport."
+}

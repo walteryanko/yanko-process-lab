@@ -1,0 +1,43 @@
+{
+  "panels": [
+    {
+      "name": "reactor",
+      "visible": true,
+      "canvases": 2
+    },
+    {
+      "name": "probability",
+      "visible": true,
+      "canvases": 2
+    },
+    {
+      "name": "transport",
+      "visible": true,
+      "canvases": 2
+    },
+    {
+      "name": "arena",
+      "visible": true,
+      "canvases": 1
+    },
+    {
+      "name": "multiverse",
+      "visible": true,
+      "canvases": 2
+    },
+    {
+      "name": "benchmarks",
+      "visible": true,
+      "canvases": 1
+    },
+    {
+      "name": "control",
+      "visible": true,
+      "canvases": 4
+    }
+  ],
+  "console_errors": [],
+  "mobile_horizontal_overflow": false,
+  "export": "passed",
+  "live_engine_seed": 4242
+}
