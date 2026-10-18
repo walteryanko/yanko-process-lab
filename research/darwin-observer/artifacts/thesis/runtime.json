@@ -1,0 +1,43 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "numba": "0.68.0",
+    "llvmlite": "0.50.0",
+    "casadi": "3.7.2",
+    "matplotlib": "3.10.8",
+    "reportlab": "4.4.9",
+    "sympy": "1.14.0"
+  },
+  "tests": {
+    "passed": 36,
+    "failed": 0,
+    "log": "....................................                                     [100%]\n36 passed in 5.39s\n"
+  },
+  "numerical_source_sha256": {
+    "darwin/__init__.py": "38f9dc09ba98233005957a10f728e0ff22fe3405b972e926dd5b5dd6520a9d18",
+    "darwin/ablations.py": "40d1ff055af5bd5a122afdefa9d197fabb3f6e2ccdc06c5cdccd48475c50687a",
+    "darwin/blind.py": "643c0193967dad42c58efe1dabce4c796db642db0b2ef6ecb04716ff14155f54",
+    "darwin/control.py": "b10c372565b8800ec76bdddd1570ae9c7fec44b11ac5edfb5970047ba7d8eb47",
+    "darwin/dashboard.py": "a7b15fdb48cda7d2677276874a17614fade64a615f742a897e061263fae7a88e",
+    "darwin/data.py": "1a34c1c98fd98792a9620539b653dbdfe98900d7a4575ce26316c320cdb4a6e3",
+    "darwin/detection.py": "49651b464ad39b94018d8d4a6e19818763fad3f28a9d1056b8b0b0dd0d8d517e",
+    "darwin/discovery.py": "ff50e8402859bb3b48ed69f5f7c7b52a5b88c1f50575fcd4cfd65d79b6098a33",
+    "darwin/experiments.py": "42321120e4fe4d48c72e031b65e57be17109442261e81ff46645e8594e82471e",
+    "darwin/identification.py": "ba2aa247d6359cfea0a61a89ab44a4bdd16eefe6a321ae70f3df3eeb62631c96",
+    "darwin/metrics.py": "1cd2dd8491c66a28b84816a0fb6e4c56e94b221fd3071613c32d46646a202e34",
+    "darwin/observers.py": "40d9b1fd7117ecd61f1b18c0b4cda41b8a78cf1bdf83b87060d07b591e8f7c10",
+    "darwin/physics.py": "59bd98b3addbc733911622467a6907373f70ba662f322dca1a4a86ca7309140d",
+    "darwin/reporting.py": "69742ab8cfb25bd3caea05102a6dcb872da57022090808b13e2aac41dda5cc2e",
+    "darwin/residual.py": "39c8b44f40addc0cee2ffd6839d183fb886ee858a90a4e2dc83780c92d1682c8",
+    "darwin/symbolic.py": "e73e04b03fac708e0183054f4cb87a65e1a712eb672ec2cd8970db406a5901aa",
+    "darwin/thesis_cases.py": "72349df8d7f5f9f7df59fb8f0d456982524fb95259181c02905cd3181531e16d",
+    "darwin/thesis_control.py": "a75a26b1e14d63a6ce30ea2f1d798683b0a1b7b40ca907098e36f2593597030a",
+    "darwin/thesis_experiments.py": "7c33edd8dc1afc6aeb18256be68a01f46457b7923e02d55a06a068764ecc1c2b",
+    "darwin/thesis_reporting.py": "268c405220e7beb4fede88acfb315604cbcd6481473bf2159a8a2da73ee12657",
+    "darwin/truth.py": "8a1c824bbbe17adf4f0df58f3b46124da011e473720d05bd3d28de85e79c6119"
+  },
+  "notes": "Main controller costs executed with CasADi-generated C, gcc -O3; scientific calculations use CPU double precision."
+}

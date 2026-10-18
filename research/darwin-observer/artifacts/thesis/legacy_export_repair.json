@@ -1,0 +1,5 @@
+{
+  "reason": "Pre-existing estimation.csv.gz failed decompression; regenerated all 12600 original rows from frozen models without refitting.",
+  "maximum_absolute_difference_in_mean_CC_RMSE": 2.5914811963012596e-11,
+  "new_gzip_sha256": "1d8e565360649c6d5651ab82077eb5d70306d7da39d472a2079529e7f5af7804"
+}

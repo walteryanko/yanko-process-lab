@@ -1,0 +1,38 @@
+{
+  "created_before_added_runs": true,
+  "scenario": {
+    "key": "OL_STEADY",
+    "title": "Estimação em regime permanente",
+    "kind": "open",
+    "hours": 3.0,
+    "events": [],
+    "figures": "28",
+    "pages": "61",
+    "startup": false,
+    "note": "Ensaio explícito de regime permanente; mesmos ruídos e covariâncias dos demais cenários."
+  },
+  "n": 20,
+  "reason": "Figure 28 steady-state observer experiment explicitly added after checking the page; no tuning changed.",
+  "seeds": [
+    428000,
+    428001,
+    428002,
+    428003,
+    428004,
+    428005,
+    428006,
+    428007,
+    428008,
+    428009,
+    428010,
+    428011,
+    428012,
+    428013,
+    428014,
+    428015,
+    428016,
+    428017,
+    428018,
+    428019
+  ]
+}

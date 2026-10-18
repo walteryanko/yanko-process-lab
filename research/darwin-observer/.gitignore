@@ -8,3 +8,12 @@ artifacts/main/datasets/
 artifacts/main/blind_decisions/
 artifacts/main/control_traces/
 *.zip
+artifacts/export_repair/
+artifacts/thesis/trajectories/
+artifacts/thesis/commissioning/
+artifacts/thesis/compiled/
+artifacts/thesis/metrics_partial.csv
+artifacts/thesis/*.log
+artifacts/thesis/pilot_metrics.csv
+reports/thesis/figures/
+reports/thesis/*.pdf

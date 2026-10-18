@@ -1,0 +1,509 @@
+{
+  "version": "1.1.0-thesis",
+  "created_before_main_campaign": true,
+  "scenarios": [
+    {
+      "key": "OL_START",
+      "title": "Partida em malha aberta",
+      "kind": "open",
+      "hours": 3.0,
+      "events": [],
+      "figures": "19, 27",
+      "pages": "51, 61",
+      "startup": true,
+      "note": ""
+    },
+    {
+      "key": "OL_FA",
+      "title": "Malha aberta: FA ±10%",
+      "kind": "open",
+      "hours": 17.0,
+      "events": [
+        [
+          1.0,
+          "FA",
+          0.9
+        ],
+        [
+          5.0,
+          "FA",
+          1.0
+        ],
+        [
+          9.0,
+          "FA",
+          1.1
+        ],
+        [
+          13.0,
+          "FA",
+          1.0
+        ]
+      ],
+      "figures": "20",
+      "pages": "52",
+      "startup": false,
+      "note": ""
+    },
+    {
+      "key": "OL_FB",
+      "title": "Malha aberta: FB ±10%",
+      "kind": "open",
+      "hours": 17.0,
+      "events": [
+        [
+          1.0,
+          "FB",
+          1.1
+        ],
+        [
+          5.0,
+          "FB",
+          1.0
+        ],
+        [
+          9.0,
+          "FB",
+          0.9
+        ],
+        [
+          13.0,
+          "FB",
+          1.0
+        ]
+      ],
+      "figures": "21",
+      "pages": "53",
+      "startup": false,
+      "note": ""
+    },
+    {
+      "key": "OL_FM",
+      "title": "Malha aberta: FM ±50%",
+      "kind": "open",
+      "hours": 17.0,
+      "events": [
+        [
+          1.0,
+          "FM",
+          1.5
+        ],
+        [
+          5.0,
+          "FM",
+          1.0
+        ],
+        [
+          9.0,
+          "FM",
+          0.5
+        ],
+        [
+          13.0,
+          "FM",
+          1.0
+        ]
+      ],
+      "figures": "22",
+      "pages": "54",
+      "startup": false,
+      "note": ""
+    },
+    {
+      "key": "OL_MW",
+      "title": "Malha aberta: mw ±50%",
+      "kind": "open",
+      "hours": 17.0,
+      "events": [
+        [
+          1.0,
+          "mw",
+          1.5
+        ],
+        [
+          5.0,
+          "mw",
+          1.0
+        ],
+        [
+          9.0,
+          "mw",
+          0.5
+        ],
+        [
+          13.0,
+          "mw",
+          1.0
+        ]
+      ],
+      "figures": "23",
+      "pages": "55",
+      "startup": false,
+      "note": ""
+    },
+    {
+      "key": "OL_TF",
+      "title": "Malha aberta: T0 ±10% em °F",
+      "kind": "open",
+      "hours": 17.0,
+      "events": [
+        [
+          1.0,
+          "Tfeed",
+          0.9
+        ],
+        [
+          5.0,
+          "Tfeed",
+          1.0
+        ],
+        [
+          9.0,
+          "Tfeed",
+          1.1
+        ],
+        [
+          13.0,
+          "Tfeed",
+          1.0
+        ]
+      ],
+      "figures": "24",
+      "pages": "56",
+      "startup": false,
+      "note": ""
+    },
+    {
+      "key": "OL_TC",
+      "title": "Malha aberta: Ta1 ±20% em °F",
+      "kind": "open",
+      "hours": 17.0,
+      "events": [
+        [
+          1.0,
+          "Tcool",
+          1.2
+        ],
+        [
+          5.0,
+          "Tcool",
+          1.0
+        ],
+        [
+          9.0,
+          "Tcool",
+          0.8
+        ],
+        [
+          13.0,
+          "Tcool",
+          1.0
+        ]
+      ],
+      "figures": "25",
+      "pages": "56-57",
+      "startup": false,
+      "note": "Eixo térmico da figura é inconsistente com Tcool=60°F documentado; prevalecem código, tabela e percentuais do texto."
+    },
+    {
+      "key": "REG_FA10",
+      "title": "Regulatório: FA −10% e retorno",
+      "kind": "regulatory",
+      "hours": 12.0,
+      "events": [
+        [
+          4.0,
+          "FA",
+          0.9
+        ],
+        [
+          8.0,
+          "FA",
+          1.0
+        ]
+      ],
+      "figures": "29",
+      "pages": "63",
+      "startup": false,
+      "note": ""
+    },
+    {
+      "key": "REG_FB10",
+      "title": "Regulatório: FB +10% e retorno",
+      "kind": "regulatory",
+      "hours": 12.0,
+      "events": [
+        [
+          4.0,
+          "FB",
+          1.1
+        ],
+        [
+          8.0,
+          "FB",
+          1.0
+        ]
+      ],
+      "figures": "30",
+      "pages": "63-64",
+      "startup": false,
+      "note": ""
+    },
+    {
+      "key": "REG_TF10",
+      "title": "Regulatório: T0 −10% em °F",
+      "kind": "regulatory",
+      "hours": 12.0,
+      "events": [
+        [
+          4.0,
+          "Tfeed",
+          0.9
+        ],
+        [
+          8.0,
+          "Tfeed",
+          1.0
+        ]
+      ],
+      "figures": "31",
+      "pages": "64",
+      "startup": false,
+      "note": ""
+    },
+    {
+      "key": "REG_TC20",
+      "title": "Regulatório: Ta1 −20% em °F",
+      "kind": "regulatory",
+      "hours": 12.0,
+      "events": [
+        [
+          4.0,
+          "Tcool",
+          0.8
+        ],
+        [
+          8.0,
+          "Tcool",
+          1.0
+        ]
+      ],
+      "figures": "32",
+      "pages": "65",
+      "startup": false,
+      "note": ""
+    },
+    {
+      "key": "SERVO_P10",
+      "title": "Servo: CC +10% e retorno",
+      "kind": "servo",
+      "hours": 12.0,
+      "events": [
+        [
+          4.0,
+          "SP",
+          1.1
+        ],
+        [
+          8.0,
+          "SP",
+          1.0
+        ]
+      ],
+      "figures": "33",
+      "pages": "65",
+      "startup": false,
+      "note": ""
+    },
+    {
+      "key": "REG_FA15",
+      "title": "Regulatório forte: FA −15%",
+      "kind": "regulatory",
+      "hours": 12.0,
+      "events": [
+        [
+          4.0,
+          "FA",
+          0.85
+        ],
+        [
+          8.0,
+          "FA",
+          1.0
+        ]
+      ],
+      "figures": "34",
+      "pages": "68-69",
+      "startup": false,
+      "note": ""
+    },
+    {
+      "key": "REG_TF30",
+      "title": "Regulatório forte: T0 −30% em °F",
+      "kind": "regulatory",
+      "hours": 12.0,
+      "events": [
+        [
+          4.0,
+          "Tfeed",
+          0.7
+        ],
+        [
+          8.0,
+          "Tfeed",
+          1.0
+        ]
+      ],
+      "figures": "35",
+      "pages": "69",
+      "startup": false,
+      "note": ""
+    },
+    {
+      "key": "SERVO_M20",
+      "title": "Servo forte: CC −20%",
+      "kind": "servo",
+      "hours": 12.0,
+      "events": [
+        [
+          4.0,
+          "SP",
+          0.8
+        ]
+      ],
+      "figures": "36",
+      "pages": "70",
+      "startup": false,
+      "note": ""
+    },
+    {
+      "key": "CL_START",
+      "title": "Partida com controle",
+      "kind": "startup",
+      "hours": 3.0,
+      "events": [],
+      "figures": "37, 38",
+      "pages": "71-72",
+      "startup": true,
+      "note": ""
+    },
+    {
+      "key": "SERVO_P20",
+      "title": "Servo térmico: CC +20% em 3 h",
+      "kind": "servo",
+      "hours": 6.0,
+      "events": [
+        [
+          3.0,
+          "SP",
+          1.2
+        ]
+      ],
+      "figures": "39",
+      "pages": "72",
+      "startup": false,
+      "note": "Amplitude +20% e instante 3 h lidos da referência tracejada da Figura 39; não numerados no parágrafo."
+    },
+    {
+      "key": "TUNING",
+      "title": "Sequência de sintonia do NMPC",
+      "kind": "combined",
+      "hours": 12.0,
+      "events": [
+        [
+          2.0,
+          "FA",
+          0.9
+        ],
+        [
+          4.0,
+          "FA",
+          1.0
+        ],
+        [
+          6.0,
+          "FA",
+          1.1
+        ],
+        [
+          8.0,
+          "FA",
+          1.0
+        ],
+        [
+          10.0,
+          "SP",
+          0.9
+        ]
+      ],
+      "figures": "Tabela 6",
+      "pages": "67-68",
+      "startup": false,
+      "note": ""
+    }
+  ],
+  "n": 20,
+  "methods": [
+    "UKF_Euler",
+    "UKF_RK4",
+    "Darwin"
+  ],
+  "controls": [
+    "none",
+    "soft penalty QR=1000"
+  ],
+  "primary_model": "complete historical SI transform",
+  "hidden_structural_mismatch": false,
+  "baseline_source_commit": "173f10932031e1b7b453bb77ad57a249889a75ab",
+  "Ts": 0.015,
+  "p": 57,
+  "m": 6,
+  "controller_integration_substeps": 1,
+  "controller_solver": "SciPy SLSQP with exact CasADi gradient",
+  "setpoint_preview": true,
+  "future_disturbance_preview": false,
+  "Qe": 0.8,
+  "Rdu": 0.2,
+  "Q_process": [
+    1.4410160043340606e-05,
+    1.4410160043340606e-05,
+    1.4410160043340606e-05,
+    6.221309480249935e-11,
+    0.010690000000000002,
+    0.0020408333333333333
+  ],
+  "R_measurement": [
+    0.5920447530864197,
+    0.34809999999999997
+  ],
+  "P0": [
+    0.0002565911688629025,
+    0.0002565911688629025,
+    0.0002565911688629025,
+    0.0002565911688629025,
+    3.08641975308642e-07,
+    3.08641975308642e-07
+  ],
+  "alpha": 0.001,
+  "input_noise_sd": [
+    0.36287389600000003,
+    4.535923700000001,
+    0.45359237,
+    0.0,
+    0.4166666666666667,
+    0.3333333333333333
+  ],
+  "input_noise_hold_h": 0.1,
+  "measurement_noise_hold_h": 0.015,
+  "thermal_limit_K": 344.26111111111106,
+  "thermal_limit_label": "160°F; dissertation rounded this to 344 K",
+  "noise_seed_formula": "410000 + scenario_index*1000 + replicate",
+  "metric_definitions": {
+    "RMSE_est": "sqrt(mean((estimated-state - true-state)^2)), complete trajectory including startup",
+    "RMSE_track_CC": "sqrt(mean((true CC - scheduled CC reference)^2))",
+    "IAE_track_CC": "trapezoidal integral of abs(true CC-reference) in kmol h/m3",
+    "IAE_est": "trapezoidal integral of abs(estimated-state - true-state)",
+    "thermal_violation": "fine plant integration, h above 160°F, no measurement-noise threshold"
+  },
+  "qualification": "Scenario reconstruction, not bitwise reproduction of MATLAB runs. Figure 25 temperature axis inconsistent; use archived 60°F nominal. Open-loop IAE tracks departure from nominal, not a controlled loop."
+}

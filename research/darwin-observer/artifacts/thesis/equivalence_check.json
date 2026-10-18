@@ -1,0 +1,22 @@
+{
+  "maximum_absolute_difference": 0.0,
+  "metrics": [
+    "RMSE_track_CC",
+    "IAE_track_CC",
+    "RMSE_est_CA",
+    "IAE_est_CA",
+    "RMSE_est_CB",
+    "IAE_est_CB",
+    "RMSE_est_CC",
+    "IAE_est_CC",
+    "RMSE_est_CM",
+    "IAE_est_CM",
+    "RMSE_est_T",
+    "IAE_est_T",
+    "RMSE_est_Tt",
+    "IAE_est_Tt",
+    "T_peak_K",
+    "T_above_limit_h"
+  ],
+  "paired_trials": 600
+}

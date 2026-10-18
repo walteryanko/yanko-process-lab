@@ -1,5 +1,9 @@
 # YCS Darwin-Observer Laboratory v1.0
 
+**Comparação com a dissertação (v1.1, 18/10/2026):** veja [THESIS_COMPARISON.md](THESIS_COMPARISON.md) para os 19 cenários, 1.800 simulações, gráficos completos e RMSE/IAE. Nesta campanha histórica o Darwin reteve H0 e coincidiu com o UKF RK4. Os ganhos sintéticos v1.0 abaixo pertencem a outro protocolo e não se aplicam automaticamente à dissertação.
+
+O pacote desta comparação contém as novas trajetórias em `artifacts/thesis/trajectories` e a galeria `reports/thesis/Graficos_Darwin_Dissertacao.html`. As trajetórias completas e o HTML independente da entrega v1.0 não estão incluídos; as instruções de v1.0 abaixo ficam como documentação do laboratório original.
+
 Laboratório científico local de descoberta restrita de erros de modelo em um CSTR de propilenoglicol. Dados e resultados são sintéticos, calculados por execução real. Python 3.11+, CPU, sem GPU ou APIs pagas.
 
 ## Abrir agora

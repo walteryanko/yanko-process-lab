@@ -8,7 +8,7 @@ from dataclasses import dataclass
 import numpy as np
 from scipy.optimize import least_squares
 from .physics import Model,BASE,NP,PARAM_NAMES,simulate
-from .observers import run_numeric
+from .observers import run_numeric,observe
 
 @dataclass(frozen=True)
 class Hypothesis:
@@ -39,33 +39,34 @@ HYPOTHESES=[
 LOW=np.array([-.55,-.7,-.8,-.6,-.7,-1.,-.6,-1.2,-.15,-.2,-3.,-3.,-3.,-.25,-5.])
 HIGH=-LOW
 
-def prediction(record,params):
+def prediction(record,params,variant=0,observer_options=None):
     # Initialization from a causal 0.30 h commissioning prefix. No validation
     # targets after this prefix are used to initialize or update the forecast.
     n=min(20,len(record.inputs))
-    init=run_numeric(record.inputs[:n],record.measurements[:n+1],params,record.dt)[0]
-    tail=simulate(init[-1],record.inputs[n:],params,record.dt,3)
+    init=observe(record.prefix(n),Model(params,variant=variant),**(observer_options or {}))['x']
+    tail=simulate(init[-1],record.inputs[n:],params,record.dt,3,variant)
     states=np.vstack([init[:-1],tail])
     out=states[:,4:]+params[10:12]
     out[:,1]+=params[12]*np.arange(len(out))*record.dt
     return out
 
-def residual_vector(records,params,burn=20,start=None,end=None):
+def residual_vector(records,params,burn=20,start=None,end=None,variant=0,observer_options=None):
     out=[]
     for rec in records:
-        yp=prediction(rec,params);z=rec.measurements
+        yp=prediction(rec,params,variant,observer_options);z=rec.measurements
         a=burn if start is None else start;b=len(z) if end is None else end
-        d=(yp[a:b]-z[a:b])/.2;mask=np.isfinite(z[a:b]);d=d[mask]
+        sigma=np.sqrt((observer_options or {}).get('measurement_variance',np.array([.04,.04])))
+        d=(yp[a:b]-z[a:b])/sigma;mask=np.isfinite(z[a:b]);d=d[mask]
         if not np.all(np.isfinite(d)):d=np.full(len(d),1e6)
         out.append(d)
     return np.concatenate(out)
 
-def fit(hyp,records,max_nfev=70,burn=20,initial=None):
+def fit(hyp,records,max_nfev=70,burn=20,initial=None,variant=0,observer_options=None):
     idx=list(hyp.indices);p=np.zeros(NP)
-    if not idx:return dict(model=Model(p,hyp.name),hypothesis=hyp,train_mse=float(np.mean(residual_vector(records,p,burn)**2)),success=True,nfev=0,identifiability=dict(rank=0,condition=1.,std=[],singular_values=[]))
+    if not idx:return dict(model=Model(p,hyp.name,variant),hypothesis=hyp,train_mse=float(np.mean(residual_vector(records,p,burn,variant=variant,observer_options=observer_options)**2)),success=True,nfev=0,identifiability=dict(rank=0,condition=1.,std=[],singular_values=[]))
     def fn(a):
         pp=np.zeros(NP);pp[idx]=a
-        return residual_vector(records,pp,burn)
+        return residual_vector(records,pp,burn,variant=variant,observer_options=observer_options)
     x0=np.zeros(len(idx)) if initial is None else np.clip(np.asarray(initial)[idx],LOW[idx]+1e-6,HIGH[idx]-1e-6)
     opt=least_squares(fn,x0,bounds=(LOW[idx],HIGH[idx]),max_nfev=max_nfev,loss='soft_l1',f_scale=2.,diff_step=2e-4,ftol=2e-6,xtol=2e-6,gtol=2e-5)
     p[idx]=opt.x
@@ -77,7 +78,7 @@ def fit(hyp,records,max_nfev=70,burn=20,initial=None):
     info=dict(rank=rank,condition=float(s[0]/max(s[-1],1e-12)),std=se.tolist(),singular_values=s.tolist(),
               parameters=[PARAM_NAMES[i] for i in idx],correlation=(cov/np.maximum(np.outer(se,se),1e-15)).tolist(),
               caveat='local, conditional on initial-state prior and model; not global uniqueness')
-    return dict(model=Model(p,hyp.name),hypothesis=hyp,train_mse=float(np.mean(opt.fun**2)),success=bool(opt.success),nfev=int(opt.nfev),identifiability=info)
+    return dict(model=Model(p,hyp.name,variant),hypothesis=hyp,train_mse=float(np.mean(opt.fun**2)),success=bool(opt.success),nfev=int(opt.nfev),identifiability=info)
 
 def local_observability(x,u,steps=20,dt=.015):
     scale=np.array([.1,1.,.1,.1,1.,1.]);cols=[]

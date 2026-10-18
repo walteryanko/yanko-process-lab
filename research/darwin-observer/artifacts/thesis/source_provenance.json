@@ -1,0 +1,68 @@
+{
+  "thesis_author": "Walter Yanko de Aragão Brandão",
+  "year": 2019,
+  "title": "Uso de observadores de estado aplicados no controle inferencial preditivo de processos não lineares",
+  "sources": [
+    {
+      "name": "modeloCT.m",
+      "archive_relative_path": "CSTR_Pesquisa/original/drive_verified/modeloCT.m",
+      "sha256": "d7b785681794850a4b78c2b8cfab2151f71b35b4d389efbf77383ecd8c10d086"
+    },
+    {
+      "name": "cost.m",
+      "archive_relative_path": "CSTR_Pesquisa/original/drive_verified/cost.m",
+      "sha256": "f627a96e3b9a67f71644ee98ccb14030114dd8cadd633e9080178bb591f97f2f"
+    },
+    {
+      "name": "medFun_KF.m",
+      "archive_relative_path": "CSTR_Pesquisa/original/drive_verified/medFun_KF.m",
+      "sha256": "dd700348a3136269ab29933871303507cd5271e9de6ff593789b8a3487eb7df9"
+    },
+    {
+      "name": "NMPC_Fmincon.m",
+      "archive_relative_path": "CSTR_Pesquisa/original/drive_verified/NMPC_Fmincon.m",
+      "sha256": "ace19e2fa9bada31fe6c810a113438b41b7c76f667c16d3474d10148d57e6780"
+    },
+    {
+      "name": "modeloFun_KF.m",
+      "archive_relative_path": "CSTR_Pesquisa/original/additional_verified/CSTR_MATLAB_Simulink_2026/historical/matlab_original/modeloFun_KF.m",
+      "sha256": "aeb9db8faafff8bfec97a57d8a405352c0d7ab82ed3e7b7bddacbc539e114d70"
+    },
+    {
+      "name": "modeloDT.m",
+      "archive_relative_path": "CSTR_Pesquisa/prior/LBE_NMPC_SG_CSTR_2026-10-10/original/1oabH0ucueQ8NM1wqCRPzPgUf-AVttQsy__modeloDT.m",
+      "sha256": "0b0744517e1f56c5f34ff3f662b602cb47127a5ab90b320b6145512f986d1bbc"
+    },
+    {
+      "name": "CSTRmdl_FK.m",
+      "archive_relative_path": "CSTR_Pesquisa/prior/LBE_NMPC_SG_CSTR_2026-10-10/original/1Y63Uv8eciypUuXp6rkQkEK89FAW3qal7__CSTRmdl_FK.m",
+      "sha256": "9b83a3917292df830534b6d15578a852991c3bd0b9d9d13f6fbb133b213d0b2e"
+    },
+    {
+      "name": "mdlKF.m",
+      "archive_relative_path": "CSTR_Pesquisa/prior/LBE_NMPC_SG_CSTR_2026-10-10/original/1QxRSVwUxQl7CI_Ww-PnCgrq_dLFgJZLC__mdlKF.m",
+      "sha256": "13949e4f8c299dcfbb4e8173a72c7e3654400312b8bb627e880117714bd88fb3"
+    },
+    {
+      "name": "Dissertacao_WalterYanko.pdf",
+      "sha256": "59a03ed1555a8c27e49dd7b5ce957fcb751b7de873e98ceb968d66f8927a26c3",
+      "size_bytes": 1746474
+    },
+    {
+      "name": "Codigo_CSTR_Reproduzivel.zip",
+      "sha256": "9da1ab2afbd647a1c81739b22ca93982b57d18cf3d22f418fd8ac775a7f19d92",
+      "size_bytes": 92618090
+    }
+  ],
+  "model_choice": "Complete historical imperial model transformed consistently to SI; no table/historical hybrid.",
+  "deviations": [
+    "SLSQP instead of MATLAB fmincon; new independent noise draws.",
+    "Archived executable Q overrides differing q22/q66 in thesis text.",
+    "Temperature percentages apply in Fahrenheit before SI conversion.",
+    "Figure 25 inconsistent temperature axis: use archived nominal 60 F.",
+    "Figure 39 +20% reference at 3 h read from the plotted dashed recipe.",
+    "No digitized PID or EKF curve used as new numerical data.",
+    "Thermal constraint is the original soft penalty, not a hard bound."
+  ],
+  "historical_source_commit": "173f10932031e1b7b453bb77ad57a249889a75ab"
+}

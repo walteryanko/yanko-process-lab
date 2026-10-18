@@ -1,0 +1,2742 @@
+{
+  "id": "7356e1e256a4836c",
+  "version": "1.1.0",
+  "model_variant": "historical-SI-complete",
+  "accepted": false,
+  "selected": "H0",
+  "category": "null",
+  "reason": "insufficient independent evidence; retain null",
+  "model": {
+    "name": "H0",
+    "params": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "variant": 1,
+    "envelope": [
+      150.0,
+      1250.0,
+      295.0,
+      350.0
+    ]
+  },
+  "best_unrestricted": "UA_sparse",
+  "plausible": [
+    "UA_sparse",
+    "kinetic_activation",
+    "joint_UA_kinetic",
+    "UA_quadratic"
+  ],
+  "ranking": [
+    {
+      "name": "UA_sparse",
+      "category": "structure",
+      "statement": "sparse weak-balance proposal",
+      "conditions": "term independence and holdout prediction",
+      "indices": [
+        0,
+        1,
+        3,
+        5
+      ],
+      "train_mse": 10.667782181667247,
+      "validation_mse": 7.942771547880715,
+      "validation_episodes": [
+        4.978193473835888,
+        22.55725587692764,
+        18.104575224960968,
+        5.588333793344662,
+        2.9783001524993855,
+        5.7466188040111765,
+        2.288639091933243,
+        1.3002559655327564
+      ],
+      "score": 8.052014479355554,
+      "complexity": 4,
+      "model": {
+        "name": "UA_sparse",
+        "params": [
+          -0.0028998868626908952,
+          0.47718884861691535,
+          0.0,
+          -0.05709945700416368,
+          0.0,
+          -0.9999986721555776,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "variant": 1,
+        "envelope": [
+          150.0,
+          1250.0,
+          295.0,
+          350.0
+        ]
+      },
+      "identifiability": {
+        "rank": 4,
+        "condition": 1246.6465941043773,
+        "std": [
+          0.0033550857455439394,
+          0.25105665186409937,
+          0.037780691601132656,
+          0.5102029917965059
+        ],
+        "singular_values": [
+          7148.475596470494,
+          1214.8276204238964,
+          358.2450164656309,
+          5.734163659754865
+        ],
+        "parameters": [
+          "log_UA",
+          "UA_linear",
+          "UA_quadratic",
+          "UA_sqrt"
+        ],
+        "correlation": [
+          [
+            1.0,
+            -0.5619679094051946,
+            0.6011816027047598,
+            0.5405990629198706
+          ],
+          [
+            -0.5619679094047514,
+            0.9999999999999998,
+            -0.9919867860338456,
+            -0.9994950065635545
+          ],
+          [
+            0.6011816027043361,
+            -0.9919867860338727,
+            0.9999999999999999,
+            0.9880140350944129
+          ],
+          [
+            0.5405990629194198,
+            -0.9994950065635406,
+            0.9880140350943724,
+            1.0
+          ]
+        ],
+        "caveat": "local, conditional on initial-state prior and model; not global uniqueness"
+      },
+      "physical": {
+        "valid": true,
+        "reason": "positive bounded coefficient grammar",
+        "ua_range": 0.9947974279956975,
+        "ua_max": 1.0801255318375953,
+        "mass_conservation": "reaction stoichiometry [-1,-1,+1,0] unchanged",
+        "dimensionless_arguments": true
+      },
+      "optimization_success": true,
+      "nfev": 11,
+      "eligible": true,
+      "equations": [
+        {
+          "name": "UA_eff",
+          "expression": "51104.8308649903*exp(-0.999998672155578*sqrt(v) + 0.477188848616915*v - 0.0570994570041637*(v - 1)**2)",
+          "latex": "51104.8308649903 e^{- 0.999998672155578 \\sqrt{v} + 0.477188848616915 v - 0.0570994570041637 \\left(v - 1\\right)^{2}}",
+          "sympy": "51104.8308649903*exp(-0.999998672155578*sqrt(v) + 0.477188848616915*v - 0.0570994570041637*(v - 1)**2)",
+          "mathml": "<mrow><mn>51104.8308649903</mn><mo>&InvisibleTimes;</mo><msup><mi>&ExponentialE;</mi><mrow><mrow><mo>-</mo><mn>0.999998672155578</mn><mo>&InvisibleTimes;</mo><msqrt><mi>v</mi></msqrt></mrow><mo>+</mo><mrow><mn>0.477188848616915</mn><mo>&InvisibleTimes;</mo><mi>v</mi></mrow><mo>-</mo><mrow><mn>0.0570994570041637</mn><mo>&InvisibleTimes;</mo><msup><mrow><mo>(</mo><mrow><mi>v</mi><mo>-</mo><mn>1</mn></mrow><mo>)</mo></mrow><mn>2</mn></msup></mrow></mrow></msup></mrow>",
+          "unit": "kJ/(h K)"
+        },
+        {
+          "name": "k_eff",
+          "expression": "16960000000000.0*exp(-75362.4/(8.3191716*T + 1.52518146))",
+          "latex": "16960000000000.0 e^{- \\frac{75362.4}{8.3191716 T + 1.52518146}}",
+          "sympy": "16960000000000.0*exp(-75362.4/(8.3191716*T + 1.52518146))",
+          "mathml": "<mrow><mfrac><mn>16960000000000.0</mn><msup><mi>&ExponentialE;</mi><mrow><mfrac><mn>75362.4</mn><mrow><mrow><mn>8.3191716</mn><mo>&InvisibleTimes;</mo><mi>T</mi></mrow><mo>+</mo><mn>1.52518146</mn></mrow></mfrac></mrow></msup></mfrac></mrow>",
+          "unit": "h^-1"
+        },
+        {
+          "name": "measurement_T",
+          "expression": "T",
+          "latex": "T",
+          "sympy": "T",
+          "mathml": "<mi>T</mi>",
+          "unit": "K"
+        },
+        {
+          "name": "bias_Tt",
+          "expression": "0",
+          "latex": "0",
+          "sympy": "0",
+          "mathml": "<mn>0</mn>",
+          "unit": "K"
+        }
+      ],
+      "equation_export_version": 2,
+      "status": "rejected_or_ambiguous",
+      "reason": "lower validation evidence or competing equivalent explanation"
+    },
+    {
+      "name": "kinetic_activation",
+      "category": "kinetic",
+      "statement": "centered Arrhenius correction",
+      "conditions": "broad reactor temperature range",
+      "indices": [
+        6,
+        7
+      ],
+      "train_mse": 10.55992001447064,
+      "validation_mse": 8.00390462422105,
+      "validation_episodes": [
+        7.1872480714329985,
+        20.58619182750449,
+        20.994399316770846,
+        3.4788001295388318,
+        3.240364438174678,
+        4.499658140401108,
+        2.587504179997981,
+        1.457070889947468
+      ],
+      "score": 8.05852608995847,
+      "complexity": 2,
+      "model": {
+        "name": "kinetic_activation",
+        "params": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.018537172207888447,
+          0.02273391126454027,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "variant": 1,
+        "envelope": [
+          150.0,
+          1250.0,
+          295.0,
+          350.0
+        ]
+      },
+      "identifiability": {
+        "rank": 2,
+        "condition": 12.528183020583514,
+        "std": [
+          0.002469900136044857,
+          0.0031429310357251636
+        ],
+        "singular_values": [
+          10219.095593977238,
+          815.6885621153124
+        ],
+        "parameters": [
+          "log_k",
+          "activation"
+        ],
+        "correlation": [
+          [
+            1.0000000000000002,
+            -0.9865834806355335
+          ],
+          [
+            -0.9865834806355332,
+            1.0
+          ]
+        ],
+        "caveat": "local, conditional on initial-state prior and model; not global uniqueness"
+      },
+      "physical": {
+        "valid": true,
+        "reason": "positive bounded coefficient grammar",
+        "ua_range": 1.0,
+        "ua_max": 1.0,
+        "mass_conservation": "reaction stoichiometry [-1,-1,+1,0] unchanged",
+        "dimensionless_arguments": true
+      },
+      "optimization_success": true,
+      "nfev": 5,
+      "eligible": true,
+      "equations": [
+        {
+          "name": "UA_eff",
+          "expression": "30385.6085554560",
+          "latex": "30385.608555456",
+          "sympy": "30385.6085554560",
+          "mathml": "<mn>30385.608555456</mn>",
+          "unit": "kJ/(h K)"
+        },
+        {
+          "name": "k_eff",
+          "expression": "13263041672388.3*exp((117.889355911471 - 74719.3671495738*T)/(T*(8.3191716*T + 1.52518146)))",
+          "latex": "13263041672388.3 e^{\\frac{117.889355911471 - 74719.3671495738 T}{T \\left(8.3191716 T + 1.52518146\\right)}}",
+          "sympy": "13263041672388.3*exp((117.889355911471 - 74719.3671495738*T)/(T*(8.3191716*T + 1.52518146)))",
+          "mathml": "<mrow><mn>13263041672388.3</mn><mo>&InvisibleTimes;</mo><msup><mi>&ExponentialE;</mi><mrow><mfrac><mrow><mn>117.889355911471</mn><mo>-</mo><mrow><mn>74719.3671495738</mn><mo>&InvisibleTimes;</mo><mi>T</mi></mrow></mrow><mrow><mi>T</mi><mo>&InvisibleTimes;</mo><mrow><mo>(</mo><mrow><mrow><mn>8.3191716</mn><mo>&InvisibleTimes;</mo><mi>T</mi></mrow><mo>+</mo><mn>1.52518146</mn></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></msup></mrow>",
+          "unit": "h^-1"
+        },
+        {
+          "name": "measurement_T",
+          "expression": "T",
+          "latex": "T",
+          "sympy": "T",
+          "mathml": "<mi>T</mi>",
+          "unit": "K"
+        },
+        {
+          "name": "bias_Tt",
+          "expression": "0",
+          "latex": "0",
+          "sympy": "0",
+          "mathml": "<mn>0</mn>",
+          "unit": "K"
+        }
+      ],
+      "equation_export_version": 2,
+      "status": "rejected_or_ambiguous",
+      "reason": "lower validation evidence or competing equivalent explanation"
+    },
+    {
+      "name": "joint_UA_kinetic",
+      "category": "joint",
+      "statement": "competing UA and Arrhenius errors",
+      "conditions": "joint sensitivity rank required",
+      "indices": [
+        0,
+        6,
+        7
+      ],
+      "train_mse": 10.502884931402932,
+      "validation_mse": 8.057696265402416,
+      "validation_episodes": [
+        7.696121322614191,
+        19.81243844638289,
+        21.328981857471657,
+        4.057835447608612,
+        3.1835628537273863,
+        4.529874446590652,
+        2.362564071239448,
+        1.4901916775844983
+      ],
+      "score": 8.139628464008545,
+      "complexity": 3,
+      "model": {
+        "name": "joint_UA_kinetic",
+        "params": [
+          -0.009747677094361636,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.02802230533839311,
+          0.026976409401571165,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "variant": 1,
+        "envelope": [
+          150.0,
+          1250.0,
+          295.0,
+          350.0
+        ]
+      },
+      "identifiability": {
+        "rank": 3,
+        "condition": 21.52961402437304,
+        "std": [
+          0.003519131559458281,
+          0.004309427893169863,
+          0.0035819788470488594
+        ],
+        "singular_values": [
+          11463.172790798793,
+          1258.3658735381996,
+          532.4374500082387
+        ],
+        "parameters": [
+          "log_UA",
+          "log_k",
+          "activation"
+        ],
+        "correlation": [
+          [
+            1.0,
+            0.8190917585346361,
+            -0.4748193940238503
+          ],
+          [
+            0.8190917585346525,
+            1.0000000000000002,
+            -0.8871447688744645
+          ],
+          [
+            -0.47481939402387435,
+            -0.8871447688744768,
+            1.0
+          ]
+        ],
+        "caveat": "local, conditional on initial-state prior and model; not global uniqueness"
+      },
+      "physical": {
+        "valid": true,
+        "reason": "positive bounded coefficient grammar",
+        "ua_range": 0.9902996775192738,
+        "ua_max": 0.9902996775192738,
+        "mass_conservation": "reaction stoichiometry [-1,-1,+1,0] unchanged",
+        "dimensionless_arguments": true
+      },
+      "optimization_success": true,
+      "nfev": 6,
+      "eligible": true,
+      "equations": [
+        {
+          "name": "UA_eff",
+          "expression": "30090.8583536950",
+          "latex": "30090.858353695",
+          "sympy": "30090.8583536950",
+          "mathml": "<mn>30090.858353695</mn>",
+          "unit": "kJ/(h K)"
+        },
+        {
+          "name": "k_eff",
+          "expression": "12592120119874.3*exp((139.889326220597 - 74599.367311524*T)/(T*(8.3191716*T + 1.52518146)))",
+          "latex": "12592120119874.3 e^{\\frac{139.889326220597 - 74599.367311524 T}{T \\left(8.3191716 T + 1.52518146\\right)}}",
+          "sympy": "12592120119874.3*exp((139.889326220597 - 74599.367311524*T)/(T*(8.3191716*T + 1.52518146)))",
+          "mathml": "<mrow><mn>12592120119874.3</mn><mo>&InvisibleTimes;</mo><msup><mi>&ExponentialE;</mi><mrow><mfrac><mrow><mn>139.889326220597</mn><mo>-</mo><mrow><mn>74599.367311524</mn><mo>&InvisibleTimes;</mo><mi>T</mi></mrow></mrow><mrow><mi>T</mi><mo>&InvisibleTimes;</mo><mrow><mo>(</mo><mrow><mrow><mn>8.3191716</mn><mo>&InvisibleTimes;</mo><mi>T</mi></mrow><mo>+</mo><mn>1.52518146</mn></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></msup></mrow>",
+          "unit": "h^-1"
+        },
+        {
+          "name": "measurement_T",
+          "expression": "T",
+          "latex": "T",
+          "sympy": "T",
+          "mathml": "<mi>T</mi>",
+          "unit": "K"
+        },
+        {
+          "name": "bias_Tt",
+          "expression": "0",
+          "latex": "0",
+          "sympy": "0",
+          "mathml": "<mn>0</mn>",
+          "unit": "K"
+        }
+      ],
+      "equation_export_version": 2,
+      "status": "rejected_or_ambiguous",
+      "reason": "lower validation evidence or competing equivalent explanation"
+    },
+    {
+      "name": "UA_quadratic",
+      "category": "structure",
+      "statement": "curvature in log UA versus flow",
+      "conditions": "at least three separated flow levels",
+      "indices": [
+        0,
+        1,
+        3
+      ],
+      "train_mse": 10.60588382161276,
+      "validation_mse": 8.1211316125697,
+      "validation_episodes": [
+        4.889042484372878,
+        22.348711740047815,
+        20.04031601435432,
+        5.6960140989024906,
+        3.0668499119715817,
+        5.515647889209249,
+        2.116469333779625,
+        1.2960014279196397
+      ],
+      "score": 8.203063811175829,
+      "complexity": 3,
+      "model": {
+        "name": "UA_quadratic",
+        "params": [
+          0.0019464877031607664,
+          -0.017372362640360132,
+          0.0,
+          0.017119628518649,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "variant": 1,
+        "envelope": [
+          150.0,
+          1250.0,
+          295.0,
+          350.0
+        ]
+      },
+      "identifiability": {
+        "rank": 3,
+        "condition": 21.69349816476904,
+        "std": [
+          0.0027813177282235953,
+          0.007865655534542045,
+          0.005807877768434618
+        ],
+        "singular_values": [
+          7211.296254773265,
+          1222.755283524844,
+          332.41739990485485
+        ],
+        "parameters": [
+          "log_UA",
+          "UA_linear",
+          "UA_quadratic"
+        ],
+        "correlation": [
+          [
+            1.0,
+            -0.8126624257394471,
+            0.5214487841906743
+          ],
+          [
+            -0.8126624257394426,
+            1.0,
+            -0.912258693920497
+          ],
+          [
+            0.5214487841906679,
+            -0.9122586939204945,
+            1.0
+          ]
+        ],
+        "caveat": "local, conditional on initial-state prior and model; not global uniqueness"
+      },
+      "physical": {
+        "valid": true,
+        "reason": "positive bounded coefficient grammar",
+        "ua_range": 0.9975642281665535,
+        "ua_max": 1.024513791390743,
+        "mass_conservation": "reaction stoichiometry [-1,-1,+1,0] unchanged",
+        "dimensionless_arguments": true
+      },
+      "optimization_success": true,
+      "nfev": 10,
+      "eligible": true,
+      "equations": [
+        {
+          "name": "UA_eff",
+          "expression": "30978.330498567*exp(-0.0173723626403601*v + 0.017119628518649*(v - 1)**2)",
+          "latex": "30978.330498567 e^{- 0.0173723626403601 v + 0.017119628518649 \\left(v - 1\\right)^{2}}",
+          "sympy": "30978.330498567*exp(-0.0173723626403601*v + 0.017119628518649*(v - 1)**2)",
+          "mathml": "<mrow><mn>30978.330498567</mn><mo>&InvisibleTimes;</mo><msup><mi>&ExponentialE;</mi><mrow><mrow><mo>-</mo><mn>0.0173723626403601</mn><mo>&InvisibleTimes;</mo><mi>v</mi></mrow><mo>+</mo><mrow><mn>0.017119628518649</mn><mo>&InvisibleTimes;</mo><msup><mrow><mo>(</mo><mrow><mi>v</mi><mo>-</mo><mn>1</mn></mrow><mo>)</mo></mrow><mn>2</mn></msup></mrow></mrow></msup></mrow>",
+          "unit": "kJ/(h K)"
+        },
+        {
+          "name": "k_eff",
+          "expression": "16960000000000.0*exp(-75362.4/(8.3191716*T + 1.52518146))",
+          "latex": "16960000000000.0 e^{- \\frac{75362.4}{8.3191716 T + 1.52518146}}",
+          "sympy": "16960000000000.0*exp(-75362.4/(8.3191716*T + 1.52518146))",
+          "mathml": "<mrow><mfrac><mn>16960000000000.0</mn><msup><mi>&ExponentialE;</mi><mrow><mfrac><mn>75362.4</mn><mrow><mrow><mn>8.3191716</mn><mo>&InvisibleTimes;</mo><mi>T</mi></mrow><mo>+</mo><mn>1.52518146</mn></mrow></mfrac></mrow></msup></mfrac></mrow>",
+          "unit": "h^-1"
+        },
+        {
+          "name": "measurement_T",
+          "expression": "T",
+          "latex": "T",
+          "sympy": "T",
+          "mathml": "<mi>T</mi>",
+          "unit": "K"
+        },
+        {
+          "name": "bias_Tt",
+          "expression": "0",
+          "latex": "0",
+          "sympy": "0",
+          "mathml": "<mn>0</mn>",
+          "unit": "K"
+        }
+      ],
+      "equation_export_version": 2,
+      "status": "rejected_or_ambiguous",
+      "reason": "lower validation evidence or competing equivalent explanation"
+    },
+    {
+      "name": "UA_linear",
+      "category": "structure",
+      "statement": "log UA depends linearly on normalized coolant flow",
+      "conditions": "persistent mw excitation",
+      "indices": [
+        0,
+        1
+      ],
+      "train_mse": 10.768310326704258,
+      "validation_mse": 8.251917409343728,
+      "validation_episodes": [
+        5.08894388405129,
+        23.754277768864302,
+        20.094083019265096,
+        5.147017427848054,
+        3.0677079414567525,
+        5.490248712967668,
+        2.077267882884681,
+        1.295792637411979
+      ],
+      "score": 8.306538875081147,
+      "complexity": 2,
+      "model": {
+        "name": "UA_linear",
+        "params": [
+          -0.002338036717051587,
+          0.004517287217371484,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "variant": 1,
+        "envelope": [
+          150.0,
+          1250.0,
+          295.0,
+          350.0
+        ]
+      },
+      "identifiability": {
+        "rank": 2,
+        "condition": 7.241468107565973,
+        "std": [
+          0.002347480520689217,
+          0.0032485427520854084
+        ],
+        "singular_values": [
+          5986.34233861541,
+          826.6752334876414
+        ],
+        "parameters": [
+          "log_UA",
+          "UA_linear"
+        ],
+        "correlation": [
+          [
+            1.0000000000000002,
+            -0.9583947286406816
+          ],
+          [
+            -0.9583947286406813,
+            0.9999999999999999
+          ]
+        ],
+        "caveat": "local, conditional on initial-state prior and model; not global uniqueness"
+      },
+      "physical": {
+        "valid": true,
+        "reason": "positive bounded coefficient grammar",
+        "ua_range": 0.9946528352292324,
+        "ua_max": 1.0056087792875648,
+        "mass_conservation": "reaction stoichiometry [-1,-1,+1,0] unchanged",
+        "dimensionless_arguments": true
+      },
+      "optimization_success": true,
+      "nfev": 12,
+      "eligible": true,
+      "equations": [
+        {
+          "name": "UA_eff",
+          "expression": "30178.0177300258*exp(0.00451728721737148*v)",
+          "latex": "30178.0177300258 e^{0.00451728721737148 v}",
+          "sympy": "30178.0177300258*exp(0.00451728721737148*v)",
+          "mathml": "<mrow><mn>30178.0177300258</mn><mo>&InvisibleTimes;</mo><msup><mi>&ExponentialE;</mi><mrow><mn>0.00451728721737148</mn><mo>&InvisibleTimes;</mo><mi>v</mi></mrow></msup></mrow>",
+          "unit": "kJ/(h K)"
+        },
+        {
+          "name": "k_eff",
+          "expression": "16960000000000.0*exp(-75362.4/(8.3191716*T + 1.52518146))",
+          "latex": "16960000000000.0 e^{- \\frac{75362.4}{8.3191716 T + 1.52518146}}",
+          "sympy": "16960000000000.0*exp(-75362.4/(8.3191716*T + 1.52518146))",
+          "mathml": "<mrow><mfrac><mn>16960000000000.0</mn><msup><mi>&ExponentialE;</mi><mrow><mfrac><mn>75362.4</mn><mrow><mrow><mn>8.3191716</mn><mo>&InvisibleTimes;</mo><mi>T</mi></mrow><mo>+</mo><mn>1.52518146</mn></mrow></mfrac></mrow></msup></mfrac></mrow>",
+          "unit": "h^-1"
+        },
+        {
+          "name": "measurement_T",
+          "expression": "T",
+          "latex": "T",
+          "sympy": "T",
+          "mathml": "<mi>T</mi>",
+          "unit": "K"
+        },
+        {
+          "name": "bias_Tt",
+          "expression": "0",
+          "latex": "0",
+          "sympy": "0",
+          "mathml": "<mn>0</mn>",
+          "unit": "K"
+        }
+      ],
+      "equation_export_version": 2,
+      "status": "rejected_or_ambiguous",
+      "reason": "lower validation evidence or competing equivalent explanation"
+    },
+    {
+      "name": "H0",
+      "category": "null",
+      "statement": "nominal physics and unbiased sensors",
+      "conditions": "nominal noise model adequate",
+      "indices": [],
+      "train_mse": 10.82586530541846,
+      "validation_mse": 8.316394109249512,
+      "validation_episodes": [
+        5.460505551007294,
+        24.306444574005795,
+        19.794932082470222,
+        5.0887659016959335,
+        3.085243677137203,
+        5.403701891732932,
+        2.0597929437815266,
+        1.3317662521651814
+      ],
+      "score": 8.316394109249512,
+      "complexity": 0,
+      "model": {
+        "name": "H0",
+        "params": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "variant": 1,
+        "envelope": [
+          150.0,
+          1250.0,
+          295.0,
+          350.0
+        ]
+      },
+      "identifiability": {
+        "rank": 0,
+        "condition": 1.0,
+        "std": [],
+        "singular_values": []
+      },
+      "physical": {
+        "valid": true,
+        "reason": "positive bounded coefficient grammar",
+        "ua_range": 1.0,
+        "ua_max": 1.0,
+        "mass_conservation": "reaction stoichiometry [-1,-1,+1,0] unchanged",
+        "dimensionless_arguments": true
+      },
+      "optimization_success": true,
+      "nfev": 0,
+      "eligible": true,
+      "equations": [
+        {
+          "name": "UA_eff",
+          "expression": "30385.6085554560",
+          "latex": "30385.608555456",
+          "sympy": "30385.6085554560",
+          "mathml": "<mn>30385.608555456</mn>",
+          "unit": "kJ/(h K)"
+        },
+        {
+          "name": "k_eff",
+          "expression": "16960000000000.0*exp(-75362.4/(8.3191716*T + 1.52518146))",
+          "latex": "16960000000000.0 e^{- \\frac{75362.4}{8.3191716 T + 1.52518146}}",
+          "sympy": "16960000000000.0*exp(-75362.4/(8.3191716*T + 1.52518146))",
+          "mathml": "<mrow><mfrac><mn>16960000000000.0</mn><msup><mi>&ExponentialE;</mi><mrow><mfrac><mn>75362.4</mn><mrow><mrow><mn>8.3191716</mn><mo>&InvisibleTimes;</mo><mi>T</mi></mrow><mo>+</mo><mn>1.52518146</mn></mrow></mfrac></mrow></msup></mfrac></mrow>",
+          "unit": "h^-1"
+        },
+        {
+          "name": "measurement_T",
+          "expression": "T",
+          "latex": "T",
+          "sympy": "T",
+          "mathml": "<mi>T</mi>",
+          "unit": "K"
+        },
+        {
+          "name": "bias_Tt",
+          "expression": "0",
+          "latex": "0",
+          "sympy": "0",
+          "mathml": "<mn>0</mn>",
+          "unit": "K"
+        }
+      ],
+      "equation_export_version": 2,
+      "status": "retained_null",
+      "reason": "insufficient independent evidence; retain null"
+    },
+    {
+      "name": "feed_temperature",
+      "category": "feed",
+      "statement": "feed temperature bias",
+      "conditions": "independent input calibration",
+      "indices": [
+        14
+      ],
+      "train_mse": 10.825865170628843,
+      "validation_mse": 8.31639399522958,
+      "validation_episodes": [
+        5.460506130409331,
+        24.306444130048867,
+        19.794931148393825,
+        5.08876569402058,
+        3.085243630617155,
+        5.403701941394586,
+        2.0597930228859322,
+        1.331766264066368
+      ],
+      "score": 8.34370472809829,
+      "complexity": 1,
+      "model": {
+        "name": "feed_temperature",
+        "params": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          6.582190139007565e-09
+        ],
+        "variant": 1,
+        "envelope": [
+          150.0,
+          1250.0,
+          295.0,
+          350.0
+        ]
+      },
+      "identifiability": {
+        "rank": 1,
+        "condition": 1.0,
+        "std": [
+          1.4064502713948005e-06
+        ],
+        "singular_values": [
+          2339633.7086667875
+        ],
+        "parameters": [
+          "bias_Tfeed"
+        ],
+        "correlation": [
+          [
+            1.0
+          ]
+        ],
+        "caveat": "local, conditional on initial-state prior and model; not global uniqueness"
+      },
+      "physical": {
+        "valid": true,
+        "reason": "positive bounded coefficient grammar",
+        "ua_range": 1.0,
+        "ua_max": 1.0,
+        "mass_conservation": "reaction stoichiometry [-1,-1,+1,0] unchanged",
+        "dimensionless_arguments": true
+      },
+      "optimization_success": true,
+      "nfev": 13,
+      "eligible": true,
+      "equations": [
+        {
+          "name": "UA_eff",
+          "expression": "30385.6085554560",
+          "latex": "30385.608555456",
+          "sympy": "30385.6085554560",
+          "mathml": "<mn>30385.608555456</mn>",
+          "unit": "kJ/(h K)"
+        },
+        {
+          "name": "k_eff",
+          "expression": "16960000000000.0*exp(-75362.4/(8.3191716*T + 1.52518146))",
+          "latex": "16960000000000.0 e^{- \\frac{75362.4}{8.3191716 T + 1.52518146}}",
+          "sympy": "16960000000000.0*exp(-75362.4/(8.3191716*T + 1.52518146))",
+          "mathml": "<mrow><mfrac><mn>16960000000000.0</mn><msup><mi>&ExponentialE;</mi><mrow><mfrac><mn>75362.4</mn><mrow><mrow><mn>8.3191716</mn><mo>&InvisibleTimes;</mo><mi>T</mi></mrow><mo>+</mo><mn>1.52518146</mn></mrow></mfrac></mrow></msup></mfrac></mrow>",
+          "unit": "h^-1"
+        },
+        {
+          "name": "measurement_T",
+          "expression": "T",
+          "latex": "T",
+          "sympy": "T",
+          "mathml": "<mi>T</mi>",
+          "unit": "K"
+        },
+        {
+          "name": "bias_Tt",
+          "expression": "0",
+          "latex": "0",
+          "sympy": "0",
+          "mathml": "<mn>0</mn>",
+          "unit": "K"
+        },
+        {
+          "name": "Tfeed_eff",
+          "expression": "Tfeed + 6.58219013900756e-9",
+          "latex": "Tfeed + 6.58219013900756 \\cdot 10^{-9}",
+          "sympy": "Tfeed + 6.58219013900756e-9",
+          "mathml": "<mrow><mi>Tfeed</mi><mo>+</mo><mrow><mn>6.58219013900756</mn><mo>&#xB7;</mo><msup><mn>10</mn><mn>-9</mn></msup></mrow></mrow>",
+          "unit": "K"
+        }
+      ],
+      "equation_export_version": 2,
+      "status": "rejected_or_ambiguous",
+      "reason": "lower validation evidence or competing equivalent explanation"
+    },
+    {
+      "name": "UA_sqrt",
+      "category": "structure",
+      "statement": "square-root flow dependence",
+      "conditions": "broad mw domain",
+      "indices": [
+        0,
+        5
+      ],
+      "train_mse": 10.797301010715572,
+      "validation_mse": 8.295933112020357,
+      "validation_episodes": [
+        5.1801906455915585,
+        23.716094303153618,
+        20.447487980894465,
+        5.170645092905324,
+        3.0752481789233483,
+        5.4252292168877645,
+        2.0484560090710895,
+        1.3041134687356843
+      ],
+      "score": 8.350554577757777,
+      "complexity": 2,
+      "model": {
+        "name": "UA_sqrt",
+        "params": [
+          -0.00147943131507027,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.008107426726871758,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "variant": 1,
+        "envelope": [
+          150.0,
+          1250.0,
+          295.0,
+          350.0
+        ]
+      },
+      "identifiability": {
+        "rank": 2,
+        "condition": 13.110433444915571,
+        "std": [
+          0.002436186667466498,
+          0.008065573888725284
+        ],
+        "singular_values": [
+          5128.876808698114,
+          391.2057393256644
+        ],
+        "parameters": [
+          "log_UA",
+          "UA_sqrt"
+        ],
+        "correlation": [
+          [
+            1.0,
+            -0.9617377586066613
+          ],
+          [
+            -0.9617377586066616,
+            1.0
+          ]
+        ],
+        "caveat": "local, conditional on initial-state prior and model; not global uniqueness"
+      },
+      "physical": {
+        "valid": true,
+        "reason": "positive bounded coefficient grammar",
+        "ua_range": 0.9950874614391991,
+        "ua_max": 1.0038792975461637,
+        "mass_conservation": "reaction stoichiometry [-1,-1,+1,0] unchanged",
+        "dimensionless_arguments": true
+      },
+      "optimization_success": true,
+      "nfev": 6,
+      "eligible": true,
+      "equations": [
+        {
+          "name": "UA_eff",
+          "expression": "30095.6979261592*exp(0.00810742672687176*sqrt(v))",
+          "latex": "30095.6979261592 e^{0.00810742672687176 \\sqrt{v}}",
+          "sympy": "30095.6979261592*exp(0.00810742672687176*sqrt(v))",
+          "mathml": "<mrow><mn>30095.6979261592</mn><mo>&InvisibleTimes;</mo><msup><mi>&ExponentialE;</mi><mrow><mn>0.00810742672687176</mn><mo>&InvisibleTimes;</mo><msqrt><mi>v</mi></msqrt></mrow></msup></mrow>",
+          "unit": "kJ/(h K)"
+        },
+        {
+          "name": "k_eff",
+          "expression": "16960000000000.0*exp(-75362.4/(8.3191716*T + 1.52518146))",
+          "latex": "16960000000000.0 e^{- \\frac{75362.4}{8.3191716 T + 1.52518146}}",
+          "sympy": "16960000000000.0*exp(-75362.4/(8.3191716*T + 1.52518146))",
+          "mathml": "<mrow><mfrac><mn>16960000000000.0</mn><msup><mi>&ExponentialE;</mi><mrow><mfrac><mn>75362.4</mn><mrow><mrow><mn>8.3191716</mn><mo>&InvisibleTimes;</mo><mi>T</mi></mrow><mo>+</mo><mn>1.52518146</mn></mrow></mfrac></mrow></msup></mfrac></mrow>",
+          "unit": "h^-1"
+        },
+        {
+          "name": "measurement_T",
+          "expression": "T",
+          "latex": "T",
+          "sympy": "T",
+          "mathml": "<mi>T</mi>",
+          "unit": "K"
+        },
+        {
+          "name": "bias_Tt",
+          "expression": "0",
+          "latex": "0",
+          "sympy": "0",
+          "mathml": "<mn>0</mn>",
+          "unit": "K"
+        }
+      ],
+      "equation_export_version": 2,
+      "status": "rejected_or_ambiguous",
+      "reason": "lower validation evidence or competing equivalent explanation"
+    },
+    {
+      "name": "sensor_bias",
+      "category": "sensor",
+      "statement": "constant temperature sensor bias",
+      "conditions": "transient and independent thermal balance",
+      "indices": [
+        10,
+        11
+      ],
+      "train_mse": 10.825865062847509,
+      "validation_mse": 8.316393827037615,
+      "validation_episodes": [
+        5.460505749700803,
+        24.30644279470322,
+        19.79493193819531,
+        5.088765960856166,
+        3.085243024649376,
+        5.403701917812374,
+        2.0597929671702317,
+        1.3317662632134426
+      ],
+      "score": 8.371015292775034,
+      "complexity": 2,
+      "model": {
+        "name": "sensor_bias",
+        "params": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          2.2672967574588393e-08,
+          4.4261858120845334e-08,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "variant": 1,
+        "envelope": [
+          150.0,
+          1250.0,
+          295.0,
+          350.0
+        ]
+      },
+      "identifiability": {
+        "rank": 2,
+        "condition": 5.715700733301991,
+        "std": [
+          5.353220266459926e-06,
+          1.5792289068129087e-05
+        ],
+        "singular_values": [
+          1145158.892131907,
+          200353.1929969228
+        ],
+        "parameters": [
+          "bias_T",
+          "bias_Tt"
+        ],
+        "correlation": [
+          [
+            1.0,
+            -0.8296075155685795
+          ],
+          [
+            -0.8296075155685793,
+            1.0
+          ]
+        ],
+        "caveat": "local, conditional on initial-state prior and model; not global uniqueness"
+      },
+      "physical": {
+        "valid": true,
+        "reason": "positive bounded coefficient grammar",
+        "ua_range": 1.0,
+        "ua_max": 1.0,
+        "mass_conservation": "reaction stoichiometry [-1,-1,+1,0] unchanged",
+        "dimensionless_arguments": true
+      },
+      "optimization_success": true,
+      "nfev": 19,
+      "eligible": true,
+      "equations": [
+        {
+          "name": "UA_eff",
+          "expression": "30385.6085554560",
+          "latex": "30385.608555456",
+          "sympy": "30385.6085554560",
+          "mathml": "<mn>30385.608555456</mn>",
+          "unit": "kJ/(h K)"
+        },
+        {
+          "name": "k_eff",
+          "expression": "16960000000000.0*exp(-75362.4/(8.3191716*T + 1.52518146))",
+          "latex": "16960000000000.0 e^{- \\frac{75362.4}{8.3191716 T + 1.52518146}}",
+          "sympy": "16960000000000.0*exp(-75362.4/(8.3191716*T + 1.52518146))",
+          "mathml": "<mrow><mfrac><mn>16960000000000.0</mn><msup><mi>&ExponentialE;</mi><mrow><mfrac><mn>75362.4</mn><mrow><mrow><mn>8.3191716</mn><mo>&InvisibleTimes;</mo><mi>T</mi></mrow><mo>+</mo><mn>1.52518146</mn></mrow></mfrac></mrow></msup></mfrac></mrow>",
+          "unit": "h^-1"
+        },
+        {
+          "name": "measurement_T",
+          "expression": "T + 2.26729675745884e-8",
+          "latex": "T + 2.26729675745884 \\cdot 10^{-8}",
+          "sympy": "T + 2.26729675745884e-8",
+          "mathml": "<mrow><mi>T</mi><mo>+</mo><mrow><mn>2.26729675745884</mn><mo>&#xB7;</mo><msup><mn>10</mn><mn>-8</mn></msup></mrow></mrow>",
+          "unit": "K"
+        },
+        {
+          "name": "bias_Tt",
+          "expression": "4.42618581208453e-8",
+          "latex": "4.42618581208453 \\cdot 10^{-8}",
+          "sympy": "4.42618581208453e-8",
+          "mathml": "<mrow><mn>4.42618581208453</mn><mo>&#xB7;</mo><msup><mn>10</mn><mn>-8</mn></msup></mrow>",
+          "unit": "K"
+        }
+      ],
+      "equation_export_version": 2,
+      "status": "rejected_or_ambiguous",
+      "reason": "lower validation evidence or competing equivalent explanation"
+    },
+    {
+      "name": "sensor_drift",
+      "category": "sensor",
+      "statement": "linear Tt sensor drift",
+      "conditions": "long observation period",
+      "indices": [
+        10,
+        11,
+        12
+      ],
+      "train_mse": 10.825865142509835,
+      "validation_mse": 8.316394232567417,
+      "validation_episodes": [
+        5.460507119408214,
+        24.30644541986008,
+        19.79493092547537,
+        5.088765828621111,
+        3.0852427070170543,
+        5.4037024569253385,
+        2.0597930621649296,
+        1.331766341067243
+      ],
+      "score": 8.398326431173546,
+      "complexity": 3,
+      "model": {
+        "name": "sensor_drift",
+        "params": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0315105335717639e-07,
+          1.1104763094593369e-07,
+          1.2256286219605714e-07,
+          0.0,
+          0.0
+        ],
+        "variant": 1,
+        "envelope": [
+          150.0,
+          1250.0,
+          295.0,
+          350.0
+        ]
+      },
+      "identifiability": {
+        "rank": 3,
+        "condition": 2.5739798486696,
+        "std": [
+          2.2137465255322863e-05,
+          2.7077672172215286e-05,
+          4.3409991699896814e-05
+        ],
+        "singular_values": [
+          182495.63370590346,
+          131372.65108189403,
+          70900.17965767256
+        ],
+        "parameters": [
+          "bias_T",
+          "bias_Tt",
+          "drift_Tt"
+        ],
+        "correlation": [
+          [
+            0.9999999999999998,
+            -0.4181635438864202,
+            0.24407211053643407
+          ],
+          [
+            -0.4181635438864196,
+            1.0000000000000002,
+            -0.45754403039001373
+          ],
+          [
+            0.24407211053643396,
+            -0.4575440303900139,
+            1.0000000000000002
+          ]
+        ],
+        "caveat": "local, conditional on initial-state prior and model; not global uniqueness"
+      },
+      "physical": {
+        "valid": true,
+        "reason": "positive bounded coefficient grammar",
+        "ua_range": 1.0,
+        "ua_max": 1.0,
+        "mass_conservation": "reaction stoichiometry [-1,-1,+1,0] unchanged",
+        "dimensionless_arguments": true
+      },
+      "optimization_success": true,
+      "nfev": 19,
+      "eligible": true,
+      "equations": [
+        {
+          "name": "UA_eff",
+          "expression": "30385.6085554560",
+          "latex": "30385.608555456",
+          "sympy": "30385.6085554560",
+          "mathml": "<mn>30385.608555456</mn>",
+          "unit": "kJ/(h K)"
+        },
+        {
+          "name": "k_eff",
+          "expression": "16960000000000.0*exp(-75362.4/(8.3191716*T + 1.52518146))",
+          "latex": "16960000000000.0 e^{- \\frac{75362.4}{8.3191716 T + 1.52518146}}",
+          "sympy": "16960000000000.0*exp(-75362.4/(8.3191716*T + 1.52518146))",
+          "mathml": "<mrow><mfrac><mn>16960000000000.0</mn><msup><mi>&ExponentialE;</mi><mrow><mfrac><mn>75362.4</mn><mrow><mrow><mn>8.3191716</mn><mo>&InvisibleTimes;</mo><mi>T</mi></mrow><mo>+</mo><mn>1.52518146</mn></mrow></mfrac></mrow></msup></mfrac></mrow>",
+          "unit": "h^-1"
+        },
+        {
+          "name": "measurement_T",
+          "expression": "T + 1.03151053357176e-7",
+          "latex": "T + 1.03151053357176 \\cdot 10^{-7}",
+          "sympy": "T + 1.03151053357176e-7",
+          "mathml": "<mrow><mi>T</mi><mo>+</mo><mrow><mn>1.03151053357176</mn><mo>&#xB7;</mo><msup><mn>10</mn><mn>-7</mn></msup></mrow></mrow>",
+          "unit": "K"
+        },
+        {
+          "name": "bias_Tt",
+          "expression": "1.22562862196057e-7*t + 1.11047630945934e-7",
+          "latex": "1.22562862196057 \\cdot 10^{-7} t + 1.11047630945934 \\cdot 10^{-7}",
+          "sympy": "1.22562862196057e-7*t + 1.11047630945934e-7",
+          "mathml": "<mrow><mrow><mrow><mn>1.22562862196057</mn><mo>&#xB7;</mo><msup><mn>10</mn><mn>-7</mn></msup></mrow><mo>&InvisibleTimes;</mo><mi>t</mi></mrow><mo>+</mo><mrow><mn>1.11047630945934</mn><mo>&#xB7;</mo><msup><mn>10</mn><mn>-7</mn></msup></mrow></mrow>",
+          "unit": "K"
+        }
+      ],
+      "equation_export_version": 2,
+      "status": "rejected_or_ambiguous",
+      "reason": "lower validation evidence or competing equivalent explanation"
+    },
+    {
+      "name": "UA_power",
+      "category": "structure",
+      "statement": "UA is a power of normalized coolant flow",
+      "conditions": "wide mw excitation",
+      "indices": [
+        0,
+        2
+      ],
+      "train_mse": 10.831627569856858,
+      "validation_mse": 8.349479431496938,
+      "validation_episodes": [
+        5.309300875585971,
+        23.616510490150905,
+        20.889756904969108,
+        5.22726133318814,
+        3.0847344244179085,
+        5.338221075994108,
+        2.012747313548589,
+        1.3173030341207745
+      ],
+      "score": 8.404100897234358,
+      "complexity": 2,
+      "model": {
+        "name": "UA_power",
+        "params": [
+          -5.1312861602666356e-05,
+          0.0,
+          0.0020532168151979418,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "variant": 1,
+        "envelope": [
+          150.0,
+          1250.0,
+          295.0,
+          350.0
+        ]
+      },
+      "identifiability": {
+        "rank": 2,
+        "condition": 8.672711583750303,
+        "std": [
+          0.0023489856921710783,
+          0.004604928410313975
+        ],
+        "singular_values": [
+          5559.147630589301,
+          640.9930247196555
+        ],
+        "parameters": [
+          "log_UA",
+          "UA_log"
+        ],
+        "correlation": [
+          [
+            1.0,
+            -0.9596724342868085
+          ],
+          [
+            -0.9596724342868085,
+            1.0000000000000002
+          ]
+        ],
+        "caveat": "local, conditional on initial-state prior and model; not global uniqueness"
+      },
+      "physical": {
+        "valid": true,
+        "reason": "positive bounded coefficient grammar",
+        "ua_range": 0.9976793344515417,
+        "ua_max": 1.0020320601206367,
+        "mass_conservation": "reaction stoichiometry [-1,-1,+1,0] unchanged",
+        "dimensionless_arguments": true
+      },
+      "optimization_success": true,
+      "nfev": 16,
+      "eligible": true,
+      "equations": [
+        {
+          "name": "UA_eff",
+          "expression": "30384.0494229316*v**0.00205321681519794",
+          "latex": "30384.0494229316 v^{0.00205321681519794}",
+          "sympy": "30384.0494229316*v**0.00205321681519794",
+          "mathml": "<mrow><mn>30384.0494229316</mn><mo>&InvisibleTimes;</mo><msup><mi>v</mi><mn>0.00205321681519794</mn></msup></mrow>",
+          "unit": "kJ/(h K)"
+        },
+        {
+          "name": "k_eff",
+          "expression": "16960000000000.0*exp(-75362.4/(8.3191716*T + 1.52518146))",
+          "latex": "16960000000000.0 e^{- \\frac{75362.4}{8.3191716 T + 1.52518146}}",
+          "sympy": "16960000000000.0*exp(-75362.4/(8.3191716*T + 1.52518146))",
+          "mathml": "<mrow><mfrac><mn>16960000000000.0</mn><msup><mi>&ExponentialE;</mi><mrow><mfrac><mn>75362.4</mn><mrow><mrow><mn>8.3191716</mn><mo>&InvisibleTimes;</mo><mi>T</mi></mrow><mo>+</mo><mn>1.52518146</mn></mrow></mfrac></mrow></msup></mfrac></mrow>",
+          "unit": "h^-1"
+        },
+        {
+          "name": "measurement_T",
+          "expression": "T",
+          "latex": "T",
+          "sympy": "T",
+          "mathml": "<mi>T</mi>",
+          "unit": "K"
+        },
+        {
+          "name": "bias_Tt",
+          "expression": "0",
+          "latex": "0",
+          "sympy": "0",
+          "mathml": "<mn>0</mn>",
+          "unit": "K"
+        }
+      ],
+      "equation_export_version": 2,
+      "status": "rejected_or_ambiguous",
+      "reason": "lower validation evidence or competing equivalent explanation"
+    },
+    {
+      "name": "UA_constant",
+      "category": "parameter",
+      "statement": "constant UA differs",
+      "conditions": "thermal transient",
+      "indices": [
+        0
+      ],
+      "train_mse": 10.851764919211684,
+      "validation_mse": 8.379234658155163,
+      "validation_episodes": [
+        5.3978183924255125,
+        23.541538967572073,
+        21.12507356167695,
+        5.2743212950801235,
+        3.0898318707420795,
+        5.28570587226551,
+        1.9924050477125534,
+        1.3271822577665031
+      ],
+      "score": 8.406545391023872,
+      "complexity": 1,
+      "model": {
+        "name": "UA_constant",
+        "params": [
+          0.0009764528250020012,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "variant": 1,
+        "envelope": [
+          150.0,
+          1250.0,
+          295.0,
+          350.0
+        ]
+      },
+      "identifiability": {
+        "rank": 1,
+        "condition": 1.0,
+        "std": [
+          0.00065461561951401
+        ],
+        "singular_values": [
+          5032.743180984442
+        ],
+        "parameters": [
+          "log_UA"
+        ],
+        "correlation": [
+          [
+            1.0000000000000002
+          ]
+        ],
+        "caveat": "local, conditional on initial-state prior and model; not global uniqueness"
+      },
+      "physical": {
+        "valid": true,
+        "reason": "positive bounded coefficient grammar",
+        "ua_range": 1.0009769297102677,
+        "ua_max": 1.0009769297102677,
+        "mass_conservation": "reaction stoichiometry [-1,-1,+1,0] unchanged",
+        "dimensionless_arguments": true
+      },
+      "optimization_success": true,
+      "nfev": 3,
+      "eligible": true,
+      "equations": [
+        {
+          "name": "UA_eff",
+          "expression": "30415.2931592184",
+          "latex": "30415.2931592184",
+          "sympy": "30415.2931592184",
+          "mathml": "<mn>30415.2931592184</mn>",
+          "unit": "kJ/(h K)"
+        },
+        {
+          "name": "k_eff",
+          "expression": "16960000000000.0*exp(-75362.4/(8.3191716*T + 1.52518146))",
+          "latex": "16960000000000.0 e^{- \\frac{75362.4}{8.3191716 T + 1.52518146}}",
+          "sympy": "16960000000000.0*exp(-75362.4/(8.3191716*T + 1.52518146))",
+          "mathml": "<mrow><mfrac><mn>16960000000000.0</mn><msup><mi>&ExponentialE;</mi><mrow><mfrac><mn>75362.4</mn><mrow><mrow><mn>8.3191716</mn><mo>&InvisibleTimes;</mo><mi>T</mi></mrow><mo>+</mo><mn>1.52518146</mn></mrow></mfrac></mrow></msup></mfrac></mrow>",
+          "unit": "h^-1"
+        },
+        {
+          "name": "measurement_T",
+          "expression": "T",
+          "latex": "T",
+          "sympy": "T",
+          "mathml": "<mi>T</mi>",
+          "unit": "K"
+        },
+        {
+          "name": "bias_Tt",
+          "expression": "0",
+          "latex": "0",
+          "sympy": "0",
+          "mathml": "<mn>0</mn>",
+          "unit": "K"
+        }
+      ],
+      "equation_export_version": 2,
+      "status": "rejected_or_ambiguous",
+      "reason": "lower validation evidence or competing equivalent explanation"
+    },
+    {
+      "name": "UA_reciprocal",
+      "category": "structure",
+      "statement": "inverse-flow dependence",
+      "conditions": "broad mw domain",
+      "indices": [
+        0,
+        4
+      ],
+      "train_mse": 10.840327459983056,
+      "validation_mse": 8.362428318308202,
+      "validation_episodes": [
+        5.3364792839971,
+        23.644520783203728,
+        20.95743997052574,
+        5.222105688305584,
+        3.087934032004464,
+        5.323525052320592,
+        2.007148954588725,
+        1.3202727815196889
+      ],
+      "score": 8.417049784045622,
+      "complexity": 2,
+      "model": {
+        "name": "UA_reciprocal",
+        "params": [
+          0.00015088670337806088,
+          0.0,
+          0.0,
+          0.0,
+          -0.002205757871371251,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "variant": 1,
+        "envelope": [
+          150.0,
+          1250.0,
+          295.0,
+          350.0
+        ]
+      },
+      "identifiability": {
+        "rank": 2,
+        "condition": 10.821084698392884,
+        "std": [
+          0.0024024466122214753,
+          0.0062968686686539176
+        ],
+        "singular_values": [
+          5309.894296231966,
+          490.69889426339824
+        ],
+        "parameters": [
+          "log_UA",
+          "UA_reciprocal"
+        ],
+        "correlation": [
+          [
+            0.9999999999999999,
+            0.9614090436363294
+          ],
+          [
+            0.9614090436363288,
+            1.0
+          ]
+        ],
+        "caveat": "local, conditional on initial-state prior and model; not global uniqueness"
+      },
+      "physical": {
+        "valid": true,
+        "reason": "positive bounded coefficient grammar",
+        "ua_range": 0.9956957228402604,
+        "ua_max": 1.0015574306958117,
+        "mass_conservation": "reaction stoichiometry [-1,-1,+1,0] unchanged",
+        "dimensionless_arguments": true
+      },
+      "optimization_success": true,
+      "nfev": 17,
+      "eligible": true,
+      "equations": [
+        {
+          "name": "UA_eff",
+          "expression": "30457.3010787263*exp(-0.00220575787137125/v)",
+          "latex": "30457.3010787263 e^{- \\frac{0.00220575787137125}{v}}",
+          "sympy": "30457.3010787263*exp(-0.00220575787137125/v)",
+          "mathml": "<mrow><mfrac><mn>30457.3010787263</mn><msup><mi>&ExponentialE;</mi><mrow><mfrac><mn>0.00220575787137125</mn><mi>v</mi></mfrac></mrow></msup></mfrac></mrow>",
+          "unit": "kJ/(h K)"
+        },
+        {
+          "name": "k_eff",
+          "expression": "16960000000000.0*exp(-75362.4/(8.3191716*T + 1.52518146))",
+          "latex": "16960000000000.0 e^{- \\frac{75362.4}{8.3191716 T + 1.52518146}}",
+          "sympy": "16960000000000.0*exp(-75362.4/(8.3191716*T + 1.52518146))",
+          "mathml": "<mrow><mfrac><mn>16960000000000.0</mn><msup><mi>&ExponentialE;</mi><mrow><mfrac><mn>75362.4</mn><mrow><mrow><mn>8.3191716</mn><mo>&InvisibleTimes;</mo><mi>T</mi></mrow><mo>+</mo><mn>1.52518146</mn></mrow></mfrac></mrow></msup></mfrac></mrow>",
+          "unit": "h^-1"
+        },
+        {
+          "name": "measurement_T",
+          "expression": "T",
+          "latex": "T",
+          "sympy": "T",
+          "mathml": "<mi>T</mi>",
+          "unit": "K"
+        },
+        {
+          "name": "bias_Tt",
+          "expression": "0",
+          "latex": "0",
+          "sympy": "0",
+          "mathml": "<mn>0</mn>",
+          "unit": "K"
+        }
+      ],
+      "equation_export_version": 2,
+      "status": "rejected_or_ambiguous",
+      "reason": "lower validation evidence or competing equivalent explanation"
+    },
+    {
+      "name": "kinetic_rate",
+      "category": "kinetic",
+      "statement": "constant rate multiplier",
+      "conditions": "known heat and feed; chemistry observable aggregate",
+      "indices": [
+        6
+      ],
+      "train_mse": 10.853981851884804,
+      "validation_mse": 8.390492208136331,
+      "validation_episodes": [
+        5.411886799263326,
+        23.58325290527249,
+        21.061977301024363,
+        5.366922778683028,
+        3.0805149305206236,
+        5.310759399302825,
+        1.9790894899872438,
+        1.3295340610367494
+      ],
+      "score": 8.417802941005041,
+      "complexity": 1,
+      "model": {
+        "name": "kinetic_rate",
+        "params": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.0005706791741729622,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "variant": 1,
+        "envelope": [
+          150.0,
+          1250.0,
+          295.0,
+          350.0
+        ]
+      },
+      "identifiability": {
+        "rank": 1,
+        "condition": 1.0,
+        "std": [
+          0.0004234624135512603
+        ],
+        "singular_values": [
+          7780.734947182799
+        ],
+        "parameters": [
+          "log_k"
+        ],
+        "correlation": [
+          [
+            1.0000000000000002
+          ]
+        ],
+        "caveat": "local, conditional on initial-state prior and model; not global uniqueness"
+      },
+      "physical": {
+        "valid": true,
+        "reason": "positive bounded coefficient grammar",
+        "ua_range": 1.0,
+        "ua_max": 1.0,
+        "mass_conservation": "reaction stoichiometry [-1,-1,+1,0] unchanged",
+        "dimensionless_arguments": true
+      },
+      "optimization_success": true,
+      "nfev": 11,
+      "eligible": true,
+      "equations": [
+        {
+          "name": "UA_eff",
+          "expression": "30385.6085554560",
+          "latex": "30385.608555456",
+          "sympy": "30385.6085554560",
+          "mathml": "<mn>30385.608555456</mn>",
+          "unit": "kJ/(h K)"
+        },
+        {
+          "name": "k_eff",
+          "expression": "16950324042402.4*exp(-75362.4/(8.3191716*T + 1.52518146))",
+          "latex": "16950324042402.4 e^{- \\frac{75362.4}{8.3191716 T + 1.52518146}}",
+          "sympy": "16950324042402.4*exp(-75362.4/(8.3191716*T + 1.52518146))",
+          "mathml": "<mrow><mfrac><mn>16950324042402.4</mn><msup><mi>&ExponentialE;</mi><mrow><mfrac><mn>75362.4</mn><mrow><mrow><mn>8.3191716</mn><mo>&InvisibleTimes;</mo><mi>T</mi></mrow><mo>+</mo><mn>1.52518146</mn></mrow></mfrac></mrow></msup></mfrac></mrow>",
+          "unit": "h^-1"
+        },
+        {
+          "name": "measurement_T",
+          "expression": "T",
+          "latex": "T",
+          "sympy": "T",
+          "mathml": "<mi>T</mi>",
+          "unit": "K"
+        },
+        {
+          "name": "bias_Tt",
+          "expression": "0",
+          "latex": "0",
+          "sympy": "0",
+          "mathml": "<mn>0</mn>",
+          "unit": "K"
+        }
+      ],
+      "equation_export_version": 2,
+      "status": "rejected_or_ambiguous",
+      "reason": "lower validation evidence or competing equivalent explanation"
+    },
+    {
+      "name": "thermal_capacity",
+      "category": "thermal",
+      "statement": "effective heat capacity differs",
+      "conditions": "thermal transient",
+      "indices": [
+        13
+      ],
+      "train_mse": 10.2465924428493,
+      "validation_mse": 8.39964122587738,
+      "validation_episodes": [
+        7.1075347052675015,
+        24.17292465674384,
+        17.247311921631347,
+        6.521593909614295,
+        3.0763473725200807,
+        5.712826467453613,
+        1.994207893634276,
+        1.3643828801540816
+      ],
+      "score": 8.42695195874609,
+      "complexity": 1,
+      "model": {
+        "name": "thermal_capacity",
+        "params": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.019783631192155277,
+          0.0
+        ],
+        "variant": 1,
+        "envelope": [
+          150.0,
+          1250.0,
+          295.0,
+          350.0
+        ]
+      },
+      "identifiability": {
+        "rank": 1,
+        "condition": 1.0,
+        "std": [
+          0.002498261098823686
+        ],
+        "singular_values": [
+          1281.4239888122495
+        ],
+        "parameters": [
+          "log_capacity"
+        ],
+        "correlation": [
+          [
+            1.0000000000000002
+          ]
+        ],
+        "caveat": "local, conditional on initial-state prior and model; not global uniqueness"
+      },
+      "physical": {
+        "valid": true,
+        "reason": "positive bounded coefficient grammar",
+        "ua_range": 1.0,
+        "ua_max": 1.0,
+        "mass_conservation": "reaction stoichiometry [-1,-1,+1,0] unchanged",
+        "dimensionless_arguments": true
+      },
+      "optimization_success": true,
+      "nfev": 4,
+      "eligible": true,
+      "equations": [
+        {
+          "name": "UA_eff",
+          "expression": "30385.6085554560",
+          "latex": "30385.608555456",
+          "sympy": "30385.6085554560",
+          "mathml": "<mn>30385.608555456</mn>",
+          "unit": "kJ/(h K)"
+        },
+        {
+          "name": "k_eff",
+          "expression": "16960000000000.0*exp(-75362.4/(8.3191716*T + 1.52518146))",
+          "latex": "16960000000000.0 e^{- \\frac{75362.4}{8.3191716 T + 1.52518146}}",
+          "sympy": "16960000000000.0*exp(-75362.4/(8.3191716*T + 1.52518146))",
+          "mathml": "<mrow><mfrac><mn>16960000000000.0</mn><msup><mi>&ExponentialE;</mi><mrow><mfrac><mn>75362.4</mn><mrow><mrow><mn>8.3191716</mn><mo>&InvisibleTimes;</mo><mi>T</mi></mrow><mo>+</mo><mn>1.52518146</mn></mrow></mfrac></mrow></msup></mfrac></mrow>",
+          "unit": "h^-1"
+        },
+        {
+          "name": "measurement_T",
+          "expression": "T",
+          "latex": "T",
+          "sympy": "T",
+          "mathml": "<mi>T</mi>",
+          "unit": "K"
+        },
+        {
+          "name": "bias_Tt",
+          "expression": "0",
+          "latex": "0",
+          "sympy": "0",
+          "mathml": "<mn>0</mn>",
+          "unit": "K"
+        },
+        {
+          "name": "capacity_eff",
+          "expression": "1.01998062415793*capacity_nominal",
+          "latex": "1.01998062415793 capacity_{nominal}",
+          "sympy": "1.01998062415793*capacity_nominal",
+          "mathml": "<mrow><mn>1.01998062415793</mn><mo>&InvisibleTimes;</mo><msub><mi>capacity</mi><mi>nominal</mi></msub></mrow>",
+          "unit": "kJ/K"
+        }
+      ],
+      "equation_export_version": 2,
+      "status": "rejected_or_ambiguous",
+      "reason": "lower validation evidence or competing equivalent explanation"
+    },
+    {
+      "name": "reaction_heat",
+      "category": "thermal",
+      "statement": "reaction heat differs",
+      "conditions": "independence from kinetic effects",
+      "indices": [
+        8
+      ],
+      "train_mse": 10.884698613264023,
+      "validation_mse": 8.456149361180213,
+      "validation_episodes": [
+        5.482800462589906,
+        22.4203624851713,
+        22.691106810283575,
+        5.5709424813551465,
+        3.1200022307605684,
+        5.099331457246483,
+        1.9364634334694675,
+        1.3281855285652584
+      ],
+      "score": 8.483460094048922,
+      "complexity": 1,
+      "model": {
+        "name": "reaction_heat",
+        "params": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.0006697895979960273,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "variant": 1,
+        "envelope": [
+          150.0,
+          1250.0,
+          295.0,
+          350.0
+        ]
+      },
+      "identifiability": {
+        "rank": 1,
+        "condition": 1.0,
+        "std": [
+          0.0002065035484868096
+        ],
+        "singular_values": [
+          15977.97103347866
+        ],
+        "parameters": [
+          "log_heat"
+        ],
+        "correlation": [
+          [
+            0.9999999999999999
+          ]
+        ],
+        "caveat": "local, conditional on initial-state prior and model; not global uniqueness"
+      },
+      "physical": {
+        "valid": true,
+        "reason": "positive bounded coefficient grammar",
+        "ua_range": 1.0,
+        "ua_max": 1.0,
+        "mass_conservation": "reaction stoichiometry [-1,-1,+1,0] unchanged",
+        "dimensionless_arguments": true
+      },
+      "optimization_success": true,
+      "nfev": 6,
+      "eligible": true,
+      "equations": [
+        {
+          "name": "UA_eff",
+          "expression": "30385.6085554560",
+          "latex": "30385.608555456",
+          "sympy": "30385.6085554560",
+          "mathml": "<mn>30385.608555456</mn>",
+          "unit": "kJ/(h K)"
+        },
+        {
+          "name": "k_eff",
+          "expression": "16960000000000.0*exp(-75362.4/(8.3191716*T + 1.52518146))",
+          "latex": "16960000000000.0 e^{- \\frac{75362.4}{8.3191716 T + 1.52518146}}",
+          "sympy": "16960000000000.0*exp(-75362.4/(8.3191716*T + 1.52518146))",
+          "mathml": "<mrow><mfrac><mn>16960000000000.0</mn><msup><mi>&ExponentialE;</mi><mrow><mfrac><mn>75362.4</mn><mrow><mrow><mn>8.3191716</mn><mo>&InvisibleTimes;</mo><mi>T</mi></mrow><mo>+</mo><mn>1.52518146</mn></mrow></mfrac></mrow></msup></mfrac></mrow>",
+          "unit": "h^-1"
+        },
+        {
+          "name": "measurement_T",
+          "expression": "T",
+          "latex": "T",
+          "sympy": "T",
+          "mathml": "<mi>T</mi>",
+          "unit": "K"
+        },
+        {
+          "name": "bias_Tt",
+          "expression": "0",
+          "latex": "0",
+          "sympy": "0",
+          "mathml": "<mn>0</mn>",
+          "unit": "K"
+        },
+        {
+          "name": "heat_release",
+          "expression": "83679.9332767723",
+          "latex": "83679.9332767723",
+          "sympy": "83679.9332767723",
+          "mathml": "<mn>83679.9332767723</mn>",
+          "unit": "kJ/kmol"
+        }
+      ],
+      "equation_export_version": 2,
+      "status": "rejected_or_ambiguous",
+      "reason": "lower validation evidence or competing equivalent explanation"
+    },
+    {
+      "name": "feed_composition",
+      "category": "feed",
+      "statement": "FA calibration differs",
+      "conditions": "known other flows",
+      "indices": [
+        9
+      ],
+      "train_mse": 10.885859498022871,
+      "validation_mse": 8.45925346000876,
+      "validation_episodes": [
+        5.50066152225275,
+        22.299707402810018,
+        22.82857795418663,
+        5.580476306892841,
+        3.12565164064621,
+        5.075180894140731,
+        1.9349508578188859,
+        1.3288211013220073
+      ],
+      "score": 8.48656419287747,
+      "complexity": 1,
+      "model": {
+        "name": "feed_composition",
+        "params": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.0008420955902391242,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "variant": 1,
+        "envelope": [
+          150.0,
+          1250.0,
+          295.0,
+          350.0
+        ]
+      },
+      "identifiability": {
+        "rank": 1,
+        "condition": 1.0,
+        "std": [
+          0.00024537545093508516
+        ],
+        "singular_values": [
+          13447.48893914764
+        ],
+        "parameters": [
+          "log_FA"
+        ],
+        "correlation": [
+          [
+            1.0000000000000002
+          ]
+        ],
+        "caveat": "local, conditional on initial-state prior and model; not global uniqueness"
+      },
+      "physical": {
+        "valid": true,
+        "reason": "positive bounded coefficient grammar",
+        "ua_range": 1.0,
+        "ua_max": 1.0,
+        "mass_conservation": "reaction stoichiometry [-1,-1,+1,0] unchanged",
+        "dimensionless_arguments": true
+      },
+      "optimization_success": true,
+      "nfev": 6,
+      "eligible": true,
+      "equations": [
+        {
+          "name": "UA_eff",
+          "expression": "30385.6085554560",
+          "latex": "30385.608555456",
+          "sympy": "30385.6085554560",
+          "mathml": "<mn>30385.608555456</mn>",
+          "unit": "kJ/(h K)"
+        },
+        {
+          "name": "k_eff",
+          "expression": "16960000000000.0*exp(-75362.4/(8.3191716*T + 1.52518146))",
+          "latex": "16960000000000.0 e^{- \\frac{75362.4}{8.3191716 T + 1.52518146}}",
+          "sympy": "16960000000000.0*exp(-75362.4/(8.3191716*T + 1.52518146))",
+          "mathml": "<mrow><mfrac><mn>16960000000000.0</mn><msup><mi>&ExponentialE;</mi><mrow><mfrac><mn>75362.4</mn><mrow><mrow><mn>8.3191716</mn><mo>&InvisibleTimes;</mo><mi>T</mi></mrow><mo>+</mo><mn>1.52518146</mn></mrow></mfrac></mrow></msup></mfrac></mrow>",
+          "unit": "h^-1"
+        },
+        {
+          "name": "measurement_T",
+          "expression": "T",
+          "latex": "T",
+          "sympy": "T",
+          "mathml": "<mi>T</mi>",
+          "unit": "K"
+        },
+        {
+          "name": "bias_Tt",
+          "expression": "0",
+          "latex": "0",
+          "sympy": "0",
+          "mathml": "<mn>0</mn>",
+          "unit": "K"
+        },
+        {
+          "name": "FA_eff",
+          "expression": "0.999158258872748*FA",
+          "latex": "0.999158258872748 FA",
+          "sympy": "0.999158258872748*FA",
+          "mathml": "<mrow><mn>0.999158258872748</mn><mo>&InvisibleTimes;</mo><mi>FA</mi></mrow>",
+          "unit": "kmol/h"
+        }
+      ],
+      "equation_export_version": 2,
+      "status": "rejected_or_ambiguous",
+      "reason": "lower validation evidence or competing equivalent explanation"
+    }
+  ],
+  "events": [
+    {
+      "order": 0,
+      "state": "OBSERVE",
+      "details": {
+        "episodes": 12,
+        "fingerprints": [
+          "fcc9c5d536002539c42ec7fb6cc1ae8120811b646b615b9aceef01ef1d790b04",
+          "4632d8039cd2239e807ce42ffa541bc0513b3d38b86c83b178d95317b464ed03",
+          "2d35ce01cbacc0b953c17e8f711a10cc8b3d6a0946b910f540a7c7b2b6aab37b",
+          "68ff9c49042cc711fe034e104a2e9cddd5fd2e43a58f6b1984f22e77ed7585bb",
+          "9d403b447ae3e55102735b277b151a742e42ddde404437b7800286dd24a64df0",
+          "f4dfdaa8effc2833345378fd81a3c69cff118f6790eae37a0c37b297f9430d0c",
+          "4f10500a89f1a66cd671879f3e96d24288a9fc0e7af437ab8e952b73678a0a4f",
+          "14c936a8ef90cd13e94fc930cf12ea6da5858a87e96839583224ca660c277520",
+          "b3d24ed58d05c741b3345cab59ee58b170713674a15a0e0a635f163c5a773e59",
+          "e515cf895ff6b7194268b92296f9a3c01e46610d650ea5381c85a6f0edac3c89",
+          "dfb9e070296142870ffff11c6de3356d46db3cc353c6c3be43cd92fd1182b76e",
+          "3ece0d7e490a6c9b9b3ba38fd9cdfcb70529facd4f506965ea0ff44c8303ae1d"
+        ]
+      },
+      "elapsed_seconds": 0.00022724799987372535
+    },
+    {
+      "order": 1,
+      "state": "DETECT",
+      "details": {
+        "persistent": false,
+        "diagnostics": [
+          {
+            "detected": false,
+            "first_step": null,
+            "threshold": 33.16000662174634,
+            "max_stat": 16.328772746865102,
+            "cusum_max": 6.116991009307352,
+            "autocorrelation": [
+              [
+                0.08440334816405907,
+                0.0823969580389473,
+                0.16458936675776473,
+                0.02432111626739017,
+                0.09360993777279943
+              ],
+              [
+                -0.10905130191922373,
+                0.03855907625325666,
+                -0.07716389115722887,
+                0.06055438833921724,
+                -0.02709803660687399
+              ]
+            ],
+            "ljung_box_p": [
+              0.03043887964940065,
+              0.32659330618489557
+            ],
+            "missing_fraction": 0.0,
+            "mean_nis": 1.9863930258010511,
+            "interpretation": "discrepancy only; noise, sensor and physical causes compete"
+          },
+          {
+            "detected": false,
+            "first_step": null,
+            "threshold": 33.16000662174634,
+            "max_stat": 12.684506371640532,
+            "cusum_max": 6.79895291534072,
+            "autocorrelation": [
+              [
+                -0.06946773835923026,
+                -0.011140927698982676,
+                0.039597872913365924,
+                0.028034498259439346,
+                0.051503484084996075
+              ],
+              [
+                0.0308064424174992,
+                -0.15383472453466485,
+                0.002571493194098183,
+                0.06716604289426013,
+                0.013419703181474792
+              ]
+            ],
+            "ljung_box_p": [
+              0.7860597257511208,
+              0.20886292796661252
+            ],
+            "missing_fraction": 0.0,
+            "mean_nis": 2.087281878461232,
+            "interpretation": "discrepancy only; noise, sensor and physical causes compete"
+          },
+          {
+            "detected": false,
+            "first_step": null,
+            "threshold": 33.16000662174634,
+            "max_stat": 19.46006042942859,
+            "cusum_max": 8.365014365966863,
+            "autocorrelation": [
+              [
+                0.07989800700137903,
+                0.04536599188182721,
+                0.03232632428294722,
+                0.13623898740869997,
+                0.17363271836513436
+              ],
+              [
+                -0.06112879170128441,
+                -0.05432248024062067,
+                0.05598975344446312,
+                0.060512076275206245,
+                -0.02761742787749495
+              ]
+            ],
+            "ljung_box_p": [
+              0.013651033956596158,
+              0.6254926209582067
+            ],
+            "missing_fraction": 0.0,
+            "mean_nis": 2.1083522391204403,
+            "interpretation": "discrepancy only; noise, sensor and physical causes compete"
+          },
+          {
+            "detected": false,
+            "first_step": null,
+            "threshold": 33.16000662174634,
+            "max_stat": 11.62055855464972,
+            "cusum_max": 4.2168564255591345,
+            "autocorrelation": [
+              [
+                0.04920963390494119,
+                -0.05162657523556127,
+                0.0502535472620874,
+                -0.045011088472448293,
+                0.043547881537555615
+              ],
+              [
+                -0.03797690141368659,
+                -0.05130614854603556,
+                0.08104284902617527,
+                0.10947876476216699,
+                0.053048733554759746
+              ]
+            ],
+            "ljung_box_p": [
+              0.7269304441236786,
+              0.28286506532675937
+            ],
+            "missing_fraction": 0.0,
+            "mean_nis": 1.9481137878717234,
+            "interpretation": "discrepancy only; noise, sensor and physical causes compete"
+          },
+          {
+            "detected": false,
+            "first_step": null,
+            "threshold": 33.16000662174634,
+            "max_stat": 13.008488685926453,
+            "cusum_max": 4.1607488643024215,
+            "autocorrelation": [
+              [
+                0.09646373079749766,
+                0.03302896900294798,
+                0.05621485769270467,
+                0.1366512386038272,
+                -0.039593609301115114
+              ],
+              [
+                0.11038966637219375,
+                0.012525207892568719,
+                0.04899979024709722,
+                -0.01341575490413784,
+                0.013820040687358544
+              ]
+            ],
+            "ljung_box_p": [
+              0.14121352969466658,
+              0.5964182933129706
+            ],
+            "missing_fraction": 0.0,
+            "mean_nis": 1.886126384165386,
+            "interpretation": "discrepancy only; noise, sensor and physical causes compete"
+          },
+          {
+            "detected": false,
+            "first_step": null,
+            "threshold": 33.16000662174634,
+            "max_stat": 20.558829932668953,
+            "cusum_max": 9.895259277605891,
+            "autocorrelation": [
+              [
+                0.07657543783522806,
+                0.06099146495341664,
+                0.1207276474745046,
+                0.03845969700766846,
+                0.0862163521387324
+              ],
+              [
+                -0.04853638609628705,
+                -0.06497010615208668,
+                0.02955446000151285,
+                0.13424075176197975,
+                -0.009033460712877044
+              ]
+            ],
+            "ljung_box_p": [
+              0.15050290727252044,
+              0.2806721817392717
+            ],
+            "missing_fraction": 0.0,
+            "mean_nis": 2.243782104969912,
+            "interpretation": "discrepancy only; noise, sensor and physical causes compete"
+          },
+          {
+            "detected": false,
+            "first_step": null,
+            "threshold": 33.16000662174634,
+            "max_stat": 11.564238504741716,
+            "cusum_max": 6.921680135962083,
+            "autocorrelation": [
+              [
+                0.005475206803159945,
+                -0.05376759386725937,
+                0.03989599647156141,
+                -0.0946788224262019,
+                -0.045529095327490665
+              ],
+              [
+                -0.017572690430805143,
+                0.11693359837391812,
+                -0.014391662440641181,
+                0.11078590986893085,
+                -0.05428357930662496
+              ]
+            ],
+            "ljung_box_p": [
+              0.5754309370858431,
+              0.20538740020718893
+            ],
+            "missing_fraction": 0.0,
+            "mean_nis": 2.0117526103978927,
+            "interpretation": "discrepancy only; noise, sensor and physical causes compete"
+          },
+          {
+            "detected": false,
+            "first_step": null,
+            "threshold": 33.16000662174634,
+            "max_stat": 9.945015915099345,
+            "cusum_max": 4.337775841810038,
+            "autocorrelation": [
+              [
+                -0.04575611924881851,
+                -0.04695764002752526,
+                -0.006798169972111655,
+                -0.026873289412157005,
+                0.050345994453902844
+              ],
+              [
+                0.043868465364185164,
+                0.0242681385097528,
+                0.015136522091783308,
+                -0.015965076473929696,
+                -0.02379524278154676
+              ]
+            ],
+            "ljung_box_p": [
+              0.8678404925041945,
+              0.9723414578051547
+            ],
+            "missing_fraction": 0.0,
+            "mean_nis": 1.9413846323434638,
+            "interpretation": "discrepancy only; noise, sensor and physical causes compete"
+          },
+          {
+            "detected": false,
+            "first_step": null,
+            "threshold": 33.16000662174634,
+            "max_stat": 23.799121682658942,
+            "cusum_max": 9.636778811482472,
+            "autocorrelation": [
+              [
+                0.19939994813323467,
+                0.10991947908490858,
+                0.16949729131529429,
+                0.16765426735682395,
+                0.022003473173520968
+              ],
+              [
+                0.030625375053106148,
+                0.03573649915794393,
+                0.043768662404225306,
+                -0.040395292406181796,
+                0.05344106096404205
+              ]
+            ],
+            "ljung_box_p": [
+              6.559260791224347e-05,
+              0.832805226161194
+            ],
+            "missing_fraction": 0.0,
+            "mean_nis": 2.0678790724613028,
+            "interpretation": "discrepancy only; noise, sensor and physical causes compete"
+          },
+          {
+            "detected": false,
+            "first_step": null,
+            "threshold": 33.16000662174634,
+            "max_stat": 14.398863930389041,
+            "cusum_max": 6.3754779755282796,
+            "autocorrelation": [
+              [
+                0.041449289777880795,
+                -0.021132191950024068,
+                0.09783436960151126,
+                0.06033842611098052,
+                -0.014739406962013127
+              ],
+              [
+                -0.0037330872296369843,
+                -0.020714899588815852,
+                -0.012386333878688625,
+                -0.031422112607091,
+                -0.043217574976933085
+              ]
+            ],
+            "ljung_box_p": [
+              0.575346374187328,
+              0.9737144662730479
+            ],
+            "missing_fraction": 0.0,
+            "mean_nis": 2.106770417623595,
+            "interpretation": "discrepancy only; noise, sensor and physical causes compete"
+          },
+          {
+            "detected": false,
+            "first_step": null,
+            "threshold": 33.16000662174634,
+            "max_stat": 17.94175426804073,
+            "cusum_max": 7.170256987297893,
+            "autocorrelation": [
+              [
+                0.054175624182460094,
+                0.044647306762410896,
+                0.06189913269343697,
+                0.1646081862647429,
+                0.14628924186978812
+              ],
+              [
+                -0.05281251730088947,
+                0.03635847331131521,
+                -0.10215202525725316,
+                -0.0009791615577229911,
+                0.06994003223979818
+              ]
+            ],
+            "ljung_box_p": [
+              0.015010293152188053,
+              0.44499354456236306
+            ],
+            "missing_fraction": 0.0,
+            "mean_nis": 2.116519540371607,
+            "interpretation": "discrepancy only; noise, sensor and physical causes compete"
+          },
+          {
+            "detected": false,
+            "first_step": null,
+            "threshold": 33.16000662174634,
+            "max_stat": 25.198308506152838,
+            "cusum_max": 13.209826574317297,
+            "autocorrelation": [
+              [
+                -0.0969061773567326,
+                0.0944150700098698,
+                0.020169382108841193,
+                0.06356352558365992,
+                0.09093014549787298
+              ],
+              [
+                0.03972329090424296,
+                -0.010097861218938999,
+                0.00523410573849951,
+                -0.02194440847637346,
+                0.05996244857195726
+              ]
+            ],
+            "ljung_box_p": [
+              0.18001556975059052,
+              0.9218705046401046
+            ],
+            "missing_fraction": 0.0,
+            "mean_nis": 2.0108274530777748,
+            "interpretation": "discrepancy only; noise, sensor and physical causes compete"
+          }
+        ]
+      },
+      "elapsed_seconds": 0.276980624999851
+    },
+    {
+      "order": 2,
+      "state": "HYPOTHESIZE",
+      "details": {
+        "names": [
+          "H0",
+          "UA_constant",
+          "UA_linear",
+          "UA_power",
+          "UA_quadratic",
+          "UA_reciprocal",
+          "UA_sqrt",
+          "kinetic_rate",
+          "kinetic_activation",
+          "reaction_heat",
+          "feed_composition",
+          "sensor_bias",
+          "sensor_drift",
+          "thermal_capacity",
+          "feed_temperature",
+          "joint_UA_kinetic",
+          "UA_sparse"
+        ],
+        "unfitted_alternative": "H8 extra dynamics remain possible; not uniquely diagnosed",
+        "weak_proposal": {
+          "coefficients": [
+            0.0,
+            0.5719455189975512,
+            0.0,
+            -0.08633383781840588,
+            0.0,
+            -1.1752674762906485
+          ],
+          "terms": [
+            1,
+            3,
+            5
+          ],
+          "rows": 360,
+          "condition": 111374.89594208304
+        }
+      },
+      "elapsed_seconds": 0.2891972769998574
+    },
+    {
+      "order": 3,
+      "state": "DISCOVER",
+      "details": {
+        "candidates": 17,
+        "training_only": true
+      },
+      "elapsed_seconds": 9.11850023299985
+    },
+    {
+      "order": 4,
+      "state": "CHALLENGE",
+      "details": {
+        "physical_checks": true,
+        "prolonged_integration_hours": 6.0,
+        "plausible_hypotheses": [
+          "UA_sparse",
+          "kinetic_activation",
+          "joint_UA_kinetic",
+          "UA_quadratic"
+        ]
+      },
+      "elapsed_seconds": 9.119049280999889
+    },
+    {
+      "order": 5,
+      "state": "VALIDATE",
+      "details": {
+        "relative_gain": 0.0449260288125659,
+        "paired_CI": [
+          -0.15978064430202227,
+          0.969878465643012
+        ],
+        "min_gain": 0.1,
+        "gate": false,
+        "independent": true
+      },
+      "elapsed_seconds": 9.119050431999995
+    },
+    {
+      "order": 6,
+      "state": "REJECT",
+      "details": {
+        "selected": "H0",
+        "reason": "insufficient independent evidence; retain null"
+      },
+      "elapsed_seconds": 9.119058153999958
+    },
+    {
+      "order": 7,
+      "state": "MONITOR",
+      "details": {
+        "fallback": "nominal",
+        "rolling_window": 20,
+        "loss_ratio": 1.2
+      },
+      "elapsed_seconds": 9.119058844999927
+    }
+  ],
+  "weak_proposal": {
+    "coefficients": [
+      0.0,
+      0.5719455189975512,
+      0.0,
+      -0.08633383781840588,
+      0.0,
+      -1.1752674762906485
+    ],
+    "terms": [
+      1,
+      3,
+      5
+    ],
+    "rows": 360,
+    "condition": 111374.89594208304
+  },
+  "relative_gain": 0.0449260288125659,
+  "paired_CI": [
+    -0.15978064430202227,
+    0.969878465643012
+  ],
+  "train_seeds": [
+    310000,
+    310001,
+    310002,
+    310003,
+    310004,
+    310005,
+    310006,
+    310007,
+    310008,
+    310009,
+    310010,
+    310011
+  ],
+  "validation_seeds": [
+    320000,
+    320001,
+    320002,
+    320003,
+    320004,
+    320005,
+    320006,
+    320007
+  ],
+  "execution_seconds": 9.119399422000015,
+  "commissioning_notes": "Original historical physics, no injected defect. Input noise is hidden from identification. New calibration is independent of final dissertation scenarios."
+}

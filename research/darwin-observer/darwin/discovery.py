@@ -15,14 +15,14 @@ def paired_interval(values,seed=61017,draws=2000):
     b=np.mean(a[rng.integers(0,len(a),(draws,len(a)))],axis=1)
     return np.quantile(b,[.025,.975]).tolist()
 
-def discover(train,validation,threshold=12.,allowed=None,gate=True,physical=True,holdout=True):
+def discover(train,validation,threshold=12.,allowed=None,gate=True,physical=True,holdout=True,variant=0,observer_options=None):
     assert_disjoint(train,validation);events=[];start=time.perf_counter()
     def event(state,details):events.append(dict(order=len(events),state=state,details=details,elapsed_seconds=time.perf_counter()-start))
     event('OBSERVE',dict(episodes=len(train),fingerprints=[r.fingerprint() for r in train]))
-    ds=[diagnose(observe(r),threshold) for r in train]
+    ds=[diagnose(observe(r,Model(variant=variant),**(observer_options or {})),threshold) for r in train]
     evidence=sum(d['detected'] for d in ds)>=max(1,len(ds)//3)
     event('DETECT',dict(persistent=evidence,diagnostics=ds))
-    weak=weak_jacket(train);hypotheses=HYPOTHESES if allowed is None else [h for h in HYPOTHESES if h.name in allowed]
+    weak=weak_jacket(train,variant=variant);hypotheses=HYPOTHESES if allowed is None else [h for h in HYPOTHESES if h.name in allowed]
     if allowed is None and 0<len(weak['terms'])<=4:
         inds=tuple(sorted(set([0]+weak['terms'])))
         hypotheses=hypotheses+[Hypothesis('UA_sparse',inds,'structure','sparse weak-balance proposal','term independence and holdout prediction')]
@@ -30,8 +30,8 @@ def discover(train,validation,threshold=12.,allowed=None,gate=True,physical=True
     ranking=[];fits={};nobs=sum(np.isfinite(r.measurements[20:]).sum() for r in validation)
     scoring=validation if holdout else train
     for h in hypotheses:
-        f=fit(h,train,initial=weak['coefficients']+[0.]*(NP-6) if h.name=='UA_sparse' else None);m=f['model'];fits[h.name]=f
-        errors=[float(np.mean(residual_vector([r],m.params)**2)) for r in scoring]
+        f=fit(h,train,initial=weak['coefficients']+[0.]*(NP-6) if h.name=='UA_sparse' else None,variant=variant,observer_options=observer_options);m=f['model'];fits[h.name]=f
+        errors=[float(np.mean(residual_vector([r],m.params,variant=variant,observer_options=observer_options)**2)) for r in scoring]
         phys=physical_check(m)
         rank_ok=f['identifiability']['rank']==len(h.indices) and f['identifiability']['condition']<1e5
         penalty=.025*len(h.indices)+np.log(max(nobs,2))*len(h.indices)/max(nobs,1)
@@ -56,7 +56,7 @@ def discover(train,validation,threshold=12.,allowed=None,gate=True,physical=True
         r['reason']=reason if r['name']==selected['name'] else ('physical or rank gate failed' if not r['eligible'] else 'lower validation evidence or competing equivalent explanation')
     event('ACCEPT' if accepted else 'REJECT',dict(selected=selected['name'],reason=reason));event('MONITOR',dict(fallback='nominal',rolling_window=20,loss_ratio=1.2))
     ident=hashlib.sha256('|'.join(r.fingerprint() for r in train+validation).encode()).hexdigest()[:16]
-    return dict(id=ident,version='1.0.0',model_variant='ProcessLab-tabulated-f4444d4',accepted=accepted,selected=selected['name'],
+    return dict(id=ident,version='1.1.0' if variant else '1.0.0',model_variant='historical-SI-complete' if variant else 'ProcessLab-tabulated-f4444d4',accepted=accepted,selected=selected['name'],
                 category=selected['category'],reason=reason,model=selected['model'],best_unrestricted=best['name'],
                 plausible=plausible,ranking=ranking,events=events,weak_proposal=weak,relative_gain=gain,paired_CI=ci,
                 train_seeds=[r.seed for r in train],validation_seeds=[r.seed for r in validation],execution_seconds=time.perf_counter()-start)
@@ -66,8 +66,9 @@ class GuardedDarwin:
     it cannot improve its own prior prediction. A new equation is accepted only
     through approve() with independently validated past completed episodes.
     """
-    def __init__(self,discovery=None,monitor=True):
-        self.nominal=OnlineUKF();self.active=OnlineUKF();self.accepted=False;self.monitor=monitor
+    def __init__(self,discovery=None,monitor=True,nominal_model=None,observer_options=None):
+        self.base_model=nominal_model or Model()
+        self.nominal=OnlineUKF(self.base_model,**(observer_options or {}));self.active=OnlineUKF(self.base_model,**(observer_options or {}));self.accepted=False;self.monitor=monitor
         self.nom_losses=[];self.active_losses=[];self.events=[];self.k=0;self.fallbacks=0
         if discovery:self.approve(discovery)
     def approve(self,discovery):
@@ -77,12 +78,13 @@ class GuardedDarwin:
         if not discovery.get('train_seeds') or not discovery.get('validation_seeds'):return False
         if set(discovery['train_seeds'])&set(discovery['validation_seeds']):return False
         m=Model.from_dict(discovery['model'])
+        if m.variant!=self.base_model.variant:return False
         if not physical_check(m)['valid']:return False
         # Preserve current state/covariance when updating a running observer.
         self.active.model=m;self.accepted=True;self.events.append(dict(step=self.k,state='ACCEPT',id=discovery['id']))
         return True
     def revert(self,reason):
-        self.accepted=False;self.active.model=Model();self.active.x=self.nominal.x.copy();self.active.P=self.nominal.P.copy()
+        self.accepted=False;self.active.model=self.base_model;self.active.x=self.nominal.x.copy();self.active.P=self.nominal.P.copy()
         self.fallbacks+=1;self.events.append(dict(step=self.k,state='REVERT',reason=reason))
     def update(self,u,y,dt=.015):
         self.k+=1;xn,dn=self.nominal.update(u,y,dt)
