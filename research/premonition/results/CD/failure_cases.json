@@ -1,0 +1,122 @@
+[
+  {
+    "seed": 300017,
+    "kind": "UA_loss",
+    "event": 1,
+    "detected": 0,
+    "missed": 1,
+    "false_onsets": 1,
+    "true_onsets": 0,
+    "exposure_h": 1.065,
+    "lead_min": null,
+    "redundant": 0
+  },
+  {
+    "seed": 400003,
+    "kind": "drift",
+    "event": 0,
+    "detected": 0,
+    "missed": 0,
+    "false_onsets": 1,
+    "true_onsets": 0,
+    "exposure_h": 1.635,
+    "lead_min": null,
+    "redundant": 0
+  },
+  {
+    "seed": 400004,
+    "kind": "setpoint",
+    "event": 0,
+    "detected": 0,
+    "missed": 0,
+    "false_onsets": 3,
+    "true_onsets": 0,
+    "exposure_h": 1.635,
+    "lead_min": null,
+    "redundant": 0
+  },
+  {
+    "seed": 400016,
+    "kind": "setpoint",
+    "event": 0,
+    "detected": 0,
+    "missed": 0,
+    "false_onsets": 2,
+    "true_onsets": 0,
+    "exposure_h": 1.635,
+    "lead_min": null,
+    "redundant": 0
+  },
+  {
+    "seed": 400027,
+    "kind": "drift",
+    "event": 0,
+    "detected": 0,
+    "missed": 0,
+    "false_onsets": 2,
+    "true_onsets": 0,
+    "exposure_h": 1.635,
+    "lead_min": null,
+    "redundant": 0
+  },
+  {
+    "seed": 400028,
+    "kind": "setpoint",
+    "event": 0,
+    "detected": 0,
+    "missed": 0,
+    "false_onsets": 1,
+    "true_onsets": 0,
+    "exposure_h": 1.635,
+    "lead_min": null,
+    "redundant": 0
+  },
+  {
+    "seed": 400052,
+    "kind": "setpoint",
+    "event": 0,
+    "detected": 0,
+    "missed": 0,
+    "false_onsets": 5,
+    "true_onsets": 0,
+    "exposure_h": 1.635,
+    "lead_min": null,
+    "redundant": 0
+  },
+  {
+    "seed": 400064,
+    "kind": "setpoint",
+    "event": 0,
+    "detected": 0,
+    "missed": 0,
+    "false_onsets": 2,
+    "true_onsets": 0,
+    "exposure_h": 1.635,
+    "lead_min": null,
+    "redundant": 0
+  },
+  {
+    "seed": 400075,
+    "kind": "drift",
+    "event": 0,
+    "detected": 0,
+    "missed": 0,
+    "false_onsets": 1,
+    "true_onsets": 0,
+    "exposure_h": 1.635,
+    "lead_min": null,
+    "redundant": 0
+  },
+  {
+    "seed": 400088,
+    "kind": "setpoint",
+    "event": 0,
+    "detected": 0,
+    "missed": 0,
+    "false_onsets": 1,
+    "true_onsets": 0,
+    "exposure_h": 1.635,
+    "lead_min": null,
+    "redundant": 0
+  }
+]

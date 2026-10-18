@@ -1,0 +1,151 @@
+{
+  "browser": "153.0.8010.0",
+  "errors": [],
+  "modules": [
+    {
+      "key": "twin",
+      "visible": true,
+      "canvases": [
+        {
+          "id": "twinT",
+          "points": 122
+        }
+      ]
+    },
+    {
+      "key": "bifurcation",
+      "visible": true,
+      "canvases": [
+        {
+          "id": "bifPlot",
+          "points": 171
+        },
+        {
+          "id": "eigPlot",
+          "points": 6
+        }
+      ]
+    },
+    {
+      "key": "ews",
+      "visible": true,
+      "canvases": [
+        {
+          "id": "ewsTemp",
+          "points": 700
+        },
+        {
+          "id": "ewsAC",
+          "points": 700
+        },
+        {
+          "id": "ewsVar",
+          "points": 700
+        },
+        {
+          "id": "ewsAlpha",
+          "points": 700
+        },
+        {
+          "id": "ewsRecovery",
+          "points": 477
+        },
+        {
+          "id": "ewsResidual",
+          "points": 700
+        }
+      ]
+    },
+    {
+      "key": "timeline",
+      "visible": true,
+      "canvases": [
+        {
+          "id": "timelinePlot",
+          "points": 240
+        }
+      ]
+    },
+    {
+      "key": "arena",
+      "visible": true,
+      "canvases": [
+        {
+          "id": "arenaT",
+          "points": 960
+        },
+        {
+          "id": "arenaCC",
+          "points": 960
+        },
+        {
+          "id": "arenaU",
+          "points": 960
+        },
+        {
+          "id": "arenaRisk",
+          "points": 960
+        },
+        {
+          "id": "arenaV",
+          "points": 960
+        },
+        {
+          "id": "arenaCost",
+          "points": 960
+        }
+      ]
+    },
+    {
+      "key": "benchmark",
+      "visible": true,
+      "canvases": [
+        {
+          "id": "calibrationPlot",
+          "points": 32
+        },
+        {
+          "id": "prPlot",
+          "points": 529
+        }
+      ]
+    },
+    {
+      "key": "failure",
+      "visible": true,
+      "canvases": [
+        {
+          "id": "failureT",
+          "points": 320
+        },
+        {
+          "id": "failureRisk",
+          "points": 162
+        }
+      ]
+    }
+  ],
+  "offline": true,
+  "export_csv_rows": 800,
+  "roots": [
+    {
+      "T": 304.25694636685637,
+      "CC": 0.6811394132471952,
+      "residual": -2.1490023188054965e-13
+    },
+    {
+      "T": 315.26640467294067,
+      "CC": 1.3472664318439924,
+      "residual": -7.204272220343047e-14
+    },
+    {
+      "T": 326.815223462001,
+      "CC": 2.0460274439112203,
+      "residual": 1.4495428695053811e-13
+    }
+  ],
+  "equilibrium_api_max_error": 1.4364331946126185e-10,
+  "live_simulation": "Simula\u00e7\u00e3o conclu\u00edda. Nova trajet\u00f3ria dispon\u00edvel no reator.",
+  "horizontal_overflow": false,
+  "passed": true
+}

@@ -1,0 +1,17 @@
+{
+  "model_hashes": {
+    "D5.json": "6e8fa5d9dc963b4aea353a7d797c8a55c186e1b9ceac0fb4ad12d2993be05860",
+    "D5_noEWS.json": "177096154c8d5e95c83de3a5f5f2c2a3a8c88c48d667fdd38bb2a2bdc702b943",
+    "D4.json": "7ff73e24be25b0ca6c72e0f8a4d5e4b94af6d38214c54bbf2a0a8e3c25fb64ee"
+  },
+  "threshold_hash": "714a049bed2c8b7cb64dbf754e7c1f3b001955a99a992f0126d3ffbf1e6c360d",
+  "test_seeds": [
+    300000,
+    300099
+  ],
+  "falsification_seeds": [
+    400000,
+    400099
+  ],
+  "reason": "Keep all final evaluation seeds disjoint from pilot and exploratory evaluation; no refitting or threshold changes."
+}

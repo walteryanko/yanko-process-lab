@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+*.nbc
+*.nbi
+.pytest_cache/
+results_reproduced/
+results/pilot*/
+reports_results_reproduced/
+!results/tests_final.log
+!results/control_run.log
+!results/bifurcation_run.log
+!results/final_holdout.log
+!results/browser_test.log
+!results/report_build.log

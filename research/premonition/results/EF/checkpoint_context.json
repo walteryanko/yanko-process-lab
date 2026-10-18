@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "source": {
+    "physics.py": "b152ede044b89185fc9cba6aab31a3639663d0028301224b27c2933c815d6ee2",
+    "observer.py": "bb33682a57dcc5d334ea89a30865cb8a9d5da9d16c31d4478399443fe144f359",
+    "detectors.py": "c74e6fa7e7c3b857ba497abc2994d58cf50fb101198e5d11f9c26369ff160cf7",
+    "ews.py": "7921ae40ac7f3d92e5cbdfea3a52ff4c1c49bc10df0ccb90c34913b739720fd1",
+    "stability.py": "bf4686d5e75873f51c357b4dfead0d8de8cbb9aed4e0f38b4ee16539a3d0cef4",
+    "control.py": "8ce61d3e8460ef3817700fc5880e390b52c025440a6e74e3626a7d8d791f9f5a",
+    "scenarios.py": "a9cbe50af8ffe7369ebdb32162d7158a60eabe62174e1bd1cef73e4c9251875d"
+  },
+  "models": {
+    "D4.json": "7ff73e24be25b0ca6c72e0f8a4d5e4b94af6d38214c54bbf2a0a8e3c25fb64ee",
+    "D5.json": "6e8fa5d9dc963b4aea353a7d797c8a55c186e1b9ceac0fb4ad12d2993be05860",
+    "D5_noEWS.json": "177096154c8d5e95c83de3a5f5f2c2a3a8c88c48d667fdd38bb2a2bdc702b943"
+  },
+  "thresholds": "714a049bed2c8b7cb64dbf754e7c1f3b001955a99a992f0126d3ffbf1e6c360d"
+}

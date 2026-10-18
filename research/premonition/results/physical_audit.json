@@ -1,0 +1,234 @@
+{
+  "primary": "original_MATLAB_SI",
+  "source_repo": "https://github.com/walteryanko/yanko-process-lab",
+  "source_main_commit": "f4444d4c238291b8633743930249ee387ad94541",
+  "source_historical_commit": "b55a46cd182c70100b50ff5e6c98ba82ed96a5a8",
+  "source_reference_commit": "88c40e65204fa6aa5bed02cc64fb15be79a53bb1",
+  "variants": [
+    {
+      "name": "original_MATLAB_SI",
+      "heat": 83736.0,
+      "R": 8.3191716,
+      "arrhenius_offset_K": 0.1833333333333245,
+      "parameters": [
+        146.53799999999998,
+        75.3624,
+        192.59279999999998,
+        81.6426,
+        14.785041694165212,
+        55.26369864016249,
+        24.66843359589862,
+        75362.40000000001,
+        8.3191716,
+        16960000000000.0,
+        83736.0,
+        1.891825667557456,
+        1.1001094900992001,
+        30385.608555456,
+        0.1833333333333245
+      ],
+      "inputs": [
+        36.287389600000004,
+        453.59237,
+        45.359237,
+        453.59237,
+        297.0388888888889,
+        288.7055555555555
+      ],
+      "roots": [
+        [
+          0.6070247319211597,
+          33.98910210722656,
+          2.295764605061919,
+          3.6284866712288473,
+          332.33361802,
+          314.3975853298516
+        ]
+      ]
+    },
+    {
+      "name": "tabled",
+      "heat": 91556.9,
+      "R": 8.314,
+      "arrhenius_offset_K": 0.0,
+      "parameters": [
+        146.5,
+        75.4,
+        192.6,
+        81.6,
+        14.8,
+        55.3,
+        24.7,
+        75362.4,
+        8.314,
+        16960000000000.0,
+        91556.9,
+        1.89,
+        1.1,
+        30385.6,
+        0.0
+      ],
+      "inputs": [
+        36.3,
+        453.6,
+        45.4,
+        453.6,
+        297.0,
+        289.0
+      ],
+      "roots": [
+        [
+          0.3661339541539003,
+          33.768061360650776,
+          2.5394255111129014,
+          3.633950405595394,
+          340.303489384,
+          319.2023225237944
+        ]
+      ]
+    },
+    {
+      "name": "calibrated_332_3",
+      "heat": 84138.65353748418,
+      "R": 8.314,
+      "arrhenius_offset_K": 0.0,
+      "parameters": [
+        146.5,
+        75.4,
+        192.6,
+        81.6,
+        14.8,
+        55.3,
+        24.7,
+        75362.4,
+        8.314,
+        16960000000000.0,
+        84138.65353748418,
+        1.89,
+        1.1,
+        30385.6,
+        0.0
+      ],
+      "inputs": [
+        36.3,
+        453.6,
+        45.4,
+        453.6,
+        297.0,
+        289.0
+      ],
+      "roots": [
+        [
+          0.6246448243276421,
+          34.02657223082452,
+          2.2809146409391596,
+          3.633950405595394,
+          332.3,
+          314.4906748250958
+        ]
+      ]
+    }
+  ],
+  "sources_sha256": {
+    "modeloFun_KF.m": "aeb9db8faafff8bfec97a57d8a405352c0d7ab82ed3e7b7bddacbc539e114d70",
+    "pg_reference.py": "0bd4c320d2ef6d164b6348a1e7f5ccaafe55ee4bfefda53c136d75053add9aae",
+    "modeloCT.m": "d7b785681794850a4b78c2b8cfab2151f71b35b4d389efbf77383ecd8c10d086",
+    "NMPC_Fmincon.m": "ace19e2fa9bada31fe6c810a113438b41b7c76f667c16d3474d10148d57e6780",
+    "ukf_extracted_parameters.json": "ab7e5dbdb3759f96cd1e0fb9f7fcce11c5da3ae83f701b97c92564f02dedbe76",
+    "processlab_calibrated.ts": "04ed5990915019094cb1725c23e130a36bc4458c9443e37044813b837b46ea74",
+    "processlab_controller.ts": "18115fe9db43a6b81a178bf7de74465c931a6b2fa2a50e9023cbd231010f8f71",
+    "processlab_tabled.ts": "6f65850a7fa2387fd3b1c22440f5a10af07f4cf048c152137fde96d1a767c50f"
+  },
+  "observability": [
+    {
+      "x": [
+        0.6070247319211597,
+        33.98910210722656,
+        2.295764605061919,
+        3.6284866712288473,
+        332.33361802,
+        314.3975853298516
+      ],
+      "singular_values": [
+        127.87893505464277,
+        22.120579239239305,
+        17.11423051766014,
+        3.9245615885361237e-10,
+        8.169807014619414e-16,
+        5.582805310509543e-18
+      ],
+      "rank": 3,
+      "condition": 2.2905856096022675e+19,
+      "note": "local finite-horizon, scaled state, two thermal outputs"
+    },
+    {
+      "x": [
+        0.7070247319211597,
+        34.08910210722656,
+        2.295764605061919,
+        3.6284866712288473,
+        334.33361802,
+        315.3975853298516
+      ],
+      "singular_values": [
+        285.332901933241,
+        78.49834287397691,
+        22.381590763098348,
+        15.44185769663816,
+        1.0724131958462802e-14,
+        8.115979217753334e-15
+      ],
+      "rank": 4,
+      "condition": 3.515692860685107e+16,
+      "note": "local finite-horizon, scaled state, two thermal outputs"
+    },
+    {
+      "x": [
+        0.8070247319211596,
+        33.789102107226554,
+        2.395764605061919,
+        3.6284866712288473,
+        337.33361802,
+        312.3975853298516
+      ],
+      "singular_values": [
+        5997.96677427377,
+        1457.946888320254,
+        24.195183409034033,
+        18.76226876921585,
+        1.5233946399659673e-12,
+        4.709078313044222e-13
+      ],
+      "rank": 4,
+      "condition": 1.2737029149970402e+16,
+      "note": "local finite-horizon, scaled state, two thermal outputs"
+    }
+  ],
+  "ukf_changes": "Historical alpha,beta,Q,R and Euler retained; initialized at nominal equilibrium with uncertain P0 for this campaign, not dissertation startup. Joseph covariance and SPD repair are numerical safeguards.",
+  "nmcp_identity": "Port of ProcessLab main controller.ts (P57,M6,Qe0.8,Rdu0.2,coordinate search), with primary historical model; shared independent guard added. Not a MATLAB/fmincon binary reproduction.",
+  "other_research": {
+    "Oracle_KF_v01": "Audited; uses tabled model, pretrained weights incompatible with historical variant. No transfer or claimed gain.",
+    "NAKE": "Calibrated heat source audited; no mixing with primary model.",
+    "RSI": "Recovered branch aliases beyond-conventional-operation; no distinct recursive algorithm inferred.",
+    "Schrodinger_KF": "Branch reviewed; particle/transport ensemble uses tabled family. Not included as a primary estimator.",
+    "Quantum_Multiverse": "Checkpoint sources recovered and inspected; tabled family, not transferred."
+  },
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "libraries": {
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "sklearn": "1.8.0",
+      "numba": "0.68.0",
+      "matplotlib": "3.10.8"
+    }
+  },
+  "industrial_use": false,
+  "limits": {
+    "study_K": 344.0,
+    "historical_K": 355.4,
+    "exact_160F_K": 344.26111111111106,
+    "meaning": "Source study limit vs practical reagent evaporation constraint; not mathematical bifurcation thresholds"
+  }
+}

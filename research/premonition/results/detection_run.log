@@ -1,0 +1,27 @@
+/workspace/scratch/de709cb43aac/premonition-repo/research/premonition/premonition/physics.py:45: NumbaPerformanceWarning: np.dot() is faster on contiguous arrays, called on (Array(float64, 1, 'A', False, aligned=True), Array(float64, 1, 'C', False, aligned=True))
+  q=c*(u[5]-x[4]);cap=p[11]*np.dot(x[:4],p[:4]);feedcp=u[0]*p[0]+u[1]*p[1]+u[2]*p[3]
+{"stage": "train", "done": 20, "n": 160}
+{"stage": "train", "done": 40, "n": 160}
+{"stage": "train", "done": 60, "n": 160}
+{"stage": "train", "done": 80, "n": 160}
+{"stage": "train", "done": 100, "n": 160}
+{"stage": "train", "done": 120, "n": 160}
+{"stage": "train", "done": 140, "n": 160}
+{"stage": "train", "done": 160, "n": 160}
+{"stage": "calibration", "done": 20, "n": 80}
+{"stage": "calibration", "done": 40, "n": 80}
+{"stage": "calibration", "done": 60, "n": 80}
+{"stage": "calibration", "done": 80, "n": 80}
+{"stage": "test", "done": 20, "n": 100}
+{"stage": "test", "done": 40, "n": 100}
+{"stage": "test", "done": 60, "n": 100}
+{"stage": "test", "done": 80, "n": 100}
+{"stage": "test", "done": 100, "n": 100}
+{"stage": "falsification", "done": 20, "n": 100}
+{"stage": "falsification", "done": 40, "n": 100}
+{"stage": "falsification", "done": 60, "n": 100}
+{"stage": "falsification", "done": 80, "n": 100}
+{"stage": "falsification", "done": 100, "n": 100}
+{"stage": "estimator_ablation", "mode": "rk4", "n": 100}
+{"stage": "estimator_ablation", "mode": "adaptive", "n": 100}
+{"stage": "estimator_ablation", "mode": "ekf", "n": 100}

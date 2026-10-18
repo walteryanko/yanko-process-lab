@@ -1,0 +1,16 @@
+{
+  "operational_inputs": [
+    "past/current T,Tt",
+    "commanded feed and cooling",
+    "measured applied cooling",
+    "causal UKF mean/covariance/innovation"
+  ],
+  "forbidden": [
+    "future measurements",
+    "future disturbances",
+    "hidden UA/kinetics",
+    "plant concentrations"
+  ],
+  "truth_access": "scenario generator, labels, evaluator, plots and explicitly offline oracle only",
+  "probability_training": "future labels allowed offline; features do not accept episode or truth arguments"
+}

@@ -1,0 +1,24 @@
+{
+  "test_brier_full_minus_noEWS": {
+    "n": 100,
+    "mean_difference": -0.0010259475804259282,
+    "ci95": [
+      -0.002698000929127468,
+      0.000977476642441162
+    ],
+    "median_difference": -0.000576231594795557,
+    "direction": "B minus A; negative is favorable only for metrics to be minimized",
+    "fraction_negative": 0.55
+  },
+  "falsification_brier_full_minus_noEWS": {
+    "n": 100,
+    "mean_difference": -0.002071780808114253,
+    "ci95": [
+      -0.012176687187964151,
+      0.006686848827867454
+    ],
+    "median_difference": 0.006198670227196647,
+    "direction": "B minus A; negative is favorable only for metrics to be minimized",
+    "fraction_negative": 0.41
+  }
+}

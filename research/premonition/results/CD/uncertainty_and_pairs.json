@@ -1,0 +1,276 @@
+{
+  "test": {
+    "n": 100,
+    "coverage95_mean": 0.8245625,
+    "mean_RMSE_CC": 0.03563125022206823,
+    "error_strata": {
+      "lower_CC_error": {
+        "n": 50,
+        "mean_RMSE_CC": 0.015149106996440115,
+        "D5": {
+          "n_trajectories": 50,
+          "events": 28,
+          "detected": 28,
+          "missed": 0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "false_alarms_per_h": 0.0,
+          "false_onsets": 0,
+          "exposure_h": 52.365,
+          "lead_median_min": 5.3999999999999995,
+          "lead_min": [
+            3.5999999999999996,
+            6.3,
+            4.5,
+            5.3999999999999995,
+            4.5,
+            9.0,
+            6.3,
+            12.6,
+            4.5,
+            15.3,
+            5.3999999999999995,
+            3.5999999999999996,
+            14.399999999999999,
+            3.5999999999999996,
+            6.3,
+            4.5,
+            9.0,
+            2.6999999999999997,
+            5.3999999999999995,
+            4.5,
+            4.5,
+            7.199999999999999,
+            9.899999999999999,
+            4.5,
+            6.3,
+            4.5,
+            12.6,
+            1.7999999999999998
+          ],
+          "redundant": 1,
+          "recall_exact_ci": [
+            0.8765638814997362,
+            1.0
+          ]
+        }
+      },
+      "higher_CC_error": {
+        "n": 50,
+        "mean_RMSE_CC": 0.056113393447696336,
+        "D5": {
+          "n_trajectories": 50,
+          "events": 23,
+          "detected": 22,
+          "missed": 1,
+          "recall": 0.9565217391304348,
+          "precision": 0.9629629629629629,
+          "false_alarms_per_h": 0.01604492579221821,
+          "false_onsets": 1,
+          "exposure_h": 62.325,
+          "lead_median_min": 10.349999999999998,
+          "lead_min": [
+            9.0,
+            11.700000000000001,
+            10.799999999999999,
+            7.199999999999999,
+            14.399999999999999,
+            4.5,
+            10.799999999999999,
+            4.5,
+            7.199999999999999,
+            3.5999999999999996,
+            8.100000000000001,
+            9.899999999999999,
+            12.6,
+            8.100000000000001,
+            11.700000000000001,
+            12.6,
+            12.6,
+            15.3,
+            4.5,
+            10.799999999999999,
+            17.099999999999998,
+            7.199999999999999
+          ],
+          "redundant": 4,
+          "recall_exact_ci": [
+            0.7805133925465195,
+            0.9988998313695585
+          ]
+        }
+      }
+    },
+    "paired_recall_D5_minus_D0": {
+      "n": 51,
+      "mean_difference": 0.09803921568627451,
+      "ci95": [
+        0.0,
+        0.19607843137254902
+      ],
+      "median_difference": 0.0,
+      "fraction_negative": 0.0196078431372549,
+      "direction": "B minus A; negative is favorable only for metrics to be minimized"
+    },
+    "paired_lead_D5_minus_D0_detected_by_both": {
+      "n": 44,
+      "mean_difference": 5.543181818181818,
+      "ci95": [
+        4.827272727272727,
+        6.300511363636361
+      ],
+      "median_difference": 5.4,
+      "fraction_negative": 0.0,
+      "direction": "B minus A; negative is favorable only for metrics to be minimized"
+    },
+    "false_alarm_D5_minus_noEWS": {
+      "n": 100,
+      "mean_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "median_difference": 0.0,
+      "fraction_negative": 0.0,
+      "direction": "B minus A; negative is favorable only for metrics to be minimized"
+    },
+    "note": "Lead comparison conditional on both detectors detecting; not a population time-to-event estimate."
+  },
+  "falsification": {
+    "n": 100,
+    "coverage95_mean": 0.6896875,
+    "mean_RMSE_CC": 0.0435741809749117,
+    "error_strata": {
+      "lower_CC_error": {
+        "n": 50,
+        "mean_RMSE_CC": 0.026260468558828978,
+        "D5": {
+          "n_trajectories": 50,
+          "events": 28,
+          "detected": 28,
+          "missed": 0,
+          "recall": 1.0,
+          "precision": 0.6818181818181818,
+          "false_alarms_per_h": 0.25655121861828845,
+          "false_onsets": 14,
+          "exposure_h": 54.57,
+          "lead_median_min": 6.3,
+          "lead_min": [
+            6.3,
+            11.700000000000001,
+            4.5,
+            9.0,
+            4.5,
+            6.3,
+            12.6,
+            4.5,
+            9.0,
+            2.6999999999999997,
+            5.3999999999999995,
+            3.5999999999999996,
+            9.899999999999999,
+            6.3,
+            16.200000000000003,
+            5.3999999999999995,
+            9.0,
+            3.5999999999999996,
+            5.3999999999999995,
+            12.6,
+            9.899999999999999,
+            2.6999999999999997,
+            5.3999999999999995,
+            4.5,
+            17.099999999999998,
+            2.6999999999999997,
+            6.3,
+            15.3
+          ],
+          "redundant": 2,
+          "recall_exact_ci": [
+            0.8765638814997362,
+            1.0
+          ]
+        }
+      },
+      "higher_CC_error": {
+        "n": 50,
+        "mean_RMSE_CC": 0.06088789339099443,
+        "D5": {
+          "n_trajectories": 50,
+          "events": 22,
+          "detected": 22,
+          "missed": 0,
+          "recall": 1.0,
+          "precision": 0.8461538461538461,
+          "false_alarms_per_h": 0.06531145399624459,
+          "false_onsets": 4,
+          "exposure_h": 61.245,
+          "lead_median_min": 8.55,
+          "lead_min": [
+            10.799999999999999,
+            10.799999999999999,
+            12.6,
+            11.700000000000001,
+            4.5,
+            5.3999999999999995,
+            11.700000000000001,
+            4.5,
+            9.899999999999999,
+            8.100000000000001,
+            3.5999999999999996,
+            16.200000000000003,
+            3.5999999999999996,
+            9.0,
+            4.5,
+            12.6,
+            3.5999999999999996,
+            8.100000000000001,
+            4.5,
+            10.799999999999999,
+            14.399999999999999,
+            7.199999999999999
+          ],
+          "redundant": 0,
+          "recall_exact_ci": [
+            0.8456274871844254,
+            1.0
+          ]
+        }
+      }
+    },
+    "paired_recall_D5_minus_D0": {
+      "n": 50,
+      "mean_difference": 0.2,
+      "ci95": [
+        0.1,
+        0.32
+      ],
+      "median_difference": 0.0,
+      "fraction_negative": 0.0,
+      "direction": "B minus A; negative is favorable only for metrics to be minimized"
+    },
+    "paired_lead_D5_minus_D0_detected_by_both": {
+      "n": 40,
+      "mean_difference": 5.152500000000001,
+      "ci95": [
+        4.3875,
+        6.03
+      ],
+      "median_difference": 4.5,
+      "fraction_negative": 0.0,
+      "direction": "B minus A; negative is favorable only for metrics to be minimized"
+    },
+    "false_alarm_D5_minus_noEWS": {
+      "n": 100,
+      "mean_difference": 0.13,
+      "ci95": [
+        0.03,
+        0.26
+      ],
+      "median_difference": 0.0,
+      "fraction_negative": 0.0,
+      "direction": "B minus A; negative is favorable only for metrics to be minimized"
+    },
+    "note": "Lead comparison conditional on both detectors detecting; not a population time-to-event estimate."
+  }
+}

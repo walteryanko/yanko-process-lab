@@ -1,0 +1,45 @@
+{
+  "train": 80,
+  "calibration": 40,
+  "test": 100,
+  "sensitivity": 84,
+  "steps": 700,
+  "fold": {
+    "T": 309.0322463442749,
+    "parameter": 295.5196437325692,
+    "key": 4,
+    "x": [
+      1.9541683037988622,
+      35.33624567910426,
+      0.9486210331842161,
+      3.6284866712288473,
+      309.0322463442749,
+      300.6756939356931
+    ],
+    "residual": 5.247957374831768e-12,
+    "parameter_derivative": 6.6614194678191145,
+    "second_T_derivative": 0.257333077852051,
+    "eig_real": [
+      -7.4608770260944155,
+      -6.60783355448389,
+      1.0705861086535151e-08,
+      -5.0751406184577945,
+      -6.607833554483891,
+      -6.60783355448389
+    ],
+    "eig_imag": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "verified": true
+  },
+  "thermal_events_in_test": 0,
+  "fold_events": 50,
+  "observed_transitions": 50,
+  "target_limitation": "Event is frozen deterministic mean-input fold; noisy plant can tip earlier or later. Oscillatory coolant sensitivity recomputes the instantaneous mean-input fold; slow ramps run longer to reach the same endpoint.",
+  "sensitivity_refinement": "Pre-publication correction to two exploratory sensitivity settings; models, thresholds and independent main test unchanged."
+}

@@ -1,0 +1,8 @@
+# Preserve code hashes across operating systems and original reference bytes.
+* text=auto eol=lf
+*.bat text eol=crlf
+*.csv -text
+vendor/* -text
+*.npz binary
+*.pdf binary
+*.png binary

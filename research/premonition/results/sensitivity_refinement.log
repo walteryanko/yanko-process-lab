@@ -1,0 +1,4 @@
+/workspace/scratch/de709cb43aac/premonition-repo/research/premonition/premonition/physics.py:45: NumbaPerformanceWarning: np.dot() is faster on contiguous arrays, called on (Array(float64, 1, 'A', False, aligned=True), Array(float64, 1, 'C', False, aligned=True))
+  q=c*(u[5]-x[4]);cap=p[11]*np.dot(x[:4],p[:4]);feedcp=u[0]*p[0]+u[1]*p[1]+u[2]*p[3]
+refined 3
+refined 6

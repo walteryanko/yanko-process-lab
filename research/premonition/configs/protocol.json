@@ -1,0 +1,59 @@
+{
+  "version": "1.0.0",
+  "reference_date": "2026-10-18",
+  "model": "MATLAB2019_SI_faithful",
+  "dt_h": 0.015,
+  "event": {
+    "thermal": "first crossing T>344 K from below; starts at sample end",
+    "horizon_samples": 20,
+    "censoring": "exclude post-first-event and final incomplete horizons",
+    "bifurcation": "refined equilibrium spectral crossing with nondegeneracy; never a temperature label"
+  },
+  "split": {
+    "pilot_seeds": [
+      1000,
+      1011
+    ],
+    "train_seeds": [
+      10000,
+      10159
+    ],
+    "calibration_seeds": [
+      20000,
+      20079
+    ],
+    "test_seeds": [
+      300000,
+      300099
+    ],
+    "falsification_seeds": [
+      400000,
+      400099
+    ],
+    "control_seeds": [
+      50000,
+      50099
+    ]
+  },
+  "control": {
+    "P": 57,
+    "M": 6,
+    "Qe": 0.8,
+    "Rdu": 0.2,
+    "umin": 22.7,
+    "umax": 1366.2,
+    "study_limit_K": 344,
+    "legacy_guard_K": 355.4,
+    "steps": 120,
+    "optimizer": "deterministic coordinate search from ProcessLab main; not global SQP equivalence"
+  },
+  "threshold_selection": "calibration trajectories only; maximize event recall subject to false onset <=0.5/h; abstain if no admissible threshold",
+  "statistics": {
+    "unit": "trajectory, not samples",
+    "paired_bootstrap": 2000,
+    "confidence": 0.95,
+    "multiplicity": "exploratory intervals; no family-wise guarantee"
+  },
+  "scope": "simulation only; synthetic scenario mixture, no accident probabilities or plant safety certificate",
+  "pilot_amendment": "Pilot used 12 earlier evaluation seeds. Final evaluation uses entirely new 300000/400000 ranges after models and thresholds frozen. No further tuning."
+}

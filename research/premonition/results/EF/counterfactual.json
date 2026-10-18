@@ -1,0 +1,100 @@
+[
+  {
+    "controller": "C1",
+    "n": 100,
+    "avoided": 0,
+    "caused": 0,
+    "discordant": 0,
+    "discordance_exact_ci": [
+      0.0,
+      0.03621669264517641
+    ],
+    "nominal_no_event_pairs": 60,
+    "potentially_unnecessary_actions": 0,
+    "economic_delta_on_nominal_no_event": -0.014097169703247304
+  },
+  {
+    "controller": "C2",
+    "n": 100,
+    "avoided": 0,
+    "caused": 0,
+    "discordant": 0,
+    "discordance_exact_ci": [
+      0.0,
+      0.03621669264517641
+    ],
+    "nominal_no_event_pairs": 60,
+    "potentially_unnecessary_actions": 0,
+    "economic_delta_on_nominal_no_event": -0.00012461913415885798
+  },
+  {
+    "controller": "C3",
+    "n": 100,
+    "avoided": 0,
+    "caused": 0,
+    "discordant": 0,
+    "discordance_exact_ci": [
+      0.0,
+      0.03621669264517641
+    ],
+    "nominal_no_event_pairs": 60,
+    "potentially_unnecessary_actions": 409,
+    "economic_delta_on_nominal_no_event": -0.017527636647783732
+  },
+  {
+    "controller": "C4",
+    "n": 100,
+    "avoided": 0,
+    "caused": 0,
+    "discordant": 0,
+    "discordance_exact_ci": [
+      0.0,
+      0.03621669264517641
+    ],
+    "nominal_no_event_pairs": 60,
+    "potentially_unnecessary_actions": 212,
+    "economic_delta_on_nominal_no_event": -0.020747814255766883
+  },
+  {
+    "controller": "C4_noEWS",
+    "n": 100,
+    "avoided": 0,
+    "caused": 0,
+    "discordant": 0,
+    "discordance_exact_ci": [
+      0.0,
+      0.03621669264517641
+    ],
+    "nominal_no_event_pairs": 60,
+    "potentially_unnecessary_actions": 158,
+    "economic_delta_on_nominal_no_event": -0.022668751891256514
+  },
+  {
+    "controller": "conservative",
+    "n": 100,
+    "avoided": 0,
+    "caused": 0,
+    "discordant": 0,
+    "discordance_exact_ci": [
+      0.0,
+      0.03621669264517641
+    ],
+    "nominal_no_event_pairs": 60,
+    "potentially_unnecessary_actions": 0,
+    "economic_delta_on_nominal_no_event": -0.03444893403266036
+  },
+  {
+    "controller": "oracle_offline",
+    "n": 100,
+    "avoided": 1,
+    "caused": 9,
+    "discordant": 10,
+    "discordance_exact_ci": [
+      0.04900468922148595,
+      0.17622259774002266
+    ],
+    "nominal_no_event_pairs": 60,
+    "potentially_unnecessary_actions": 0,
+    "economic_delta_on_nominal_no_event": -1.9674354818845856
+  }
+]
