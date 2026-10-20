@@ -3,40 +3,52 @@
   "archives": [
     {
       "name": "YCS_PG_Information_Control_Frontier_v1.0_PARTIAL_CODE_DATA.zip",
-      "bytes": 63094291,
-      "sha256": "9fb360f3847ba00e6497d7cd9a590755033e4519df87b8f0b266f3656c3a2768"
+      "bytes": 64875806,
+      "sha256": "502cbd7c35ddc5ff6a3367f3bdca66679dc56546c05676fbb02bf24f3690a9f1"
     },
     {
       "name": "YCS_PG_Information_Control_Frontier_v1.0_PARTIAL_MANUSCRIPTS.zip",
-      "bytes": 41313364,
-      "sha256": "97229cdc8c4ba74be11c8778d909f0273de622a7a0be1ca7981963ff1f7d33fa"
+      "bytes": 41575961,
+      "sha256": "e96b8dcc53e355c21ec0d323b7b6a38abca36ff7de668aed32ff0c513c67e997"
     }
   ],
   "documents": [
     {
       "stem": "Article_EN",
-      "pages": 25,
+      "pages": 24,
       "pdf_compiled": true,
-      "docx_created": true
+      "docx_created": true,
+      "docx_tables": 9,
+      "docx_equations": 83,
+      "docx_images": 16
     },
     {
       "stem": "Artigo_PTBR",
       "pages": 24,
       "pdf_compiled": true,
-      "docx_created": true
+      "docx_created": true,
+      "docx_tables": 9,
+      "docx_equations": 82,
+      "docx_images": 16
     },
     {
       "stem": "Scientific_Research_Report",
-      "pages": 38,
+      "pages": 39,
       "pdf_compiled": true,
-      "docx_created": true
+      "docx_created": true,
+      "docx_tables": 13,
+      "docx_equations": 82,
+      "docx_images": 16
     },
     {
       "stem": "EXECUTIVE_SUMMARY",
       "pages": 4,
       "pdf_compiled": true,
-      "docx_created": true
+      "docx_created": true,
+      "docx_tables": 2,
+      "docx_equations": 0,
+      "docx_images": 0
     }
   ],
-  "manifest_entries": 5897
+  "manifest_entries": 5912
 }

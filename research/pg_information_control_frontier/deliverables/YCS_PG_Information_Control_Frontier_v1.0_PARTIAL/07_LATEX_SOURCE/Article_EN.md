@@ -81,23 +81,23 @@ The plant uses RK4 with 12 substeps, compared against SciPy DOP853 with rtol 2e-
 
 | Parameter | Value | Unit |
 | --- | --- | --- |
-| V | 1.89183 | m3 |
-| Vt | 1.10011 | m3 |
-| UA | 30385.6 | kJ/(h K) |
-| CpA | 146.538 | kJ/(kmol K) |
-| CpB | 75.3624 | kJ/(kmol K) |
-| CpC | 192.593 | kJ/(kmol K) |
-| CpM | 81.6426 | kJ/(kmol K) |
-| E | 75362.4 | kJ/kmol |
-| R | 8.31917 | kJ/(kmol K) |
+| V | 1.8918 | m3 |
+| Vt | 1.1001 | m3 |
+| UA | 30386 | kJ/(h K) |
+| CpA | 146.54 | kJ/(kmol K) |
+| CpB | 75.362 | kJ/(kmol K) |
+| CpC | 192.59 | kJ/(kmol K) |
+| CpM | 81.643 | kJ/(kmol K) |
+| E | 75362 | kJ/kmol |
+| R | 8.3192 | kJ/(kmol K) |
 | k0 | 1.696e+13 | 1/h |
 | DeltaH | -83736 | kJ/kmol |
-| FA | 36.2874 | kmol/h |
-| FB | 453.592 | kmol/h |
-| FM | 45.3592 | kmol/h |
-| mw0 | 453.592 | kmol/h |
-| T0 | 297.039 | K |
-| Ta | 288.706 | K |
+| FA | 36.287 | kmol/h |
+| FB | 453.59 | kmol/h |
+| FM | 45.359 | kmol/h |
+| mw0 | 453.59 | kmol/h |
+| T0 | 297.04 | K |
+| Ta | 288.71 | K |
 
 Nominal equilibrium: 0.607024732, 33.989102107, 2.295764605, 3.628486671, 332.333618020, 314.397585330.
 
@@ -198,97 +198,97 @@ Observability, detectability, two-point risk bounds, minimax regret and decision
 
 Completed execution and paired comparisons are shown below. Positive improvement favors the first method. The finite-suite CI resamples 20 paired seed clusters and is conditional on the chosen scenarios.
 
-| candidate | baseline | percent_improvement | mean_improvement | ci95_low | ci95_high | p_holm_primary |
+| Candidate | Baseline | Gain (%) | IAE diff. | CI lower | CI upper | Holm p |
 | --- | --- | --- | --- | --- | --- | --- |
-| P2_regret | B1_ukf | 0.634593 | 0.000850102 | -0.00100823 | 0.00283537 | 0.418569 |
-| P3_adaptive_regret | B2_both | 0.657212 | 0.000578973 | -0.000207131 | 0.00145957 | 0.418569 |
-| B2_both | B2_estimator | 39.912 | 0.0585153 | 0.0565261 | 0.0604609 | 3.11056e-22 |
+| P2 regret | B1 ukf | 0.63459 | 0.0008501 | -0.0010082 | 0.0028354 | 0.41857 |
+| P3 adaptive regret | B2 both | 0.65721 | 0.00057897 | -0.00020713 | 0.0014596 | 0.41857 |
+| B2 both | B2 estimator | 39.912 | 0.058515 | 0.056526 | 0.060461 | 3.1106e-22 |
 
 ## Model and information experiments
 
-| variant | max_thermal_difference_K | max_product_decay_error |
+| variant | Max dT (K) | Product decay error |
 | --- | --- | --- |
-| M0_historical | 5.68434e-14 | 5.8647e-12 |
-| M1H_Kirchhoff_hypothesis | 0 | 5.86337e-12 |
-| M1J_mixed_jacket_hypothesis | 0 | 5.86159e-12 |
-| M2L_linear_cp_hypothesis | 1.03074e-05 | 3.37664e-07 |
-| M2Q_quadratic_cp_hypothesis | 9.3374e-06 | 3.16407e-07 |
+| M0 historical | 5.6843e-14 | 5.8647e-12 |
+| M1H Kirchhoff hypothesis | 0 | 5.8634e-12 |
+| M1J mixed jacket hypothesis | 0 | 5.8616e-12 |
+| M2L linear cp hypothesis | 1.0307e-05 | 3.3766e-07 |
+| M2Q quadratic cp hypothesis | 9.3374e-06 | 3.1641e-07 |
 
 ## Input-dependent local rank and surviving affine-property twins
 
-| T | determinant | derivative_check_error | sufficient_rank4 |
+| T | determinant | Derivative error | Rank 4 test |
 | --- | --- | --- | --- |
-| 315 | 3.14609 | 3.19241e-58 | True |
-| 325 | 60.5759 | 1.07534e-57 | True |
-| 332.334 | 8.10924e-58 | 1.84845e-57 | False |
-| 340 | -893.845 | 5.2572e-57 | True |
-| 348 | -5623.79 | 4.46066e-57 | True |
+| 315 | 3.1461 | 3.1924e-58 | True |
+| 325 | 60.576 | 1.0753e-57 | True |
+| 332.33 | 8.1092e-58 | 1.8484e-57 | False |
+| 340 | -893.84 | 5.2572e-57 | True |
+| 348 | -5623.8 | 4.4607e-57 | True |
 
 
-| constant_input_max_thermal_difference | excited_uncompensated_max_thermal_difference | affine_kernel_max_thermal_difference | affine_functional_rank | quadratic_functional_rank |
+| Unexcited dT | Excited dT | Affine twin dT | Affine rank | Quadratic rank |
 | --- | --- | --- | --- | --- |
 | 0 | 0.037972 | 0 | 2 | 3 |
 
 ## Selected absolute metrics
 
-| scenario | method | IAE | RMSE_CC | Tmax | fallback |
+| scenario | method | IAE | RMSE CC | Tmax | fallback |
 | --- | --- | --- | --- | --- | --- |
-| combined | B1_continuous | 0.220454 | 0.130548 | 332.334 | 0 |
-| combined | B1_ukf | 0.230553 | 0.130567 | 332.353 | 0 |
-| combined | B2_both | 0.0797465 | 0.0764126 | 337.065 | 0 |
-| combined | B2_estimator | 0.253608 | 0.077038 | 332.334 | 0 |
-| combined | B4_mhe | 0.191722 | 0.118114 | 332.58 | 0 |
-| combined | P2_regret | 0.232497 | 0.130859 | 332.334 | 0 |
-| combined | P3_adaptive_regret | 0.078689 | 0.0763533 | 337.167 | 0 |
-| inventory_plus | B1_continuous | 0.0615694 | 0.122312 | 332.612 | 0 |
-| inventory_plus | B1_ukf | 0.0603865 | 0.122254 | 332.442 | 0 |
-| inventory_plus | B2_both | 0.0617974 | 0.122231 | 332.925 | 0 |
-| inventory_plus | B2_estimator | 0.060544 | 0.122043 | 332.439 | 0 |
-| inventory_plus | B4_mhe | 0.0602121 | 0.122743 | 332.429 | 0 |
-| inventory_plus | P2_regret | 0.059559 | 0.122162 | 332.372 | 0 |
-| inventory_plus | P3_adaptive_regret | 0.0626549 | 0.122186 | 332.894 | 0 |
-| kinetic | B1_continuous | 0.16428 | 0.081211 | 332.334 | 0 |
-| kinetic | B1_ukf | 0.192631 | 0.0839044 | 332.334 | 0 |
-| kinetic | B2_both | 0.0448606 | 0.0153278 | 333.993 | 0 |
-| kinetic | B2_estimator | 0.234377 | 0.0168838 | 332.334 | 0 |
-| kinetic | B4_mhe | 0.17914 | 0.0732316 | 332.334 | 0 |
-| kinetic | P2_regret | 0.183597 | 0.0835791 | 332.334 | 0 |
-| kinetic | P3_adaptive_regret | 0.0437234 | 0.0153134 | 333.85 | 0 |
-| nominal | B1_continuous | 0.00323946 | 0.0112444 | 332.612 | 0 |
-| nominal | B1_ukf | 0.00164715 | 0.01124 | 332.442 | 0 |
-| nominal | B2_both | 0.00751547 | 0.0148704 | 332.925 | 0 |
-| nominal | B2_estimator | 0.00143415 | 0.0148619 | 332.439 | 0 |
-| nominal | B4_mhe | 0.00163409 | 0.0120908 | 332.429 | 0 |
-| nominal | P2_regret | 0.00144464 | 0.0112486 | 332.372 | 0 |
-| nominal | P3_adaptive_regret | 0.00606505 | 0.014836 | 332.894 | 0 |
+| combined | B1 continuous | 0.22045 | 0.13055 | 332.33 | 0 |
+| combined | B1 ukf | 0.23055 | 0.13057 | 332.35 | 0 |
+| combined | B2 both | 0.079746 | 0.076413 | 337.06 | 0 |
+| combined | B2 estimator | 0.25361 | 0.077038 | 332.33 | 0 |
+| combined | B4 mhe | 0.19172 | 0.11811 | 332.58 | 0 |
+| combined | P2 regret | 0.2325 | 0.13086 | 332.33 | 0 |
+| combined | P3 adaptive regret | 0.078689 | 0.076353 | 337.17 | 0 |
+| inventory plus | B1 continuous | 0.061569 | 0.12231 | 332.61 | 0 |
+| inventory plus | B1 ukf | 0.060387 | 0.12225 | 332.44 | 0 |
+| inventory plus | B2 both | 0.061797 | 0.12223 | 332.93 | 0 |
+| inventory plus | B2 estimator | 0.060544 | 0.12204 | 332.44 | 0 |
+| inventory plus | B4 mhe | 0.060212 | 0.12274 | 332.43 | 0 |
+| inventory plus | P2 regret | 0.059559 | 0.12216 | 332.37 | 0 |
+| inventory plus | P3 adaptive regret | 0.062655 | 0.12219 | 332.89 | 0 |
+| kinetic | B1 continuous | 0.16428 | 0.081211 | 332.33 | 0 |
+| kinetic | B1 ukf | 0.19263 | 0.083904 | 332.33 | 0 |
+| kinetic | B2 both | 0.044861 | 0.015328 | 333.99 | 0 |
+| kinetic | B2 estimator | 0.23438 | 0.016884 | 332.33 | 0 |
+| kinetic | B4 mhe | 0.17914 | 0.073232 | 332.33 | 0 |
+| kinetic | P2 regret | 0.1836 | 0.083579 | 332.33 | 0 |
+| kinetic | P3 adaptive regret | 0.043723 | 0.015313 | 333.85 | 0 |
+| nominal | B1 continuous | 0.0032395 | 0.011244 | 332.61 | 0 |
+| nominal | B1 ukf | 0.0016471 | 0.01124 | 332.44 | 0 |
+| nominal | B2 both | 0.0075155 | 0.01487 | 332.93 | 0 |
+| nominal | B2 estimator | 0.0014342 | 0.014862 | 332.44 | 0 |
+| nominal | B4 mhe | 0.0016341 | 0.012091 | 332.43 | 0 |
+| nominal | P2 regret | 0.0014446 | 0.011249 | 332.37 | 0 |
+| nominal | P3 adaptive regret | 0.006065 | 0.014836 | 332.89 | 0 |
 
 ## Independent confirmation
 
-| candidate | baseline | percent_improvement | ci95_low | ci95_high |
+| Candidate | Baseline | Gain (%) | CI lower | CI upper |
 | --- | --- | --- | --- | --- |
-| P2_regret | B1_ukf | 1.60119 | -0.000996101 | 0.00542002 |
-| P3_adaptive_regret | B2_both | 0.398464 | -0.000454702 | 0.00102191 |
-| B2_both | B2_estimator | 59.47 | 0.0879785 | 0.0938519 |
-| B2_estimator | B1_ukf | -10.663 | -0.0183064 | -0.0113009 |
-| B2_both | B1_ukf | 55.1483 | 0.07268 | 0.0796125 |
-| P3_adaptive_regret | B1_ukf | 55.3271 | 0.0730901 | 0.07969 |
+| P2 regret | B1 ukf | 1.6012 | -0.0009961 | 0.00542 |
+| P3 adaptive regret | B2 both | 0.39846 | -0.0004547 | 0.0010219 |
+| B2 both | B2 estimator | 59.47 | 0.087979 | 0.093852 |
+| B2 estimator | B1 ukf | -10.663 | -0.018306 | -0.011301 |
+| B2 both | B1 ukf | 55.148 | 0.07268 | 0.079613 |
+| P3 adaptive regret | B1 ukf | 55.327 | 0.07309 | 0.07969 |
 
 ## Adverse outcomes retained
 
-| scenario | candidate | percent_improvement | ci95_low | ci95_high |
+| scenario | Candidate | Gain (%) | CI lower | CI upper |
 | --- | --- | --- | --- | --- |
-| correlated_noise | B0_PI | -592.588 | -0.0120465 | -0.00900468 |
-| saturation | P5_noisy | -453.515 | -0.0115612 | -0.00356675 |
-| saturation | B2_both | -414.805 | -0.00994615 | -0.00387001 |
-| correlated_noise | B2_both | -398.963 | -0.0101161 | -0.00404126 |
-| dropout | P5_noisy | -381.224 | -0.00936466 | -0.0033412 |
-| nominal | P5_noisy | -381.224 | -0.00933152 | -0.00325644 |
-| correlated_noise | P4_hybrid | -360.459 | -0.0095007 | -0.00354469 |
-| nominal | B2_both | -356.271 | -0.0083201 | -0.00342611 |
-| correlated_noise | P3_adaptive_regret | -335.059 | -0.00889841 | -0.00315835 |
-| dropout | B2_both | -324.641 | -0.00777571 | -0.00300812 |
-| saturation | P4_hybrid | -309.166 | -0.00788714 | -0.00266481 |
-| dropout | B0_PI | -305.83 | -0.00635766 | -0.00369597 |
+| correlated noise | B0 PI | -592.59 | -0.012046 | -0.0090047 |
+| saturation | P5 noisy | -453.52 | -0.011561 | -0.0035668 |
+| saturation | B2 both | -414.81 | -0.0099462 | -0.00387 |
+| correlated noise | B2 both | -398.96 | -0.010116 | -0.0040413 |
+| dropout | P5 noisy | -381.22 | -0.0093647 | -0.0033412 |
+| nominal | P5 noisy | -381.22 | -0.0093315 | -0.0032564 |
+| correlated noise | P4 hybrid | -360.46 | -0.0095007 | -0.0035447 |
+| nominal | B2 both | -356.27 | -0.0083201 | -0.0034261 |
+| correlated noise | P3 adaptive regret | -335.06 | -0.0088984 | -0.0031583 |
+| dropout | B2 both | -324.64 | -0.0077757 | -0.0030081 |
+| saturation | P4 hybrid | -309.17 | -0.0078871 | -0.0026648 |
+| dropout | B0 PI | -305.83 | -0.0063577 | -0.003696 |
 
 ## What the executed results do and do not establish
 

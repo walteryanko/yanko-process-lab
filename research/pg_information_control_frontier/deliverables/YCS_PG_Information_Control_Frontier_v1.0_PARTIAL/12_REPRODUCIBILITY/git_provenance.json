@@ -2,6 +2,6 @@
   "historical_model_commit": "d2610a0723cbbaf00d3f4559242ba0efafb67771",
   "frozen_execution_commit": "a57be15bdddbe0c2447a9eb21bce7f6b5b63d37c",
   "data_workflow_run": 39499177732,
-  "build_commit": "5b8aa611143f46f4150ebeca67cb822f281b81e4",
+  "build_commit": "5dba98596b190cb2f482e1f36d2567c0cbed8487",
   "pandoc": "pandoc 3.1.3"
 }

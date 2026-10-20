@@ -380,6 +380,8 @@ Linux hospedada, sem certificação no Ryzen de destino.
 \section{Parâmetros e condição
 inicial}\label{paruxe2metros-e-condiuxe7uxe3o-inicial}}
 
+\begingroup\footnotesize
+
 \begin{longtable}[]{@{}lll@{}}
 \toprule\noalign{}
 Parameter & Value & Unit \\
@@ -387,24 +389,26 @@ Parameter & Value & Unit \\
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-V & 1.89183 & m3 \\
-Vt & 1.10011 & m3 \\
-UA & 30385.6 & kJ/(h K) \\
-CpA & 146.538 & kJ/(kmol K) \\
-CpB & 75.3624 & kJ/(kmol K) \\
-CpC & 192.593 & kJ/(kmol K) \\
-CpM & 81.6426 & kJ/(kmol K) \\
-E & 75362.4 & kJ/kmol \\
-R & 8.31917 & kJ/(kmol K) \\
+V & 1.8918 & m3 \\
+Vt & 1.1001 & m3 \\
+UA & 30386 & kJ/(h K) \\
+CpA & 146.54 & kJ/(kmol K) \\
+CpB & 75.362 & kJ/(kmol K) \\
+CpC & 192.59 & kJ/(kmol K) \\
+CpM & 81.643 & kJ/(kmol K) \\
+E & 75362 & kJ/kmol \\
+R & 8.3192 & kJ/(kmol K) \\
 k0 & 1.696e+13 & 1/h \\
 DeltaH & -83736 & kJ/kmol \\
-FA & 36.2874 & kmol/h \\
-FB & 453.592 & kmol/h \\
-FM & 45.3592 & kmol/h \\
-mw0 & 453.592 & kmol/h \\
-T0 & 297.039 & K \\
-Ta & 288.706 & K \\
+FA & 36.287 & kmol/h \\
+FB & 453.59 & kmol/h \\
+FM & 45.359 & kmol/h \\
+mw0 & 453.59 & kmol/h \\
+T0 & 297.04 & K \\
+Ta & 288.71 & K \\
 \end{longtable}
+
+\endgroup
 
 Equilíbrio nominal: 0.607024732, 33.989102107, 2.295764605, 3.628486671,
 332.333618020, 314.397585330.
@@ -653,6 +657,8 @@ As comparações abaixo provêm da execução. Melhoria positiva favorece o
 primeiro método. O IC da suíte reamostra 20 sementes pareadas e é
 condicional aos cenários escolhidos.
 
+\begingroup\footnotesize
+
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
@@ -663,68 +669,80 @@ condicional aos cenários escolhidos.
   >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
-candidate
+Candidate
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-baseline
+Baseline
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-percent\_improvement
+Gain (\%)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-mean\_improvement
+IAE diff.
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-ci95\_low
+CI lower
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-ci95\_high
+CI upper
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-p\_holm\_primary
+Holm p
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-P2\_regret & B1\_ukf & 0.634593 & 0.000850102 & -0.00100823 & 0.00283537
-& 0.418569 \\
-P3\_adaptive\_regret & B2\_both & 0.657212 & 0.000578973 & -0.000207131
-& 0.00145957 & 0.418569 \\
-B2\_both & B2\_estimator & 39.912 & 0.0585153 & 0.0565261 & 0.0604609 &
-3.11056e-22 \\
+P2 regret & B1 ukf & 0.63459 & 0.0008501 & -0.0010082 & 0.0028354 &
+0.41857 \\
+P3 adaptive regret & B2 both & 0.65721 & 0.00057897 & -0.00020713 &
+0.0014596 & 0.41857 \\
+B2 both & B2 estimator & 39.912 & 0.058515 & 0.056526 & 0.060461 &
+3.1106e-22 \\
 \end{longtable}
+
+\endgroup
 
 \hypertarget{experimentos-fuxedsicos-e-informacionais}{%
 \subsection{Experimentos físicos e
 informacionais}\label{experimentos-fuxedsicos-e-informacionais}}
 
+\begingroup\footnotesize
+
 \begin{longtable}[]{@{}lll@{}}
 \toprule\noalign{}
-variant & max\_thermal\_difference\_K & max\_product\_decay\_error \\
+variant & Max dT (K) & Product decay error \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-M0\_historical & 5.68434e-14 & 5.8647e-12 \\
-M1H\_Kirchhoff\_hypothesis & 0 & 5.86337e-12 \\
-M1J\_mixed\_jacket\_hypothesis & 0 & 5.86159e-12 \\
-M2L\_linear\_cp\_hypothesis & 1.03074e-05 & 3.37664e-07 \\
-M2Q\_quadratic\_cp\_hypothesis & 9.3374e-06 & 3.16407e-07 \\
+M0 historical & 5.6843e-14 & 5.8647e-12 \\
+M1H Kirchhoff hypothesis & 0 & 5.8634e-12 \\
+M1J mixed jacket hypothesis & 0 & 5.8616e-12 \\
+M2L linear cp hypothesis & 1.0307e-05 & 3.3766e-07 \\
+M2Q quadratic cp hypothesis & 9.3374e-06 & 3.1641e-07 \\
 \end{longtable}
+
+\endgroup
 
 \hypertarget{posto-local-dependente-da-entrada-e-guxeameos-remanescentes-com-propriedades-afins}{%
 \subsection{Posto local dependente da entrada e gêmeos remanescentes com
 propriedades
 afins}\label{posto-local-dependente-da-entrada-e-guxeameos-remanescentes-com-propriedades-afins}}
 
+\begingroup\footnotesize
+
 \begin{longtable}[]{@{}llll@{}}
 \toprule\noalign{}
-T & determinant & derivative\_check\_error & sufficient\_rank4 \\
+T & determinant & Derivative error & Rank 4 test \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-315 & 3.14609 & 3.19241e-58 & True \\
-325 & 60.5759 & 1.07534e-57 & True \\
-332.334 & 8.10924e-58 & 1.84845e-57 & False \\
-340 & -893.845 & 5.2572e-57 & True \\
-348 & -5623.79 & 4.46066e-57 & True \\
+315 & 3.1461 & 3.1924e-58 & True \\
+325 & 60.576 & 1.0753e-57 & True \\
+332.33 & 8.1092e-58 & 1.8484e-57 & False \\
+340 & -893.84 & 5.2572e-57 & True \\
+348 & -5623.8 & 4.4607e-57 & True \\
 \end{longtable}
+
+\endgroup
+
+\begingroup\footnotesize
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
@@ -734,15 +752,15 @@ T & determinant & derivative\_check\_error & sufficient\_rank4 \\
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
-constant\_input\_max\_thermal\_difference
+Unexcited dT
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-excited\_uncompensated\_max\_thermal\_difference
+Excited dT
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-affine\_kernel\_max\_thermal\_difference
+Affine twin dT
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-affine\_functional\_rank
+Affine rank
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-quadratic\_functional\_rank
+Quadratic rank
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
@@ -751,9 +769,13 @@ quadratic\_functional\_rank
 0 & 0.037972 & 0 & 2 & 3 \\
 \end{longtable}
 
+\endgroup
+
 \hypertarget{muxe9tricas-absolutas-selecionadas}{%
 \subsection{Métricas absolutas
 selecionadas}\label{muxe9tricas-absolutas-selecionadas}}
+
+\begingroup\footnotesize
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
@@ -770,7 +792,7 @@ method
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 IAE
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-RMSE\_CC
+RMSE CC
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Tmax
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -780,60 +802,66 @@ fallback
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-combined & B1\_continuous & 0.220454 & 0.130548 & 332.334 & 0 \\
-combined & B1\_ukf & 0.230553 & 0.130567 & 332.353 & 0 \\
-combined & B2\_both & 0.0797465 & 0.0764126 & 337.065 & 0 \\
-combined & B2\_estimator & 0.253608 & 0.077038 & 332.334 & 0 \\
-combined & B4\_mhe & 0.191722 & 0.118114 & 332.58 & 0 \\
-combined & P2\_regret & 0.232497 & 0.130859 & 332.334 & 0 \\
-combined & P3\_adaptive\_regret & 0.078689 & 0.0763533 & 337.167 & 0 \\
-inventory\_plus & B1\_continuous & 0.0615694 & 0.122312 & 332.612 & 0 \\
-inventory\_plus & B1\_ukf & 0.0603865 & 0.122254 & 332.442 & 0 \\
-inventory\_plus & B2\_both & 0.0617974 & 0.122231 & 332.925 & 0 \\
-inventory\_plus & B2\_estimator & 0.060544 & 0.122043 & 332.439 & 0 \\
-inventory\_plus & B4\_mhe & 0.0602121 & 0.122743 & 332.429 & 0 \\
-inventory\_plus & P2\_regret & 0.059559 & 0.122162 & 332.372 & 0 \\
-inventory\_plus & P3\_adaptive\_regret & 0.0626549 & 0.122186 & 332.894
-& 0 \\
-kinetic & B1\_continuous & 0.16428 & 0.081211 & 332.334 & 0 \\
-kinetic & B1\_ukf & 0.192631 & 0.0839044 & 332.334 & 0 \\
-kinetic & B2\_both & 0.0448606 & 0.0153278 & 333.993 & 0 \\
-kinetic & B2\_estimator & 0.234377 & 0.0168838 & 332.334 & 0 \\
-kinetic & B4\_mhe & 0.17914 & 0.0732316 & 332.334 & 0 \\
-kinetic & P2\_regret & 0.183597 & 0.0835791 & 332.334 & 0 \\
-kinetic & P3\_adaptive\_regret & 0.0437234 & 0.0153134 & 333.85 & 0 \\
-nominal & B1\_continuous & 0.00323946 & 0.0112444 & 332.612 & 0 \\
-nominal & B1\_ukf & 0.00164715 & 0.01124 & 332.442 & 0 \\
-nominal & B2\_both & 0.00751547 & 0.0148704 & 332.925 & 0 \\
-nominal & B2\_estimator & 0.00143415 & 0.0148619 & 332.439 & 0 \\
-nominal & B4\_mhe & 0.00163409 & 0.0120908 & 332.429 & 0 \\
-nominal & P2\_regret & 0.00144464 & 0.0112486 & 332.372 & 0 \\
-nominal & P3\_adaptive\_regret & 0.00606505 & 0.014836 & 332.894 & 0 \\
+combined & B1 continuous & 0.22045 & 0.13055 & 332.33 & 0 \\
+combined & B1 ukf & 0.23055 & 0.13057 & 332.35 & 0 \\
+combined & B2 both & 0.079746 & 0.076413 & 337.06 & 0 \\
+combined & B2 estimator & 0.25361 & 0.077038 & 332.33 & 0 \\
+combined & B4 mhe & 0.19172 & 0.11811 & 332.58 & 0 \\
+combined & P2 regret & 0.2325 & 0.13086 & 332.33 & 0 \\
+combined & P3 adaptive regret & 0.078689 & 0.076353 & 337.17 & 0 \\
+inventory plus & B1 continuous & 0.061569 & 0.12231 & 332.61 & 0 \\
+inventory plus & B1 ukf & 0.060387 & 0.12225 & 332.44 & 0 \\
+inventory plus & B2 both & 0.061797 & 0.12223 & 332.93 & 0 \\
+inventory plus & B2 estimator & 0.060544 & 0.12204 & 332.44 & 0 \\
+inventory plus & B4 mhe & 0.060212 & 0.12274 & 332.43 & 0 \\
+inventory plus & P2 regret & 0.059559 & 0.12216 & 332.37 & 0 \\
+inventory plus & P3 adaptive regret & 0.062655 & 0.12219 & 332.89 & 0 \\
+kinetic & B1 continuous & 0.16428 & 0.081211 & 332.33 & 0 \\
+kinetic & B1 ukf & 0.19263 & 0.083904 & 332.33 & 0 \\
+kinetic & B2 both & 0.044861 & 0.015328 & 333.99 & 0 \\
+kinetic & B2 estimator & 0.23438 & 0.016884 & 332.33 & 0 \\
+kinetic & B4 mhe & 0.17914 & 0.073232 & 332.33 & 0 \\
+kinetic & P2 regret & 0.1836 & 0.083579 & 332.33 & 0 \\
+kinetic & P3 adaptive regret & 0.043723 & 0.015313 & 333.85 & 0 \\
+nominal & B1 continuous & 0.0032395 & 0.011244 & 332.61 & 0 \\
+nominal & B1 ukf & 0.0016471 & 0.01124 & 332.44 & 0 \\
+nominal & B2 both & 0.0075155 & 0.01487 & 332.93 & 0 \\
+nominal & B2 estimator & 0.0014342 & 0.014862 & 332.44 & 0 \\
+nominal & B4 mhe & 0.0016341 & 0.012091 & 332.43 & 0 \\
+nominal & P2 regret & 0.0014446 & 0.011249 & 332.37 & 0 \\
+nominal & P3 adaptive regret & 0.006065 & 0.014836 & 332.89 & 0 \\
 \end{longtable}
+
+\endgroup
 
 \hypertarget{confirmauxe7uxe3o-independente}{%
 \subsection{Confirmação
 independente}\label{confirmauxe7uxe3o-independente}}
 
+\begingroup\footnotesize
+
 \begin{longtable}[]{@{}lllll@{}}
 \toprule\noalign{}
-candidate & baseline & percent\_improvement & ci95\_low & ci95\_high \\
+Candidate & Baseline & Gain (\%) & CI lower & CI upper \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-P2\_regret & B1\_ukf & 1.60119 & -0.000996101 & 0.00542002 \\
-P3\_adaptive\_regret & B2\_both & 0.398464 & -0.000454702 &
-0.00102191 \\
-B2\_both & B2\_estimator & 59.47 & 0.0879785 & 0.0938519 \\
-B2\_estimator & B1\_ukf & -10.663 & -0.0183064 & -0.0113009 \\
-B2\_both & B1\_ukf & 55.1483 & 0.07268 & 0.0796125 \\
-P3\_adaptive\_regret & B1\_ukf & 55.3271 & 0.0730901 & 0.07969 \\
+P2 regret & B1 ukf & 1.6012 & -0.0009961 & 0.00542 \\
+P3 adaptive regret & B2 both & 0.39846 & -0.0004547 & 0.0010219 \\
+B2 both & B2 estimator & 59.47 & 0.087979 & 0.093852 \\
+B2 estimator & B1 ukf & -10.663 & -0.018306 & -0.011301 \\
+B2 both & B1 ukf & 55.148 & 0.07268 & 0.079613 \\
+P3 adaptive regret & B1 ukf & 55.327 & 0.07309 & 0.07969 \\
 \end{longtable}
+
+\endgroup
 
 \hypertarget{resultados-adversos-preservados}{%
 \subsection{Resultados adversos
 preservados}\label{resultados-adversos-preservados}}
+
+\begingroup\footnotesize
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
@@ -845,32 +873,34 @@ preservados}\label{resultados-adversos-preservados}}
 \begin{minipage}[b]{\linewidth}\raggedright
 scenario
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-candidate
+Candidate
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-percent\_improvement
+Gain (\%)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-ci95\_low
+CI lower
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-ci95\_high
+CI upper
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-correlated\_noise & B0\_PI & -592.588 & -0.0120465 & -0.00900468 \\
-saturation & P5\_noisy & -453.515 & -0.0115612 & -0.00356675 \\
-saturation & B2\_both & -414.805 & -0.00994615 & -0.00387001 \\
-correlated\_noise & B2\_both & -398.963 & -0.0101161 & -0.00404126 \\
-dropout & P5\_noisy & -381.224 & -0.00936466 & -0.0033412 \\
-nominal & P5\_noisy & -381.224 & -0.00933152 & -0.00325644 \\
-correlated\_noise & P4\_hybrid & -360.459 & -0.0095007 & -0.00354469 \\
-nominal & B2\_both & -356.271 & -0.0083201 & -0.00342611 \\
-correlated\_noise & P3\_adaptive\_regret & -335.059 & -0.00889841 &
--0.00315835 \\
-dropout & B2\_both & -324.641 & -0.00777571 & -0.00300812 \\
-saturation & P4\_hybrid & -309.166 & -0.00788714 & -0.00266481 \\
-dropout & B0\_PI & -305.83 & -0.00635766 & -0.00369597 \\
+correlated noise & B0 PI & -592.59 & -0.012046 & -0.0090047 \\
+saturation & P5 noisy & -453.52 & -0.011561 & -0.0035668 \\
+saturation & B2 both & -414.81 & -0.0099462 & -0.00387 \\
+correlated noise & B2 both & -398.96 & -0.010116 & -0.0040413 \\
+dropout & P5 noisy & -381.22 & -0.0093647 & -0.0033412 \\
+nominal & P5 noisy & -381.22 & -0.0093315 & -0.0032564 \\
+correlated noise & P4 hybrid & -360.46 & -0.0095007 & -0.0035447 \\
+nominal & B2 both & -356.27 & -0.0083201 & -0.0034261 \\
+correlated noise & P3 adaptive regret & -335.06 & -0.0088984 &
+-0.0031583 \\
+dropout & B2 both & -324.64 & -0.0077757 & -0.0030081 \\
+saturation & P4 hybrid & -309.17 & -0.0078871 & -0.0026648 \\
+dropout & B0 PI & -305.83 & -0.0063577 & -0.003696 \\
 \end{longtable}
+
+\endgroup
 
 \hypertarget{interpretauxe7uxe3o-dos-resultados-executados}{%
 \subsection{Interpretação dos resultados
@@ -1003,6 +1033,8 @@ integral.
 \hypertarget{auditoria-das-conclusuxf5es}{%
 \section{Auditoria das conclusões}\label{auditoria-das-conclusuxf5es}}
 
+\begingroup\footnotesize
+
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
@@ -1052,6 +1084,8 @@ Q12 & Parcialmente sustentada & A prova transfere para a mesma estrutura
 de diluição, cinética e calorimetria; ganhos numéricos não se
 generalizam automaticamente. \\
 \end{longtable}
+
+\endgroup
 
 \hypertarget{figuras-dos-dados-executados}{%
 \section{Figuras dos dados
@@ -1175,6 +1209,8 @@ f4444d4c238291b8633743930249ee387ad94541. New campaign starts from
 d2610a0723cbbaf00d3f4559242ba0efafb67771, which preserves the
 Darwin/thesis sources.
 
+\begingroup\footnotesize
+
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
@@ -1225,6 +1261,10 @@ New frontier & Independent implementation with parity test & Its numbers
 are not substitutions for the historical protocols \\
 \end{longtable}
 
+\endgroup
+
+\begingroup\footnotesize
+
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
@@ -1259,6 +1299,8 @@ historical mismatch contrast; no new historical validation claim \\
 ICAC B1 relative IAE & -14.60\% & Not rerun & Manuscript reports six
 holdout seeds, different horizon/objective; not pooled with new data \\
 \end{longtable}
+
+\endgroup
 
 \hypertarget{physical-changes}{%
 \subsection{Physical changes}\label{physical-changes}}
@@ -1315,6 +1357,8 @@ This is a targeted, source-verified review, not an exhaustive systematic
 review. No worldwide novelty claim is justified by this search.
 Publisher metadata, author-hosted manuscripts and institutional records
 were preferred. Paywalls and inaccessible pages were recorded.
+
+\begingroup\footnotesize
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
@@ -1386,6 +1430,8 @@ difference. It supports checking Kirchhoff consistency, not importing
 its different operating point or enthalpy as a calibrated
 replacement. \\
 \end{longtable}
+
+\endgroup
 
 Searches also covered set-membership nonlinear MPC (Canale, DOI
 10.1002/rnc.2878; publisher full text was inaccessible), inferential
@@ -1593,6 +1639,8 @@ métricas}\label{verificauxe7uxe3o-independente-de-muxe9tricas}}
 \section{Todos os cenários: médias por
 método}\label{todos-os-cenuxe1rios-muxe9dias-por-muxe9todo}}
 
+\begingroup\footnotesize
+
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1111}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1111}}
@@ -1611,15 +1659,15 @@ method
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 IAE
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-RMSE\_CC
+RMSE CC
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Tmax
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-thermal\_severity
+Thermal integral
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 fallback
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-decision\_ms
+Decision ms
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 samples
 \end{minipage} \\
@@ -1627,532 +1675,498 @@ samples
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-combined & B0\_PI & 0.0934287 & 0.121056 & 335.189 & 0 & 0 & 0.0110679 &
+combined & B0 PI & 0.093429 & 0.12106 & 335.19 & 0 & 0 & 0.011068 & 0 \\
+combined & B1 continuous & 0.22045 & 0.13055 & 332.33 & 0 & 0 & 4.9675 &
 0 \\
-combined & B1\_continuous & 0.220454 & 0.130548 & 332.334 & 0 & 0 &
-4.96751 & 0 \\
-combined & B1\_ukf & 0.230553 & 0.130567 & 332.353 & 0 & 0 & 1.66006 &
+combined & B1 ukf & 0.23055 & 0.13057 & 332.35 & 0 & 0 & 1.6601 & 0 \\
+combined & B2 both & 0.079746 & 0.076413 & 337.06 & 0 & 0 & 1.9027 &
 0 \\
-combined & B2\_both & 0.0797465 & 0.0764126 & 337.065 & 0 & 0 & 1.90273
-& 0 \\
-combined & B2\_estimator & 0.253608 & 0.077038 & 332.334 & 0 & 0 &
-1.67091 & 0 \\
-combined & B3\_assumed\_inventory & 0.254337 & 0.120627 & 332.334 & 0 &
-0 & 1.68198 & 0 \\
-combined & B3\_known\_inventory & 0.280497 & 0.131838 & 332.334 & 0 & 0
-& 1.67366 & 0 \\
-combined & B4\_mhe & 0.191722 & 0.118114 & 332.58 & 0 & 0 & 1.71293 &
+combined & B2 estimator & 0.25361 & 0.077038 & 332.33 & 0 & 0 & 1.6709 &
 0 \\
-combined & B5\_true\_state & 0.251169 & 0 & 332.334 & 0 & 0 & 1.66569 &
+combined & B3 assumed inventory & 0.25434 & 0.12063 & 332.33 & 0 & 0 &
+1.682 & 0 \\
+combined & B3 known inventory & 0.2805 & 0.13184 & 332.33 & 0 & 0 &
+1.6737 & 0 \\
+combined & B4 mhe & 0.19172 & 0.11811 & 332.58 & 0 & 0 & 1.7129 & 0 \\
+combined & B5 true state & 0.25117 & 0 & 332.33 & 0 & 0 & 1.6657 & 0 \\
+combined & P1 expected & 0.23055 & 0.13057 & 332.35 & 0 & 0 & 4.3434 &
 0 \\
-combined & P1\_expected & 0.230553 & 0.130567 & 332.353 & 0 & 0 & 4.3434
-& 0 \\
-combined & P2\_regret & 0.232497 & 0.130859 & 332.334 & 0 & 0 & 4.27689
-& 0 \\
-combined & P3\_adaptive\_regret & 0.078689 & 0.0763533 & 337.167 & 0 & 0
-& 4.95168 & 0 \\
-combined & P4\_hybrid & 0.0809885 & 0.0764077 & 337.047 & 0 & 0 &
-6.53605 & 0 \\
-combined & P5\_delayed & 0.243523 & 0.124689 & 332.334 & 0 & 0 & 1.66562
-& 4 \\
-combined & P5\_event & 0.23268 & 0.110226 & 332.34 & 0 & 0 & 1.66652 &
+combined & P2 regret & 0.2325 & 0.13086 & 332.33 & 0 & 0 & 4.2769 & 0 \\
+combined & P3 adaptive regret & 0.078689 & 0.076353 & 337.17 & 0 & 0 &
+4.9517 & 0 \\
+combined & P4 hybrid & 0.080989 & 0.076408 & 337.05 & 0 & 0 & 6.5361 &
+0 \\
+combined & P5 delayed & 0.24352 & 0.12469 & 332.33 & 0 & 0 & 1.6656 &
+4 \\
+combined & P5 event & 0.23268 & 0.11023 & 332.34 & 0 & 0 & 1.6665 &
 3.2 \\
-combined & P5\_frequent & 0.226337 & 0.101357 & 332.34 & 0 & 0 & 1.66237
-& 8 \\
-combined & P5\_initial & 0.230523 & 0.111119 & 332.342 & 0 & 0 & 1.66955
-& 1 \\
-combined & P5\_noisy & 0.230777 & 0.119001 & 332.37 & 0 & 0 & 1.66112 &
-4 \\
-combined & P5\_periodic & 0.221859 & 0.105677 & 332.334 & 0 & 0 &
-1.65882 & 4 \\
-correlated\_noise & B0\_PI & 0.0123505 & 0.0189866 & 333.33 & 0 & 0 &
-0.0108627 & 0 \\
-correlated\_noise & B1\_continuous & 0.00562245 & 0.0191299 & 332.768 &
-0 & 0 & 5.0819 & 0 \\
-correlated\_noise & B1\_ukf & 0.00178324 & 0.0193683 & 332.458 & 0 & 0 &
-1.94382 & 0 \\
-correlated\_noise & B2\_both & 0.00889772 & 0.0255135 & 333.221 & 0 & 0
-& 1.95377 & 0 \\
-correlated\_noise & B2\_estimator & 0.00106716 & 0.0253827 & 332.406 & 0
-& 0 & 1.92291 & 0 \\
-correlated\_noise & B3\_assumed\_inventory & 0.00222358 & 0.0180951 &
-332.599 & 0 & 0 & 1.9298 & 0 \\
-correlated\_noise & B3\_known\_inventory & 0.00222358 & 0.0180951 &
-332.599 & 0 & 0 & 1.93739 & 0 \\
-correlated\_noise & B4\_mhe & 0.00126539 & 0.0201908 & 332.396 & 0 & 0 &
-1.97049 & 0 \\
-correlated\_noise & B5\_true\_state & 0 & 0 & 332.334 & 0 & 0 & 1.91732
-& 0 \\
-correlated\_noise & P1\_expected & 0.00178324 & 0.0193683 & 332.458 & 0
-& 0 & 5.00956 & 0 \\
-correlated\_noise & P2\_regret & 0.00118565 & 0.0192305 & 332.42 & 0 & 0
-& 5.008 & 0 \\
-correlated\_noise & P3\_adaptive\_regret & 0.00775816 & 0.0253758 &
-333.203 & 0 & 0 & 5.08538 & 0 \\
-correlated\_noise & P4\_hybrid & 0.00821111 & 0.0254199 & 333.268 & 0 &
-0 & 6.74898 & 0 \\
-correlated\_noise & P5\_delayed & 0.0021283 & 0.019508 & 332.477 & 0 & 0
-& 1.92068 & 4 \\
-correlated\_noise & P5\_event & 0.00190228 & 0.0213424 & 332.473 & 0 & 0
-& 1.9474 & 2 \\
-correlated\_noise & P5\_frequent & 0.00190228 & 0.0199258 & 332.473 & 0
-& 0 & 1.91933 & 8 \\
-correlated\_noise & P5\_initial & 0.00190228 & 0.0219477 & 332.473 & 0 &
-0 & 1.92563 & 1 \\
-correlated\_noise & P5\_noisy & 0.00621623 & 0.0464674 & 332.833 & 0 & 0
-& 1.91554 & 4 \\
-correlated\_noise & P5\_periodic & 0.00190228 & 0.0213421 & 332.473 & 0
-& 0 & 1.92537 & 4 \\
-dropout & B0\_PI & 0.00668463 & 0.0113724 & 332.932 & 0 & 0 & 0.0109944
-& 0 \\
-dropout & B1\_continuous & 0.00324538 & 0.0113149 & 332.612 & 0 & 0 &
-5.00651 & 0 \\
-dropout & B1\_ukf & 0.00164715 & 0.0113113 & 332.442 & 0 & 0 & 1.95127 &
-0 \\
-dropout & B2\_both & 0.00699446 & 0.0158507 & 332.895 & 0 & 0 & 1.96138
-& 0 \\
-dropout & B2\_estimator & 0.00143415 & 0.0158424 & 332.439 & 0 & 0 &
-1.93105 & 0 \\
-dropout & B3\_assumed\_inventory & 0.00233413 & 0.0114881 & 332.575 & 0
-& 0 & 1.93689 & 0 \\
-dropout & B3\_known\_inventory & 0.00233413 & 0.0114881 & 332.575 & 0 &
-0 & 1.93007 & 0 \\
-dropout & B4\_mhe & 0.00163409 & 0.0121761 & 332.429 & 0 & 0 & 1.97396 &
-0 \\
-dropout & B5\_true\_state & 0 & 0 & 332.334 & 0 & 0 & 1.91165 & 0 \\
-dropout & P1\_expected & 0.00164715 & 0.0113113 & 332.442 & 0 & 0 &
-5.00011 & 0 \\
-dropout & P2\_regret & 0.00144464 & 0.0113217 & 332.372 & 0 & 0 &
-4.97137 & 0 \\
-dropout & P3\_adaptive\_regret & 0.00606505 & 0.0158336 & 332.894 & 0 &
-0 & 5.11531 & 0 \\
-dropout & P4\_hybrid & 0.00643227 & 0.0158296 & 332.909 & 0 & 0 & 6.7783
-& 0 \\
-dropout & P5\_delayed & 0.00187537 & 0.0126409 & 332.459 & 0 & 0 &
-1.91053 & 4 \\
-dropout & P5\_event & 0.00186214 & 0.0149296 & 332.446 & 0 & 0 & 1.94742
-& 2 \\
-dropout & P5\_frequent & 0.00186214 & 0.014337 & 332.446 & 0 & 0 &
-1.92503 & 8 \\
-dropout & P5\_initial & 0.00186214 & 0.0152763 & 332.446 & 0 & 0 &
-1.91341 & 1 \\
-dropout & P5\_noisy & 0.00792647 & 0.0429567 & 332.984 & 0 & 0 & 1.91463
-& 4 \\
-dropout & P5\_periodic & 0.00186214 & 0.0150989 & 332.446 & 0 & 0 &
-1.92709 & 4 \\
-feed & B0\_PI & 0.116105 & 0.0112358 & 336.78 & 0 & 0 & 0.011034 & 0 \\
-feed & B1\_continuous & 0.0601001 & 0.0118731 & 332.604 & 0 & 0 &
-4.44668 & 0 \\
-feed & B1\_ukf & 0.0593563 & 0.0118769 & 332.437 & 0 & 0 & 1.62817 &
-0 \\
-feed & B2\_both & 0.0629218 & 0.0158988 & 332.925 & 0 & 0 & 1.63324 &
-0 \\
-feed & B2\_estimator & 0.0599657 & 0.015842 & 332.434 & 0 & 0 & 1.62384
-& 0 \\
-feed & B3\_assumed\_inventory & 0.0597743 & 0.0120298 & 332.574 & 0 & 0
-& 1.61753 & 0 \\
-feed & B3\_known\_inventory & 0.0597743 & 0.0120298 & 332.574 & 0 & 0 &
-1.6278 & 0 \\
-feed & B4\_mhe & 0.0593365 & 0.0128832 & 332.422 & 0 & 0 & 1.666 & 0 \\
-feed & B5\_true\_state & 0.058536 & 0 & 332.334 & 0 & 0 & 1.61899 & 0 \\
-feed & P1\_expected & 0.0593563 & 0.0118769 & 332.437 & 0 & 0 & 4.09111
-& 0 \\
-feed & P2\_regret & 0.059297 & 0.0118861 & 332.357 & 0 & 0 & 4.07328 &
-0 \\
-feed & P3\_adaptive\_regret & 0.0614349 & 0.015872 & 332.894 & 0 & 0 &
-4.11717 & 0 \\
-feed & P4\_hybrid & 0.0617339 & 0.0158851 & 332.909 & 0 & 0 & 5.47818 &
-0 \\
-feed & P5\_delayed & 0.059577 & 0.013194 & 332.452 & 0 & 0 & 1.62629 &
-4 \\
-feed & P5\_event & 0.0596464 & 0.0154435 & 332.439 & 0 & 0 & 1.62821 &
-2.95 \\
-feed & P5\_frequent & 0.0596269 & 0.0147917 & 332.439 & 0 & 0 & 1.61566
-& 8 \\
-feed & P5\_initial & 0.0595382 & 0.0157482 & 332.439 & 0 & 0 & 1.61276 &
+combined & P5 frequent & 0.22634 & 0.10136 & 332.34 & 0 & 0 & 1.6624 &
+8 \\
+combined & P5 initial & 0.23052 & 0.11112 & 332.34 & 0 & 0 & 1.6696 &
 1 \\
-feed & P5\_noisy & 0.0645499 & 0.0431702 & 332.945 & 0 & 0 & 1.62767 &
+combined & P5 noisy & 0.23078 & 0.119 & 332.37 & 0 & 0 & 1.6611 & 4 \\
+combined & P5 periodic & 0.22186 & 0.10568 & 332.33 & 0 & 0 & 1.6588 &
 4 \\
-feed & P5\_periodic & 0.0595258 & 0.0155513 & 332.439 & 0 & 0 & 1.60685
-& 4 \\
-heat\_transfer & B0\_PI & 0.0314431 & 0.0229198 & 332.518 & 0 & 0 &
-0.010955 & 0 \\
-heat\_transfer & B1\_continuous & 0.0667541 & 0.0238628 & 332.334 & 0 &
-0 & 5.60661 & 0 \\
-heat\_transfer & B1\_ukf & 0.0997877 & 0.0245583 & 332.36 & 0 & 0 &
-1.93389 & 0 \\
-heat\_transfer & B2\_both & 0.0280007 & 0.0146261 & 333.88 & 0 & 0 &
-1.96848 & 0 \\
-heat\_transfer & B2\_estimator & 0.0802266 & 0.0157829 & 332.384 & 0 & 0
-& 1.93719 & 0 \\
-heat\_transfer & B3\_assumed\_inventory & 0.0992348 & 0.0271709 &
-332.361 & 0 & 0 & 1.94852 & 0 \\
-heat\_transfer & B3\_known\_inventory & 0.0992348 & 0.0271709 & 332.361
-& 0 & 0 & 1.94609 & 0 \\
-heat\_transfer & B4\_mhe & 0.100362 & 0.0198224 & 332.36 & 0 & 0 &
-1.98089 & 0 \\
-heat\_transfer & B5\_true\_state & 0.106194 & 0 & 332.334 & 0 & 0 &
-1.9214 & 0 \\
-heat\_transfer & P1\_expected & 0.0997877 & 0.0245583 & 332.36 & 0 & 0 &
-5.02487 & 0 \\
-heat\_transfer & P2\_regret & 0.102638 & 0.0246025 & 332.422 & 0 & 0 &
-5.00644 & 0 \\
-heat\_transfer & P3\_adaptive\_regret & 0.0304075 & 0.014657 & 333.893 &
-0 & 0 & 5.12647 & 0 \\
-heat\_transfer & P4\_hybrid & 0.0281281 & 0.0146108 & 333.872 & 0 & 0 &
-6.92229 & 0 \\
-heat\_transfer & P5\_delayed & 0.102189 & 0.0249363 & 332.366 & 0 & 0 &
-1.9242 & 4 \\
-heat\_transfer & P5\_event & 0.10081 & 0.0261589 & 332.373 & 0 & 0 &
-1.94134 & 2 \\
-heat\_transfer & P5\_frequent & 0.0990872 & 0.0245488 & 332.38 & 0 & 0 &
-1.94438 & 8 \\
-heat\_transfer & P5\_initial & 0.100252 & 0.0262812 & 332.38 & 0 & 0 &
-1.92069 & 1 \\
-heat\_transfer & P5\_noisy & 0.0979392 & 0.0483927 & 332.604 & 0 & 0 &
-1.92941 & 4 \\
-heat\_transfer & P5\_periodic & 0.0995364 & 0.0255886 & 332.38 & 0 & 0 &
-1.91986 & 4 \\
-inventory\_minus & B0\_PI & 0.0601428 & 0.120026 & 332.927 & 0 & 0 &
-0.0110904 & 0 \\
-inventory\_minus & B1\_continuous & 0.0595766 & 0.120164 & 332.612 & 0 &
-0 & 4.96987 & 0 \\
-inventory\_minus & B1\_ukf & 0.0604643 & 0.120222 & 332.442 & 0 & 0 &
-1.92646 & 0 \\
-inventory\_minus & B2\_both & 0.0605474 & 0.121061 & 332.925 & 0 & 0 &
-1.9689 & 0 \\
-inventory\_minus & B2\_estimator & 0.0603069 & 0.121246 & 332.439 & 0 &
-0 & 1.93127 & 0 \\
-inventory\_minus & B3\_assumed\_inventory & 0.0591603 & 0.123619 &
-332.575 & 0 & 0 & 1.93347 & 0 \\
-inventory\_minus & B3\_known\_inventory & 0.038648 & 0.0524107 & 336.442
-& 0 & 0 & 1.92908 & 0 \\
-inventory\_minus & B4\_mhe & 0.0606387 & 0.119864 & 332.429 & 0 & 0 &
-1.96844 & 0 \\
-inventory\_minus & B5\_true\_state & 0.0422572 & 0 & 335.358 & 0 & 0 &
-1.92195 & 0 \\
-inventory\_minus & P1\_expected & 0.0604643 & 0.120222 & 332.442 & 0 & 0
-& 5.0301 & 0 \\
-inventory\_minus & P2\_regret & 0.0612922 & 0.120322 & 332.372 & 0 & 0 &
-5.03329 & 0 \\
-inventory\_minus & P3\_adaptive\_regret & 0.0596605 & 0.121095 & 332.894
-& 0 & 0 & 5.08718 & 0 \\
-inventory\_minus & P4\_hybrid & 0.0596493 & 0.121085 & 332.909 & 0 & 0 &
-6.77859 & 0 \\
-inventory\_minus & P5\_delayed & 0.0466391 & 0.0824441 & 334.915 & 0 & 0
-& 1.93842 & 4 \\
-inventory\_minus & P5\_event & 0.0414219 & 0.0146262 & 335.822 & 0 & 0 &
-1.93396 & 2 \\
-inventory\_minus & P5\_frequent & 0.04162 & 0.014029 & 335.871 & 0 & 0 &
-1.9336 & 8 \\
-inventory\_minus & P5\_initial & 0.0417729 & 0.014942 & 335.857 & 0 & 0
-& 1.91811 & 1 \\
-inventory\_minus & P5\_noisy & 0.0465969 & 0.0441151 & 335.409 & 0 & 0 &
-1.9186 & 4 \\
-inventory\_minus & P5\_periodic & 0.0417729 & 0.0148061 & 335.857 & 0 &
-0 & 1.92416 & 4 \\
-inventory\_plus & B0\_PI & 0.063136 & 0.122461 & 332.927 & 0 & 0 &
-0.0110245 & 0 \\
-inventory\_plus & B1\_continuous & 0.0615694 & 0.122312 & 332.612 & 0 &
-0 & 4.96386 & 0 \\
-inventory\_plus & B1\_ukf & 0.0603865 & 0.122254 & 332.442 & 0 & 0 &
-1.92123 & 0 \\
-inventory\_plus & B2\_both & 0.0617974 & 0.122231 & 332.925 & 0 & 0 &
-1.94594 & 0 \\
-inventory\_plus & B2\_estimator & 0.060544 & 0.122043 & 332.439 & 0 & 0
-& 1.91785 & 0 \\
-inventory\_plus & B3\_assumed\_inventory & 0.0616905 & 0.11896 & 332.575
-& 0 & 0 & 1.93792 & 0 \\
-inventory\_plus & B3\_known\_inventory & 0.0435352 & 0.0522537 & 332.776
-& 0 & 0 & 1.9344 & 0 \\
-inventory\_plus & B4\_mhe & 0.0602121 & 0.122743 & 332.429 & 0 & 0 &
-1.96823 & 0 \\
-inventory\_plus & B5\_true\_state & 0.0444614 & 0 & 332.716 & 0 & 0 &
-1.9173 & 0 \\
-inventory\_plus & P1\_expected & 0.0603865 & 0.122254 & 332.442 & 0 & 0
-& 5.01 & 0 \\
-inventory\_plus & P2\_regret & 0.059559 & 0.122162 & 332.372 & 0 & 0 &
-5.00578 & 0 \\
-inventory\_plus & P3\_adaptive\_regret & 0.0626549 & 0.122186 & 332.894
-& 0 & 0 & 5.08821 & 0 \\
-inventory\_plus & P4\_hybrid & 0.0627469 & 0.122201 & 332.909 & 0 & 0 &
-6.77881 & 0 \\
-inventory\_plus & P5\_delayed & 0.0491223 & 0.0814387 & 332.675 & 0 & 0
-& 1.93067 & 4 \\
-inventory\_plus & P5\_event & 0.0462917 & 0.01508 & 332.697 & 0 & 0 &
-1.93708 & 2 \\
-inventory\_plus & P5\_frequent & 0.0461057 & 0.0144976 & 332.709 & 0 & 0
-& 1.92228 & 8 \\
-inventory\_plus & P5\_initial & 0.0462972 & 0.0154738 & 332.698 & 0 & 0
-& 1.9196 & 1 \\
-inventory\_plus & P5\_noisy & 0.0492122 & 0.0439567 & 332.647 & 0 & 0 &
-1.92292 & 4 \\
-inventory\_plus & P5\_periodic & 0.0462972 & 0.0153022 & 332.698 & 0 & 0
-& 1.91706 & 4 \\
-kinetic & B0\_PI & 0.0894276 & 0.0766046 & 333.276 & 0 & 0 & 0.0109034 &
+correlated noise & B0 PI & 0.012351 & 0.018987 & 333.33 & 0 & 0 &
+0.010863 & 0 \\
+correlated noise & B1 continuous & 0.0056224 & 0.01913 & 332.77 & 0 & 0
+& 5.0819 & 0 \\
+correlated noise & B1 ukf & 0.0017832 & 0.019368 & 332.46 & 0 & 0 &
+1.9438 & 0 \\
+correlated noise & B2 both & 0.0088977 & 0.025513 & 333.22 & 0 & 0 &
+1.9538 & 0 \\
+correlated noise & B2 estimator & 0.0010672 & 0.025383 & 332.41 & 0 & 0
+& 1.9229 & 0 \\
+correlated noise & B3 assumed inventory & 0.0022236 & 0.018095 & 332.6 &
+0 & 0 & 1.9298 & 0 \\
+correlated noise & B3 known inventory & 0.0022236 & 0.018095 & 332.6 & 0
+& 0 & 1.9374 & 0 \\
+correlated noise & B4 mhe & 0.0012654 & 0.020191 & 332.4 & 0 & 0 &
+1.9705 & 0 \\
+correlated noise & B5 true state & 0 & 0 & 332.33 & 0 & 0 & 1.9173 &
 0 \\
-kinetic & B1\_continuous & 0.16428 & 0.081211 & 332.334 & 0 & 0 &
-5.68928 & 0 \\
-kinetic & B1\_ukf & 0.192631 & 0.0839044 & 332.334 & 0 & 0 & 1.93156 &
+correlated noise & P1 expected & 0.0017832 & 0.019368 & 332.46 & 0 & 0 &
+5.0096 & 0 \\
+correlated noise & P2 regret & 0.0011856 & 0.01923 & 332.42 & 0 & 0 &
+5.008 & 0 \\
+correlated noise & P3 adaptive regret & 0.0077582 & 0.025376 & 333.2 & 0
+& 0 & 5.0854 & 0 \\
+correlated noise & P4 hybrid & 0.0082111 & 0.02542 & 333.27 & 0 & 0 &
+6.749 & 0 \\
+correlated noise & P5 delayed & 0.0021283 & 0.019508 & 332.48 & 0 & 0 &
+1.9207 & 4 \\
+correlated noise & P5 event & 0.0019023 & 0.021342 & 332.47 & 0 & 0 &
+1.9474 & 2 \\
+correlated noise & P5 frequent & 0.0019023 & 0.019926 & 332.47 & 0 & 0 &
+1.9193 & 8 \\
+correlated noise & P5 initial & 0.0019023 & 0.021948 & 332.47 & 0 & 0 &
+1.9256 & 1 \\
+correlated noise & P5 noisy & 0.0062162 & 0.046467 & 332.83 & 0 & 0 &
+1.9155 & 4 \\
+correlated noise & P5 periodic & 0.0019023 & 0.021342 & 332.47 & 0 & 0 &
+1.9254 & 4 \\
+dropout & B0 PI & 0.0066846 & 0.011372 & 332.93 & 0 & 0 & 0.010994 &
 0 \\
-kinetic & B2\_both & 0.0448606 & 0.0153278 & 333.993 & 0 & 0 & 1.98638 &
-0 \\
-kinetic & B2\_estimator & 0.234377 & 0.0168838 & 332.334 & 0 & 0 &
-1.94017 & 0 \\
-kinetic & B3\_assumed\_inventory & 0.199984 & 0.0940751 & 332.334 & 0 &
-0 & 1.94387 & 0 \\
-kinetic & B3\_known\_inventory & 0.199984 & 0.0940751 & 332.334 & 0 & 0
-& 1.95366 & 0 \\
-kinetic & B4\_mhe & 0.17914 & 0.0732316 & 332.334 & 0 & 0 & 1.99403 &
-0 \\
-kinetic & B5\_true\_state & 0.301138 & 0 & 332.334 & 0 & 0 & 1.93457 &
-0 \\
-kinetic & P1\_expected & 0.192631 & 0.0839044 & 332.334 & 0 & 0 &
-5.05842 & 0 \\
-kinetic & P2\_regret & 0.183597 & 0.0835791 & 332.334 & 0 & 0 & 5.03838
+dropout & B1 continuous & 0.0032454 & 0.011315 & 332.61 & 0 & 0 & 5.0065
 & 0 \\
-kinetic & P3\_adaptive\_regret & 0.0437234 & 0.0153134 & 333.85 & 0 & 0
-& 5.15906 & 0 \\
-kinetic & P4\_hybrid & 0.0441346 & 0.0153591 & 333.957 & 0 & 0 & 6.78489
+dropout & B1 ukf & 0.0016471 & 0.011311 & 332.44 & 0 & 0 & 1.9513 & 0 \\
+dropout & B2 both & 0.0069945 & 0.015851 & 332.89 & 0 & 0 & 1.9614 &
+0 \\
+dropout & B2 estimator & 0.0014342 & 0.015842 & 332.44 & 0 & 0 & 1.9311
 & 0 \\
-kinetic & P5\_delayed & 0.191735 & 0.0833293 & 332.334 & 0 & 0 & 1.93537
-& 4 \\
-kinetic & P5\_event & 0.185591 & 0.0800464 & 332.334 & 0 & 0 & 1.95365 &
+dropout & B3 assumed inventory & 0.0023341 & 0.011488 & 332.58 & 0 & 0 &
+1.9369 & 0 \\
+dropout & B3 known inventory & 0.0023341 & 0.011488 & 332.58 & 0 & 0 &
+1.9301 & 0 \\
+dropout & B4 mhe & 0.0016341 & 0.012176 & 332.43 & 0 & 0 & 1.974 & 0 \\
+dropout & B5 true state & 0 & 0 & 332.33 & 0 & 0 & 1.9117 & 0 \\
+dropout & P1 expected & 0.0016471 & 0.011311 & 332.44 & 0 & 0 & 5.0001 &
+0 \\
+dropout & P2 regret & 0.0014446 & 0.011322 & 332.37 & 0 & 0 & 4.9714 &
+0 \\
+dropout & P3 adaptive regret & 0.006065 & 0.015834 & 332.89 & 0 & 0 &
+5.1153 & 0 \\
+dropout & P4 hybrid & 0.0064323 & 0.01583 & 332.91 & 0 & 0 & 6.7783 &
+0 \\
+dropout & P5 delayed & 0.0018754 & 0.012641 & 332.46 & 0 & 0 & 1.9105 &
+4 \\
+dropout & P5 event & 0.0018621 & 0.01493 & 332.45 & 0 & 0 & 1.9474 &
 2 \\
-kinetic & P5\_frequent & 0.181038 & 0.0732143 & 332.334 & 0 & 0 &
-1.94457 & 8 \\
-kinetic & P5\_initial & 0.185593 & 0.0800694 & 332.334 & 0 & 0 & 1.94017
-& 1 \\
-kinetic & P5\_noisy & 0.186742 & 0.0907298 & 332.398 & 0 & 0 & 1.93047 &
+dropout & P5 frequent & 0.0018621 & 0.014337 & 332.45 & 0 & 0 & 1.925 &
+8 \\
+dropout & P5 initial & 0.0018621 & 0.015276 & 332.45 & 0 & 0 & 1.9134 &
+1 \\
+dropout & P5 noisy & 0.0079265 & 0.042957 & 332.98 & 0 & 0 & 1.9146 &
 4 \\
-kinetic & P5\_periodic & 0.185106 & 0.076543 & 332.334 & 0 & 0 & 1.93747
-& 4 \\
-nominal & B0\_PI & 0.00663508 & 0.0113015 & 332.927 & 0 & 0 & 0.0117448
-& 0 \\
-nominal & B1\_continuous & 0.00323946 & 0.0112444 & 332.612 & 0 & 0 &
-4.97946 & 0 \\
-nominal & B1\_ukf & 0.00164715 & 0.01124 & 332.442 & 0 & 0 & 1.91573 &
+dropout & P5 periodic & 0.0018621 & 0.015099 & 332.45 & 0 & 0 & 1.9271 &
+4 \\
+feed & B0 PI & 0.11611 & 0.011236 & 336.78 & 0 & 0 & 0.011034 & 0 \\
+feed & B1 continuous & 0.0601 & 0.011873 & 332.6 & 0 & 0 & 4.4467 & 0 \\
+feed & B1 ukf & 0.059356 & 0.011877 & 332.44 & 0 & 0 & 1.6282 & 0 \\
+feed & B2 both & 0.062922 & 0.015899 & 332.93 & 0 & 0 & 1.6332 & 0 \\
+feed & B2 estimator & 0.059966 & 0.015842 & 332.43 & 0 & 0 & 1.6238 &
 0 \\
-nominal & B2\_both & 0.00751547 & 0.0148704 & 332.925 & 0 & 0 & 1.93605
+feed & B3 assumed inventory & 0.059774 & 0.01203 & 332.57 & 0 & 0 &
+1.6175 & 0 \\
+feed & B3 known inventory & 0.059774 & 0.01203 & 332.57 & 0 & 0 & 1.6278
 & 0 \\
-nominal & B2\_estimator & 0.00143415 & 0.0148619 & 332.439 & 0 & 0 &
-1.90841 & 0 \\
-nominal & B3\_assumed\_inventory & 0.00233413 & 0.011423 & 332.575 & 0 &
-0 & 1.91672 & 0 \\
-nominal & B3\_known\_inventory & 0.00233413 & 0.011423 & 332.575 & 0 & 0
-& 1.92094 & 0 \\
-nominal & B4\_mhe & 0.00163409 & 0.0120908 & 332.429 & 0 & 0 & 1.97427 &
+feed & B4 mhe & 0.059336 & 0.012883 & 332.42 & 0 & 0 & 1.666 & 0 \\
+feed & B5 true state & 0.058536 & 0 & 332.33 & 0 & 0 & 1.619 & 0 \\
+feed & P1 expected & 0.059356 & 0.011877 & 332.44 & 0 & 0 & 4.0911 &
 0 \\
-nominal & B5\_true\_state & 0 & 0 & 332.334 & 0 & 0 & 1.91769 & 0 \\
-nominal & P1\_expected & 0.00164715 & 0.01124 & 332.442 & 0 & 0 & 5.0063
+feed & P2 regret & 0.059297 & 0.011886 & 332.36 & 0 & 0 & 4.0733 & 0 \\
+feed & P3 adaptive regret & 0.061435 & 0.015872 & 332.89 & 0 & 0 &
+4.1172 & 0 \\
+feed & P4 hybrid & 0.061734 & 0.015885 & 332.91 & 0 & 0 & 5.4782 & 0 \\
+feed & P5 delayed & 0.059577 & 0.013194 & 332.45 & 0 & 0 & 1.6263 & 4 \\
+feed & P5 event & 0.059646 & 0.015444 & 332.44 & 0 & 0 & 1.6282 &
+2.95 \\
+feed & P5 frequent & 0.059627 & 0.014792 & 332.44 & 0 & 0 & 1.6157 &
+8 \\
+feed & P5 initial & 0.059538 & 0.015748 & 332.44 & 0 & 0 & 1.6128 & 1 \\
+feed & P5 noisy & 0.06455 & 0.04317 & 332.95 & 0 & 0 & 1.6277 & 4 \\
+feed & P5 periodic & 0.059526 & 0.015551 & 332.44 & 0 & 0 & 1.6069 &
+4 \\
+heat transfer & B0 PI & 0.031443 & 0.02292 & 332.52 & 0 & 0 & 0.010955 &
+0 \\
+heat transfer & B1 continuous & 0.066754 & 0.023863 & 332.33 & 0 & 0 &
+5.6066 & 0 \\
+heat transfer & B1 ukf & 0.099788 & 0.024558 & 332.36 & 0 & 0 & 1.9339 &
+0 \\
+heat transfer & B2 both & 0.028001 & 0.014626 & 333.88 & 0 & 0 & 1.9685
 & 0 \\
-nominal & P2\_regret & 0.00144464 & 0.0112486 & 332.372 & 0 & 0 &
-5.00922 & 0 \\
-nominal & P3\_adaptive\_regret & 0.00606505 & 0.014836 & 332.894 & 0 & 0
-& 5.06102 & 0 \\
-nominal & P4\_hybrid & 0.00643227 & 0.0148467 & 332.909 & 0 & 0 &
-6.75738 & 0 \\
-nominal & P5\_delayed & 0.00187537 & 0.0125973 & 332.459 & 0 & 0 &
-1.92557 & 4 \\
-nominal & P5\_event & 0.00186214 & 0.0148733 & 332.446 & 0 & 0 & 1.92734
+heat transfer & B2 estimator & 0.080227 & 0.015783 & 332.38 & 0 & 0 &
+1.9372 & 0 \\
+heat transfer & B3 assumed inventory & 0.099235 & 0.027171 & 332.36 & 0
+& 0 & 1.9485 & 0 \\
+heat transfer & B3 known inventory & 0.099235 & 0.027171 & 332.36 & 0 &
+0 & 1.9461 & 0 \\
+heat transfer & B4 mhe & 0.10036 & 0.019822 & 332.36 & 0 & 0 & 1.9809 &
+0 \\
+heat transfer & B5 true state & 0.10619 & 0 & 332.33 & 0 & 0 & 1.9214 &
+0 \\
+heat transfer & P1 expected & 0.099788 & 0.024558 & 332.36 & 0 & 0 &
+5.0249 & 0 \\
+heat transfer & P2 regret & 0.10264 & 0.024602 & 332.42 & 0 & 0 & 5.0064
+& 0 \\
+heat transfer & P3 adaptive regret & 0.030407 & 0.014657 & 333.89 & 0 &
+0 & 5.1265 & 0 \\
+heat transfer & P4 hybrid & 0.028128 & 0.014611 & 333.87 & 0 & 0 &
+6.9223 & 0 \\
+heat transfer & P5 delayed & 0.10219 & 0.024936 & 332.37 & 0 & 0 &
+1.9242 & 4 \\
+heat transfer & P5 event & 0.10081 & 0.026159 & 332.37 & 0 & 0 & 1.9413
 & 2 \\
-nominal & P5\_frequent & 0.00186214 & 0.0142878 & 332.446 & 0 & 0 &
-1.92051 & 8 \\
-nominal & P5\_initial & 0.00186214 & 0.0152214 & 332.446 & 0 & 0 &
-1.91878 & 1 \\
-nominal & P5\_noisy & 0.00792647 & 0.0429356 & 332.984 & 0 & 0 & 1.91262
+heat transfer & P5 frequent & 0.099087 & 0.024549 & 332.38 & 0 & 0 &
+1.9444 & 8 \\
+heat transfer & P5 initial & 0.10025 & 0.026281 & 332.38 & 0 & 0 &
+1.9207 & 1 \\
+heat transfer & P5 noisy & 0.097939 & 0.048393 & 332.6 & 0 & 0 & 1.9294
 & 4 \\
-nominal & P5\_periodic & 0.00186214 & 0.0150651 & 332.446 & 0 & 0 &
-1.91409 & 4 \\
-outside\_prior & B0\_PI & 0.168357 & 0.24254 & 333.559 & 0 & 0 &
-0.0110879 & 0 \\
-outside\_prior & B1\_continuous & 0.305395 & 0.252599 & 332.334 & 0 & 0
-& 5.69686 & 0 \\
-outside\_prior & B1\_ukf & 0.290765 & 0.252338 & 332.334 & 0 & 0 &
-1.91374 & 0 \\
-outside\_prior & B2\_both & 0.0868943 & 0.238616 & 336.249 & 0 & 0 &
-1.93542 & 0 \\
-outside\_prior & B2\_estimator & 0.350939 & 0.239356 & 332.334 & 0 & 0 &
-1.92649 & 0 \\
-outside\_prior & B3\_assumed\_inventory & 0.299079 & 0.223059 & 332.334
-& 0 & 0 & 1.9287 & 0 \\
-outside\_prior & B3\_known\_inventory & 0.420953 & 0.187128 & 332.334 &
-0 & 0.0166667 & 1.935 & 0 \\
-outside\_prior & B4\_mhe & 0.265735 & 0.246334 & 332.334 & 0 & 0 &
-1.97421 & 0 \\
-outside\_prior & B5\_true\_state & 0.438869 & 0 & 332.334 & 0 & 0 &
-1.90881 & 0 \\
-outside\_prior & P1\_expected & 0.290765 & 0.252338 & 332.334 & 0 & 0 &
-5.00111 & 0 \\
-outside\_prior & P2\_regret & 0.2806 & 0.251433 & 332.334 & 0 & 0 &
-5.04724 & 0 \\
-outside\_prior & P3\_adaptive\_regret & 0.086411 & 0.238663 & 336.169 &
-0 & 0 & 5.01619 & 0 \\
-outside\_prior & P4\_hybrid & 0.0879711 & 0.238628 & 336.245 & 0 & 0 &
-6.39574 & 0 \\
-outside\_prior & P5\_delayed & 0.403596 & 0.212638 & 332.334 & 0 & 0 &
-1.92261 & 4 \\
-outside\_prior & P5\_event & 0.399263 & 0.13483 & 332.334 & 0 & 0 &
-1.95194 & 2.75 \\
-outside\_prior & P5\_frequent & 0.395547 & 0.122486 & 332.334 & 0 & 0 &
-1.91629 & 8 \\
-outside\_prior & P5\_initial & 0.39926 & 0.136025 & 332.334 & 0 & 0 &
-1.92235 & 1 \\
-outside\_prior & P5\_noisy & 0.384859 & 0.140551 & 332.334 & 0 & 0 &
-1.92755 & 4 \\
-outside\_prior & P5\_periodic & 0.394016 & 0.128434 & 332.334 & 0 & 0 &
-1.91121 & 4 \\
-properties & B0\_PI & 0.0626219 & 0.0374793 & 332.37 & 0 & 0 & 0.0108645
+heat transfer & P5 periodic & 0.099536 & 0.025589 & 332.38 & 0 & 0 &
+1.9199 & 4 \\
+inventory minus & B0 PI & 0.060143 & 0.12003 & 332.93 & 0 & 0 & 0.01109
 & 0 \\
-properties & B1\_continuous & 0.163157 & 0.0285198 & 332.334 & 0 & 0 &
-5.7274 & 0 \\
-properties & B1\_ukf & 0.160039 & 0.0290042 & 332.334 & 0 & 0 & 1.93012
+inventory minus & B1 continuous & 0.059577 & 0.12016 & 332.61 & 0 & 0 &
+4.9699 & 0 \\
+inventory minus & B1 ukf & 0.060464 & 0.12022 & 332.44 & 0 & 0 & 1.9265
 & 0 \\
-properties & B2\_both & 0.0593272 & 0.11611 & 334.875 & 0 & 0 & 1.9112 &
-0 \\
-properties & B2\_estimator & 0.233451 & 0.110299 & 332.334 & 0 & 0 &
-1.92905 & 0 \\
-properties & B3\_assumed\_inventory & 0.165299 & 0.0279222 & 332.334 & 0
-& 0 & 1.92893 & 0 \\
-properties & B3\_known\_inventory & 0.165299 & 0.0279222 & 332.334 & 0 &
-0 & 1.93709 & 0 \\
-properties & B4\_mhe & 0.138014 & 0.0216329 & 332.334 & 0 & 0 & 1.99635
+inventory minus & B2 both & 0.060547 & 0.12106 & 332.93 & 0 & 0 & 1.9689
 & 0 \\
-properties & B5\_true\_state & 0.0980743 & 0 & 332.334 & 0 & 0 & 1.92821
+inventory minus & B2 estimator & 0.060307 & 0.12125 & 332.44 & 0 & 0 &
+1.9313 & 0 \\
+inventory minus & B3 assumed inventory & 0.05916 & 0.12362 & 332.58 & 0
+& 0 & 1.9335 & 0 \\
+inventory minus & B3 known inventory & 0.038648 & 0.052411 & 336.44 & 0
+& 0 & 1.9291 & 0 \\
+inventory minus & B4 mhe & 0.060639 & 0.11986 & 332.43 & 0 & 0 & 1.9684
 & 0 \\
-properties & P1\_expected & 0.160039 & 0.0290042 & 332.334 & 0 & 0 &
-5.0264 & 0 \\
-properties & P2\_regret & 0.163602 & 0.029499 & 332.334 & 0 & 0 &
-5.01968 & 0 \\
-properties & P3\_adaptive\_regret & 0.0593802 & 0.11559 & 334.886 & 0 &
-0 & 4.98435 & 0 \\
-properties & P4\_hybrid & 0.0592467 & 0.11624 & 334.886 & 0 & 0 &
-6.58615 & 0 \\
-properties & P5\_delayed & 0.161862 & 0.0246897 & 332.334 & 0 & 0 &
-1.93012 & 4 \\
-properties & P5\_event & 0.15953 & 0.0268438 & 332.334 & 0 & 0 & 1.94777
-& 2.1 \\
-properties & P5\_frequent & 0.159608 & 0.0263533 & 332.334 & 0 & 0 &
-1.92655 & 8 \\
-properties & P5\_initial & 0.155999 & 0.0278531 & 332.334 & 0 & 0 &
-1.93585 & 1 \\
-properties & P5\_noisy & 0.154966 & 0.0494088 & 332.367 & 0 & 0 &
-1.92372 & 4 \\
-properties & P5\_periodic & 0.155727 & 0.0280277 & 332.334 & 0 & 0 &
-1.94351 & 4 \\
-saturation & B0\_PI & 0.00663508 & 0.0113015 & 332.927 & 0 & 0 &
-0.0113051 & 0 \\
-saturation & B1\_continuous & 0.00323946 & 0.0112444 & 332.612 & 0 & 0 &
-4.77531 & 0 \\
-saturation & B1\_ukf & 0.00164715 & 0.01124 & 332.442 & 0 & 0 & 1.73143
+inventory minus & B5 true state & 0.042257 & 0 & 335.36 & 0 & 0 & 1.9219
 & 0 \\
-saturation & B2\_both & 0.0084796 & 0.0148669 & 332.961 & 0 & 0 &
-1.75393 & 0 \\
-saturation & B2\_estimator & 0.00143415 & 0.0148619 & 332.439 & 0 & 0 &
-1.73462 & 0 \\
-saturation & B3\_assumed\_inventory & 0.00233413 & 0.011423 & 332.575 &
-0 & 0 & 1.75305 & 0 \\
-saturation & B3\_known\_inventory & 0.00233413 & 0.011423 & 332.575 & 0
-& 0 & 1.7386 & 0 \\
-saturation & B4\_mhe & 0.00163409 & 0.0120908 & 332.429 & 0 & 0 &
-1.78426 & 0 \\
-saturation & B5\_true\_state & 0 & 0 & 332.334 & 0 & 0 & 1.73514 & 0 \\
-saturation & P1\_expected & 0.00164715 & 0.01124 & 332.442 & 0 & 0 &
-4.44947 & 0 \\
-saturation & P2\_regret & 0.00144464 & 0.0112486 & 332.372 & 0 & 0 &
-4.41906 & 0 \\
-saturation & P3\_adaptive\_regret & 0.0064252 & 0.0148321 & 332.917 & 0
-& 0 & 4.53539 & 0 \\
-saturation & P4\_hybrid & 0.00673957 & 0.0148363 & 332.924 & 0 & 0 &
-6.05921 & 0 \\
-saturation & P5\_delayed & 0.00187537 & 0.0125973 & 332.459 & 0 & 0 &
-1.73212 & 4 \\
-saturation & P5\_event & 0.00186214 & 0.0148733 & 332.446 & 0 & 0 &
-1.76483 & 2 \\
-saturation & P5\_frequent & 0.00186214 & 0.0142878 & 332.446 & 0 & 0 &
-1.75253 & 8 \\
-saturation & P5\_initial & 0.00186214 & 0.0152214 & 332.446 & 0 & 0 &
-1.72494 & 1 \\
-saturation & P5\_noisy & 0.00911722 & 0.0429368 & 333.063 & 0 & 0 &
-1.72987 & 4 \\
-saturation & P5\_periodic & 0.00186214 & 0.0150651 & 332.446 & 0 & 0 &
-1.73633 & 4 \\
-servo & B0\_PI & 0.0425499 & 0.0110022 & 336.18 & 0 & 0 & 0.0111364 &
-0 \\
-servo & B1\_continuous & 0.0487975 & 0.010804 & 335.877 & 0 & 0 &
-5.40462 & 0 \\
-servo & B1\_ukf & 0.052975 & 0.0107791 & 335.927 & 0 & 0 & 1.93224 &
-0 \\
-servo & B2\_both & 0.0535522 & 0.0143561 & 335.963 & 0 & 0 & 1.96008 &
-0 \\
-servo & B2\_estimator & 0.052413 & 0.0143435 & 335.924 & 0 & 0 & 1.92633
+inventory minus & P1 expected & 0.060464 & 0.12022 & 332.44 & 0 & 0 &
+5.0301 & 0 \\
+inventory minus & P2 regret & 0.061292 & 0.12032 & 332.37 & 0 & 0 &
+5.0333 & 0 \\
+inventory minus & P3 adaptive regret & 0.059661 & 0.12109 & 332.89 & 0 &
+0 & 5.0872 & 0 \\
+inventory minus & P4 hybrid & 0.059649 & 0.12109 & 332.91 & 0 & 0 &
+6.7786 & 0 \\
+inventory minus & P5 delayed & 0.046639 & 0.082444 & 334.92 & 0 & 0 &
+1.9384 & 4 \\
+inventory minus & P5 event & 0.041422 & 0.014626 & 335.82 & 0 & 0 &
+1.934 & 2 \\
+inventory minus & P5 frequent & 0.04162 & 0.014029 & 335.87 & 0 & 0 &
+1.9336 & 8 \\
+inventory minus & P5 initial & 0.041773 & 0.014942 & 335.86 & 0 & 0 &
+1.9181 & 1 \\
+inventory minus & P5 noisy & 0.046597 & 0.044115 & 335.41 & 0 & 0 &
+1.9186 & 4 \\
+inventory minus & P5 periodic & 0.041773 & 0.014806 & 335.86 & 0 & 0 &
+1.9242 & 4 \\
+inventory plus & B0 PI & 0.063136 & 0.12246 & 332.93 & 0 & 0 & 0.011024
 & 0 \\
-servo & B3\_assumed\_inventory & 0.0530047 & 0.0110093 & 335.908 & 0 & 0
-& 1.93742 & 0 \\
-servo & B3\_known\_inventory & 0.0530047 & 0.0110093 & 335.908 & 0 & 0 &
-1.94328 & 0 \\
-servo & B4\_mhe & 0.0528297 & 0.0115231 & 335.93 & 0 & 0 & 1.9762 & 0 \\
-servo & B5\_true\_state & 0.0522632 & 0 & 335.925 & 0 & 0 & 1.92641 &
+inventory plus & B1 continuous & 0.061569 & 0.12231 & 332.61 & 0 & 0 &
+4.9639 & 0 \\
+inventory plus & B1 ukf & 0.060387 & 0.12225 & 332.44 & 0 & 0 & 1.9212 &
 0 \\
-servo & P1\_expected & 0.052975 & 0.0107791 & 335.927 & 0 & 0 & 5.04302
+inventory plus & B2 both & 0.061797 & 0.12223 & 332.93 & 0 & 0 & 1.9459
 & 0 \\
-servo & P2\_regret & 0.0531778 & 0.0107868 & 335.941 & 0 & 0 & 5.02527 &
+inventory plus & B2 estimator & 0.060544 & 0.12204 & 332.44 & 0 & 0 &
+1.9178 & 0 \\
+inventory plus & B3 assumed inventory & 0.061691 & 0.11896 & 332.58 & 0
+& 0 & 1.9379 & 0 \\
+inventory plus & B3 known inventory & 0.043535 & 0.052254 & 332.78 & 0 &
+0 & 1.9344 & 0 \\
+inventory plus & B4 mhe & 0.060212 & 0.12274 & 332.43 & 0 & 0 & 1.9682 &
 0 \\
-servo & P3\_adaptive\_regret & 0.0527548 & 0.0143287 & 335.935 & 0 & 0 &
-5.14247 & 0 \\
-servo & P4\_hybrid & 0.0523817 & 0.014329 & 335.938 & 0 & 0 & 6.84826 &
+inventory plus & B5 true state & 0.044461 & 0 & 332.72 & 0 & 0 & 1.9173
+& 0 \\
+inventory plus & P1 expected & 0.060387 & 0.12225 & 332.44 & 0 & 0 &
+5.01 & 0 \\
+inventory plus & P2 regret & 0.059559 & 0.12216 & 332.37 & 0 & 0 &
+5.0058 & 0 \\
+inventory plus & P3 adaptive regret & 0.062655 & 0.12219 & 332.89 & 0 &
+0 & 5.0882 & 0 \\
+inventory plus & P4 hybrid & 0.062747 & 0.1222 & 332.91 & 0 & 0 & 6.7788
+& 0 \\
+inventory plus & P5 delayed & 0.049122 & 0.081439 & 332.67 & 0 & 0 &
+1.9307 & 4 \\
+inventory plus & P5 event & 0.046292 & 0.01508 & 332.7 & 0 & 0 & 1.9371
+& 2 \\
+inventory plus & P5 frequent & 0.046106 & 0.014498 & 332.71 & 0 & 0 &
+1.9223 & 8 \\
+inventory plus & P5 initial & 0.046297 & 0.015474 & 332.7 & 0 & 0 &
+1.9196 & 1 \\
+inventory plus & P5 noisy & 0.049212 & 0.043957 & 332.65 & 0 & 0 &
+1.9229 & 4 \\
+inventory plus & P5 periodic & 0.046297 & 0.015302 & 332.7 & 0 & 0 &
+1.9171 & 4 \\
+kinetic & B0 PI & 0.089428 & 0.076605 & 333.28 & 0 & 0 & 0.010903 & 0 \\
+kinetic & B1 continuous & 0.16428 & 0.081211 & 332.33 & 0 & 0 & 5.6893 &
 0 \\
-servo & P5\_delayed & 0.0530791 & 0.0122172 & 335.927 & 0 & 0 & 1.93345
-& 4 \\
-servo & P5\_event & 0.0531638 & 0.0145202 & 335.929 & 0 & 0 & 1.95392 &
-2.15 \\
-servo & P5\_frequent & 0.0527676 & 0.0139634 & 335.929 & 0 & 0 & 1.93424
-& 8 \\
-servo & P5\_initial & 0.0531638 & 0.0148614 & 335.929 & 0 & 0 & 1.92998
-& 1 \\
-servo & P5\_noisy & 0.0555952 & 0.0427761 & 335.917 & 0 & 0 & 1.92566 &
+kinetic & B1 ukf & 0.19263 & 0.083904 & 332.33 & 0 & 0 & 1.9316 & 0 \\
+kinetic & B2 both & 0.044861 & 0.015328 & 333.99 & 0 & 0 & 1.9864 & 0 \\
+kinetic & B2 estimator & 0.23438 & 0.016884 & 332.33 & 0 & 0 & 1.9402 &
+0 \\
+kinetic & B3 assumed inventory & 0.19998 & 0.094075 & 332.33 & 0 & 0 &
+1.9439 & 0 \\
+kinetic & B3 known inventory & 0.19998 & 0.094075 & 332.33 & 0 & 0 &
+1.9537 & 0 \\
+kinetic & B4 mhe & 0.17914 & 0.073232 & 332.33 & 0 & 0 & 1.994 & 0 \\
+kinetic & B5 true state & 0.30114 & 0 & 332.33 & 0 & 0 & 1.9346 & 0 \\
+kinetic & P1 expected & 0.19263 & 0.083904 & 332.33 & 0 & 0 & 5.0584 &
+0 \\
+kinetic & P2 regret & 0.1836 & 0.083579 & 332.33 & 0 & 0 & 5.0384 & 0 \\
+kinetic & P3 adaptive regret & 0.043723 & 0.015313 & 333.85 & 0 & 0 &
+5.1591 & 0 \\
+kinetic & P4 hybrid & 0.044135 & 0.015359 & 333.96 & 0 & 0 & 6.7849 &
+0 \\
+kinetic & P5 delayed & 0.19173 & 0.083329 & 332.33 & 0 & 0 & 1.9354 &
 4 \\
-servo & P5\_periodic & 0.0531638 & 0.0147464 & 335.929 & 0 & 0 & 1.92789
-& 4 \\
-unreachable & B0\_PI & 0.503446 & 0.0129168 & 362.542 & 13.1484 & 0 &
-0.0109533 & 0 \\
-unreachable & B1\_continuous & 0.658828 & 0.00795498 & 344.312 &
-0.00372757 & 0.214167 & 23.5844 & 0 \\
-unreachable & B1\_ukf & 0.661761 & 0.0080068 & 344.114 & 2.70015e-05 & 0
-& 1.7908 & 0 \\
-unreachable & B2\_both & 0.6638 & 0.010598 & 344.144 & 0.000155975 & 0 &
-1.82042 & 0 \\
-unreachable & B2\_estimator & 0.661347 & 0.0106627 & 344.1 & 9.65883e-05
-& 0 & 1.78279 & 0 \\
-unreachable & B3\_assumed\_inventory & 0.661473 & 0.00863987 & 344.135 &
-0.000255342 & 0 & 1.77924 & 0 \\
-unreachable & B3\_known\_inventory & 0.661473 & 0.00863987 & 344.135 &
-0.000255342 & 0 & 1.7834 & 0 \\
-unreachable & B4\_mhe & 0.661715 & 0.00857237 & 344.024 & 0 & 0 &
-1.81959 & 0 \\
-unreachable & B5\_true\_state & 0.662098 & 0 & 343.906 & 0 & 0 & 1.77101
+kinetic & P5 event & 0.18559 & 0.080046 & 332.33 & 0 & 0 & 1.9537 & 2 \\
+kinetic & P5 frequent & 0.18104 & 0.073214 & 332.33 & 0 & 0 & 1.9446 &
+8 \\
+kinetic & P5 initial & 0.18559 & 0.080069 & 332.33 & 0 & 0 & 1.9402 &
+1 \\
+kinetic & P5 noisy & 0.18674 & 0.09073 & 332.4 & 0 & 0 & 1.9305 & 4 \\
+kinetic & P5 periodic & 0.18511 & 0.076543 & 332.33 & 0 & 0 & 1.9375 &
+4 \\
+nominal & B0 PI & 0.0066351 & 0.011301 & 332.93 & 0 & 0 & 0.011745 &
+0 \\
+nominal & B1 continuous & 0.0032395 & 0.011244 & 332.61 & 0 & 0 & 4.9795
 & 0 \\
-unreachable & P1\_expected & 0.661761 & 0.0080068 & 344.114 &
-2.70015e-05 & 0 & 4.62038 & 0 \\
-unreachable & P2\_regret & 0.661761 & 0.0080068 & 344.114 & 2.70015e-05
-& 0 & 4.58771 & 0 \\
-unreachable & P3\_adaptive\_regret & 0.6638 & 0.010598 & 344.144 &
-0.000155975 & 0 & 4.6753 & 0 \\
-unreachable & P4\_hybrid & 0.6638 & 0.010598 & 344.144 & 0.000155975 & 0
-& 6.50699 & 0 \\
-unreachable & P5\_delayed & 0.661782 & 0.0147463 & 344.112 & 2.05826e-05
-& 0 & 1.78334 & 4 \\
-unreachable & P5\_event & 0.661791 & 0.0126421 & 344.108 & 0 & 0 &
-1.80959 & 2 \\
-unreachable & P5\_frequent & 0.661801 & 0.0120806 & 344.111 &
-6.41892e-06 & 0 & 1.77206 & 8 \\
-unreachable & P5\_initial & 0.661761 & 0.0128402 & 344.114 & 2.70015e-05
-& 0 & 1.77705 & 1 \\
-unreachable & P5\_noisy & 0.661713 & 0.0423247 & 344.124 & 5.99591e-05 &
-0 & 1.77493 & 4 \\
-unreachable & P5\_periodic & 0.661723 & 0.0128057 & 344.116 &
-2.70015e-05 & 0 & 1.78093 & 4 \\
+nominal & B1 ukf & 0.0016471 & 0.01124 & 332.44 & 0 & 0 & 1.9157 & 0 \\
+nominal & B2 both & 0.0075155 & 0.01487 & 332.93 & 0 & 0 & 1.936 & 0 \\
+nominal & B2 estimator & 0.0014342 & 0.014862 & 332.44 & 0 & 0 & 1.9084
+& 0 \\
+nominal & B3 assumed inventory & 0.0023341 & 0.011423 & 332.58 & 0 & 0 &
+1.9167 & 0 \\
+nominal & B3 known inventory & 0.0023341 & 0.011423 & 332.58 & 0 & 0 &
+1.9209 & 0 \\
+nominal & B4 mhe & 0.0016341 & 0.012091 & 332.43 & 0 & 0 & 1.9743 & 0 \\
+nominal & B5 true state & 0 & 0 & 332.33 & 0 & 0 & 1.9177 & 0 \\
+nominal & P1 expected & 0.0016471 & 0.01124 & 332.44 & 0 & 0 & 5.0063 &
+0 \\
+nominal & P2 regret & 0.0014446 & 0.011249 & 332.37 & 0 & 0 & 5.0092 &
+0 \\
+nominal & P3 adaptive regret & 0.006065 & 0.014836 & 332.89 & 0 & 0 &
+5.061 & 0 \\
+nominal & P4 hybrid & 0.0064323 & 0.014847 & 332.91 & 0 & 0 & 6.7574 &
+0 \\
+nominal & P5 delayed & 0.0018754 & 0.012597 & 332.46 & 0 & 0 & 1.9256 &
+4 \\
+nominal & P5 event & 0.0018621 & 0.014873 & 332.45 & 0 & 0 & 1.9273 &
+2 \\
+nominal & P5 frequent & 0.0018621 & 0.014288 & 332.45 & 0 & 0 & 1.9205 &
+8 \\
+nominal & P5 initial & 0.0018621 & 0.015221 & 332.45 & 0 & 0 & 1.9188 &
+1 \\
+nominal & P5 noisy & 0.0079265 & 0.042936 & 332.98 & 0 & 0 & 1.9126 &
+4 \\
+nominal & P5 periodic & 0.0018621 & 0.015065 & 332.45 & 0 & 0 & 1.9141 &
+4 \\
+outside prior & B0 PI & 0.16836 & 0.24254 & 333.56 & 0 & 0 & 0.011088 &
+0 \\
+outside prior & B1 continuous & 0.3054 & 0.2526 & 332.33 & 0 & 0 &
+5.6969 & 0 \\
+outside prior & B1 ukf & 0.29077 & 0.25234 & 332.33 & 0 & 0 & 1.9137 &
+0 \\
+outside prior & B2 both & 0.086894 & 0.23862 & 336.25 & 0 & 0 & 1.9354 &
+0 \\
+outside prior & B2 estimator & 0.35094 & 0.23936 & 332.33 & 0 & 0 &
+1.9265 & 0 \\
+outside prior & B3 assumed inventory & 0.29908 & 0.22306 & 332.33 & 0 &
+0 & 1.9287 & 0 \\
+outside prior & B3 known inventory & 0.42095 & 0.18713 & 332.33 & 0 &
+0.016667 & 1.935 & 0 \\
+outside prior & B4 mhe & 0.26574 & 0.24633 & 332.33 & 0 & 0 & 1.9742 &
+0 \\
+outside prior & B5 true state & 0.43887 & 0 & 332.33 & 0 & 0 & 1.9088 &
+0 \\
+outside prior & P1 expected & 0.29077 & 0.25234 & 332.33 & 0 & 0 &
+5.0011 & 0 \\
+outside prior & P2 regret & 0.2806 & 0.25143 & 332.33 & 0 & 0 & 5.0472 &
+0 \\
+outside prior & P3 adaptive regret & 0.086411 & 0.23866 & 336.17 & 0 & 0
+& 5.0162 & 0 \\
+outside prior & P4 hybrid & 0.087971 & 0.23863 & 336.24 & 0 & 0 & 6.3957
+& 0 \\
+outside prior & P5 delayed & 0.4036 & 0.21264 & 332.33 & 0 & 0 & 1.9226
+& 4 \\
+outside prior & P5 event & 0.39926 & 0.13483 & 332.33 & 0 & 0 & 1.9519 &
+2.75 \\
+outside prior & P5 frequent & 0.39555 & 0.12249 & 332.33 & 0 & 0 &
+1.9163 & 8 \\
+outside prior & P5 initial & 0.39926 & 0.13602 & 332.33 & 0 & 0 & 1.9224
+& 1 \\
+outside prior & P5 noisy & 0.38486 & 0.14055 & 332.33 & 0 & 0 & 1.9275 &
+4 \\
+outside prior & P5 periodic & 0.39402 & 0.12843 & 332.33 & 0 & 0 &
+1.9112 & 4 \\
+properties & B0 PI & 0.062622 & 0.037479 & 332.37 & 0 & 0 & 0.010864 &
+0 \\
+properties & B1 continuous & 0.16316 & 0.02852 & 332.33 & 0 & 0 & 5.7274
+& 0 \\
+properties & B1 ukf & 0.16004 & 0.029004 & 332.33 & 0 & 0 & 1.9301 &
+0 \\
+properties & B2 both & 0.059327 & 0.11611 & 334.88 & 0 & 0 & 1.9112 &
+0 \\
+properties & B2 estimator & 0.23345 & 0.1103 & 332.33 & 0 & 0 & 1.929 &
+0 \\
+properties & B3 assumed inventory & 0.1653 & 0.027922 & 332.33 & 0 & 0 &
+1.9289 & 0 \\
+properties & B3 known inventory & 0.1653 & 0.027922 & 332.33 & 0 & 0 &
+1.9371 & 0 \\
+properties & B4 mhe & 0.13801 & 0.021633 & 332.33 & 0 & 0 & 1.9963 &
+0 \\
+properties & B5 true state & 0.098074 & 0 & 332.33 & 0 & 0 & 1.9282 &
+0 \\
+properties & P1 expected & 0.16004 & 0.029004 & 332.33 & 0 & 0 & 5.0264
+& 0 \\
+properties & P2 regret & 0.1636 & 0.029499 & 332.33 & 0 & 0 & 5.0197 &
+0 \\
+properties & P3 adaptive regret & 0.05938 & 0.11559 & 334.89 & 0 & 0 &
+4.9843 & 0 \\
+properties & P4 hybrid & 0.059247 & 0.11624 & 334.89 & 0 & 0 & 6.5861 &
+0 \\
+properties & P5 delayed & 0.16186 & 0.02469 & 332.33 & 0 & 0 & 1.9301 &
+4 \\
+properties & P5 event & 0.15953 & 0.026844 & 332.33 & 0 & 0 & 1.9478 &
+2.1 \\
+properties & P5 frequent & 0.15961 & 0.026353 & 332.33 & 0 & 0 & 1.9265
+& 8 \\
+properties & P5 initial & 0.156 & 0.027853 & 332.33 & 0 & 0 & 1.9359 &
+1 \\
+properties & P5 noisy & 0.15497 & 0.049409 & 332.37 & 0 & 0 & 1.9237 &
+4 \\
+properties & P5 periodic & 0.15573 & 0.028028 & 332.33 & 0 & 0 & 1.9435
+& 4 \\
+saturation & B0 PI & 0.0066351 & 0.011301 & 332.93 & 0 & 0 & 0.011305 &
+0 \\
+saturation & B1 continuous & 0.0032395 & 0.011244 & 332.61 & 0 & 0 &
+4.7753 & 0 \\
+saturation & B1 ukf & 0.0016471 & 0.01124 & 332.44 & 0 & 0 & 1.7314 &
+0 \\
+saturation & B2 both & 0.0084796 & 0.014867 & 332.96 & 0 & 0 & 1.7539 &
+0 \\
+saturation & B2 estimator & 0.0014342 & 0.014862 & 332.44 & 0 & 0 &
+1.7346 & 0 \\
+saturation & B3 assumed inventory & 0.0023341 & 0.011423 & 332.58 & 0 &
+0 & 1.753 & 0 \\
+saturation & B3 known inventory & 0.0023341 & 0.011423 & 332.58 & 0 & 0
+& 1.7386 & 0 \\
+saturation & B4 mhe & 0.0016341 & 0.012091 & 332.43 & 0 & 0 & 1.7843 &
+0 \\
+saturation & B5 true state & 0 & 0 & 332.33 & 0 & 0 & 1.7351 & 0 \\
+saturation & P1 expected & 0.0016471 & 0.01124 & 332.44 & 0 & 0 & 4.4495
+& 0 \\
+saturation & P2 regret & 0.0014446 & 0.011249 & 332.37 & 0 & 0 & 4.4191
+& 0 \\
+saturation & P3 adaptive regret & 0.0064252 & 0.014832 & 332.92 & 0 & 0
+& 4.5354 & 0 \\
+saturation & P4 hybrid & 0.0067396 & 0.014836 & 332.92 & 0 & 0 & 6.0592
+& 0 \\
+saturation & P5 delayed & 0.0018754 & 0.012597 & 332.46 & 0 & 0 & 1.7321
+& 4 \\
+saturation & P5 event & 0.0018621 & 0.014873 & 332.45 & 0 & 0 & 1.7648 &
+2 \\
+saturation & P5 frequent & 0.0018621 & 0.014288 & 332.45 & 0 & 0 &
+1.7525 & 8 \\
+saturation & P5 initial & 0.0018621 & 0.015221 & 332.45 & 0 & 0 & 1.7249
+& 1 \\
+saturation & P5 noisy & 0.0091172 & 0.042937 & 333.06 & 0 & 0 & 1.7299 &
+4 \\
+saturation & P5 periodic & 0.0018621 & 0.015065 & 332.45 & 0 & 0 &
+1.7363 & 4 \\
+servo & B0 PI & 0.04255 & 0.011002 & 336.18 & 0 & 0 & 0.011136 & 0 \\
+servo & B1 continuous & 0.048797 & 0.010804 & 335.88 & 0 & 0 & 5.4046 &
+0 \\
+servo & B1 ukf & 0.052975 & 0.010779 & 335.93 & 0 & 0 & 1.9322 & 0 \\
+servo & B2 both & 0.053552 & 0.014356 & 335.96 & 0 & 0 & 1.9601 & 0 \\
+servo & B2 estimator & 0.052413 & 0.014344 & 335.92 & 0 & 0 & 1.9263 &
+0 \\
+servo & B3 assumed inventory & 0.053005 & 0.011009 & 335.91 & 0 & 0 &
+1.9374 & 0 \\
+servo & B3 known inventory & 0.053005 & 0.011009 & 335.91 & 0 & 0 &
+1.9433 & 0 \\
+servo & B4 mhe & 0.05283 & 0.011523 & 335.93 & 0 & 0 & 1.9762 & 0 \\
+servo & B5 true state & 0.052263 & 0 & 335.93 & 0 & 0 & 1.9264 & 0 \\
+servo & P1 expected & 0.052975 & 0.010779 & 335.93 & 0 & 0 & 5.043 &
+0 \\
+servo & P2 regret & 0.053178 & 0.010787 & 335.94 & 0 & 0 & 5.0253 & 0 \\
+servo & P3 adaptive regret & 0.052755 & 0.014329 & 335.94 & 0 & 0 &
+5.1425 & 0 \\
+servo & P4 hybrid & 0.052382 & 0.014329 & 335.94 & 0 & 0 & 6.8483 & 0 \\
+servo & P5 delayed & 0.053079 & 0.012217 & 335.93 & 0 & 0 & 1.9334 &
+4 \\
+servo & P5 event & 0.053164 & 0.01452 & 335.93 & 0 & 0 & 1.9539 &
+2.15 \\
+servo & P5 frequent & 0.052768 & 0.013963 & 335.93 & 0 & 0 & 1.9342 &
+8 \\
+servo & P5 initial & 0.053164 & 0.014861 & 335.93 & 0 & 0 & 1.93 & 1 \\
+servo & P5 noisy & 0.055595 & 0.042776 & 335.92 & 0 & 0 & 1.9257 & 4 \\
+servo & P5 periodic & 0.053164 & 0.014746 & 335.93 & 0 & 0 & 1.9279 &
+4 \\
+unreachable & B0 PI & 0.50345 & 0.012917 & 362.54 & 13.148 & 0 &
+0.010953 & 0 \\
+unreachable & B1 continuous & 0.65883 & 0.007955 & 344.31 & 0.0037276 &
+0.21417 & 23.584 & 0 \\
+unreachable & B1 ukf & 0.66176 & 0.0080068 & 344.11 & 2.7001e-05 & 0 &
+1.7908 & 0 \\
+unreachable & B2 both & 0.6638 & 0.010598 & 344.14 & 0.00015598 & 0 &
+1.8204 & 0 \\
+unreachable & B2 estimator & 0.66135 & 0.010663 & 344.1 & 9.6588e-05 & 0
+& 1.7828 & 0 \\
+unreachable & B3 assumed inventory & 0.66147 & 0.0086399 & 344.14 &
+0.00025534 & 0 & 1.7792 & 0 \\
+unreachable & B3 known inventory & 0.66147 & 0.0086399 & 344.14 &
+0.00025534 & 0 & 1.7834 & 0 \\
+unreachable & B4 mhe & 0.66171 & 0.0085724 & 344.02 & 0 & 0 & 1.8196 &
+0 \\
+unreachable & B5 true state & 0.6621 & 0 & 343.91 & 0 & 0 & 1.771 & 0 \\
+unreachable & P1 expected & 0.66176 & 0.0080068 & 344.11 & 2.7001e-05 &
+0 & 4.6204 & 0 \\
+unreachable & P2 regret & 0.66176 & 0.0080068 & 344.11 & 2.7001e-05 & 0
+& 4.5877 & 0 \\
+unreachable & P3 adaptive regret & 0.6638 & 0.010598 & 344.14 &
+0.00015598 & 0 & 4.6753 & 0 \\
+unreachable & P4 hybrid & 0.6638 & 0.010598 & 344.14 & 0.00015598 & 0 &
+6.507 & 0 \\
+unreachable & P5 delayed & 0.66178 & 0.014746 & 344.11 & 2.0583e-05 & 0
+& 1.7833 & 4 \\
+unreachable & P5 event & 0.66179 & 0.012642 & 344.11 & 0 & 0 & 1.8096 &
+2 \\
+unreachable & P5 frequent & 0.6618 & 0.012081 & 344.11 & 6.4189e-06 & 0
+& 1.7721 & 8 \\
+unreachable & P5 initial & 0.66176 & 0.01284 & 344.11 & 2.7001e-05 & 0 &
+1.7771 & 1 \\
+unreachable & P5 noisy & 0.66171 & 0.042325 & 344.12 & 5.9959e-05 & 0 &
+1.7749 & 4 \\
+unreachable & P5 periodic & 0.66172 & 0.012806 & 344.12 & 2.7001e-05 & 0
+& 1.7809 & 4 \\
 \end{longtable}
+
+\endgroup
 
 \hypertarget{refs}{}
 \begin{CSLReferences}{1}{0}

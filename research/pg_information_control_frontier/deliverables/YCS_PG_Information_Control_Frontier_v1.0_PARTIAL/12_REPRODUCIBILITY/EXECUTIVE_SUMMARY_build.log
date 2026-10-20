@@ -1,6 +1,6 @@
-COMMAND: pandoc EXECUTIVE_SUMMARY.md --standalone --citeproc --bibliography=references.bib --number-sections -o EXECUTIVE_SUMMARY.tex
+COMMAND: pandoc EXECUTIVE_SUMMARY.md --standalone --citeproc --bibliography=references.bib --number-sections --lua-filter=compact_tables.lua -o EXECUTIVE_SUMMARY.tex
 
-COMMAND: pandoc EXECUTIVE_SUMMARY.md --standalone --citeproc --bibliography=references.bib --number-sections -o EXECUTIVE_SUMMARY.docx
+COMMAND: pandoc EXECUTIVE_SUMMARY.md --standalone --citeproc --bibliography=references.bib --number-sections --lua-filter=compact_tables.lua -o EXECUTIVE_SUMMARY.docx
 
 COMMAND: pdflatex -interaction=nonstopmode -halt-on-error EXECUTIVE_SUMMARY.tex
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
@@ -96,33 +96,18 @@ No file EXECUTIVE_SUMMARY.aux.
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg) [1{/var/lib/texm
 f/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec
 .enc}]
-Overfull \hbox (45.20319pt too wide) in paragraph at lines 129--130
-[]\T1/lmr/m/n/10.95 (-20) percent_improvement  
-
-Overfull \hbox (35.63419pt too wide) in paragraph at lines 131--132
-[]\T1/lmr/m/n/10.95 (-20) mean_improvement  
-
-Overfull \hbox (24.24568pt too wide) in paragraph at lines 137--138
-[]\T1/lmr/m/n/10.95 (-20) p_holm_primary  
-
-Overfull \hbox (0.11757pt too wide) in alignment at lines 122--140
+Overfull \hbox (0.11757pt too wide) in alignment at lines 124--142
  [] [] [] [] [] [] [] 
 
-Overfull \hbox (0.11757pt too wide) in alignment at lines 140--142
+Overfull \hbox (0.11757pt too wide) in alignment at lines 142--144
  [] [] [] [] [] [] [] 
 
-Overfull \hbox (38.20871pt too wide) in paragraph at lines 145--145
-[]|\T1/lmr/m/n/10.95 (-20) P3_adaptive_regret|  
-
-Overfull \hbox (7.24312pt too wide) in paragraph at lines 147--147
-[]|\T1/lmr/m/n/10.95 (-20) B2_estimator|  
-
-Overfull \hbox (0.11757pt too wide) in alignment at lines 142--149
+Overfull \hbox (0.11757pt too wide) in alignment at lines 144--151
  [] [] [] [] [] [] [] 
 [2]
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 2 on input line 182.
+(longtable)                in table 2 on input line 188.
 
 [3]
 
@@ -136,8 +121,8 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 (see the transcript file for additional information)</usr/share/texmf/fonts/typ
 e1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr
 /share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmr17.pfb>
-Output written on EXECUTIVE_SUMMARY.pdf (4 pages, 120254 bytes).
+ic/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb>
+Output written on EXECUTIVE_SUMMARY.pdf (4 pages, 150001 bytes).
 Transcript written on EXECUTIVE_SUMMARY.log.
 
 COMMAND: pdflatex -interaction=nonstopmode -halt-on-error EXECUTIVE_SUMMARY.tex
@@ -234,33 +219,18 @@ For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg) [1{/var/lib/texm
 f/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec
 .enc}]
-Overfull \hbox (45.20319pt too wide) in paragraph at lines 129--130
-[]\T1/lmr/m/n/10.95 (-20) percent_improvement  
-
-Overfull \hbox (35.63419pt too wide) in paragraph at lines 131--132
-[]\T1/lmr/m/n/10.95 (-20) mean_improvement  
-
-Overfull \hbox (24.24568pt too wide) in paragraph at lines 137--138
-[]\T1/lmr/m/n/10.95 (-20) p_holm_primary  
-
-Overfull \hbox (0.11757pt too wide) in alignment at lines 122--140
+Overfull \hbox (0.11757pt too wide) in alignment at lines 124--142
  [] [] [] [] [] [] [] 
 
-Overfull \hbox (0.11757pt too wide) in alignment at lines 140--142
+Overfull \hbox (0.11757pt too wide) in alignment at lines 142--144
  [] [] [] [] [] [] [] 
 
-Overfull \hbox (38.20871pt too wide) in paragraph at lines 145--145
-[]|\T1/lmr/m/n/10.95 (-20) P3_adaptive_regret|  
-
-Overfull \hbox (7.24312pt too wide) in paragraph at lines 147--147
-[]|\T1/lmr/m/n/10.95 (-20) B2_estimator|  
-
-Overfull \hbox (0.11757pt too wide) in alignment at lines 142--149
+Overfull \hbox (0.11757pt too wide) in alignment at lines 144--151
  [] [] [] [] [] [] [] 
 [2] [3] [4] (./EXECUTIVE_SUMMARY.aux) )
 (see the transcript file for additional information)</usr/share/texmf/fonts/typ
 e1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr
 /share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmr17.pfb>
-Output written on EXECUTIVE_SUMMARY.pdf (4 pages, 120254 bytes).
+ic/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb>
+Output written on EXECUTIVE_SUMMARY.pdf (4 pages, 150007 bytes).
 Transcript written on EXECUTIVE_SUMMARY.log.

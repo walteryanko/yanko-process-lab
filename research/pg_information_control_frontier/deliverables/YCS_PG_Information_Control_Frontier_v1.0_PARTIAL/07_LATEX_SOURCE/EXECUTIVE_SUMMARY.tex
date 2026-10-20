@@ -112,6 +112,8 @@ Melhoria positiva favorece o candidato. As diferenças são pareadas por
 semente e condicionadas à suíte finita, com modelos e limites
 compartilhados. Não equivalem a uma conclusão industrial.
 
+\begingroup\footnotesize
+
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
@@ -122,31 +124,33 @@ compartilhados. Não equivalem a uma conclusão industrial.
   >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
-candidate
+Candidate
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-baseline
+Baseline
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-percent\_improvement
+Gain (\%)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-mean\_improvement
+IAE diff.
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-ci95\_low
+CI lower
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-ci95\_high
+CI upper
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-p\_holm\_primary
+Holm p
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-P2\_regret & B1\_ukf & 0.634593 & 0.000850102 & -0.00100823 & 0.00283537
-& 0.418569 \\
-P3\_adaptive\_regret & B2\_both & 0.657212 & 0.000578973 & -0.000207131
-& 0.00145957 & 0.418569 \\
-B2\_both & B2\_estimator & 39.912 & 0.0585153 & 0.0565261 & 0.0604609 &
-3.11056e-22 \\
+P2 regret & B1 ukf & 0.63459 & 0.0008501 & -0.0010082 & 0.0028354 &
+0.41857 \\
+P3 adaptive regret & B2 both & 0.65721 & 0.00057897 & -0.00020713 &
+0.0014596 & 0.41857 \\
+B2 both & B2 estimator & 39.912 & 0.058515 & 0.056526 & 0.060461 &
+3.1106e-22 \\
 \end{longtable}
+
+\endgroup
 
 Os ganhos adicionais de P2 e P3 foram 0,63\% e 0,66\%, com IC incluindo
 zero, sem confirmação de benefício. O ganho de 39,91\% vem de
@@ -166,20 +170,24 @@ suficiente de publicação.
 \section{Contraexemplos e perguntas para
 discussão}\label{contraexemplos-e-perguntas-para-discussuxe3o}}
 
+\begingroup\footnotesize
+
 \begin{longtable}[]{@{}lllll@{}}
 \toprule\noalign{}
-scenario & candidate & percent\_improvement & ci95\_low & ci95\_high \\
+scenario & Candidate & Gain (\%) & CI lower & CI upper \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-correlated\_noise & B0\_PI & -592.588 & -0.0120465 & -0.00900468 \\
-saturation & P5\_noisy & -453.515 & -0.0115612 & -0.00356675 \\
-saturation & B2\_both & -414.805 & -0.00994615 & -0.00387001 \\
-correlated\_noise & B2\_both & -398.963 & -0.0101161 & -0.00404126 \\
-dropout & P5\_noisy & -381.224 & -0.00936466 & -0.0033412 \\
-nominal & P5\_noisy & -381.224 & -0.00933152 & -0.00325644 \\
+correlated noise & B0 PI & -592.59 & -0.012046 & -0.0090047 \\
+saturation & P5 noisy & -453.52 & -0.011561 & -0.0035668 \\
+saturation & B2 both & -414.81 & -0.0099462 & -0.00387 \\
+correlated noise & B2 both & -398.96 & -0.010116 & -0.0040413 \\
+dropout & P5 noisy & -381.22 & -0.0093647 & -0.0033412 \\
+nominal & P5 noisy & -381.22 & -0.0093315 & -0.0032564 \\
 \end{longtable}
+
+\endgroup
 
 Perguntas centrais para colaboradores: quais correlações experimentais
 Cp(T) devem substituir as hipóteses? Qual é a informação inicial

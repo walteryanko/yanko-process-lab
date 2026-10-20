@@ -20,11 +20,11 @@ A contribuição matemática mais útil é separar as dependências físicas nec
 
 Melhoria positiva favorece o candidato. As diferenças são pareadas por semente e condicionadas à suíte finita, com modelos e limites compartilhados. Não equivalem a uma conclusão industrial.
 
-| candidate | baseline | percent_improvement | mean_improvement | ci95_low | ci95_high | p_holm_primary |
+| Candidate | Baseline | Gain (%) | IAE diff. | CI lower | CI upper | Holm p |
 | --- | --- | --- | --- | --- | --- | --- |
-| P2_regret | B1_ukf | 0.634593 | 0.000850102 | -0.00100823 | 0.00283537 | 0.418569 |
-| P3_adaptive_regret | B2_both | 0.657212 | 0.000578973 | -0.000207131 | 0.00145957 | 0.418569 |
-| B2_both | B2_estimator | 39.912 | 0.0585153 | 0.0565261 | 0.0604609 | 3.11056e-22 |
+| P2 regret | B1 ukf | 0.63459 | 0.0008501 | -0.0010082 | 0.0028354 | 0.41857 |
+| P3 adaptive regret | B2 both | 0.65721 | 0.00057897 | -0.00020713 | 0.0014596 | 0.41857 |
+| B2 both | B2 estimator | 39.912 | 0.058515 | 0.056526 | 0.060461 | 3.1106e-22 |
 
 
 Os ganhos adicionais de P2 e P3 foram 0,63% e 0,66%, com IC incluindo zero, sem confirmação de benefício. O ganho de 39,91% vem de compartilhar a correção paramétrica com o preditor. O PI teve IAE favorável, mas excedeu amplamente a temperatura limite; informação química ajudou no inventário incerto, sem ganho uniforme sob mismatch.
@@ -35,14 +35,14 @@ O confronto contínuo utiliza a mesma parametrização curta de dois blocos. Ain
 
 # Contraexemplos e perguntas para discussão
 
-| scenario | candidate | percent_improvement | ci95_low | ci95_high |
+| scenario | Candidate | Gain (%) | CI lower | CI upper |
 | --- | --- | --- | --- | --- |
-| correlated_noise | B0_PI | -592.588 | -0.0120465 | -0.00900468 |
-| saturation | P5_noisy | -453.515 | -0.0115612 | -0.00356675 |
-| saturation | B2_both | -414.805 | -0.00994615 | -0.00387001 |
-| correlated_noise | B2_both | -398.963 | -0.0101161 | -0.00404126 |
-| dropout | P5_noisy | -381.224 | -0.00936466 | -0.0033412 |
-| nominal | P5_noisy | -381.224 | -0.00933152 | -0.00325644 |
+| correlated noise | B0 PI | -592.59 | -0.012046 | -0.0090047 |
+| saturation | P5 noisy | -453.52 | -0.011561 | -0.0035668 |
+| saturation | B2 both | -414.81 | -0.0099462 | -0.00387 |
+| correlated noise | B2 both | -398.96 | -0.010116 | -0.0040413 |
+| dropout | P5 noisy | -381.22 | -0.0093647 | -0.0033412 |
+| nominal | P5 noisy | -381.22 | -0.0093315 | -0.0032564 |
 
 
 Perguntas centrais para colaboradores: quais correlações experimentais Cp(T) devem substituir as hipóteses? Qual é a informação inicial realmente disponível sobre os inventários? O ganho de cada contraste persiste quando horizonte, solver e orçamento são equiparados ao baseline histórico? Qual sensor adicional pode ser instalado e qual seu atraso real?
