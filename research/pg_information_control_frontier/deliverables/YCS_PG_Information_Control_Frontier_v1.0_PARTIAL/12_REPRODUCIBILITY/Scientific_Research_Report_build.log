@@ -303,7 +303,7 @@ public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Scientific_Research_Report.pdf (39 pages, 2575737 bytes).
+Output written on Scientific_Research_Report.pdf (39 pages, 2718277 bytes).
 Transcript written on Scientific_Research_Report.log.
 
 COMMAND: pdflatex -interaction=nonstopmode -halt-on-error Scientific_Research_Report.tex
@@ -573,5 +573,5 @@ public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Scientific_Research_Report.pdf (39 pages, 2575738 bytes).
+Output written on Scientific_Research_Report.pdf (39 pages, 2718281 bytes).
 Transcript written on Scientific_Research_Report.log.
