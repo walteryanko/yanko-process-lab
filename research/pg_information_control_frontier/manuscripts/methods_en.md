@@ -28,6 +28,8 @@ The executable enthalpy is -83736 kJ/kmol; the dissertation table instead lists 
 
 A related teaching case uses excess-water first-order kinetics and models the liquid as nonideal [@chan2004]. This supports retaining the historical kinetic approximation as a benchmark, while showing why ideal-mixture calorimetry alone cannot establish physical equivalence in a real reactor.
 
+The constant-volume benchmark computes volumetric outflow from feed densities but does not impose a composition-dependent equation of state or partial-molar-volume closure on each candidate inventory. Positivity therefore establishes model admissibility, not full physical admissibility of a liquid mixture. Additional exact composition/volume constraints would intersect the invisible subspace and can reduce it; they require independent physical data. Reaction volume change and nonideal mixture enthalpy remain outside the reconciliations tested here.
+
 ## Explicit physical alternatives
 
 M1H adds Kirchhoff consistency: $\Delta H_r(T)=\Delta H_r(T_r)+\int_{T_r}^T(c_{p,C}-c_{p,A}-c_{p,B})\,d\theta$, with the historical enthalpy assumed to refer to nominal $T_r=332.333618020$ K. This reference is not independently known. M1J also uses $Q=G(T_t-T)$ and the existing jacket storage balance. The conductance $G=m_{w0}c_{p,B}[\exp(UA/(m_{w0}c_{p,B}))-1]$ matches nominal stationary cooling, rather than asserting that coil UA and mixed-jacket conductance are identical.

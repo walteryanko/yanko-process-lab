@@ -1,6 +1,6 @@
 # Escopo matemático e demonstrações
 
-Os resultados seguintes descrevem a classe de modelos explicitada, sem estabelecer validação de uma instalação industrial. O tempo é medido em horas. Os mundos comparados compartilham alimentações conhecidas, parâmetros, referência, restrições de atuação e temperaturas iniciais medidas. As condições químicas iniciais pertencem a um conjunto físico aberto. Supõem-se existência e unicidade das soluções no horizonte considerado. As entradas podem depender causalmente das temperaturas medidas. As afirmações de informação exata usam medições sem ruído ou acoplamento com a mesma realização aditiva de ruído.
+Os resultados seguintes descrevem a classe de modelos explicitada, sem estabelecer validação de uma instalação industrial. O tempo é medido em horas. Os mundos comparados compartilham alimentações conhecidas, parâmetros, referência, restrições de atuação e temperaturas iniciais medidas. As condições químicas iniciais pertencem ao domínio positivo aberto admitido pelo benchmark de seis estados, sem impor uma equação de estado validada da mistura. Restrições exatas adicionais de admissibilidade devem ser intersectadas com a classe construída e podem reduzir sua dimensão. Supõem-se existência e unicidade das soluções no horizonte considerado. As entradas podem depender causalmente das temperaturas medidas. As afirmações de informação exata usam medições sem ruído ou acoplamento com a mesma realização aditiva de ruído.
 
 ## Proposição 1: classe de equivalência calorimétrica
 

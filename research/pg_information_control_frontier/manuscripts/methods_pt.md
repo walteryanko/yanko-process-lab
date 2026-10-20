@@ -28,6 +28,8 @@ A entalpia executável é -83736 kJ/kmol, enquanto a tabela da dissertação inf
 
 Um caso didático relacionado utiliza cinética de primeira ordem com água em excesso e líquido não ideal [@chan2004]. Isso sustenta a aproximação cinética como benchmark, mas impede tratar apenas a calorimetria ideal como validação da equivalência física de inventários reais.
 
+O benchmark de volume constante calcula a vazão volumétrica de saída pelas densidades das alimentações, mas não impõe equação de estado dependente da composição nem fechamento por volumes molares parciais a cada inventário candidato. Positividade representa admissibilidade no modelo, não admissibilidade física completa da mistura líquida. Restrições exatas adicionais de composição e volume intersectariam o subespaço invisível e poderiam reduzi-lo. Variação de volume pela reação e entalpia não ideal permanecem fora das reconciliações testadas.
+
 ## Alternativas físicas explícitas
 
 M1H introduz consistência de Kirchhoff:

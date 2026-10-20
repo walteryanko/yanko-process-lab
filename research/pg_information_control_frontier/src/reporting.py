@@ -106,26 +106,70 @@ def main():
     if not testok:raise RuntimeError('Latest scientific tests did not pass')
     enabs=f"""# Abstract
 
-This computational study examines information and decision limits in a recovered six-state propylene-glycol reactor model. An exact two-dimensional chemical equivalence class exists with constant species heat capacities and first-order kinetics. Restoring reciprocal jacket feedback does not eliminate it. A functional heat-capacity span characterizes a sufficient surviving ambiguity, while temperature-dependent property examples test practical separability. The executed main suite contains {execution['episodes']} trajectories, with {execution['confirmation']} independent-seed confirmation trajectories and {execution['grid_sensitivity']} grid-sensitivity checks. At nominal dilution, a two-world initial product separation of 0.8 kmol/m3 yields a worst-world 0.9-hour tracking lower bound of {snapshots['worst_IAE_bound_delta08']:.6f} kmol h/m3. Finite-grid decision conflict is positive in {snapshots['positive_grid_conflicts']} of {len(dec)} examined cases. Controller outcomes, adverse regimes and chemical-sampling comparisons are reported with paired uncertainty; they do not establish superiority over all continuous NMPC designs. The physical alternatives remain uncalibrated and historical ICAC scalar results were not independently replayed. Accordingly this is a partial research manuscript, not a completed submission-ready validation.
+This computational study examines information and decision limits in a recovered six-state propylene-glycol reactor model. An exact two-dimensional chemical equivalence class exists with constant species heat capacities and first-order kinetics. Restoring reciprocal jacket feedback does not eliminate it. A functional heat-capacity span characterizes a sufficient surviving ambiguity, while temperature-dependent property examples test practical separability. The executed main suite contains {execution['episodes']} trajectories, with {execution['confirmation']} independent-seed confirmation trajectories and {execution['grid_sensitivity']} grid-sensitivity checks. At nominal dilution, a two-world initial product separation of 0.8 kmol/m3 yields a worst-world 0.9-hour tracking lower bound of {snapshots['worst_IAE_bound_delta08']:.6f} kmol h/m3. Finite-grid decision conflict is positive in {snapshots['positive_grid_conflicts']} of {len(dec)} examined cases. Incremental ambiguity-control mean gains were 0.63% and 0.66%, with paired confidence intervals including zero; predictor sharing reduced IAE by 39.91% versus estimator-only adaptation. These outcomes do not establish superiority over all continuous NMPC designs. The physical alternatives remain uncalibrated and historical ICAC scalar results were not independently replayed. Accordingly this is a partial research manuscript, not a completed submission-ready validation.
 """
     ptabs=f"""# Resumo
 
-Este estudo computacional investiga limites de informação e decisão em um modelo recuperado de reator de propilenoglicol de seis estados. Existe uma classe química exatamente indistinguível de dimensão dois sob capacidades caloríficas constantes e cinética de primeira ordem. Acrescentar realimentação térmica da camisa não a elimina. O posto funcional das capacidades caloríficas caracteriza uma ambiguidade suficiente remanescente; exemplos com propriedades dependentes de temperatura examinam a separabilidade prática. A suíte principal executou {execution['episodes']} trajetórias, com {execution['confirmation']} trajetórias de confirmação em sementes independentes e {execution['grid_sensitivity']} verificações de grade. Na diluição nominal, separação inicial de produto de 0,8 kmol/m3 implica limite inferior de {snapshots['worst_IAE_bound_delta08']:.6f} kmol h/m3 para o pior IAE entre dois mundos em 0,9 h. Há conflito decisório positivo em {snapshots['positive_grid_conflicts']} dos {len(dec)} casos finitos examinados. São apresentados contrastes pareados, regimes adversos e amostragem química, sem demonstrar superioridade sobre todo NMPC contínuo. As alternativas físicas não foram calibradas, e os números históricos ICAC não foram reproduzidos independentemente. Trata-se de manuscrito parcial de pesquisa, ainda não validado para submissão.
+Este estudo computacional investiga limites de informação e decisão em um modelo recuperado de reator de propilenoglicol de seis estados. Existe uma classe química exatamente indistinguível de dimensão dois sob capacidades caloríficas constantes e cinética de primeira ordem. Acrescentar realimentação térmica da camisa não a elimina. O posto funcional das capacidades caloríficas caracteriza uma ambiguidade suficiente remanescente; exemplos com propriedades dependentes de temperatura examinam a separabilidade prática. A suíte principal executou {execution['episodes']} trajetórias, com {execution['confirmation']} trajetórias de confirmação em sementes independentes e {execution['grid_sensitivity']} verificações de grade. Na diluição nominal, separação inicial de produto de 0,8 kmol/m3 implica limite inferior de {snapshots['worst_IAE_bound_delta08']:.6f} kmol h/m3 para o pior IAE entre dois mundos em 0,9 h. Há conflito decisório positivo em {snapshots['positive_grid_conflicts']} dos {len(dec)} casos finitos examinados. Os ganhos médios adicionais por ambiguidade foram 0,63% e 0,66%, com intervalos pareados incluindo zero; compartilhar a correção com o preditor reduziu IAE em 39,91% frente à correção somente do estimador. Não se demonstrou superioridade sobre todo NMPC contínuo. As alternativas físicas não foram calibradas, e os números históricos ICAC não foram reproduzidos independentemente. Trata-se de manuscrito parcial de pesquisa, ainda não validado para submissão.
 """
     paramsEN='\n# Parameters and initial condition\n\n'+table(parms)+'\nNominal equilibrium: '+', '.join(f'{v:.9f}' for v in x0)+'.\n'
     paramsPT='\n# Parâmetros e condição inicial\n\n'+table(parms)+'\nEquilíbrio nominal: '+', '.join(f'{v:.9f}' for v in x0)+'.\n'
     nrEN='\n# Numerical results\n\nCompleted execution and paired comparisons are shown below. Positive improvement favors the first method. The finite-suite CI resamples 20 paired seed clusters and is conditional on the chosen scenarios.\n\n'+table(primary)+'\n## Model and information experiments\n\n'+table(twins)+'\n## Input-dependent local rank and surviving affine-property twins\n\n'+table(lie)+'\n\n'+table(pd.DataFrame([supp])[['constant_input_max_thermal_difference','excited_uncompensated_max_thermal_difference','affine_kernel_max_thermal_difference','affine_functional_rank','quadratic_functional_rank']])+'\n## Selected absolute metrics\n\n'+table(selected[['scenario','method','IAE','RMSE_CC','Tmax','fallback']])+'\n## Independent confirmation\n\n'+table(confirm[(confirm.scenario=='FINITE_SUITE')&(confirm.baseline.isin(['B1_ukf','B2_both','B2_estimator']))][['candidate','baseline','percent_improvement','ci95_low','ci95_high']].drop_duplicates().head(10))+'\n## Adverse outcomes retained\n\n'+table(adverse)
     nrPT='\n# Resultados numéricos\n\nAs comparações abaixo provêm da execução. Melhoria positiva favorece o primeiro método. O IC da suíte reamostra 20 sementes pareadas e é condicional aos cenários escolhidos.\n\n'+table(primary)+'\n## Experimentos físicos e informacionais\n\n'+table(twins)+'\n## Posto local dependente da entrada e gêmeos remanescentes com propriedades afins\n\n'+table(lie)+'\n\n'+table(pd.DataFrame([supp])[['constant_input_max_thermal_difference','excited_uncompensated_max_thermal_difference','affine_kernel_max_thermal_difference','affine_functional_rank','quadratic_functional_rank']])+'\n## Métricas absolutas selecionadas\n\n'+table(selected[['scenario','method','IAE','RMSE_CC','Tmax','fallback']])+'\n## Confirmação independente\n\n'+table(confirm[(confirm.scenario=='FINITE_SUITE')&(confirm.baseline.isin(['B1_ukf','B2_both','B2_estimator']))][['candidate','baseline','percent_improvement','ci95_low','ci95_high']].drop_duplicates().head(10))+'\n## Resultados adversos preservados\n\n'+table(adverse)
+    overall=data.groupby('method').mean(numeric_only=True)
+    p2=primary[primary.candidate=='P2_regret'].iloc[0]
+    p3=primary[primary.candidate=='P3_adaptive_regret'].iloc[0]
+    corr=primary[primary.candidate=='B2_both'].iloc[0]
+    inv=mean[mean.scenario=='inventory_plus'].set_index('method')
+    gain_sample=100*(inv.loc['B1_ukf','IAE']-inv.loc['P5_initial','IAE'])/inv.loc['B1_ukf','IAE']
+    maxpi=data[data.method=='B0_PI'].Tmax.max()
+    ccontinuous=100*overall.loc['B1_continuous','solver_failure']
+    interpretationEN=f"""
+## What the executed results do and do not establish
+
+The mean additional benefit of P2 is {p2.percent_improvement:.3f}% over B1; its paired absolute IAE difference is {p2.mean_improvement:.6f}, with 95% CI [{p2.ci95_low:.6f}, {p2.ci95_high:.6f}] kmol h/m3. P3 adds {p3.percent_improvement:.3f}% over the adapted predictor, CI [{p3.ci95_low:.6f}, {p3.ci95_high:.6f}] in absolute IAE units. Both intervals include zero. Independent confirmation also fails to establish an additional benefit. The exploratory 10% ambiguity-control target was not met.
+
+By contrast, sharing causal parameter estimates with the predictor reduced finite-suite mean IAE from {overall.loc['B2_estimator','IAE']:.6f} to {overall.loc['B2_both','IAE']:.6f}, a {corr.percent_improvement:.2f}% reduction. This is an attribution result for the declared models and finite suite, not a new universal controller result. Estimator-only adaptation itself worsened IAE relative to B1, despite a smaller mean RMSE.
+
+P1 and B1 have exactly equal IAE throughout the main suite, consistent with the expected-cost proposition. The denser nine-point grid gives adverse mean P2 differences in all three checked scenarios, with only three validation seeds; it does not rescue the positive claim.
+
+The true-state reference has zero estimation RMSE but mean IAE {overall.loc['B5_true_state','IAE']:.6f}, versus B1's {overall.loc['B1_ukf','IAE']:.6f}. It still uses the nominal predictor and finite-horizon quadratic objective, so it is not a certified lower bound on attainable IAE. This provides an explicit counterexample to treating lower estimation RMSE as a sufficient guarantee of better tracking.
+
+One initial chemical sample reduced inventory-plus mean IAE by {gain_sample:.2f}%. Four periodic samples produced the same mean IAE there, while reducing estimation RMSE slightly. Across the entire mismatched-model suite, the implemented chemical-sampling policies did not improve mean IAE. This is realized algorithm performance, not negative optimal value of free information: an optimally designed policy with additional optional information could always ignore it.
+
+The fixed PI achieved favorable average tracking at the cost of a maximum sampled temperature of {maxpi:.3f} K, exceeding the study limit by {maxpi-TLIMIT:.3f} K. Its raw IAE gain therefore fails the safety criterion. B1_continuous reported solver failures on {ccontinuous:.3f}% of decisions and used the declared fallback. Zero trajectory aborts does not mean zero optimizer failures or zero thermal exceedances. These adverse outcomes are retained.
+
+The data establish neither a uniform controller winner nor substantial incremental engineering gain from ambiguity handling. They support a model-specific information result, a useful predictor-correction ablation and falsification of several plausible but incorrect performance shortcuts.
+"""
+    interpretationPT=f"""
+## Interpretação dos resultados executados
+
+P2 apresentou ganho médio adicional de {p2.percent_improvement:.3f}% frente a B1; diferença absoluta pareada de IAE {p2.mean_improvement:.6f}, com IC95% [{p2.ci95_low:.6f}, {p2.ci95_high:.6f}] kmol h/m3. P3 acrescentou {p3.percent_improvement:.3f}% frente ao preditor adaptado, com IC95% [{p3.ci95_low:.6f}, {p3.ci95_high:.6f}] em unidades absolutas de IAE. Ambos incluem zero. A confirmação independente também não estabeleceu benefício adicional. A meta exploratória de 10% para controle por ambiguidade não foi atingida.
+
+Compartilhar as estimativas paramétricas causais com o preditor reduziu o IAE médio de {overall.loc['B2_estimator','IAE']:.6f} para {overall.loc['B2_both','IAE']:.6f}, redução de {corr.percent_improvement:.2f}%. É atribuição dentro desta suíte e destes modelos, não demonstração de controlador universal novo. A adaptação somente do estimador piorou o IAE frente a B1, apesar de RMSE médio menor.
+
+P1 e B1 possuem IAE exatamente igual em toda a suíte principal, consistente com a proposição de custo esperado. A grade de nove pontos produziu diferenças médias adversas para P2 nos três cenários de sensibilidade, com apenas três sementes; não resgatou a hipótese positiva.
+
+A referência informada do estado tem RMSE zero, porém IAE médio {overall.loc['B5_true_state','IAE']:.6f}, contra {overall.loc['B1_ukf','IAE']:.6f} de B1. Ela mantém preditor nominal e objetivo quadrático de horizonte finito; portanto não é limite inferior certificado do IAE atingível. É contraexemplo explícito à suposição de que RMSE menor garante tracking melhor.
+
+Uma amostra química inicial reduziu o IAE médio de inventory-plus em {gain_sample:.2f}%. Quatro amostras periódicas deram o mesmo IAE nesse cenário e RMSE discretamente menor. Na suíte completa com mismatch, as políticas de amostragem implementadas não melhoraram o IAE médio. Isso é desempenho realizado dos algoritmos, não valor ótimo negativo da informação gratuita: uma política otimamente projetada poderia ignorar informação opcional adicional.
+
+O PI fixo obteve tracking médio favorável, mas alcançou temperatura amostrada máxima de {maxpi:.3f} K, excedendo o limite do estudo em {maxpi-TLIMIT:.3f} K. Seu ganho bruto de IAE falha no critério de segurança. B1_continuous registrou falha do solver em {ccontinuous:.3f}% das decisões e acionou a contingência prevista. Ausência de aborto de trajetória não equivale à ausência de falhas do otimizador ou de violações térmicas.
+
+Os dados não estabelecem vencedor uniforme nem ganho substancial adicional de engenharia por representar ambiguidade. Sustentam um resultado informacional específico do modelo, a ablação útil da correção do preditor e a falsificação de interpretações simplistas de desempenho.
+"""
+    nrEN+=interpretationEN
+    nrPT+=interpretationPT
     questions=[
     ['Q1','Demonstrated mathematically','M0 has a two-dimensional chemical indistinguishability class; six free states are not fully observable.'],
     ['Q2','Partially supported','Constant-Cp ambiguity survives consistent reaction enthalpy and reciprocal jacket; physically calibrated M1 remains unavailable.'],
     ['Q3','Demonstrated mathematically','The sufficient invisible subspace is orthogonal to the functional span of CpB,CpC,CpM, with deltaCA=0.'],
     ['Q4','Demonstrated mathematically','Half separation is an instantaneous two-world lower bound; the integrated bound is distinct.'],
     ['Q5','Experimentally supported','Finite-class costs show when chemical ambiguity changes actions; no global continuous optimum certificate.'],
-    ['Q6','Inconclusive','Paired RMSE/IAE are reported; no universal monotone relation follows from lower RMSE.'],
-    ['Q7','Partially supported','B2_both versus B2_estimator isolates parameter sharing within this closed loop, including trajectory feedback.'],
-    ['Q8','Partially supported','Same-information finite-class contrasts and independent confirmation are available; strong historical continuous baseline missing.'],
-    ['Q9','Partially supported','Adverse regimes are retained in contrasts.csv and the failure table.'],
+    ['Q6','Experimentally supported','The claimed reliability is contradicted: zero-RMSE state reference and better-RMSE estimator-only adaptation can have worse IAE.'],
+    ['Q7','Experimentally supported','Predictor sharing reduced mean IAE by 39.91% versus estimator-only correction, with independent confirmation.'],
+    ['Q8','Inconclusive','Incremental ambiguity gains of 0.63%/0.66% have CIs including zero; the 10% target was not met.'],
+    ['Q9','Experimentally supported','Adverse heat-transfer/property regimes and denser-grid checks are retained; no uniform robust advantage.'],
     ['Q10','Partially supported','Only the declared CC sampling schedules/noises/delay approximation were tested; no globally optimal sensor frequency.'],
     ['Q11','Demonstrated mathematically','Exact indistinguishable-pair bounds apply independently of estimator architecture under stated information.'],
     ['Q12','Partially supported','Proof transfers to the same dilution/kinetic/calorimetric structure; numerical gains do not transfer automatically.']]
@@ -139,9 +183,9 @@ Este estudo computacional investiga limites de informação e decisão em um mod
         'O núcleo suficiente é ortogonal ao espaço funcional de CpB, CpC e CpM, com diferença em CA igual a zero.',
         'Metade da separação limita o erro instantâneo no problema de dois mundos; o limite integrado é distinto.',
         'Custos na classe finita determinam quando a ambiguidade altera ações; não há certificado de ótimo contínuo global.',
-        'RMSE e IAE pareados não estabelecem relação monotônica universal.',
-        'B2_both versus B2_estimator isola compartilhamento paramétrico neste laço, incluindo a realimentação das trajetórias.',
-        'Há contrastes com mesma informação e confirmação, mas falta o baseline histórico contínuo forte.',
+        'Contraexemplos executados contradizem a confiabilidade geral: menor RMSE, inclusive zero, pode acompanhar IAE maior.',
+        'O compartilhamento com o preditor reduziu IAE médio em 39,91% contra correção somente do estimador, com confirmação independente.',
+        'Ganhos adicionais de 0,63%/0,66% possuem IC incluindo zero; a meta exploratória de 10% não foi atingida.',
         'Regimes adversos são preservados nas tabelas e em contrasts.csv.',
         'Somente os esquemas declarados de medição de CC foram testados; frequência globalmente ótima não foi estabelecida.',
         'Os limites para gêmeos exatos independem da arquitetura do estimador sob as hipóteses declaradas.',
@@ -226,6 +270,8 @@ A contribuição matemática mais útil é separar as dependências físicas nec
 Melhoria positiva favorece o candidato. As diferenças são pareadas por semente e condicionadas à suíte finita, com modelos e limites compartilhados. Não equivalem a uma conclusão industrial.
 
 {table(primary)}
+
+Os ganhos adicionais de P2 e P3 foram 0,63% e 0,66%, com IC incluindo zero, sem confirmação de benefício. O ganho de 39,91% vem de compartilhar a correção paramétrica com o preditor. O PI teve IAE favorável, mas excedeu amplamente a temperatura limite; informação química ajudou no inventário incerto, sem ganho uniforme sob mismatch.
 
 O confronto contínuo utiliza a mesma parametrização curta de dois blocos. Ainda falta a comparação com o NMPC histórico de horizonte 57 e seis movimentos, além da sintonia competitiva do PI/MHE. A meta exploratória de 10% não deve ser lida como promessa ou como critério suficiente de publicação.
 

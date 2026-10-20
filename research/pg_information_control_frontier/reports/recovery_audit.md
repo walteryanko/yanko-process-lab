@@ -49,3 +49,7 @@ Exact historical C08/ICAC replay; all C01–C14 raw audits; validated physical-p
 full continuous 57-step/6-move strong baseline; fully tuned MHE; CPU timing on the target
 Ryzen; prospective Lie-derivative symbolic rank sweep; independent human theoretical review.
 These gaps prohibit labeling the entire requested v1.0 FINAL complete.
+
+## Mixture admissibility gap
+
+The benchmark uses constant volume and feed-based volumetric outflow without a separately validated mixture equation of state or partial-molar-volume constraint. Positive concentrations are admissible to M0 but do not alone certify real-liquid composition admissibility. Nonideal mixture enthalpy, reaction volume change and exact composition-volume constraints remain uncalibrated. Their influence must be assessed before making a physical impossibility claim.

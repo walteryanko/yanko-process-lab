@@ -1,6 +1,6 @@
 # Mathematical scope and proofs
 
-All statements below concern the stated model class, not an experimentally identified industrial reactor. Time is in hours. All worlds share the same known feed histories, parameters, reference, actuator constraints and initial measured temperatures. Initial chemical states range over an open physically admissible set. Solutions are unique up to the considered finite horizon and remain in that set. Inputs can depend causally on measured temperatures. Exact information statements use noiseless measurements or a coupling with the same additive sensor-noise realization.
+All statements below concern the stated model class, not an experimentally identified industrial reactor. Time is in hours. All worlds share the same known feed histories, parameters, reference, actuator constraints and initial measured temperatures. Initial chemical states range over an open positive domain admitted by the six-state benchmark. This does not impose a separately validated liquid equation of state. If additional exact admissibility constraints are imposed, the constructed equivalence class must be intersected with them; its quoted dimension need not survive. Solutions are unique up to the considered finite horizon and remain in that set. Inputs can depend causally on measured temperatures. Exact information statements use noiseless measurements or a coupling with the same additive sensor-noise realization.
 
 ## Proposition 1: a calorimetric equivalence class
 
