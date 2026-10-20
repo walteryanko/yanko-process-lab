@@ -70,6 +70,15 @@ Proof. Regrets are nonnegative. A common minimizer makes every regret zero. Conv
 
 If world-specific feasibility sets differ, evaluate individual optima in their declared sets and the robust decision in their intersection. An empty intersection is infeasibility, not finite regret. Numerical results explicitly mark absent common feasible candidates.
 
+
+## Proposition 3b: when representing ambiguity cannot change the expected-cost action
+
+For the exact PG twins with the same known feed history, coolant flow does not change the dilution rate. Let the possible products under any common plan be $C_C(t;u,\delta)=C_C(t;u,0)+d(t)\delta$, with $d(t)=e^{-\int_0^tD(s)ds}$ independent of the optimized coolant plan. Suppose the distribution over offsets has zero mean, all representatives remain physically admissible, the feasibility constraints depend only on their common thermal states and actions, and the tracking cost is a fixed weighted sum of squared product errors plus common thermal and actuation costs. Then
+$\mathbb E_\delta J_\delta(u)=J_0(u)+\mathbb E[\delta^2]\sum_j w_jd(t_j)^2,$
+where the final term is independent of $u$. Therefore nominal and expected-cost optimization have exactly the same minimizing action set. The result holds for both finite and continuous action classes under these assumptions.
+
+Proof. Expand each squared error and average. The cross term vanishes by the zero-mean offset, while all other costs and constraints are shared. This is a certainty-equivalence special case, not a universal robustness theorem. Nonquadratic losses, action-dependent dilution, asymmetrically truncated beliefs, state-dependent physical constraints or a changed information policy can invalidate it. In the implemented symmetric three-representative P1 experiment it predicts a null control benefit, apart from admissibility exclusions and numerical tie handling. This is a falsification of any claim that merely including those symmetric worlds must improve this quadratic NMPC.
+
 ## Proposition 4: a conditional quantitative regret bound
 
 If two costs are $\mu$-strongly convex on the same convex action set and have respective minimizers $u_1^*,u_2^*$, then

@@ -43,3 +43,7 @@ value of chemical sampling and chemical-reactor observability. Coverage of the e
    independent expert review.
 
 All bibliography entries are in manuscripts/references.bib. Preprints are explicitly labeled.
+
+## Additional physical source check
+
+Chan and Seider (University of Pennsylvania, July 2004) use excess-water first-order kinetics and nonideal-liquid thermodynamics in a related batch teaching case. These assumptions differ from a calibrated CSTR model. A 2026 microchannel-kinetics paper at https://www.mdpi.com/2227-9717/14/9/1491 was located, but the publisher returned HTTP 429; its parameters were not imported. This is an access limitation, not evidence against alternative kinetics.

@@ -4,6 +4,7 @@ import json
 import numpy as np,pandas as pd
 import mpmath as mp
 from model import *
+from control import candidates,costs
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'results'
 def main():
     mp.mp.dps=60
@@ -54,5 +55,20 @@ def main():
     assert summary['excited_uncompensated_max_thermal_difference']>1e-5
     (OUT/'supplementary_audit.json').write_text(json.dumps(summary,indent=2))
     np.savez_compressed(OUT/'trajectories/supplementary_twins.npz',constant_a=a0,constant_b=b0,excited_a=a1,excited_b=b1,affine_a=ca,affine_b=cb)
+    expected_rows=[]
+    plans=candidates(1.,3.,21);states=np.array([twin(x,-.4),x,twin(x,.4)])
+    for horizon in [4,14,57]:
+        for reference in [2.1,float(x[2]),2.5]:
+            J,VV=costs(states,plans,U0,np.zeros(3),reference,1.,horizon)
+            constant=J.mean(axis=0)-J[1]
+            expected_rows.append(dict(horizon=horizon,reference=reference,
+                offset_range=float(np.ptp(constant)),same_minimizer=bool(np.argmin(J.mean(axis=0))==np.argmin(J[1])),
+                max_constraint_difference=float(np.max(abs(VV-VV[1])))))
+    assert max(r['offset_range'] for r in expected_rows)<1e-10
+    assert all(r['same_minimizer'] for r in expected_rows)
+    pd.DataFrame(expected_rows).to_csv(OUT/'expected_cost_equivalence.csv',index=False)
+    summary['expected_cost_equivalence_cases']=len(expected_rows)
+    summary['expected_cost_equivalence_pass']=True
+    (OUT/'supplementary_audit.json').write_text(json.dumps(summary,indent=2))
     print(json.dumps(summary),flush=True)
 if __name__=='__main__':main()

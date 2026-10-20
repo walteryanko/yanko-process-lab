@@ -10,7 +10,16 @@ Python 3.12, CPU, no paid APIs:
 python -m pip install -r research/pg_information_control_frontier/requirements.txt
 python -m unittest discover -s research/pg_information_control_frontier/tests -v
 python research/pg_information_control_frontier/src/experiments.py
+python -m pip install -r research/pg_information_control_frontier/reproducibility/document_requirements.txt
 python research/pg_information_control_frontier/src/reporting.py
+
+Run commands from the repository root. Save the unittest transcript to
+research/pg_information_control_frontier/results/tests.log before reporting.
+The report builder requires Pandoc and pdflatex on PATH. On Windows, install
+Pandoc and MiKTeX (including Portuguese Babel and recommended LaTeX packages).
+On Ubuntu the executed workflow installs pandoc, texlive-latex-extra,
+texlive-lang-portuguese and lmodern. The PowerShell helper is supplied but has
+not been executed on the target Windows/Ryzen machine.
 
 ## Protocol
 Frozen in configs/protocol.json before simulations. 14 fixed scenarios x 19 methods x

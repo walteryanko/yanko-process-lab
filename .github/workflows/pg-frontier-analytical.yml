@@ -31,7 +31,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f research/pg_information_control_frontier/results/supplementary* research/pg_information_control_frontier/results/local_lie* research/pg_information_control_frontier/results/trajectories/supplementary* || true
+          git add -f research/pg_information_control_frontier/results/supplementary* research/pg_information_control_frontier/results/expected_cost* research/pg_information_control_frontier/results/local_lie* research/pg_information_control_frontier/results/trajectories/supplementary* || true
           if ! git diff --cached --quiet; then
             git commit -m "Record actual arbitrary-precision quotient and affine-twin audit"
             git pull --rebase origin research/pg-information-control-frontier-20261020

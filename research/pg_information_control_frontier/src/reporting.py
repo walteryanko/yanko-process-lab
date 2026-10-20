@@ -122,21 +122,40 @@ Este estudo computacional investiga limites de informação e decisão em um mod
     ['Q3','Demonstrated mathematically','The sufficient invisible subspace is orthogonal to the functional span of CpB,CpC,CpM, with deltaCA=0.'],
     ['Q4','Demonstrated mathematically','Half separation is an instantaneous two-world lower bound; the integrated bound is distinct.'],
     ['Q5','Experimentally supported','Finite-class costs show when chemical ambiguity changes actions; no global continuous optimum certificate.'],
-    ['Q6','Inconclusive as a general predictor','Paired RMSE/IAE are reported; no universal monotone relation follows from lower RMSE.'],
-    ['Q7','Experimentally evaluated','B2_both versus B2_estimator isolates parameter sharing within this closed loop, including trajectory feedback.'],
-    ['Q8','Partially supported at most','Same-information finite-class contrasts and independent confirmation are available; strong historical continuous baseline missing.'],
-    ['Q9','Experimentally evaluated','Adverse regimes are retained in contrasts.csv and the failure table.'],
+    ['Q6','Inconclusive','Paired RMSE/IAE are reported; no universal monotone relation follows from lower RMSE.'],
+    ['Q7','Partially supported','B2_both versus B2_estimator isolates parameter sharing within this closed loop, including trajectory feedback.'],
+    ['Q8','Partially supported','Same-information finite-class contrasts and independent confirmation are available; strong historical continuous baseline missing.'],
+    ['Q9','Partially supported','Adverse regimes are retained in contrasts.csv and the failure table.'],
     ['Q10','Partially supported','Only the declared CC sampling schedules/noises/delay approximation were tested; no globally optimal sensor frequency.'],
     ['Q11','Demonstrated mathematically','Exact indistinguishable-pair bounds apply independently of estimator architecture under stated information.'],
     ['Q12','Partially supported','Proof transfers to the same dilution/kinetic/calorimetric structure; numerical gains do not transfer automatically.']]
     claims=pd.DataFrame(questions,columns=['Question','Evidence class','Conclusion'])
     tableclaims=table(claims)
+    classes_pt={'Demonstrated mathematically':'Demonstrada matematicamente','Experimentally supported':'Sustentada experimentalmente','Partially supported':'Parcialmente sustentada','Inconclusive':'Inconclusiva'}
+    claims_pt=claims.copy();claims_pt['Evidence class']=claims_pt['Evidence class'].map(classes_pt)
+    claims_pt['Conclusion']=[
+        'M0 possui classe química bidimensional indistinguível; seis estados livres não são completamente observáveis.',
+        'A ambiguidade com Cp constante persiste com entalpia consistente e camisa recíproca; M1 físico calibrado permanece ausente.',
+        'O núcleo suficiente é ortogonal ao espaço funcional de CpB, CpC e CpM, com diferença em CA igual a zero.',
+        'Metade da separação limita o erro instantâneo no problema de dois mundos; o limite integrado é distinto.',
+        'Custos na classe finita determinam quando a ambiguidade altera ações; não há certificado de ótimo contínuo global.',
+        'RMSE e IAE pareados não estabelecem relação monotônica universal.',
+        'B2_both versus B2_estimator isola compartilhamento paramétrico neste laço, incluindo a realimentação das trajetórias.',
+        'Há contrastes com mesma informação e confirmação, mas falta o baseline histórico contínuo forte.',
+        'Regimes adversos são preservados nas tabelas e em contrasts.csv.',
+        'Somente os esquemas declarados de medição de CC foram testados; frequência globalmente ótima não foi estabelecida.',
+        'Os limites para gêmeos exatos independem da arquitetura do estimador sob as hipóteses declaradas.',
+        'A prova transfere para a mesma estrutura de diluição, cinética e calorimetria; ganhos numéricos não se generalizam automaticamente.']
+    claims_pt.columns=['Questão','Classe de evidência','Conclusão']
+    tableclaimsPT=table(claims_pt)
     discussionEN=r"""
 # Ablation, falsification and interpretation
 
 The common-information comparisons separate point versus representative decisions, estimator-only versus predictor-sharing adaptation, and a denser finite grid. Exact inventory and chemical sampling are additional-information arms. A better result there cannot be attributed solely to a more sophisticated algorithm.
 
 The core structural result is insensitive to replacing one-way coil coupling with a reciprocal jacket while retaining constant heat capacities. Synthetic property dependence can break the particular two-species compensation, but tiny output differences may remain undetectable at realistic sensor precision. The numerical rank map is a grid of initial states, not a map of feasible steady operating points. The Fisher matrix corresponding to independent Gaussian measurement noise is the sensitivity Gram matrix; no calibrated posterior coverage guarantee follows from its singular values.
+
+The expected-cost proposition provides a stronger null case: symmetric exact chemical twins only add a plan-independent variance term to the quadratic cost. P1 therefore has no theoretical action advantage over the point policy under those assumptions. The post-protocol audit checks this identity on nine plan/reference/horizon combinations.
 
 Positive grid regret establishes conflict within the stated candidate class. Grid minimax is not a lower bound on all causal controllers. The state-informed reference may have a smaller loss, but unreachable references and physical cooling limits remain. The initial failed numerical effect-size expectation is retained: a thermal difference of 9.516165278e-7 K did not exceed an arbitrary 1e-6 K threshold. The implementation test was replaced by an exact capacity identity, while scientific separability is reported without imposing a favorable outcome.
 
@@ -162,6 +181,8 @@ As comparações com a mesma informação separam decisão pontual e por represe
 
 O resultado estrutural persiste ao substituir a serpentina assimétrica por camisa recíproca mantendo capacidades caloríficas constantes. A dependência sintética de propriedades pode desfazer a compensação específica entre duas espécies, mas as diferenças térmicas podem permanecer pequenas diante do ruído. O mapa numérico utiliza uma grade de estados iniciais, não pontos estacionários fisicamente viáveis. Para ruído gaussiano independente, a Fisher correspondente é o produto da sensibilidade transposta pela sensibilidade; seus valores singulares não certificam cobertura posterior.
 
+A proposição do custo esperado fornece um caso nulo mais forte: gêmeos exatos e simétricos acrescentam apenas um termo de variância independente do plano ao custo quadrático. P1 não possui vantagem teórica na ação sobre a política pontual nessas condições. A auditoria suplementar verifica a identidade em nove combinações de horizonte e referência.
+
 Regret positivo na grade demonstra conflito nessa classe. Seu valor minimax não limita inferiormente todo controlador causal. Um oráculo informado do estado pode reduzir perda, mas referências inalcançáveis e limites de refrigeração permanecem. Preserva-se a expectativa experimental inicialmente refutada: diferença térmica de 9.516165278e-7 K não ultrapassou o corte arbitrário 1e-6 K. A verificação de implementação foi substituída por identidade exata de capacidade térmica, sem exigir resultado favorável na separabilidade científica.
 
 # Limitações e condição para publicação
@@ -182,7 +203,7 @@ O modelo recuperado impõe um limite informacional específico que não desapare
     cap=json.loads((OUT/'08_FIGURES/captions.json').read_text())
     gallery='\n# Figures from executed data\n\n'+'\n\n'.join(f'![Figure {i}. {cap[str(i)]}](figures/Figure_{i:02d}.png)' for i in range(1,17))
     en=enabs+(ROOT/'manuscripts/methods_en.md').read_text()+paramsEN+'\n'+(ROOT/'reports/theory_en.md').read_text()+nrEN+discussionEN+tableclaims+gallery+'\n# References\n\n'
-    pt=ptabs+(ROOT/'manuscripts/methods_pt.md').read_text()+paramsPT+'\n'+(ROOT/'reports/theory_pt.md').read_text()+nrPT+discussionPT+tableclaims+gallery.replace('# Figures from executed data','# Figuras dos dados executados')+'\n# Referências\n\n'
+    pt=ptabs+(ROOT/'manuscripts/methods_pt.md').read_text()+paramsPT+'\n'+(ROOT/'reports/theory_pt.md').read_text()+nrPT+discussionPT+tableclaimsPT+gallery.replace('# Figures from executed data','# Figuras dos dados executados')+'\n# Referências\n\n'
     builds=[]
     builds.append(produce_document('Article_EN',en,'Information and Decision Limits in Inferential Predictive Control of a Nonlinear Propylene Glycol Reactor','en-US','03'))
     builds.append(produce_document('Artigo_PTBR',pt,'Limites de Informação e Decisão no Controle Preditivo Inferencial de um Reator Não Linear de Propilenoglicol','pt-BR','05'))

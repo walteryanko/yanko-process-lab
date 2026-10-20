@@ -26,6 +26,8 @@ Somente $T,T_t$ são medidas. A entrada otimizada é $m_w=q\,453.59237$ kmol/h; 
 
 A entalpia executável é -83736 kJ/kmol, enquanto a tabela da dissertação informa -91556.90. A conversão imperial arredondada e o deslocamento de Arrhenius são convenções preservadas para reprodução. O exemplo público de Fogler contém correção da entalpia com temperatura, mas utiliza outras condições operacionais [@fogler_examples]; não autoriza substituir constantes sem calibração.
 
+Um caso didático relacionado utiliza cinética de primeira ordem com água em excesso e líquido não ideal [@chan2004]. Isso sustenta a aproximação cinética como benchmark, mas impede tratar apenas a calorimetria ideal como validação da equivalência física de inventários reais.
+
 ## Alternativas físicas explícitas
 
 M1H introduz consistência de Kirchhoff:

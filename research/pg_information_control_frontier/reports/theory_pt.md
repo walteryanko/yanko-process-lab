@@ -70,6 +70,15 @@ Demonstração. Os regrets são não negativos. Um minimizador comum os anula. R
 
 Quando as restrições dependem do mundo, os ótimos individuais devem respeitar seus conjuntos declarados e a decisão robusta pertence à interseção. Interseção vazia significa inviabilidade, não regret finito. O cálculo numérico marca explicitamente a ausência de candidatos conjuntamente viáveis.
 
+
+## Proposição 3b: quando representar a ambiguidade não altera a ação de custo esperado
+
+Nos gêmeos exatos de PG com a mesma alimentação conhecida, a vazão de refrigeração não altera a diluição. Para qualquer plano comum, escreva $C_C(t;u,\delta)=C_C(t;u,0)+d(t)\delta$, onde $d(t)=e^{-\int_0^tD(s)ds}$ independe do plano de refrigeração. Suponha offsets com média zero, representantes fisicamente admissíveis, restrições dependentes apenas das temperaturas e ações comuns e custo de tracking quadrático ponderado, acrescido de custos térmicos e de atuação comuns. Então
+$\mathbb E_\delta J_\delta(u)=J_0(u)+\mathbb E[\delta^2]\sum_j w_jd(t_j)^2.$
+O último termo independe de $u$. Logo, os conjuntos de minimizadores das políticas nominal e de custo esperado são exatamente iguais, tanto na grade quanto na classe contínua.
+
+Demonstração. Expanda os quadrados e tome a média. O termo cruzado se anula pela média zero; os demais custos e restrições são compartilhados. É um caso de equivalência de certeza, não um teorema universal de robustez. Perdas não quadráticas, diluição dependente da ação, truncamento assimétrico de crenças, restrições físicas adicionais ou mudança da política informacional podem invalidá-lo. No P1 de três representantes simétricos, a proposição prevê benefício de controle nulo, exceto por exclusões de admissibilidade e desempates numéricos. Ela refuta a ideia de que apenas incluir esses mundos necessariamente melhora este NMPC quadrático.
+
 ## Proposição 4: limite quantitativo condicional
 
 Para dois custos $\mu$-fortemente convexos no mesmo conjunto convexo, com minimizadores $u_1^*,u_2^*$,
