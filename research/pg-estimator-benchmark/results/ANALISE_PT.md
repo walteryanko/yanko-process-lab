@@ -59,7 +59,7 @@ Os tempos medem estas implementações, incluindo diferenças entre chamadas Num
 
 ## Verificação e reprodução
 Oito testes científicos passaram: paridade da transição histórica, Jacobiano por diferenças finitas independentes, correção de estados ocultos via covariância cruzada, limite Gaussiano da mistura, atenuação de erros grosseiros, preservação das amostras não contaminadas, paridade com o UKF anterior e prefixo causal do MHE.
-A auditoria independente do CSV confirmou 320 linhas e 80 grupos pareados, cada um com quatro métodos e um único hash de ruído. Todos os episódios registraram sucesso do NMPC; nenhum fallback de controlador ou observador foi usado.
+A auditoria independente do CSV confirmou 320 linhas e 80 grupos pareados, cada um com quatro métodos e um único hash de ruído. Todas as decisões de NMPC registradas na malha fechada tiveram sucesso; nenhum fallback de controlador ou observador foi usado.
 O pacote contém código, protocolo, métricas por episódio, contrastes pareados, dez gráficos e 320 trajetórias comprimidas.
 SHA256 do pacote produzido: dc42ffbd6c023779d13a70f7e61bf4c5efc55e6a4c2069df289a404161632cb8.
 [Pacote completo](PG_Estimator_Benchmark_v0.1.zip) · [Resultados estruturados](results.json) · [Métricas por episódio](metrics.csv) · [Contrastes pareados](paired.csv).
