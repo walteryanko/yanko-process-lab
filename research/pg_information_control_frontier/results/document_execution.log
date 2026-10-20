@@ -1,0 +1,21 @@
+{"precision_decimal_digits": 60, "Lie_formula_verified": true, "nominal_quotient_singular": true, "constant_input_uncompensated_product_gap": 0.4, "constant_input_max_thermal_difference": 0.0, "excited_uncompensated_max_thermal_difference": 0.03797201393444993, "affine_kernel_difference": [0.0, 1.9166666666666667, 0.4000000000000001, -2.712820512820513, 0.0, 0.0], "affine_kernel_max_thermal_difference": 0.0, "affine_functional_rank": 2, "quadratic_functional_rank": 3, "conclusion": "Specific-twin breakup does not eliminate every affine-Cp twin; rank is local and input-dependent.", "expected_cost_equivalence_cases": 9, "expected_cost_equivalence_pass": true}
+Traceback (most recent call last):
+  File "/home/runner/work/yanko-process-lab/yanko-process-lab/research/pg_information_control_frontier/src/reporting.py", line 378, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/runner/work/yanko-process-lab/yanko-process-lab/research/pg_information_control_frontier/src/reporting.py", line 253, in main
+    builds.append(produce_document('Artigo_PTBR',pt,'Limites de Informação e Decisão no Controle Preditivo Inferencial de um Reator Não Linear de Propilenoglicol','pt-BR','05'))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/yanko-process-lab/yanko-process-lab/research/pg_information_control_frontier/src/reporting.py", line 59, in produce_document
+    run(['pdflatex','-interaction=nonstopmode','-halt-on-error',stem+'.tex'])
+  File "/home/runner/work/yanko-process-lab/yanko-process-lab/research/pg_information_control_frontier/src/reporting.py", line 54, in run
+    s=subprocess.run(args,cwd=src,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/subprocess.py", line 1196, in communicate
+    stdout = self.stdout.read()
+             ^^^^^^^^^^^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xed in position 6300: invalid continuation byte

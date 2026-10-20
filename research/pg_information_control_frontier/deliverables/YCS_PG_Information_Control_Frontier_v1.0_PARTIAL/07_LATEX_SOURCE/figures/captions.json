@@ -1,0 +1,18 @@
+{
+  "1": "Physical process and available information",
+  "2": "Distinct chemical inventories, identical historical thermal outputs",
+  "3": "Finite-horizon sensitivity map (initial-state grid, not equilibrium map)",
+  "4": "Singular spectra; a numerical floor does not prove observability",
+  "5": "One shared measurement stream: estimation error and two-world bound",
+  "6": "Estimation error and tracking loss across fixed scenarios",
+  "7": "World-conditioned and minimax-regret actions (finite action class)",
+  "8": "Decision ambiguity versus prior width and prediction horizon",
+  "9": "Servo tracking; paired seed 4100",
+  "10": "Regulatory response to known current feed disturbance; paired seed 4100",
+  "11": "Concentration and temperature under hidden kinetic mismatch",
+  "12": "Actuation and sampled thermal constraint under combined perturbations",
+  "13": "Finite-suite contrasts: positive differences favor the candidate",
+  "14": "Value of additional chemical measurements: inventory-plus scenario",
+  "15": "Tracking, sampled safety, effort and computing trade-offs",
+  "16": "Regime map: favorable and adverse mean differences"
+}
