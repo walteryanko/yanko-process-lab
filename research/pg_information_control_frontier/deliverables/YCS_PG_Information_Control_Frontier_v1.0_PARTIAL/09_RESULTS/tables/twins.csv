@@ -1,0 +1,6 @@
+variant,max_thermal_difference_K,max_product_decay_error
+M0_historical,5.684341886080802e-14,5.864697616431158e-12
+M1H_Kirchhoff_hypothesis,0.0,5.863365348801608e-12
+M1J_mixed_jacket_hypothesis,0.0,5.861588991962208e-12
+M2L_linear_cp_hypothesis,1.0307360241768038e-05,3.3766414170299797e-07
+M2Q_quadratic_cp_hypothesis,9.337403980680392e-06,3.164070159419885e-07

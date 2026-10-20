@@ -1,0 +1,6 @@
+variant,max_abs_error
+M0_historical,3.779518920055125e-10
+M1H_Kirchhoff_hypothesis,3.672084858408198e-10
+M1J_mixed_jacket_hypothesis,3.2745219868957065e-09
+M2L_linear_cp_hypothesis,3.314312380098272e-09
+M2Q_quadratic_cp_hypothesis,3.308457507955609e-09

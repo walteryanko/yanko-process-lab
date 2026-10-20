@@ -1,0 +1,23 @@
+test_01_historical_rhs_parity (test_science.ScientificTests.test_01_historical_rhs_parity) ... ok
+test_02_conserved_reaction_inventories (test_science.ScientificTests.test_02_conserved_reaction_inventories) ... ok
+test_03_energy_accounting (test_science.ScientificTests.test_03_energy_accounting) ... ok
+test_04_equilibrium (test_science.ScientificTests.test_04_equilibrium) ... ok
+test_05_positivity (test_science.ScientificTests.test_05_positivity) ... ok
+test_06_independent_integration (test_science.ScientificTests.test_06_independent_integration) ... ok
+test_07_jacobian_step_consistency (test_science.ScientificTests.test_07_jacobian_step_consistency) ... ok
+test_08_twins_constant_cp_and_jacket (test_science.ScientificTests.test_08_twins_constant_cp_and_jacket) ... ok
+test_09_variable_cp_falsifies_specific_twin (test_science.ScientificTests.test_09_variable_cp_falsifies_specific_twin) ... ok
+test_10_rank_has_two_exact_null_directions (test_science.ScientificTests.test_10_rank_has_two_exact_null_directions) ... ok
+test_11_causal_prefix (test_science.ScientificTests.test_11_causal_prefix) ... ok
+test_12_inventory_reconstruction (test_science.ScientificTests.test_12_inventory_reconstruction) ... ok
+test_13_constraints (test_science.ScientificTests.test_13_constraints) ... ok
+test_14_failed_optimization_fallback (test_science.ScientificTests.test_14_failed_optimization_fallback) ... ok
+test_15_regret_exact (test_science.ScientificTests.test_15_regret_exact) ... ok
+test_16_zero_conflict_not_impossible_state_error (test_science.ScientificTests.test_16_zero_conflict_not_impossible_state_error) ... ok
+test_17_seed_separation (test_science.ScientificTests.test_17_seed_separation) ... ok
+test_18_reproducible_and_metric_independent (test_science.ScientificTests.test_18_reproducible_and_metric_independent) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 11.990s
+
+OK

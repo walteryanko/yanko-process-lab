@@ -1,0 +1,3 @@
+# Document build failure and correction
+
+The first document workflow independently verified all 5720 trajectories and compiled the English article. The Portuguese pdflatex process emitted a Latin-1 byte (0xed) in its diagnostic output. Python's strict UTF-8 decoding raised UnicodeDecodeError while reading that log. The source text and PDF bytes were not changed to work around this issue. The subprocess now decodes diagnostic output with UTF-8 and replacement for invalid log bytes, while checking the real process return code. The documents are rebuilt and verified. This is a document-pipeline failure, not a simulation failure.

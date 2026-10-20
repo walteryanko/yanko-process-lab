@@ -1,0 +1,42 @@
+{
+  "folder": "YCS_PG_Information_Control_Frontier_v1.0_PARTIAL",
+  "archives": [
+    {
+      "name": "YCS_PG_Information_Control_Frontier_v1.0_PARTIAL_CODE_DATA.zip",
+      "bytes": 63094291,
+      "sha256": "9fb360f3847ba00e6497d7cd9a590755033e4519df87b8f0b266f3656c3a2768"
+    },
+    {
+      "name": "YCS_PG_Information_Control_Frontier_v1.0_PARTIAL_MANUSCRIPTS.zip",
+      "bytes": 41313364,
+      "sha256": "97229cdc8c4ba74be11c8778d909f0273de622a7a0be1ca7981963ff1f7d33fa"
+    }
+  ],
+  "documents": [
+    {
+      "stem": "Article_EN",
+      "pages": 25,
+      "pdf_compiled": true,
+      "docx_created": true
+    },
+    {
+      "stem": "Artigo_PTBR",
+      "pages": 24,
+      "pdf_compiled": true,
+      "docx_created": true
+    },
+    {
+      "stem": "Scientific_Research_Report",
+      "pages": 38,
+      "pdf_compiled": true,
+      "docx_created": true
+    },
+    {
+      "stem": "EXECUTIVE_SUMMARY",
+      "pages": 4,
+      "pdf_compiled": true,
+      "docx_created": true
+    }
+  ],
+  "manifest_entries": 5897
+}

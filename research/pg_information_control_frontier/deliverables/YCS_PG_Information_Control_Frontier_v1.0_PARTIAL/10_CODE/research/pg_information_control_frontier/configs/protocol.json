@@ -1,0 +1,92 @@
+{
+  "version": "1.0-computational-core",
+  "date": "2026-10-20",
+  "status": "frozen before new simulations",
+  "scope": "Historical M0 benchmark and explicitly hypothetical reconciliations; no industrial validation",
+  "development_seeds": [
+    11,
+    12
+  ],
+  "validation_seeds": [
+    101,
+    102,
+    103
+  ],
+  "test_seeds": [
+    4100,
+    4101,
+    4102,
+    4103,
+    4104,
+    4105,
+    4106,
+    4107,
+    4108,
+    4109,
+    4110,
+    4111,
+    4112,
+    4113,
+    4114,
+    4115,
+    4116,
+    4117,
+    4118,
+    4119
+  ],
+  "confirmation_seeds": [
+    8100,
+    8101,
+    8102,
+    8103,
+    8104,
+    8105,
+    8106,
+    8107,
+    8108,
+    8109,
+    8110,
+    8111,
+    8112,
+    8113,
+    8114,
+    8115,
+    8116,
+    8117,
+    8118,
+    8119
+  ],
+  "dt_h": 0.015,
+  "steps": 60,
+  "horizon": 14,
+  "grid_points_per_move": 5,
+  "move_blocks": [
+    3,
+    11
+  ],
+  "qmin": 0.05,
+  "qmax": 3,
+  "slew": 0.4,
+  "study_T_limit": 344.2611111111,
+  "primary_contrasts": [
+    [
+      "P2_regret",
+      "B1_ukf"
+    ],
+    [
+      "P3_adaptive_regret",
+      "B2_both"
+    ],
+    [
+      "B2_both",
+      "B2_estimator"
+    ]
+  ],
+  "primary_metric": "paired trajectory IAE",
+  "uncertainty": "20 independent paired noise seeds within each fixed scenario; seed-cluster bootstrap across finite scenario suite",
+  "success_rule": "exploratory target >=10% IAE improvement with 95% paired CI above zero, no material increase in thermal severity, confirmation; multiplicity Holm for three primary contrasts",
+  "information": "Only current T,Tt, past actions and measured current feeds. No future disturbances. Exact-inventory and chemical variants separately labeled.",
+  "runtime_budget": "one CPU worker; 60 min job ceiling; pilot predicts cost; do not silently trim seeds",
+  "model_variants": "M0 historical. M1H Kirchhoff with assumed reaction-enthalpy reference at nominal T; M1J adds nominally matched lumped jacket; M2L/Q synthetic cp(T) slopes/curvatures, not measured properties.",
+  "gaps": "ICAC branch absent at recovery; C01-C14 raw code not retrieved; historical scalar values not automatically reproduced."
+}

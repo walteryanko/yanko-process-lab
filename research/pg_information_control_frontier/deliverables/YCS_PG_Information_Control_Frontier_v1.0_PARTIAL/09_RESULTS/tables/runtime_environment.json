@@ -1,0 +1,7 @@
+{
+  "python": "3.12.15 (main, Oct  1 2026, 02:35:59) [GCC 13.3.0]",
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+  "protocol_sha256": "6c451c861340e215ffa6d35cd37e0f51726eb9b8a6e893b7c0a6b435f810b000",
+  "pilot_seconds": 0.2368008890000226,
+  "OMP_NUM_THREADS": "1"
+}

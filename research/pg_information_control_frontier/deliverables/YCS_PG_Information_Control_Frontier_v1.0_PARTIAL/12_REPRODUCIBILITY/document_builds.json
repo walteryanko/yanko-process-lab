@@ -1,0 +1,26 @@
+[
+  {
+    "stem": "Article_EN",
+    "pages": 25,
+    "pdf_compiled": true,
+    "docx_created": true
+  },
+  {
+    "stem": "Artigo_PTBR",
+    "pages": 24,
+    "pdf_compiled": true,
+    "docx_created": true
+  },
+  {
+    "stem": "Scientific_Research_Report",
+    "pages": 38,
+    "pdf_compiled": true,
+    "docx_created": true
+  },
+  {
+    "stem": "EXECUTIVE_SUMMARY",
+    "pages": 4,
+    "pdf_compiled": true,
+    "docx_created": true
+  }
+]
