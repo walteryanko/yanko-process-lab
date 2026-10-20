@@ -51,7 +51,7 @@ def produce_document(stem,body,title_,language,number,doctype='article'):
     common=['pandoc',md.name,'--standalone','--citeproc','--bibliography=references.bib','--number-sections']
     log=[]
     def run(args):
-        s=subprocess.run(args,cwd=src,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
+        s=subprocess.run(args,cwd=src,text=True,encoding='utf-8',errors='replace',stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
         log.append('COMMAND: '+' '.join(args)+'\n'+s.stdout)
         if s.returncode:raise RuntimeError('document command failed: '+' '.join(args)+'\n'+s.stdout[-4000:])
     run(common+['-o',stem+'.tex'])
@@ -295,6 +295,9 @@ O pacote fornece código, dados, figuras, fontes LaTeX, PDF compilado, DOCX, rev
     text(OUT/'16_SCIENTIFIC_CLAIMS_AUDIT.md',tableclaims+'\n\n'+discussionEN)
     shutil.copy2(ROOT/'reports/literature_review.md',OUT/'15_BIBLIOGRAPHY_REVIEW/literature_review.md')
     shutil.copy2(ROOT/'reports/recovery_audit.md',OUT/'12_REPRODUCIBILITY/recovery_audit.md')
+    shutil.copy2(ROOT/'reports/document_build_failure_1.md',OUT/'12_REPRODUCIBILITY/document_build_failure_1.md')
+    provenance=dict(historical_model_commit='d2610a0723cbbaf00d3f4559242ba0efafb67771',frozen_execution_commit='a57be15bdddbe0c2447a9eb21bce7f6b5b63d37c',data_workflow_run=39499177732,build_commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),pandoc=subprocess.check_output(['pandoc','--version'],text=True).splitlines()[0])
+    text(OUT/'12_REPRODUCIBILITY/git_provenance.json',json.dumps(provenance,indent=2))
     shutil.copy2(ROOT/'reports/initial_test_failure.md',OUT/'14_NEGATIVE_RESULTS/initial_test_failure.md')
     adverse.to_csv(OUT/'14_NEGATIVE_RESULTS/adverse_contrasts.csv',index=False)
     for p in R.glob('*'):
