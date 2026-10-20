@@ -48,7 +48,8 @@ def verify():
 def produce_document(stem,body,title_,language,number,doctype='article'):
     src=OUT/'07_LATEX_SOURCE';src.mkdir(exist_ok=True)
     md=src/(stem+'.md')
-    pre=f'---\ntitle: "{title_}"\nauthor: "Walter Yanko de Aragão Brandão"\ndate: "20 October 2026"\nlang: "{language}"\nfontsize: 11pt\ngeometry: margin=24mm\ncolorlinks: true\n---\n\n'
+    date_label='20 de outubro de 2026' if language.startswith('pt') else '20 October 2026'
+    pre=f'---\ntitle: "{title_}"\nauthor: "Walter Yanko de Aragão Brandão"\ndate: "{date_label}"\nlang: "{language}"\nfontsize: 11pt\ngeometry: margin=24mm\ncolorlinks: true\n---\n\n'
     text(md,pre+body)
     common=['pandoc',md.name,'--standalone','--citeproc','--bibliography=references.bib','--number-sections','--lua-filter=compact_tables.lua']
     log=[]
@@ -264,8 +265,8 @@ O modelo recuperado impõe um limite informacional específico que não desapare
 """
     cap=json.loads((OUT/'08_FIGURES/captions.json').read_text())
     gallery='\n# Figures from executed data\n\n'+'\n\n'.join(f'![Figure {i}. {cap[str(i)]}](figures/Figure_{i:02d}.png)' for i in range(1,17))
-    en=enabs+(ROOT/'manuscripts/methods_en.md').read_text()+paramsEN+'\n'+(ROOT/'reports/theory_en.md').read_text()+nrEN+discussionEN+tableclaims+gallery+'\n# References\n\n'
-    pt=ptabs+(ROOT/'manuscripts/methods_pt.md').read_text()+paramsPT+'\n'+(ROOT/'reports/theory_pt.md').read_text()+nrPT+discussionPT+tableclaimsPT+gallery.replace('# Figures from executed data','# Figuras dos dados executados')+'\n# Referências\n\n'
+    en=enabs+'\n\n'+(ROOT/'manuscripts/methods_en.md').read_text()+paramsEN+'\n'+(ROOT/'reports/theory_en.md').read_text()+nrEN+discussionEN+tableclaims+gallery+'\n# References\n\n'
+    pt=ptabs+'\n\n'+(ROOT/'manuscripts/methods_pt.md').read_text()+paramsPT+'\n'+(ROOT/'reports/theory_pt.md').read_text()+nrPT+discussionPT+tableclaimsPT+gallery.replace('# Figures from executed data','# Figuras dos dados executados')+'\n# Referências\n\n'
     builds=[]
     builds.append(produce_document('Article_EN',en,'Information and Decision Limits in Inferential Predictive Control of a Nonlinear Propylene Glycol Reactor','en-US','03'))
     builds.append(produce_document('Artigo_PTBR',pt,'Limites de Informação e Decisão no Controle Preditivo Inferencial de um Reator Não Linear de Propilenoglicol','pt-BR','05'))
