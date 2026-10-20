@@ -108,9 +108,17 @@ def main():
     ax.set_ylabel('IAE (kmol h/m3)')
     finish(fig,14,'Value of additional chemical measurements: inventory-plus scenario')
     s=d.groupby('method')[['IAE','thermal_severity','cooling_effort','decision_ms']].mean()
-    fig,ax=plt.subplots(figsize=(8,5));im=ax.scatter(s.IAE,s.thermal_severity,s=25+10*s.cooling_effort,c=np.log10(s.decision_ms+.01),cmap='viridis',alpha=.8)
-    for m,row in s.iterrows():ax.annotate(m,(row.IAE,row.thermal_severity),fontsize=6)
-    ax.set_xlabel('Mean IAE');ax.set_ylabel('Mean thermal exceedance integral (K h)');fig.colorbar(im,ax=ax,label='log10 decision ms; marker area scales with effort')
+    s=s.sort_values('IAE');fig,axs=plt.subplots(1,4,figsize=(12,8),sharey=True)
+    metrics=[('IAE','Mean IAE','#247ba0'),('thermal_severity','Thermal exceedance\nintegral (K h)','#b74a48'),
+             ('cooling_effort','Coolant effort\nintegral q squared (h)','#21857a'),('decision_ms','Decision time (ms)','#7d5e9b')]
+    for ax,(column,label,color) in zip(axs,metrics):
+        ax.scatter(s[column],np.arange(len(s)),color=color,s=28)
+        ax.set_xlabel(label);ax.grid(axis='x',alpha=.25)
+        ax.tick_params(axis='x',labelsize=8)
+    axs[0].set_yticks(np.arange(len(s)),[m.replace('_',' ') for m in s.index],fontsize=8)
+    axs[0].invert_yaxis()
+    axs[1].set_xscale('symlog',linthresh=1e-6)
+    axs[3].set_xscale('log')
     finish(fig,15,'Tracking, sampled safety, effort and computing trade-offs')
     p=d.groupby(['scenario','method']).IAE.mean().unstack()
     z=p.apply(lambda col:100*(p.B1_ukf-col)/p.B1_ukf)
