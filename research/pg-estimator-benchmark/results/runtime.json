@@ -1,0 +1,10 @@
+{
+  "python": "3.12.15 (main, Oct  1 2026, 02:35:59) [GCC 13.3.0]",
+  "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "casadi": "3.7.2",
+  "seconds": 310.22938478400005,
+  "workers": 2,
+  "commit": "ef281d3e805fcd1ecded3a12f1d7f34b5e778c7a"
+}
