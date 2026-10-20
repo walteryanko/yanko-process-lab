@@ -1,0 +1,73 @@
+{
+  "version": "0.1.0",
+  "stage": "exploratory_paired_campaign",
+  "created_before_execution": "2026-10-20",
+  "base_commit": "b55a46cd182c70100b50ff5e6c98ba82ed96a5a8",
+  "model": "complete historical SI six-state PG, variant=1; NOT tabulated educational model",
+  "states": [
+    "CA",
+    "CB",
+    "CC",
+    "CM",
+    "T",
+    "Tt"
+  ],
+  "measurements": [
+    "T",
+    "Tt"
+  ],
+  "sample_h": 0.015,
+  "methods": [
+    "UKF_RK4",
+    "EKF",
+    "GM_EKF",
+    "MHE5"
+  ],
+  "method_qualification": "GM_EKF is Gaussian-mixture moment-matched EKF, not a replication of Hu et al. DDR-EKF. MHE5 is finite-budget constrained MAP MHE, not a replication of Schiller-Mueller stability theorem.",
+  "scenarios": [
+    "OL_FA",
+    "SERVO_P10",
+    "REG_FA15"
+  ],
+  "replicates": 8,
+  "seed_formula": "700000 + scenario_index*1000 + replicate",
+  "noises": [
+    "gaussian",
+    "contaminated"
+  ],
+  "contamination": {
+    "probability": 0.05,
+    "sd_multiplier": 10
+  },
+  "robust_filter": {
+    "probability": 0.05,
+    "sd_multiplier": 10,
+    "frozen_for_both_noise_conditions": true
+  },
+  "mhe": {
+    "horizon": 5,
+    "max_nfev": 5,
+    "arrival": "causal EKF posterior at left boundary",
+    "process_noise": "Q_HIST",
+    "measurement_noise": "R_HIST",
+    "bounds": "concentrations>=0; temperatures in [250,400] K"
+  },
+  "controls": "same recovered ThesisNMPC, p=57 m=6; thermal penalty QR=0 or 1000 for closed-loop, never described as hard constraint",
+  "plant_integration": "existing advance/plant_segment with exact event splitting, RK4 substeps<=0.0025 h",
+  "freezing": "Q_HIST R_HIST P_HIST and controller settings from base source; no test-set retuning; same integration for all estimators",
+  "primary_estimation": "RMSE_est_CC",
+  "primary_control": "IAE_track_CC",
+  "secondary": [
+    "all-state RMSE",
+    "thermal violations",
+    "observer latency",
+    "solver success",
+    "fallbacks"
+  ],
+  "pairing": "input noise, base Gaussian measurement noise, contamination masks and magnitudes shared by all methods within scenario/replicate; SHA256 recorded",
+  "test_policy": "all scheduled failures retained; no silent exclusions; bootstrap intervals exploratory with 8 replicates",
+  "plant_mismatch": "none in primary campaign; separate future factor, not mixed with sensor robustness",
+  "no_truth_access": "only evaluator uses truth; observers receive commanded inputs and thermal measurements",
+  "run_scope": "320 scheduled episodes: 3 scenarios, two noise conditions, four methods, eight seeds, one open-loop or two thermal-penalty choices",
+  "safety_scope": "synthetic offline simulations; no physical controller action"
+}
