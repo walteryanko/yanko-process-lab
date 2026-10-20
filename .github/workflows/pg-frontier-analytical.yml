@@ -1,0 +1,39 @@
+name: PG Frontier Analytical Audit
+on:
+  push:
+    branches: [research/pg-information-control-frontier-20261020]
+    paths:
+      - .github/workflows/pg-frontier-analytical.yml
+      - research/pg_information_control_frontier/src/supplementary.py
+permissions:
+  contents: write
+jobs:
+  analytical-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned packages
+        run: python -m pip install -r research/pg_information_control_frontier/requirements.txt mpmath==1.3.0
+      - name: Execute analytical and syntax audit
+        run: |
+          set -o pipefail
+          python -m compileall -q research/pg_information_control_frontier/src
+          python research/pg_information_control_frontier/src/supplementary.py 2>&1 | tee research/pg_information_control_frontier/results/supplementary_execution.log
+      - name: Preserve executed audit
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f research/pg_information_control_frontier/results/supplementary* research/pg_information_control_frontier/results/local_lie* research/pg_information_control_frontier/results/trajectories/supplementary* || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Record actual arbitrary-precision quotient and affine-twin audit"
+            git pull --rebase origin research/pg-information-control-frontier-20261020
+            git push origin HEAD:research/pg-information-control-frontier-20261020
+          fi
