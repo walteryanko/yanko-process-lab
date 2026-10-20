@@ -3,6 +3,7 @@ Requires pandoc and pdflatex for DOCX/PDF; compilation is actually executed.
 Never fabricates a missing result.
 """
 import sys,json,shutil,subprocess,hashlib,zipfile,platform
+import xml.etree.ElementTree as ET
 from pathlib import Path
 import numpy as np,pandas as pd
 from pypdf import PdfReader
@@ -15,9 +16,10 @@ def table(df):
     # Native editable tables via Pandoc; no optional tabulate dependency.
     cols=list(df.columns)
     def value(x):
-        if isinstance(x,(float,np.floating)):return f'{x:.6g}' if np.isfinite(x) else 'NA'
-        return str(x).replace('|','/').replace('\n',' ')
-    return '| '+' | '.join(map(str,cols))+' |\n| '+' | '.join(['---']*len(cols))+' |\n'+'\n'.join('| '+' | '.join(value(x) for x in row)+' |' for row in df.itertuples(index=False,name=None))+'\n'
+        if isinstance(x,(float,np.floating)):return f'{x:.5g}' if np.isfinite(x) else 'NA'
+        return str(x).replace('|','/').replace('\n',' ').replace('_',' ')
+    labels={'candidate':'Candidate','baseline':'Baseline','percent_improvement':'Gain (%)','mean_improvement':'IAE diff.','ci95_low':'CI lower','ci95_high':'CI upper','p_holm_primary':'Holm p','max_thermal_difference_K':'Max dT (K)','max_product_decay_error':'Product decay error','constant_input_max_thermal_difference':'Unexcited dT','excited_uncompensated_max_thermal_difference':'Excited dT','affine_kernel_max_thermal_difference':'Affine twin dT','affine_functional_rank':'Affine rank','quadratic_functional_rank':'Quadratic rank','derivative_check_error':'Derivative error','sufficient_rank4':'Rank 4 test','thermal_severity':'Thermal integral','decision_ms':'Decision ms','RMSE_CC':'RMSE CC'}
+    return '| '+' | '.join(labels.get(str(k),str(k).replace('_',' ')) for k in cols)+' |\n| '+' | '.join(['---']*len(cols))+' |\n'+'\n'.join('| '+' | '.join(value(x) for x in row)+' |' for row in df.itertuples(index=False,name=None))+'\n'
 def text(path,body):
     path.parent.mkdir(parents=True,exist_ok=True);path.write_text(body,encoding='utf-8')
 def verify():
@@ -48,7 +50,7 @@ def produce_document(stem,body,title_,language,number,doctype='article'):
     md=src/(stem+'.md')
     pre=f'---\ntitle: "{title_}"\nauthor: "Walter Yanko de Aragão Brandão"\ndate: "20 October 2026"\nlang: "{language}"\nfontsize: 11pt\ngeometry: margin=24mm\ncolorlinks: true\n---\n\n'
     text(md,pre+body)
-    common=['pandoc',md.name,'--standalone','--citeproc','--bibliography=references.bib','--number-sections']
+    common=['pandoc',md.name,'--standalone','--citeproc','--bibliography=references.bib','--number-sections','--lua-filter=compact_tables.lua']
     log=[]
     def run(args):
         s=subprocess.run(args,cwd=src,text=True,encoding='utf-8',errors='replace',stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
@@ -61,9 +63,24 @@ def produce_document(stem,body,title_,language,number,doctype='article'):
     text(OUT/'12_REPRODUCIBILITY'/(stem+'_build.log'),'\n'.join(log))
     pdf=src/(stem+'.pdf');docx=src/(stem+'.docx')
     reader=PdfReader(pdf);pages=len(reader.pages)
+    with zipfile.ZipFile(docx) as z:
+        if z.testzip() is not None:raise RuntimeError('DOCX ZIP integrity failure')
+        xml=ET.fromstring(z.read('word/document.xml'))
+        ns={'w':'http://schemas.openxmlformats.org/wordprocessingml/2006/main','m':'http://schemas.openxmlformats.org/officeDocument/2006/math'}
+        docx_tables=len(xml.findall('.//w:tbl',ns));docx_equations=len(xml.findall('.//m:oMath',ns))
+        docx_images=len([n for n in z.namelist() if n.startswith('word/media/')])
+        if stem in ['Article_EN','Artigo_PTBR'] and (docx_tables<9 or docx_equations<10 or docx_images<16):raise RuntimeError('DOCX lacks required tables/equations/figures')
+    previews=OUT/'12_REPRODUCIBILITY/PDF_PREVIEWS';previews.mkdir(exist_ok=True)
+    target_pages={1}
+    for j,page in enumerate(reader.pages):
+        txt=page.extract_text() or ''
+        if 'Numerical results' in txt or 'Resultados numéricos' in txt:target_pages.add(j+1);break
+    for page in target_pages:
+        proc=subprocess.run(['pdftoppm','-f',str(page),'-singlefile','-scale-to','1500','-png',str(pdf),str(previews/f'{stem}_page_{page}')],stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+        if proc.returncode:raise RuntimeError('PDF preview rendering failed')
     if pages<2 or sum(len(p.extract_text() or '') for p in reader.pages)<1500:raise RuntimeError('PDF text/page validation failed')
     shutil.copy2(pdf,OUT/f'{number}_{stem}.pdf');shutil.copy2(docx,OUT/f'{number}_{stem}.docx')
-    return dict(stem=stem,pages=pages,pdf_compiled=True,docx_created=True)
+    return dict(stem=stem,pages=pages,pdf_compiled=True,docx_created=True,docx_tables=docx_tables,docx_equations=docx_equations,docx_images=docx_images)
 
 def main():
     if not (R/'execution.json').exists():raise RuntimeError('No completed execution ledger: refusing final-looking report.')
@@ -77,6 +94,7 @@ def main():
         (OUT/folder).mkdir(parents=True,exist_ok=True)
     shutil.copytree(OUT/'08_FIGURES',OUT/'07_LATEX_SOURCE/figures',dirs_exist_ok=True)
     shutil.copy2(ROOT/'manuscripts/references.bib',OUT/'07_LATEX_SOURCE/references.bib')
+    shutil.copy2(ROOT/'manuscripts/compact_tables.lua',OUT/'07_LATEX_SOURCE/compact_tables.lua')
     data=pd.read_csv(R/'episodes.csv');contrasts=pd.read_csv(R/'contrasts.csv')
     confirm=pd.read_csv(R/'confirmation_contrasts.csv');twins=pd.read_csv(R/'twins.csv');dec=pd.read_csv(R/'decisions.csv')
     mean=data.groupby(['scenario','method'])[['IAE','RMSE_CC','Tmax','thermal_severity','fallback','decision_ms','samples']].mean().reset_index()
@@ -296,6 +314,7 @@ O pacote fornece código, dados, figuras, fontes LaTeX, PDF compilado, DOCX, rev
     shutil.copy2(ROOT/'reports/literature_review.md',OUT/'15_BIBLIOGRAPHY_REVIEW/literature_review.md')
     shutil.copy2(ROOT/'reports/recovery_audit.md',OUT/'12_REPRODUCIBILITY/recovery_audit.md')
     shutil.copy2(ROOT/'reports/document_build_failure_1.md',OUT/'12_REPRODUCIBILITY/document_build_failure_1.md')
+    shutil.copy2(ROOT/'reproducibility/google_docs.json',OUT/'12_REPRODUCIBILITY/google_docs.json')
     provenance=dict(historical_model_commit='d2610a0723cbbaf00d3f4559242ba0efafb67771',frozen_execution_commit='a57be15bdddbe0c2447a9eb21bce7f6b5b63d37c',data_workflow_run=39499177732,build_commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),pandoc=subprocess.check_output(['pandoc','--version'],text=True).splitlines()[0])
     text(OUT/'12_REPRODUCIBILITY/git_provenance.json',json.dumps(provenance,indent=2))
     shutil.copy2(ROOT/'reports/initial_test_failure.md',OUT/'14_NEGATIVE_RESULTS/initial_test_failure.md')
@@ -358,6 +377,8 @@ function pic(){document.getElementById('plot').src='../08_FIGURES/Figure_'+f.val
             origin='executed frozen protocol or explicitly cited documentary/analytical material',
             reproduce='python src/reporting.py; simulations: python src/experiments.py',
             known_errors='See 00_README_START_HERE.md and scientific claims audit'))
+    for meta in json.loads((ROOT/'reproducibility/google_docs.json').read_text()).values():
+        manifest.append(dict(path=meta['url'],type='GoogleDoc',status=meta['status'],size=None,sha256=None,origin='Native document with verified tables and figures from executed data',reproduce='Recreate from Article_EN.md or Artigo_PTBR.md using native Docs operations',known_errors=meta['equations']))
     text(OUT/'17_DELIVERY_MANIFEST.json',json.dumps(dict(status='PARTIAL_CORE_EXECUTED',execution=execution,
         metrics_audit=audit,documents=builds,artifacts=manifest),indent=2))
     def archive(path,paths):
