@@ -265,7 +265,7 @@ def main():
     for s in SCENARIOS:
         for m in METHODS:
             for seed in PROTOCOL['test_seeds']:
-                try:rows.append(episode(s,m,seed,save=seed==PROTOCOL['test_seeds'][0]))
+                try:rows.append(episode(s,m,seed,save=True))
                 except Exception as e:failures.append(dict(scenario=s,method=m,seed=seed,error=repr(e),traceback=traceback.format_exc()))
             print(json.dumps(dict(scenario=s,method=m,completed=len(rows),failed=len(failures),seconds=time.perf_counter()-tic)),flush=True)
         pd.DataFrame(rows).to_csv(OUT/'episodes.csv',index=False);dump('failures.json',failures)
@@ -275,7 +275,7 @@ def main():
     for s in ['inventory_plus','inventory_minus','combined','kinetic']:
         for m in ['B1_ukf','B2_estimator','B2_both','P2_regret','P3_adaptive_regret']:
             for seed in PROTOCOL['confirmation_seeds']:
-                try:confirm.append(episode(s,m,seed))
+                try:confirm.append(episode(s,m,seed,save=True))
                 except Exception as e:failures.append(dict(scenario=s,method=m,seed=seed,error=repr(e)))
     cf=pd.DataFrame(confirm);cf.to_csv(OUT/'confirmation.csv',index=False);statistics(cf,'confirmation_')
     sensitivity=[]
