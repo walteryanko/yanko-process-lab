@@ -6,7 +6,7 @@ test_05_positivity (test_science.ScientificTests.test_05_positivity) ... ok
 test_06_independent_integration (test_science.ScientificTests.test_06_independent_integration) ... ok
 test_07_jacobian_step_consistency (test_science.ScientificTests.test_07_jacobian_step_consistency) ... ok
 test_08_twins_constant_cp_and_jacket (test_science.ScientificTests.test_08_twins_constant_cp_and_jacket) ... ok
-test_09_variable_cp_falsifies_specific_twin (test_science.ScientificTests.test_09_variable_cp_falsifies_specific_twin) ... FAIL
+test_09_variable_cp_falsifies_specific_twin (test_science.ScientificTests.test_09_variable_cp_falsifies_specific_twin) ... ok
 test_10_rank_has_two_exact_null_directions (test_science.ScientificTests.test_10_rank_has_two_exact_null_directions) ... ok
 test_11_causal_prefix (test_science.ScientificTests.test_11_causal_prefix) ... ok
 test_12_inventory_reconstruction (test_science.ScientificTests.test_12_inventory_reconstruction) ... ok
@@ -17,15 +17,7 @@ test_16_zero_conflict_not_impossible_state_error (test_science.ScientificTests.t
 test_17_seed_separation (test_science.ScientificTests.test_17_seed_separation) ... ok
 test_18_reproducible_and_metric_independent (test_science.ScientificTests.test_18_reproducible_and_metric_independent) ... ok
 
-======================================================================
-FAIL: test_09_variable_cp_falsifies_specific_twin (test_science.ScientificTests.test_09_variable_cp_falsifies_specific_twin)
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/runner/work/yanko-process-lab/yanko-process-lab/research/pg_information_control_frontier/tests/test_science.py", line 56, in test_09_variable_cp_falsifies_specific_twin
-    self.assertGreater(np.max(abs(a[:,4:]-b[:,4:])),1e-6)
-AssertionError: np.float64(9.516165278000699e-07) not greater than 1e-06
+Ran 18 tests in 11.990s
 
-----------------------------------------------------------------------
-Ran 18 tests in 12.325s
-
-FAILED (failures=1)
+OK

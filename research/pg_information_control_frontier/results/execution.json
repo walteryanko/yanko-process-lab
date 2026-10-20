@@ -1,0 +1,10 @@
+{
+  "status": "executed",
+  "episodes": 5320,
+  "confirmation": 400,
+  "grid_sensitivity": 18,
+  "planned_main": 5320,
+  "failed": 0,
+  "seconds": 1421.183675429,
+  "limitation": "finite candidate two-block NMPC; MHE window six; no industrial calibration or full historical ICAC replay"
+}
