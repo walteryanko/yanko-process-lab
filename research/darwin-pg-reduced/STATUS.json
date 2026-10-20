@@ -1,0 +1,130 @@
+{
+  "campaign": "YCS Darwin Observer — PG Reduced Model Campaign",
+  "date": "2026-10-20",
+  "status": "blocked_before_implementation_and_pilot",
+  "base_commit": "b55a46cd182c70100b50ff5e6c98ba82ed96a5a8",
+  "branch": "research/darwin-pg-reduced-20261020",
+  "execution": {
+    "python_local_available": false,
+    "attempts": 2,
+    "error": "No usable execution environment is available. Wait for an environment to become available before using this tool.",
+    "new_trajectories_started": 0,
+    "new_trajectories_completed": 0,
+    "new_trajectories_interrupted": 0,
+    "numerical_tests_run": 0,
+    "new_metrics_produced": false,
+    "remote_simulation_started": false
+  },
+  "final_protocol": {
+    "frozen": false,
+    "trajectory_count": null,
+    "target_paired_seeds_per_primary_condition": 24,
+    "minimum_paired_seeds": 20
+  },
+  "inspected_sources": [
+    "research/darwin-observer/vendor/thesis_original/modeloCT.m",
+    "research/darwin-observer/vendor/thesis_original/modeloFun_KF.m",
+    "research/darwin-observer/vendor/thesis_original/medFun_KF.m",
+    "research/darwin-observer/vendor/thesis_original/NMPC_Fmincon.m",
+    "research/darwin-observer/vendor/thesis_original/cost.m",
+    "research/darwin-observer/darwin/physics.py",
+    "research/darwin-observer/darwin/observers.py",
+    "research/darwin-observer/darwin/thesis_control.py",
+    "research/darwin-observer/darwin/thesis_cases.py",
+    "research/darwin-observer/darwin/discovery.py",
+    "research/darwin-observer/darwin/identification.py",
+    "research/darwin-observer/artifacts/thesis/protocol.json",
+    "research/darwin-observer/artifacts/thesis/source_provenance.json",
+    "research/darwin-observer/artifacts/thesis/execution.json"
+  ],
+  "library_current_results": {
+    "library_file_id": "libfile_a8125b1c0654819191c56a279b668c4c",
+    "version": "7",
+    "modified_at": "2026-10-20T17:18:34.710962Z",
+    "content_read": true
+  },
+  "archives": [
+    {
+      "name": "PG_Temporal_Causality_v0.5.zip",
+      "library_file_id": "libfile_c6e54cc590948191b311d6969d1c6d9e",
+      "internal_contents_inspected": false
+    },
+    {
+      "name": "PG_Actuator_Authority_v0.6.zip",
+      "library_file_id": "libfile_91d1ced31e9881919eff6924a0c8c6ff",
+      "internal_contents_inspected": false
+    },
+    {
+      "name": "PG_Predictor_Intervention_v0.7.zip",
+      "library_file_id": "libfile_993644f713348191bf983fd757d2bcda",
+      "internal_contents_inspected": false
+    }
+  ],
+  "conclusions": {
+    "kind": "algebraic_conditional_not_experimental",
+    "inventory_reduction_verified_by_reading": true,
+    "thermal_output_subsystem_dimension_at_most": 4,
+    "unobservable_stable_chemical_directions_at_least": 2,
+    "three_dimensional_filter_requires_exact_inventory_information": true,
+    "superiority_demonstrated": false
+  },
+  "required_methods": [
+    {
+      "id": "B1",
+      "estimator": "UKF completo nominal",
+      "predictor": "nominal"
+    },
+    {
+      "id": "B2",
+      "estimator": "UKF reduzido nominal",
+      "predictor": "nominal"
+    },
+    {
+      "id": "D1",
+      "estimator": "Darwin completo",
+      "predictor": "nominal"
+    },
+    {
+      "id": "D2",
+      "estimator": "Darwin reduzido",
+      "predictor": "nominal"
+    },
+    {
+      "id": "D3",
+      "estimator": "Darwin completo",
+      "predictor": "correcao aceita"
+    },
+    {
+      "id": "D4",
+      "estimator": "Darwin reduzido",
+      "predictor": "correcao aceita"
+    },
+    {
+      "id": "C_INFO",
+      "estimator": "UKF completo com informacao, suporte probabilistico e pontos sigma equivalentes",
+      "predictor": "nominal"
+    },
+    {
+      "id": "C_PARAM",
+      "estimator": "UKF com calibracao parametrica simples na mesma familia e dados",
+      "predictor": "mesma intervencao declarada"
+    },
+    {
+      "id": "ORACLE",
+      "estimator": "diagnostico separado",
+      "predictor": "parametros verdadeiros"
+    }
+  ],
+  "uncompleted_deliverables": [
+    "Python implementation",
+    "executed tests",
+    "frozen protocol",
+    "new individual metrics",
+    "paired confidence intervals",
+    "new PNG/SVG plots",
+    "new scientific PDF",
+    "saved new trajectories",
+    "new offline gallery",
+    "complete executed campaign ZIP"
+  ]
+}
