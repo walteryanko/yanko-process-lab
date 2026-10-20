@@ -1,7 +1,7 @@
 ---
 title: "Síntese executiva para discussão científica — PG Frontier"
 author: "Walter Yanko de Aragão Brandão"
-date: "20 October 2026"
+date: "20 de outubro de 2026"
 lang: "pt-BR"
 fontsize: 11pt
 geometry: margin=24mm

@@ -113,34 +113,34 @@ onts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}] [3]
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 1 on input line 409.
+(longtable)                in table 1 on input line 412.
 
 
-Underfull \hbox (badness 1852) in paragraph at lines 413--415
+Underfull \hbox (badness 1852) in paragraph at lines 416--418
 []\T1/lmr/m/n/10.95 (+20) Equil�brio no-mi-nal: 0.607024732, 33.989102107, 2.29
 5764605, 3.628486671, 332.333618020,
 [4] [5] [6] [7]
-Overfull \hbox (0.11757pt too wide) in alignment at lines 669--687
+Overfull \hbox (0.11757pt too wide) in alignment at lines 672--690
  [] [] [] [] [] [] [] 
 
-Overfull \hbox (0.11757pt too wide) in alignment at lines 687--689
+Overfull \hbox (0.11757pt too wide) in alignment at lines 690--692
  [] [] [] [] [] [] [] 
 
-Overfull \hbox (0.11757pt too wide) in alignment at lines 689--696
+Overfull \hbox (0.11757pt too wide) in alignment at lines 692--699
  [] [] [] [] [] [] [] 
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 3 on input line 718.
+(longtable)                in table 3 on input line 721.
 
 [8]
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 4 on input line 741.
+(longtable)                in table 4 on input line 744.
 
 [9]
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 7 on input line 856.
+(longtable)                in table 7 on input line 859.
 
 [10] [11] [12] [13 <./figures/Figure_01.png>] [14 <./figures/Figure_02.png>]
 [15 <./figures/Figure_03.png> <./figures/Figure_04.png>] [16 <./figures/Figure_
@@ -148,102 +148,96 @@ Package longtable Warning: Column widths have changed
 ure_08.png>] [18 <./figures/Figure_09.png> <./figures/Figure_10.png>] [19 <./fi
 gures/Figure_11.png>] [20 <./figures/Figure_12.png>] [21 <./figures/Figure_13.p
 ng> <./figures/Figure_14.png>] [22 <./figures/Figure_15.png>]
-Overfull \hbox (26.63126pt too wide) in paragraph at lines 1207--1211
+Overfull \hbox (26.63126pt too wide) in paragraph at lines 1210--1214
 \T1/lmr/m/n/10.95 (-20) Reference date: 20 Oc-to-ber 2026. Re-po-si-tory de-fau
 lt main was f4444d4c238291b8633743930249ee387ad94541.
 
-Overfull \hbox (8.49472pt too wide) in paragraph at lines 1247--1248
+Overfull \hbox (8.49472pt too wide) in paragraph at lines 1250--1251
 \T1/lmr/m/n/9 (-20) rio_Campanhas_PG_EB_Arioston.pdf 
 [23 <./figures/Figure_16.png>] [24] [25] [26]
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd) [27] [28]
-Overfull \hbox (79.90536pt too wide) in paragraph at lines 1620--1620
+Overfull \hbox (79.90536pt too wide) in paragraph at lines 1623--1623
 []\T1/lmtt/m/n/10.95 test_01_historical_rhs_parity (test_science.ScientificTest
 s.test_01_historical_rhs_parity) ... ok[] 
 
-Overfull \hbox (183.38257pt too wide) in paragraph at lines 1620--1620
+Overfull \hbox (183.38257pt too wide) in paragraph at lines 1623--1623
 []\T1/lmtt/m/n/10.95 test_02_conserved_reaction_inventories (test_science.Scien
 tificTests.test_02_conserved_reaction_inventories) ... ok[] 
 
-Overfull \hbox (33.9155pt too wide) in paragraph at lines 1620--1620
+Overfull \hbox (33.9155pt too wide) in paragraph at lines 1623--1623
 []\T1/lmtt/m/n/10.95 test_03_energy_accounting (test_science.ScientificTests.te
 st_03_energy_accounting) ... ok[] 
 
-Overfull \hbox (102.9003pt too wide) in paragraph at lines 1620--1620
+Overfull \hbox (102.9003pt too wide) in paragraph at lines 1623--1623
 []\T1/lmtt/m/n/10.95 test_06_independent_integration (test_science.ScientificTe
 sts.test_06_independent_integration) ... ok[] 
 
-Overfull \hbox (125.89523pt too wide) in paragraph at lines 1620--1620
+Overfull \hbox (125.89523pt too wide) in paragraph at lines 1623--1623
 []\T1/lmtt/m/n/10.95 test_07_jacobian_step_consistency (test_science.Scientific
 Tests.test_07_jacobian_step_consistency) ... ok[] 
 
-Overfull \hbox (160.38763pt too wide) in paragraph at lines 1620--1620
+Overfull \hbox (160.38763pt too wide) in paragraph at lines 1623--1623
 []\T1/lmtt/m/n/10.95 test_08_twins_constant_cp_and_jacket (test_science.Scienti
 ficTests.test_08_twins_constant_cp_and_jacket) ... ok[] 
 
-Overfull \hbox (240.8699pt too wide) in paragraph at lines 1620--1620
+Overfull \hbox (240.8699pt too wide) in paragraph at lines 1623--1623
 []\T1/lmtt/m/n/10.95 test_09_variable_cp_falsifies_specific_twin (test_science.
 ScientificTests.test_09_variable_cp_falsifies_specific_twin) ... ok[] 
 
-Overfull \hbox (229.37244pt too wide) in paragraph at lines 1620--1620
+Overfull \hbox (229.37244pt too wide) in paragraph at lines 1623--1623
 []\T1/lmtt/m/n/10.95 test_10_rank_has_two_exact_null_directions (test_science.S
 cientificTests.test_10_rank_has_two_exact_null_directions) ... ok[] 
 
-Overfull \hbox (114.39777pt too wide) in paragraph at lines 1620--1620
+Overfull \hbox (114.39777pt too wide) in paragraph at lines 1623--1623
 []\T1/lmtt/m/n/10.95 test_12_inventory_reconstruction (test_science.ScientificT
 ests.test_12_inventory_reconstruction) ... ok[] 
 
-Overfull \hbox (160.38763pt too wide) in paragraph at lines 1620--1620
+Overfull \hbox (160.38763pt too wide) in paragraph at lines 1623--1623
 []\T1/lmtt/m/n/10.95 test_14_failed_optimization_fallback (test_science.Scienti
 ficTests.test_14_failed_optimization_fallback) ... ok[] 
 
-Overfull \hbox (298.35724pt too wide) in paragraph at lines 1620--1620
+Overfull \hbox (298.35724pt too wide) in paragraph at lines 1623--1623
 []\T1/lmtt/m/n/10.95 test_16_zero_conflict_not_impossible_state_error (test_sci
 ence.ScientificTests.test_16_zero_conflict_not_impossible_state_error) ... ok[]
  
 
-Overfull \hbox (10.92056pt too wide) in paragraph at lines 1620--1620
+Overfull \hbox (10.92056pt too wide) in paragraph at lines 1623--1623
 []\T1/lmtt/m/n/10.95 test_17_seed_separation (test_science.ScientificTests.test
 _17_seed_separation) ... ok[] 
 
-Overfull \hbox (240.8699pt too wide) in paragraph at lines 1620--1620
+Overfull \hbox (240.8699pt too wide) in paragraph at lines 1623--1623
 []\T1/lmtt/m/n/10.95 test_18_reproducible_and_metric_independent (test_science.
 ScientificTests.test_18_reproducible_and_metric_independent) ... ok[] 
 [29]
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2130--2130
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2133--2133
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2132--2132
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2135--2135
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2134--2134
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2137--2137
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2136--2136
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2139--2139
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 
-Overfull \hbox (0.90163pt too wide) in paragraph at lines 2136--2136
+Overfull \hbox (0.90163pt too wide) in paragraph at lines 2139--2139
 []|\T1/lmr/m/n/9 (-20) 0.00015598|  
 
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2138--2138
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2141--2141
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2140--2140
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2143--2143
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 
-Overfull \hbox (0.90163pt too wide) in paragraph at lines 2141--2141
+Overfull \hbox (0.90163pt too wide) in paragraph at lines 2144--2144
 []|\T1/lmr/m/n/9 (-20) 0.00025534|  
 
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2142--2142
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2145--2145
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 
-Overfull \hbox (0.90163pt too wide) in paragraph at lines 2143--2143
+Overfull \hbox (0.90163pt too wide) in paragraph at lines 2146--2146
 []|\T1/lmr/m/n/9 (-20) 0.00025534|  
-
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2144--2144
-[]|\T1/lmr/m/n/9 (-20) unreachable|  
-
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2146--2146
-[]|\T1/lmr/m/n/9 (-20) unreachable|  
 
 Overfull \hbox (4.70085pt too wide) in paragraph at lines 2147--2147
 []|\T1/lmr/m/n/9 (-20) unreachable|  
@@ -251,34 +245,40 @@ Overfull \hbox (4.70085pt too wide) in paragraph at lines 2147--2147
 Overfull \hbox (4.70085pt too wide) in paragraph at lines 2149--2149
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2151--2151
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2150--2150
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 
-Overfull \hbox (0.90163pt too wide) in paragraph at lines 2152--2152
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2152--2152
+[]|\T1/lmr/m/n/9 (-20) unreachable|  
+
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2154--2154
+[]|\T1/lmr/m/n/9 (-20) unreachable|  
+
+Overfull \hbox (0.90163pt too wide) in paragraph at lines 2155--2155
 []|\T1/lmr/m/n/9 (-20) 0.00015598|  
 
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2153--2153
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2156--2156
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 
-Overfull \hbox (0.90163pt too wide) in paragraph at lines 2153--2153
+Overfull \hbox (0.90163pt too wide) in paragraph at lines 2156--2156
 []|\T1/lmr/m/n/9 (-20) 0.00015598|  
 
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2155--2155
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2158--2158
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2157--2157
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2160--2160
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2159--2159
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2162--2162
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2161--2161
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2164--2164
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2163--2163
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2166--2166
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2165--2165
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2168--2168
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 [30] [31] [32] [33] [34] [35] [36] [37] [38]
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd)
@@ -303,7 +303,7 @@ public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Scientific_Research_Report.pdf (39 pages, 2718277 bytes).
+Output written on Scientific_Research_Report.pdf (39 pages, 2711737 bytes).
 Transcript written on Scientific_Research_Report.log.
 
 COMMAND: pdflatex -interaction=nonstopmode -halt-on-error Scientific_Research_Report.tex
@@ -408,17 +408,17 @@ f/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec
 .enc}] [2{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/f
 onts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}] [3]
-Underfull \hbox (badness 1852) in paragraph at lines 413--415
+Underfull \hbox (badness 1852) in paragraph at lines 416--418
 []\T1/lmr/m/n/10.95 (+20) Equil�brio no-mi-nal: 0.607024732, 33.989102107, 2.29
 5764605, 3.628486671, 332.333618020,
 [4] [5] [6] [7]
-Overfull \hbox (0.11757pt too wide) in alignment at lines 669--687
+Overfull \hbox (0.11757pt too wide) in alignment at lines 672--690
  [] [] [] [] [] [] [] 
 
-Overfull \hbox (0.11757pt too wide) in alignment at lines 687--689
+Overfull \hbox (0.11757pt too wide) in alignment at lines 690--692
  [] [] [] [] [] [] [] 
 
-Overfull \hbox (0.11757pt too wide) in alignment at lines 689--696
+Overfull \hbox (0.11757pt too wide) in alignment at lines 692--699
  [] [] [] [] [] [] [] 
 [8] [9] [10] [11] [12] [13 <./figures/Figure_01.png>] [14 <./figures/Figure_02.
 png>] [15 <./figures/Figure_03.png> <./figures/Figure_04.png>] [16 <./figures/F
@@ -426,102 +426,96 @@ igure_05.png> <./figures/Figure_06.png>] [17 <./figures/Figure_07.png> <./figur
 es/Figure_08.png>] [18 <./figures/Figure_09.png> <./figures/Figure_10.png>]
 [19 <./figures/Figure_11.png>] [20 <./figures/Figure_12.png>] [21 <./figures/Fi
 gure_13.png> <./figures/Figure_14.png>] [22 <./figures/Figure_15.png>]
-Overfull \hbox (26.63126pt too wide) in paragraph at lines 1207--1211
+Overfull \hbox (26.63126pt too wide) in paragraph at lines 1210--1214
 \T1/lmr/m/n/10.95 (-20) Reference date: 20 Oc-to-ber 2026. Re-po-si-tory de-fau
 lt main was f4444d4c238291b8633743930249ee387ad94541.
 
-Overfull \hbox (8.49472pt too wide) in paragraph at lines 1247--1248
+Overfull \hbox (8.49472pt too wide) in paragraph at lines 1250--1251
 \T1/lmr/m/n/9 (-20) rio_Campanhas_PG_EB_Arioston.pdf 
 [23 <./figures/Figure_16.png>] [24] [25] [26]
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd) [27] [28]
-Overfull \hbox (79.90536pt too wide) in paragraph at lines 1620--1620
+Overfull \hbox (79.90536pt too wide) in paragraph at lines 1623--1623
 []\T1/lmtt/m/n/10.95 test_01_historical_rhs_parity (test_science.ScientificTest
 s.test_01_historical_rhs_parity) ... ok[] 
 
-Overfull \hbox (183.38257pt too wide) in paragraph at lines 1620--1620
+Overfull \hbox (183.38257pt too wide) in paragraph at lines 1623--1623
 []\T1/lmtt/m/n/10.95 test_02_conserved_reaction_inventories (test_science.Scien
 tificTests.test_02_conserved_reaction_inventories) ... ok[] 
 
-Overfull \hbox (33.9155pt too wide) in paragraph at lines 1620--1620
+Overfull \hbox (33.9155pt too wide) in paragraph at lines 1623--1623
 []\T1/lmtt/m/n/10.95 test_03_energy_accounting (test_science.ScientificTests.te
 st_03_energy_accounting) ... ok[] 
 
-Overfull \hbox (102.9003pt too wide) in paragraph at lines 1620--1620
+Overfull \hbox (102.9003pt too wide) in paragraph at lines 1623--1623
 []\T1/lmtt/m/n/10.95 test_06_independent_integration (test_science.ScientificTe
 sts.test_06_independent_integration) ... ok[] 
 
-Overfull \hbox (125.89523pt too wide) in paragraph at lines 1620--1620
+Overfull \hbox (125.89523pt too wide) in paragraph at lines 1623--1623
 []\T1/lmtt/m/n/10.95 test_07_jacobian_step_consistency (test_science.Scientific
 Tests.test_07_jacobian_step_consistency) ... ok[] 
 
-Overfull \hbox (160.38763pt too wide) in paragraph at lines 1620--1620
+Overfull \hbox (160.38763pt too wide) in paragraph at lines 1623--1623
 []\T1/lmtt/m/n/10.95 test_08_twins_constant_cp_and_jacket (test_science.Scienti
 ficTests.test_08_twins_constant_cp_and_jacket) ... ok[] 
 
-Overfull \hbox (240.8699pt too wide) in paragraph at lines 1620--1620
+Overfull \hbox (240.8699pt too wide) in paragraph at lines 1623--1623
 []\T1/lmtt/m/n/10.95 test_09_variable_cp_falsifies_specific_twin (test_science.
 ScientificTests.test_09_variable_cp_falsifies_specific_twin) ... ok[] 
 
-Overfull \hbox (229.37244pt too wide) in paragraph at lines 1620--1620
+Overfull \hbox (229.37244pt too wide) in paragraph at lines 1623--1623
 []\T1/lmtt/m/n/10.95 test_10_rank_has_two_exact_null_directions (test_science.S
 cientificTests.test_10_rank_has_two_exact_null_directions) ... ok[] 
 
-Overfull \hbox (114.39777pt too wide) in paragraph at lines 1620--1620
+Overfull \hbox (114.39777pt too wide) in paragraph at lines 1623--1623
 []\T1/lmtt/m/n/10.95 test_12_inventory_reconstruction (test_science.ScientificT
 ests.test_12_inventory_reconstruction) ... ok[] 
 
-Overfull \hbox (160.38763pt too wide) in paragraph at lines 1620--1620
+Overfull \hbox (160.38763pt too wide) in paragraph at lines 1623--1623
 []\T1/lmtt/m/n/10.95 test_14_failed_optimization_fallback (test_science.Scienti
 ficTests.test_14_failed_optimization_fallback) ... ok[] 
 
-Overfull \hbox (298.35724pt too wide) in paragraph at lines 1620--1620
+Overfull \hbox (298.35724pt too wide) in paragraph at lines 1623--1623
 []\T1/lmtt/m/n/10.95 test_16_zero_conflict_not_impossible_state_error (test_sci
 ence.ScientificTests.test_16_zero_conflict_not_impossible_state_error) ... ok[]
  
 
-Overfull \hbox (10.92056pt too wide) in paragraph at lines 1620--1620
+Overfull \hbox (10.92056pt too wide) in paragraph at lines 1623--1623
 []\T1/lmtt/m/n/10.95 test_17_seed_separation (test_science.ScientificTests.test
 _17_seed_separation) ... ok[] 
 
-Overfull \hbox (240.8699pt too wide) in paragraph at lines 1620--1620
+Overfull \hbox (240.8699pt too wide) in paragraph at lines 1623--1623
 []\T1/lmtt/m/n/10.95 test_18_reproducible_and_metric_independent (test_science.
 ScientificTests.test_18_reproducible_and_metric_independent) ... ok[] 
 [29]
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2130--2130
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2133--2133
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2132--2132
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2135--2135
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2134--2134
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2137--2137
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2136--2136
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2139--2139
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 
-Overfull \hbox (0.90163pt too wide) in paragraph at lines 2136--2136
+Overfull \hbox (0.90163pt too wide) in paragraph at lines 2139--2139
 []|\T1/lmr/m/n/9 (-20) 0.00015598|  
 
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2138--2138
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2141--2141
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2140--2140
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2143--2143
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 
-Overfull \hbox (0.90163pt too wide) in paragraph at lines 2141--2141
+Overfull \hbox (0.90163pt too wide) in paragraph at lines 2144--2144
 []|\T1/lmr/m/n/9 (-20) 0.00025534|  
 
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2142--2142
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2145--2145
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 
-Overfull \hbox (0.90163pt too wide) in paragraph at lines 2143--2143
+Overfull \hbox (0.90163pt too wide) in paragraph at lines 2146--2146
 []|\T1/lmr/m/n/9 (-20) 0.00025534|  
-
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2144--2144
-[]|\T1/lmr/m/n/9 (-20) unreachable|  
-
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2146--2146
-[]|\T1/lmr/m/n/9 (-20) unreachable|  
 
 Overfull \hbox (4.70085pt too wide) in paragraph at lines 2147--2147
 []|\T1/lmr/m/n/9 (-20) unreachable|  
@@ -529,34 +523,40 @@ Overfull \hbox (4.70085pt too wide) in paragraph at lines 2147--2147
 Overfull \hbox (4.70085pt too wide) in paragraph at lines 2149--2149
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2151--2151
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2150--2150
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 
-Overfull \hbox (0.90163pt too wide) in paragraph at lines 2152--2152
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2152--2152
+[]|\T1/lmr/m/n/9 (-20) unreachable|  
+
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2154--2154
+[]|\T1/lmr/m/n/9 (-20) unreachable|  
+
+Overfull \hbox (0.90163pt too wide) in paragraph at lines 2155--2155
 []|\T1/lmr/m/n/9 (-20) 0.00015598|  
 
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2153--2153
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2156--2156
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 
-Overfull \hbox (0.90163pt too wide) in paragraph at lines 2153--2153
+Overfull \hbox (0.90163pt too wide) in paragraph at lines 2156--2156
 []|\T1/lmr/m/n/9 (-20) 0.00015598|  
 
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2155--2155
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2158--2158
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2157--2157
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2160--2160
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2159--2159
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2162--2162
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2161--2161
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2164--2164
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2163--2163
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2166--2166
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 
-Overfull \hbox (4.70085pt too wide) in paragraph at lines 2165--2165
+Overfull \hbox (4.70085pt too wide) in paragraph at lines 2168--2168
 []|\T1/lmr/m/n/9 (-20) unreachable|  
 [30] [31] [32] [33] [34] [35] [36] [37] [38]
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd) [39{/usr/share/texmf/fonts/enc/dvips/
@@ -573,5 +573,5 @@ public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Scientific_Research_Report.pdf (39 pages, 2718281 bytes).
+Output written on Scientific_Research_Report.pdf (39 pages, 2711742 bytes).
 Transcript written on Scientific_Research_Report.log.

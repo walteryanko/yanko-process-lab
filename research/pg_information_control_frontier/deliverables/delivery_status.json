@@ -3,13 +3,13 @@
   "archives": [
     {
       "name": "YCS_PG_Information_Control_Frontier_v1.0_PARTIAL_CODE_DATA.zip",
-      "bytes": 64876452,
-      "sha256": "cdca6bc022b2af5990dcbc547872831db5c897c136232533f5dca9a96cfb0a09"
+      "bytes": 64796403,
+      "sha256": "8f1d3596f4f63b476e1f7ca40eb8d0c311a8cab83fa7d6bf208b6455ff282d73"
     },
     {
       "name": "YCS_PG_Information_Control_Frontier_v1.0_PARTIAL_MANUSCRIPTS.zip",
-      "bytes": 42594170,
-      "sha256": "9821a86c1afc5fe5810ef40064a11ef011b2a2dc80ea88d8dc4696ace8a5640a"
+      "bytes": 42542167,
+      "sha256": "451995008c3b5854ee0c9f6ecaecc0ac526eb294dd1924477492321f5db704c5"
     }
   ],
   "documents": [
@@ -50,5 +50,5 @@
       "docx_images": 0
     }
   ],
-  "manifest_entries": 5913
+  "manifest_entries": 5914
 }

@@ -70,8 +70,8 @@
       "path": "01_EXECUTIVE_SUMMARY.docx",
       "type": ".docx",
       "status": "created",
-      "size": 12635,
-      "sha256": "00b63e4ef862442b1bc0bef8ae4b13f4d36730ea0f5b53f87f589cce4a736e01",
+      "size": 12642,
+      "sha256": "7efd5ff18c88242ec10e63c5841f2148071820e07a8bf0e064aabacdc8fa25fd",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -80,8 +80,8 @@
       "path": "01_EXECUTIVE_SUMMARY.pdf",
       "type": ".pdf",
       "status": "created",
-      "size": 150007,
-      "sha256": "86ffd2c4a0edf48905c1a7cad0ba38137463314864130b4bb20d270d61fde80e",
+      "size": 149893,
+      "sha256": "05ac987fa1ea6f40c9fcb3ca1e52feb12ae8fe0f1961ca590f7830e7b3262562",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -90,8 +90,8 @@
       "path": "02_Scientific_Research_Report.docx",
       "type": ".docx",
       "status": "created",
-      "size": 2554150,
-      "sha256": "035a73cff7b4f9f5900c3ddd97132edb9bb48499d619b13e4b005d5742214d90",
+      "size": 2551693,
+      "sha256": "5d459befe3b21e11c794ae9b05260257a1c2fab4de0da781f0255dc5718e54ee",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -100,8 +100,8 @@
       "path": "02_Scientific_Research_Report.pdf",
       "type": ".pdf",
       "status": "created",
-      "size": 2718281,
-      "sha256": "94b6c680a6ff8d6e2ba5dc72b4331e900bbd4f6a336efffadb1abe7f2ef5bf66",
+      "size": 2711742,
+      "sha256": "ddc6778eda3f7b60fbe1241a61054c3dbb04eaa05f31f383fd8a143fbbd85e45",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -110,8 +110,8 @@
       "path": "03_Article_EN.docx",
       "type": ".docx",
       "status": "created",
-      "size": 2537114,
-      "sha256": "5a5b26e94254f1ccc26a333f23215a3f31142ec52bdab2b3782af9f3aa354c7f",
+      "size": 2534649,
+      "sha256": "660935a3ea64f78dc621bf25e42ff49e38e66d2a644ac39decb2d2c956421145",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -120,8 +120,8 @@
       "path": "03_Article_EN.pdf",
       "type": ".pdf",
       "status": "created",
-      "size": 2629337,
-      "sha256": "dc0199281276e1818b2956bea5ab1863863c8e1b24d2cdb3937cb57c9fcdb762",
+      "size": 2622998,
+      "sha256": "35b45bb84e6a3ab63b0a4a4d8ba485a0bf3236dc472ccb85f08d71a6c92be1a1",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -130,8 +130,8 @@
       "path": "04_ARTICLE_EN.docx",
       "type": ".docx",
       "status": "created",
-      "size": 2537114,
-      "sha256": "5a5b26e94254f1ccc26a333f23215a3f31142ec52bdab2b3782af9f3aa354c7f",
+      "size": 2534649,
+      "sha256": "660935a3ea64f78dc621bf25e42ff49e38e66d2a644ac39decb2d2c956421145",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -140,8 +140,8 @@
       "path": "05_Artigo_PTBR.docx",
       "type": ".docx",
       "status": "created",
-      "size": 2537053,
-      "sha256": "df9a5d4a6b3deba31687c28a722e00f2e15302eeb7fa3559c3f9de6bba2a16d6",
+      "size": 2534596,
+      "sha256": "5abba0fc1800a4bce15a48097456988d4b854893ee8297e4faf2ac1bcaa23e1d",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -150,8 +150,8 @@
       "path": "05_Artigo_PTBR.pdf",
       "type": ".pdf",
       "status": "created",
-      "size": 2631917,
-      "sha256": "f5d989f7665291669beb10ee449d92336ffba7aa30cedce46c44e8ac8a204d30",
+      "size": 2625398,
+      "sha256": "02e7e67ee92ce94652b812ad6bb46a570ebebab54b9cbe9a9f90589de5c35b89",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -160,8 +160,8 @@
       "path": "06_ARTICLE_PTBR.docx",
       "type": ".docx",
       "status": "created",
-      "size": 2537053,
-      "sha256": "df9a5d4a6b3deba31687c28a722e00f2e15302eeb7fa3559c3f9de6bba2a16d6",
+      "size": 2534596,
+      "sha256": "5abba0fc1800a4bce15a48097456988d4b854893ee8297e4faf2ac1bcaa23e1d",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -170,8 +170,8 @@
       "path": "07_LATEX_SOURCE/Article_EN.docx",
       "type": ".docx",
       "status": "created",
-      "size": 2537114,
-      "sha256": "5a5b26e94254f1ccc26a333f23215a3f31142ec52bdab2b3782af9f3aa354c7f",
+      "size": 2534649,
+      "sha256": "660935a3ea64f78dc621bf25e42ff49e38e66d2a644ac39decb2d2c956421145",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -180,8 +180,8 @@
       "path": "07_LATEX_SOURCE/Article_EN.md",
       "type": ".md",
       "status": "created",
-      "size": 39212,
-      "sha256": "a4584a63902e7ed31dfecf79b18420b4f38d5e16c71fd55fb0d48ebeaad5eb95",
+      "size": 39214,
+      "sha256": "8a5eae0cecd58319a091e910b44af824cd26b8e9c3bbe5b72602462c6cada017",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -190,8 +190,8 @@
       "path": "07_LATEX_SOURCE/Article_EN.pdf",
       "type": ".pdf",
       "status": "created",
-      "size": 2629337,
-      "sha256": "dc0199281276e1818b2956bea5ab1863863c8e1b24d2cdb3937cb57c9fcdb762",
+      "size": 2622998,
+      "sha256": "35b45bb84e6a3ab63b0a4a4d8ba485a0bf3236dc472ccb85f08d71a6c92be1a1",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -200,8 +200,8 @@
       "path": "07_LATEX_SOURCE/Article_EN.tex",
       "type": ".tex",
       "status": "created",
-      "size": 56528,
-      "sha256": "501fbff672aacdcdb1bfd5f70721d8bf1423269c43fa7a3b2e055364a4e578ee",
+      "size": 56586,
+      "sha256": "24bfe178a7a6436de10ac0a6322260393e7b5ccdd5c8f434f03a25e077e3f92a",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -210,8 +210,8 @@
       "path": "07_LATEX_SOURCE/Artigo_PTBR.docx",
       "type": ".docx",
       "status": "created",
-      "size": 2537053,
-      "sha256": "df9a5d4a6b3deba31687c28a722e00f2e15302eeb7fa3559c3f9de6bba2a16d6",
+      "size": 2534596,
+      "sha256": "5abba0fc1800a4bce15a48097456988d4b854893ee8297e4faf2ac1bcaa23e1d",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -220,8 +220,8 @@
       "path": "07_LATEX_SOURCE/Artigo_PTBR.md",
       "type": ".md",
       "status": "created",
-      "size": 39424,
-      "sha256": "ba1efabd5d7aa6361664e03ed930bef968905f2f70dc78faefe05660a04531ed",
+      "size": 39432,
+      "sha256": "299c4fed5a898bf5dd1b28ca4b76d0ee5cf7affd04e5cf0c97908b4ea4c65ceb",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -230,8 +230,8 @@
       "path": "07_LATEX_SOURCE/Artigo_PTBR.pdf",
       "type": ".pdf",
       "status": "created",
-      "size": 2631917,
-      "sha256": "f5d989f7665291669beb10ee449d92336ffba7aa30cedce46c44e8ac8a204d30",
+      "size": 2625398,
+      "sha256": "02e7e67ee92ce94652b812ad6bb46a570ebebab54b9cbe9a9f90589de5c35b89",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -240,8 +240,8 @@
       "path": "07_LATEX_SOURCE/Artigo_PTBR.tex",
       "type": ".tex",
       "status": "created",
-      "size": 57172,
-      "sha256": "0329b6478b35a34e864320d8e13dfdbb0a238df1f55ac8a4e621e23a06c16498",
+      "size": 57244,
+      "sha256": "2a059c6101a6f8825feb6c94e5f16b969b7faa4778ff8cb372a066fa5052064f",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -250,8 +250,8 @@
       "path": "07_LATEX_SOURCE/EXECUTIVE_SUMMARY.docx",
       "type": ".docx",
       "status": "created",
-      "size": 12635,
-      "sha256": "00b63e4ef862442b1bc0bef8ae4b13f4d36730ea0f5b53f87f589cce4a736e01",
+      "size": 12642,
+      "sha256": "7efd5ff18c88242ec10e63c5841f2148071820e07a8bf0e064aabacdc8fa25fd",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -260,8 +260,8 @@
       "path": "07_LATEX_SOURCE/EXECUTIVE_SUMMARY.md",
       "type": ".md",
       "status": "created",
-      "size": 3995,
-      "sha256": "9b38233bba32f920b8279c050e3b0fdbbc3eb668ba943d21f660327078f0f590",
+      "size": 4001,
+      "sha256": "9219d789770e6bde4a084025e9d60d0673c9ebfdd726a7509c0f6885ae235744",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -270,8 +270,8 @@
       "path": "07_LATEX_SOURCE/EXECUTIVE_SUMMARY.pdf",
       "type": ".pdf",
       "status": "created",
-      "size": 150007,
-      "sha256": "86ffd2c4a0edf48905c1a7cad0ba38137463314864130b4bb20d270d61fde80e",
+      "size": 149893,
+      "sha256": "05ac987fa1ea6f40c9fcb3ca1e52feb12ae8fe0f1961ca590f7830e7b3262562",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -280,8 +280,8 @@
       "path": "07_LATEX_SOURCE/EXECUTIVE_SUMMARY.tex",
       "type": ".tex",
       "status": "created",
-      "size": 8201,
-      "sha256": "f95a5411b7288605b54066a594f66175101670811beba6b3909999308b995147",
+      "size": 8207,
+      "sha256": "d914e6a00d542161dfadc7f7c4daf7f4f2786e347698147348b939bd9cc8585c",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -290,8 +290,8 @@
       "path": "07_LATEX_SOURCE/Scientific_Research_Report.docx",
       "type": ".docx",
       "status": "created",
-      "size": 2554150,
-      "sha256": "035a73cff7b4f9f5900c3ddd97132edb9bb48499d619b13e4b005d5742214d90",
+      "size": 2551693,
+      "sha256": "5d459befe3b21e11c794ae9b05260257a1c2fab4de0da781f0255dc5718e54ee",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -300,8 +300,8 @@
       "path": "07_LATEX_SOURCE/Scientific_Research_Report.md",
       "type": ".md",
       "status": "created",
-      "size": 76124,
-      "sha256": "4a0eff22208ef71571d51ddc5d04a7d55c08543d8bf0ae7a0e3ca0a782308b48",
+      "size": 76132,
+      "sha256": "741ba4eb12122a466585239ccd5c8d22b4460710080fee1a47bf2d767491589c",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -310,8 +310,8 @@
       "path": "07_LATEX_SOURCE/Scientific_Research_Report.pdf",
       "type": ".pdf",
       "status": "created",
-      "size": 2718281,
-      "sha256": "94b6c680a6ff8d6e2ba5dc72b4331e900bbd4f6a336efffadb1abe7f2ef5bf66",
+      "size": 2711742,
+      "sha256": "ddc6778eda3f7b60fbe1241a61054c3dbb04eaa05f31f383fd8a143fbbd85e45",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -320,8 +320,8 @@
       "path": "07_LATEX_SOURCE/Scientific_Research_Report.tex",
       "type": ".tex",
       "status": "created",
-      "size": 103634,
-      "sha256": "e254ebe9ed4d2f4c5463760f5c642168eff4c09fb7bba9bf9ea14d932c029afb",
+      "size": 103706,
+      "sha256": "ec0f0fc63454808225644898d0a566461bdc0fb6fac4e98bc62e0668cb25696a",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -341,7 +341,7 @@
       "type": ".pdf",
       "status": "created",
       "size": 14508,
-      "sha256": "ed8107d8138303411942840e4fad423215242cdc39ff6a3dba51520a7b01fddf",
+      "sha256": "b17b6125201470c204a7a62145d02e40c4dab567893204b1fa34feb67c19b951",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -361,7 +361,7 @@
       "type": ".pdf",
       "status": "created",
       "size": 16858,
-      "sha256": "207b62c4cbcabb74f0f010c05915347217641af70e10a5a6549907f6e07716a1",
+      "sha256": "99ca776777fab2cca42f7d09ba4aa397fc1947c93a8a78f7b35d25fc382f3d8e",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -381,7 +381,7 @@
       "type": ".pdf",
       "status": "created",
       "size": 25405,
-      "sha256": "b45b112dce870ac3a35836c323f9c4c524ccacdcb71c28eb15e0ba1318ecd2f2",
+      "sha256": "63218d2f97620a7ea8536fa509158ffa42e038f906ff6f08d03fe7b108d2f8d5",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -401,7 +401,7 @@
       "type": ".pdf",
       "status": "created",
       "size": 17814,
-      "sha256": "e43cd882374b3f4d441340121fbd2c649efd621265dc825407693418e9bcd61e",
+      "sha256": "9aa2071f203b4abf90038137728902f1115671fb73ae8730c40acff36fd02170",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -421,7 +421,7 @@
       "type": ".pdf",
       "status": "created",
       "size": 17247,
-      "sha256": "10d13613c63bb997ec52d7577d52885e2cab59e6b8f2fc8171166c5ed6041131",
+      "sha256": "fcbd601f9e8dcd3e1602d51b7c40fdcc6803b4e6fcd455726a72af66852aa537",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -441,7 +441,7 @@
       "type": ".pdf",
       "status": "created",
       "size": 19833,
-      "sha256": "2ac4f46fd9ab5a1eea1b2e32266ade0e406fb308e19af491707dbcb1131e9ec9",
+      "sha256": "54dfd3893a3fb9fb4e038733d66ece1f25359ec43ccf73befcac93e12bc7c067",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -461,7 +461,7 @@
       "type": ".pdf",
       "status": "created",
       "size": 15719,
-      "sha256": "46b66daff962303539e78e63188a33837aeb79a67ec29bcea1d98e2b0d847c23",
+      "sha256": "5f7f1ebcad900907d993158ba26b4171af7e1daf6f01e2bbe45bcf9affb323d1",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -481,7 +481,7 @@
       "type": ".pdf",
       "status": "created",
       "size": 18157,
-      "sha256": "711ffcd413a95aa1c16c765f8de28abe10e11c45ac9d76955821efd2c0ef69ce",
+      "sha256": "c9f378fecd3b043dc6a16cb6bde60e93191a2bd8f0c6a770d07746f00ccfb2a1",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -501,7 +501,7 @@
       "type": ".pdf",
       "status": "created",
       "size": 18164,
-      "sha256": "7cd83d1f0a0665e8fc8eb4eb392f141e6e953fb7261db3b29ba26d72607a8e85",
+      "sha256": "97477b84fd5b31b9fcdbe344540c0bd73553a955883949856ac9f99a100db450",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -521,7 +521,7 @@
       "type": ".pdf",
       "status": "created",
       "size": 18902,
-      "sha256": "4907194bb6a0ec712860bd3fa1c6da5790ef71ec1c3ed41f93b7bdcd7a387a18",
+      "sha256": "990008bd6a5b5913397ba2d5cdc8231d1723ab31e0d2391f41e94ef2760d10aa",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -541,7 +541,7 @@
       "type": ".pdf",
       "status": "created",
       "size": 19732,
-      "sha256": "7ffc2739cf532bdd4e05968b858b351bd7a9f357407c1b861b28886474134ca1",
+      "sha256": "4cf2e0a2f93f81a76b478dc39c661684062d61e83ffdb828b746fb86428404f4",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -561,7 +561,7 @@
       "type": ".pdf",
       "status": "created",
       "size": 18999,
-      "sha256": "5607738e68e328bc619d98b010c7477910b71067cf16be6f951421da6db8b706",
+      "sha256": "b44e346a5810e29f8a6c2e3a502a6e1bbb3d1dc0058a6addd39eb056700e4604",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -581,7 +581,7 @@
       "type": ".pdf",
       "status": "created",
       "size": 15892,
-      "sha256": "40419ea3184e75e762dc688a760b86899c85499f8afc10ab98d71333b406ee26",
+      "sha256": "94af7c87d8f16661bb6f9d1ee06bcbd0cbff0c580b6b8061661c07a0fb4af02a",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -601,7 +601,7 @@
       "type": ".pdf",
       "status": "created",
       "size": 15714,
-      "sha256": "89a57aa4303b6c4a050dd7267a2ae78f35d6b7fcd3f0004902738b9e27209acb",
+      "sha256": "25969c52f9ceafa410150ded79310b3d273c5c239a1c3fdb17db5ce6f630abb3",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -620,8 +620,8 @@
       "path": "07_LATEX_SOURCE/figures/Figure_15.pdf",
       "type": ".pdf",
       "status": "created",
-      "size": 21900,
-      "sha256": "6974d52dde6b9a53271f61c396f414c35d760d68b9cb7333de5225c54dfcf3ad",
+      "size": 21725,
+      "sha256": "a2523556847e2f176ac72ef837547c59b4bc5a7ac41f05ebcbfd3ec0cae807cb",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -630,8 +630,8 @@
       "path": "07_LATEX_SOURCE/figures/Figure_15.png",
       "type": ".png",
       "status": "created",
-      "size": 254172,
-      "sha256": "5b1d6adec8832dc5b7f54085e45ecd8990ec33a38c49e0b4ccae78def6521870",
+      "size": 252446,
+      "sha256": "f2ea92757e4bcfc0fa3813df39c1cea341626e521338cce224c6140849f872c0",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -641,7 +641,7 @@
       "type": ".pdf",
       "status": "created",
       "size": 71039,
-      "sha256": "9175de45a58c0ac2e467988fa4bc5abb4a903859cbb04ffb640588870add34e6",
+      "sha256": "c4ddef4e457ae74e2dfc0ae48b55f4ba0fa42b528a960861756842aa5e0266bf",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -681,7 +681,7 @@
       "type": ".pdf",
       "status": "created",
       "size": 14508,
-      "sha256": "ed8107d8138303411942840e4fad423215242cdc39ff6a3dba51520a7b01fddf",
+      "sha256": "b17b6125201470c204a7a62145d02e40c4dab567893204b1fa34feb67c19b951",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -701,7 +701,7 @@
       "type": ".pdf",
       "status": "created",
       "size": 16858,
-      "sha256": "207b62c4cbcabb74f0f010c05915347217641af70e10a5a6549907f6e07716a1",
+      "sha256": "99ca776777fab2cca42f7d09ba4aa397fc1947c93a8a78f7b35d25fc382f3d8e",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -721,7 +721,7 @@
       "type": ".pdf",
       "status": "created",
       "size": 25405,
-      "sha256": "b45b112dce870ac3a35836c323f9c4c524ccacdcb71c28eb15e0ba1318ecd2f2",
+      "sha256": "63218d2f97620a7ea8536fa509158ffa42e038f906ff6f08d03fe7b108d2f8d5",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -741,7 +741,7 @@
       "type": ".pdf",
       "status": "created",
       "size": 17814,
-      "sha256": "e43cd882374b3f4d441340121fbd2c649efd621265dc825407693418e9bcd61e",
+      "sha256": "9aa2071f203b4abf90038137728902f1115671fb73ae8730c40acff36fd02170",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -761,7 +761,7 @@
       "type": ".pdf",
       "status": "created",
       "size": 17247,
-      "sha256": "10d13613c63bb997ec52d7577d52885e2cab59e6b8f2fc8171166c5ed6041131",
+      "sha256": "fcbd601f9e8dcd3e1602d51b7c40fdcc6803b4e6fcd455726a72af66852aa537",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -781,7 +781,7 @@
       "type": ".pdf",
       "status": "created",
       "size": 19833,
-      "sha256": "2ac4f46fd9ab5a1eea1b2e32266ade0e406fb308e19af491707dbcb1131e9ec9",
+      "sha256": "54dfd3893a3fb9fb4e038733d66ece1f25359ec43ccf73befcac93e12bc7c067",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -801,7 +801,7 @@
       "type": ".pdf",
       "status": "created",
       "size": 15719,
-      "sha256": "46b66daff962303539e78e63188a33837aeb79a67ec29bcea1d98e2b0d847c23",
+      "sha256": "5f7f1ebcad900907d993158ba26b4171af7e1daf6f01e2bbe45bcf9affb323d1",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -821,7 +821,7 @@
       "type": ".pdf",
       "status": "created",
       "size": 18157,
-      "sha256": "711ffcd413a95aa1c16c765f8de28abe10e11c45ac9d76955821efd2c0ef69ce",
+      "sha256": "c9f378fecd3b043dc6a16cb6bde60e93191a2bd8f0c6a770d07746f00ccfb2a1",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -841,7 +841,7 @@
       "type": ".pdf",
       "status": "created",
       "size": 18164,
-      "sha256": "7cd83d1f0a0665e8fc8eb4eb392f141e6e953fb7261db3b29ba26d72607a8e85",
+      "sha256": "97477b84fd5b31b9fcdbe344540c0bd73553a955883949856ac9f99a100db450",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -861,7 +861,7 @@
       "type": ".pdf",
       "status": "created",
       "size": 18902,
-      "sha256": "4907194bb6a0ec712860bd3fa1c6da5790ef71ec1c3ed41f93b7bdcd7a387a18",
+      "sha256": "990008bd6a5b5913397ba2d5cdc8231d1723ab31e0d2391f41e94ef2760d10aa",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -881,7 +881,7 @@
       "type": ".pdf",
       "status": "created",
       "size": 19732,
-      "sha256": "7ffc2739cf532bdd4e05968b858b351bd7a9f357407c1b861b28886474134ca1",
+      "sha256": "4cf2e0a2f93f81a76b478dc39c661684062d61e83ffdb828b746fb86428404f4",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -901,7 +901,7 @@
       "type": ".pdf",
       "status": "created",
       "size": 18999,
-      "sha256": "5607738e68e328bc619d98b010c7477910b71067cf16be6f951421da6db8b706",
+      "sha256": "b44e346a5810e29f8a6c2e3a502a6e1bbb3d1dc0058a6addd39eb056700e4604",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -921,7 +921,7 @@
       "type": ".pdf",
       "status": "created",
       "size": 15892,
-      "sha256": "40419ea3184e75e762dc688a760b86899c85499f8afc10ab98d71333b406ee26",
+      "sha256": "94af7c87d8f16661bb6f9d1ee06bcbd0cbff0c580b6b8061661c07a0fb4af02a",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -941,7 +941,7 @@
       "type": ".pdf",
       "status": "created",
       "size": 15714,
-      "sha256": "89a57aa4303b6c4a050dd7267a2ae78f35d6b7fcd3f0004902738b9e27209acb",
+      "sha256": "25969c52f9ceafa410150ded79310b3d273c5c239a1c3fdb17db5ce6f630abb3",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -960,8 +960,8 @@
       "path": "08_FIGURES/Figure_15.pdf",
       "type": ".pdf",
       "status": "created",
-      "size": 21900,
-      "sha256": "6974d52dde6b9a53271f61c396f414c35d760d68b9cb7333de5225c54dfcf3ad",
+      "size": 21725,
+      "sha256": "a2523556847e2f176ac72ef837547c59b4bc5a7ac41f05ebcbfd3ec0cae807cb",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -970,8 +970,8 @@
       "path": "08_FIGURES/Figure_15.png",
       "type": ".png",
       "status": "created",
-      "size": 254172,
-      "sha256": "5b1d6adec8832dc5b7f54085e45ecd8990ec33a38c49e0b4ccae78def6521870",
+      "size": 252446,
+      "sha256": "f2ea92757e4bcfc0fa3813df39c1cea341626e521338cce224c6140849f872c0",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -981,7 +981,7 @@
       "type": ".pdf",
       "status": "created",
       "size": 71039,
-      "sha256": "9175de45a58c0ac2e467988fa4bc5abb4a903859cbb04ffb640588870add34e6",
+      "sha256": "c4ddef4e457ae74e2dfc0ae48b55f4ba0fa42b528a960861756842aa5e0266bf",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -58797,6 +58797,16 @@
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
     },
     {
+      "path": "10_CODE/research/pg_information_control_frontier/reproducibility/BUILD_REQUEST_5.md",
+      "type": ".md",
+      "status": "created",
+      "size": 261,
+      "sha256": "d2754dc82ae07996c8c14047a0374a6154c1e1de7efcad8977a5bd25c8154217",
+      "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
+      "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
+      "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
+    },
+    {
       "path": "10_CODE/research/pg_information_control_frontier/reproducibility/document_requirements.txt",
       "type": ".txt",
       "status": "created",
@@ -58810,8 +58820,8 @@
       "path": "10_CODE/research/pg_information_control_frontier/reproducibility/google_docs.json",
       "type": ".json",
       "status": "created",
-      "size": 1025,
-      "sha256": "23cc4dc6a02d94407f168d4393c79e8fc89e16b56c8bcc5452fa430a5638a7da",
+      "size": 1233,
+      "sha256": "5e4bb2ef5bc124445400f7d0fe404e89786c9351392caf114d2c3bb8ca5b38a9",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -58870,8 +58880,8 @@
       "path": "10_CODE/research/pg_information_control_frontier/src/figures.py",
       "type": ".py",
       "status": "created",
-      "size": 9412,
-      "sha256": "8860dd52da69f7bea1052e5771123f83646e7a0afc9d12c36df55e1535e34ad3",
+      "size": 9512,
+      "sha256": "adfba2bf6637730ff9d82e2bb2d8e4f96ac426644a8583ba8daa03b49bae67f5",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -58890,8 +58900,8 @@
       "path": "10_CODE/research/pg_information_control_frontier/src/reporting.py",
       "type": ".py",
       "status": "created",
-      "size": 46846,
-      "sha256": "26cb12d471f90fc4226e82e181560ad773df2e6bbc2acc9dce99728b694c962f",
+      "size": 46948,
+      "sha256": "05cdb164edd39eed54eef7b5668bb990c922dc3d93b996343a5c8cc14f435067",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -58941,7 +58951,7 @@
       "type": ".log",
       "status": "created",
       "size": 17140,
-      "sha256": "1851775fdd3af5acae916d1d3a28781438ecdf21eb2db1eb40e6c1d72261d0dc",
+      "sha256": "6d92ea685556bbaf45e3263dcc24f2dc48bf007eb1bc3f845738c9a58d7f5a32",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -58951,7 +58961,7 @@
       "type": ".log",
       "status": "created",
       "size": 17702,
-      "sha256": "b564f94270c14be6c5201f45e8de5b4e315696fc0c9075ff08d4140973461aa2",
+      "sha256": "e2f5c2e5bd3f84b59f98a6f033dcc861fd3b92a82ece63c43a1f6c863cdcfc92",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -58961,7 +58971,7 @@
       "type": ".log",
       "status": "created",
       "size": 13201,
-      "sha256": "8df03283294a871ba84eae13b6c3169545f428b3ae60961b3a454ac6a4da8418",
+      "sha256": "f80f875df5ef1f587aebab121419c74e1a27d67c995489e0367a93893a3d5b21",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -58970,8 +58980,8 @@
       "path": "12_REPRODUCIBILITY/PDF_PREVIEWS/Article_EN_page_1.png",
       "type": ".png",
       "status": "created",
-      "size": 309247,
-      "sha256": "7b8937f90b09112f440681eff710aac3c40ca5fde6491c66c265e647a3935e1a",
+      "size": 266700,
+      "sha256": "e213e80d3b0a1ce2c63b29b02f9896b5b438687caed669a27da03d97e9a28174",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -58980,8 +58990,8 @@
       "path": "12_REPRODUCIBILITY/PDF_PREVIEWS/Article_EN_page_8.png",
       "type": ".png",
       "status": "created",
-      "size": 335318,
-      "sha256": "e609f1826e8afb8ca72c15782f0849a656d9b79125de01ebeb6e751aec7a497d",
+      "size": 335611,
+      "sha256": "ffade20f7abe51a8aa031befd49b6f0a9e384bdd563e440322dd79b00295c852",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -58990,8 +59000,8 @@
       "path": "12_REPRODUCIBILITY/PDF_PREVIEWS/Artigo_PTBR_page_1.png",
       "type": ".png",
       "status": "created",
-      "size": 311683,
-      "sha256": "f8850c66d8c9bf6300aa707c38bce3c5d7c7b86aee71d02a6af4e370a5e239e6",
+      "size": 289563,
+      "sha256": "c15e57bf3fb1d59a4961876a4d0b32929ba0496dd5e70eff0c2eb24a4e40fd53",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -59000,8 +59010,8 @@
       "path": "12_REPRODUCIBILITY/PDF_PREVIEWS/Artigo_PTBR_page_8.png",
       "type": ".png",
       "status": "created",
-      "size": 296391,
-      "sha256": "4a3e8a4e933a490b1a9a1fa78552666b374281e42230a9d66acd94a53ffca1de",
+      "size": 296671,
+      "sha256": "e9a52cbf24a1a99567926239cbdda0d8812fc697dd2eceff0afc8e3bae227637",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -59010,8 +59020,8 @@
       "path": "12_REPRODUCIBILITY/PDF_PREVIEWS/EXECUTIVE_SUMMARY_page_1.png",
       "type": ".png",
       "status": "created",
-      "size": 113682,
-      "sha256": "582f98fe114d3dd89d7b61d99aa00ffd750f5c41b7035d6ab2832c1bf70aa857",
+      "size": 114443,
+      "sha256": "6dc12694d74b376bd0e13dd2b99dc43742d8a278cde64c7629219769f35a63e8",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -59020,8 +59030,8 @@
       "path": "12_REPRODUCIBILITY/PDF_PREVIEWS/Scientific_Research_Report_page_1.png",
       "type": ".png",
       "status": "created",
-      "size": 307697,
-      "sha256": "bef68832bb10bcf83a6a17c587ee8ee063309bf098911eb3be585587a963b204",
+      "size": 285218,
+      "sha256": "bf5c0ddd0250ff2a08fa2a706c74fe52a1f2ce1857f5ab986b10515fd01d300e",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -59030,8 +59040,8 @@
       "path": "12_REPRODUCIBILITY/PDF_PREVIEWS/Scientific_Research_Report_page_8.png",
       "type": ".png",
       "status": "created",
-      "size": 296391,
-      "sha256": "4a3e8a4e933a490b1a9a1fa78552666b374281e42230a9d66acd94a53ffca1de",
+      "size": 296671,
+      "sha256": "e9a52cbf24a1a99567926239cbdda0d8812fc697dd2eceff0afc8e3bae227637",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -59041,7 +59051,7 @@
       "type": ".log",
       "status": "created",
       "size": 29720,
-      "sha256": "228792f943b1a25dc5bf33e9e608c7ad1bcbf3b0e543a4705adc6f8ad5a66a25",
+      "sha256": "a15d9ceee6a33bf265260f8fd46bce3e0c90a98eb5fd25b451a1ee37531dbe60",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -59071,7 +59081,7 @@
       "type": ".json",
       "status": "created",
       "size": 274,
-      "sha256": "cc15179703ef369827552ad826b1d0cfd5b57aa2f41d56cdf80943c26d3ec69d",
+      "sha256": "53d3c81b98a890f7b96adc0f451791e811b82043158d7fd03da93db1994866d8",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -59080,8 +59090,8 @@
       "path": "12_REPRODUCIBILITY/google_docs.json",
       "type": ".json",
       "status": "created",
-      "size": 1025,
-      "sha256": "23cc4dc6a02d94407f168d4393c79e8fc89e16b56c8bcc5452fa430a5638a7da",
+      "size": 1233,
+      "sha256": "5e4bb2ef5bc124445400f7d0fe404e89786c9351392caf114d2c3bb8ca5b38a9",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -59150,8 +59160,8 @@
       "path": "17_DELIVERY_MANIFEST.json",
       "type": ".json",
       "status": "created",
-      "size": 2998943,
-      "sha256": "cf8897a4fd1e0fbd1cb4fef78c01764591340e170ac25f35fc0092ce138b243e",
+      "size": 2999470,
+      "sha256": "9a34b577e6e633d987a0a25aab59f0416217e21ce672f10f2b77a4ff85528cf7",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"
@@ -59160,8 +59170,8 @@
       "path": "Relatorio_Tecnico_Completo.docx",
       "type": ".docx",
       "status": "created",
-      "size": 2554150,
-      "sha256": "035a73cff7b4f9f5900c3ddd97132edb9bb48499d619b13e4b005d5742214d90",
+      "size": 2551693,
+      "sha256": "5d459befe3b21e11c794ae9b05260257a1c2fab4de0da781f0255dc5718e54ee",
       "origin": "executed frozen protocol or explicitly cited documentary/analytical material",
       "reproduce": "python src/reporting.py; simulations: python src/experiments.py",
       "known_errors": "See 00_README_START_HERE.md and scientific claims audit"

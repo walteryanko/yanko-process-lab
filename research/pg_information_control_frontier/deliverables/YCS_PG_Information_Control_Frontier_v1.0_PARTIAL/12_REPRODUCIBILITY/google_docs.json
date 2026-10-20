@@ -7,7 +7,10 @@
     "verified_cells": 447,
     "verified_figures": 16,
     "equations": "LaTeX notation retained in native document; PDF/DOCX have typeset mathematics",
-    "status": "created and read back"
+    "status": "created and read back",
+    "revision_is_creation_snapshot": true,
+    "mutable": true,
+    "numerical_content_verified": true
   },
   "pt": {
     "id": "1_seZfvlsEeTx7ZsHXbE1LperlDJKD7Z5f9K1eLl7ULM",
@@ -17,6 +20,9 @@
     "verified_cells": 447,
     "verified_figures": 16,
     "equations": "LaTeX notation retained in native document; PDF/DOCX have typeset mathematics",
-    "status": "created and read back"
+    "status": "created and read back",
+    "revision_is_creation_snapshot": true,
+    "mutable": true,
+    "numerical_content_verified": true
   }
 }

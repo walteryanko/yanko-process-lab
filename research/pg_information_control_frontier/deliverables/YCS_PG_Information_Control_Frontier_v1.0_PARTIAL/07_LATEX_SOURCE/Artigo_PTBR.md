@@ -1,7 +1,7 @@
 ---
 title: "Limites de Informação e Decisão no Controle Preditivo Inferencial de um Reator Não Linear de Propilenoglicol"
 author: "Walter Yanko de Aragão Brandão"
-date: "20 October 2026"
+date: "20 de outubro de 2026"
 lang: "pt-BR"
 fontsize: 11pt
 geometry: margin=24mm
@@ -11,6 +11,8 @@ colorlinks: true
 # Resumo
 
 Este estudo computacional investiga limites de informação e decisão em um modelo recuperado de reator de propilenoglicol de seis estados. Existe uma classe química exatamente indistinguível de dimensão dois sob capacidades caloríficas constantes e cinética de primeira ordem. Acrescentar realimentação térmica da camisa não a elimina. O posto funcional das capacidades caloríficas caracteriza uma ambiguidade suficiente remanescente; exemplos com propriedades dependentes de temperatura examinam a separabilidade prática. A suíte principal executou 5320 trajetórias, com 400 trajetórias de confirmação em sementes independentes e 18 verificações de grade. Na diluição nominal, separação inicial de produto de 0,8 kmol/m3 implica limite inferior de 0.060376 kmol h/m3 para o pior IAE entre dois mundos em 0,9 h. Há conflito decisório positivo em 51 dos 80 casos finitos examinados. Os ganhos médios adicionais por ambiguidade foram 0,63% e 0,66%, com intervalos pareados incluindo zero; compartilhar a correção com o preditor reduziu IAE em 39,91% frente à correção somente do estimador. Não se demonstrou superioridade sobre todo NMPC contínuo. As alternativas físicas não foram calibradas, e os números históricos ICAC não foram reproduzidos independentemente. Trata-se de manuscrito parcial de pesquisa, ainda não validado para submissão.
+
+
 # Introdução
 
 O controle inferencial de qualidade depende da informação carregada pelos sensores e das previsões usadas na escolha das ações. Reduzir o RMSE de concentração não garante diminuir a perda de controle em malha fechada. Este estudo audita um CSTR de propilenoglicol de seis estados antes de testar maior complexidade. Separam-se duas perguntas: existe ambiguidade química demonstrável quando somente temperaturas são medidas? Representar essa ambiguidade melhora o controle contra comparadores igualmente informados?

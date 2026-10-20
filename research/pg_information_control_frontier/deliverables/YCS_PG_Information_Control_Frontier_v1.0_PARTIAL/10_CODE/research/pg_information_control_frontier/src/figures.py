@@ -118,6 +118,8 @@ def main():
     axs[0].set_yticks(np.arange(len(s)),[m.replace('_',' ') for m in s.index],fontsize=8)
     axs[0].invert_yaxis()
     axs[1].set_xscale('symlog',linthresh=1e-6)
+    axs[1].set_xlim(0,2)
+    axs[1].set_xticks([0,1e-6,1e-4,1e-2,1],['0','1e-6','1e-4','1e-2','1'])
     axs[3].set_xscale('log')
     finish(fig,15,'Tracking, sampled safety, effort and computing trade-offs')
     p=d.groupby(['scenario','method']).IAE.mean().unstack()
