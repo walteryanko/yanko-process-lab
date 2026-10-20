@@ -1,0 +1,58 @@
+name: PG Information Control Frontier
+on:
+  push:
+    branches: [research/pg-information-control-frontier-20261020]
+    paths:
+      - research/pg_information_control_frontier/src/model.py
+      - research/pg_information_control_frontier/src/estimation.py
+      - research/pg_information_control_frontier/src/control.py
+      - research/pg_information_control_frontier/src/experiments.py
+      - research/pg_information_control_frontier/tests/**
+      - research/pg_information_control_frontier/configs/**
+      - .github/workflows/pg-information-frontier.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  scientific-campaign:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      MPLBACKEND: Agg
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned dependencies
+        run: python -m pip install -r research/pg_information_control_frontier/requirements.txt
+      - name: Execute scientific tests
+        run: |
+          set -o pipefail
+          mkdir -p research/pg_information_control_frontier/results
+          python -m unittest discover -s research/pg_information_control_frontier/tests -v 2>&1 | tee research/pg_information_control_frontier/results/tests.log
+      - name: Execute frozen scientific protocol
+        run: |
+          set -o pipefail
+          python research/pg_information_control_frontier/src/experiments.py 2>&1 | tee research/pg_information_control_frontier/results/execution.log
+      - name: Preserve actual data and failures
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f research/pg_information_control_frontier/results
+          if ! git diff --cached --quiet; then
+            git commit -m "Record executed PG frontier data and test logs"
+            git pull --rebase origin research/pg-information-control-frontier-20261020
+            git push origin HEAD:research/pg-information-control-frontier-20261020
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: PG-Frontier-Executed-Data
+          retention-days: 3
+          path: research/pg_information_control_frontier/results/
