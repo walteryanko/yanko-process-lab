@@ -1,0 +1,433 @@
+{
+  "Q64_minus_Q1_gaussian": {
+    "n": 20,
+    "mean_delta": 0.00012439652777502673,
+    "ci95": [
+      -8.779870576796575e-05,
+      0.0003390238026207124
+    ]
+  },
+  "no_observation_minus_observed_gaussian": {
+    "n": 100,
+    "mean_delta": -0.0004342840870159785,
+    "ci95": [
+      -0.0013235448752252732,
+      0.00042937790416492543
+    ]
+  },
+  "Q64_minus_Q1_weak_thermal": {
+    "n": 20,
+    "mean_delta": 0.0005135999561487655,
+    "ci95": [
+      -0.0007032311309243575,
+      0.0018052414315777143
+    ]
+  },
+  "no_observation_minus_observed_weak_thermal": {
+    "n": 100,
+    "mean_delta": -0.0011963784057262017,
+    "ci95": [
+      -0.0035800829528938247,
+      0.0010824712404951613
+    ]
+  },
+  "noise_model_contrasts": {
+    "bias_M0": {
+      "n": 12,
+      "mean_delta": 0.001220548716207732,
+      "ci95": [
+        -0.0004390357785774199,
+        0.0027493256235014045
+      ]
+    },
+    "bias_M1": {
+      "n": 12,
+      "mean_delta": -0.002181884505464544,
+      "ci95": [
+        -0.010811719081847821,
+        0.0074140026252131975
+      ]
+    },
+    "bias_M2": {
+      "n": 12,
+      "mean_delta": -0.0018611957003784093,
+      "ci95": [
+        -0.015279744579672535,
+        0.011734185027263042
+      ]
+    },
+    "bias_M3": {
+      "n": 12,
+      "mean_delta": 0.000999123078783682,
+      "ci95": [
+        -0.0071526826447522495,
+        0.008385004470986002
+      ]
+    },
+    "bias_M4": {
+      "n": 12,
+      "mean_delta": -0.0005742821181434441,
+      "ci95": [
+        -0.013231446032143592,
+        0.01174129500075864
+      ]
+    },
+    "correlated_M0": {
+      "n": 12,
+      "mean_delta": 0.0005567460591627496,
+      "ci95": [
+        -0.0001818917195314725,
+        0.0012743300953977407
+      ]
+    },
+    "correlated_M1": {
+      "n": 12,
+      "mean_delta": -0.0024366685813658573,
+      "ci95": [
+        -0.019074609387259595,
+        0.015821214476003827
+      ]
+    },
+    "correlated_M2": {
+      "n": 12,
+      "mean_delta": 0.0008717691867473708,
+      "ci95": [
+        -0.02310950985090825,
+        0.03369993906926236
+      ]
+    },
+    "correlated_M3": {
+      "n": 12,
+      "mean_delta": 0.003574118825342133,
+      "ci95": [
+        -0.006079442605902959,
+        0.01281608526024505
+      ]
+    },
+    "correlated_M4": {
+      "n": 12,
+      "mean_delta": 0.004540580370966842,
+      "ci95": [
+        -0.017356728266567107,
+        0.025598968428290902
+      ]
+    },
+    "outliers_M0": {
+      "n": 12,
+      "mean_delta": -0.0006259544059344365,
+      "ci95": [
+        -0.001889610142901096,
+        0.0004899550723527919
+      ]
+    },
+    "outliers_M1": {
+      "n": 12,
+      "mean_delta": 0.0007428248056635724,
+      "ci95": [
+        -0.002551230732000445,
+        0.004024359733677687
+      ]
+    },
+    "outliers_M2": {
+      "n": 12,
+      "mean_delta": 0.0035315387787543465,
+      "ci95": [
+        -0.001186385838663397,
+        0.009320061143357324
+      ]
+    },
+    "outliers_M3": {
+      "n": 12,
+      "mean_delta": -0.00014610042001334008,
+      "ci95": [
+        -0.0013321692070415029,
+        0.0010854818682363026
+      ]
+    },
+    "outliers_M4": {
+      "n": 12,
+      "mean_delta": -0.020808176978240764,
+      "ci95": [
+        -0.04281511603223511,
+        -0.003691624865603092
+      ]
+    },
+    "student_M0": {
+      "n": 12,
+      "mean_delta": 0.0002573785439815848,
+      "ci95": [
+        -0.0005710753761237081,
+        0.0012482645650540559
+      ]
+    },
+    "student_M1": {
+      "n": 12,
+      "mean_delta": 0.0008258599938845203,
+      "ci95": [
+        -0.0029072011370959794,
+        0.004513150397453083
+      ]
+    },
+    "student_M2": {
+      "n": 12,
+      "mean_delta": 0.0006083060771405524,
+      "ci95": [
+        -0.0037394294674584975,
+        0.004974204312759306
+      ]
+    },
+    "student_M3": {
+      "n": 12,
+      "mean_delta": 0.0004578443321566492,
+      "ci95": [
+        -0.001463272730774053,
+        0.0031052582583484287
+      ]
+    },
+    "student_M4": {
+      "n": 12,
+      "mean_delta": 0.004760577220390989,
+      "ci95": [
+        -0.00423236317189739,
+        0.017094290355841923
+      ]
+    }
+  },
+  "joint_minus_fixed": {
+    "M0": {
+      "n": 20,
+      "mean_delta": -0.005835675085893962,
+      "ci95": [
+        -0.011531941904891856,
+        -0.0003927941092384507
+      ]
+    },
+    "M1": {
+      "n": 20,
+      "mean_delta": -0.009411605912282506,
+      "ci95": [
+        -0.02735216743531424,
+        0.004670456855881669
+      ]
+    },
+    "M2": {
+      "n": 20,
+      "mean_delta": -0.0024899459584205204,
+      "ci95": [
+        -0.013277894642038659,
+        0.007542693007982643
+      ]
+    },
+    "M3": {
+      "n": 20,
+      "mean_delta": 0.006200037745135564,
+      "ci95": [
+        -0.005745354930062388,
+        0.018439617859827947
+      ]
+    },
+    "M4": {
+      "n": 20,
+      "mean_delta": -0.011518985201298867,
+      "ci95": [
+        -0.039945206053615866,
+        0.016843867894590647
+      ]
+    }
+  },
+  "posterior_distances": [
+    {
+      "step": 0,
+      "method": "M0",
+      "w1_CEB": 0.028995500240242757,
+      "reference": "Bootstrap PF N=8192, seed=2000"
+    },
+    {
+      "step": 0,
+      "method": "M1",
+      "w1_CEB": 0.051682274956961136,
+      "reference": "Bootstrap PF N=8192, seed=2000"
+    },
+    {
+      "step": 0,
+      "method": "M2",
+      "w1_CEB": 0.04623315721397729,
+      "reference": "Bootstrap PF N=8192, seed=2000"
+    },
+    {
+      "step": 0,
+      "method": "M3",
+      "w1_CEB": 0.06296858999364964,
+      "reference": "Bootstrap PF N=8192, seed=2000"
+    },
+    {
+      "step": 0,
+      "method": "M4",
+      "w1_CEB": 0.06390186790863439,
+      "reference": "Bootstrap PF N=8192, seed=2000"
+    },
+    {
+      "step": 0,
+      "method": "M5",
+      "w1_CEB": 0.051682274956961136,
+      "reference": "Bootstrap PF N=8192, seed=2000"
+    },
+    {
+      "step": 7,
+      "method": "M0",
+      "w1_CEB": 0.020929541632736328,
+      "reference": "Bootstrap PF N=8192, seed=2000"
+    },
+    {
+      "step": 7,
+      "method": "M1",
+      "w1_CEB": 0.03528184054205455,
+      "reference": "Bootstrap PF N=8192, seed=2000"
+    },
+    {
+      "step": 7,
+      "method": "M2",
+      "w1_CEB": 0.04317284189220658,
+      "reference": "Bootstrap PF N=8192, seed=2000"
+    },
+    {
+      "step": 7,
+      "method": "M3",
+      "w1_CEB": 0.16232825898668904,
+      "reference": "Bootstrap PF N=8192, seed=2000"
+    },
+    {
+      "step": 7,
+      "method": "M4",
+      "w1_CEB": 0.10345585064859687,
+      "reference": "Bootstrap PF N=8192, seed=2000"
+    },
+    {
+      "step": 7,
+      "method": "M5",
+      "w1_CEB": 0.03528184054205455,
+      "reference": "Bootstrap PF N=8192, seed=2000"
+    },
+    {
+      "step": 23,
+      "method": "M0",
+      "w1_CEB": 0.01558955972264548,
+      "reference": "Bootstrap PF N=8192, seed=2000"
+    },
+    {
+      "step": 23,
+      "method": "M1",
+      "w1_CEB": 0.018260396234186505,
+      "reference": "Bootstrap PF N=8192, seed=2000"
+    },
+    {
+      "step": 23,
+      "method": "M2",
+      "w1_CEB": 0.09185507037514734,
+      "reference": "Bootstrap PF N=8192, seed=2000"
+    },
+    {
+      "step": 23,
+      "method": "M3",
+      "w1_CEB": 0.12775652531898565,
+      "reference": "Bootstrap PF N=8192, seed=2000"
+    },
+    {
+      "step": 23,
+      "method": "M4",
+      "w1_CEB": 0.08860875277550044,
+      "reference": "Bootstrap PF N=8192, seed=2000"
+    },
+    {
+      "step": 23,
+      "method": "M5",
+      "w1_CEB": 0.018260396234186505,
+      "reference": "Bootstrap PF N=8192, seed=2000"
+    },
+    {
+      "step": 59,
+      "method": "M0",
+      "w1_CEB": 0.0060924259621351045,
+      "reference": "Bootstrap PF N=8192, seed=2000"
+    },
+    {
+      "step": 59,
+      "method": "M1",
+      "w1_CEB": 0.006328161615519902,
+      "reference": "Bootstrap PF N=8192, seed=2000"
+    },
+    {
+      "step": 59,
+      "method": "M2",
+      "w1_CEB": 0.03127872643790981,
+      "reference": "Bootstrap PF N=8192, seed=2000"
+    },
+    {
+      "step": 59,
+      "method": "M3",
+      "w1_CEB": 0.045585862639223915,
+      "reference": "Bootstrap PF N=8192, seed=2000"
+    },
+    {
+      "step": 59,
+      "method": "M4",
+      "w1_CEB": 0.033325510996983304,
+      "reference": "Bootstrap PF N=8192, seed=2000"
+    },
+    {
+      "step": 59,
+      "method": "M5",
+      "w1_CEB": 0.006328161615519902,
+      "reference": "Bootstrap PF N=8192, seed=2000"
+    }
+  ],
+  "audit": {
+    "estimation_runs": 2240,
+    "failed": 0,
+    "datasets": 600,
+    "traces": 2240,
+    "physical_posterior_means_checked": 134400,
+    "max_moiety_balance_residual": 3.552713678800501e-15,
+    "balance_definition": "Exact linear inventory flow solution plus recorded additive process noise, independent of reaction kinetics.",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39"
+  },
+  "primary_domain_events": {
+    "M0": {
+      "initial_rejected": 0,
+      "analysis_or_process_rejected": 0,
+      "fallbacks": 0,
+      "diagnostic_sample_rejected": 219
+    },
+    "M1": {
+      "initial_rejected": 105,
+      "analysis_or_process_rejected": 2,
+      "fallbacks": 2,
+      "diagnostic_sample_rejected": 0
+    },
+    "M2": {
+      "initial_rejected": 105,
+      "analysis_or_process_rejected": 0,
+      "fallbacks": 0,
+      "diagnostic_sample_rejected": 0
+    },
+    "M3": {
+      "initial_rejected": 105,
+      "analysis_or_process_rejected": 0,
+      "fallbacks": 89,
+      "diagnostic_sample_rejected": 0
+    },
+    "M4": {
+      "initial_rejected": 105,
+      "analysis_or_process_rejected": 3,
+      "fallbacks": 3,
+      "diagnostic_sample_rejected": 0
+    },
+    "M5": {
+      "initial_rejected": 105,
+      "analysis_or_process_rejected": 2,
+      "fallbacks": 2,
+      "diagnostic_sample_rejected": 0
+    }
+  }
+}

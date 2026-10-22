@@ -1,0 +1,12 @@
+test_forced_fallback_limits (test_control_server.InterfaceControl.test_forced_fallback_limits) ... ok
+test_joint_scenarios_not_marginal_combinations (test_control_server.InterfaceControl.test_joint_scenarios_not_marginal_combinations) ... ok
+test_local_api (test_control_server.InterfaceControl.test_local_api) ... ok
+test_nominal_equilibrium (test_control_server.InterfaceControl.test_nominal_equilibrium) ... ok
+test_server_config (test_control_server.InterfaceControl.test_server_config) ... ok
+test_domain_rejection (test_physics.Physics.test_domain_rejection) ... ok
+test_equilibrium (test_physics.Physics.test_equilibrium) ... ok
+test_heat_input_sign (test_physics.Physics.test_heat_input_sign) ... ok
+test_independent_integrator (test_physics.Physics.test_independent_integrator) ... ok
+test_inventory_analytic (test_physics.Physics.test_inventory_analytic) ... ok
+test_original_physics (test_physics.Physics.test_original_physics) ... ok
+test_original_ukf_parity_without_projection (test_physics.Physics.test_original_ukf_parity_without_projection) ... 

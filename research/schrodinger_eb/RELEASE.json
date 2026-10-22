@@ -1,0 +1,23 @@
+{
+  "release": "1.0.0",
+  "date": "2026-10-22",
+  "physical_commit": "16aaafb63572d62e0e3341e26d8317b0651bdde0",
+  "probability_source_commit": "7ff42ff2b894085002c5b9c214f19e7e681aebc3",
+  "source_sha256": {
+    "eblab/__init__.py": "c596b014587cd2e8fb30730925758572ece45f6f5f5641ee4b9353e5d24c09ff",
+    "eblab/bridge.py": "8a0ab9ffede5bb3b723cce45010a508cdd82845958387142bfd3a2f28ed012f8",
+    "eblab/control.py": "b9bc432db6a753b9c825a763dfe7d9e0e1603c496f9b3533b3a0758942fe315e",
+    "eblab/experiments.py": "503b85b026dc77a60f0688e9beb4fccc165218e3f589bba61e74bf1139c545ed",
+    "eblab/filters.py": "57f0bfce4484abcbe824cf19f4e9491b15465740b4de94fe2fbd8b80ab5245ae",
+    "eblab/model.py": "a59be7cc746566ea54a7cbc990ca9cf21e41716dd2ded542ab1fe96d90dcc4cb",
+    "eblab/probability.py": "da7937e7609a9f4d7be1b726c4927ea418f1fc64eaa3651539e24a5906bd60e2",
+    "eblab/server.py": "5f5d7366b1302a087a730813a1a18c780db1efd3f13993e37413464c85e6f7c3",
+    "eblab/studies.py": "db6fcf0b28df635eeff6d94679ebf83a6712a8b35dc52d76b328af8efef5c136",
+    "eblab/transport.py": "492654439b51742cd2366b6cee0f2ee9b13151c9ec1b0c1868ffb57340105850"
+  },
+  "estimation_runs": 2240,
+  "development_runs": 176,
+  "control_runs": 40,
+  "fallback_runs": 3,
+  "tests": 35
+}

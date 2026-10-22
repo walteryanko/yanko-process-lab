@@ -1,0 +1,16 @@
+{
+  "panels": [
+    "Reactor Digital Twin",
+    "Probability Universe",
+    "Transport Explorer",
+    "Filter Arena",
+    "Chemical Multiverse",
+    "Scientific Benchmarks",
+    "Control Laboratory"
+  ],
+  "errors": [],
+  "live": "semente 8383 · N = 64",
+  "mobile_overflow": false,
+  "offline_state_rows": 5,
+  "csv_export": true
+}

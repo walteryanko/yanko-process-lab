@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+reproductions/
+results/*/datasets/
+results/*/traces/
+web/data.js
+YCS_Ethylbenzene_Laboratory.html
